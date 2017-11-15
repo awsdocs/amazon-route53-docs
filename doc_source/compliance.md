@@ -1,0 +1,3 @@
+# HIPAA Compliance<a name="compliance"></a>
+
+AWS has expanded its HIPAA compliance program to include Amazon Route 53 as a HIPAA eligible service\. If you have executed Business Associate Addendum \(BAA\) with AWS, you can use Amazon Route 53 to access resources that transmit or store protected health information \(PHI\) or personally identifiable information \(PII\), such as web servers running on EC2 or storage such as S3\. Don't store PHI or PII data in any Amazon Route 53 resource names or tags because these values aren't encrypted\. For more information, see [HIPAA Compliance](https://aws.amazon.com/compliance/hipaa-compliance/)\.
