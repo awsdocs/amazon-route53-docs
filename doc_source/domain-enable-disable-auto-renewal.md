@@ -6,7 +6,7 @@ Note that you can't use AWS credits to pay the fee for renewing registration for
 
 **To enable or disable automatic renewal for a domain**
 
-1. Sign in to the AWS Management Console and open the Amazon Route 53 console at [https://console\.aws\.amazon\.com/route53/](https://console.aws.amazon.com/route53/)\.
+1. Sign in to the AWS Management Console and open the Route 53 console at [https://console\.aws\.amazon\.com/route53/](https://console.aws.amazon.com/route53/)\.
 
 1. In the navigation pane, choose **Registered Domains**\.
 

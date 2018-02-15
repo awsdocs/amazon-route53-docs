@@ -16,8 +16,8 @@ We cancel the change\. To resend the authorization email, see [To resend the aut
 **Delete a domain**  
 We cancel the deletion request\. To resend the authorization email, see [To resend the authorization email to update the registrant contact or delete a domain](#domain-click-email-link-update-procedure)\.
 
-**Transfer a domain from Amazon Route 53 to another registrar**  
-The transfer proceeds\. Although you don't need to respond to an email from Amazon Route 53, you must respond to an email from the new registrar, or the new registrar must cancel the transfer\.
+**Transfer a domain from Route 53 to another registrar**  
+The transfer proceeds\. Although you don't need to respond to an email from Route 53, you must respond to an email from the new registrar, or the new registrar must cancel the transfer\.
 
 
 + [Updating Your Email Address](#domain-click-email-link-update-address)
@@ -29,7 +29,7 @@ We always send confirmation and authorization emails to the email address for th
 
 + You're changing the email address for a domain that is already registered with Amazon Route 53
 
-+ You're changing the email address for a domain that you're transferring to Amazon Route 53
++ You're changing the email address for a domain that you're transferring to Route 53
 
 If you don't have access to the email address that is currently associated with the registrant contact for your domain \(or to the old email address, if you're changing the email address for the registrant contact\), see [Updating the Email Address for a Domain When You Can't Access Email at the Old Address](domain-update-contacts.md#domain-update-contacts-change-email-form)\.
 
@@ -55,7 +55,7 @@ Use the applicable procedure to resend confirmation or authorization emails\.
 
 1. Use the Amazon Route 53 console to resend the confirmation email:
 
-   1. Sign in to the AWS Management Console and open the Amazon Route 53 console at [https://console\.aws\.amazon\.com/route53/](https://console.aws.amazon.com/route53/)\.
+   1. Sign in to the AWS Management Console and open the Route 53 console at [https://console\.aws\.amazon\.com/route53/](https://console.aws.amazon.com/route53/)\.
 
    1. In the navigation pane, choose **Registered domains**\.
 
@@ -81,11 +81,11 @@ If there's no warning box, you already confirmed that the email address for the 
 
 1. If the transfer is no longer in process \(if we already canceled it because too much time has passed\), request the transfer again, and we'll send you another authorization email\.
 **Note**  
-For the first 15 days after you request a transfer, you can determine the status of the transfer by checking the **Alerts** table on the **Dashboard** page in the Amazon Route 53 console\. After 15 days, use the AWS CLI to get the status\. For more information, see [route53domains](http://docs.aws.amazon.com/cli/latest/reference/route53domains/index.html) in the *AWS Command Line Interface Reference*\.
+For the first 15 days after you request a transfer, you can determine the status of the transfer by checking the **Alerts** table on the **Dashboard** page in the Route 53 console\. After 15 days, use the AWS CLI to get the status\. For more information, see [route53domains](http://docs.aws.amazon.com/cli/latest/reference/route53domains/index.html) in the *AWS CLI Command Reference*\.
 
    If the transfer is still in progress, perform the following steps to resend the authorization email\.
 
-   1. Sign in to the AWS Management Console and open the Amazon Route 53 console at [https://console\.aws\.amazon\.com/route53/](https://console.aws.amazon.com/route53/)\.
+   1. Sign in to the AWS Management Console and open the Route 53 console at [https://console\.aws\.amazon\.com/route53/](https://console.aws.amazon.com/route53/)\.
 
    1. In the **Alerts** table, find the domain that you want to transfer\.
 

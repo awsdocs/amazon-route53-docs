@@ -1,6 +1,6 @@
 # Renewing Registration for a Domain<a name="domain-renew"></a>
 
-When you register a domain with Amazon Route 53 or you transfer domain registration to Amazon Route 53, we configure the domain to renew automatically\. The automatic renewal period is typically one year, although the registries for some top\-level domains \(TLDs\) have longer renewal periods\. For the registration and renewal period for your TLD, see [Domains That You Can Register with Amazon Route 53](registrar-tld-list.md)\.
+When you register a domain with Amazon Route 53 or you transfer domain registration to Route 53, we configure the domain to renew automatically\. The automatic renewal period is typically one year, although the registries for some top\-level domains \(TLDs\) have longer renewal periods\. For the registration and renewal period for your TLD, see [Domains That You Can Register with Amazon Route 53](registrar-tld-list.md)\.
 
 **Note**  
 You can't use AWS credits to pay the fee for renewing registration for a domain\.
@@ -45,4 +45,4 @@ For more information about renewal periods, go to the "Renewal, restoration, and
 **After the expiration date**  
 Most domains are held by the registrar for a brief time after expiration, so you might be able to renew an expired domain after the expiration date, but we strongly recommend that you keep automatic renewal enabled if you want to keep your domain\. For information about trying to renew a domain after the expiration date, see [Restoring an Expired Domain](domain-restore-expired.md)\.  
 If your domain expires but late renewal is allowed for the domain, you can renew the domain for the standard renewal price\. To determine whether a domain is still within the late\-renewal period, perform the procedure in the [Extending the Registration Period for a Domain](domain-extend.md) section\. If the domain is still listed, it's within the late\-renewal period\.  
-For information about the renewal period for each TLD, see the "Renewal, restoration, and deletion times" table on the [Renewing a Domain Name](http://wiki.gandi.net/en/domains/renew) page on the Gandi website\. Note that the list includes some TLDs that Amazon Route 53 doesn't support\.
+For information about the renewal period for each TLD, see the "Renewal, restoration, and deletion times" table on the [Renewing a Domain Name](http://wiki.gandi.net/en/domains/renew) page on the Gandi website\. Note that the list includes some TLDs that Route 53 doesn't support\.

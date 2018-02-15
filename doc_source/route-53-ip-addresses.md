@@ -6,6 +6,6 @@ To find the IP address ranges that are associated with Amazon Route 53 name ser
 
 `"service": "ROUTE53"`
 
-To find the IP address ranges that are associated with Amazon Route 53 health checkers, search ip\-ranges\.json for the following string:
+To find the IP address ranges that are associated with Route 53 health checkers, search ip\-ranges\.json for the following string:
 
 `"service": "ROUTE53_HEALTHCHECKS"`

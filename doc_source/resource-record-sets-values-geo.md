@@ -1,9 +1,9 @@
-# Values for Geolocation Resource Record Sets<a name="resource-record-sets-values-geo"></a>
+# Values for Geolocation Records<a name="resource-record-sets-values-geo"></a>
 
-When you create geolocation resource record sets, you specify the following values:
+When you create geolocation records, you specify the following values:
 
 **Note**  
-Creating geolocation resource record sets in private hosted zones is not supported\.
+Creating geolocation records in private hosted zones is not supported\.
 
 
 + [Name](#rrsets-values-geo-name)
@@ -22,24 +22,24 @@ Creating geolocation resource record sets in private hosted zones is not support
 Enter the name of the domain or subdomain that you want to route traffic for\. The default value is the name of the hosted zone\. 
 
 **Note**  
-If you're creating a resource record set that has the same name as the hosted zone, don't enter a value \(for example, an @ symbol\) in the **Name** field\. 
+If you're creating a record that has the same name as the hosted zone, don't enter a value \(for example, an @ symbol\) in the **Name** field\. 
 
-Enter the same name for all of the resource record sets in the group of geolocation resource record sets\. 
+Enter the same name for all of the records in the group of geolocation records\. 
 
-**CNAME resource record sets**  
-If you're creating a resource record set that has a value of **CNAME** for **Type**, the name of the resource record set can't be the same as the name of the hosted zone\.
+**CNAME records**  
+If you're creating a record that has a value of **CNAME** for **Type**, the name of the record can't be the same as the name of the hosted zone\.
 
 **Special characters**  
 For information about how to specify characters other than a\-z, 0\-9, and \- \(hyphen\) and how to specify internationalized domain names, see [DNS Domain Name Format](DomainNameFormat.md)\.
 
 **Wildcard characters**  
-You can use an asterisk \(\*\) character in the name\. DNS treats the \* character either as a wildcard or as the \* character \(ASCII 42\), depending on where it appears in the name\. For more information, see [Using an Asterisk \(\*\) in the Names of Hosted Zones and Resource Record Sets](DomainNameFormat.md#domain-name-format-asterisk)\.
+You can use an asterisk \(\*\) character in the name\. DNS treats the \* character either as a wildcard or as the \* character \(ASCII 42\), depending on where it appears in the name\. For more information, see [Using an Asterisk \(\*\) in the Names of Hosted Zones and Records](DomainNameFormat.md#domain-name-format-asterisk)\.
 
 ## Type<a name="rrsets-values-geo-type"></a>
 
 The DNS record type\. For more information, see [Supported DNS Record Types](ResourceRecordTypes.md)\.
 
-Select the same value for all of the resource record sets in the group of geolocation resource record sets\.
+Select the same value for all of the records in the group of geolocation records\.
 
 ## Alias<a name="rrsets-values-geo-alias"></a>
 
@@ -47,9 +47,9 @@ Select **No**\.
 
 ## TTL \(Time to Live\)<a name="rrsets-values-geo-ttl"></a>
 
-The amount of time, in seconds, that you want DNS recursive resolvers to cache information about this resource record set\. If you specify a longer value \(for example, 172800 seconds, or two days\), you pay less for Amazon Route 53 service because recursive resolvers send requests to Amazon Route 53 less often\. However, it takes longer for changes to the resource record set \(for example, a new IP address\) to take effect because recursive resolvers use the values in their cache for longer periods instead of asking Amazon Route 53 for the latest information\. 
+The amount of time, in seconds, that you want DNS recursive resolvers to cache information about this record\. If you specify a longer value \(for example, 172800 seconds, or two days\), you pay less for Route 53 service because recursive resolvers send requests to Route 53 less often\. However, it takes longer for changes to the record \(for example, a new IP address\) to take effect because recursive resolvers use the values in their cache for longer periods instead of asking Route 53 for the latest information\. 
 
-If you're associating this resource record set with a health check, we recommend that you specify a TTL of 60 seconds or less so clients respond quickly to changes in health status\.
+If you're associating this record with a health check, we recommend that you specify a TTL of 60 seconds or less so clients respond quickly to changes in health status\.
 
 ## Value<a name="rrsets-values-geo-value"></a>
 
@@ -69,16 +69,16 @@ Three space\-separated values that control which certificate authorities are all
 + The email address or URL to contact when a CA issues a certificate for the domain or subdomain
 
 **CNAME — Canonical name**  
-The fully qualified domain name \(for example, *www\.example\.com*\) that you want Amazon Route 53 to return in response to DNS queries for this resource record set\. A trailing dot is optional; Amazon Route 53 assumes that the domain name is fully qualified\. This means that Amazon Route 53 treats *www\.example\.com* \(without a trailing dot\) and *www\.example\.com\.* \(with a trailing dot\) as identical\.
+The fully qualified domain name \(for example, *www\.example\.com*\) that you want Route 53 to return in response to DNS queries for this record\. A trailing dot is optional; Route 53 assumes that the domain name is fully qualified\. This means that Route 53 treats *www\.example\.com* \(without a trailing dot\) and *www\.example\.com\.* \(with a trailing dot\) as identical\.
 
 **MX — Mail exchange**  
 A priority and a domain name that specifies a mail server, for example, **10 mailserver\.example\.com**\.
 
 **NAPTR — Name Authority Pointer**  
-Six space\-separated settings that are used by Dynamic Delegation Discovery System \(DDDS\) applications to convert one value to another or to replace one value with another\. For more information, see [NAPTR Format](ResourceRecordTypes.md#NAPTRFormat)\.
+Six space\-separated settings that are used by Dynamic Delegation Discovery System \(DDDS\) applications to convert one value to another or to replace one value with another\. For more information, see [NAPTR Record Type](ResourceRecordTypes.md#NAPTRFormat)\.
 
 **PTR — Pointer**  
-The domain name that you want Amazon Route 53 to return\.
+The domain name that you want Route 53 to return\.
 
 **SPF — Sender Policy Framework**  
 An SPF record enclosed in quotation marks, for example, **"v=spf1 ip4:192\.168\.0\.1/16\-all"**\. SPF records are not recommended\. For more information, see [Supported DNS Record Types](ResourceRecordTypes.md)\.
@@ -98,12 +98,12 @@ Select **Geolocation**\.
 
 ## Location<a name="rrsets-values-geo-location"></a>
 
-When you configure Amazon Route 53 to respond to DNS queries based on the location that the queries originated from, select the continent or country for which you want Amazon Route 53 to respond with the settings in this resource record set\. If you want Amazon Route 53 to respond to DNS queries for individual states in the United States, select **United States** from the **Location** list, and then select the state from the **Sublocation** list\.
+When you configure Route 53 to respond to DNS queries based on the location that the queries originated from, select the continent or country for which you want Route 53 to respond with the settings in this record\. If you want Route 53 to respond to DNS queries for individual states in the United States, select **United States** from the **Location** list, and then select the state from the **Sublocation** list\.
 
 **Important**  
-We recommend that you create one geolocation resource record set that has a value of **Default** for **Location**\. This covers geographic locations that you haven't created resource record sets for and IP addresses that Amazon Route 53 can't identify a location for\.
+We recommend that you create one geolocation record that has a value of **Default** for **Location**\. This covers geographic locations that you haven't created records for and IP addresses that Route 53 can't identify a location for\.
 
-You can't create non\-geolocation resource record sets that have the same values for **Name** and **Type** as geolocation resource record sets\.
+You can't create non\-geolocation records that have the same values for **Name** and **Type** as geolocation records\.
 
 For more information, see [Geolocation Routing](routing-policy.md#routing-policy-geo)\.
 
@@ -131,36 +131,36 @@ AS, AU, CK, FJ, FM, GU, KI, MH, MP, NC, NF, NR, NU, NZ, PF, PG, PN, PW, SB, TK, 
 AR, BO, BR, CL, CO, EC, FK, GF, GY, PE, PY, SR, UY, VE
 
 **Note**  
-Amazon Route 53 doesn't support creating geolocation resource record sets for the following countries: Bouvet Island \(BV\), Christmas Island \(CX\), Western Sahara \(EH\), and Heard Island and McDonald Islands \(HM\)\. No data is available about IP addresses for these countries\.
+Route 53 doesn't support creating geolocation records for the following countries: Bouvet Island \(BV\), Christmas Island \(CX\), Western Sahara \(EH\), and Heard Island and McDonald Islands \(HM\)\. No data is available about IP addresses for these countries\.
 
 ## Sublocation<a name="rrsets-values-geo-sublocation"></a>
 
-When you configure Amazon Route 53 to respond to DNS queries based on the state of the United States that the queries originated from, select the state from the **Sublocations** list\. United States territories \(for example, Puerto Rico\) are listed as countries in the **Location** list\.
+When you configure Route 53 to respond to DNS queries based on the state of the United States that the queries originated from, select the state from the **Sublocations** list\. United States territories \(for example, Puerto Rico\) are listed as countries in the **Location** list\.
 
 **Important**  
-Some IP addresses are associated with the United States, but not with an individual state\. If you create resource record sets for all of the states in the United States, we recommend that you also create a resource record set for the United States to route queries for these unassociated IP addresses\. If you don't create a resource record set for the United States, Amazon Route 53 responds to DNS queries from unassociated United States IP addresses with settings from the default geolocation resource record set \(if you created one\) or with a "no answer" response\. 
+Some IP addresses are associated with the United States, but not with an individual state\. If you create records for all of the states in the United States, we recommend that you also create a record for the United States to route queries for these unassociated IP addresses\. If you don't create a record for the United States, Route 53 responds to DNS queries from unassociated United States IP addresses with settings from the default geolocation record \(if you created one\) or with a "no answer" response\. 
 
 ## Set ID<a name="rrsets-values-geo-set-id"></a>
 
-Enter a value that uniquely identifies this resource record set in the group of geolocation resource record sets\.
+Enter a value that uniquely identifies this record in the group of geolocation records\.
 
 ## Associate with Health Check/Health Check to Associate<a name="rrsets-values-geo-associate-with-health-check"></a>
 
-Select **Yes** if you want Amazon Route 53 to check the health of a specified endpoint and to respond to DNS queries using this resource record set only when the endpoint is healthy\. Then select the health check that you want Amazon Route 53 to perform for this resource record set\. 
+Select **Yes** if you want Route 53 to check the health of a specified endpoint and to respond to DNS queries using this record only when the endpoint is healthy\. Then select the health check that you want Route 53 to perform for this record\. 
 
-Amazon Route 53 doesn't check the health of the endpoint specified in the resource record set, for example, the endpoint specified by the IP address in the **Value** field\. When you select a health check for a resource record set, Amazon Route 53 checks the health of the endpoint that you specified in the health check\. For information about how Amazon Route 53 determines whether an endpoint is healthy, see [How Amazon Route 53 Determines Whether an Endpoint Is Healthy](dns-failover-determining-health-of-endpoints.md)\.
+Route 53 doesn't check the health of the endpoint specified in the record, for example, the endpoint specified by the IP address in the **Value** field\. When you select a health check for a record, Route 53 checks the health of the endpoint that you specified in the health check\. For information about how Route 53 determines whether an endpoint is healthy, see [How Amazon Route 53 Determines Whether an Endpoint Is Healthy](dns-failover-determining-health-of-endpoints.md)\.
 
-Associating a health check with a resource record set is useful only when Amazon Route 53 is choosing between two or more resource record sets to respond to a DNS query, and you want Amazon Route 53 to base the choice in part on the status of a health check\. Use health checks only in the following configurations:
+Associating a health check with a record is useful only when Route 53 is choosing between two or more records to respond to a DNS query, and you want Route 53 to base the choice in part on the status of a health check\. Use health checks only in the following configurations:
 
-+ You're checking the health of all of the resource record sets in a group of failover, geolocation, latency, multivalue, or weighted resource record sets, and you specify health check IDs for all the resource record sets\. If the health check for a resource record set specifies an endpoint that is not healthy, Amazon Route 53 stops responding to queries using the value for that resource record set\.
++ You're checking the health of all of the records in a group of failover, geolocation, latency, multivalue, or weighted records, and you specify health check IDs for all the records\. If the health check for a record specifies an endpoint that is not healthy, Route 53 stops responding to queries using the value for that record\.
 
-+ You select **Yes** for **Evaluate Target Health** for an alias resource record set or the resource record sets in a group of failover alias, geolocation alias, latency alias, or weighted alias resource record set\. If the alias resource record sets reference non\-alias resource record sets in the same hosted zone, you must also specify health checks for the referenced resource record sets\. 
++ You select **Yes** for **Evaluate Target Health** for an alias record or the records in a group of failover alias, geolocation alias, latency alias, or weighted alias record\. If the alias records reference non\-alias records in the same hosted zone, you must also specify health checks for the referenced records\. 
 
-For geolocation resource record sets, if an endpoint is unhealthy, Amazon Route 53 looks for a resource record set for the larger, associated geographic region\. For example, suppose you have resource record sets for a state in the United States, for the United States, for North America, and for all locations \(**Location** is **Default**\)\. If the endpoint for the state resource record set is unhealthy, Amazon Route 53 checks the resource record sets for the United States, for North America, and for all locations, in that order, until it finds a resource record set that has a healthy endpoint\.
+For geolocation records, if an endpoint is unhealthy, Route 53 looks for a record for the larger, associated geographic region\. For example, suppose you have records for a state in the United States, for the United States, for North America, and for all locations \(**Location** is **Default**\)\. If the endpoint for the state record is unhealthy, Route 53 checks the records for the United States, for North America, and for all locations, in that order, until it finds a record that has a healthy endpoint\.
 
-If your health checks specify the endpoint only by domain name, we recommend that you create a separate health check for each endpoint\. For example, create a health check for each HTTP server that is serving content for www\.example\.com\. For the value of **Domain Name**, specify the domain name of the server \(such as us\-east\-2\-www\.example\.com\), not the name of the resource record sets \(example\.com\)\.
+If your health checks specify the endpoint only by domain name, we recommend that you create a separate health check for each endpoint\. For example, create a health check for each HTTP server that is serving content for www\.example\.com\. For the value of **Domain Name**, specify the domain name of the server \(such as us\-east\-2\-www\.example\.com\), not the name of the records \(example\.com\)\.
 
 **Important**  
-In this configuration, if you create a health check for which the value of **Domain Name** matches the name of the resource record sets and then associate the health check with those resource record sets, health check results will be unpredictable\.
+In this configuration, if you create a health check for which the value of **Domain Name** matches the name of the records and then associate the health check with those records, health check results will be unpredictable\.
 
 For more information about checking the health of endpoints, see [Creating Amazon Route 53 Health Checks and Configuring DNS Failover](dns-failover.md)\.

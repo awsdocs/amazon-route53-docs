@@ -5,12 +5,12 @@ If you're using AWS Elastic Beanstalk to deploy and manage applications in the A
 To route DNS traffic to an Elastic Beanstalk environment, see the procedures in the following topics\.
 
 **Note**  
-These procedures assume that you're already using Amazon Route 53 as the DNS service for your domain\. If you're using another DNS service, see [Using Amazon Route 53 as the DNS Service for Subdomains Without Migrating the Parent Domain](creating-migrating.md) for information about migrating your DNS service to Amazon Route 53\. 
+These procedures assume that you're already using Route 53 as the DNS service for your domain\. If you're using another DNS service, see [Using Amazon Route 53 as the DNS Service for Subdomains Without Migrating the Parent Domain](creating-migrating.md) for information about migrating your DNS service to Route 53\. 
 
 
 + [Deploying an Application into an Elastic Beanstalk Environment](#routing-to-beanstalk-environment-deploy)
 + [Getting the Domain Name for Your Elastic Beanstalk Environment](#routing-to-beanstalk-environment-get-domain-name)
-+ [Creating an Amazon Route 53 Resource Record Set that Routes Traffic to Your Elastic Beanstalk Environment](#routing-to-beanstalk-environment-create-resource-record-set)
++ [Creating an Amazon Route 53 Record that Routes Traffic to Your Elastic Beanstalk Environment](#routing-to-beanstalk-environment-create-resource-record-set)
 
 ## Deploying an Application into an Elastic Beanstalk Environment<a name="routing-to-beanstalk-environment-deploy"></a>
 
@@ -22,7 +22,7 @@ If you already have an Elastic Beanstalk environment that you want to route traf
 
 ## Getting the Domain Name for Your Elastic Beanstalk Environment<a name="routing-to-beanstalk-environment-get-domain-name"></a>
 
-If you already know the domain name for your Elastic Beanstalk environment, skip to [Creating an Amazon Route 53 Resource Record Set that Routes Traffic to Your Elastic Beanstalk Environment](#routing-to-beanstalk-environment-create-resource-record-set)\.
+If you already know the domain name for your Elastic Beanstalk environment, skip to [Creating an Amazon Route 53 Record that Routes Traffic to Your Elastic Beanstalk Environment](#routing-to-beanstalk-environment-create-resource-record-set)\.
 
 **To get the domain name for your Elastic Beanstalk environment**
 
@@ -30,25 +30,25 @@ If you already know the domain name for your Elastic Beanstalk environment, skip
 
 1. In the list of applications, find the application that you want to route traffic to, and get the value of **URL**\.
 
-## Creating an Amazon Route 53 Resource Record Set that Routes Traffic to Your Elastic Beanstalk Environment<a name="routing-to-beanstalk-environment-create-resource-record-set"></a>
+## Creating an Amazon Route 53 Record that Routes Traffic to Your Elastic Beanstalk Environment<a name="routing-to-beanstalk-environment-create-resource-record-set"></a>
 
-An Amazon Route 53 resource record set contains the settings that control how traffic is routed to your Elastic Beanstalk environment\. You create either a *CNAME resource record set* or an *alias resource record set*, depending on whether the domain name for the environment includes the region, such as **us\-east\-2**, in which you deployed the environment\. New environments include the region in the domain name; environments that were created before early 2016 do not\. For a comparison of CNAME and alias resource record sets, see [Choosing Between Alias and Non\-Alias Resource Record Sets](resource-record-sets-choosing-alias-non-alias.md)\.
+An Amazon Route 53 record contains the settings that control how traffic is routed to your Elastic Beanstalk environment\. You create either a *CNAME record* or an *alias record*, depending on whether the domain name for the environment includes the region, such as **us\-east\-2**, in which you deployed the environment\. New environments include the region in the domain name; environments that were created before early 2016 do not\. For a comparison of CNAME and alias records, see [Choosing Between Alias and Non\-Alias Records](resource-record-sets-choosing-alias-non-alias.md)\.
 
 **If the domain name does not include the region**  
-You must create a *CNAME resource record set*\. You can't create a CNAME resource record set for the root domain name\. For example, if your domain name is example\.com, you can create a resource record set that routes traffic for acme\.example\.com to your Elastic Beanstalk environment, but you can't create a resource record set that routes traffic for example\.com to your Elastic Beanstalk environment\.  
-See the procedure [To create a CNAME resource record set to route traffic to an Elastic Beanstalk environment](#routing-to-beanstalk-environment-create-cname-procedure)\.
+You must create a *CNAME record*\. You can't create a CNAME record for the root domain name\. For example, if your domain name is example\.com, you can create a record that routes traffic for acme\.example\.com to your Elastic Beanstalk environment, but you can't create a record that routes traffic for example\.com to your Elastic Beanstalk environment\.  
+See the procedure [To create a CNAME record to route traffic to an Elastic Beanstalk environment](#routing-to-beanstalk-environment-create-cname-procedure)\.
 
 **If the domain name includes the region**  
-You can create an alias resource record set\. An alias resource record set is specific to Amazon Route 53 and has two significant advantages over CNAME resource record sets:  
+You can create an alias record\. An alias record is specific to Route 53 and has two significant advantages over CNAME records:  
 
-+ You can create alias resource record sets for the root domain name or for subdomains\. For example, if your domain name is example\.com, you can create a resource record set that routes requests for example\.com or for acme\.example\.com to your Elastic Beanstalk environment\.
++ You can create alias records for the root domain name or for subdomains\. For example, if your domain name is example\.com, you can create a record that routes requests for example\.com or for acme\.example\.com to your Elastic Beanstalk environment\.
 
-+ Amazon Route 53 doesn't charge for requests that use an alias resource record set to route traffic\.
-See the procedure [To create an Amazon Route 53 alias resource record set to route traffic to an Elastic Beanstalk environment](#routing-to-beanstalk-environment-create-alias-procedure)\.
++ Route 53 doesn't charge for requests that use an alias record to route traffic\.
+See the procedure [To create an Amazon Route 53 alias record to route traffic to an Elastic Beanstalk environment](#routing-to-beanstalk-environment-create-alias-procedure)\.
 
-**To create a CNAME resource record set to route traffic to an Elastic Beanstalk environment**
+**To create a CNAME record to route traffic to an Elastic Beanstalk environment**
 
-1. Sign in to the AWS Management Console and open the Amazon Route 53 console at [https://console\.aws\.amazon\.com/route53/](https://console.aws.amazon.com/route53/)\.
+1. Sign in to the AWS Management Console and open the Route 53 console at [https://console\.aws\.amazon\.com/route53/](https://console.aws.amazon.com/route53/)\.
 
 1. In the navigation pane, choose **Hosted Zones**\.
 
@@ -74,11 +74,11 @@ Accept the default value, **Simple**\.
 
 1. Choose **Create**\.
 
-   Changes generally propagate to all Amazon Route 53 servers within 60 seconds\. 
+   Changes generally propagate to all Route 53 servers within 60 seconds\. 
 
-**To create an Amazon Route 53 alias resource record set to route traffic to an Elastic Beanstalk environment**
+**To create an Amazon Route 53 alias record to route traffic to an Elastic Beanstalk environment**
 
-1. Sign in to the AWS Management Console and open the Amazon Route 53 console at [https://console\.aws\.amazon\.com/route53/](https://console.aws.amazon.com/route53/)\.
+1. Sign in to the AWS Management Console and open the Route 53 console at [https://console\.aws\.amazon\.com/route53/](https://console.aws.amazon.com/route53/)\.
 
 1. In the navigation pane, choose **Hosted Zones**\.
 
@@ -105,4 +105,4 @@ Accept the default value, **No**\.
 
 1. Choose **Create**\.
 
-   Changes generally propagate to all Amazon Route 53 servers within 60 seconds\. When propagation is done, you'll be able to route traffic to your Elastic Beanstalk environment by using the name of the alias resource record set that you create in this procedure\. 
+   Changes generally propagate to all Route 53 servers within 60 seconds\. When propagation is done, you'll be able to route traffic to your Elastic Beanstalk environment by using the name of the alias record that you create in this procedure\. 

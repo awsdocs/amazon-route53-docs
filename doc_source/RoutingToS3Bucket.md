@@ -2,10 +2,10 @@
 
 Amazon Simple Storage Service \(Amazon S3\) provides secure, durable, highly scalable [cloud storage](https://aws.amazon.com/what-is-cloud-storage/)\. You can configure an S3 bucket to host a static website that can include web pages and client\-side scripts\. \(S3 doesn't support server\-side scripting\.\)
 
-To route domain traffic to an S3 bucket, use Amazon Route 53 to create an [alias resource record set](http://docs.aws.amazon.com/Route53/latest/DeveloperGuide/resource-record-sets-choosing-alias-non-alias.html) that points to your bucket\. An alias resource record set is an Amazon Route 53 extension to DNS\. It's similar to a CNAME resource record set, except you can create an alias resource record set both for the root domain, such as example\.com, and for subdomains, such as www\.example\.com\. You can create CNAME resource record sets only for subdomains\. 
+To route domain traffic to an S3 bucket, use Amazon Route 53 to create an [alias record](http://docs.aws.amazon.com/Route53/latest/DeveloperGuide/resource-record-sets-choosing-alias-non-alias.html) that points to your bucket\. An alias record is a Route 53 extension to DNS\. It's similar to a CNAME record, except you can create an alias record both for the root domain, such as example\.com, and for subdomains, such as www\.example\.com\. You can create CNAME records only for subdomains\. 
 
 **Note**  
-Amazon Route 53 doesn't charge for alias queries to S3 buckets or other AWS resources\.
+Route 53 doesn't charge for alias queries to S3 buckets or other AWS resources\.
 
 ## Prerequisites<a name="routing-to-s3-bucket-prereqs"></a>
 
@@ -17,11 +17,11 @@ The bucket must have the same name as your domain or subdomain\. For example, if
 
   You can route traffic for a domain and its subdomains, such as example\.com and www\.example\.com, to a single bucket\. Create a bucket for the domain and each subdomain, and configure all but one of the buckets to redirect traffic to the remaining bucket\. For more information, see [Getting Started with Amazon Route 53](getting-started.md)\.
 
-+ A registered domain name\. You can use Amazon Route 53 as your domain registrar, or you can use a different registrar\.
++ A registered domain name\. You can use Route 53 as your domain registrar, or you can use a different registrar\.
 
-+ Amazon Route 53 as the DNS service for the domain\. If you register your domain name by using Amazon Route 53, we automatically configure Amazon Route 53 as the DNS service for the domain\. 
++ Route 53 as the DNS service for the domain\. If you register your domain name by using Route 53, we automatically configure Route 53 as the DNS service for the domain\. 
 
-  For information about migrating DNS service to Amazon Route 53, see [Using Amazon Route 53 as the DNS Service for Subdomains Without Migrating the Parent Domain](creating-migrating.md)\.
+  For information about migrating DNS service to Route 53, see [Using Amazon Route 53 as the DNS Service for Subdomains Without Migrating the Parent Domain](creating-migrating.md)\.
 
 ## Configuring Amazon Route 53 to Route Traffic to an S3 Bucket<a name="routing-to-s3-bucket-configuring"></a>
 
@@ -29,7 +29,7 @@ To configure Amazon Route 53 to route traffic to an S3 bucket that is configure
 
 **To route traffic to an S3 bucket**
 
-1. Sign in to the AWS Management Console and open the Amazon Route 53 console at [https://console\.aws\.amazon\.com/route53/](https://console.aws.amazon.com/route53/)\.
+1. Sign in to the AWS Management Console and open the Route 53 console at [https://console\.aws\.amazon\.com/route53/](https://console.aws.amazon.com/route53/)\.
 
 1. In the navigation pane, choose **Hosted Zones**\.
 
@@ -54,4 +54,4 @@ Accept the default value of **No**\.
 
 1. Choose **Create**\.
 
-   Changes generally propagate to all Amazon Route 53 servers within 60 seconds\. When propagation is done, you'll be able to route traffic to your S3 bucket by using the name of the alias resource record set that you created in this procedure\. 
+   Changes generally propagate to all Route 53 servers within 60 seconds\. When propagation is done, you'll be able to route traffic to your S3 bucket by using the name of the alias record that you created in this procedure\. 

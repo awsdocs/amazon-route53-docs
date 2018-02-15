@@ -6,7 +6,7 @@ To view the status code for your domains, perform the following procedure\.
 
 **To view the status of a domain**
 
-1. Sign in to the AWS Management Console and open the Amazon Route 53 console at [https://console\.aws\.amazon\.com/route53/](https://console.aws.amazon.com/route53/)\.
+1. Sign in to the AWS Management Console and open the Route 53 console at [https://console\.aws\.amazon\.com/route53/](https://console.aws.amazon.com/route53/)\.
 
 1. In the navigation pane, choose **Registered Domains**\.
 

@@ -17,7 +17,7 @@ For each policy record that you create, you incur a monthly charge\. If you late
 
 **To create a policy record**
 
-1. Sign in to the AWS Management Console and open the Amazon Route 53 console at [https://console\.aws\.amazon\.com/route53/](https://console.aws.amazon.com/route53/)\.
+1. Sign in to the AWS Management Console and open the Route 53 console at [https://console\.aws\.amazon\.com/route53/](https://console.aws.amazon.com/route53/)\.
 
 1. In the navigation pane, choose **Policy records**\.
 
@@ -54,12 +54,12 @@ If you're updating an existing policy record, you must choose a version for whic
 Choose the hosted zone in which you want to create a policy record by using the specified traffic policy and version\. You can't change the value of **Hosted zone** after you create a policy record\. 
 
 **Policy record DNS name**  
-When you're creating a policy record, type the domain name or subdomain name for which you want Amazon Route 53 to respond to DNS queries by using the configuration in the specified traffic policy and version\.   
+When you're creating a policy record, type the domain name or subdomain name for which you want Route 53 to respond to DNS queries by using the configuration in the specified traffic policy and version\.   
 To use the same configuration for more than one domain name or subdomain name in the specified hosted zone, choose **Add another policy record**, and enter the applicable domain name or subdomain name and TTL\.  
 You can't change the value of **Policy record DNS name** after you create a policy record\.
 
 **TTL \(in seconds\)**  
-Type the amount of time, in seconds, that you want DNS recursive resolvers to cache information about this resource record set\. If you specify a longer value \(for example, 172800 seconds, or two days\), you pay less for Amazon Route 53 service because recursive resolvers send requests to Amazon Route 53 less often\. However, it takes longer for changes to the resource record sets \(for example, a new IP address\) to take effect because recursive resolvers use the values in their cache for longer periods instead of asking Amazon Route 53 for the latest information\. 
+Type the amount of time, in seconds, that you want DNS recursive resolvers to cache information about this record\. If you specify a longer value \(for example, 172800 seconds, or two days\), you pay less for Route 53 service because recursive resolvers send requests to Route 53 less often\. However, it takes longer for changes to the records \(for example, a new IP address\) to take effect because recursive resolvers use the values in their cache for longer periods instead of asking Route 53 for the latest information\. 
 
 ## Updating Policy Records<a name="traffic-policy-records-updating"></a>
 
@@ -67,7 +67,7 @@ To update the settings in a policy record, perform the following procedure\.
 
 **To update a policy record**
 
-1. Sign in to the AWS Management Console and open the Amazon Route 53 console at [https://console\.aws\.amazon\.com/route53/](https://console.aws.amazon.com/route53/)\.
+1. Sign in to the AWS Management Console and open the Route 53 console at [https://console\.aws\.amazon\.com/route53/](https://console.aws.amazon.com/route53/)\.
 
 1. In the navigation pane, choose **Policy records**\.
 
@@ -84,11 +84,11 @@ To update the settings in a policy record, perform the following procedure\.
 To delete policy records, perform the following procedure\.
 
 **Important**  
-If you delete policy records that Amazon Route 53 is using to respond to DNS queries, Amazon Route 53 will stop responding to queries for the corresponding DNS names\. For example, if Amazon Route 53 is using the policy record for www\.example\.com to respond to DNS queries for www\.example\.com and you delete the policy record, your users will not be able to access your website or web application by using the domain name www\.example\.com\. 
+If you delete policy records that Amazon Route 53 is using to respond to DNS queries, Route 53 will stop responding to queries for the corresponding DNS names\. For example, if Route 53 is using the policy record for www\.example\.com to respond to DNS queries for www\.example\.com and you delete the policy record, your users will not be able to access your website or web application by using the domain name www\.example\.com\. 
 
 **To delete a policy record**
 
-1. Sign in to the AWS Management Console and open the Amazon Route 53 console at [https://console\.aws\.amazon\.com/route53/](https://console.aws.amazon.com/route53/)\.
+1. Sign in to the AWS Management Console and open the Route 53 console at [https://console\.aws\.amazon\.com/route53/](https://console.aws.amazon.com/route53/)\.
 
 1. In the navigation pane, choose **Policy records**\.
 

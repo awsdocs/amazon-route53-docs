@@ -1,6 +1,6 @@
 # Creating, Updating, and Deleting Health Checks<a name="health-checks-creating-deleting"></a>
 
-The procedures in the following topics explain how to create, update, and delete Amazon Route 53 health checks\. 
+The procedures in the following topics explain how to create, update, and delete Route 53 health checks\. 
 
 **Important**  
 If you're updating or deleting health checks that are associated with records, review the tasks in [Updating or Deleting Health Checks when DNS Failover Is Configured](health-checks-updating-deleting-tasks.md) before you proceed\.

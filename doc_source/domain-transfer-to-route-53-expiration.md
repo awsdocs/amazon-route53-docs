@@ -7,11 +7,11 @@ For most TLDs, you can extend the registration period for a domain by up to ten 
 
 ## Generic TLDs<a name="domain-transfer-to-route-53-expiration-generic"></a>
 
-When you transfer a domain that has a generic TLD \(for example, \.com\) to Amazon Route 53, the new expiration date for the domain is the expiration date with your previous registrar plus one year\.
+When you transfer a domain that has a generic TLD \(for example, \.com\) to Route 53, the new expiration date for the domain is the expiration date with your previous registrar plus one year\.
 
 ## Geographic TLDs<a name="domain-transfer-to-route-53-expiration-geographic"></a>
 
-When you transfer a domain that has a geographic TLD \(for example, \.co\.uk\) to Amazon Route 53, the new expiration date for the domain depends on the TLD\. Find your TLD in the following table to determine how transferring your domain affects the expiration date\.
+When you transfer a domain that has a geographic TLD \(for example, \.co\.uk\) to Route 53, the new expiration date for the domain depends on the TLD\. Find your TLD in the following table to determine how transferring your domain affects the expiration date\.
 
 
 ****  

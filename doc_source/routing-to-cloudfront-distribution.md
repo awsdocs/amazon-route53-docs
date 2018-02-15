@@ -15,10 +15,10 @@ Alternatively, you might prefer to use your own domain name in URLs, for example
 
 `http://example.com/logo.jpg`
 
-If you want to use your own domain name, use Amazon Route 53 to create an [alias resource record set](http://docs.aws.amazon.com/Route53/latest/DeveloperGuide/resource-record-sets-choosing-alias-non-alias.html) that points to your CloudFront distribution\. An alias resource record set is an Amazon Route 53 extension to DNS\. It's similar to a CNAME resource record set, but you can create an alias resource record set both for the root domain, such as example\.com, and for subdomains, such as www\.example\.com\. \(You can create CNAME resource record sets only for subdomains\.\) When Amazon Route 53 receives a DNS query that matches the name and type of an alias resource record set, Amazon Route 53 responds with the domain name that is associated with your distribution\. 
+If you want to use your own domain name, use Amazon Route 53 to create an [alias record](http://docs.aws.amazon.com/Route53/latest/DeveloperGuide/resource-record-sets-choosing-alias-non-alias.html) that points to your CloudFront distribution\. An alias record is a Route 53 extension to DNS\. It's similar to a CNAME record, but you can create an alias record both for the root domain, such as example\.com, and for subdomains, such as www\.example\.com\. \(You can create CNAME records only for subdomains\.\) When Route 53 receives a DNS query that matches the name and type of an alias record, Route 53 responds with the domain name that is associated with your distribution\. 
 
 **Note**  
-Amazon Route 53 doesn't charge for alias queries to CloudFront distributions or other AWS resources\.
+Route 53 doesn't charge for alias queries to CloudFront distributions or other AWS resources\.
 
 ## Prerequisites<a name="routing-to-cloudfront-distribution-prereqs"></a>
 
@@ -28,20 +28,24 @@ Before you get started, you need the following:
 
   For example, if you want the URLs for your content to contain the domain name **example\.com**, the **Alternate Domain Name** field for the distribution must include **example\.com**\.
 
-  For more information about creating a web distribution, see [Task List for Creating a Web Distribution](http://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/distribution-web-creating.html) in the *Amazon CloudFront Developer Guide*\.
+  For more information, see the following documentation in the *Amazon CloudFront Developer Guide*:
+
+  + [Task List for Creating a Web Distribution](http://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/distribution-web-creating.html)
+
+  + [Creating or Updating a Web Distribution Using the CloudFront Console](http://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/distribution-web-creating-console.html)
 
 + A registered domain name\. You can use Amazon Route 53 as your domain registrar, or you can use a different registrar\.
 
-+ Amazon Route 53 as the DNS service for the domain\. If you register your domain name by using Amazon Route 53, we automatically configure Amazon Route 53 as the DNS service for the domain\. 
++ Route 53 as the DNS service for the domain\. If you register your domain name by using Route 53, we automatically configure Route 53 as the DNS service for the domain\. 
 
-  For information about migrating DNS service to Amazon Route 53, see [Using Amazon Route 53 as the DNS Service for Subdomains Without Migrating the Parent Domain](creating-migrating.md)\.
+  For information about migrating DNS service to Route 53, see [Using Amazon Route 53 as the DNS Service for Subdomains Without Migrating the Parent Domain](creating-migrating.md)\.
 
 ## Configuring Amazon Route 53 to Route Traffic to a CloudFront Web Distribution<a name="routing-to-cloudfront-distribution-config"></a>
 
 To configure Amazon Route 53 to route traffic to a CloudFront web distribution, perform the following procedure\.
 
 **Note**  
-Changes generally propagate to all Amazon Route 53 servers within 60 seconds\. When propagation is done, you'll be able to route traffic to your CloudFront distribution by using the name of the alias resource record set that you create in this procedure\. 
+Changes generally propagate to all Route 53 servers within 60 seconds\. When propagation is done, you'll be able to route traffic to your CloudFront distribution by using the name of the alias record that you create in this procedure\. 
 
 **To route traffic to a CloudFront web distribution**
 
@@ -53,11 +57,15 @@ Changes generally propagate to all Amazon Route 53 servers within 60 seconds\. 
 
    1. On the **General** tab, get the value of the **Domain Name** field\.
 
-   1. Check the **IPv6** field to see whether IPv6 is enabled for the distribution\. If IPv6 is enabled, you'll need to create two alias resource record sets for the distribution, one to route IPv4 traffic to the distribution, and one to route IPv6 traffic\.
+   1. Check the **IPv6** field to see whether IPv6 is enabled for the distribution\. If IPv6 is enabled, you'll need to create two alias records for the distribution, one to route IPv4 traffic to the distribution, and one to route IPv6 traffic\.
 
       For more information, see [Enable IPv6](http://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/distribution-web-values-specify.html#DownloadDistValuesEnableIPv6) in the topic [Values that You Specify When You Create or Update a Web Distribution](http://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/distribution-web-values-specify.html) in the *Amazon CloudFront Developer Guide*\.
 
-1. Sign in to the AWS Management Console and open the Amazon Route 53 console at [https://console\.aws\.amazon\.com/route53/](https://console.aws.amazon.com/route53/)\.
+1. If you haven't already, add one or more alternate domain names to your CloudFront distribution\. These are the domain names that you want to use for your URLs instead of the domain name that CloudFront assigned to your distribution\.
+
+   For more information, see [Using Alternate Domain Names \(CNAMEs\)](http://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/CNAMEs.html) in the *Amazon CloudFront Developer Guide*\.
+
+1. Sign in to the AWS Management Console and open the Route 53 console at [https://console\.aws\.amazon\.com/route53/](https://console.aws.amazon.com/route53/)\.
 
 1. In the navigation pane, choose **Hosted Zones**\.
 
@@ -71,7 +79,7 @@ Type the domain name that you want to use to route traffic to your CloudFront di
 For example, if the name of the hosted zone is example\.com and you want to use **acme\.example\.com** to route traffic to your distribution, type **acme**\.  
 **Type**  
 Choose **A – IPv4 address**\.  
-If IPv6 is enabled for the distribution and you're creating a second resource record set, choose **AAAA – IPv6 address**\.   
+If IPv6 is enabled for the distribution and you're creating a second record, choose **AAAA – IPv6 address**\.   
 **Alias**  
 Choose **Yes**\.  
 **Alias Target**  
@@ -83,4 +91,4 @@ Accept the default value of **No**\.
 
 1. Choose **Create**\.
 
-1. If IPv6 is enabled for the distribution, repeat steps 5 through 7\. Specify the same settings except for the **Type** field, as explained in step 6\.
+1. If IPv6 is enabled for the distribution, repeat steps 6 through 8\. Specify the same settings except for the **Type** field, as explained in step 7\.

@@ -6,11 +6,11 @@ Here's an overview of how you register a domain name with Amazon Route 53:
 
 1. You choose a domain name and confirm that it's available, meaning that no one else has registered the domain name that you want\.
 
-   If the domain name you want is already in use, you can try other names or try changing only the *top\-level domain*, such as \.com, to another top\-level domain, such as \.ninja or \.hockey\. For a list of the top\-level domains that Amazon Route 53 supports, see [Domains That You Can Register with Amazon Route 53](registrar-tld-list.md)\.
+   If the domain name you want is already in use, you can try other names or try changing only the *top\-level domain*, such as \.com, to another top\-level domain, such as \.ninja or \.hockey\. For a list of the top\-level domains that Route 53 supports, see [Domains That You Can Register with Amazon Route 53](registrar-tld-list.md)\.
 
-1. You register the domain name with Amazon Route 53\. When you register a domain, you provide names and contact information for the domain owner and other contacts\.
+1. You register the domain name with Route 53\. When you register a domain, you provide names and contact information for the domain owner and other contacts\.
 
-   When you register a domain with Amazon Route 53, the service automatically makes itself the DNS service for the domain by doing the following:
+   When you register a domain with Route 53, the service automatically makes itself the DNS service for the domain by doing the following:
 
    + Creates a [hosted zone](route-53-concepts.md#route-53-concepts-hosted-zone) that has the same name as your domain\.
 
@@ -28,4 +28,4 @@ Here's an overview of how you register a domain name with Amazon Route 53:
 
 For more information about how to register a domain name, see [Registering a New Domain](domain-register.md)\.
 
-If you already registered a domain name with another registrar, you can choose to transfer the domain registration to Amazon Route 53\. This isn't required to use other Amazon Route 53 features\. For more information, see [Transferring Registration for a Domain to Amazon Route 53](domain-transfer-to-route-53.md)\.
+If you already registered a domain name with another registrar, you can choose to transfer the domain registration to Route 53\. This isn't required to use other Route 53 features\. For more information, see [Transferring Registration for a Domain to Amazon Route 53](domain-transfer-to-route-53.md)\.

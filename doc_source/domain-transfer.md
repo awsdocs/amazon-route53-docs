@@ -1,6 +1,6 @@
 # Transferring Domains<a name="domain-transfer"></a>
 
-You can transfer domain registration from another registrar to Amazon Route 53, from one AWS account to another, or from Amazon Route 53 to another registrar\.
+You can transfer domain registration from another registrar to Amazon Route 53, from one AWS account to another, or from Route 53 to another registrar\.
 
 
 + [Transferring Registration for a Domain to Amazon Route 53](domain-transfer-to-route-53.md)

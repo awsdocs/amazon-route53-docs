@@ -14,17 +14,17 @@ To use Amazon Route 53 to configure DNS failover, perform the following tasks:
 
 1. Create all of the non\-alias records in your diagram, and associate the health checks that you created in step 2 with the applicable records\.
 
-   You can associate health checks with records by using the Amazon Route 53 console or the Amazon Route 53 API\. For more information, see the applicable documentation: 
+   You can associate health checks with records by using the Route 53 console or the Route 53 API\. For more information, see the applicable documentation: 
 
-   + **Using the Amazon Route 53 console:** See [Working with Resource Record Sets](rrsets-working-with.md)\.
+   + **Using the Route 53 console:** See [Working with Records](rrsets-working-with.md)\.
 
-   + **Using the Amazon Route 53 API:** See [ChangeResourceRecordSets](http://docs.aws.amazon.com/Route53/latest/APIReference/API_ChangeResourceRecordSets.html) in the *Amazon Route 53 API Reference*\.
+   + **Using the Route 53 API:** See [ChangeResourceRecordSets](http://docs.aws.amazon.com/Route53/latest/APIReference/API_ChangeResourceRecordSets.html) in the *Amazon Route 53 API Reference*\.
 **Note**  
 To quickly and easily create records for complex routing configurations and associate the records with health checks, you can use the traffic flow visual editor and save the configuration as a traffic policy\. You can then associate the traffic policy with one or more domain names \(such as example\.com\) or subdomain names \(such as www\.example\.com\), in the same hosted zone or in multiple hosted zones\. In addition, you can roll back the updates if the new configuration isn't performing as you expected it to\. For more information, see [Using Traffic Flow to Route DNS Traffic](traffic-flow.md)\.
 
    If you're configuring DNS failover in a simple configuration, with no alias records, skip the remaining tasks\.
 
-1. Starting at the bottom of the tree diagram that you created in step 1, create the alias records \(such as weighted alias and failover alias records\) for which the alias target is one of the records that you created in step 3\. If you want Amazon Route 53 to try another branch of the tree when all of the non\-alias records are unhealthy in a branch of your tree, set the value of **Evaluate Target Health** to **Yes** for each of your alias records\.
+1. Starting at the bottom of the tree diagram that you created in step 1, create the alias records \(such as weighted alias and failover alias records\) for which the alias target is one of the records that you created in step 3\. If you want Route 53 to try another branch of the tree when all of the non\-alias records are unhealthy in a branch of your tree, set the value of **Evaluate Target Health** to **Yes** for each of your alias records\.
 
 1. If your tree diagram includes nodes for which you have not yet created alias records, create the remaining alias records, working from the bottom of the tree toward the top\.
 

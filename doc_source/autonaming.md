@@ -1,0 +1,3 @@
+# Automatically Creating Records and Health Checks<a name="autonaming"></a>
+
+If you want to route internet traffic or traffic within an Amazon VPC to application components or microservices, you can use Amazon Route 53 autonaming \(also known as service discovery\) to create records and, optionally, health checks for you automatically\. For more information, see [Using Autonaming for Service Discovery](http://docs.aws.amazon.com/Route53/latest/APIReference/overview-service-discovery.html) in the *Amazon Route 53 API Reference*\.

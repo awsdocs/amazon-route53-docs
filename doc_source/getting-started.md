@@ -13,13 +13,13 @@ This Getting Started tutorial shows you how to perform the following tasks:
 When you're finished, you'll be able to open a browser, enter the name of your domain, and view your website\.
 
 **Note**  
-You can also transfer an existing domain to Amazon Route 53, but the process is more complex and time consuming than registering a new domain\. For more information, see [Transferring Registration for a Domain to Amazon Route 53](domain-transfer-to-route-53.md)\. 
+You can also transfer an existing domain to Route 53, but the process is more complex and time consuming than registering a new domain\. For more information, see [Transferring Registration for a Domain to Amazon Route 53](domain-transfer-to-route-53.md)\. 
 
 **Estimated cost**
 
-+ There's an annual fee to register a domain, ranging from $9 to several hundred dollars, depending on the top\-level domain, such as \.com\. For more information, see [Amazon Route 53 Pricing for Domain Registration](https://d32ze2gidvkk54.cloudfront.net/Amazon_Route_53_Domain_Registration_Pricing_20140731.pdf)\. This fee is not refundable\.
++ There's an annual fee to register a domain, ranging from $9 to several hundred dollars, depending on the top\-level domain, such as \.com\. For more information, see [Route 53 Pricing for Domain Registration](https://d32ze2gidvkk54.cloudfront.net/Amazon_Route_53_Domain_Registration_Pricing_20140731.pdf)\. This fee is not refundable\.
 
-+ When you register a domain, we automatically create a hosted zone that has the same name as the domain\. You use the hosted zone to specify where you want Amazon Route 53 to route traffic for your domain\. The fee for a hosted zone is $0\.50 per month\. You can delete the hosted zone if you want to avoid this charge\.
++ When you register a domain, we automatically create a hosted zone that has the same name as the domain\. You use the hosted zone to specify where you want Route 53 to route traffic for your domain\. The fee for a hosted zone is $0\.50 per month\. You can delete the hosted zone if you want to avoid this charge\.
 
 + If you're a new AWS customer, you can get started with Amazon S3 for free\. If you're an existing AWS customer, charges are based on how much data you store, on the number of requests for your data, and on the amount of data transferred\. For more information, see [Amazon S3 Pricing](https://aws.amazon.com/s3/pricing/)\.
 
@@ -42,11 +42,11 @@ To use a domain name such as example\.com, you need to find a domain name that i
 
 **To register a new domain using Amazon Route 53**
 
-1. Sign in to the AWS Management Console and open the Amazon Route 53 console at [https://console\.aws\.amazon\.com/route53/](https://console.aws.amazon.com/route53/)\.
+1. Sign in to the AWS Management Console and open the Route 53 console at [https://console\.aws\.amazon\.com/route53/](https://console.aws.amazon.com/route53/)\.
 
-1. If you're new to Amazon Route 53, under **Domain Registration**, choose **Get Started Now**\.
+1. If you're new to Route 53, under **Domain Registration**, choose **Get Started Now**\.
 
-   If you're already using Amazon Route 53, in the navigation pane, choose **Registered Domains**\.
+   If you're already using Route 53, in the navigation pane, choose **Registered Domains**\.
 
 1. Choose **Register Domain**\.
 
@@ -234,29 +234,29 @@ You now have a one\-page website in your S3 bucket\. To start routing internet t
 
 **To route traffic to your website**
 
-1. Open the Amazon Route 53 console at [https://console\.aws\.amazon\.com/route53/](https://console.aws.amazon.com/route53/)\.
+1. Open the Route 53 console at [https://console\.aws\.amazon\.com/route53/](https://console.aws.amazon.com/route53/)\.
 
 1. In the navigation pane, choose **Hosted zones**\.
 **Note**  
-When you registered your domain, Amazon Route 53 automatically created a hosted zone with the same name\. A hosted zone contains information about how you want Amazon Route 53 to route traffic for the domain\.
+When you registered your domain, Amazon Route 53 automatically created a hosted zone with the same name\. A hosted zone contains information about how you want Route 53 to route traffic for the domain\.
 
 1. In the list of hosted zones, choose the name of your domain\. 
 
 1. Choose **Create Record Set**\.
 **Note**  
-Each resource record set contains information about how you want to route traffic for one domain \(such as example\.com\) or subdomain \(such as www\.example\.com or test\.example\.com\)\. Resource record sets are stored in the hosted zone for your domain\.
+Each record contains information about how you want to route traffic for one domain \(such as example\.com\) or subdomain \(such as www\.example\.com or test\.example\.com\)\. Records are stored in the hosted zone for your domain\.
 
 1. Specify the following values:  
 **Name**  
-For the first resource record set that you'll create, accept the default value, which is the name of your hosted zone and your domain\. This will route internet traffic to the bucket that has the same name as your domain\.  
-If you created a second S3 bucket, for www\.*your\-domain\-name*, you'll repeat this step to create a second resource record set\. For the second resource record set, type **www**\. This will route internet traffic to the www\.*your\-domain\-name* bucket\.  
+For the first record that you'll create, accept the default value, which is the name of your hosted zone and your domain\. This will route internet traffic to the bucket that has the same name as your domain\.  
+If you created a second S3 bucket, for www\.*your\-domain\-name*, you'll repeat this step to create a second record\. For the second record, type **www**\. This will route internet traffic to the www\.*your\-domain\-name* bucket\.  
 **Type**  
 Choose **A – IPv4 address**\.  
 **Alias**  
 Choose **Yes**\.  
 **Alias Target**  
 Type the name of the region that you created your S3 bucket in\. Use the applicable value from the **Website Endpoint** column in the [Amazon Simple Storage Service Website Endpoints](http://docs.aws.amazon.com/general/latest/gr/rande.html#s3_website_region_endpoints) table in the [AWS Regions and Endpoints](http://docs.aws.amazon.com/general/latest/gr/rande.html) chapter of the *Amazon Web Services General Reference*\.  
-You specify the same value for **Alias Target** for both resource record sets\. Amazon Route 53 figures out which bucket to route traffic to based on the name of the resource record set\.  
+You specify the same value for **Alias Target** for both records\. Route 53 figures out which bucket to route traffic to based on the name of the record\.  
 **Routing Policy**  
 Accept the default value of **Simple**\.  
 **Evaluate Target Health**  
@@ -264,7 +264,7 @@ Accept the default value of **No**\.
 
 1. Choose **Create**\.
 
-1. If you created a second S3 bucket, for www\.*your\-domain\-name*, repeat steps 4 through 6 to create a resource record set for www\.*your\-domain\-name*\.
+1. If you created a second S3 bucket, for www\.*your\-domain\-name*, repeat steps 4 through 6 to create a record for www\.*your\-domain\-name*\.
 
 ## Step 6: Test Your Website<a name="getting-started-test"></a>
 

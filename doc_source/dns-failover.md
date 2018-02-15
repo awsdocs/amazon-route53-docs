@@ -13,12 +13,12 @@ For an overview of the three types of health checks, see [Types of Amazon Route�
 After you create a health check, you can get the status of the health check, get notifications when the status changes, and configure DNS failover:
 
 **Getting health check status and notifications**  
-You can view the current and recent status of your health checks on the Amazon Route 53 console\. You can also work with health checks programmatically through one of the AWS SDKs, the AWS Command Line Interface, AWS Tools for Windows PowerShell, or the Amazon Route 53 API\.   
+You can view the current and recent status of your health checks on the Route 53 console\. You can also work with health checks programmatically through one of the AWS SDKs, the AWS Command Line Interface, AWS Tools for Windows PowerShell, or the Route 53 API\.   
 If you want to receive a notification when the status of a health check changes, you can configure an Amazon CloudWatch alarm for each health check\.  
 For information about viewing health check status and receiving notifications, see [Monitoring Health Check Status and Getting Notifications](health-checks-monitor-view-status.md)\.
 
 **Configuring DNS failover**  
-If you have multiple resources that perform the same function, you can configure DNS failover so that Amazon Route 53 will route your traffic from an unhealthy resource to a healthy resource\. For example, if you have two web servers and one web server becomes unhealthy, Amazon Route 53 can route traffic to the other web server\. For more information, see [Configuring DNS Failover](dns-failover-configuring.md)\.
+If you have multiple resources that perform the same function, you can configure DNS failover so that Route 53 will route your traffic from an unhealthy resource to a healthy resource\. For example, if you have two web servers and one web server becomes unhealthy, Route 53 can route traffic to the other web server\. For more information, see [Configuring DNS Failover](dns-failover-configuring.md)\.
 
 
 + [Types of Amazon Route 53 Health Checks](health-checks-types.md)

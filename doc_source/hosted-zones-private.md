@@ -1,6 +1,6 @@
 # Working with Private Hosted Zones<a name="hosted-zones-private"></a>
 
-A private hosted zone is a container that holds information about how you want to route traffic for a domain and its subdomains within one or more Amazon Virtual Private Clouds \(Amazon VPCs\)\. To begin, you create a private hosted zone and specify the Amazon VPCs that you want to associate with the hosted zone\. You then create resource record sets that determine how Amazon Route 53 responds to queries for your domain and subdomains within and among your Amazon VPCs\. For example, if you have a web server associated with your domain, you'll create an A record in your hosted zone so browser queries for example\.com are routed to your web server\. For more information about resource record sets, see [Working with Resource Record Sets](rrsets-working-with.md)\. For information about the Amazon VPC requirements for using private hosted zones, see [Using Private Hosted Zones](http://docs.aws.amazon.com/AmazonVPC/latest/UserGuide/vpc-dns.html#vpc-private-hosted-zones) in the *Amazon VPC User Guide*\.
+A private hosted zone is a container that holds information about how you want to route traffic for a domain and its subdomains within one or more Amazon Virtual Private Clouds \(Amazon VPCs\)\. To begin, you create a private hosted zone and specify the Amazon VPCs that you want to associate with the hosted zone\. You then create records that determine how Amazon Route 53 responds to queries for your domain and subdomains within and among your Amazon VPCs\. For example, if you have a web server associated with your domain, you'll create an A record in your hosted zone so browser queries for example\.com are routed to your web server\. For more information about records, see [Working with Records](rrsets-working-with.md)\. For information about the Amazon VPC requirements for using private hosted zones, see [Using Private Hosted Zones](http://docs.aws.amazon.com/AmazonVPC/latest/UserGuide/vpc-dns.html#vpc-private-hosted-zones) in the *Amazon VPC User Guide*\.
 
 Note the following about using private hosted zones:
 
@@ -12,21 +12,21 @@ To use private hosted zones, you must set the following Amazon VPC settings to `
 + `enableDnsSupport`
 For more information, see [Updating DNS Support for Your VPC](http://docs.aws.amazon.com/AmazonVPC/latest/UserGuide/vpc-dns.html#vpc-dns-updating) in the *Amazon VPC User Guide*\.
 
-**Amazon Route 53 Health Checks**  
-In a private hosted zone, you can associate Amazon Route 53 health checks only with failover resource record sets\. For more information, see [Configuring Failover in a Private Hosted Zone](dns-failover-private-hosted-zones.md)\.
+**Route 53 Health Checks**  
+In a private hosted zone, you can associate Route 53 health checks only with weighted and failover records\. For information about associating health checks with failover records, see [Configuring Failover in a Private Hosted Zone](dns-failover-private-hosted-zones.md)\.
 
-**Supported Routing Policies for Resource Record Sets in a Private Hosted Zone**  
-You can use the following routing policies when you create resource record sets in a private hosted zone:  
+**Supported Routing Policies for Records in a Private Hosted Zone**  
+You can use the following routing policies when you create records in a private hosted zone:  
 
 + Simple
 
 + Failover
 
 + Weighted
-Creating resource record sets in a private hosted zone using geolocation or latency routing policies is not supported\.
+Creating records in a private hosted zone using other routing policies is not supported\.
 
 **Split\-View DNS**  
-You can use Amazon Route 53 to configure split\-view DNS, also known as split\-horizon DNS\. If you want to maintain internal and external versions of the same website or application \(for example, for testing changes before you make them public\), you can configure public and private hosted zones to return different internal and external IP addresses for the same domain name\. Just create a public hosted zone and a private hosted zone that have the same domain name, and create the same subdomains in both hosted zones\. 
+You can use Route 53 to configure split\-view DNS, also known as split\-horizon DNS\. If you want to maintain internal and external versions of the same website or application \(for example, for testing changes before you make them public\), you can configure public and private hosted zones to return different internal and external IP addresses for the same domain name\. Just create a public hosted zone and a private hosted zone that have the same domain name, and create the same subdomains in both hosted zones\. 
 
 **Associating an Amazon VPC with More than One Private Hosted Zone**  
 You can associate a VPC with more than one private hosted zone, but the namespaces must not overlap\. For example, you cannot associate a VPC with hosted zones for both example\.com and acme\.example\.com because both namespaces end with example\.com\. 
@@ -50,9 +50,9 @@ When you have private and public hosted zones that have overlapping name spaces,
 
    If there's no matching private hosted zone, then Amazon EC2 forwards the request to a public DNS resolver, and your request is resolved as a regular DNS query\.
 
-1. If there's a private hosted zone name that matches the domain name in the request, the hosted zone is searched for a resource record set that matches the domain name and DNS type in the request, such as an A record for accounting\.example\.com\.
+1. If there's a private hosted zone name that matches the domain name in the request, the hosted zone is searched for a record that matches the domain name and DNS type in the request, such as an A record for accounting\.example\.com\.
 **Note**  
-If there's a matching private hosted zone but there's no resource record set that matches the domain name and type in the request, Amazon EC2 doesn't forward the request to a public DNS resolver\. Instead, it returns NXDOMAIN to the client\.
+If there's a matching private hosted zone but there's no record that matches the domain name and type in the request, Amazon EC2 doesn't forward the request to a public DNS resolver\. Instead, it returns NXDOMAIN to the client\.
 
 **Delegating Responsibility for a Subdomain**  
 You cannot create NS records in a private hosted zone to delegate responsibility for a subdomain\.
@@ -63,11 +63,11 @@ If you're using custom DNS servers that are outside of your VPC and you want to 
 If you have integrated your on\-premises network with one or more Amazon VPC virtual networks and you want your on\-premises network to resolve domain names in private hosted zones, you can create a Simple AD directory\. Simple AD provides IP addresses that you can use to submit DNS queries from your on\-premises network to your private hosted zone\. For more information, see [Getting Started with Simple AD](http://docs.aws.amazon.com/directoryservice/latest/admin-guide/getting_started.html) in the *AWS Directory Service Administration Guide*\.
 
 **Required IAM Permissions**  
-To create private hosted zones, you need to grant IAM permissions for Amazon EC2 actions in addition to permissions for Amazon Route 53 actions\. For more information, see [Required Permissions for Actions on Private Hosted Zones](r53-api-permissions-ref.md#required-permissions-private-hosted-zones)\.
+To create private hosted zones, you need to grant IAM permissions for Amazon EC2 actions in addition to permissions for Route 53 actions\. For more information, see [Required Permissions for Actions on Private Hosted Zones](r53-api-permissions-ref.md#required-permissions-private-hosted-zones)\.
 
-This topic explains how to use the Amazon Route 53 console to create, list, and delete private hosted zones\. For information about using the Amazon Route 53 API to perform these operations, see the [Amazon Route 53 API Reference](http://docs.aws.amazon.com/Route53/latest/APIReference/)\.
+This topic explains how to use the Route 53 console to create, list, and delete private hosted zones\. For information about using the Route 53 API to perform these operations, see the [Amazon Route 53 API Reference](http://docs.aws.amazon.com/Route53/latest/APIReference/)\.
 
-You can also use an Amazon Route 53 *public* hosted zone to route traffic for your domain on the internet\. For more information, see [Working with Public Hosted Zones](AboutHZWorkingWith.md)\.
+You can also use a Route 53 *public* hosted zone to route traffic for your domain on the internet\. For more information, see [Working with Public Hosted Zones](AboutHZWorkingWith.md)\.
 
 
 + [Creating a Private Hosted Zone](hosted-zone-private-creating.md)

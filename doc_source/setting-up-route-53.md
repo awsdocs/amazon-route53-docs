@@ -19,7 +19,7 @@ If you have an AWS account already, skip to [Access Your Account](#setting-up-ac
 
 1. Open [https://aws\.amazon\.com/](https://aws.amazon.com/), and then choose **Create an AWS Account**\.
 **Note**  
-This might be unavailable in your browser if you previously signed into the AWS Management Console\. In that case, choose **Sign In to the Console**, and then choose **Create a new AWS account**\.
+This might be unavailable in your browser if you previously signed into the AWS Management Console\. In that case, choose **Sign in to a different account**, and then choose **Create a new AWS account**\.
 
 1. Follow the online instructions\.
 
@@ -48,13 +48,13 @@ For each of those options, you need to access your AWS account by providing cred
 To access the AWS Management Console for the first time, you provide an email address and a password\. This combination of your email address and password is called your *root identity* or *root account credentials*\. After you access your account for the first time, we strongly recommend that you don't use your root account credentials again for everyday use\. Instead, you should create new credentials by using [AWS Identity and Access Management](http://docs.aws.amazon.com/IAM/latest/UserGuide/introduction.html)\. To do that, you create a user account for yourself known as an *IAM user*, and then add the IAM user to an IAM group with administrative permissions or grant the IAM user administrative permissions\. You then can access AWS using a special URL and the credentials for the IAM user\. You also can add other IAM users later, and restrict their access to specified resources in the account\.
 
 **Note**  
-Some ad\-blocking plugins for web browsers interfere with Amazon Route 53 console operations, which can cause the console to behave unpredictably\. If you installed an ad\-blocking plugin for your browser, we recommend that you add the URL for the Amazon Route 53 console, [https://console\.aws\.amazon\.com/route53/home](https://console.aws.amazon.com/route53/home), to the whitelist for the plugin\.
+Some ad\-blocking plugins for web browsers interfere with Amazon Route 53 console operations, which can cause the console to behave unpredictably\. If you installed an ad\-blocking plugin for your browser, we recommend that you add the URL for the Route 53 console, [https://console\.aws\.amazon\.com/route53/home](https://console.aws.amazon.com/route53/home), to the whitelist for the plugin\.
 
 ### Access the API, AWS CLI, AWS Tools for Windows PowerShell, or the AWS SDKs<a name="setting-up-access-account-api-cli"></a>
 
 To use the API, the AWS CLI, AWS Tools for Windows PowerShell, or the AWS SDKs, you must create *access keys*\. These keys consist of an access key ID and secret access key, which are used to sign programmatic requests that you make to AWS\.
 
-To create the keys, you sign in to the AWS Management Console\. We strongly recommend that you sign in with your IAM user credentials instead of your root credentials\. For more information, see [Access Keys](http://docs.aws.amazon.com/IAM/latest/UserGuide/id_credentials_access-keys.html) in the *IAM User Guide*\.
+To create the keys, you sign in to the AWS Management Console\. We strongly recommend that you sign in with your IAM user credentials instead of your root credentials\. For more information, see [Managing Access Keys for IAM Users](http://docs.aws.amazon.com/IAM/latest/UserGuide/id_credentials_access-keys.html) in the *IAM User Guide*\.
 
 ## Create an IAM User<a name="setting-up-create-iam-user"></a>
 
@@ -62,7 +62,9 @@ Perform the following procedures to create a group for administrators, create an
 
 **To create an IAM user for yourself and add the user to an Administrators group**
 
-1. Use your AWS account email address and password to sign in to the [AWS Management Console](https://console.aws.amazon.com/) as the *[AWS account root user](http://docs.aws.amazon.com/IAM/latest/UserGuide/id_root-user.html)*\.
+1. Use your AWS account email address and password to sign in as the *[AWS account root user](http://docs.aws.amazon.com/IAM/latest/UserGuide/id_root-user.html)* to the IAM console at [https://console\.aws\.amazon\.com/iam/](https://console.aws.amazon.com/iam/)\.
+**Note**  
+We strongly recommend that you adhere to the best practice of using the **Administrator** user below and securely lock away the root user credentials\. Sign in as the root user only to perform a few [account and service management tasks](http://docs.aws.amazon.com/general/latest/gr/aws_tasks-that-require-root.html)\.
 
 1. In the navigation pane of the console, choose **Users**, and then choose **Add user**\.
 
@@ -128,4 +130,4 @@ If you have experience with Windows PowerShell, you might prefer to use AWS Tool
 
 ## Download an AWS SDK<a name="setting-up-sdk"></a>
 
-If you're using a programming language that AWS provides an SDK for, we recommend that you use an SDK instead of the Amazon Route 53 API\. The SDKs make authentication simpler, integrate easily with your development environment, and provide easy access to Amazon Route 53 commands\. For more information, see [Tools for Amazon Web Services](https://aws.amazon.com//tools/)\.
+If you're using a programming language that AWS provides an SDK for, we recommend that you use an SDK instead of the Amazon Route 53 API\. The SDKs make authentication simpler, integrate easily with your development environment, and provide easy access to Route 53 commands\. For more information, see [Tools for Amazon Web Services](https://aws.amazon.com//tools/)\.

@@ -2,15 +2,18 @@
 
 The following lists of generic and geographic top\-level domains show the top\-level domains \(TLDs\) that you can use to register domains with Amazon Route 53\. We continue to add support for more TLDs, and we decide which TLDs to add based in part on customer feedback\. To suggest a TLD that you'd like us to add, enter a comment on the [Amazon Route 53 Domain Registration forum](https://forums.aws.amazon.com/forum.jspa?forumID=214)\.
 
-**Registering Domains with Amazon Route 53**  
-You can register a domain with Amazon Route 53 if the TLD is included on the following lists\. If the TLD isn't included, you can't register the domain with Amazon Route 53\. 
+**Registering domains with Route 53**  
+You can register a domain with Route 53 if the TLD is included on the following lists\. If the TLD isn't included, you can't register the domain with Route 53\. 
 
-**Transferring Domains to Amazon Route 53**  
-You can transfer a domain to Amazon Route 53 if the TLD is included on the following lists\. If the TLD isn’t included, you can't transfer the domain to Amazon Route 53\.  
-For most TLDs, you need to get an authorization code from the current registrar to transfer a domain\. To determine whether you need an authorization code, see the "Authorization code required for transfer to Amazon Route 53" section for your TLD\.
+**Transferring domains to Route 53**  
+You can transfer a domain to Route 53 if the TLD is included on the following lists\. If the TLD isn’t included, you can't transfer the domain to Route 53\.  
+For most TLDs, you need to get an authorization code from the current registrar to transfer a domain\. To determine whether you need an authorization code, see the "Authorization code required for transfer to Route 53" section for your TLD\.
 
-**Using Amazon Route 53 as Your DNS Service**  
-You can use Amazon Route 53 as the DNS service for any domain, even if the TLD for the domain isn't included on the following lists\. For more information about Amazon Route 53 as a DNS service, see [How Internet Traffic Is Routed to Your Website or Web Application](welcome-dns-service.md)\. For information about how to transfer DNS service for your domain to Amazon Route 53, see [Migrating DNS Service for an Existing Domain to Amazon Route 53](MigratingDNS.md)\.
+**Pricing for domain registration and transfers**  
+For information about the cost to register domains or transfer them to Route 53, see [Amazon Route 53 Pricing for Domain Registration](https://d32ze2gidvkk54.cloudfront.net/Amazon_Route_53_Domain_Registration_Pricing_20140731.pdf)\.
+
+**Using Route 53 as your DNS service**  
+You can use Route 53 as the DNS service for any domain, even if the TLD for the domain isn't included on the following lists\. For more information about Route 53 as a DNS service, see [How Internet Traffic Is Routed to Your Website or Web Application](welcome-dns-service.md)\. For information about how to transfer DNS service for your domain to Route 53, see [Migrating DNS Service for an Existing Domain to Amazon Route 53Migrating DNS Service for an Existing Domain to Route 53](MigratingDNS.md)\.
 
 
 + [Generic Top\-Level Domains](#registrar-tld-list-generic)
@@ -42,7 +45,7 @@ One to ten years\.
 + **Not hidden** – contact name and organization name  
 **Internationalized domain names**  
 Supported for French and Spanish\.  
-**Authorization code required for transfer to Amazon Route 53**  
+**Authorization code required for transfer to Route 53**  
 Yes  
 **DNSSEC**  
 Supported for domain registration\. For more information, see [Configuring DNSSEC for a Domain](domain-configure-dnssec.md)\.  
@@ -60,7 +63,7 @@ One to ten years\.
 + **Not hidden** – contact name and organization name  
 **Internationalized domain names**  
 Supported for French and Spanish\.  
-**Authorization code required for transfer to Amazon Route 53**  
+**Authorization code required for transfer to Route 53**  
 Yes  
 **DNSSEC**  
 Supported for domain registration\. For more information, see [Configuring DNSSEC for a Domain](domain-configure-dnssec.md)\.  
@@ -78,7 +81,7 @@ One to ten years\.
 + **Not hidden** – contact name and organization name  
 **Internationalized domain names**  
 Not supported\.  
-**Authorization code required for transfer to Amazon Route 53**  
+**Authorization code required for transfer to Route 53**  
 Yes  
 **DNSSEC**  
 Supported for domain registration\. For more information, see [Configuring DNSSEC for a Domain](domain-configure-dnssec.md)\.  
@@ -96,7 +99,7 @@ One to ten years\.
 + **Not hidden** – contact name and organization name  
 **Internationalized domain names**  
 Supported for French and Spanish\.  
-**Authorization code required for transfer to Amazon Route 53**  
+**Authorization code required for transfer to Route 53**  
 Yes  
 **DNSSEC**  
 Supported for domain registration\. For more information, see [Configuring DNSSEC for a Domain](domain-configure-dnssec.md)\.  
@@ -114,7 +117,7 @@ One to ten years\.
 + **Not hidden** – contact name and organization name  
 **Internationalized domain names**  
 Supported for French and Spanish\.  
-**Authorization code required for transfer to Amazon Route 53**  
+**Authorization code required for transfer to Route 53**  
 Yes  
 **DNSSEC**  
 Supported for domain registration\. For more information, see [Configuring DNSSEC for a Domain](domain-configure-dnssec.md)\.  
@@ -132,7 +135,7 @@ One to ten years\.
 + **Not hidden** – contact name and organization name  
 **Internationalized domain names**  
 Supported for French and Spanish\.  
-**Authorization code required for transfer to Amazon Route 53**  
+**Authorization code required for transfer to Route 53**  
 Yes  
 **DNSSEC**  
 Supported for domain registration\. For more information, see [Configuring DNSSEC for a Domain](domain-configure-dnssec.md)\.  
@@ -150,7 +153,7 @@ One to ten years\.
 + **Not hidden** – contact name and organization name  
 **Internationalized domain names**  
 Supported for Chinese, French, German, Spanish, and Latin\.  
-**Authorization code required for transfer to Amazon Route 53**  
+**Authorization code required for transfer to Route 53**  
 Yes  
 **DNSSEC**  
 Supported for domain registration\. For more information, see [Configuring DNSSEC for a Domain](domain-configure-dnssec.md)\.  
@@ -158,7 +161,7 @@ Supported for domain registration\. For more information, see [Configuring DNSSE
 The registrar for this TLD is our registrar associate, Gandi\.
 
 **\.audio**  
-You can no longer use Amazon Route 53 to register new \.audio domains or transfer \.audio domains to Amazon Route 53\. We'll continue to support \.audio domains that are already registered with Amazon Route 53\.
+You can no longer use Route 53 to register new \.audio domains or transfer \.audio domains to Route 53\. We'll continue to support \.audio domains that are already registered with Route 53\.
 Used by the audiovisual industry and anyone interested in broadcasting, sound equipment, audio production, and audio streaming\.    
 **Registration and renewal period**  
 One to ten years\.  
@@ -166,7 +169,7 @@ One to ten years\.
 Not supported\.  
 **Internationalized domain names**  
 Supported for Cyrillic \(primarily Russian\), French, German, Italian, Portuguese, and Spanish\.  
-**Authorization code required for transfer to Amazon Route 53**  
+**Authorization code required for transfer to Route 53**  
 Yes  
 **DNSSEC**  
 Supported for domain registration\. For more information, see [Configuring DNSSEC for a Domain](domain-configure-dnssec.md)\.  
@@ -188,7 +191,7 @@ One to ten years\.
 + **Not hidden** – contact name and organization name  
 **Internationalized domain names**  
 Supported for Chinese, French, German, Spanish, and Latin\.  
-**Authorization code required for transfer to Amazon Route 53**  
+**Authorization code required for transfer to Route 53**  
 Yes  
 **DNSSEC**  
 Supported for domain registration\. For more information, see [Configuring DNSSEC for a Domain](domain-configure-dnssec.md)\.  
@@ -206,7 +209,7 @@ One to ten years\.
 + **Not hidden** – contact name and organization name  
 **Internationalized domain names**  
 Supported for French and Spanish\.  
-**Authorization code required for transfer to Amazon Route 53**  
+**Authorization code required for transfer to Route 53**  
 Yes  
 **DNSSEC**  
 Supported for domain registration\. For more information, see [Configuring DNSSEC for a Domain](domain-configure-dnssec.md)\.  
@@ -224,7 +227,7 @@ One to ten years\.
 + **Not hidden** – contact name and organization name  
 **Internationalized domain names**  
 Supported for French and Spanish\.  
-**Authorization code required for transfer to Amazon Route 53**  
+**Authorization code required for transfer to Route 53**  
 Yes  
 **DNSSEC**  
 Supported for domain registration\. For more information, see [Configuring DNSSEC for a Domain](domain-configure-dnssec.md)\.  
@@ -242,7 +245,7 @@ One to ten years\.
 + **Not hidden** – contact name and organization name  
 **Internationalized domain names**  
 Supported for French and Spanish\.  
-**Authorization code required for transfer to Amazon Route 53**  
+**Authorization code required for transfer to Route 53**  
 Yes  
 **DNSSEC**  
 Supported for domain registration\. For more information, see [Configuring DNSSEC for a Domain](domain-configure-dnssec.md)\.  
@@ -260,7 +263,7 @@ One to ten years\.
 + **Not hidden** – contact name and organization name  
 **Internationalized domain names**  
 Not supported\.  
-**Authorization code required for transfer to Amazon Route 53**  
+**Authorization code required for transfer to Route 53**  
 Yes  
 **DNSSEC**  
 Supported for domain registration\. For more information, see [Configuring DNSSEC for a Domain](domain-configure-dnssec.md)\.  
@@ -278,7 +281,7 @@ One to ten years\.
 + **Not hidden** – contact name and organization name  
 **Internationalized domain names**  
 Not supported\.  
-**Authorization code required for transfer to Amazon Route 53**  
+**Authorization code required for transfer to Route 53**  
 Yes  
 **DNSSEC**  
 Supported for domain registration\. For more information, see [Configuring DNSSEC for a Domain](domain-configure-dnssec.md)\.  
@@ -296,7 +299,7 @@ One to ten years\.
 + **Not hidden** – contact name and organization name  
 **Internationalized domain names**  
 Not supported\.  
-**Authorization code required for transfer to Amazon Route 53**  
+**Authorization code required for transfer to Route 53**  
 Yes  
 **DNSSEC**  
 Not supported\.  
@@ -314,7 +317,7 @@ One to ten years\.
 + **Not hidden** – contact name and organization name  
 **Internationalized domain names**  
 Supported for French and Spanish\.  
-**Authorization code required for transfer to Amazon Route 53**  
+**Authorization code required for transfer to Route 53**  
 Yes  
 **DNSSEC**  
 Supported for domain registration\. For more information, see [Configuring DNSSEC for a Domain](domain-configure-dnssec.md)\.  
@@ -332,7 +335,7 @@ One to ten years\.
 + **Not hidden** – contact name and organization name  
 **Internationalized domain names**  
 Supported for French and Spanish\.  
-**Authorization code required for transfer to Amazon Route 53**  
+**Authorization code required for transfer to Route 53**  
 Yes  
 **DNSSEC**  
 Supported for domain registration\. For more information, see [Configuring DNSSEC for a Domain](domain-configure-dnssec.md)\.  
@@ -350,7 +353,7 @@ One to ten years\.
 + **Not hidden** – contact name and organization name  
 **Internationalized domain names**  
 Supported for French and Spanish\.  
-**Authorization code required for transfer to Amazon Route 53**  
+**Authorization code required for transfer to Route 53**  
 Yes  
 **DNSSEC**  
 Supported for domain registration\. For more information, see [Configuring DNSSEC for a Domain](domain-configure-dnssec.md)\.  
@@ -368,7 +371,7 @@ One to ten years\.
 + **Not hidden** – contact name and organization name  
 **Internationalized domain names**  
 Supported for Spanish\.  
-**Authorization code required for transfer to Amazon Route 53**  
+**Authorization code required for transfer to Route 53**  
 Yes  
 **DNSSEC**  
 Not supported\.  
@@ -390,7 +393,7 @@ One to ten years\.
 + **Not hidden** – contact name and organization name  
 **Internationalized domain names**  
 Supported for French and Spanish\.  
-**Authorization code required for transfer to Amazon Route 53**  
+**Authorization code required for transfer to Route 53**  
 Yes  
 **DNSSEC**  
 Supported for domain registration\. For more information, see [Configuring DNSSEC for a Domain](domain-configure-dnssec.md)\.  
@@ -408,7 +411,7 @@ One to ten years\.
 + **Not hidden** – contact name and organization name  
 **Internationalized domain names**  
 Supported for Chinese, French, German, and Spanish\.  
-**Authorization code required for transfer to Amazon Route 53**  
+**Authorization code required for transfer to Route 53**  
 Yes  
 **DNSSEC**  
 Supported for domain registration\. For more information, see [Configuring DNSSEC for a Domain](domain-configure-dnssec.md)\.  
@@ -426,7 +429,7 @@ One to ten years\.
 + **Not hidden** – contact name and organization name  
 **Internationalized domain names**  
 Supported for French and Spanish\.  
-**Authorization code required for transfer to Amazon Route 53**  
+**Authorization code required for transfer to Route 53**  
 Yes  
 **DNSSEC**  
 Supported for domain registration\. For more information, see [Configuring DNSSEC for a Domain](domain-configure-dnssec.md)\.  
@@ -444,7 +447,7 @@ One to ten years\.
 + **Not hidden** – contact name and organization name  
 **Internationalized domain names**  
 Supported for French and Spanish\.  
-**Authorization code required for transfer to Amazon Route 53**  
+**Authorization code required for transfer to Route 53**  
 Yes  
 **DNSSEC**  
 Supported for domain registration\. For more information, see [Configuring DNSSEC for a Domain](domain-configure-dnssec.md)\.  
@@ -462,7 +465,7 @@ One to ten years\.
 + **Not hidden** – contact name and organization name  
 **Internationalized domain names**  
 Supported for French and Spanish\.  
-**Authorization code required for transfer to Amazon Route 53**  
+**Authorization code required for transfer to Route 53**  
 Yes  
 **DNSSEC**  
 Supported for domain registration\. For more information, see [Configuring DNSSEC for a Domain](domain-configure-dnssec.md)\.  
@@ -480,7 +483,7 @@ One to ten years\.
 + **Not hidden** – contact name and organization name  
 **Internationalized domain names**  
 Supported for French and Spanish\.  
-**Authorization code required for transfer to Amazon Route 53**  
+**Authorization code required for transfer to Route 53**  
 Yes  
 **DNSSEC**  
 Supported for domain registration\. For more information, see [Configuring DNSSEC for a Domain](domain-configure-dnssec.md)\.  
@@ -498,7 +501,7 @@ One to ten years\.
 + **Not hidden** – contact name and organization name  
 **Internationalized domain names**  
 Supported for French and Spanish\.  
-**Authorization code required for transfer to Amazon Route 53**  
+**Authorization code required for transfer to Route 53**  
 Yes  
 **DNSSEC**  
 Supported for domain registration\. For more information, see [Configuring DNSSEC for a Domain](domain-configure-dnssec.md)\.  
@@ -516,7 +519,7 @@ One to ten years\.
 + **Not hidden** – contact name and organization name  
 **Internationalized domain names**  
 Supported for French and Spanish\.  
-**Authorization code required for transfer to Amazon Route 53**  
+**Authorization code required for transfer to Route 53**  
 Yes  
 **DNSSEC**  
 Supported for domain registration\. For more information, see [Configuring DNSSEC for a Domain](domain-configure-dnssec.md)\.  
@@ -534,7 +537,7 @@ One to ten years\.
 + **Not hidden** – contact name and organization name  
 **Internationalized domain names**  
 Supported for French and Spanish\.  
-**Authorization code required for transfer to Amazon Route 53**  
+**Authorization code required for transfer to Route 53**  
 Yes  
 **DNSSEC**  
 Supported for domain registration\. For more information, see [Configuring DNSSEC for a Domain](domain-configure-dnssec.md)\.  
@@ -552,7 +555,7 @@ One to ten years\.
 + **Not hidden** – contact name and organization name  
 **Internationalized domain names**  
 Supported for French and Spanish\.  
-**Authorization code required for transfer to Amazon Route 53**  
+**Authorization code required for transfer to Route 53**  
 Yes  
 **DNSSEC**  
 Supported for domain registration\. For more information, see [Configuring DNSSEC for a Domain](domain-configure-dnssec.md)\.  
@@ -570,7 +573,7 @@ One to ten years\.
 + **Not hidden** – contact name and organization name  
 **Internationalized domain names**  
 Supported for French and Spanish\.  
-**Authorization code required for transfer to Amazon Route 53**  
+**Authorization code required for transfer to Route 53**  
 Yes  
 **DNSSEC**  
 Supported for domain registration\. For more information, see [Configuring DNSSEC for a Domain](domain-configure-dnssec.md)\.  
@@ -591,7 +594,7 @@ One to ten years\.
 + **Not hidden** – contact name and organization name  
 **Internationalized domain names**  
 Supported for French and Spanish\.  
-**Authorization code required for transfer to Amazon Route 53**  
+**Authorization code required for transfer to Route 53**  
 Yes  
 **DNSSEC**  
 Supported for domain registration\. For more information, see [Configuring DNSSEC for a Domain](domain-configure-dnssec.md)\.  
@@ -606,7 +609,7 @@ One to ten years\.
 Not supported\.  
 **Internationalized domain names**  
 Supported for German\.  
-**Authorization code required for transfer to Amazon Route 53**  
+**Authorization code required for transfer to Route 53**  
 Yes  
 **DNSSEC**  
 Not supported\.  
@@ -624,7 +627,7 @@ One to ten years\.
 + **Not hidden** – contact name and organization name  
 **Internationalized domain names**  
 Supported for French and Spanish\.  
-**Authorization code required for transfer to Amazon Route 53**  
+**Authorization code required for transfer to Route 53**  
 Yes  
 **DNSSEC**  
 Supported for domain registration\. For more information, see [Configuring DNSSEC for a Domain](domain-configure-dnssec.md)\.  
@@ -642,7 +645,7 @@ One to ten years\.
 + **Not hidden** – contact name and organization name  
 **Internationalized domain names**  
 Supported for French and Spanish\.  
-**Authorization code required for transfer to Amazon Route 53**  
+**Authorization code required for transfer to Route 53**  
 Yes  
 **DNSSEC**  
 Supported for domain registration\. For more information, see [Configuring DNSSEC for a Domain](domain-configure-dnssec.md)\.  
@@ -660,7 +663,7 @@ One to ten years\.
 + **Not hidden** – contact name and organization name  
 **Internationalized domain names**  
 Supported for French and Spanish\.  
-**Authorization code required for transfer to Amazon Route 53**  
+**Authorization code required for transfer to Route 53**  
 Yes  
 **DNSSEC**  
 Supported for domain registration\. For more information, see [Configuring DNSSEC for a Domain](domain-configure-dnssec.md)\.  
@@ -678,7 +681,7 @@ One to ten years\.
 + **Not hidden** – contact name and organization name  
 **Internationalized domain names**  
 Supported for French and Spanish\.  
-**Authorization code required for transfer to Amazon Route 53**  
+**Authorization code required for transfer to Route 53**  
 Yes  
 **DNSSEC**  
 Supported for domain registration\. For more information, see [Configuring DNSSEC for a Domain](domain-configure-dnssec.md)\.  
@@ -696,7 +699,7 @@ One to ten years\.
 + **Not hidden** – contact name and organization name  
 **Internationalized domain names**  
 Supported for French and Spanish\.  
-**Authorization code required for transfer to Amazon Route 53**  
+**Authorization code required for transfer to Route 53**  
 Yes  
 **DNSSEC**  
 Supported for domain registration\. For more information, see [Configuring DNSSEC for a Domain](domain-configure-dnssec.md)\.  
@@ -714,7 +717,7 @@ One to ten years\.
 + **Not hidden** – contact name and organization name  
 **Internationalized domain names**  
 Supported for French and Spanish\.  
-**Authorization code required for transfer to Amazon Route 53**  
+**Authorization code required for transfer to Route 53**  
 Yes  
 **DNSSEC**  
 Supported for domain registration\. For more information, see [Configuring DNSSEC for a Domain](domain-configure-dnssec.md)\.  
@@ -729,7 +732,7 @@ One to ten years\.
 Not supported\.  
 **Internationalized domain names**  
 Supported for Cyrillic \(primarily Russian\), French, German, Italian, Portuguese, and Spanish\.  
-**Authorization code required for transfer to Amazon Route 53**  
+**Authorization code required for transfer to Route 53**  
 Yes  
 **DNSSEC**  
 Supported for domain registration\. For more information, see [Configuring DNSSEC for a Domain](domain-configure-dnssec.md)\.  
@@ -747,7 +750,7 @@ One to ten years\.
 + **Not hidden** – contact name and organization name  
 **Internationalized domain names**  
 Supported for French and Spanish\.  
-**Authorization code required for transfer to Amazon Route 53**  
+**Authorization code required for transfer to Route 53**  
 Yes  
 **DNSSEC**  
 Supported for domain registration\. For more information, see [Configuring DNSSEC for a Domain](domain-configure-dnssec.md)\.  
@@ -765,7 +768,7 @@ One to ten years\.
 + **Not hidden** – contact name and organization name  
 **Internationalized domain names**  
 Supported for French and Spanish\.  
-**Authorization code required for transfer to Amazon Route 53**  
+**Authorization code required for transfer to Route 53**  
 Yes  
 **DNSSEC**  
 Supported for domain registration\. For more information, see [Configuring DNSSEC for a Domain](domain-configure-dnssec.md)\.  
@@ -780,7 +783,7 @@ One to ten years\.
 Not supported\.  
 **Internationalized domain names**  
 Not supported\.  
-**Authorization code required for transfer to Amazon Route 53**  
+**Authorization code required for transfer to Route 53**  
 Yes  
 **DNSSEC**  
 Supported for domain registration\. For more information, see [Configuring DNSSEC for a Domain](domain-configure-dnssec.md)\.  
@@ -798,7 +801,7 @@ One to ten years\.
 + **Not hidden** – contact name and organization name  
 **Internationalized domain names**  
 Supported for Spanish and Japanese\.  
-**Authorization code required for transfer to Amazon Route 53**  
+**Authorization code required for transfer to Route 53**  
 Yes  
 **DNSSEC**  
 Not supported\.  
@@ -816,7 +819,7 @@ One to ten years\.
 + **Not hidden** – contact name and organization name  
 **Internationalized domain names**  
 Supported for French and Spanish\.  
-**Authorization code required for transfer to Amazon Route 53**  
+**Authorization code required for transfer to Route 53**  
 Yes  
 **DNSSEC**  
 Supported for domain registration\. For more information, see [Configuring DNSSEC for a Domain](domain-configure-dnssec.md)\.  
@@ -834,7 +837,7 @@ One to ten years\.
 + **Not hidden** – contact name and organization name  
 **Internationalized domain names**  
 Supported for French and Spanish\.  
-**Authorization code required for transfer to Amazon Route 53**  
+**Authorization code required for transfer to Route 53**  
 Yes  
 **DNSSEC**  
 Supported for domain registration\. For more information, see [Configuring DNSSEC for a Domain](domain-configure-dnssec.md)\.  
@@ -852,7 +855,7 @@ One to ten years\.
 + **Not hidden** – contact name and organization name  
 **Internationalized domain names**  
 Supported for French and Spanish\.  
-**Authorization code required for transfer to Amazon Route 53**  
+**Authorization code required for transfer to Route 53**  
 Yes  
 **DNSSEC**  
 Supported for domain registration\. For more information, see [Configuring DNSSEC for a Domain](domain-configure-dnssec.md)\.  
@@ -867,7 +870,7 @@ One to ten years\.
 Not supported\.  
 **Internationalized domain names**  
 Supported for Arabic, simplified and traditional Chinese, Cyrillic, Greek, Hebrew, Japanese, and Thai\.  
-**Authorization code required for transfer to Amazon Route 53**  
+**Authorization code required for transfer to Route 53**  
 Yes  
 **DNSSEC**  
 Supported for domain registration\. For more information, see [Configuring DNSSEC for a Domain](domain-configure-dnssec.md)\.  
@@ -882,7 +885,7 @@ One to ten years\.
 All information is hidden\.  
 **Internationalized domain names**  
 Supported\.  
-**Authorization code required for transfer to Amazon Route 53**  
+**Authorization code required for transfer to Route 53**  
 Yes  
 **DNSSEC**  
 Supported for domain registration\. For more information, see [Configuring DNSSEC for a Domain](domain-configure-dnssec.md)\.  
@@ -900,7 +903,7 @@ One to ten years\.
 + **Not hidden** – contact name and organization name  
 **Internationalized domain names**  
 Supported for French and Spanish\.  
-**Authorization code required for transfer to Amazon Route 53**  
+**Authorization code required for transfer to Route 53**  
 Yes  
 **DNSSEC**  
 Supported for domain registration\. For more information, see [Configuring DNSSEC for a Domain](domain-configure-dnssec.md)\.  
@@ -918,7 +921,7 @@ One to ten years\.
 + **Not hidden** – contact name and organization name  
 **Internationalized domain names**  
 Supported for French and Spanish\.  
-**Authorization code required for transfer to Amazon Route 53**  
+**Authorization code required for transfer to Route 53**  
 Yes  
 **DNSSEC**  
 Supported for domain registration\. For more information, see [Configuring DNSSEC for a Domain](domain-configure-dnssec.md)\.  
@@ -936,7 +939,7 @@ One to ten years\.
 + **Not hidden** – contact name and organization name  
 **Internationalized domain names**  
 Supported for French and Spanish\.  
-**Authorization code required for transfer to Amazon Route 53**  
+**Authorization code required for transfer to Route 53**  
 Yes  
 **DNSSEC**  
 Supported for domain registration\. For more information, see [Configuring DNSSEC for a Domain](domain-configure-dnssec.md)\.  
@@ -954,7 +957,7 @@ One to ten years\.
 + **Not hidden** – contact name and organization name  
 **Internationalized domain names**  
 Supported for French and Spanish\.  
-**Authorization code required for transfer to Amazon Route 53**  
+**Authorization code required for transfer to Route 53**  
 Yes  
 **DNSSEC**  
 Supported for domain registration\. For more information, see [Configuring DNSSEC for a Domain](domain-configure-dnssec.md)\.  
@@ -972,7 +975,7 @@ One to ten years\.
 + **Not hidden** – contact name and organization name  
 **Internationalized domain names**  
 Supported for French and Spanish\.  
-**Authorization code required for transfer to Amazon Route 53**  
+**Authorization code required for transfer to Route 53**  
 Yes  
 **DNSSEC**  
 Supported for domain registration\. For more information, see [Configuring DNSSEC for a Domain](domain-configure-dnssec.md)\.  
@@ -990,7 +993,7 @@ One to ten years\.
 + **Not hidden** – contact name and organization name  
 **Internationalized domain names**  
 Supported for Chinese, French, German, Latin, and Spanish\.  
-**Authorization code required for transfer to Amazon Route 53**  
+**Authorization code required for transfer to Route 53**  
 Yes  
 **DNSSEC**  
 Supported for domain registration\. For more information, see [Configuring DNSSEC for a Domain](domain-configure-dnssec.md)\.  
@@ -1008,7 +1011,7 @@ One to ten years\.
 + **Not hidden** – contact name and organization name  
 **Internationalized domain names**  
 Supported for French and Spanish\.  
-**Authorization code required for transfer to Amazon Route 53**  
+**Authorization code required for transfer to Route 53**  
 Yes  
 **DNSSEC**  
 Supported for domain registration\. For more information, see [Configuring DNSSEC for a Domain](domain-configure-dnssec.md)\.  
@@ -1026,7 +1029,7 @@ One to ten years\.
 + **Not hidden** – contact name and organization name  
 **Internationalized domain names**  
 Supported for French and Spanish\.  
-**Authorization code required for transfer to Amazon Route 53**  
+**Authorization code required for transfer to Route 53**  
 Yes  
 **DNSSEC**  
 Supported for domain registration\. For more information, see [Configuring DNSSEC for a Domain](domain-configure-dnssec.md)\.  
@@ -1044,7 +1047,7 @@ One to ten years\.
 + **Not hidden** – contact name and organization name  
 **Internationalized domain names**  
 Supported for Chinese, French, German, and Spanish\.  
-**Authorization code required for transfer to Amazon Route 53**  
+**Authorization code required for transfer to Route 53**  
 Yes  
 **DNSSEC**  
 Supported for domain registration\. For more information, see [Configuring DNSSEC for a Domain](domain-configure-dnssec.md)\.  
@@ -1062,7 +1065,7 @@ One to ten years\.
 + **Not hidden** – contact name and organization name  
 **Internationalized domain names**  
 Supported for French and Spanish\.  
-**Authorization code required for transfer to Amazon Route 53**  
+**Authorization code required for transfer to Route 53**  
 Yes  
 **DNSSEC**  
 Supported for domain registration\. For more information, see [Configuring DNSSEC for a Domain](domain-configure-dnssec.md)\.  
@@ -1077,7 +1080,7 @@ One to ten years\.
 Not supported\.  
 **Internationalized domain names**  
 Supported for French and Spanish\.  
-**Authorization code required for transfer to Amazon Route 53**  
+**Authorization code required for transfer to Route 53**  
 Yes  
 **DNSSEC**  
 Supported for domain registration\. For more information, see [Configuring DNSSEC for a Domain](domain-configure-dnssec.md)\.  
@@ -1095,7 +1098,7 @@ One to ten years\.
 + **Not hidden** – contact name and organization name  
 **Internationalized domain names**  
 Supported for French and Spanish\.  
-**Authorization code required for transfer to Amazon Route 53**  
+**Authorization code required for transfer to Route 53**  
 Yes  
 **DNSSEC**  
 Supported for domain registration\. For more information, see [Configuring DNSSEC for a Domain](domain-configure-dnssec.md)\.  
@@ -1117,7 +1120,7 @@ One to ten years\.
 + **Not hidden** – contact name and organization name  
 **Internationalized domain names**  
 Supported for Chinese, French, German, Latin, and Spanish\.  
-**Authorization code required for transfer to Amazon Route 53**  
+**Authorization code required for transfer to Route 53**  
 Yes  
 **DNSSEC**  
 Not supported\.  
@@ -1135,7 +1138,7 @@ One to ten years\.
 + **Not hidden** – contact name and organization name  
 **Internationalized domain names**  
 Supported for French and Spanish\.  
-**Authorization code required for transfer to Amazon Route 53**  
+**Authorization code required for transfer to Route 53**  
 Yes  
 **DNSSEC**  
 Supported for domain registration\. For more information, see [Configuring DNSSEC for a Domain](domain-configure-dnssec.md)\.  
@@ -1153,7 +1156,7 @@ One to ten years\.
 + **Not hidden** – contact name and organization name  
 **Internationalized domain names**  
 Supported for French and Spanish\.  
-**Authorization code required for transfer to Amazon Route 53**  
+**Authorization code required for transfer to Route 53**  
 Yes  
 **DNSSEC**  
 Supported for domain registration\. For more information, see [Configuring DNSSEC for a Domain](domain-configure-dnssec.md)\.  
@@ -1171,7 +1174,7 @@ One to ten years\.
 + **Not hidden** – contact name and organization name  
 **Internationalized domain names**  
 Supported for French and Spanish\.  
-**Authorization code required for transfer to Amazon Route 53**  
+**Authorization code required for transfer to Route 53**  
 Yes  
 **DNSSEC**  
 Supported for domain registration\. For more information, see [Configuring DNSSEC for a Domain](domain-configure-dnssec.md)\.  
@@ -1189,7 +1192,7 @@ One to ten years\.
 + **Not hidden** – contact name and organization name  
 **Internationalized domain names**  
 Supported for Chinese, French, German, Latin, and Spanish\.  
-**Authorization code required for transfer to Amazon Route 53**  
+**Authorization code required for transfer to Route 53**  
 Yes  
 **DNSSEC**  
 Not supported\.  
@@ -1207,7 +1210,7 @@ One to ten years\.
 + **Not hidden** – contact name and organization name  
 **Internationalized domain names**  
 Supported for French and Spanish\.  
-**Authorization code required for transfer to Amazon Route 53**  
+**Authorization code required for transfer to Route 53**  
 Yes  
 **DNSSEC**  
 Supported for domain registration\. For more information, see [Configuring DNSSEC for a Domain](domain-configure-dnssec.md)\.  
@@ -1225,7 +1228,7 @@ One to ten years\.
 + **Not hidden** – contact name and organization name  
 **Internationalized domain names**  
 Supported for French and Spanish\.  
-**Authorization code required for transfer to Amazon Route 53**  
+**Authorization code required for transfer to Route 53**  
 Yes  
 **DNSSEC**  
 Supported for domain registration\. For more information, see [Configuring DNSSEC for a Domain](domain-configure-dnssec.md)\.  
@@ -1233,7 +1236,7 @@ Supported for domain registration\. For more information, see [Configuring DNSSE
 The registrar for this TLD is our registrar associate, Gandi\.
 
 **\.diet**  
-You can no longer use Amazon Route 53 to register new \.diet domains or transfer \.diet domains to Amazon Route 53\. We'll continue to support \.diet domains that are already registered with Amazon Route 53\.
+You can no longer use Route 53 to register new \.diet domains or transfer \.diet domains to Route 53\. We'll continue to support \.diet domains that are already registered with Route 53\.
 Used by health and fitness professionals\.    
 **Registration and renewal period**  
 One to ten years\.  
@@ -1241,7 +1244,7 @@ One to ten years\.
 Not supported\.  
 **Internationalized domain names**  
 Supported for Cyrillic \(primarily Russian\), French, German, Italian, Portuguese, and Spanish\.  
-**Authorization code required for transfer to Amazon Route 53**  
+**Authorization code required for transfer to Route 53**  
 Yes  
 **DNSSEC**  
 Supported for domain registration\. For more information, see [Configuring DNSSEC for a Domain](domain-configure-dnssec.md)\.  
@@ -1259,7 +1262,7 @@ One to ten years\.
 + **Not hidden** – contact name and organization name  
 **Internationalized domain names**  
 Supported for French and Spanish\.  
-**Authorization code required for transfer to Amazon Route 53**  
+**Authorization code required for transfer to Route 53**  
 Yes  
 **DNSSEC**  
 Supported for domain registration\. For more information, see [Configuring DNSSEC for a Domain](domain-configure-dnssec.md)\.  
@@ -1277,7 +1280,7 @@ One to ten years\.
 + **Not hidden** – contact name and organization name  
 **Internationalized domain names**  
 Supported for French and Spanish\.  
-**Authorization code required for transfer to Amazon Route 53**  
+**Authorization code required for transfer to Route 53**  
 Yes  
 **DNSSEC**  
 Supported for domain registration\. For more information, see [Configuring DNSSEC for a Domain](domain-configure-dnssec.md)\.  
@@ -1295,7 +1298,7 @@ One to ten years\.
 + **Not hidden** – contact name and organization name  
 **Internationalized domain names**  
 Supported for French and Spanish\.  
-**Authorization code required for transfer to Amazon Route 53**  
+**Authorization code required for transfer to Route 53**  
 Yes  
 **DNSSEC**  
 Supported for domain registration\. For more information, see [Configuring DNSSEC for a Domain](domain-configure-dnssec.md)\.  
@@ -1313,7 +1316,7 @@ One to ten years\.
 + **Not hidden** – contact name and organization name  
 **Internationalized domain names**  
 Supported for French and Spanish\.  
-**Authorization code required for transfer to Amazon Route 53**  
+**Authorization code required for transfer to Route 53**  
 Yes  
 **DNSSEC**  
 Supported for domain registration\. For more information, see [Configuring DNSSEC for a Domain](domain-configure-dnssec.md)\.  
@@ -1331,7 +1334,7 @@ One to ten years\.
 + **Not hidden** – contact name and organization name  
 **Internationalized domain names**  
 Supported for Chinese, French, German, and Spanish\.  
-**Authorization code required for transfer to Amazon Route 53**  
+**Authorization code required for transfer to Route 53**  
 Yes  
 **DNSSEC**  
 Supported for domain registration\. For more information, see [Configuring DNSSEC for a Domain](domain-configure-dnssec.md)\.  
@@ -1349,7 +1352,7 @@ One to ten years\.
 + **Not hidden** – contact name and organization name  
 **Internationalized domain names**  
 Supported for French and Spanish\.  
-**Authorization code required for transfer to Amazon Route 53**  
+**Authorization code required for transfer to Route 53**  
 Yes  
 **DNSSEC**  
 Supported for domain registration\. For more information, see [Configuring DNSSEC for a Domain](domain-configure-dnssec.md)\.  
@@ -1371,7 +1374,7 @@ One to ten years\.
 + **Not hidden** – contact name and organization name  
 **Internationalized domain names**  
 Supported for French and Spanish\.  
-**Authorization code required for transfer to Amazon Route 53**  
+**Authorization code required for transfer to Route 53**  
 Yes  
 **DNSSEC**  
 Supported for domain registration\. For more information, see [Configuring DNSSEC for a Domain](domain-configure-dnssec.md)\.  
@@ -1389,7 +1392,7 @@ One to ten years\.
 + **Not hidden** – contact name and organization name  
 **Internationalized domain names**  
 Supported for French and Spanish\.  
-**Authorization code required for transfer to Amazon Route 53**  
+**Authorization code required for transfer to Route 53**  
 Yes  
 **DNSSEC**  
 Supported for domain registration\. For more information, see [Configuring DNSSEC for a Domain](domain-configure-dnssec.md)\.  
@@ -1407,7 +1410,7 @@ One to ten years\.
 + **Not hidden** – contact name and organization name  
 **Internationalized domain names**  
 Supported for French and Spanish\.  
-**Authorization code required for transfer to Amazon Route 53**  
+**Authorization code required for transfer to Route 53**  
 Yes  
 **DNSSEC**  
 Supported for domain registration\. For more information, see [Configuring DNSSEC for a Domain](domain-configure-dnssec.md)\.  
@@ -1425,7 +1428,7 @@ One to ten years\.
 + **Not hidden** – contact name and organization name  
 **Internationalized domain names**  
 Supported for French and Spanish\.  
-**Authorization code required for transfer to Amazon Route 53**  
+**Authorization code required for transfer to Route 53**  
 Yes  
 **DNSSEC**  
 Supported for domain registration\. For more information, see [Configuring DNSSEC for a Domain](domain-configure-dnssec.md)\.  
@@ -1443,7 +1446,7 @@ One to ten years\.
 + **Not hidden** – contact name and organization name  
 **Internationalized domain names**  
 Supported for French and Spanish\.  
-**Authorization code required for transfer to Amazon Route 53**  
+**Authorization code required for transfer to Route 53**  
 Yes  
 **DNSSEC**  
 Supported for domain registration\. For more information, see [Configuring DNSSEC for a Domain](domain-configure-dnssec.md)\.  
@@ -1461,7 +1464,7 @@ One to ten years\.
 + **Not hidden** – contact name and organization name  
 **Internationalized domain names**  
 Supported for French and Spanish\.  
-**Authorization code required for transfer to Amazon Route 53**  
+**Authorization code required for transfer to Route 53**  
 Yes  
 **DNSSEC**  
 Supported for domain registration\. For more information, see [Configuring DNSSEC for a Domain](domain-configure-dnssec.md)\.  
@@ -1479,7 +1482,7 @@ One to ten years\.
 + **Not hidden** – contact name and organization name  
 **Internationalized domain names**  
 Supported for French and Spanish\.  
-**Authorization code required for transfer to Amazon Route 53**  
+**Authorization code required for transfer to Route 53**  
 Yes  
 **DNSSEC**  
 Supported for domain registration\. For more information, see [Configuring DNSSEC for a Domain](domain-configure-dnssec.md)\.  
@@ -1497,7 +1500,7 @@ One to ten years\.
 + **Not hidden** – contact name and organization name  
 **Internationalized domain names**  
 Supported for French and Spanish\.  
-**Authorization code required for transfer to Amazon Route 53**  
+**Authorization code required for transfer to Route 53**  
 Yes  
 **DNSSEC**  
 Supported for domain registration\. For more information, see [Configuring DNSSEC for a Domain](domain-configure-dnssec.md)\.  
@@ -1515,7 +1518,7 @@ One to ten years\.
 + **Not hidden** – contact name and organization name  
 **Internationalized domain names**  
 Supported for French and Spanish\.  
-**Authorization code required for transfer to Amazon Route 53**  
+**Authorization code required for transfer to Route 53**  
 Yes  
 **DNSSEC**  
 Supported for domain registration\. For more information, see [Configuring DNSSEC for a Domain](domain-configure-dnssec.md)\.  
@@ -1533,7 +1536,7 @@ One to ten years\.
 + **Not hidden** – contact name and organization name  
 **Internationalized domain names**  
 Supported for French and Spanish\.  
-**Authorization code required for transfer to Amazon Route 53**  
+**Authorization code required for transfer to Route 53**  
 Yes  
 **DNSSEC**  
 Supported for domain registration\. For more information, see [Configuring DNSSEC for a Domain](domain-configure-dnssec.md)\.  
@@ -1551,7 +1554,7 @@ One to ten years\.
 + **Not hidden** – contact name and organization name  
 **Internationalized domain names**  
 Supported for French and Spanish\.  
-**Authorization code required for transfer to Amazon Route 53**  
+**Authorization code required for transfer to Route 53**  
 Yes  
 **DNSSEC**  
 Supported for domain registration\. For more information, see [Configuring DNSSEC for a Domain](domain-configure-dnssec.md)\.  
@@ -1569,7 +1572,7 @@ One to ten years\.
 + **Not hidden** – contact name and organization name  
 **Internationalized domain names**  
 Supported for Chinese, French, German, and Spanish\.  
-**Authorization code required for transfer to Amazon Route 53**  
+**Authorization code required for transfer to Route 53**  
 Yes  
 **DNSSEC**  
 Supported for domain registration\. For more information, see [Configuring DNSSEC for a Domain](domain-configure-dnssec.md)\.  
@@ -1591,7 +1594,7 @@ One to ten years\.
 + **Not hidden** – contact name and organization name  
 **Internationalized domain names**  
 Supported for French and Spanish\.  
-**Authorization code required for transfer to Amazon Route 53**  
+**Authorization code required for transfer to Route 53**  
 Yes  
 **DNSSEC**  
 Supported for domain registration\. For more information, see [Configuring DNSSEC for a Domain](domain-configure-dnssec.md)\.  
@@ -1609,7 +1612,7 @@ One to ten years\.
 + **Not hidden** – contact name and organization name  
 **Internationalized domain names**  
 Supported for French and Spanish\.  
-**Authorization code required for transfer to Amazon Route 53**  
+**Authorization code required for transfer to Route 53**  
 Yes  
 **DNSSEC**  
 Supported for domain registration\. For more information, see [Configuring DNSSEC for a Domain](domain-configure-dnssec.md)\.  
@@ -1627,7 +1630,7 @@ One to ten years\.
 + **Not hidden** – contact name and organization name  
 **Internationalized domain names**  
 Supported for French and Spanish\.  
-**Authorization code required for transfer to Amazon Route 53**  
+**Authorization code required for transfer to Route 53**  
 Yes  
 **DNSSEC**  
 Supported for domain registration\. For more information, see [Configuring DNSSEC for a Domain](domain-configure-dnssec.md)\.  
@@ -1645,7 +1648,7 @@ One to ten years\.
 + **Not hidden** – contact name and organization name  
 **Internationalized domain names**  
 Supported for French and Spanish\.  
-**Authorization code required for transfer to Amazon Route 53**  
+**Authorization code required for transfer to Route 53**  
 Yes  
 **DNSSEC**  
 Supported for domain registration\. For more information, see [Configuring DNSSEC for a Domain](domain-configure-dnssec.md)\.  
@@ -1663,7 +1666,7 @@ One to ten years\.
 + **Not hidden** – contact name and organization name  
 **Internationalized domain names**  
 Supported for French and Spanish\.  
-**Authorization code required for transfer to Amazon Route 53**  
+**Authorization code required for transfer to Route 53**  
 Yes  
 **DNSSEC**  
 Supported for domain registration\. For more information, see [Configuring DNSSEC for a Domain](domain-configure-dnssec.md)\.  
@@ -1681,7 +1684,7 @@ One to ten years\.
 + **Not hidden** – contact name and organization name  
 **Internationalized domain names**  
 Supported for French and Spanish\.  
-**Authorization code required for transfer to Amazon Route 53**  
+**Authorization code required for transfer to Route 53**  
 Yes  
 **DNSSEC**  
 Supported for domain registration\. For more information, see [Configuring DNSSEC for a Domain](domain-configure-dnssec.md)\.  
@@ -1699,7 +1702,7 @@ One to ten years\.
 + **Not hidden** – contact name and organization name  
 **Internationalized domain names**  
 Supported for French and Spanish\.  
-**Authorization code required for transfer to Amazon Route 53**  
+**Authorization code required for transfer to Route 53**  
 Yes  
 **DNSSEC**  
 Supported for domain registration\. For more information, see [Configuring DNSSEC for a Domain](domain-configure-dnssec.md)\.  
@@ -1717,7 +1720,7 @@ One to ten years\.
 + **Not hidden** – contact name and organization name  
 **Internationalized domain names**  
 Supported for French and Spanish\.  
-**Authorization code required for transfer to Amazon Route 53**  
+**Authorization code required for transfer to Route 53**  
 Yes  
 **DNSSEC**  
 Supported for domain registration\. For more information, see [Configuring DNSSEC for a Domain](domain-configure-dnssec.md)\.  
@@ -1725,7 +1728,7 @@ Supported for domain registration\. For more information, see [Configuring DNSSE
 The registrar for this TLD is our registrar associate, Gandi\.
 
 **\.flowers**  
-You can no longer use Amazon Route 53 to register new \.flowers domains or transfer \.flowers domains to Amazon Route 53\. We'll continue to support \.flowers domains that are already registered with Amazon Route 53\.
+You can no longer use Route 53 to register new \.flowers domains or transfer \.flowers domains to Route 53\. We'll continue to support \.flowers domains that are already registered with Route 53\.
 Used for anything related to flowers, such as online flower sales or information about flower growing and breeding\.    
 **Registration and renewal period**  
 One to ten years\.  
@@ -1733,7 +1736,7 @@ One to ten years\.
 Not supported\.  
 **Internationalized domain names**  
 Supported for Cyrillic \(primarily Russian\), French, German, Italian, Portuguese, and Spanish\.  
-**Authorization code required for transfer to Amazon Route 53**  
+**Authorization code required for transfer to Route 53**  
 Yes  
 **DNSSEC**  
 Supported for domain registration\. For more information, see [Configuring DNSSEC for a Domain](domain-configure-dnssec.md)\.  
@@ -1754,7 +1757,7 @@ One to ten years\.
 + **Not hidden** – contact name and organization name  
 **Internationalized domain names**  
 Supported for French and Spanish\.  
-**Authorization code required for transfer to Amazon Route 53**  
+**Authorization code required for transfer to Route 53**  
 Yes  
 **DNSSEC**  
 Supported for domain registration\. For more information, see [Configuring DNSSEC for a Domain](domain-configure-dnssec.md)\.  
@@ -1772,7 +1775,7 @@ One to ten years\.
 + **Not hidden** – contact name and organization name  
 **Internationalized domain names**  
 Supported for Chinese, French, German, Latin, and Spanish\.  
-**Authorization code required for transfer to Amazon Route 53**  
+**Authorization code required for transfer to Route 53**  
 Yes  
 **DNSSEC**  
 Supported for domain registration\. For more information, see [Configuring DNSSEC for a Domain](domain-configure-dnssec.md)\.  
@@ -1790,7 +1793,7 @@ One to ten years\.
 + **Not hidden** – contact name and organization name  
 **Internationalized domain names**  
 Supported for French and Spanish\.  
-**Authorization code required for transfer to Amazon Route 53**  
+**Authorization code required for transfer to Route 53**  
 Yes  
 **DNSSEC**  
 Supported for domain registration\. For more information, see [Configuring DNSSEC for a Domain](domain-configure-dnssec.md)\.  
@@ -1808,7 +1811,7 @@ One to ten years\.
 + **Not hidden** – contact name and organization name  
 **Internationalized domain names**  
 Supported for French and Spanish\.  
-**Authorization code required for transfer to Amazon Route 53**  
+**Authorization code required for transfer to Route 53**  
 Yes  
 **DNSSEC**  
 Supported for domain registration\. For more information, see [Configuring DNSSEC for a Domain](domain-configure-dnssec.md)\.  
@@ -1823,7 +1826,7 @@ One to ten years\.
 Not supported\.  
 **Internationalized domain names**  
 Supported for French and Spanish\.  
-**Authorization code required for transfer to Amazon Route 53**  
+**Authorization code required for transfer to Route 53**  
 Yes  
 **DNSSEC**  
 Supported for domain registration\. For more information, see [Configuring DNSSEC for a Domain](domain-configure-dnssec.md)\.  
@@ -1841,7 +1844,7 @@ One to ten years\.
 + **Not hidden** – contact name and organization name  
 **Internationalized domain names**  
 Supported for Chinese, French, German, Latin, and Spanish\.  
-**Authorization code required for transfer to Amazon Route 53**  
+**Authorization code required for transfer to Route 53**  
 Yes  
 **DNSSEC**  
 Not supported\.  
@@ -1859,7 +1862,7 @@ One to ten years\.
 + **Not hidden** – contact name and organization name  
 **Internationalized domain names**  
 Supported for Chinese, French, German, and Spanish\.  
-**Authorization code required for transfer to Amazon Route 53**  
+**Authorization code required for transfer to Route 53**  
 Yes  
 **DNSSEC**  
 Supported for domain registration\. For more information, see [Configuring DNSSEC for a Domain](domain-configure-dnssec.md)\.  
@@ -1881,7 +1884,7 @@ One to ten years\.
 + **Not hidden** – contact name and organization name  
 **Internationalized domain names**  
 Supported for French and Spanish\.  
-**Authorization code required for transfer to Amazon Route 53**  
+**Authorization code required for transfer to Route 53**  
 Yes  
 **DNSSEC**  
 Supported for domain registration\. For more information, see [Configuring DNSSEC for a Domain](domain-configure-dnssec.md)\.  
@@ -1896,7 +1899,7 @@ One to ten years\.
 Not supported\.  
 **Internationalized domain names**  
 Supported for Cyrillic \(primarily Russian\), French, German, Italian, Portuguese, and Spanish\.  
-**Authorization code required for transfer to Amazon Route 53**  
+**Authorization code required for transfer to Route 53**  
 Yes  
 **DNSSEC**  
 Not supported\.  
@@ -1914,7 +1917,7 @@ One to ten years\.
 + **Not hidden** – contact name and organization name  
 **Internationalized domain names**  
 Supported for French and Spanish\.  
-**Authorization code required for transfer to Amazon Route 53**  
+**Authorization code required for transfer to Route 53**  
 Yes  
 **DNSSEC**  
 Supported for domain registration\. For more information, see [Configuring DNSSEC for a Domain](domain-configure-dnssec.md)\.  
@@ -1932,7 +1935,7 @@ One to ten years\.
 + **Not hidden** – contact name and organization name  
 **Internationalized domain names**  
 Supported for French and Spanish\.  
-**Authorization code required for transfer to Amazon Route 53**  
+**Authorization code required for transfer to Route 53**  
 Yes  
 **DNSSEC**  
 Supported for domain registration\. For more information, see [Configuring DNSSEC for a Domain](domain-configure-dnssec.md)\.  
@@ -1947,7 +1950,7 @@ One to ten years\.
 Not supported\.  
 **Internationalized domain names**  
 Supported for Arabic, Belarusian, Bosnian, Bulgarian, Chinese \(Simplified\) Chinese \(Traditional\), Danish, German, Hindi, Hungarian, Icelandic, Korean, Latvian, Lithuanian, Macedonian, Montenegrin, Polish, Russian, Serbian, Spanish, Swedish, and Ukrainian\.  
-**Authorization code required for transfer to Amazon Route 53**  
+**Authorization code required for transfer to Route 53**  
 Yes  
 **DNSSEC**  
 Supported for domain registration\. For more information, see [Configuring DNSSEC for a Domain](domain-configure-dnssec.md)\.  
@@ -1965,7 +1968,7 @@ One to ten years\.
 + **Not hidden** – contact name and organization name  
 **Internationalized domain names**  
 Supported for Chinese, French, German, and Spanish\.  
-**Authorization code required for transfer to Amazon Route 53**  
+**Authorization code required for transfer to Route 53**  
 Yes  
 **DNSSEC**  
 Supported for domain registration\. For more information, see [Configuring DNSSEC for a Domain](domain-configure-dnssec.md)\.  
@@ -1983,7 +1986,7 @@ One to ten years\.
 + **Not hidden** – contact name and organization name  
 **Internationalized domain names**  
 Supported for Chinese, French, German, and Spanish\.  
-**Authorization code required for transfer to Amazon Route 53**  
+**Authorization code required for transfer to Route 53**  
 Yes  
 **DNSSEC**  
 Supported for domain registration\. For more information, see [Configuring DNSSEC for a Domain](domain-configure-dnssec.md)\.  
@@ -2001,7 +2004,7 @@ One to ten years\.
 + **Not hidden** – contact name and organization name  
 **Internationalized domain names**  
 Supported for French and Spanish\.  
-**Authorization code required for transfer to Amazon Route 53**  
+**Authorization code required for transfer to Route 53**  
 Yes  
 **DNSSEC**  
 Supported for domain registration\. For more information, see [Configuring DNSSEC for a Domain](domain-configure-dnssec.md)\.  
@@ -2019,7 +2022,7 @@ One to ten years\.
 + **Not hidden** – contact name and organization name  
 **Internationalized domain names**  
 Supported for French and Spanish\.  
-**Authorization code required for transfer to Amazon Route 53**  
+**Authorization code required for transfer to Route 53**  
 Yes  
 **DNSSEC**  
 Supported for domain registration\. For more information, see [Configuring DNSSEC for a Domain](domain-configure-dnssec.md)\.  
@@ -2034,7 +2037,7 @@ One to ten years\.
 Not supported\.  
 **Internationalized domain names**  
 Not supported\.  
-**Authorization code required for transfer to Amazon Route 53**  
+**Authorization code required for transfer to Route 53**  
 Yes  
 **DNSSEC**  
 Supported for domain registration\. For more information, see [Configuring DNSSEC for a Domain](domain-configure-dnssec.md)\.  
@@ -2052,7 +2055,7 @@ One to ten years\.
 + **Not hidden** – contact name and organization name  
 **Internationalized domain names**  
 Supported for French and Spanish\.  
-**Authorization code required for transfer to Amazon Route 53**  
+**Authorization code required for transfer to Route 53**  
 Yes  
 **DNSSEC**  
 Supported for domain registration\. For more information, see [Configuring DNSSEC for a Domain](domain-configure-dnssec.md)\.  
@@ -2070,7 +2073,7 @@ One to ten years\.
 + **Not hidden** – contact name and organization name  
 **Internationalized domain names**  
 Supported for French and Spanish\.  
-**Authorization code required for transfer to Amazon Route 53**  
+**Authorization code required for transfer to Route 53**  
 Yes  
 **DNSSEC**  
 Supported for domain registration\. For more information, see [Configuring DNSSEC for a Domain](domain-configure-dnssec.md)\.  
@@ -2078,7 +2081,7 @@ Supported for domain registration\. For more information, see [Configuring DNSSE
 The registrar for this TLD is our registrar associate, Gandi\.
 
 **\.guitars**  
-You can no longer use Amazon Route 53 to register new \.guitars domains or transfer \.guitars domains to Amazon Route 53\. We'll continue to support \.guitars domains that are already registered with Amazon Route 53\.
+You can no longer use Route 53 to register new \.guitars domains or transfer \.guitars domains to Route 53\. We'll continue to support \.guitars domains that are already registered with Route 53\.
 Used by guitar enthusiasts\.    
 **Registration and renewal period**  
 One to ten years\.  
@@ -2086,7 +2089,7 @@ One to ten years\.
 Not supported\.  
 **Internationalized domain names**  
 Supported for Cyrillic \(primarily Russian\), French, German, Italian, Portuguese, and Spanish\.  
-**Authorization code required for transfer to Amazon Route 53**  
+**Authorization code required for transfer to Route 53**  
 Yes  
 **DNSSEC**  
 Not supported\.  
@@ -2104,7 +2107,7 @@ One to ten years\.
 + **Not hidden** – contact name and organization name  
 **Internationalized domain names**  
 Supported for French and Spanish\.  
-**Authorization code required for transfer to Amazon Route 53**  
+**Authorization code required for transfer to Route 53**  
 Yes  
 **DNSSEC**  
 Supported for domain registration\. For more information, see [Configuring DNSSEC for a Domain](domain-configure-dnssec.md)\.  
@@ -2126,7 +2129,7 @@ One to ten years\.
 + **Not hidden** – contact name and organization name  
 **Internationalized domain names**  
 Supported for Chinese, French, German, Latin, and Spanish\.  
-**Authorization code required for transfer to Amazon Route 53**  
+**Authorization code required for transfer to Route 53**  
 Yes  
 **DNSSEC**  
 Supported for domain registration\. For more information, see [Configuring DNSSEC for a Domain](domain-configure-dnssec.md)\.  
@@ -2144,7 +2147,7 @@ One to ten years\.
 + **Not hidden** – contact name and organization name  
 **Internationalized domain names**  
 Supported for French and Spanish\.  
-**Authorization code required for transfer to Amazon Route 53**  
+**Authorization code required for transfer to Route 53**  
 Yes  
 **DNSSEC**  
 Supported for domain registration\. For more information, see [Configuring DNSSEC for a Domain](domain-configure-dnssec.md)\.  
@@ -2159,7 +2162,7 @@ One to ten years\.
 Not supported\.  
 **Internationalized domain names**  
 Supported for Cyrillic \(primarily Russian\), French, German, Italian, Portuguese, and Spanish\.  
-**Authorization code required for transfer to Amazon Route 53**  
+**Authorization code required for transfer to Route 53**  
 Yes  
 **DNSSEC**  
 Supported for domain registration\. For more information, see [Configuring DNSSEC for a Domain](domain-configure-dnssec.md)\.  
@@ -2174,7 +2177,7 @@ One to ten years\.
 Not supported\.  
 **Internationalized domain names**  
 Supported for Cyrillic \(primarily Russian\), French, German, Italian, Portuguese, and Spanish\.  
-**Authorization code required for transfer to Amazon Route 53**  
+**Authorization code required for transfer to Route 53**  
 Yes  
 **DNSSEC**  
 Supported for domain registration\. For more information, see [Configuring DNSSEC for a Domain](domain-configure-dnssec.md)\.  
@@ -2192,7 +2195,7 @@ One to ten years\.
 + **Not hidden** – contact name and organization name  
 **Internationalized domain names**  
 Supported for Chinese, French, German, and Spanish\.  
-**Authorization code required for transfer to Amazon Route 53**  
+**Authorization code required for transfer to Route 53**  
 Yes  
 **DNSSEC**  
 Supported for domain registration\. For more information, see [Configuring DNSSEC for a Domain](domain-configure-dnssec.md)\.  
@@ -2210,7 +2213,7 @@ One to ten years\.
 + **Not hidden** – contact name and organization name  
 **Internationalized domain names**  
 Supported for French and Spanish\.  
-**Authorization code required for transfer to Amazon Route 53**  
+**Authorization code required for transfer to Route 53**  
 Yes  
 **DNSSEC**  
 Supported for domain registration\. For more information, see [Configuring DNSSEC for a Domain](domain-configure-dnssec.md)\.  
@@ -2228,7 +2231,7 @@ One to ten years\.
 + **Not hidden** – contact name and organization name  
 **Internationalized domain names**  
 Supported for French and Spanish\.  
-**Authorization code required for transfer to Amazon Route 53**  
+**Authorization code required for transfer to Route 53**  
 Yes  
 **DNSSEC**  
 Supported for domain registration\. For more information, see [Configuring DNSSEC for a Domain](domain-configure-dnssec.md)\.  
@@ -2246,7 +2249,7 @@ One to ten years\.
 + **Not hidden** – contact name and organization name  
 **Internationalized domain names**  
 Not supported\.  
-**Authorization code required for transfer to Amazon Route 53**  
+**Authorization code required for transfer to Route 53**  
 Yes  
 **DNSSEC**  
 Supported for domain registration\. For more information, see [Configuring DNSSEC for a Domain](domain-configure-dnssec.md)\.  
@@ -2254,7 +2257,7 @@ Supported for domain registration\. For more information, see [Configuring DNSSE
 The registrar for this TLD is our registrar associate, Gandi\.
 
 **\.hosting**  
-You can no longer use Amazon Route 53 to register new \.hosting domains or transfer \.hosting domains to Amazon Route 53\. We'll continue to support \.hosting domains that are already registered with Amazon Route 53\.
+You can no longer use Route 53 to register new \.hosting domains or transfer \.hosting domains to Route 53\. We'll continue to support \.hosting domains that are already registered with Route 53\.
 Used for hosting websites or by those in the hosting industry\.    
 **Registration and renewal period**  
 One to ten years\.  
@@ -2262,7 +2265,7 @@ One to ten years\.
 Not supported\.  
 **Internationalized domain names**  
 Supported for Chinese, French, German, and Spanish\.  
-**Authorization code required for transfer to Amazon Route 53**  
+**Authorization code required for transfer to Route 53**  
 Yes  
 **DNSSEC**  
 Supported for domain registration\. For more information, see [Configuring DNSSEC for a Domain](domain-configure-dnssec.md)\.  
@@ -2280,7 +2283,7 @@ One to ten years\.
 + **Not hidden** – contact name and organization name  
 **Internationalized domain names**  
 Supported for French and Spanish\.  
-**Authorization code required for transfer to Amazon Route 53**  
+**Authorization code required for transfer to Route 53**  
 Yes  
 **DNSSEC**  
 Supported for domain registration\. For more information, see [Configuring DNSSEC for a Domain](domain-configure-dnssec.md)\.  
@@ -2305,7 +2308,7 @@ One to ten years\.
 + **Not hidden** – contact name and organization name  
 **Internationalized domain names**  
 Supported for French and Spanish\.  
-**Authorization code required for transfer to Amazon Route 53**  
+**Authorization code required for transfer to Route 53**  
 Yes  
 **DNSSEC**  
 Supported for domain registration\. For more information, see [Configuring DNSSEC for a Domain](domain-configure-dnssec.md)\.  
@@ -2323,7 +2326,7 @@ One to ten years\.
 + **Not hidden** – contact name and organization name  
 **Internationalized domain names**  
 Supported for Chinese, French, German, and Spanish\.  
-**Authorization code required for transfer to Amazon Route 53**  
+**Authorization code required for transfer to Route 53**  
 Yes  
 **DNSSEC**  
 Not supported\.  
@@ -2341,7 +2344,7 @@ One to ten years\.
 + **Not hidden** – contact name and organization name  
 **Internationalized domain names**  
 Supported for French and Spanish\.  
-**Authorization code required for transfer to Amazon Route 53**  
+**Authorization code required for transfer to Route 53**  
 Yes  
 **DNSSEC**  
 Supported for domain registration\. For more information, see [Configuring DNSSEC for a Domain](domain-configure-dnssec.md)\.  
@@ -2359,7 +2362,7 @@ One to ten years\.
 + **Not hidden** – contact name and organization name  
 **Internationalized domain names**  
 Not supported\.  
-**Authorization code required for transfer to Amazon Route 53**  
+**Authorization code required for transfer to Route 53**  
 Yes  
 **DNSSEC**  
 Supported for domain registration\. For more information, see [Configuring DNSSEC for a Domain](domain-configure-dnssec.md)\.  
@@ -2374,7 +2377,7 @@ One to ten years\.
 Not supported\.  
 **Internationalized domain names**  
 Supported for Arabic and Latin\.  
-**Authorization code required for transfer to Amazon Route 53**  
+**Authorization code required for transfer to Route 53**  
 Yes  
 **DNSSEC**  
 Supported for domain registration\. For more information, see [Configuring DNSSEC for a Domain](domain-configure-dnssec.md)\.  
@@ -2392,7 +2395,7 @@ One to ten years\.
 + **Not hidden** – contact name and organization name  
 **Internationalized domain names**  
 Supported for French and Spanish\.  
-**Authorization code required for transfer to Amazon Route 53**  
+**Authorization code required for transfer to Route 53**  
 Yes  
 **DNSSEC**  
 Supported for domain registration\. For more information, see [Configuring DNSSEC for a Domain](domain-configure-dnssec.md)\.  
@@ -2410,7 +2413,7 @@ One to ten years\.
 + **Not hidden** – contact name and organization name  
 **Internationalized domain names**  
 Supported for French and Spanish\.  
-**Authorization code required for transfer to Amazon Route 53**  
+**Authorization code required for transfer to Route 53**  
 Yes  
 **DNSSEC**  
 Supported for domain registration\. For more information, see [Configuring DNSSEC for a Domain](domain-configure-dnssec.md)\.  
@@ -2428,7 +2431,7 @@ One to ten years\.
 + **Not hidden** – contact name and organization name  
 **Internationalized domain names**  
 Supported for French and Spanish\.  
-**Authorization code required for transfer to Amazon Route 53**  
+**Authorization code required for transfer to Route 53**  
 Yes  
 **DNSSEC**  
 Supported for domain registration\. For more information, see [Configuring DNSSEC for a Domain](domain-configure-dnssec.md)\.  
@@ -2446,7 +2449,7 @@ One to ten years\.
 + **Not hidden** – contact name and organization name  
 **Internationalized domain names**  
 Supported for French and Spanish\.  
-**Authorization code required for transfer to Amazon Route 53**  
+**Authorization code required for transfer to Route 53**  
 Yes  
 **DNSSEC**  
 Supported for domain registration\. For more information, see [Configuring DNSSEC for a Domain](domain-configure-dnssec.md)\.  
@@ -2464,7 +2467,7 @@ One to ten years\.
 Not supported\.  
 **Internationalized domain names**  
 Not supported\.  
-**Authorization code required for transfer to Amazon Route 53**  
+**Authorization code required for transfer to Route 53**  
 Yes  
 **DNSSEC**  
 Not supported\.  
@@ -2482,7 +2485,7 @@ One to ten years\.
 + **Not hidden** – contact name and organization name  
 **Internationalized domain names**  
 Supported for Chinese, French, German, and Spanish\.  
-**Authorization code required for transfer to Amazon Route 53**  
+**Authorization code required for transfer to Route 53**  
 Yes  
 **DNSSEC**  
 Supported for domain registration\. For more information, see [Configuring DNSSEC for a Domain](domain-configure-dnssec.md)\.  
@@ -2490,7 +2493,7 @@ Supported for domain registration\. For more information, see [Configuring DNSSE
 The registrar for this TLD is our registrar associate, Gandi\.
 
 **\.juegos**  
-You can no longer use Amazon Route 53 to register new \.juegos domains or transfer \.juegos domains to Amazon Route 53\. We'll continue to support \.juegos domains that are already registered with Amazon Route 53\.
+You can no longer use Route 53 to register new \.juegos domains or transfer \.juegos domains to Route 53\. We'll continue to support \.juegos domains that are already registered with Route 53\.
 Used for gaming websites of all kinds\. "Juegos" is a Spanish word that means "games\."    
 **Registration and renewal period**  
 One to ten years\.  
@@ -2498,7 +2501,7 @@ One to ten years\.
 Not supported\.  
 **Internationalized domain names**  
 Supported for Cyrillic \(primarily Russian\), French, German, Italian, Portuguese, and Spanish\.  
-**Authorization code required for transfer to Amazon Route 53**  
+**Authorization code required for transfer to Route 53**  
 Yes  
 **DNSSEC**  
 Supported for domain registration\. For more information, see [Configuring DNSSEC for a Domain](domain-configure-dnssec.md)\.  
@@ -2520,7 +2523,7 @@ One to ten years\.
 + **Not hidden** – contact name and organization name  
 **Internationalized domain names**  
 Supported for Chinese, French, German, Latin, and Spanish\.  
-**Authorization code required for transfer to Amazon Route 53**  
+**Authorization code required for transfer to Route 53**  
 Yes  
 **DNSSEC**  
 Not supported\.  
@@ -2538,7 +2541,7 @@ One to ten years\.
 + **Not hidden** – contact name and organization name  
 **Internationalized domain names**  
 Supported\.  
-**Authorization code required for transfer to Amazon Route 53**  
+**Authorization code required for transfer to Route 53**  
 Yes  
 **DNSSEC**  
 Not supported\.  
@@ -2556,7 +2559,7 @@ One to ten years\.
 + **Not hidden** – contact name and organization name  
 **Internationalized domain names**  
 Supported for French and Spanish\.  
-**Authorization code required for transfer to Amazon Route 53**  
+**Authorization code required for transfer to Route 53**  
 Yes  
 **DNSSEC**  
 Supported for domain registration\. For more information, see [Configuring DNSSEC for a Domain](domain-configure-dnssec.md)\.  
@@ -2571,7 +2574,7 @@ One to ten years\.
 Not supported\.  
 **Internationalized domain names**  
 Supported for Maori\.  
-**Authorization code required for transfer to Amazon Route 53**  
+**Authorization code required for transfer to Route 53**  
 Yes  
 **DNSSEC**  
 Not supported\.  
@@ -2593,7 +2596,7 @@ One to ten years\.
 + **Not hidden** – contact name and organization name  
 **Internationalized domain names**  
 Supported for French and Spanish\.  
-**Authorization code required for transfer to Amazon Route 53**  
+**Authorization code required for transfer to Route 53**  
 Yes  
 **DNSSEC**  
 Supported for domain registration\. For more information, see [Configuring DNSSEC for a Domain](domain-configure-dnssec.md)\.  
@@ -2611,7 +2614,7 @@ One to ten years\.
 + **Not hidden** – contact name and organization name  
 **Internationalized domain names**  
 Supported for French and Spanish\.  
-**Authorization code required for transfer to Amazon Route 53**  
+**Authorization code required for transfer to Route 53**  
 Yes  
 **DNSSEC**  
 Supported for domain registration\. For more information, see [Configuring DNSSEC for a Domain](domain-configure-dnssec.md)\.  
@@ -2629,7 +2632,7 @@ One to ten years\.
 + **Not hidden** – contact name and organization name  
 **Internationalized domain names**  
 Supported for French and Spanish\.  
-**Authorization code required for transfer to Amazon Route 53**  
+**Authorization code required for transfer to Route 53**  
 Yes  
 **DNSSEC**  
 Supported for domain registration\. For more information, see [Configuring DNSSEC for a Domain](domain-configure-dnssec.md)\.  
@@ -2644,7 +2647,7 @@ One to ten years\.
 Not supported\.  
 **Internationalized domain names**  
 Not supported\.  
-**Authorization code required for transfer to Amazon Route 53**  
+**Authorization code required for transfer to Route 53**  
 Yes  
 **DNSSEC**  
 Not supported\.  
@@ -2662,7 +2665,7 @@ One to ten years\.
 + **Not hidden** – contact name and organization name  
 **Internationalized domain names**  
 Supported for French and Spanish\.  
-**Authorization code required for transfer to Amazon Route 53**  
+**Authorization code required for transfer to Route 53**  
 Yes  
 **DNSSEC**  
 Supported for domain registration\. For more information, see [Configuring DNSSEC for a Domain](domain-configure-dnssec.md)\.  
@@ -2680,7 +2683,7 @@ One to ten years\.
 + **Not hidden** – contact name and organization name  
 **Internationalized domain names**  
 Supported for French and Spanish\.  
-**Authorization code required for transfer to Amazon Route 53**  
+**Authorization code required for transfer to Route 53**  
 Yes  
 **DNSSEC**  
 Supported for domain registration\. For more information, see [Configuring DNSSEC for a Domain](domain-configure-dnssec.md)\.  
@@ -2698,7 +2701,7 @@ One to ten years\.
 + **Not hidden** – contact name and organization name  
 **Internationalized domain names**  
 Supported for French and Spanish\.  
-**Authorization code required for transfer to Amazon Route 53**  
+**Authorization code required for transfer to Route 53**  
 Yes  
 **DNSSEC**  
 Supported for domain registration\. For more information, see [Configuring DNSSEC for a Domain](domain-configure-dnssec.md)\.  
@@ -2716,7 +2719,7 @@ One to ten years\.
 + **Not hidden** – contact name and organization name  
 **Internationalized domain names**  
 Supported for French and Spanish\.  
-**Authorization code required for transfer to Amazon Route 53**  
+**Authorization code required for transfer to Route 53**  
 Yes  
 **DNSSEC**  
 Supported for domain registration\. For more information, see [Configuring DNSSEC for a Domain](domain-configure-dnssec.md)\.  
@@ -2731,7 +2734,7 @@ One to ten years\.
 Not supported\.  
 **Internationalized domain names**  
 Supported for Cyrillic \(primarily Russian\), French, German, Italian, Portuguese, and Spanish\.  
-**Authorization code required for transfer to Amazon Route 53**  
+**Authorization code required for transfer to Route 53**  
 Yes  
 **DNSSEC**  
 Supported for domain registration\. For more information, see [Configuring DNSSEC for a Domain](domain-configure-dnssec.md)\.  
@@ -2749,7 +2752,7 @@ One to ten years\.
 + **Not hidden** – contact name and organization name  
 **Internationalized domain names**  
 Supported for Chinese, French, German, Latin, and Spanish\.  
-**Authorization code required for transfer to Amazon Route 53**  
+**Authorization code required for transfer to Route 53**  
 Yes  
 **DNSSEC**  
 Supported for domain registration\. For more information, see [Configuring DNSSEC for a Domain](domain-configure-dnssec.md)\.  
@@ -2767,7 +2770,7 @@ One to ten years\.
 + **Not hidden** – contact name and organization name  
 **Internationalized domain names**  
 Supported for Danish, German, Norwegian, and Swedish\.  
-**Authorization code required for transfer to Amazon Route 53**  
+**Authorization code required for transfer to Route 53**  
 Yes  
 **DNSSEC**  
 Supported for domain registration\. For more information, see [Configuring DNSSEC for a Domain](domain-configure-dnssec.md)\.  
@@ -2785,7 +2788,7 @@ One to ten years\.
 + **Not hidden** – contact name and organization name  
 **Internationalized domain names**  
 Supported for French and Spanish\.  
-**Authorization code required for transfer to Amazon Route 53**  
+**Authorization code required for transfer to Route 53**  
 Yes  
 **DNSSEC**  
 Supported for domain registration\. For more information, see [Configuring DNSSEC for a Domain](domain-configure-dnssec.md)\.  
@@ -2800,7 +2803,7 @@ One to ten years\.
 Not supported\.  
 **Internationalized domain names**  
 Supported for Cyrillic, French, German, Italian, Portuguese, and Spanish\.  
-**Authorization code required for transfer to Amazon Route 53**  
+**Authorization code required for transfer to Route 53**  
 Yes  
 **DNSSEC**  
 Supported for domain registration\. For more information, see [Configuring DNSSEC for a Domain](domain-configure-dnssec.md)\.  
@@ -2822,7 +2825,7 @@ One to ten years\.
 + **Not hidden** – contact name and organization name  
 **Internationalized domain names**  
 Supported for French and Spanish\.  
-**Authorization code required for transfer to Amazon Route 53**  
+**Authorization code required for transfer to Route 53**  
 Yes  
 **DNSSEC**  
 Supported for domain registration\. For more information, see [Configuring DNSSEC for a Domain](domain-configure-dnssec.md)\.  
@@ -2840,7 +2843,7 @@ One to ten years\.
 + **Not hidden** – contact name and organization name  
 **Internationalized domain names**  
 Supported for French and Spanish\.  
-**Authorization code required for transfer to Amazon Route 53**  
+**Authorization code required for transfer to Route 53**  
 Yes  
 **DNSSEC**  
 Supported for domain registration\. For more information, see [Configuring DNSSEC for a Domain](domain-configure-dnssec.md)\.  
@@ -2858,7 +2861,7 @@ One to ten years\.
 + **Not hidden** – contact name and organization name  
 **Internationalized domain names**  
 Supported for French and Spanish\.  
-**Authorization code required for transfer to Amazon Route 53**  
+**Authorization code required for transfer to Route 53**  
 Yes  
 **DNSSEC**  
 Supported for domain registration\. For more information, see [Configuring DNSSEC for a Domain](domain-configure-dnssec.md)\.  
@@ -2876,7 +2879,7 @@ One to ten years\.
 + **Not hidden** – contact name and organization name  
 **Internationalized domain names**  
 Supported for Chinese, French, German, and Spanish\.  
-**Authorization code required for transfer to Amazon Route 53**  
+**Authorization code required for transfer to Route 53**  
 Yes  
 **DNSSEC**  
 Supported for domain registration\. For more information, see [Configuring DNSSEC for a Domain](domain-configure-dnssec.md)\.  
@@ -2894,7 +2897,7 @@ One to ten years\.
 + **Not hidden** – contact name and organization name  
 **Internationalized domain names**  
 Supported for French and Spanish\.  
-**Authorization code required for transfer to Amazon Route 53**  
+**Authorization code required for transfer to Route 53**  
 Yes  
 **DNSSEC**  
 Supported for domain registration\. For more information, see [Configuring DNSSEC for a Domain](domain-configure-dnssec.md)\.  
@@ -2912,7 +2915,7 @@ One to ten years\.
 + **Not hidden** – contact name and organization name  
 **Internationalized domain names**  
 Supported for French and Spanish\.  
-**Authorization code required for transfer to Amazon Route 53**  
+**Authorization code required for transfer to Route 53**  
 Yes  
 **DNSSEC**  
 Supported for domain registration\. For more information, see [Configuring DNSSEC for a Domain](domain-configure-dnssec.md)\.  
@@ -2927,7 +2930,7 @@ One to ten years\.
 Not supported\.  
 **Internationalized domain names**  
 Not supported\.  
-**Authorization code required for transfer to Amazon Route 53**  
+**Authorization code required for transfer to Route 53**  
 Yes  
 **DNSSEC**  
 Not supported\.  
@@ -2945,7 +2948,7 @@ One to ten years\.
 + **Not hidden** – contact name and organization name  
 **Internationalized domain names**  
 Supported for Chinese, French, German, Latin, and Spanish\.  
-**Authorization code required for transfer to Amazon Route 53**  
+**Authorization code required for transfer to Route 53**  
 Yes  
 **DNSSEC**  
 Not supported\.  
@@ -2963,7 +2966,7 @@ One to ten years\.
 + **Not hidden** – contact name and organization name  
 **Internationalized domain names**  
 Supported for French and Spanish\.  
-**Authorization code required for transfer to Amazon Route 53**  
+**Authorization code required for transfer to Route 53**  
 Yes  
 **DNSSEC**  
 Supported for domain registration\. For more information, see [Configuring DNSSEC for a Domain](domain-configure-dnssec.md)\.  
@@ -2981,7 +2984,7 @@ One to ten years\.
 + **Not hidden** – contact name and organization name  
 **Internationalized domain names**  
 Supported for Chinese, French, German, Latin, and Spanish\.  
-**Authorization code required for transfer to Amazon Route 53**  
+**Authorization code required for transfer to Route 53**  
 Yes  
 **DNSSEC**  
 Supported for domain registration\. For more information, see [Configuring DNSSEC for a Domain](domain-configure-dnssec.md)\.  
@@ -2999,7 +3002,7 @@ One to ten years\.
 + **Not hidden** – contact name and organization name  
 **Internationalized domain names**  
 Supported for Chines, French, German, and Spanish\.  
-**Authorization code required for transfer to Amazon Route 53**  
+**Authorization code required for transfer to Route 53**  
 Yes  
 **DNSSEC**  
 Supported for domain registration\. For more information, see [Configuring DNSSEC for a Domain](domain-configure-dnssec.md)\.  
@@ -3015,7 +3018,7 @@ Used by anyone who wants to create a personalized web presence\.
 **Registration and renewal period**  
 One to ten years\.  
 **Restrictions**  
-Verisign, the registry for \.name TLDs, allows you to register both second\-level domains \(*name*\.name\) and third\-level domains \(*firstname*\.*lastname*\.name\)\. Amazon Route 53 supports only second\-level domains, both for registering domains and for transferring existing domains to Amazon Route 53\.  
+Verisign, the registry for \.name TLDs, allows you to register both second\-level domains \(*name*\.name\) and third\-level domains \(*firstname*\.*lastname*\.name\)\. Route 53 supports only second\-level domains, both for registering domains and for transferring existing domains to Route 53\.  
 **Privacy protection \(applies to all contact types: person, company, association, and public body\)**  
 
 + **Hidden** – address, phone number, fax number, and email address
@@ -3023,7 +3026,7 @@ Verisign, the registry for \.name TLDs, allows you to register both second\-leve
 + **Not hidden** – contact name and organization name  
 **Internationalized domain names**  
 Supported\.  
-**Authorization code required for transfer to Amazon Route 53**  
+**Authorization code required for transfer to Route 53**  
 Yes  
 **DNSSEC**  
 Supported for domain registration\. For more information, see [Configuring DNSSEC for a Domain](domain-configure-dnssec.md)\.  
@@ -3038,7 +3041,7 @@ One to ten years\.
 All information is hidden\.  
 **Internationalized domain names**  
 Supported\.  
-**Authorization code required for transfer to Amazon Route 53**  
+**Authorization code required for transfer to Route 53**  
 Yes  
 **DNSSEC**  
 Supported for domain registration\. For more information, see [Configuring DNSSEC for a Domain](domain-configure-dnssec.md)\.  
@@ -3056,7 +3059,7 @@ One to ten years\.
 + **Not hidden** – contact name and organization name  
 **Internationalized domain names**  
 Supported for French and Spanish\.  
-**Authorization code required for transfer to Amazon Route 53**  
+**Authorization code required for transfer to Route 53**  
 Yes  
 **DNSSEC**  
 Supported for domain registration\. For more information, see [Configuring DNSSEC for a Domain](domain-configure-dnssec.md)\.  
@@ -3074,7 +3077,7 @@ One to ten years\.
 + **Not hidden** – contact name and organization name  
 **Internationalized domain names**  
 Supported for Chinese, French, German, Latin, and Spanish\.  
-**Authorization code required for transfer to Amazon Route 53**  
+**Authorization code required for transfer to Route 53**  
 Yes  
 **DNSSEC**  
 Supported for domain registration\. For more information, see [Configuring DNSSEC for a Domain](domain-configure-dnssec.md)\.  
@@ -3092,7 +3095,7 @@ One to ten years\.
 + **Not hidden** – contact name and organization name  
 **Internationalized domain names**  
 Supported for Chinese, French, German, Latin, and Spanish\.  
-**Authorization code required for transfer to Amazon Route 53**  
+**Authorization code required for transfer to Route 53**  
 Yes  
 **DNSSEC**  
 Supported for domain registration\. For more information, see [Configuring DNSSEC for a Domain](domain-configure-dnssec.md)\.  
@@ -3114,7 +3117,7 @@ One to ten years\.
 + **Not hidden** – contact name and organization name  
 **Internationalized domain names**  
 Supported for Arabic, Belarussian, Bosnian, Bulgarian, Chinese \(Simplified and Traditional\), Danish, German, Hindi, Hungarian, Icelandic, Korean, Lithuanian, Latvian, Macedonian, Polish, Russian, Serbian, and Spanish\.  
-**Authorization code required for transfer to Amazon Route 53**  
+**Authorization code required for transfer to Route 53**  
 Yes  
 **DNSSEC**  
 Not supported\.  
@@ -3132,7 +3135,7 @@ One to ten years\.
 + **Not hidden** – contact name and organization name  
 **Internationalized domain names**  
 Supported\.  
-**Authorization code required for transfer to Amazon Route 53**  
+**Authorization code required for transfer to Route 53**  
 Yes  
 **DNSSEC**  
 Supported for domain registration\. For more information, see [Configuring DNSSEC for a Domain](domain-configure-dnssec.md)\.  
@@ -3147,7 +3150,7 @@ One to ten years\.
 All information is hidden\.  
 **Internationalized domain names**  
 Not supported\.  
-**Authorization code required for transfer to Amazon Route 53**  
+**Authorization code required for transfer to Route 53**  
 Yes  
 **DNSSEC**  
 Not supported\.  
@@ -3169,7 +3172,7 @@ One to ten years\.
 + **Not hidden** – contact name and organization name  
 **Internationalized domain names**  
 Supported for French and Spanish\.  
-**Authorization code required for transfer to Amazon Route 53**  
+**Authorization code required for transfer to Route 53**  
 Yes  
 **DNSSEC**  
 Supported for domain registration\. For more information, see [Configuring DNSSEC for a Domain](domain-configure-dnssec.md)\.  
@@ -3187,7 +3190,7 @@ One to ten years\.
 + **Not hidden** – contact name and organization name  
 **Internationalized domain names**  
 Supported for French and Spanish\.  
-**Authorization code required for transfer to Amazon Route 53**  
+**Authorization code required for transfer to Route 53**  
 Yes  
 **DNSSEC**  
 Supported for domain registration\. For more information, see [Configuring DNSSEC for a Domain](domain-configure-dnssec.md)\.  
@@ -3202,7 +3205,7 @@ One to ten years\.
 Not supported\.  
 **Internationalized domain names**  
 Supported for Cyrillic \(primarily Russian\), French, German, Italian, Portuguese, and Spanish\.  
-**Authorization code required for transfer to Amazon Route 53**  
+**Authorization code required for transfer to Route 53**  
 Yes  
 **DNSSEC**  
 Supported for domain registration\. For more information, see [Configuring DNSSEC for a Domain](domain-configure-dnssec.md)\.  
@@ -3220,7 +3223,7 @@ One to ten years\.
 + **Not hidden** – contact name and organization name  
 **Internationalized domain names**  
 Supported for French and Spanish\.  
-**Authorization code required for transfer to Amazon Route 53**  
+**Authorization code required for transfer to Route 53**  
 Yes  
 **DNSSEC**  
 Supported for domain registration\. For more information, see [Configuring DNSSEC for a Domain](domain-configure-dnssec.md)\.  
@@ -3238,7 +3241,7 @@ One to ten years\.
 + **Not hidden** – contact name and organization name  
 **Internationalized domain names**  
 Supported for French and Spanish\.  
-**Authorization code required for transfer to Amazon Route 53**  
+**Authorization code required for transfer to Route 53**  
 Yes  
 **DNSSEC**  
 Supported for domain registration\. For more information, see [Configuring DNSSEC for a Domain](domain-configure-dnssec.md)\.  
@@ -3253,7 +3256,7 @@ One to ten years\.
 Not supported\.  
 **Internationalized domain names**  
 Supported for Cyrillic \(primarily Russian\), French, German, Italian, Portuguese, and Spanish\.  
-**Authorization code required for transfer to Amazon Route 53**  
+**Authorization code required for transfer to Route 53**  
 Yes  
 **DNSSEC**  
 Not supported\.  
@@ -3271,7 +3274,7 @@ One to ten years\.
 + **Not hidden** – contact name and organization name  
 **Internationalized domain names**  
 Supported for French and Spanish\.  
-**Authorization code required for transfer to Amazon Route 53**  
+**Authorization code required for transfer to Route 53**  
 Yes  
 **DNSSEC**  
 Supported for domain registration\. For more information, see [Configuring DNSSEC for a Domain](domain-configure-dnssec.md)\.  
@@ -3289,7 +3292,7 @@ One to ten years\.
 + **Not hidden** – contact name and organization name  
 **Internationalized domain names**  
 Supported\.  
-**Authorization code required for transfer to Amazon Route 53**  
+**Authorization code required for transfer to Route 53**  
 Yes  
 **DNSSEC**  
 Not supported\.  
@@ -3307,7 +3310,7 @@ One to ten years\.
 + **Not hidden** – contact name and organization name  
 **Internationalized domain names**  
 Supported for French and Spanish\.  
-**Authorization code required for transfer to Amazon Route 53**  
+**Authorization code required for transfer to Route 53**  
 Yes  
 **DNSSEC**  
 Supported for domain registration\. For more information, see [Configuring DNSSEC for a Domain](domain-configure-dnssec.md)\.  
@@ -3325,7 +3328,7 @@ One to ten years\.
 + **Not hidden** – contact name and organization name  
 **Internationalized domain names**  
 Supported for French and Spanish\.  
-**Authorization code required for transfer to Amazon Route 53**  
+**Authorization code required for transfer to Route 53**  
 Yes  
 **DNSSEC**  
 Supported for domain registration\. For more information, see [Configuring DNSSEC for a Domain](domain-configure-dnssec.md)\.  
@@ -3343,7 +3346,7 @@ One to ten years\.
 + **Not hidden** – contact name and organization name  
 **Internationalized domain names**  
 Supported for French and Spanish\.  
-**Authorization code required for transfer to Amazon Route 53**  
+**Authorization code required for transfer to Route 53**  
 Yes  
 **DNSSEC**  
 Supported for domain registration\. For more information, see [Configuring DNSSEC for a Domain](domain-configure-dnssec.md)\.  
@@ -3361,7 +3364,7 @@ One to ten years\.
 + **Not hidden** – contact name and organization name  
 **Internationalized domain names**  
 Supported for Chinese, French, German, and Spanish\.  
-**Authorization code required for transfer to Amazon Route 53**  
+**Authorization code required for transfer to Route 53**  
 Yes  
 **DNSSEC**  
 Supported for domain registration\. For more information, see [Configuring DNSSEC for a Domain](domain-configure-dnssec.md)\.  
@@ -3376,7 +3379,7 @@ One to ten years\.
 Not supported\.  
 **Internationalized domain names**  
 Not supported\.  
-**Authorization code required for transfer to Amazon Route 53**  
+**Authorization code required for transfer to Route 53**  
 Yes  
 **DNSSEC**  
 Supported for domain registration\. For more information, see [Configuring DNSSEC for a Domain](domain-configure-dnssec.md)\.  
@@ -3394,7 +3397,7 @@ One to ten years\.
 + **Not hidden** – contact name and organization name  
 **Internationalized domain names**  
 Not supported\.  
-**Authorization code required for transfer to Amazon Route 53**  
+**Authorization code required for transfer to Route 53**  
 Yes  
 **DNSSEC**  
 Supported for domain registration\. For more information, see [Configuring DNSSEC for a Domain](domain-configure-dnssec.md)\.  
@@ -3409,7 +3412,7 @@ One to ten years\.
 Not supported\.  
 **Internationalized domain names**  
 Not supported\.  
-**Authorization code required for transfer to Amazon Route 53**  
+**Authorization code required for transfer to Route 53**  
 Yes  
 **DNSSEC**  
 Supported for domain registration\. For more information, see [Configuring DNSSEC for a Domain](domain-configure-dnssec.md)\.  
@@ -3427,7 +3430,7 @@ One to ten years\.
 + **Not hidden** – contact name and organization name  
 **Internationalized domain names**  
 Supported for French and Spanish\.  
-**Authorization code required for transfer to Amazon Route 53**  
+**Authorization code required for transfer to Route 53**  
 Yes  
 **DNSSEC**  
 Supported for domain registration\. For more information, see [Configuring DNSSEC for a Domain](domain-configure-dnssec.md)\.  
@@ -3445,7 +3448,7 @@ One to ten years\.
 + **Not hidden** – contact name and organization name  
 **Internationalized domain names**  
 Supported for French and Spanish\.  
-**Authorization code required for transfer to Amazon Route 53**  
+**Authorization code required for transfer to Route 53**  
 Yes  
 **DNSSEC**  
 Supported for domain registration\. For more information, see [Configuring DNSSEC for a Domain](domain-configure-dnssec.md)\.  
@@ -3453,7 +3456,7 @@ Supported for domain registration\. For more information, see [Configuring DNSSE
 The registrar for this TLD is our registrar associate, Gandi\.
 
 **\.property**  
-You can no longer use Amazon Route 53 to register new \.property domains or transfer \.property domains to Amazon Route 53\. We'll continue to support \.property domains that are already registered with Amazon Route 53\.
+You can no longer use Route 53 to register new \.property domains or transfer \.property domains to Route 53\. We'll continue to support \.property domains that are already registered with Route 53\.
 Used for information about any type of property, including real estate or intellectual property\. Also used by those who have houses, buildings, or land to sell, lease, or rent\.    
 **Registration and renewal period**  
 One to ten years\.  
@@ -3461,7 +3464,7 @@ One to ten years\.
 Not supported\.  
 **Internationalized domain names**  
 Supported for Cyrillic \(primarily Russian\), French, German, Italian, Portuguese, and Spanish\.  
-**Authorization code required for transfer to Amazon Route 53**  
+**Authorization code required for transfer to Route 53**  
 Yes  
 **DNSSEC**  
 Supported for domain registration\. For more information, see [Configuring DNSSEC for a Domain](domain-configure-dnssec.md)\.  
@@ -3479,7 +3482,7 @@ One to ten years\.
 + **Not hidden** – contact name and organization name  
 **Internationalized domain names**  
 Supported for Chinese, French, German, Latin, and Spanish\.  
-**Authorization code required for transfer to Amazon Route 53**  
+**Authorization code required for transfer to Route 53**  
 Yes  
 **DNSSEC**  
 Not supported\.  
@@ -3501,7 +3504,7 @@ One to ten years\.
 + **Not hidden** – contact name and organization name  
 **Internationalized domain names**  
 Supported for Spanish\.  
-**Authorization code required for transfer to Amazon Route 53**  
+**Authorization code required for transfer to Route 53**  
 Yes  
 **DNSSEC**  
 Not supported\.  
@@ -3510,7 +3513,7 @@ The registrar for this TLD is our registrar associate, Gandi\.
 
 ### R<a name="registrar-tld-list-generic-r"></a>
 
- [.recipes](#recipes), [.red](#red), [.reise](#reise), [.reisen](#reisen), [.rentals](#rentals), [.repair](#repair), [.report](#report), [.republican](#republican), [.restaurant](#restaurant), [.reviews](#reviews), [.rich](#rich), [.rip](#rip), [.rocks](#rocks), [.run](#run) 
+ [.recipes](#recipes), [.red](#red), [.reise](#reise), [.reisen](#reisen), [.rentals](#rentals), [.repair](#repair), [.report](#report), [.republican](#republican), [.restaurant](#restaurant), [.reviews](#reviews),  [.rip](#rip), [.rocks](#rocks), [.run](#run) 
 
 **\.recipes**  
 Used by those with recipes to share\.     
@@ -3523,7 +3526,7 @@ One to ten years\.
 + **Not hidden** – contact name and organization name  
 **Internationalized domain names**  
 Supported for French and Spanish\.  
-**Authorization code required for transfer to Amazon Route 53**  
+**Authorization code required for transfer to Route 53**  
 Yes  
 **DNSSEC**  
 Supported for domain registration\. For more information, see [Configuring DNSSEC for a Domain](domain-configure-dnssec.md)\.  
@@ -3541,7 +3544,7 @@ One to ten years\.
 + **Not hidden** – contact name and organization name  
 **Internationalized domain names**  
 Supported\.  
-**Authorization code required for transfer to Amazon Route 53**  
+**Authorization code required for transfer to Route 53**  
 Yes  
 **DNSSEC**  
 Not supported\.  
@@ -3556,7 +3559,7 @@ One to ten years\.
 Not supported\.  
 **Internationalized domain names**  
 Supported for Chinese, French, German, and Spanish\.  
-**Authorization code required for transfer to Amazon Route 53**  
+**Authorization code required for transfer to Route 53**  
 Yes  
 **DNSSEC**  
 Supported for domain registration\. For more information, see [Configuring DNSSEC for a Domain](domain-configure-dnssec.md)\.  
@@ -3574,7 +3577,7 @@ One to ten years\.
 + **Not hidden** – contact name and organization name  
 **Internationalized domain names**  
 Supported for French and Spanish\.  
-**Authorization code required for transfer to Amazon Route 53**  
+**Authorization code required for transfer to Route 53**  
 Yes  
 **DNSSEC**  
 Supported for domain registration\. For more information, see [Configuring DNSSEC for a Domain](domain-configure-dnssec.md)\.  
@@ -3592,7 +3595,7 @@ One to ten years\.
 + **Not hidden** – contact name and organization name  
 **Internationalized domain names**  
 Supported for French and Spanish\.  
-**Authorization code required for transfer to Amazon Route 53**  
+**Authorization code required for transfer to Route 53**  
 Yes  
 **DNSSEC**  
 Supported for domain registration\. For more information, see [Configuring DNSSEC for a Domain](domain-configure-dnssec.md)\.  
@@ -3610,7 +3613,7 @@ One to ten years\.
 + **Not hidden** – contact name and organization name  
 **Internationalized domain names**  
 Supported for French and Spanish\.  
-**Authorization code required for transfer to Amazon Route 53**  
+**Authorization code required for transfer to Route 53**  
 Yes  
 **DNSSEC**  
 Supported for domain registration\. For more information, see [Configuring DNSSEC for a Domain](domain-configure-dnssec.md)\.  
@@ -3628,7 +3631,7 @@ One to ten years\.
 + **Not hidden** – contact name and organization name  
 **Internationalized domain names**  
 Supported for French and Spanish\.  
-**Authorization code required for transfer to Amazon Route 53**  
+**Authorization code required for transfer to Route 53**  
 Yes  
 **DNSSEC**  
 Supported for domain registration\. For more information, see [Configuring DNSSEC for a Domain](domain-configure-dnssec.md)\.  
@@ -3646,7 +3649,7 @@ One to ten years\.
 + **Not hidden** – contact name and organization name  
 **Internationalized domain names**  
 Supported for Chinese, French, German, Latin, and Spanish\.  
-**Authorization code required for transfer to Amazon Route 53**  
+**Authorization code required for transfer to Route 53**  
 Yes  
 **DNSSEC**  
 Supported for domain registration\. For more information, see [Configuring DNSSEC for a Domain](domain-configure-dnssec.md)\.  
@@ -3664,7 +3667,7 @@ One to ten years\.
 + **Not hidden** – contact name and organization name  
 **Internationalized domain names**  
 Supported for French and Spanish\.  
-**Authorization code required for transfer to Amazon Route 53**  
+**Authorization code required for transfer to Route 53**  
 Yes  
 **DNSSEC**  
 Supported for domain registration\. For more information, see [Configuring DNSSEC for a Domain](domain-configure-dnssec.md)\.  
@@ -3682,25 +3685,7 @@ One to ten years\.
 + **Not hidden** – contact name and organization name  
 **Internationalized domain names**  
 Supported for Chinese, French, German, Latin, and Spanish\.  
-**Authorization code required for transfer to Amazon Route 53**  
-Yes  
-**DNSSEC**  
-Not supported\.  
-**Registrar**  
-The registrar for this TLD is our registrar associate, Gandi\.
-
-**\.rich**  
-Used for information about wealthy people, including celebrities from the worlds of industry, art, fashion, sports, and entertainment\. Also used by providers of luxury services and brands\.    
-**Registration and renewal period**  
-One to ten years\.  
-**Privacy protection \(applies to all contact types: person, company, association, and public body\)**  
-
-+ **Hidden** – address, phone number, fax number, and email address
-
-+ **Not hidden** – contact name and organization name  
-**Internationalized domain names**  
-Arabic, Belarussian, Bosnian, Bulgarian, Chinese \(Simplified and Traditional\), Danish, German, Hindi, Hungarian, Icelandic, Korean, Lithuanian, Latvian, Macedonian, Polish, Russian, Serbian, and Spanish\.  
-**Authorization code required for transfer to Amazon Route 53**  
+**Authorization code required for transfer to Route 53**  
 Yes  
 **DNSSEC**  
 Not supported\.  
@@ -3718,7 +3703,7 @@ One to ten years\.
 + **Not hidden** – contact name and organization name  
 **Internationalized domain names**  
 Supported for Chinese, French, German, Latin, and Spanish\.  
-**Authorization code required for transfer to Amazon Route 53**  
+**Authorization code required for transfer to Route 53**  
 Yes  
 **DNSSEC**  
 Supported for domain registration\. For more information, see [Configuring DNSSEC for a Domain](domain-configure-dnssec.md)\.  
@@ -3736,7 +3721,7 @@ One to ten years\.
 + **Not hidden** – contact name and organization name  
 **Internationalized domain names**  
 Supported for Chinese, French, German, Latin, and Spanish\.  
-**Authorization code required for transfer to Amazon Route 53**  
+**Authorization code required for transfer to Route 53**  
 Yes  
 **DNSSEC**  
 Supported for domain registration\. For more information, see [Configuring DNSSEC for a Domain](domain-configure-dnssec.md)\.  
@@ -3754,7 +3739,7 @@ One to ten years\.
 + **Not hidden** – contact name and organization name  
 **Internationalized domain names**  
 Supported for Chinese, French, German, and Spanish\.  
-**Authorization code required for transfer to Amazon Route 53**  
+**Authorization code required for transfer to Route 53**  
 Yes  
 **DNSSEC**  
 Supported for domain registration\. For more information, see [Configuring DNSSEC for a Domain](domain-configure-dnssec.md)\.  
@@ -3776,7 +3761,7 @@ One to ten years\.
 + **Not hidden** – contact name and organization name  
 **Internationalized domain names**  
 Supported for Chinese, French, German, Latin, and Spanish\.  
-**Authorization code required for transfer to Amazon Route 53**  
+**Authorization code required for transfer to Route 53**  
 Yes  
 **DNSSEC**  
 Supported for domain registration\. For more information, see [Configuring DNSSEC for a Domain](domain-configure-dnssec.md)\.  
@@ -3794,7 +3779,7 @@ One to ten years\.
 + **Not hidden** – contact name and organization name  
 **Internationalized domain names**  
 Supported for French and Spanish\.  
-**Authorization code required for transfer to Amazon Route 53**  
+**Authorization code required for transfer to Route 53**  
 Yes  
 **DNSSEC**  
 Supported for domain registration\. For more information, see [Configuring DNSSEC for a Domain](domain-configure-dnssec.md)\.  
@@ -3812,7 +3797,7 @@ One to ten years\.
 + **Not hidden** – contact name and organization name  
 **Internationalized domain names**  
 Supported for French and Spanish\.  
-**Authorization code required for transfer to Amazon Route 53**  
+**Authorization code required for transfer to Route 53**  
 Yes  
 **DNSSEC**  
 Supported for domain registration\. For more information, see [Configuring DNSSEC for a Domain](domain-configure-dnssec.md)\.  
@@ -3830,7 +3815,7 @@ One to ten years\.
 + **Not hidden** – contact name and organization name  
 **Internationalized domain names**  
 Supported for French and Spanish\.  
-**Authorization code required for transfer to Amazon Route 53**  
+**Authorization code required for transfer to Route 53**  
 Yes  
 **DNSSEC**  
 Supported for domain registration\. For more information, see [Configuring DNSSEC for a Domain](domain-configure-dnssec.md)\.  
@@ -3845,7 +3830,7 @@ One to ten years\.
 Not supported\.  
 **Internationalized domain names**  
 Supported for French and Spanish\.  
-**Authorization code required for transfer to Amazon Route 53**  
+**Authorization code required for transfer to Route 53**  
 Yes  
 **DNSSEC**  
 Supported for domain registration\. For more information, see [Configuring DNSSEC for a Domain](domain-configure-dnssec.md)\.  
@@ -3863,7 +3848,7 @@ One to ten years\.
 + **Not hidden** – contact name and organization name  
 **Internationalized domain names**  
 Not supported\.  
-**Authorization code required for transfer to Amazon Route 53**  
+**Authorization code required for transfer to Route 53**  
 Yes  
 **DNSSEC**  
 Supported for domain registration\. For more information, see [Configuring DNSSEC for a Domain](domain-configure-dnssec.md)\.  
@@ -3878,7 +3863,7 @@ One to ten years\.
 Not supported\.  
 **Internationalized domain names**  
 Supported for Cyrillic \(primarily Russian\), French, German, Italian, Portuguese, and Spanish\.  
-**Authorization code required for transfer to Amazon Route 53**  
+**Authorization code required for transfer to Route 53**  
 Yes  
 **DNSSEC**  
 Not supported\.  
@@ -3896,7 +3881,7 @@ One to ten years\.
 + **Not hidden** – contact name and organization name  
 **Internationalized domain names**  
 Supported\.  
-**Authorization code required for transfer to Amazon Route 53**  
+**Authorization code required for transfer to Route 53**  
 Yes  
 **DNSSEC**  
 Not supported\.  
@@ -3914,7 +3899,7 @@ One to ten years\.
 + **Not hidden** – contact name and organization name  
 **Internationalized domain names**  
 Supported for French and Spanish\.  
-**Authorization code required for transfer to Amazon Route 53**  
+**Authorization code required for transfer to Route 53**  
 Yes  
 **DNSSEC**  
 Supported for domain registration\. For more information, see [Configuring DNSSEC for a Domain](domain-configure-dnssec.md)\.  
@@ -3932,7 +3917,7 @@ One to ten years\.
 + **Not hidden** – contact name and organization name  
 **Internationalized domain names**  
 Supported for Chinese, French, German, and Spanish\.  
-**Authorization code required for transfer to Amazon Route 53**  
+**Authorization code required for transfer to Route 53**  
 Yes  
 **DNSSEC**  
 Supported for domain registration\. For more information, see [Configuring DNSSEC for a Domain](domain-configure-dnssec.md)\.  
@@ -3950,7 +3935,7 @@ One to ten years\.
 + **Not hidden** – contact name and organization name  
 **Internationalized domain names**  
 Supported for French and Spanish\.  
-**Authorization code required for transfer to Amazon Route 53**  
+**Authorization code required for transfer to Route 53**  
 Yes  
 **DNSSEC**  
 Supported for domain registration\. For more information, see [Configuring DNSSEC for a Domain](domain-configure-dnssec.md)\.  
@@ -3968,7 +3953,7 @@ One to ten years\.
 + **Not hidden** – contact name and organization name  
 **Internationalized domain names**  
 Supported for Chinese, French, German, and Spanish\.  
-**Authorization code required for transfer to Amazon Route 53**  
+**Authorization code required for transfer to Route 53**  
 Yes  
 **DNSSEC**  
 Supported for domain registration\. For more information, see [Configuring DNSSEC for a Domain](domain-configure-dnssec.md)\.  
@@ -3986,7 +3971,7 @@ One to ten years\.
 + **Not hidden** – contact name and organization name  
 **Internationalized domain names**  
 Supported for Chinese, French, German, Latin, and Spanish\.  
-**Authorization code required for transfer to Amazon Route 53**  
+**Authorization code required for transfer to Route 53**  
 Yes  
 **DNSSEC**  
 Not supported\.  
@@ -4004,7 +3989,7 @@ One to ten years\.
 + **Not hidden** – contact name and organization name  
 **Internationalized domain names**  
 Supported for French and Spanish\.  
-**Authorization code required for transfer to Amazon Route 53**  
+**Authorization code required for transfer to Route 53**  
 Yes  
 **DNSSEC**  
 Supported for domain registration\. For more information, see [Configuring DNSSEC for a Domain](domain-configure-dnssec.md)\.  
@@ -4022,7 +4007,7 @@ One to ten years\.
 + **Not hidden** – contact name and organization name  
 **Internationalized domain names**  
 Supported for French and Spanish\.  
-**Authorization code required for transfer to Amazon Route 53**  
+**Authorization code required for transfer to Route 53**  
 Yes  
 **DNSSEC**  
 Supported for domain registration\. For more information, see [Configuring DNSSEC for a Domain](domain-configure-dnssec.md)\.  
@@ -4040,7 +4025,7 @@ One to ten years\.
 + **Not hidden** – contact name and organization name  
 **Internationalized domain names**  
 Supported for Chinese, French, German, Latin, and Spanish\.  
-**Authorization code required for transfer to Amazon Route 53**  
+**Authorization code required for transfer to Route 53**  
 Yes  
 **DNSSEC**  
 Supported for domain registration\. For more information, see [Configuring DNSSEC for a Domain](domain-configure-dnssec.md)\.  
@@ -4058,7 +4043,7 @@ One to ten years\.
 + **Not hidden** – contact name and organization name  
 **Internationalized domain names**  
 Supported for French and Spanish\.  
-**Authorization code required for transfer to Amazon Route 53**  
+**Authorization code required for transfer to Route 53**  
 Yes  
 **DNSSEC**  
 Supported for domain registration\. For more information, see [Configuring DNSSEC for a Domain](domain-configure-dnssec.md)\.  
@@ -4073,7 +4058,7 @@ One to ten years\.
 Not supported\.  
 **Internationalized domain names**  
 Not supported\.  
-**Authorization code required for transfer to Amazon Route 53**  
+**Authorization code required for transfer to Route 53**  
 Yes  
 **DNSSEC**  
 Supported for domain registration\. For more information, see [Configuring DNSSEC for a Domain](domain-configure-dnssec.md)\.  
@@ -4091,7 +4076,7 @@ One to ten years\.
 + **Not hidden** – contact name and organization name  
 **Internationalized domain names**  
 Supported for French and Spanish\.  
-**Authorization code required for transfer to Amazon Route 53**  
+**Authorization code required for transfer to Route 53**  
 Yes  
 **DNSSEC**  
 Supported for domain registration\. For more information, see [Configuring DNSSEC for a Domain](domain-configure-dnssec.md)\.  
@@ -4109,7 +4094,7 @@ One to ten years\.
 + **Not hidden** – contact name and organization name  
 **Internationalized domain names**  
 Supported for French and Spanish\.  
-**Authorization code required for transfer to Amazon Route 53**  
+**Authorization code required for transfer to Route 53**  
 Yes  
 **DNSSEC**  
 Supported for domain registration\. For more information, see [Configuring DNSSEC for a Domain](domain-configure-dnssec.md)\.  
@@ -4127,7 +4112,7 @@ One to ten years\.
 + **Not hidden** – contact name and organization name  
 **Internationalized domain names**  
 Supported for French and Spanish\.  
-**Authorization code required for transfer to Amazon Route 53**  
+**Authorization code required for transfer to Route 53**  
 Yes  
 **DNSSEC**  
 Supported for domain registration\. For more information, see [Configuring DNSSEC for a Domain](domain-configure-dnssec.md)\.  
@@ -4145,7 +4130,7 @@ One to ten years\.
 + **Not hidden** – contact name and organization name  
 **Internationalized domain names**  
 Supported for French and Spanish\.  
-**Authorization code required for transfer to Amazon Route 53**  
+**Authorization code required for transfer to Route 53**  
 Yes  
 **DNSSEC**  
 Supported for domain registration\. For more information, see [Configuring DNSSEC for a Domain](domain-configure-dnssec.md)\.  
@@ -4163,7 +4148,7 @@ One to ten years\.
 + **Not hidden** – contact name and organization name  
 **Internationalized domain names**  
 Supported for French and Spanish\.  
-**Authorization code required for transfer to Amazon Route 53**  
+**Authorization code required for transfer to Route 53**  
 Yes  
 **DNSSEC**  
 Supported for domain registration\. For more information, see [Configuring DNSSEC for a Domain](domain-configure-dnssec.md)\.  
@@ -4182,7 +4167,7 @@ One to ten years\.
 Not supported\.  
 **Internationalized domain names**  
 Supported for Cyrillic \(primarily Russian\), French, German, Italian, Portuguese, and Spanish\.  
-**Authorization code required for transfer to Amazon Route 53**  
+**Authorization code required for transfer to Route 53**  
 Yes  
 **DNSSEC**  
 Not supported\.  
@@ -4200,7 +4185,7 @@ One to ten years\.
 + **Not hidden** – contact name and organization name  
 **Internationalized domain names**  
 Supported for French and Spanish\.  
-**Authorization code required for transfer to Amazon Route 53**  
+**Authorization code required for transfer to Route 53**  
 Yes  
 **DNSSEC**  
 Supported for domain registration\. For more information, see [Configuring DNSSEC for a Domain](domain-configure-dnssec.md)\.  
@@ -4218,7 +4203,7 @@ One to ten years\.
 + **Not hidden** – contact name and organization name  
 **Internationalized domain names**  
 Supported for Chinese, French, German, and Spanish\.  
-**Authorization code required for transfer to Amazon Route 53**  
+**Authorization code required for transfer to Route 53**  
 Yes  
 **DNSSEC**  
 Supported for domain registration\. For more information, see [Configuring DNSSEC for a Domain](domain-configure-dnssec.md)\.  
@@ -4236,7 +4221,7 @@ One to ten years\.
 + **Not hidden** – contact name and organization name  
 **Internationalized domain names**  
 Supported for Chinese, French, German, and Spanish\.  
-**Authorization code required for transfer to Amazon Route 53**  
+**Authorization code required for transfer to Route 53**  
 Yes  
 **DNSSEC**  
 Supported for domain registration\. For more information, see [Configuring DNSSEC for a Domain](domain-configure-dnssec.md)\.  
@@ -4254,7 +4239,7 @@ One to ten years\.
 + **Not hidden** – contact name and organization name  
 **Internationalized domain names**  
 Supported for French and Spanish\.  
-**Authorization code required for transfer to Amazon Route 53**  
+**Authorization code required for transfer to Route 53**  
 Yes  
 **DNSSEC**  
 Supported for domain registration\. For more information, see [Configuring DNSSEC for a Domain](domain-configure-dnssec.md)\.  
@@ -4272,7 +4257,7 @@ One to ten years\.
 + **Not hidden** – contact name and organization name  
 **Internationalized domain names**  
 Supported for French and Spanish\.  
-**Authorization code required for transfer to Amazon Route 53**  
+**Authorization code required for transfer to Route 53**  
 Yes  
 **DNSSEC**  
 Supported for domain registration\. For more information, see [Configuring DNSSEC for a Domain](domain-configure-dnssec.md)\.  
@@ -4290,7 +4275,7 @@ One to ten years\.
 + **Not hidden** – contact name and organization name  
 **Internationalized domain names**  
 Supported for Chinese, French, German, and Spanish\.  
-**Authorization code required for transfer to Amazon Route 53**  
+**Authorization code required for transfer to Route 53**  
 Yes  
 **DNSSEC**  
 Supported for domain registration\. For more information, see [Configuring DNSSEC for a Domain](domain-configure-dnssec.md)\.  
@@ -4308,7 +4293,7 @@ One to ten years\.
 + **Not hidden** – contact name and organization name  
 **Internationalized domain names**  
 Supported for French and Spanish\.  
-**Authorization code required for transfer to Amazon Route 53**  
+**Authorization code required for transfer to Route 53**  
 Yes  
 **DNSSEC**  
 Supported for domain registration\. For more information, see [Configuring DNSSEC for a Domain](domain-configure-dnssec.md)\.  
@@ -4326,7 +4311,7 @@ One to ten years\.
 + **Not hidden** – contact name and organization name  
 **Internationalized domain names**  
 Supported for French and Spanish\.  
-**Authorization code required for transfer to Amazon Route 53**  
+**Authorization code required for transfer to Route 53**  
 Yes  
 **DNSSEC**  
 Supported for domain registration\. For more information, see [Configuring DNSSEC for a Domain](domain-configure-dnssec.md)\.  
@@ -4344,7 +4329,7 @@ One to ten years\.
 + **Not hidden** – contact name and organization name  
 **Internationalized domain names**  
 Supported for French and Spanish\.  
-**Authorization code required for transfer to Amazon Route 53**  
+**Authorization code required for transfer to Route 53**  
 Yes  
 **DNSSEC**  
 Supported for domain registration\. For more information, see [Configuring DNSSEC for a Domain](domain-configure-dnssec.md)\.  
@@ -4362,7 +4347,7 @@ One to ten years\.
 + **Not hidden** – contact name and organization name  
 **Internationalized domain names**  
 Supported for French and Spanish\.  
-**Authorization code required for transfer to Amazon Route 53**  
+**Authorization code required for transfer to Route 53**  
 Yes  
 **DNSSEC**  
 Supported for domain registration\. For more information, see [Configuring DNSSEC for a Domain](domain-configure-dnssec.md)\.  
@@ -4380,7 +4365,7 @@ One to ten years\.
 + **Not hidden** – contact name and organization name  
 **Internationalized domain names**  
 Supported for French and Spanish\.  
-**Authorization code required for transfer to Amazon Route 53**  
+**Authorization code required for transfer to Route 53**  
 Yes  
 **DNSSEC**  
 Supported for domain registration\. For more information, see [Configuring DNSSEC for a Domain](domain-configure-dnssec.md)\.  
@@ -4398,7 +4383,7 @@ One to ten years\.
 + **Not hidden** – contact name and organization name  
 **Internationalized domain names**  
 Supported for Chinese, French, German, and Spanish\.  
-**Authorization code required for transfer to Amazon Route 53**  
+**Authorization code required for transfer to Route 53**  
 Yes  
 **DNSSEC**  
 Supported for domain registration\. For more information, see [Configuring DNSSEC for a Domain](domain-configure-dnssec.md)\.  
@@ -4416,7 +4401,7 @@ One to ten years\.
 + **Not hidden** – contact name and organization name  
 **Internationalized domain names**  
 Supported for French and Spanish\.  
-**Authorization code required for transfer to Amazon Route 53**  
+**Authorization code required for transfer to Route 53**  
 Yes  
 **DNSSEC**  
 Supported for domain registration\. For more information, see [Configuring DNSSEC for a Domain](domain-configure-dnssec.md)\.  
@@ -4434,7 +4419,7 @@ One to ten years\.
 + **Not hidden** – contact name and organization name  
 **Internationalized domain names**  
 Supported for French and Spanish\.  
-**Authorization code required for transfer to Amazon Route 53**  
+**Authorization code required for transfer to Route 53**  
 Yes  
 **DNSSEC**  
 Supported for domain registration\. For more information, see [Configuring DNSSEC for a Domain](domain-configure-dnssec.md)\.  
@@ -4452,7 +4437,7 @@ One to ten years\.
 + **Not hidden** – contact name and organization name  
 **Internationalized domain names**  
 Supported for Danish, German, Norwegian, and Swedish\.  
-**Authorization code required for transfer to Amazon Route 53**  
+**Authorization code required for transfer to Route 53**  
 Yes  
 **DNSSEC**  
 Supported for domain registration\. For more information, see [Configuring DNSSEC for a Domain](domain-configure-dnssec.md)\.  
@@ -4470,7 +4455,7 @@ One to ten years\.
 + **Not hidden** – contact name and organization name  
 **Internationalized domain names**  
 Supported for French and Spanish\.  
-**Authorization code required for transfer to Amazon Route 53**  
+**Authorization code required for transfer to Route 53**  
 Yes  
 **DNSSEC**  
 Supported for domain registration\. For more information, see [Configuring DNSSEC for a Domain](domain-configure-dnssec.md)\.  
@@ -4482,7 +4467,7 @@ Used for information about television and media\.
 **Registration and renewal period**  
 One to ten years\.  
 **Restrictions**  
-Domain names that are at least three letters long \(such as aaa\.tv\) are generally open to the public\. Www\.tv, the registry for \.tv domains, reserves two\-letter domain names\. You can't register two\-letter domains with or transfer them to Amazon Route 53\. For more information about \.tv domain names, see the [\.tv page](https://www.verisign.com/en_US/domain-names/tv-domain-names/index.xhtml?dmn=www.tv) on the Verisign website\.  
+Domain names that are at least three letters long \(such as aaa\.tv\) are generally open to the public\. Www\.tv, the registry for \.tv domains, reserves two\-letter domain names\. You can't register two\-letter domains with or transfer them to Route 53\. For more information about \.tv domain names, see the [\.tv page](https://www.verisign.com/en_US/domain-names/tv-domain-names/index.xhtml?dmn=www.tv) on the Verisign website\.  
 **Privacy protection \(applies to all contact types: person, company, association, and public body\)**  
 
 + **Hidden** – address, phone number, fax number, and email address
@@ -4490,7 +4475,7 @@ Domain names that are at least three letters long \(such as aaa\.tv\) are genera
 + **Not hidden** – contact name and organization name  
 **Internationalized domain names**  
 Not supported\.  
-**Authorization code required for transfer to Amazon Route 53**  
+**Authorization code required for transfer to Route 53**  
 Yes  
 **DNSSEC**  
 Supported for domain registration\. For more information, see [Configuring DNSSEC for a Domain](domain-configure-dnssec.md)\.  
@@ -4512,7 +4497,7 @@ One to ten years\.
 + **Not hidden** – contact name and organization name  
 **Internationalized domain names**  
 Supported for French and Spanish\.  
-**Authorization code required for transfer to Amazon Route 53**  
+**Authorization code required for transfer to Route 53**  
 Yes  
 **DNSSEC**  
 Supported for domain registration\. For more information, see [Configuring DNSSEC for a Domain](domain-configure-dnssec.md)\.  
@@ -4530,7 +4515,7 @@ One to ten years\.
 + **Not hidden** – contact name and organization name  
 **Internationalized domain names**  
 Supported for Spanish\.  
-**Authorization code required for transfer to Amazon Route 53**  
+**Authorization code required for transfer to Route 53**  
 Yes  
 **DNSSEC**  
 Supported for domain registration\. For more information, see [Configuring DNSSEC for a Domain](domain-configure-dnssec.md)\.  
@@ -4552,7 +4537,7 @@ One to ten years\.
 + **Not hidden** – contact name and organization name  
 **Internationalized domain names**  
 Supported for French and Spanish\.  
-**Authorization code required for transfer to Amazon Route 53**  
+**Authorization code required for transfer to Route 53**  
 Yes  
 **DNSSEC**  
 Supported for domain registration\. For more information, see [Configuring DNSSEC for a Domain](domain-configure-dnssec.md)\.  
@@ -4570,7 +4555,7 @@ One to ten years\.
 + **Not hidden** – contact name and organization name  
 **Internationalized domain names**  
 Not supported\.  
-**Authorization code required for transfer to Amazon Route 53**  
+**Authorization code required for transfer to Route 53**  
 Yes  
 **DNSSEC**  
 Supported for domain registration\. For more information, see [Configuring DNSSEC for a Domain](domain-configure-dnssec.md)\.  
@@ -4588,7 +4573,7 @@ One to ten years\.
 + **Not hidden** – contact name and organization name  
 **Internationalized domain names**  
 Supported for French and Spanish\.  
-**Authorization code required for transfer to Amazon Route 53**  
+**Authorization code required for transfer to Route 53**  
 Yes  
 **DNSSEC**  
 Supported for domain registration\. For more information, see [Configuring DNSSEC for a Domain](domain-configure-dnssec.md)\.  
@@ -4609,7 +4594,7 @@ One to ten years\.
 + **Not hidden** – contact name and organization name  
 **Internationalized domain names**  
 Supported for French and Spanish\.  
-**Authorization code required for transfer to Amazon Route 53**  
+**Authorization code required for transfer to Route 53**  
 Yes  
 **DNSSEC**  
 Supported for domain registration\. For more information, see [Configuring DNSSEC for a Domain](domain-configure-dnssec.md)\.  
@@ -4627,7 +4612,7 @@ One to ten years\.
 + **Not hidden** – contact name and organization name  
 **Internationalized domain names**  
 Supported for Chinese, French, German, Latin, and Spanish\.  
-**Authorization code required for transfer to Amazon Route 53**  
+**Authorization code required for transfer to Route 53**  
 Yes  
 **DNSSEC**  
 Supported for domain registration\. For more information, see [Configuring DNSSEC for a Domain](domain-configure-dnssec.md)\.  
@@ -4645,7 +4630,7 @@ One to ten years\.
 + **Not hidden** – contact name and organization name  
 **Internationalized domain names**  
 Supported for French and Spanish\.  
-**Authorization code required for transfer to Amazon Route 53**  
+**Authorization code required for transfer to Route 53**  
 Yes  
 **DNSSEC**  
 Supported for domain registration\. For more information, see [Configuring DNSSEC for a Domain](domain-configure-dnssec.md)\.  
@@ -4660,7 +4645,7 @@ One to ten years\.
 Not supported\.  
 **Internationalized domain names**  
 Supported for French and Spanish\.  
-**Authorization code required for transfer to Amazon Route 53**  
+**Authorization code required for transfer to Route 53**  
 Yes  
 **DNSSEC**  
 Supported for domain registration\. For more information, see [Configuring DNSSEC for a Domain](domain-configure-dnssec.md)\.  
@@ -4678,7 +4663,7 @@ One to ten years\.
 + **Not hidden** – contact name and organization name  
 **Internationalized domain names**  
 Supported for French and Spanish\.  
-**Authorization code required for transfer to Amazon Route 53**  
+**Authorization code required for transfer to Route 53**  
 Yes  
 **DNSSEC**  
 Supported for domain registration\. For more information, see [Configuring DNSSEC for a Domain](domain-configure-dnssec.md)\.  
@@ -4700,7 +4685,7 @@ One to ten years\.
 + **Not hidden** – contact name and organization name  
 **Internationalized domain names**  
 Supported for French and Spanish\.  
-**Authorization code required for transfer to Amazon Route 53**  
+**Authorization code required for transfer to Route 53**  
 Yes  
 **DNSSEC**  
 Supported for domain registration\. For more information, see [Configuring DNSSEC for a Domain](domain-configure-dnssec.md)\.  
@@ -4718,7 +4703,7 @@ One to ten years\.
 + **Not hidden** – contact name and organization name  
 **Internationalized domain names**  
 Not supported\.  
-**Authorization code required for transfer to Amazon Route 53**  
+**Authorization code required for transfer to Route 53**  
 Yes  
 **DNSSEC**  
 Supported for domain registration\. For more information, see [Configuring DNSSEC for a Domain](domain-configure-dnssec.md)\.  
@@ -4733,7 +4718,7 @@ One to ten years\.
 Not supported\.  
 **Internationalized domain names**  
 Supported for Arabic and Latin\.  
-**Authorization code required for transfer to Amazon Route 53**  
+**Authorization code required for transfer to Route 53**  
 Yes  
 **DNSSEC**  
 Supported for domain registration\. For more information, see [Configuring DNSSEC for a Domain](domain-configure-dnssec.md)\.  
@@ -4751,7 +4736,7 @@ One to ten years\.
 + **Not hidden** – contact name and organization name  
 **Internationalized domain names**  
 Supported for French and Spanish\.  
-**Authorization code required for transfer to Amazon Route 53**  
+**Authorization code required for transfer to Route 53**  
 Yes  
 **DNSSEC**  
 Supported for domain registration\. For more information, see [Configuring DNSSEC for a Domain](domain-configure-dnssec.md)\.  
@@ -4769,7 +4754,7 @@ One to ten years\.
 + **Not hidden** – contact name and organization name  
 **Internationalized domain names**  
 Supported\.  
-**Authorization code required for transfer to Amazon Route 53**  
+**Authorization code required for transfer to Route 53**  
 Yes  
 **DNSSEC**  
 Supported for domain registration\. For more information, see [Configuring DNSSEC for a Domain](domain-configure-dnssec.md)\.  
@@ -4787,7 +4772,7 @@ One to ten years\.
 + **Not hidden** – contact name and organization name  
 **Internationalized domain names**  
 Supported for French and Spanish\.  
-**Authorization code required for transfer to Amazon Route 53**  
+**Authorization code required for transfer to Route 53**  
 Yes  
 **DNSSEC**  
 Supported for domain registration\. For more information, see [Configuring DNSSEC for a Domain](domain-configure-dnssec.md)\.  
@@ -4805,7 +4790,7 @@ One to ten years\.
 + **Not hidden** – contact name and organization name  
 **Internationalized domain names**  
 Supported\.  
-**Authorization code required for transfer to Amazon Route 53**  
+**Authorization code required for transfer to Route 53**  
 Yes  
 **DNSSEC**  
 Supported for domain registration\. For more information, see [Configuring DNSSEC for a Domain](domain-configure-dnssec.md)\.  
@@ -4823,7 +4808,7 @@ One to ten years\.
 + **Not hidden** – contact name and organization name  
 **Internationalized domain names**  
 Supported for French and Spanish\.  
-**Authorization code required for transfer to Amazon Route 53**  
+**Authorization code required for transfer to Route 53**  
 Yes  
 **DNSSEC**  
 Supported for domain registration\. For more information, see [Configuring DNSSEC for a Domain](domain-configure-dnssec.md)\.  
@@ -4860,7 +4845,7 @@ Open to the public, with no restrictions\.
 Determined by the registry\.  
 **Internationalized domain names**  
 Supported\.  
-**Authorization code required for transfer to Amazon Route 53**  
+**Authorization code required for transfer to Route 53**  
 Yes  
 **DNSSEC**  
 Supported for domain registration\. For more information, see [Configuring DNSSEC for a Domain](domain-configure-dnssec.md)\.  
@@ -4871,7 +4856,7 @@ The registrar for this TLD is our registrar associate, Gandi\.
 **Registration and renewal period**  
 One year\.  
 **Restrictions**  
-Only second\-level domains are available for the \.za extension\. Amazon Route 53 supports the second\-level domain \.co\.za\.  
+Only second\-level domains are available for the \.za extension\. Route 53 supports the second\-level domain \.co\.za\.  
 Open to the public, with some restrictions:  
 
 + Registration is open to identifiable legal entities \(individuals and legal persons\)\.
@@ -4881,7 +4866,7 @@ Open to the public, with some restrictions:
 Determined by the registry\.  
 **Internationalized domain names**  
 Not supported\.  
-**Authorization code required for transfer to Amazon Route 53**  
+**Authorization code required for transfer to Route 53**  
 No  
 **DNSSEC**  
 Not supported\.  
@@ -4897,7 +4882,7 @@ Open to the public, with no restrictions\.
 Determined by the registry\.  
 **Internationalized domain names**  
 Supported\.  
-**Authorization code required for transfer to Amazon Route 53**  
+**Authorization code required for transfer to Route 53**  
 Yes  
 **DNSSEC**  
 Supported for domain registration\. For more information, see [Configuring DNSSEC for a Domain](domain-configure-dnssec.md)\.  
@@ -4966,7 +4951,7 @@ Open to the public, with some restrictions:
 + **Company, association, or public body** – Not supported\.  
 **Internationalized domain names**  
 Supported\.  
-**Authorization code required for transfer to Amazon Route 53**  
+**Authorization code required for transfer to Route 53**  
 Yes  
 **DNSSEC**  
 Supported for domain registration\. For more information, see [Configuring DNSSEC for a Domain](domain-configure-dnssec.md)\.  
@@ -4976,12 +4961,12 @@ The registrar for this TLD is our registrar associate, Gandi\.
 The registry for \.ca domains doesn't allow you to delete domain registrations\. Instead, you must disable automatic renewal and wait for the domain to expire\. For more information, see [Deleting a Domain Name Registration](domain-delete.md)\.
 
 **\.cl \(Chile\)**  
-You can no longer use Amazon Route 53 to register new \.cl domains or transfer \.cl domains to Amazon Route 53\. We'll continue to support \.cl domains that are already registered with Amazon Route 53\.  
+You can no longer use Route 53 to register new \.cl domains or transfer \.cl domains to Route 53\. We'll continue to support \.cl domains that are already registered with Route 53\.  
 **Renewal period**  
 Two years\.  
 **Privacy protection**  
 Determined by the registry\.  
-**Authorization code required for transfer to Amazon Route 53**  
+**Authorization code required for transfer to Route 53**  
 No  
 **DNSSEC**  
 Not supported\.  
@@ -5000,7 +4985,7 @@ Open to the public, with no restrictions\.
 + **Not hidden** – contact name and organization name  
 **Internationalized domain names**  
 Supported\.  
-**Authorization code required for transfer to Amazon Route 53**  
+**Authorization code required for transfer to Route 53**  
 Yes  
 **DNSSEC**  
 Not supported\.  
@@ -5008,12 +4993,12 @@ Not supported\.
 The registrar for this TLD is our registrar associate, Gandi\.
 
 **\.com\.ar \(Argentina\)**  
-You can no longer use Amazon Route 53 to register new \.com\.ar domains or transfer \.com\.ar domains to Amazon Route 53\. We'll continue to support \.com\.ar domains that are already registered with Amazon Route 53\.  
+You can no longer use Route 53 to register new \.com\.ar domains or transfer \.com\.ar domains to Route 53\. We'll continue to support \.com\.ar domains that are already registered with Route 53\.  
 **Renewal period**  
 One year\.  
 **Privacy protection**  
 Not supported\.  
-**Authorization code required for transfer to Amazon Route 53**  
+**Authorization code required for transfer to Route 53**  
 No  
 **DNSSEC**  
 Not supported\.  
@@ -5021,12 +5006,12 @@ Not supported\.
 The registrar for this TLD is our registrar associate, Gandi\.
 
 **\.com\.br \(Brazil\)**  
-You can no longer use Amazon Route 53 to register new \.com\.br domains or transfer \.com\.br domains to Amazon Route 53\. We'll continue to support \.com\.br domains that are already registered with Amazon Route 53\.  
+You can no longer use Route 53 to register new \.com\.br domains or transfer \.com\.br domains to Route 53\. We'll continue to support \.com\.br domains that are already registered with Route 53\.  
 **Renewal period**  
 One year\.  
 **Privacy protection**  
 Determined by the registry\.  
-**Authorization code required for transfer to Amazon Route 53**  
+**Authorization code required for transfer to Route 53**  
 Yes  
 **DNSSEC**  
 Not supported\.  
@@ -5042,7 +5027,7 @@ Open to the public, with no restrictions\.
 Determined by the registry\.  
 **Internationalized domain names**  
 Not supported\.  
-**Authorization code required for transfer to Amazon Route 53**  
+**Authorization code required for transfer to Route 53**  
 Yes  
 **DNSSEC**  
 Supported for domain registration\. For more information, see [Configuring DNSSEC for a Domain](domain-configure-dnssec.md)\.  
@@ -5058,7 +5043,7 @@ Open to the public, with no restrictions\.
 Determined by the registry\.  
 **Internationalized domain names**  
 Not supported\.  
-**Authorization code required for transfer to Amazon Route 53**  
+**Authorization code required for transfer to Route 53**  
 Yes  
 **DNSSEC**  
 Supported for domain registration\. For more information, see [Configuring DNSSEC for a Domain](domain-configure-dnssec.md)\.  
@@ -5077,7 +5062,7 @@ Open to the public, with one restriction:
 Not supported\.  
 **Internationalized domain names**  
 Not supported\.  
-**Authorization code required for transfer to Amazon Route 53**  
+**Authorization code required for transfer to Route 53**  
 Yes  
 **DNSSEC**  
 Supported for domain registration\. For more information, see [Configuring DNSSEC for a Domain](domain-configure-dnssec.md)\.  
@@ -5097,7 +5082,7 @@ Open to the public, with no restrictions\.
 + **Not hidden** – contact name and organization name  
 **Internationalized domain names**  
 Not supported\.  
-**Authorization code required for transfer to Amazon Route 53**  
+**Authorization code required for transfer to Route 53**  
 Yes  
 **DNSSEC**  
 Not supported\.  
@@ -5114,7 +5099,7 @@ Open to the public, with no restrictions\.
 Not supported\.  
 **Internationalized domain names**  
 Not supported\.  
-**Authorization code required for transfer to Amazon Route 53**  
+**Authorization code required for transfer to Route 53**  
 Yes  
 **DNSSEC**  
 Not supported\.  
@@ -5138,7 +5123,7 @@ Open to the public, with no restrictions\.
 + **Not hidden** – contact name and organization name  
 **Internationalized domain names**  
 Not supported\.  
-**Authorization code required for transfer to Amazon Route 53**  
+**Authorization code required for transfer to Route 53**  
 Yes  
 **DNSSEC**  
 Supported for domain registration\. For more information, see [Configuring DNSSEC for a Domain](domain-configure-dnssec.md)\.  
@@ -5149,7 +5134,7 @@ The registrar for this TLD is our registrar associate, Gandi\.
 **Registration and renewal period**  
 One to ten years\.  
 **Restrictions**  
-Your can register the following second\-level domains with Amazon Route 53: \.co\.nz, \.net\.nz, and \.org\.nz\. You can't register \.nz \(first\-level\) domains with Amazon Route 53 or transfer \.nz domains to Amazon Route 53\.  
+Your can register the following second\-level domains with Route 53: \.co\.nz, \.net\.nz, and \.org\.nz\. You can't register \.nz \(first\-level\) domains with Route 53 or transfer \.nz domains to Route 53\.  
 Open to the public, with some restrictions:  
 
 + Individuals must be at least 18\.
@@ -5159,7 +5144,7 @@ Open to the public, with some restrictions:
 Not supported\.  
 **Internationalized domain names**  
 Supported\.  
-**Authorization code required for transfer to Amazon Route 53**  
+**Authorization code required for transfer to Route 53**  
 Yes  
 **DNSSEC**  
 Not supported\.  
@@ -5168,11 +5153,11 @@ The registrar for this TLD is our registrar associate, Gandi\.
 
 **\.com\.au \(Australia\)**    
 **Confirmation email from the TLD registry**  
-Our registrar partner, Gandi, resells \.com\.au domains through the Australian company TPP Wholesale\. When you transfer a domain name to Amazon Route 53, tppwholesale\.com\.au sends an email to the registrant contact for the domain to verify contact information or to authorize transfer requests\.   
+Our registrar partner, Gandi, resells \.com\.au domains through Tucows\. When you transfer a domain name to Route 53, Tucows sends an email to the registrant contact for the domain to verify contact information or to authorize transfer requests\.   
 **Registration and renewal period**  
 Two years\.  
 **Restrictions**  
-Only second\-level domains are available\. Amazon Route 53 supports the second\-level domains \.com\.au and net\.au\.   
+Only second\-level domains are available\. Route 53 supports the second\-level domains \.com\.au and net\.au\.   
 Open to the public, with some restrictions:  
 
 + The \.com\.au and \.net\.au domains are open to legal persons, partnerships, or sole traders registered in Australia; to foreign companies licensed to trade in Australia; and to owners or applicants of an Australian\-registered trademark\. 
@@ -5192,24 +5177,24 @@ Open to the public, with some restrictions:
 Not supported\.  
 **Internationalized domain names**  
 Not supported\.  
-**Authorization code required for transfer to Amazon Route 53**  
+**Authorization code required for transfer to Route 53**  
 Yes  
 **DNSSEC**  
 Not supported\.  
 **Registrar**  
-The registrar for this TLD is our registrar associate, Gandi\.  
+Our registrar associate, Gandi, uses Tucows as the registrar for this TLD\.  
 **Deletion of domain registration**  
 The registry for \.com\.au domains doesn't allow you to delete domain registrations\. Instead, you must disable automatic renewal and wait for the domain to expire\. For more information, see [Deleting a Domain Name Registration](domain-delete.md)\.
 
 **\.com\.sg \(Republic of Singapore\)**  
-You can no longer use Amazon Route 53 to register new \.com\.sg domains or transfer \.com\.sg domains to Amazon Route 53\. We'll continue to support \.com\.sg domains that are already registered with Amazon Route 53\.  
+You can no longer use Route 53 to register new \.com\.sg domains or transfer \.com\.sg domains to Route 53\. We'll continue to support \.com\.sg domains that are already registered with Route 53\.  
 **Renewal period**  
 One year\.  
 **Deletion of domain registration**  
 The registry for \.com\.sg domains doesn't allow you to delete domain registrations\. Instead, you must disable automatic renewal and wait for the domain to expire\. For more information, see [Deleting a Domain Name Registration](domain-delete.md)\.  
 **Privacy protection**  
 Determined by the registry\.  
-**Authorization code required for transfer to Amazon Route 53**  
+**Authorization code required for transfer to Route 53**  
 Yes  
 **DNSSEC**  
 Not supported\.  
@@ -5229,7 +5214,7 @@ Open to the public, with no restrictions\.
 + **Not hidden** – contact name and organization name  
 **Internationalized domain names**  
 Not supported\.  
-**Authorization code required for transfer to Amazon Route 53**  
+**Authorization code required for transfer to Route 53**  
 Yes  
 **DNSSEC**  
 Not supported\.  
@@ -5245,7 +5230,7 @@ Open to the public, with no restrictions\.
 Not supported\.  
 **Internationalized domain names**  
 Not supported\.  
-**Authorization code required for transfer to Amazon Route 53**  
+**Authorization code required for transfer to Route 53**  
 Yes  
 **DNSSEC**  
 Not supported\.  
@@ -5263,8 +5248,8 @@ Open to the public, with one restriction:
 Determined by the registry\.  
 **Internationalized domain names**  
 Supported for Japanese\.  
-**Authorization code required for transfer to Amazon Route 53**  
-If you're transferring a \.jp domain to Amazon Route 53, you don't need to get an authorization code\. Instead, use the method provided by your current domain registrar to update the value of the AGNT code to **AGNT\-1744**, all uppercase\.   
+**Authorization code required for transfer to Route 53**  
+If you're transferring a \.jp domain to Route 53, you don't need to get an authorization code\. Instead, use the method provided by your current domain registrar to update the value of the AGNT code to **AGNT\-1744**, all uppercase\.   
 **DNSSEC**  
 Not supported\.  
 **Registrar**  
@@ -5280,8 +5265,9 @@ Open to the public, with no restrictions\.
 Determined by the registry\.  
 **Internationalized domain names**  
 Supported\.  
-**Authorization code required for transfer to Amazon Route 53**  
+**Authorization code required for transfer to Route 53**  
 Yes  
+The registry for \.io domains also uses the authorization code as a single\-use password for some operations, such as enabling or disabling privacy protection\. If you want to perform more than one operation that requires a password, you must generate another authorization code for each operation\.  
 **DNSSEC**  
 Supported for domain registration\. For more information, see [Configuring DNSSEC for a Domain](domain-configure-dnssec.md)\.  
 **Registrar**  
@@ -5291,11 +5277,11 @@ The registry for \.io domains doesn't allow you to delete domain registrations\.
 
 **\.net\.au \(Australia\)**    
 **Confirmation email from the TLD registry**  
-Our registrar partner, Gandi, resells \.net\.au domains through the Australian company TPP Wholesale\. When you transfer a domain name to Amazon Route 53, tppwholesale\.com\.au sends an email to the registrant contact for the domain to verify contact information or to authorize transfer requests\.  
+Our registrar partner, Gandi, resells \.net\.au domains through Tucows\. When you transfer a domain name to Route 53, Tucows sends an email to the registrant contact for the domain to verify contact information or to authorize transfer requests\.  
 **Registration and renewal period**  
 Two years\.  
 **Restrictions**  
-Only second\-level domains are available\. Amazon Route 53 supports the second\-level domains \.com\.au and net\.au\.   
+Only second\-level domains are available\. Route 53 supports the second\-level domains \.com\.au and net\.au\.   
 Open to the public, with some restrictions:  
 
 + The \.com\.au and \.net\.au domains are open to legal persons, trading, partnerships, or sole traders registered in Australia; to foreign companies licensed to trade in Australia; and to owners or applicants of an Australian\-registered trademark\. 
@@ -5318,12 +5304,12 @@ Open to the public, with some restrictions:
 + **Not hidden** – contact name and organization name  
 **Internationalized domain names**  
 Not supported\.  
-**Authorization code required for transfer to Amazon Route 53**  
+**Authorization code required for transfer to Route 53**  
 Yes  
 **DNSSEC**  
 Not supported\.  
 **Registrar**  
-The registrar for this TLD is our registrar associate, Gandi\.  
+Our registrar associate, Gandi, uses Tucows as the registrar for this TLD\.  
 **Deletion of domain registration**  
 The registry for \.net\.au domains doesn't allow you to delete domain registrations\. Instead, you must disable automatic renewal and wait for the domain to expire\. For more information, see [Deleting a Domain Name Registration](domain-delete.md)\.
 
@@ -5331,7 +5317,7 @@ The registry for \.net\.au domains doesn't allow you to delete domain registrati
 **Registration and renewal period**  
 One to ten years\.  
 **Restrictions**  
-Your can register the following second\-level domains with Amazon Route 53: \.co\.nz, \.net\.nz, and \.org\.nz\. You can't register \.nz \(first\-level\) domains with Amazon Route 53 or transfer \.nz domains to Amazon Route 53\.  
+Your can register the following second\-level domains with Route 53: \.co\.nz, \.net\.nz, and \.org\.nz\. You can't register \.nz \(first\-level\) domains with Route 53 or transfer \.nz domains to Route 53\.  
 Open to the public, with some restrictions:  
 
 + Individuals must be at least 18\.
@@ -5341,7 +5327,7 @@ Open to the public, with some restrictions:
 Not supported\.  
 **Internationalized domain names**  
 Supported\.  
-**Authorization code required for transfer to Amazon Route 53**  
+**Authorization code required for transfer to Route 53**  
 Yes  
 **DNSSEC**  
 Not supported\.  
@@ -5352,7 +5338,7 @@ The registrar for this TLD is our registrar associate, Gandi\.
 **Registration and renewal period**  
 One to ten years\.  
 **Restrictions**  
-Your can register the following second\-level domains with Amazon Route 53: \.co\.nz, \.net\.nz, and \.org\.nz\. You can't register \.nz \(first\-level\) domains with Amazon Route 53 or transfer \.nz domains to Amazon Route 53\.  
+Your can register the following second\-level domains with Route 53: \.co\.nz, \.net\.nz, and \.org\.nz\. You can't register \.nz \(first\-level\) domains with Route 53 or transfer \.nz domains to Route 53\.  
 Open to the public, with some restrictions:  
 
 + Individuals must be at least 18\.
@@ -5362,7 +5348,7 @@ Open to the public, with some restrictions:
 Not supported\.  
 **Internationalized domain names**  
 Supported\.  
-**Authorization code required for transfer to Amazon Route 53**  
+**Authorization code required for transfer to Route 53**  
 Yes  
 **DNSSEC**  
 Not supported\.  
@@ -5370,12 +5356,12 @@ Not supported\.
 The registrar for this TLD is our registrar associate, Gandi\.
 
 **\.qa \(Qatar\)**  
-You can no longer use Amazon Route 53 to register new \.qa domains or transfer \.qa domains to Amazon Route 53\. We'll continue to support \.qa domains that are already registered with Amazon Route 53\.  
+You can no longer use Route 53 to register new \.qa domains or transfer \.qa domains to Route 53\. We'll continue to support \.qa domains that are already registered with Route 53\.  
 **Renewal period**  
 One to five years\.  
 **Privacy protection**  
 Determined by the registry\.  
-**Authorization code required for transfer to Amazon Route 53**  
+**Authorization code required for transfer to Route 53**  
 Yes  
 **DNSSEC**  
 Not supported\.  
@@ -5383,7 +5369,7 @@ Not supported\.
 The registrar for this TLD is our registrar associate, Gandi\.
 
 **\.ru \(Russian Federation\)**  
-You can no longer use Amazon Route 53 to register new \.ru domains or transfer \.ru domains to Amazon Route 53\. We'll continue to support \.ru domains that are already registered with Amazon Route 53\.  
+You can no longer use Route 53 to register new \.ru domains or transfer \.ru domains to Route 53\. We'll continue to support \.ru domains that are already registered with Route 53\.  
 **Registration and renewal period**  
 One year\.  
 **Restrictions**  
@@ -5396,8 +5382,8 @@ Open to the public, with some restrictions:
 Determined by the registry\.  
 **Internationalized domain names**  
 Not supported\.  
-**Authorization code required for transfer to Amazon Route 53**  
-If you're transferring a \.ru domain to Amazon Route 53, you don't need to get an authorization code\. Instead, use the method provided by RU\-Center, the registry for \.ru domains, to update the **Partner Handle** for the domain to **5427/NIC\-REG**\. For more information, see the [Registrar's or Registrant's Transfer](https://www.nic.ru/dns/docs/en/domain_transf_letters.html) page on the RU\-Center website\.  
+**Authorization code required for transfer to Route 53**  
+If you're transferring a \.ru domain to Route 53, you don't need to get an authorization code\. Instead, use the method provided by RU\-Center, the registry for \.ru domains, to update the **Partner Handle** for the domain to **5427/NIC\-REG**\. For more information, see the [Registrar's or Registrant's Transfer](https://www.nic.ru/dns/docs/en/domain_transf_letters.html) page on the RU\-Center website\.  
 **DNSSEC**  
 Not supported\.  
 **Registrar**  
@@ -5406,12 +5392,12 @@ The registrar for this TLD is our registrar associate, Gandi\.
 The registry for \.ru domains doesn't allow you to delete domain registrations\. Instead, you must disable automatic renewal and wait for the domain to expire\. For more information, see [Deleting a Domain Name Registration](domain-delete.md)\.
 
 **\.sg \(Republic of Singapore\)**  
-You can no longer use Amazon Route 53 to register new \.sg domains or transfer \.sg domains to Amazon Route 53\. We'll continue to support \.sg domains that are already registered with Amazon Route 53\.  
+You can no longer use Route 53 to register new \.sg domains or transfer \.sg domains to Route 53\. We'll continue to support \.sg domains that are already registered with Route 53\.  
 **Renewal period**  
 One year\.  
 **Privacy protection**  
 Determined by the registry\.  
-**Authorization code required for transfer to Amazon Route 53**  
+**Authorization code required for transfer to Route 53**  
 Yes  
 **DNSSEC**  
 Not supported\.  
@@ -5433,7 +5419,7 @@ Open to the public, with no restrictions\.
 Determined by the registry\.  
 **Internationalized domain names**  
 Supported\.  
-**Authorization code required for transfer to Amazon Route 53**  
+**Authorization code required for transfer to Route 53**  
 Yes  
 **DNSSEC**  
 Supported for domain registration\. For more information, see [Configuring DNSSEC for a Domain](domain-configure-dnssec.md)\.  
@@ -5455,7 +5441,7 @@ Open to the public, with some restrictions:
 Not supported\.  
 **Internationalized domain names**  
 Supported for Latin and Cyrillic\.  
-**Authorization code required for transfer to Amazon Route 53**  
+**Authorization code required for transfer to Route 53**  
 Yes  
 **DNSSEC**  
 Not supported\.  
@@ -5471,7 +5457,7 @@ Open to the public, with no restrictions\.
 Determined by the registry\.  
 **Internationalized domain names**  
 Supported\.  
-**Authorization code required for transfer to Amazon Route 53**  
+**Authorization code required for transfer to Route 53**  
 Yes  
 **DNSSEC**  
 Supported for domain registration\. For more information, see [Configuring DNSSEC for a Domain](domain-configure-dnssec.md)\.  
@@ -5495,15 +5481,15 @@ If different registrants have registered the same name with \.co\.uk, \.me\.uk, 
 + The registrant of the \.me\.uk domain
 If you registered a \.co\.uk domain between October 29, 2013 and June 10, 2014, you have priority for registering the corresponding \.uk domain until June 10, 2019 unless someone else registered the corresponding \.org\.uk or \.me\.uk domain on or before October 28, 2013\.  
 For more information, see [\.uk Rights FAQs](https://www.theukdomain.uk/advice/do-i-have-uk-rights/uk-rights-faqs/)\.  
-If you want the \.uk domain for a \.co\.uk, \.me\.uk, or \.org\.uk that you already own, use the Amazon Route 53 console or API, the AWS CLI, or the SDKs to register the \.uk domain as you would any other domain\. If someone else has a higher priority on an existing \.co\.uk, \.me\.uk, or \.org\.uk domain, we'll notify you by email\. The email will contain the following text:   
+If you want the \.uk domain for a \.co\.uk, \.me\.uk, or \.org\.uk that you already own, use the Route 53 console or API, the AWS CLI, or the SDKs to register the \.uk domain as you would any other domain\. If someone else has a higher priority on an existing \.co\.uk, \.me\.uk, or \.org\.uk domain, we'll notify you by email\. The email will contain the following text:   
 `ErrorState at registrar: 2201 : Authorization error (V334 Your request for domain 'domain name' has failed because the 'account name' for the registrant does not fully match any registrant which has rights for this domain)`  
 **Privacy protection**  
 Determined by the registry\.  
 **Internationalized domain names**  
 Not supported\.  
-**Authorization code required for transfer to Amazon Route 53**  
-If you're transferring a \.co\.uk domain to Amazon Route 53, you don't need to get an authorization code\. Instead, use the method provided by your current domain registrar to update the value of the IPS tag for the domain to **GANDI**, all uppercase\. \(An IPS tag is required by Nominet, the registry for \.uk domain names\.\) If your registrar will not change the value of the IPS tag, [contact Nominet](http://www.nominet.org.uk/uk-domain-names/manage-your-domain/change-registrar)\.  
-When you register a \.co\.uk domain, Amazon Route 53 automatically sets the IPS tag for the domain to **GANDI**\.  
+**Authorization code required for transfer to Route 53**  
+If you're transferring a \.co\.uk domain to Route 53, you don't need to get an authorization code\. Instead, use the method provided by your current domain registrar to update the value of the IPS tag for the domain to **GANDI**, all uppercase\. \(An IPS tag is required by Nominet, the registry for \.uk domain names\.\) If your registrar will not change the value of the IPS tag, [contact Nominet](http://www.nominet.org.uk/uk-domain-names/manage-your-domain/change-registrar)\.  
+When you register a \.co\.uk domain, Route 53 automatically sets the IPS tag for the domain to **GANDI**\.  
 **DNSSEC**  
 Supported for domain registration\. For more information, see [Configuring DNSSEC for a Domain](domain-configure-dnssec.md)\.  
 **Registrar**  
@@ -5524,7 +5510,7 @@ Open to the public, with some restrictions:
 Determined by the registry\.  
 **Internationalized domain names**  
 Supported\.  
-**Authorization code required for transfer to Amazon Route 53**  
+**Authorization code required for transfer to Route 53**  
 Yes  
 **DNSSEC**  
 Supported for domain registration\. For more information, see [Configuring DNSSEC for a Domain](domain-configure-dnssec.md)\.  
@@ -5533,7 +5519,7 @@ The registrar for this TLD is our registrar associate, Gandi\.
 
 **\.es \(Spain\) **    
 **Domain purchase or transfer**  
-You currently can purchase new \.es domain names or transfer \.es domains to Amazon Route 53 if the contact type for the registrant contact is **Person**\. You can't purchase or transfer \.es domains if the contact type for the registrant contact is **Company**, **Association**, or **Public Body**\.  
+You currently can purchase new \.es domain names or transfer \.es domains to Route 53 if the contact type for the registrant contact is **Person**\. You can't purchase or transfer \.es domains if the contact type for the registrant contact is **Company**, **Association**, or **Public Body**\.  
 **Registration and renewal period**  
 One to five years\.  
 **Restrictions**  
@@ -5542,7 +5528,7 @@ Open to the public, for those who have an interest in or connection with Spain\.
 Determined by the registry\.  
 **Internationalized domain names**  
 Supported\.  
-**Authorization code required for transfer to Amazon Route 53**  
+**Authorization code required for transfer to Route 53**  
 No  
 **DNSSEC**  
 Supported for domain registration\. For more information, see [Configuring DNSSEC for a Domain](domain-configure-dnssec.md)\.  
@@ -5560,7 +5546,7 @@ Open to the public, with one restriction:
 Determined by the registry\.  
 **Internationalized domain names**  
 Supported\.  
-**Authorization code required for transfer to Amazon Route 53**  
+**Authorization code required for transfer to Route 53**  
 Yes  
 **DNSSEC**  
 Supported for domain registration\. For more information, see [Configuring DNSSEC for a Domain](domain-configure-dnssec.md)\.  
@@ -5590,7 +5576,7 @@ Open to the public, with some restrictions:
 Determined by the registry\.  
 **Internationalized domain names**  
 Supported\.  
-**Authorization code required for transfer to Amazon Route 53**  
+**Authorization code required for transfer to Route 53**  
 Yes  
 **DNSSEC**  
 Not supported\.  
@@ -5622,7 +5608,7 @@ Open to the public, with some restrictions:
 Determined by the registry\.  
 **Internationalized domain names**  
 Supported\.  
-**Authorization code required for transfer to Amazon Route 53**  
+**Authorization code required for transfer to Route 53**  
 Yes  
 **DNSSEC**  
 Supported for domain registration\. For more information, see [Configuring DNSSEC for a Domain](domain-configure-dnssec.md)\.  
@@ -5638,7 +5624,7 @@ Open to the public, with no restrictions\.
 Determined by the registry\.  
 **Internationalized domain names**  
 Supported\.  
-**Authorization code required for transfer to Amazon Route 53**  
+**Authorization code required for transfer to Route 53**  
 Yes  
 **DNSSEC**  
 Not supported\.  
@@ -5655,7 +5641,7 @@ Open to the public, with no restrictions\.
 Determined by the registry\.  
 **Internationalized domain names**  
 Not supported\.  
-**Authorization code required for transfer to Amazon Route 53**  
+**Authorization code required for transfer to Route 53**  
 Yes  
 **DNSSEC**  
 Not supported\.  
@@ -5679,7 +5665,7 @@ Open to the public, with some restrictions:
 Determined by the registry\.  
 **Internationalized domain names**  
 Supported\.  
-**Authorization code required for transfer to Amazon Route 53**  
+**Authorization code required for transfer to Route 53**  
 Yes  
 **DNSSEC**  
 Not supported\.  
@@ -5690,7 +5676,7 @@ The registrar for this TLD is our registrar associate, Gandi\.
 **Registration and renewal period**  
 One to ten years\.  
 **Restrictions**  
-Domain names that are at least three letters long \(such as aaa\.me\) are generally open to the public\. Domain\.me, the registry for \.me domains, considers two\-letter domain names and some longer domain names to be premium domain names\. You can't register premium \.me domains with or transfer them to Amazon Route 53\. For more information about premium \.me domain names, see the [domain\.me](https://domain.me/) website\.  
+Domain names that are at least three letters long \(such as aaa\.me\) are generally open to the public\. Domain\.me, the registry for \.me domains, considers two\-letter domain names and some longer domain names to be premium domain names\. You can't register premium \.me domains with or transfer them to Route 53\. For more information about premium \.me domain names, see the [domain\.me](https://domain.me/) website\.  
 **Privacy protection \(applies to all contact types: person, company, association, and public body\)**  
 
 + **Hidden** – address, phone number, fax number, and email address
@@ -5698,7 +5684,7 @@ Domain names that are at least three letters long \(such as aaa\.me\) are genera
 + **Not hidden** – contact name and organization name  
 **Internationalized domain names**  
 Not supported\.  
-**Authorization code required for transfer to Amazon Route 53**  
+**Authorization code required for transfer to Route 53**  
 Yes  
 **DNSSEC**  
 Supported for domain registration\. For more information, see [Configuring DNSSEC for a Domain](domain-configure-dnssec.md)\.  
@@ -5722,15 +5708,15 @@ If different registrants have registered the same name with \.co\.uk, \.me\.uk, 
 + The registrant of the \.me\.uk domain
 If you registered a \.co\.uk domain between October 29, 2013 and June 10, 2014, you have priority for registering the corresponding \.uk domain until June 10, 2019 unless someone else registered the corresponding \.org\.uk or \.me\.uk domain on or before October 28, 2013\.  
 For more information, see [\.uk Rights FAQs](https://www.theukdomain.uk/advice/do-i-have-uk-rights/uk-rights-faqs/)\.  
-If you want the \.uk domain for a \.co\.uk, \.me\.uk, or \.org\.uk that you already own, use the Amazon Route 53 console or API, the AWS CLI, or the SDKs to register the \.uk domain as you would any other domain\. If someone else has a higher priority on an existing \.co\.uk, \.me\.uk, or \.org\.uk domain, we'll notify you by email\. The email will contain the following text:   
+If you want the \.uk domain for a \.co\.uk, \.me\.uk, or \.org\.uk that you already own, use the Route 53 console or API, the AWS CLI, or the SDKs to register the \.uk domain as you would any other domain\. If someone else has a higher priority on an existing \.co\.uk, \.me\.uk, or \.org\.uk domain, we'll notify you by email\. The email will contain the following text:   
 `ErrorState at registrar: 2201 : Authorization error (V334 Your request for domain 'domain name' has failed because the 'account name' for the registrant does not fully match any registrant which has rights for this domain)`  
 **Privacy protection**  
 Determined by the registry\.  
 **Internationalized domain names**  
 Not supported\.  
-**Authorization code required for transfer to Amazon Route 53**  
-If you're transferring a \.me\.uk domain to Amazon Route 53, you don't need to get an authorization code\. Instead, use the method provided by your current domain registrar to update the value of the IPS tag for the domain to **GANDI**, all uppercase\. \(An IPS tag is required by Nominet, the registry for \.uk domain names\.\) If your registrar will not change the value of the IPS tag, [contact Nominet](http://www.nominet.org.uk/uk-domain-names/manage-your-domain/change-registrar)\.  
-When you register a \.me\.uk domain, Amazon Route 53 automatically sets the IPS tag for the domain to **GANDI**\.  
+**Authorization code required for transfer to Route 53**  
+If you're transferring a \.me\.uk domain to Route 53, you don't need to get an authorization code\. Instead, use the method provided by your current domain registrar to update the value of the IPS tag for the domain to **GANDI**, all uppercase\. \(An IPS tag is required by Nominet, the registry for \.uk domain names\.\) If your registrar will not change the value of the IPS tag, [contact Nominet](http://www.nominet.org.uk/uk-domain-names/manage-your-domain/change-registrar)\.  
+When you register a \.me\.uk domain, Route 53 automatically sets the IPS tag for the domain to **GANDI**\.  
 **DNSSEC**  
 Supported for domain registration\. For more information, see [Configuring DNSSEC for a Domain](domain-configure-dnssec.md)\.  
 **Registrar**  
@@ -5751,7 +5737,7 @@ Open to the public, with some restrictions:
 Determined by the registry\.  
 **Internationalized domain names**  
 Not supported\.  
-**Authorization code required for transfer to Amazon Route 53**  
+**Authorization code required for transfer to Route 53**  
 Yes  
 **DNSSEC**  
 Supported for domain registration\. For more information, see [Configuring DNSSEC for a Domain](domain-configure-dnssec.md)\.  
@@ -5775,15 +5761,15 @@ If different registrants have registered the same name with \.co\.uk, \.me\.uk, 
 + The registrant of the \.me\.uk domain
 If you registered a \.co\.uk domain between October 29, 2013 and June 10, 2014, you have priority for registering the corresponding \.uk domain until June 10, 2019 unless someone else registered the corresponding \.org\.uk or \.me\.uk domain on or before October 28, 2013\.  
 For more information, see [\.uk Rights FAQs](https://www.theukdomain.uk/advice/do-i-have-uk-rights/uk-rights-faqs/)\.  
-If you want the \.uk domain for a \.co\.uk, \.me\.uk, or \.org\.uk that you already own, use the Amazon Route 53 console or API, the AWS CLI, or the SDKs to register the \.uk domain as you would any other domain\. If someone else has a higher priority on an existing \.co\.uk, \.me\.uk, or \.org\.uk domain, we'll notify you by email\. The email will contain the following text:   
+If you want the \.uk domain for a \.co\.uk, \.me\.uk, or \.org\.uk that you already own, use the Route 53 console or API, the AWS CLI, or the SDKs to register the \.uk domain as you would any other domain\. If someone else has a higher priority on an existing \.co\.uk, \.me\.uk, or \.org\.uk domain, we'll notify you by email\. The email will contain the following text:   
 `ErrorState at registrar: 2201 : Authorization error (V334 Your request for domain 'domain name' has failed because the 'account name' for the registrant does not fully match any registrant which has rights for this domain)`  
 **Privacy protection**  
 Determined by the registry\.  
 **Internationalized domain names**  
 Not supported\.  
-**Authorization code required for transfer to Amazon Route 53**  
-If you're transferring a \.org\.uk domain to Amazon Route 53, you don't need to get an authorization code\. Instead, use the method provided by your current domain registrar to update the value of the IPS tag for the domain to **GANDI**, all uppercase\. \(An IPS tag is required by Nominet, the registry for \.uk domain names\.\) If your registrar will not change the value of the IPS tag, [contact Nominet](http://www.nominet.org.uk/uk-domain-names/manage-your-domain/change-registrar)\.  
-When you register a \.org\.uk domain, Amazon Route 53 automatically sets the IPS tag for the domain to **GANDI**\.  
+**Authorization code required for transfer to Route 53**  
+If you're transferring a \.org\.uk domain to Route 53, you don't need to get an authorization code\. Instead, use the method provided by your current domain registrar to update the value of the IPS tag for the domain to **GANDI**, all uppercase\. \(An IPS tag is required by Nominet, the registry for \.uk domain names\.\) If your registrar will not change the value of the IPS tag, [contact Nominet](http://www.nominet.org.uk/uk-domain-names/manage-your-domain/change-registrar)\.  
+When you register a \.org\.uk domain, Route 53 automatically sets the IPS tag for the domain to **GANDI**\.  
 **DNSSEC**  
 Supported for domain registration\. For more information, see [Configuring DNSSEC for a Domain](domain-configure-dnssec.md)\.  
 **Registrar**  
@@ -5803,7 +5789,7 @@ Open to the public, with one restriction:
 Not supported\.  
 **Internationalized domain names**  
 Supported \(ä, ö, ü, ß\)\.  
-**Authorization code required for transfer to Amazon Route 53**  
+**Authorization code required for transfer to Route 53**  
 Yes  
 **DNSSEC**  
 Not supported\.  
@@ -5823,7 +5809,7 @@ Open to the public, with some restrictions:
 Determined by the registry\.  
 **Internationalized domain names**  
 Supported for Latin, Swedish, and Yiddish\.  
-**Authorization code required for transfer to Amazon Route 53**  
+**Authorization code required for transfer to Route 53**  
 Yes  
 **DNSSEC**  
 Supported for domain registration\. For more information, see [Configuring DNSSEC for a Domain](domain-configure-dnssec.md)\.  
@@ -5845,15 +5831,15 @@ If different registrants have registered the same name with \.co\.uk, \.me\.uk, 
 + The registrant of the \.org\.uk domain
 
 + The registrant of the \.me\.uk domain
-If you want the \.uk domain for a \.co\.uk, \.me\.uk, or \.org\.uk that you already own, use the Amazon Route 53 console or API, the AWS CLI, or the SDKs to register the \.uk domain as you would any other domain\. If someone else has a higher priority on an existing \.co\.uk, \.me\.uk, or \.org\.uk domain, we'll notify you by email\. The email will contain the following text:   
+If you want the \.uk domain for a \.co\.uk, \.me\.uk, or \.org\.uk that you already own, use the Route 53 console or API, the AWS CLI, or the SDKs to register the \.uk domain as you would any other domain\. If someone else has a higher priority on an existing \.co\.uk, \.me\.uk, or \.org\.uk domain, we'll notify you by email\. The email will contain the following text:   
 `ErrorState at registrar: 2201 : Authorization error (V334 Your request for domain 'domain name' has failed because the 'account name' for the registrant does not fully match any registrant which has rights for this domain)`  
 **Privacy protection**  
 Determined by the registry\.  
 **Internationalized domain names**  
 Not supported\.  
-**Authorization code required for transfer to Amazon Route 53**  
-If you're transferring a uk domain to Amazon Route 53, you don't need to get an authorization code\. Instead, use the method provided by your current domain registrar to update the value of the IPS tag for the domain to **GANDI**, all uppercase\. \(An IPS tag is required by Nominet, the registry for \.uk domain names\.\) If your registrar will not change the value of the IPS tag, [contact Nominet](http://www.nominet.org.uk/uk-domain-names/manage-your-domain/change-registrar)\.  
-When you register a \.uk domain, Amazon Route 53 automatically sets the IPS tag for the domain to **GANDI**\.  
+**Authorization code required for transfer to Route 53**  
+If you're transferring a uk domain to Route 53, you don't need to get an authorization code\. Instead, use the method provided by your current domain registrar to update the value of the IPS tag for the domain to **GANDI**, all uppercase\. \(An IPS tag is required by Nominet, the registry for \.uk domain names\.\) If your registrar will not change the value of the IPS tag, [contact Nominet](http://www.nominet.org.uk/uk-domain-names/manage-your-domain/change-registrar)\.  
+When you register a \.uk domain, Route 53 automatically sets the IPS tag for the domain to **GANDI**\.  
 **DNSSEC**  
 Supported for domain registration\. For more information, see [Configuring DNSSEC for a Domain](domain-configure-dnssec.md)\.  
 **Registrar**  
@@ -5874,7 +5860,7 @@ Open to the public, with some restrictions:
 Not supported\.  
 **Internationalized domain names**  
 Supported for Latin\.  
-**Authorization code required for transfer to Amazon Route 53**  
+**Authorization code required for transfer to Route 53**  
 Yes  
 **DNSSEC**  
 Not supported\.  

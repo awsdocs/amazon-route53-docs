@@ -5,7 +5,7 @@ Attackers sometimes hijack traffic to internet endpoints such as web servers by 
 You can protect your domain from this type of attack, known as DNS spoofing or a man\-in\-the\-middle attack, by configuring Domain Name System Security Extensions \(DNSSEC\), a protocol for securing DNS traffic\. 
 
 **Important**  
-Amazon Route 53 supports DNSSEC for domain registration but does not support DNSSEC for DNS service\. If you want to configure DNSSEC for a domain that is registered with Amazon Route 53, you must use another DNS service provider\.
+Amazon Route 53 supports DNSSEC for domain registration\. However, Route 53 does not support DNSSEC for DNS service, regardless of whether the domain is registered with Route 53\. If you want to configure DNSSEC for a domain that is registered with Route 53, you must use another DNS service provider\.
 
 
 + [Overview of How DNSSEC Protects Your Domain](#domain-configure-dnssec-how-it-works)
@@ -19,13 +19,13 @@ When you configure DNSSEC for your domain, a DNS resolver establishes a chain of
 
 Here's how you configure DNSSEC for domains registered with Amazon Route 53 to protect your internet hosts from DNS spoofing, simplified for clarity:
 
-1. Use the method provided by your DNS service provider to *sign* the resource record sets in your hosted zone with the *private key* in an asymmetric key pair\.
+1. Use the method provided by your DNS service provider to *sign* the records in your hosted zone with the *private key* in an asymmetric key pair\.
 **Important**  
-Amazon Route 53 supports DNSSEC for domain registration but does not support DNSSEC for DNS service\. If you want to configure DNSSEC for a domain that is registered with Amazon Route 53, you must use another DNS service provider\.
+Route 53 supports DNSSEC for domain registration but does not support DNSSEC for DNS service\. If you want to configure DNSSEC for a domain that is registered with Route 53, you must use another DNS service provider\.
 
 1. Provide the *public key* from the key pair to your domain registrar, and specify the algorithm that was used to generate the key pair\. The domain registrar forwards the public key and the algorithm to the registry for the top\-level domain \(TLD\)\.
 
-   For information about how to perform this step for domains that you registered with Amazon Route 53, see [Adding Public Keys for a Domain](#domain-configure-dnssec-adding-keys)\.
+   For information about how to perform this step for domains that you registered with Route 53, see [Adding Public Keys for a Domain](#domain-configure-dnssec-adding-keys)\.
 
 After you configure DNSSEC, here's how it protects your domain from DNS spoofing:
 
@@ -37,15 +37,15 @@ After you configure DNSSEC, here's how it protects your domain from DNS spoofing
 
    If the IP address isn't cached on the DNS resolver, the resolver sends a request to the parent zone for your domain, at the TLD registry, which returns two values:
 
-   + The Delegation Signer \(DS\) record, which is a public key that corresponds with the private key that was used to sign the resource record set\.
+   + The Delegation Signer \(DS\) record, which is a public key that corresponds with the private key that was used to sign the record\.
 
    + The IP addresses of the authoritative name servers for your domain\.
 
 1. The DNS resolver sends the original request to another DNS resolver\. If that resolver doesn't have the IP address, it repeats the process until a resolver sends the request to a name server at your DNS service provider\. The name server returns two values:
 
-   + The resource record set for the domain, such as example\.com\. Typically this contains the IP address of a host\.
+   + The record for the domain, such as example\.com\. Typically this contains the IP address of a host\.
 
-   + The signature for the resource record set, which you created when you configured DNSSEC\.
+   + The signature for the record, which you created when you configured DNSSEC\.
 
 1. The DNS resolver uses the public key that you provided to the domain registrar \(and the registrar forwarded to the TLD registry\) to do to things:
 
@@ -67,9 +67,9 @@ To configure DNSSEC for a domain, your domain and DNS service provider must meet
 
 + The DNS service provider for the domain must support DNSSEC\.
 **Important**  
-Amazon Route 53 supports DNSSEC for domain registration but does not support DNSSEC for DNS service\. If you want to configure DNSSEC for a domain that is registered with Amazon Route 53, you must use another DNS service provider\.
+Route 53 supports DNSSEC for domain registration but does not support DNSSEC for DNS service\. If you want to configure DNSSEC for a domain that is registered with Route 53, you must use another DNS service provider\.
 
-+ You must configure DNSSEC with the DNS service provider for your domain before you add public keys for the domain to Amazon Route 53\.
++ You must configure DNSSEC with the DNS service provider for your domain before you add public keys for the domain to Route 53\.
 
 + The number of public keys that you can add to a domain depends on the TLD for the domain:
 
@@ -85,7 +85,7 @@ When you're rotating keys or you're enabling DNSSEC for a domain, perform the fo
 
 1. If you haven't already configured DNSSEC with your DNS service provider, use the method provided by your service provider to configure DNSSEC\.
 
-1. Sign in to the AWS Management Console and open the Amazon Route 53 console at [https://console\.aws\.amazon\.com/route53/](https://console.aws.amazon.com/route53/)\.
+1. Sign in to the AWS Management Console and open the Route 53 console at [https://console\.aws\.amazon\.com/route53/](https://console.aws.amazon.com/route53/)\.
 
 1. In the navigation pane, choose **Registered domains**\.
 
@@ -97,15 +97,15 @@ When you're rotating keys or you're enabling DNSSEC for a domain, perform the fo
 **Key type**  
 Choose whether you want to upload a key\-signing key \(KSK\) or a zone\-signing key \(ZSK\)\.  
 **Algorithm**  
-Choose the algorithm that you used to sign the resource record sets for the hosted zone\.  
+Choose the algorithm that you used to sign the records for the hosted zone\.  
 **Public key**  
 Specify the public key from the asymmetric key pair that you used to configure DNSSEC with your DNS service provider\.
 
 1. Choose **Add**\.
 **Note**  
-You can only add one public key at a time\. If you need to add more keys, wait until you receive a confirmation email from Amazon Route 53\.
+You can only add one public key at a time\. If you need to add more keys, wait until you receive a confirmation email from Route 53\.
 
-1. When Amazon Route 53 receives a response from the registry, we send an email to the registrant contact for the domain\. The email either confirms that the public key has been added to the domain at the registry or explains why the key couldn't be added\.
+1. When Route 53 receives a response from the registry, we send an email to the registrant contact for the domain\. The email either confirms that the public key has been added to the domain at the registry or explains why the key couldn't be added\.
 
 ## Deleting Public Keys for a Domain<a name="domain-configure-dnssec-deleting-keys"></a>
 
@@ -120,7 +120,7 @@ If DNSSEC is enabled for the domain and you disable DNSSEC with the DNS service,
 
 **To delete public keys for a domain**
 
-1. Sign in to the AWS Management Console and open the Amazon Route 53 console at [https://console\.aws\.amazon\.com/route53/](https://console.aws.amazon.com/route53/)\.
+1. Sign in to the AWS Management Console and open the Route 53 console at [https://console\.aws\.amazon\.com/route53/](https://console.aws.amazon.com/route53/)\.
 
 1. In the navigation pane, choose **Registered domains**\.
 
@@ -132,4 +132,4 @@ If DNSSEC is enabled for the domain and you disable DNSSEC with the DNS service,
 **Note**  
 You can only delete one public key at a time\. If you need to delete more keys, wait until you receive a confirmation email from Amazon Route 53\.
 
-1. When Amazon Route 53 receives a response from the registry, we send an email to the registrant contact for the domain\. The email either confirms that the public key has been deleted from the domain at the registry or explains why the key couldn't be deleted\.
+1. When Route 53 receives a response from the registry, we send an email to the registrant contact for the domain\. The email either confirms that the public key has been deleted from the domain at the registry or explains why the key couldn't be deleted\.

@@ -1,6 +1,6 @@
 # Extending the Registration Period for a Domain<a name="domain-extend"></a>
 
-When you register a domain with Amazon Route 53 or you transfer domain registration to Amazon Route 53, we configure the domain to renew automatically\. The automatic renewal period is typically one year, although the registries for some top\-level domains \(TLDs\) have longer renewal periods\. 
+When you register a domain with Amazon Route 53 or you transfer domain registration to Route 53, we configure the domain to renew automatically\. The automatic renewal period is typically one year, although the registries for some top\-level domains \(TLDs\) have longer renewal periods\. 
 
 All generic TLDs and many country\-code TLDs let you extend domain registration for longer periods, typically up to ten years in one\-year increments\. To determine whether you can extend the registration period for your domain, see [Domains That You Can Register with Amazon Route 53](registrar-tld-list.md)\. If longer registration periods are allowed, perform the following procedure\.
 
@@ -11,7 +11,7 @@ Note that you can't use AWS credits to pay the fee for extending the registratio
 
 **To extend the registration period for your domain**
 
-1. Open the Amazon Route 53 console at [https://console\.aws\.amazon\.com/route53/](https://console.aws.amazon.com/route53/)\.
+1. Open the Route 53 console at [https://console\.aws\.amazon\.com/route53/](https://console.aws.amazon.com/route53/)\.
 
 1. In the navigation pane, choose **Registered Domains**\.
 

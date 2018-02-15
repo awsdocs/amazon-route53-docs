@@ -9,7 +9,7 @@ If you delete a domain name registration before the registration was scheduled t
 
 **To delete a domain name registration**
 
-1. Sign in to the AWS Management Console and open the Amazon Route 53 console at [https://console\.aws\.amazon\.com/route53/](https://console.aws.amazon.com/route53/)\.
+1. Sign in to the AWS Management Console and open the Route 53 console at [https://console\.aws\.amazon\.com/route53/](https://console.aws.amazon.com/route53/)\.
 
 1. In the navigation pane, choose **Registered Domains**\.
 
@@ -30,3 +30,11 @@ If you delete a domain name registration before the registration was scheduled t
 The registrant contact must follow the instructions in the email, or we must cancel the deletion request as required by ICANN\.
 
    You'll receive another email when your domain has been deleted\. To determine the current status of your request, see [Viewing the Status of a Domain Registration](domain-view-status.md)\.
+
+1. Delete the records in the hosted zone for the deleted domain, and then delete the hosted zone\. After you delete the hosted zone, Route 53 will stop billing you the monthly charge for a hosted zone\. For more information, see the following documentation:
+
+   + [Deleting Records](resource-record-sets-deleting.md)
+
+   + [Deleting a Public Hosted Zone](DeleteHostedZone.md)
+
+   + [Route 53 Pricing](https://aws.amazon.com/route53/pricing)

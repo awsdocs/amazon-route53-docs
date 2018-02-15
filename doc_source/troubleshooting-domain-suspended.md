@@ -2,7 +2,7 @@
 
 If Amazon Route 53 suspends your domain, the domain becomes unavailable on the internet\. You can use either of the following methods to determine whether a domain has been suspended:
 
-+ On the **Registered domains** page of the Amazon Route 53 console, find the domain name in the **Alerts** table at the bottom of the page\. If the value of the **Status** column is **clientHold**, the domain has been suspended\.
++ On the **Registered domains** page of the Route 53 console, find the domain name in the **Alerts** table at the bottom of the page\. If the value of the **Status** column is **clientHold**, the domain has been suspended\.
 
 + Send a WHOIS query for the domain\. If the value of **Domain Status** is **clientHold**, the domain has been suspended\. The WHOIS command is available in many operating systems, and it's also available as a web application on many websites\.
 
@@ -19,7 +19,7 @@ To make a domain available on the internet again, you must get it unsuspended\. 
 
 ## You registered a new domain, but you didn't click the link in the confirmation email<a name="troubleshooting-domain-suspended-click-link"></a>
 
-When you register a domain with AWS, ICANN requires that we get confirmation that the email address for the registrant contact is valid\. To get confirmation, we send an email that contains a link\. You have between 3 and 15 days to click the link, depending on the top\-level domain\. After that time, the link stops working\.
+When you register a domain with AWS for the first time, ICANN requires that we get confirmation that the email address for the registrant contact is valid\. To get confirmation, we send an email that contains a link\. You have between 3 and 15 days to click the link, depending on the top\-level domain\. After that time, the link stops working\.
 
 **Note**  
 If you don't respond to the first email, we resend the email up to two more times\. If you have already registered one or more domains with Amazon Route 53 and used the same email address for the registrant contact, we don't send a confirmation email\. 

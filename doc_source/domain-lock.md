@@ -4,7 +4,7 @@ If you want to prevent someone from transferring your domain to another registra
 
 **To lock a domain to prevent unauthorized transfer to another registrar**
 
-1. Sign in to the AWS Management Console and open the Amazon Route 53 console at [https://console\.aws\.amazon\.com/route53/](https://console.aws.amazon.com/route53/)\.
+1. Sign in to the AWS Management Console and open the Route 53 console at [https://console\.aws\.amazon\.com/route53/](https://console.aws.amazon.com/route53/)\.
 
 1. In the navigation pane, choose **Registered Domains**\.
 

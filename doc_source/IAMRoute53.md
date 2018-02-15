@@ -10,7 +10,7 @@ Amazon Route 53 integrates with AWS Identity and Access Management \(IAM\), a s
 
 + Granularly control user access to services and resources
 
-For example, you can use IAM with Amazon Route 53 to control which users in your AWS account can create a new hosted zone or change resource record sets\.
+For example, you can use IAM with Route 53 to control which users in your AWS account can create a new hosted zone or change records\.
 
 For general information about IAM, see the following:
 

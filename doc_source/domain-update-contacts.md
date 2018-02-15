@@ -28,7 +28,7 @@ To update contact information for a domain, perform the following procedure\.
 
 **To update contact information for a domain**
 
-1. Sign in to the AWS Management Console and open the Amazon Route 53 console at [https://console\.aws\.amazon\.com/route53/](https://console.aws.amazon.com/route53/)\.
+1. Sign in to the AWS Management Console and open the Route 53 console at [https://console\.aws\.amazon\.com/route53/](https://console.aws.amazon.com/route53/)\.
 
 1. In the navigation pane, choose **Registered Domains**\.
 
@@ -114,15 +114,17 @@ Specify a contact method and enter the applicable values\.
 When you change the email address for the registrant contact for a domain, the registries for some TLDs require us to get authorization from the registrant contact at the old email address and at the new email address\. If you receive an authorization email at the new email address, your TLD requires us to get authorization from both email addresses\. If you no longer have access to the old email address, perform the following procedure\.
 
 **Note**  
-You can use this procedure only if the domain is already registered with Amazon Route 53\. If you're transferring a domain to Amazon Route 53 and you can't access email at the email address for the registrant contact, you must work with the current registrar to update the email address\.
+You can use this procedure only if the domain is already registered with Route 53\. If you're transferring a domain to Route 53 and you can't access email at the email address for the registrant contact, you must work with the current registrar to update the email address\.
 
 ****
 
-1. Download the [Change of Registrant Email Form](https://s3.amazonaws.com/AWSCS_CustomerForms/AmazonRegistrarChangeOfRegistrantEmailForm.pdf)\.
+1. Download the [Change of Registrant Email Form](https://s3.amazonaws.com/AWSCS_CustomerForms/AmazonRegistrarChangeOfRegistrantEmailForm.pdf)\. 
 
 1. Fill out the form\.
 
-1. If a legal entity is listed as the registrant name or organization, gather the following information:
+1. Have a copy of your personal signed proof of identity available: an identity card, a driver's license, a passport, or another legal proof of identity\. The name on the document must exactly match the name of the current registrant contact for the domain\.
+
+   If the value of **Contact type** is a value other than **Person** and if the organization is a legal entity, gather the following information:
 
    + Proof that the organization that the domain is registered to exists\.
 
@@ -130,7 +132,7 @@ You can use this procedure only if the domain is already registered with Amazon 
 
 1. Scan the Change of Registrant Email form and the required proof, if applicable\. Save the scanned documents in a common format, such as a \.pdf file or a \.png file\.
 
-1. Using the AWS account that the domain is currently registered to, sign in to the [AWS Support Center](https://console.aws.amazon.com/support/home?region=us-east-1#/case/create?issueType=customer-service&serviceCode=billing&categoryCode=domain-name-registration-issue)\.
+1. Using the AWS account that the domain is currently registered to, sign in to the [AWS Support Center](https://console.aws.amazon.com/support/home?region=us-east-1#/case/create?issueType=customer-service&serviceCode=billing&categoryCode=domain-name-registration-issue)\. 
 **Important**  
 You must sign in by using the root account that the domain is currently registered to\. If you sign in by using an IAM user or any other account, we can't update the email address\. This requirement prevents unauthorized users from changing the contact information for a domain\.
 

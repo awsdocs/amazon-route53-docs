@@ -17,9 +17,9 @@ If you don't click the link in the email in the allotted amount of time, ICANN r
 
 ## You transferred domain registration to Amazon Route 53, but you didn't transfer DNS service<a name="troubleshooting-domain-unavailable-transferred-domain-not-dns"></a>
 
-If your previous registrar offered free DNS service with domain registration, the registrar might have stopped providing DNS service when you transferred domain registration to Amazon Route 53\. Perform the following procedure to determine whether this is the problem and, if so, to resolve it\.
+If your previous registrar offered free DNS service with domain registration, the registrar might have stopped providing DNS service when you transferred domain registration to Route 53\. Perform the following procedure to determine whether this is the problem and, if so, to resolve it\.
 
-**To restore DNS service if your previous registrar canceled it after you transferred domain registration to Amazon Route 53**
+**To restore DNS service if your previous registrar canceled it after you transferred domain registration to Route 53**
 
 1. Contact your previous registrar and confirm that they canceled DNS service for your domain\. If so, here are the three quickest ways to restore DNS service for the domain, in order of desirability:
 
@@ -31,19 +31,19 @@ If your previous registrar offered free DNS service with domain registration, th
 
    If your previous registrar can't help with any of these options, continue with step 2\.
 **Important**  
-If you can't restore DNS service using the name servers that you specified when you transferred your domain to Amazon Route 53, it can take up to two days after you complete the remaining steps in this procedure for your domain to become available again on the internet\. DNS resolvers typically cache the names of the name servers for a domain for 24 to 48 hours, and it will take that long before all DNS resolvers get the names of the new name servers\.
+If you can't restore DNS service using the name servers that you specified when you transferred your domain to Route 53, it can take up to two days after you complete the remaining steps in this procedure for your domain to become available again on the internet\. DNS resolvers typically cache the names of the name servers for a domain for 24 to 48 hours, and it will take that long before all DNS resolvers get the names of the new name servers\.
 
-1. Choose a new DNS service, for example, Amazon Route 53\.
+1. Choose a new DNS service, for example, Route 53\.
 
-1. Using the method provided by the new DNS service, create a hosted zone and resource record sets:
+1. Using the method provided by the new DNS service, create a hosted zone and records:
 
    1. Create a hosted zone that has the same name as your domain, such as example\.com\.
 
-   1. Use the zone file that you got from the previous registrar to create resource record sets\.
+   1. Use the zone file that you got from the previous registrar to create records\.
 
-   If you chose Amazon Route 53 as your new DNS service, you can create resource record sets by importing the zone file\. For more information, see [Creating Resource Record Sets By Importing a Zone File](resource-record-sets-creating-import.md)\.
+   If you chose Route 53 as your new DNS service, you can create records by importing the zone file\. For more information, see [Creating Records By Importing a Zone File](resource-record-sets-creating-import.md)\.
 
-1. Get the name servers for the new hosted zone\. If you chose Amazon Route 53 as the DNS service, see [Getting the Name Servers for a Public Hosted Zone](GetInfoAboutHostedZone.md)\.
+1. Get the name servers for the new hosted zone\. If you chose Route 53 as the DNS service, see [Getting the Name Servers for a Public Hosted Zone](GetInfoAboutHostedZone.md)\.
 
 1. Change the name servers for your domain to the name servers that you got in step 4\. For more information, see [Adding or Changing Name Servers and Glue Records for a Domain](domain-name-servers-glue-records.md)\.
 
@@ -54,13 +54,13 @@ When you transfer domain registration to Amazon Route 53, one of the settings t
 You might have accidentally specified the name servers for the wrong hosted zone, which is especially easy if you have more than one hosted zone that has the same name as the domain\. To confirm that the domain is using the name servers for the correct hosted zone and, if necessary, update the name servers for the domain, perform the following procedures\.
 
 **Important**  
-If you specified the wrong name server records when you transferred the domain to Amazon Route 53, it can take up to two days after you correct the name servers for the domain before DNS service is fully restored\. This is because DNS resolvers across the internet typically request the name servers only once every two days and cache the answer\.
+If you specified the wrong name server records when you transferred the domain to Route 53, it can take up to two days after you correct the name servers for the domain before DNS service is fully restored\. This is because DNS resolvers across the internet typically request the name servers only once every two days and cache the answer\.
 
 **To get the name servers for your hosted zone**
 
 1. If you're using another DNS service for the domain, use the method provided by the DNS service to get the name servers for the hosted zone\. Then skip to the next procedure\.
 
-   If you're using Amazon Route 53 as the DNS service for the domain, sign in to the AWS Management Console and open the Amazon Route 53 console at [https://console\.aws\.amazon\.com/route53/](https://console.aws.amazon.com/route53/)\.
+   If you're using Route 53 as the DNS service for the domain, sign in to the AWS Management Console and open the Route 53 console at [https://console\.aws\.amazon\.com/route53/](https://console.aws.amazon.com/route53/)\.
 
 1. In the navigation pane, choose **Hosted Zones**\.
 
@@ -72,9 +72,9 @@ If you have more than one hosted zone with the same name, make sure you're getti
 
 **To confirm that the domain is using the correct name servers**
 
-1. If you're using another DNS service for the domain, sign in to the AWS Management Console and open the Amazon Route 53 console at [https://console\.aws\.amazon\.com/route53/](https://console.aws.amazon.com/route53/)
+1. If you're using another DNS service for the domain, sign in to the AWS Management Console and open the Route 53 console at [https://console\.aws\.amazon\.com/route53/](https://console.aws.amazon.com/route53/)
 
-   If you're using Amazon Route 53, skip to the next step\.
+   If you're using Route 53, skip to the next step\.
 
 1. In the navigation pane, choose **Registered Domains**\.
 
@@ -96,9 +96,9 @@ Here's how transferring your DNS service and then transferring your domain too s
 
 1. You transferred DNS service for your domain\.
 
-1. You transferred your domain to Amazon Route 53 before DNS resolvers started to use the name servers for your new DNS service\.
+1. You transferred your domain to Route 53 before DNS resolvers started to use the name servers for your new DNS service\.
 
-1. Your previous registrar canceled DNS service for your domain as soon as the domain was transferred to Amazon Route 53\.
+1. Your previous registrar canceled DNS service for your domain as soon as the domain was transferred to Route 53\.
 
 1. DNS resolvers are still routing queries to your old DNS service, but there are no longer any records that tell how to route your traffic\.
 

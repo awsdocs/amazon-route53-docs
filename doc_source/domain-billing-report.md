@@ -1,6 +1,6 @@
 # Downloading a Domain Billing Report<a name="domain-billing-report"></a>
 
-AWS invoices don't include the domain name for domain registration charges\. If you manage multiple domains and you want to view charges by domain for a specified time period, you can download a domain billing report\. This report includes all charges that apply to domain registration, including the following:
+If you manage multiple domains and you want to view charges by domain for a specified time period, you can download a domain billing report\. This report includes all charges that apply to domain registration, including the following:
 
 + Registering a domain
 
@@ -24,7 +24,7 @@ The billing report, in CSV format, includes the following values:
 
 **To download a domain billing report**
 
-1. Sign in to the AWS Management Console and open the Amazon Route 53 console at [https://console\.aws\.amazon\.com/route53/](https://console.aws.amazon.com/route53/)\.
+1. Sign in to the AWS Management Console and open the Route 53 console at [https://console\.aws\.amazon\.com/route53/](https://console.aws.amazon.com/route53/)\.
 
 1. In the navigation pane, choose **Registered Domains**\.
 

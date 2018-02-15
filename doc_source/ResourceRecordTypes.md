@@ -1,25 +1,25 @@
 # Supported DNS Record Types<a name="ResourceRecordTypes"></a>
 
-Amazon Route 53 supports the DNS resource record types that are listed in this section\. Each record type also includes an example of how to format the `Value` element when you are accessing Amazon Route 53 using the API\.
+Amazon Route 53 supports the DNS record types that are listed in this section\. Each record type also includes an example of how to format the `Value` element when you are accessing Route 53 using the API\.
 
 **Note**  
-For resource record types that include a domain name, enter a fully qualified domain name, for example, *www\.example\.com*\. The trailing dot is optional; Amazon Route 53 assumes that the domain name is fully qualified\. This means that Amazon Route 53 treats *www\.example\.com* \(without a trailing dot\) and *www\.example\.com\.* \(with a trailing dot\) as identical\.
+For record types that include a domain name, enter a fully qualified domain name, for example, *www\.example\.com*\. The trailing dot is optional; Route 53 assumes that the domain name is fully qualified\. This means that Route 53 treats *www\.example\.com* \(without a trailing dot\) and *www\.example\.com\.* \(with a trailing dot\) as identical\.
 
 
-+ [A Format](#AFormat)
-+ [AAAA Format](#AAAAFormat)
-+ [CAA Format](#CAAFormat)
-+ [CNAME Format](#CNAMEFormat)
-+ [MX Format](#MXFormat)
-+ [NAPTR Format](#NAPTRFormat)
-+ [NS Format](#NSFormat)
-+ [PTR Format](#PTRFormat)
-+ [SOA Format](#SOAFormat)
-+ [SPF Format](#SPFFormat)
-+ [SRV Format](#SRVFormat)
-+ [TXT Format](#TXTFormat)
++ [A Record Type](#AFormat)
++ [AAAA Record Type](#AAAAFormat)
++ [CAA Record Type](#CAAFormat)
++ [CNAME Record Type](#CNAMEFormat)
++ [MX Record Type](#MXFormat)
++ [NAPTR Record Type](#NAPTRFormat)
++ [NS Record Type](#NSFormat)
++ [PTR Record Type](#PTRFormat)
++ [SOA Record Type](#SOAFormat)
++ [SPF Record Type](#SPFFormat)
++ [SRV Record Type](#SRVFormat)
++ [TXT Record Type](#TXTFormat)
 
-## A Format<a name="AFormat"></a>
+## A Record Type<a name="AFormat"></a>
 
 The value for an A record is an IPv4 address in dotted decimal notation\.
 
@@ -29,13 +29,13 @@ The value for an A record is an IPv4 address in dotted decimal notation\.
 1. 192.0.2.1
 ```
 
-**Example for the Amazon Route 53 API**
+**Example for the Route 53 API**
 
 ```
 1. <Value>192.0.2.1</Value>
 ```
 
-## AAAA Format<a name="AAAAFormat"></a>
+## AAAA Record Type<a name="AAAAFormat"></a>
 
 The value for a AAAA record is an IPv6 address in colon\-separated hexadecimal format\.
 
@@ -45,13 +45,13 @@ The value for a AAAA record is an IPv6 address in colon\-separated hexadecimal f
 1. 2001:0db8:85a3:0:0:8a2e:0370:7334
 ```
 
-**Example for the Amazon Route 53 API**
+**Example for the Route 53 API**
 
 ```
 1. <Value>2001:0db8:85a3:0:0:8a2e:0370:7334</Value>
 ```
 
-## CAA Format<a name="CAAFormat"></a>
+## CAA Record Type<a name="CAAFormat"></a>
 
 A CAA record lets you specify which certificate authorities \(CAs\) are allowed to issue certificates for a domain or subdomain\. Creating a CAA record helps to prevent the wrong CAs from issuing certificates for your domains\. A CAA record isn't a substitute for the security requirements that are specified by your certificate authority, such as the requirement to validate that you're the owner of a domain\.
 
@@ -61,61 +61,140 @@ You can use CAA records to specify the following:
 
 + The email address or URL to contact when a CA issues a certificate for the domain or subdomain
 
-In both the Amazon Route 53 console and the Amazon Route 53 API, the **Value** element for a CAA record includes three space\-separated values\.
+When you add a CAA record to your hosted zone, you specify three settings separated by spaces:
+
+`flags tag "value"`
+
+Note the following about the format for CAA records:
+
++ Always enclose `value` in quotation marks \(""\)\.
+
++ Some CAs allow or require additional values for value\. Specify additional values as name\-value pairs, and separate them with semicolons \(;\), for example:
+
+  `0 issue "ca.example.net; account=123456"`
+
++ If a CA receives a request for a certificate for a subdomain \(such as www\.example\.com\) and if no CAA record for the subdomain exists, the CA submits a DNS query for a CAA record for the parent domain \(such as example\.com\)\. If a record for the parent domain exists and if the certificate request is valid, the CA issues the certificate for the subdomain\.
+
++ We recommend that you consult with your CA to determine what values to specify for a CAA record\.
+
+
++ [Authorize a CA to Issue a Certificate for a Domain or Subdomain](#CAAFormat-issue)
++ [Authorize a CA to Issue a Wildcard Certificate for a Domain or Subdomain](#CAAFormat-issue-wild)
++ [Prevent any CA from Issuing a Certificate for a Domain or Subdomain](#CAAFormat-prevent-issue)
++ [Request that any CA Contacts You if the CA Receives an Invalid Certificate Request](#CAAFormat-contact)
++ [Use Another Setting that Is Supported by the CA](#CAAFormat-custom-setting)
++ [Examples](#CAAFormat-examples)
+
+### Authorize a CA to Issue a Certificate for a Domain or Subdomain<a name="CAAFormat-issue"></a>
+
+To authorize a CA to issue a certificate for a domain or subdomain, create a record that has the same name as the domain or subdomain, and specify the following settings:
+
++ **flags** – `0`
+
++ **tag** – `issue`
+
++ **value** – the code for the CA that you authorize to issue a certificate for the domain or subdomain
+
+For example, suppose you want to authorize ca\.example\.net to issue a certificate for example\.com\. You create a CAA record for example\.com with the following settings:
+
+```
+0 issue "ca.example.net"
+```
+
+For information about how to authorize AWS Certificate Manager to issue a certificate, see [Configure a CAA Record](http://docs.aws.amazon.com/acm/latest/userguide/setup-caa.html) in the *AWS Certificate Manager User Guide*\.
+
+### Authorize a CA to Issue a Wildcard Certificate for a Domain or Subdomain<a name="CAAFormat-issue-wild"></a>
+
+To authorize a CA to issue a wildcard certificate for a domain or subdomain, create a record that has the same name as the domain or subdomain, and specify the following settings\. A wildcard certificate applies to the domain or subdomain and all of its subdomains\.
+
++ **flags** – `0`
+
++ **tag** – `issuewild`
+
++ **value** – the code for the CA that you authorize to issue a certificate for a domain or subdomain, and its subdomains
+
+For example, suppose you want to authorize ca\.example\.net to issue a wildcard certificate for example\.com, which applies to example\.com and all of its subdomains\. You create a CAA record for example\.com with the following settings:
+
+```
+0 issuewild "ca.example.net"
+```
+
+When you want to authorize a CA to issue a wildcard certificate for a domain or subdomain, create a record that has the same name as the domain or subdomain, and specify the following settings\. A wildcard certificate applies to the domain or subdomain and all of its subdomains\.
+
+### Prevent any CA from Issuing a Certificate for a Domain or Subdomain<a name="CAAFormat-prevent-issue"></a>
+
+To prevent any CA from issuing a certificate for a domain or subdomain, create a record that has the same name as the domain or subdomain, and specify the following settings:
+
++ **flags** – `0`
+
++ **tag** – `issue`
+
++ **value** – `";"`
+
+For example, suppose you don't want any CA to issue a certificate for example\.com\. You create a CAA record for example\.com with the following settings:
+
+`0 issue ";"`
+
+If you don't want any CA to issue a certificate for example\.com or its subdomains, you create a CAA record for example\.com with the following settings: 
+
+`0 issuewild ";"`
 
 **Note**  
-We recommend that you consult with your CA to determine what values to specify for a CAA record\.
+If you create a CAA record for example\.com and specify both of the following values, a CA that is using the value ca\.example\.net can issue the certificate for example\.com:  
 
-**flags**  
-The value of **flags** can be one of the following:  
+```
+0 issue ";"
+0 issue "ca.example.net"
+```
 
-+ **0** – Always specify **0** unless you specify a value for **tag** that is unsupported by some CAs
+### Request that any CA Contacts You if the CA Receives an Invalid Certificate Request<a name="CAAFormat-contact"></a>
 
-+ **128** – If the value of **tag** is unsupported by a CA, the CA should not issue a certificate for the domain or subdomain
+If you want any CA that receives an invalid request for a certificate to contact you, specify the following settings:
 
-**tag**  
-The value of **tag** can be one of the following:    
-**issue**  
-Indicates that the CA specified by **value** is authorized to issue a certificate for the domain or subdomain that has the same name as the current record\.  
-**issuewild**  
-Indicates that the CA specified by **value** is authorized to issue a wildcard certificate for the domain or subdomain that has the same name as the current record\. A wildcard certificate applies to the domain or subdomain and all of its subdomains\.  
-**iodef**  
-Indicates that you want the CA to contact the URL or email address that you specify in **value** if the CA receives an invalid request for a certificate\.  
-**another value**  
-If the CA supports values for **tag** other than **issue**, **issuewild**, and **iodef**, the tag that you authorize the CA to use\. If the value of **flags** is **128**, the CA won't issue a certificate if the CA doesn't support the value that you specify for **tag**\.
++ **flags** – `0`
 
-**value**  
-The value of **value** depends on the value of **tag**\. Enclose the value in quotation marks \(**""**\)\.  
-Some CAs allow or require additional values for **value**\. Specify additional values as name\-value pairs, and separate them with semicolons \(**;**\), for example:  
-`0 issue "ca.example.net; account=123456"`  
-When **tag** is **issue**  
-One of the following values:  
++ **tag** – `iodef`
 
-+ The domain of a CA that can issue a certificate for this domain or subdomain, for example, **ca\.example\.net**
++ **value** – the URL or email address that you want the CA to notify if the CA receives an invalid request for a certificate\. Use the applicable format:
 
-+ **;** \(semicolon\), which indicates that no CA should issue a certificate for this domain or subdomain
-In the following example, the CA with the domain name **ca\.example\.net** is authorized to issue a certificate for the domain or subdomain that has the same name as the current record:  
-**"ca\.example\.net"**  
-In the following example, no CA is allowed to issue certificates for the domain that has the same name as the current record:  
-**";"**  
-When **tag** is **issuewild**  
-The same as when **tag** is **issue**, except that the settings apply to wildcard certificates\.  
-When **tag** is **iodef**  
-The URL or email address that you want the CA to notify if the CA receives an invalid request for a certificate\. Use the applicable format:  
-**"mailto:*email\-address*"**  
-**"http://*URL*"**  
-**"https://*URL*"**  
-When **tag** is another value  
-Specify the applicable value that corresponds with the value of **tag**\.
+  `"mailto:email-address"`
 
-**Example for the Amazon Route 53 console**
+  `"http://URL"`
+
+  `"https://URL"`
+
+For example, if you want any CA that receives an invalid request for a certificate to send email to admin@example\.com, you create a CAA record with the following settings:
+
+```
+0 iodef "mailto:admin@example.com"
+```
+
+### Use Another Setting that Is Supported by the CA<a name="CAAFormat-custom-setting"></a>
+
+If your CA supports a feature that isn't defined in the RFC for CAA records, specify the following settings:
+
++ **flags** – 128 \(This value prevents the CA from issuing a certificate if the CA doesn't support the specified feature\.\)
+
++ **tag** – the tag that you authorize the CA to use
+
++ **value** – the value that corresponds with the value of tag
+
+For example, suppose your CA supports sending a text message if the CA receives an invalid certificate request\. \(We aren't aware of any CAs that support this option\.\) Settings for the record might be the following:
+
+```
+128 example-text-tag "1-555-555-1212"
+```
+
+### Examples<a name="CAAFormat-examples"></a>
+
+**Example for the Route 53 console**
 
 ```
 0 issue "ca.example.net"
 0 iodef "mailto:admin@example.com"
 ```
 
-**Example for the Amazon Route 53 API**
+**Example for the Route 53 API**
 
 ```
 <ResourceRecord>
@@ -124,31 +203,31 @@ Specify the applicable value that corresponds with the value of **tag**\.
 </ResourceRecord>
 ```
 
-## CNAME Format<a name="CNAMEFormat"></a>
+## CNAME Record Type<a name="CNAMEFormat"></a>
 
 A CNAME `Value` element is the same format as a domain name\.
 
 **Important**  
 The DNS protocol does not allow you to create a CNAME record for the top node of a DNS namespace, also known as the zone apex\. For example, if you register the DNS name example\.com, the zone apex is example\.com\. You cannot create a CNAME record for example\.com, but you can create CNAME records for www\.example\.com, newproduct\.example\.com, and so on\.  
-In addition, if you create a CNAME record for a subdomain, you cannot create any other resource record sets for that subdomain\. For example, if you create a CNAME for www\.example\.com, you cannot create any other resource record sets for which the value of the Name field is www\.example\.com\.
+In addition, if you create a CNAME record for a subdomain, you cannot create any other records for that subdomain\. For example, if you create a CNAME for www\.example\.com, you cannot create any other records for which the value of the Name field is www\.example\.com\.
 
-Amazon Route 53 also supports alias resource record sets, which allow you to route queries to a CloudFront distribution, an Elastic Beanstalk environment, an ELB Classic, Application, or Network Load Balancer, an Amazon S3 bucket that is configured as a static website, or another Amazon Route 53 resource record set\. Aliases are similar in some ways to the CNAME resource record type; however, you can create an alias for the zone apex\. For more information, see [Choosing Between Alias and Non\-Alias Resource Record Sets](resource-record-sets-choosing-alias-non-alias.md)\.
+Amazon Route 53 also supports alias records, which allow you to route queries to a CloudFront distribution, an Elastic Beanstalk environment, an ELB Classic, Application, or Network Load Balancer, an Amazon S3 bucket that is configured as a static website, or another Route 53 record\. Aliases are similar in some ways to the CNAME record type; however, you can create an alias for the zone apex\. For more information, see [Choosing Between Alias and Non\-Alias Records](resource-record-sets-choosing-alias-non-alias.md)\.
 
-**Example for the Amazon Route 53 console**
+**Example for the Route 53 console**
 
 ```
 1. hostname.example.com
 ```
 
-**Example for the Amazon Route 53 API**
+**Example for the Route 53 API**
 
 ```
 1. <Value>hostname.example.com</Value>
 ```
 
-## MX Format<a name="MXFormat"></a>
+## MX Record Type<a name="MXFormat"></a>
 
-Each value for an MX resource record set actually contains two values: 
+Each value for an MX record actually contains two values: 
 
 + An integer that represents the priority for an email server
 
@@ -162,17 +241,17 @@ If you specify only one server, the priority can be any integer between 0 and 65
 1. 10 mail.example.com
 ```
 
-**Example for the Amazon Route 53 API**
+**Example for the Route 53 API**
 
 ```
 1. <Value>10 mail.example.com</Value>
 ```
 
-## NAPTR Format<a name="NAPTRFormat"></a>
+## NAPTR Record Type<a name="NAPTRFormat"></a>
 
-A Name Authority Pointer \(NAPTR\) is a type of resource record set that is used by Dynamic Delegation Discovery System \(DDDS\) applications to convert one value to another or to replace one value with another\. For example, one common use is to convert phone numbers into SIP URIs\. 
+A Name Authority Pointer \(NAPTR\) is a type of record that is used by Dynamic Delegation Discovery System \(DDDS\) applications to convert one value to another or to replace one value with another\. For example, one common use is to convert phone numbers into SIP URIs\. 
 
-The `Value` element for an NAPTR resource record set consists of six space\-separated values:
+The `Value` element for an NAPTR record consists of six space\-separated values:
 
 **Order**  
 When you specify more than one record, the sequence that you want the DDDS application to evaluate records in\. Valid values: 0\-65535\.
@@ -235,7 +314,7 @@ For more information about DDDS applications and about NAPTR records, see the fo
 3. 100 52 "u" "E2U+email:mailto" "!^.*$!mailto:info@example.com!" .
 ```
 
-**Example for the Amazon Route 53 API**
+**Example for the Route 53 API**
 
 ```
 1. <ResourceRecord>
@@ -245,9 +324,9 @@ For more information about DDDS applications and about NAPTR records, see the fo
 5. </ResourceRecord>
 ```
 
-## NS Format<a name="NSFormat"></a>
+## NS Record Type<a name="NSFormat"></a>
 
-An NS record identifies the name servers for the hosted zone\. The value for an NS record is the domain name of a name server\. For more information about NS records, see [NS and SOA Resource Record Sets that Amazon Route 53 Creates for a Public Hosted Zone](SOA-NSrecords.md)\. For information about configuring white label name servers, see [Configuring White Label Name Servers](white-label-name-servers.md)\.
+An NS record identifies the name servers for the hosted zone\. The value for an NS record is the domain name of a name server\. For more information about NS records, see [NS and SOA Records that Amazon Route 53 Creates for a Public Hosted Zone](SOA-NSrecords.md)\. For information about configuring white label name servers, see [Configuring White Label Name Servers](white-label-name-servers.md)\.
 
 **Example for the Amazon Route 53 console**
 
@@ -255,13 +334,13 @@ An NS record identifies the name servers for the hosted zone\. The value for an 
 1. ns-1.example.com
 ```
 
-**Example for the Amazon Route 53 API**
+**Example for the Route 53 API**
 
 ```
 1. <Value>ns-1.example.com</Value>
 ```
 
-## PTR Format<a name="PTRFormat"></a>
+## PTR Record Type<a name="PTRFormat"></a>
 
 A PTR record `Value` element is the same format as a domain name\.
 
@@ -271,31 +350,31 @@ A PTR record `Value` element is the same format as a domain name\.
 1. hostname.example.com
 ```
 
-**Example for the Amazon Route 53 API**
+**Example for the Route 53 API**
 
 ```
 1. <Value>hostname.example.com</Value>
 ```
 
-## SOA Format<a name="SOAFormat"></a>
+## SOA Record Type<a name="SOAFormat"></a>
 
-A start of authority \(SOA\) record provides information about a domain and the corresponding Amazon Route 53 hosted zone\. For information about the fields in an SOA record, see [NS and SOA Resource Record Sets that Amazon Route 53 Creates for a Public Hosted Zone](SOA-NSrecords.md)\.
+A start of authority \(SOA\) record provides information about a domain and the corresponding Amazon Route 53 hosted zone\. For information about the fields in an SOA record, see [NS and SOA Records that Amazon Route 53 Creates for a Public Hosted Zone](SOA-NSrecords.md)\.
 
-**Example for the Amazon Route 53 console**
+**Example for the Route 53 console**
 
 ```
 1. ns-2048.awsdns-64.net hostmaster.awsdns.com 1 1 1 1 60
 ```
 
-**Example for the Amazon Route 53 API**
+**Example for the Route 53 API**
 
 ```
 1. <Value>ns-2048.awsdns-64.net hostmaster.awsdns.com 1 1 1 1 60</Value>
 ```
 
-## SPF Format<a name="SPFFormat"></a>
+## SPF Record Type<a name="SPFFormat"></a>
 
-SPF records were formerly used to verify the identity of the sender of email messages\. However, we no longer recommend that you create resource record sets for which the record type is SPF\. RFC 7208, *Sender Policy Framework \(SPF\) for Authorizing Use of Domains in Email, Version 1*, has been updated to say, "\.\.\.\[I\]ts existence and mechanism defined in \[RFC4408\] have led to some interoperability issues\. Accordingly, its use is no longer appropriate for SPF version 1; implementations are not to use it\." In RFC 7208, see section 14\.1, [The SPF DNS Record Type](http://tools.ietf.org/html/rfc7208#section-14.1)\.
+SPF records were formerly used to verify the identity of the sender of email messages\. However, we no longer recommend that you create records for which the record type is SPF\. RFC 7208, *Sender Policy Framework \(SPF\) for Authorizing Use of Domains in Email, Version 1*, has been updated to say, "\.\.\.\[I\]ts existence and mechanism defined in \[RFC4408\] have led to some interoperability issues\. Accordingly, its use is no longer appropriate for SPF version 1; implementations are not to use it\." In RFC 7208, see section 14\.1, [The SPF DNS Record Type](http://tools.ietf.org/html/rfc7208#section-14.1)\.
 
 Instead of an SPF record, we recommend that you create a TXT record that contains the applicable value\. For more information about valid values, see [Sender Policy Framework, SPF Record Syntax](http://www.openspf.org/SPF_Record_Syntax)\.
 
@@ -305,13 +384,13 @@ Instead of an SPF record, we recommend that you create a TXT record that contain
 1. "v=spf1 ip4:192.168.0.1/16 -all"
 ```
 
-**Example for the Amazon Route 53 API**
+**Example for the Route 53 API**
 
 ```
 1. <Value>"v=spf1 ip4:192.168.0.1/16 -all"</Value>
 ```
 
-## SRV Format<a name="SRVFormat"></a>
+## SRV Record Type<a name="SRVFormat"></a>
 
 An SRV record `Value` element consists of four space\-separated values\. The first three values are decimal numbers representing priority, weight, and port\. The fourth value is a domain name\. For information about SRV record format, refer to the applicable documentation\.
 
@@ -321,24 +400,60 @@ An SRV record `Value` element consists of four space\-separated values\. The fir
 1. 10 5 80 hostname.example.com
 ```
 
-**Example for the Amazon Route 53 API**
+**Example for the Route 53 API**
 
 ```
 1. <Value>10 5 80 hostname.example.com</Value>
 ```
 
-## TXT Format<a name="TXTFormat"></a>
+## TXT Record Type<a name="TXTFormat"></a>
 
-A TXT record contains a space\-separated list of double\-quoted strings\. A single string include a maximum of 255 characters\. In addition to the characters that are permitted unescaped in domain names, space is allowed in TXT strings\. All other octet values must be quoted in octal form\. Unlike domain names, case is preserved in character strings, meaning that `Ab` is not the same as `aB`\. You can include a literal quote in a string by preceding it with a `\` character\.
+A TXT record contains one or more strings that are enclosed in double quotation marks \(`"`\)\. When you use the simple [routing policy](http://docs.aws.amazon.com/Route53/latest/DeveloperGuide/routing-policy.html), include all values for a domain \(example\.com\) or subdomain \(www\.example\.com\) in the same TXT record\.
+
+A single string can include up to 255 characters, including the following:
+
++ a\-z
+
++ A\-Z
+
++ 0\-9
+
++ Space
+
++ \- \(hyphen\)
+
++ \! " \# $ % & ' \( \) \* \+ , \- / : ; < = > ? @ \[ \\ \] ^ \_ ` \{ | \} \~ \. 
+
+If your TXT record contains any of the following characters, you must specify the characters by using escape codes in the format `\`*three\-digit octal code*:
+
++ Characters 000 to 040 octal \(0 to 32 decimal, 0x00 to 0x20 hexadecimal\)
+
++ Characters 177 to 377 octal \(127 to 255 decimal, 0x7F to 0xFF hexadecimal\)
+
+For example, if the value of your TXT record is `"exämple.com"`, you specify `"ex\344mple.com"`\.
+
+For a mapping between ASCII characters and octal codes, perform an internet search for "ascii octal codes\." One useful reference is [ASCII Code \- The extended ASCII table](https://www.ascii-code.com/)\. 
+
+Case is preserved, so `"Ab"` and `"aB"` are different values\.
+
+To include a quotation mark \(`"`\) in a string, put a backslash \(`\`\) character before the quotation mark: `\"`\. 
 
 **Example for the Amazon Route 53 console**
 
-```
-1. "This string includes \"quotation marks\"." "The last character in this string is an accented e specified in octal format: \351"
-```
-
-**Example for the Amazon Route 53 API**
+Put each value on a separate line:
 
 ```
-1. <Value>"This string includes \"quotation marks\"." "The last character in this string is an accented e specified in octal format: \351"</Value>
+1. "This string includes \"quotation marks\"."
+2. "The last character in this string is an accented e specified in octal format: \351"
+3. "v=spf1 ip4:192.168.0.1/16 -all"
+```
+
+**Example for the Route 53 API**
+
+Put each value in a separate `Value` element:
+
+```
+1. <Value>"This string includes \"quotation marks\"."</Value>
+2. <Value>"The last character in this string is an accented e specified in octal format: \351"</Value>
+3. <Value>"v=spf1 ip4:192.168.0.1/16 -all"</Value>
 ```

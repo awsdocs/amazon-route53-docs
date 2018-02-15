@@ -2,18 +2,30 @@
 
 When you want to register a new domain using the Amazon Route 53 console, perform the following procedure\.
 
-**Important**  
-When you register a domain with Amazon Route 53, we automatically create a hosted zone for the domain to make it easier for you to use Amazon Route 53 as the DNS service provider for your new domain\. This hosted zone is where you store information about how to route traffic for your domain, for example, to an Amazon EC2 instance or a CloudFront distribution\. We charge a small monthly fee for the hosted zone in addition to the annual charge for the domain registration\. If you don't want to use your domain right now, you can delete the hosted zone; if you delete it within 12 hours of registering the domain, there won't be any charge for the hosted zone on your AWS bill\. We also charge a small fee for the DNS queries that we receive for your domain\. For more information, see [Amazon Route 53 Pricing](https://aws.amazon.com/route53/pricing/)\.
+Note the following:
 
-Note that you can't use AWS credits to pay the fee for registering a new domain with Amazon Route 53\.
+**Domain registration pricing**  
+For information about the cost to register domains, see [Amazon Route 53 Pricing for Domain Registration](https://d32ze2gidvkk54.cloudfront.net/Amazon_Route_53_Domain_Registration_Pricing_20140731.pdf)\.
 
-**To register a new domain using Amazon Route 53**
+**Supported domains**  
+For a list of supported TLDs, see [Domains That You Can Register with Amazon Route 53](registrar-tld-list.md)\.
 
-1. Sign in to the AWS Management Console and open the Amazon Route 53 console at [https://console\.aws\.amazon\.com/route53/](https://console.aws.amazon.com/route53/)\.
+**AWS credits**  
+You can't use AWS credits to pay the fee for registering a new domain with Route 53\.
 
-1. If you're new to Amazon Route 53, under **Domain Registration**, choose **Get Started Now**\.
+**Special or premium prices**  
+TLD registries have assigned special or premium prices to some domain names\. You can't use Route 53 to register a domain that has a special or premium price\.
 
-   If you're already using Amazon Route 53, in the navigation pane, choose **Registered Domains**\.
+**Charges for hosted zones**  
+When you register a domain with Route 53, we automatically create a hosted zone for the domain and charge a small monthly fee for the hosted zone in addition to the annual charge for the domain registration\. This hosted zone is where you store information about how to route traffic for your domain, for example, to an Amazon EC2 instance or a CloudFront distribution\. If you don't want to use your domain right now, you can delete the hosted zone; if you delete it within 12 hours of registering the domain, there won't be any charge for the hosted zone on your AWS bill\. We also charge a small fee for the DNS queries that we receive for your domain\. For more information, see [Amazon Route 53 Pricing](https://aws.amazon.com/route53/pricing/)\.
+
+**To register a new domain using Route 53**
+
+1. Sign in to the AWS Management Console and open the Route 53 console at [https://console\.aws\.amazon\.com/route53/](https://console.aws.amazon.com/route53/)\.
+
+1. If you're new to Route 53, under **Domain Registration**, choose **Get Started Now**\.
+
+   If you're already using Route 53, in the navigation pane, choose **Registered Domains**\.
 
 1. Choose **Register Domain**\.
 
@@ -32,8 +44,12 @@ Note that you can't use AWS credits to pay the fee for registering a new domain 
 1. Choose **Continue**\.
 
 1. On the **Contact Details for Your** *n* **Domains** page, enter contact information for the domain registrant, administrator, and technical contacts\. The values that you enter here are applied to all of the domains that you're registering\. 
+**Important**  
+For **First Name** and **Last Name**, we recommend that you specify the name on your official ID\. For some changes to domain settings, some domain registries require that you provide proof of identity\. The name on your ID must match the name of the registrant contact for the domain\.
 
    By default, we use the same information for all three contacts\. If you want to enter different information for one or more contacts, change the value of **My Registrant, Administrative, and Technical Contacts are all the same** to **No**\.
+**Note**  
+For \.it domains, the registrant and administrative contacts must be the same\.
 
    If you're registering more than one domain, we use the same contact information for all of the domains\. 
 
@@ -49,7 +65,7 @@ Note that you can't use AWS credits to pay the fee for registering a new domain 
 
 1. Choose **Continue**\.
 
-1. For [generic TLDs](http://docs.aws.amazon.com/Route53/latest/DeveloperGuide/registrar-tld-list.html#registrar-tld-list-generic), if you specified an email address for the registrant contact that has never been used to register a domain with Amazon Route 53, you need to verify that the address is valid\.
+1. For [generic TLDs](http://docs.aws.amazon.com/Route53/latest/DeveloperGuide/registrar-tld-list.html#registrar-tld-list-generic), if you specified an email address for the registrant contact that has never been used to register a domain with Route 53, you need to verify that the address is valid\.
 
    If the registry requires verification and if you can verify the address during domain registration, the console displays a **Verify the Email Address for the Registrant Contact** section:
 
@@ -57,7 +73,7 @@ Note that you can't use AWS credits to pay the fee for registering a new domain 
 
    + If the section appears and the status is **email\-address is verified**, skip to step 14\.
 
-   + If the section appears and the value is Registrant email not verified, continue with this step\.
+   + If the section appears and the value is **Registrant email not verified**, continue with this step\.
 
    Perform the following steps:
 
@@ -69,13 +85,9 @@ Note that you can't use AWS credits to pay the fee for registering a new domain 
 **Important**  
 The registrant contact must follow the instructions in the email to verify that the email was received, or we must suspend the domain as required by ICANN\. When a domain is suspended, it's not accessible on the internet\.
 
-   1. When you receive the verification email, choose the link in the email that verifies that the email address is valid\. If you don't receive the email immediately, perform the following troubleshooting steps:
+   1. When you receive the verification email, choose the link in the email that verifies that the email address is valid\. If you don't receive the email immediately, check your junk email folder\.
 
-      + Choose **Back** and verify that the email address for the registrant contact is the correct one\.
-
-      + Check your junk email folder\.
-
-   1. Return to the Amazon Route 53 console\. If the status doesn't automatically update to say **email\-address is verified**, choose **Refresh status**\.
+   1. Return to the Route 53 console\. If the status doesn't automatically update to say **email\-address is verified**, choose **Refresh status**\.
 
 1. Review the information that you entered, read the terms of service, and select the check box to confirm that you've read the terms of service\. 
 
@@ -87,9 +99,9 @@ The registrant contact must follow the instructions in the email to verify that 
 
    + **noreply@domainnameverification\.net** – for TLDs registered by our registrar associate, Gandi\. To determine who the registrar is for your TLD, see [Domains That You Can Register with Amazon Route 53](registrar-tld-list.md)\.
 
-   When you receive the verification email, choose the link in the email that verifies that the email address is valid\. If you don't receive the email immediately, perform the following troubleshooting steps:
+   When you receive the verification email, choose the link in the email that verifies that the email address is valid\. If you don't receive the email immediately:
 
-   + Choose **Back** and verify that the email address for the registrant contact is the correct one\.
+   + Check the settings for the domain to verify that you specified the correct email address for the registrant contact\.
 
    + Check your junk email folder\.
 **Important**  
@@ -97,15 +109,15 @@ The registrant contact must follow the instructions in the email to confirm that
 
    For all TLDs, you'll receive an email when your domain registration has been approved\. To determine the current status of your request, see [Viewing the Status of a Domain Registration](domain-view-status.md)\.
 
-1. When domain registration is complete, your next step depends on whether you want to use Amazon Route 53 or another DNS service as the DNS service for the domain:
+1. When domain registration is complete, your next step depends on whether you want to use Route 53 or another DNS service as the DNS service for the domain:
 
-   + **Amazon Route 53** – In the hosted zone that Amazon Route 53 created when you registered the domain, create resource record sets to tell Amazon Route 53 how you want to route traffic for the domain and subdomains\. 
+   + **Route 53** – In the hosted zone that Route 53 created when you registered the domain, create records to tell Route 53 how you want to route traffic for the domain and subdomains\. 
 
-     For example, when someone enters your domain name in a browser and that query is forwarded to Amazon Route 53, do you want Amazon Route 53 to respond to the query with the IP address of a web server in your data center or with the name of an ELB load balancer?
+     For example, when someone enters your domain name in a browser and that query is forwarded to Route 53, do you want Route 53 to respond to the query with the IP address of a web server in your data center or with the name of an ELB load balancer?
 
-     For more information, see [Working with Resource Record Sets](rrsets-working-with.md)\.
+     For more information, see [Working with Records](rrsets-working-with.md)\.
 **Important**  
-If you create resource record sets in a hosted zone other than the one that Amazon Route 53 creates automatically, you must update the name servers for the domain to use the name servers for the new hosted zone\.
+If you create records in a hosted zone other than the one that Route 53 creates automatically, you must update the name servers for the domain to use the name servers for the new hosted zone\.
 
    + **Another DNS service** – Configure your new domain to route DNS queries to the other DNS service\. Perform the procedure [To update the name servers for your domain when you want to use another DNS service](#domain-register-other-dns-service-procedure)\.
 
@@ -113,7 +125,7 @@ If you create resource record sets in a hosted zone other than the one that Amaz
 
 1. Use the process that is provided by your DNS service to get the name servers for the domain\.
 
-1. Sign in to the AWS Management Console and open the Amazon Route 53 console at [https://console\.aws\.amazon\.com/route53/](https://console.aws.amazon.com/route53/)\.
+1. Sign in to the AWS Management Console and open the Route 53 console at [https://console\.aws\.amazon\.com/route53/](https://console.aws.amazon.com/route53/)\.
 
 1. In the navigation pane, choose **Registered Domains**\.
 
@@ -125,7 +137,7 @@ If you create resource record sets in a hosted zone other than the one that Amaz
 
 1. Choose **Update**\.
 
-1. \(Optional\) Delete the hosted zone that Amazon Route 53 created automatically when you registered your domain\. This prevents you from being charged for a hosted zone that you aren't using\.
+1. \(Optional\) Delete the hosted zone that Route 53 created automatically when you registered your domain\. This prevents you from being charged for a hosted zone that you aren't using\.
 
    1. In the navigation pane, choose **Hosted Zones**\.
 

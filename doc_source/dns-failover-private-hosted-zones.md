@@ -14,4 +14,4 @@ For more information, see the following topics:
 
 + [Creating and Updating Health Checks](health-checks-creating.md)
 
-+ [Working with Resource Record Sets](rrsets-working-with.md)
++ [Working with Records](rrsets-working-with.md)
