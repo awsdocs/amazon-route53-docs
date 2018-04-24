@@ -4,9 +4,6 @@ For most top\-level domains \(TLDs\), you can delete the registration if you no 
 
 If the registry allows you to delete the registration, perform the procedure in this topic\. If the registry doesn't allow you to delete a domain name registration, disable automatic renewal of domain registration for this domain\. When the **Expires on** date passes, Amazon Route 53 will automatically delete the registration for the domain\. For information about how to change the automatic renewal setting, see [Enabling or Disabling Automatic Renewal for a Domain](domain-enable-disable-auto-renewal.md)\.
 
-**Important**  
-If you delete a domain name registration before the registration was scheduled to expire, we will not refund the registration fee\. 
-
 **To delete a domain name registration**
 
 1. Sign in to the AWS Management Console and open the Route 53 console at [https://console\.aws\.amazon\.com/route53/](https://console.aws.amazon.com/route53/)\.
