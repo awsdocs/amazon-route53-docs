@@ -4,7 +4,7 @@ DNS messaging is subject to factors that affect how you create and use hosted zo
 
 ## Maximum Response Size<a name="MaxSize"></a>
 
-To comply with DNS standards, responses sent over UDP are limited to 512 bytes in size\. Responses exceeding 512 bytes are truncated and the resolver must re\-issue the request over TCP\. If the resolver supports EDNS0 \(as defined in [RFC 2671](http://www.linuxdig.com/rfc/individual/2671.php)\), and advertises the EDNS0 option to Amazon Route 53, Route 53 permits responses up to 4096 bytes over UDP, without truncation\.
+To comply with DNS standards, responses sent over UDP are limited to 512 bytes in size\. Responses exceeding 512 bytes are truncated and the resolver must re\-issue the request over TCP\. If the resolver supports EDNS0 \(as defined in [RFC 2671](https://www.rfc-editor.org/rfc/rfc2671.txt)\), and advertises the EDNS0 option to Amazon Route 53, Route 53 permits responses up to 4096 bytes over UDP, without truncation\.
 
 ## Authoritative Section Processing<a name="AuthSectionProcessing"></a>
 
