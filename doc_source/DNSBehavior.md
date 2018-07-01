@@ -8,7 +8,7 @@ To comply with DNS standards, responses sent over UDP are limited to 512 bytes i
 
 ## Authoritative Section Processing<a name="AuthSectionProcessing"></a>
 
-For successful queries, Route 53 appends name server \(NS\) records for the relevant hosted zone to the Authority section of the DNS response\. For names that are not found \(NXDOMAIN responses\), Route 53 appends the start of authority \(SOA\) record \(as defined in [RFC 1035](http://www.linuxdig.com/rfc/individual/1035.php)\) for the relevant hosted zone to the Authority section of the DNS response\.
+For successful queries, Route 53 appends name server \(NS\) records for the relevant hosted zone to the Authority section of the DNS response\. For names that are not found \(NXDOMAIN responses\), Route 53 appends the start of authority \(SOA\) record \(as defined in [RFC 1035](https://www.rfc-editor.org/rfc/rfc1035.txt)\) for the relevant hosted zone to the Authority section of the DNS response\.
 
 ## Additional Section Processing<a name="SectionProcessing"></a>
 
