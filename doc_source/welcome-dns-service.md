@@ -9,10 +9,10 @@ All computers on the internet, from your smart phone or laptop to the servers th
 When you open a browser and go to a website, you don't have to remember and enter a long number like that\. Instead, you can enter a domain name like example\.com and still end up in the right place\. A DNS service such as Amazon Route 53 helps to make that connection between domain names and IP addresses\.
 
 
-+ [How to Configure Amazon Route 53 to Route Internet Traffic for Your Domain](#welcome-dns-service-how-to-configure)
++ [Overview of How You Configure Amazon Route 53 to Route Internet Traffic for Your Domain](#welcome-dns-service-how-to-configure)
 + [How Amazon Route 53 Routes Traffic for Your Domain](#welcome-dns-service-how-route-53-routes-traffic)
 
-## How to Configure Amazon Route 53 to Route Internet Traffic for Your Domain<a name="welcome-dns-service-how-to-configure"></a>
+## Overview of How You Configure Amazon Route 53 to Route Internet Traffic for Your Domain<a name="welcome-dns-service-how-to-configure"></a>
 
 Here's an overview of how to use the Amazon Route 53 console to register a domain name and configure Route 53 to route internet traffic to your website or web application\. 
 

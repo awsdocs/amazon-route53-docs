@@ -17,7 +17,8 @@ We're confirming that your domain's status is eligible for transfer\. You must u
 + redemptionPeriod
 
 **Verifying WHOIS information \(step 2 of 14\)**  
-We sent a WHOIS query for your domain to determine whether you've disabled the privacy protection for the domain\. If privacy protection is still enabled with your current registrar, we won't be able to access the information we need to transfer the domain\.
+We sent a WHOIS query for your domain to determine whether you've disabled the privacy protection for the domain\. If privacy protection is still enabled with your current registrar, we won't be able to access the information we need to transfer the domain\.  
+If the current registrar for the domain won't let you turn off privacy protection, we can still transfer the domain if you specified a valid authorization code in [Step 5: Request the Transfer](domain-transfer-to-route-53.md#domain-transfer-to-route-53-request-transfer)\.
 
 **Sent email to registrant contact to get transfer authorization \(step 3 of 14\)**  
 We've sent an email to the registrant contact for the domain to confirm that the transfer was requested by an authorized contact of the domain\.

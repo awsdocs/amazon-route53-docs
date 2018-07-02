@@ -33,7 +33,7 @@ Provide the following information:
 
    + The domain that you want to restore
 
-   + The account ID of the AWS account that the domain was registered to  
+   + The [12\-digit account ID](http://docs.aws.amazon.com/general/latest/gr/acct-identifiers.html#FindingYourAccountIdentifiers) of the AWS account that the domain was registered to  
 **Contact method**  
 Specify a contact method and, if you choose **Phone**, enter the applicable values\.
 

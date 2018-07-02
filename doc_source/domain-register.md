@@ -93,6 +93,10 @@ The registrant contact must follow the instructions in the email to verify that 
 
 1. Choose **Complete Purchase**\.
 
+1. Verify that the email address for the registrant contact is valid\.
+**Note**  
+If you were able to verify your email address in step 13, skip to step 17\.
+
    If the registry requires us to verify the email address for the registrant contact but doesn't allow us to verify earlier in the process, we send a verification email from one of the following email addresses: 
 
    + **noreply@registrar\.amazon\.com ** – for TLDs registered by Amazon Registrar\.
@@ -107,7 +111,9 @@ The registrant contact must follow the instructions in the email to verify that 
 **Important**  
 The registrant contact must follow the instructions in the email to confirm that the email was received, or we must suspend the domain as required by ICANN\. When a domain is suspended, it's not accessible on the internet\.
 
-   For all TLDs, you'll receive an email when your domain registration has been approved\. To determine the current status of your request, see [Viewing the Status of a Domain Registration](domain-view-status.md)\.
+1. For all TLDs, you'll receive an email when your domain registration has been approved\.
+
+   To determine the current status of your request, see [Viewing the Status of a Domain Registration](domain-view-status.md)\.
 
 1. When domain registration is complete, your next step depends on whether you want to use Route 53 or another DNS service as the DNS service for the domain:
 

@@ -69,13 +69,15 @@ Note the following about the format for CAA records:
 
 + Always enclose `value` in quotation marks \(""\)\.
 
-+ Some CAs allow or require additional values for value\. Specify additional values as name\-value pairs, and separate them with semicolons \(;\), for example:
++ Some CAs allow or require additional values for `value`\. Specify additional values as name\-value pairs, and separate them with semicolons \(;\), for example:
 
   `0 issue "ca.example.net; account=123456"`
 
 + If a CA receives a request for a certificate for a subdomain \(such as www\.example\.com\) and if no CAA record for the subdomain exists, the CA submits a DNS query for a CAA record for the parent domain \(such as example\.com\)\. If a record for the parent domain exists and if the certificate request is valid, the CA issues the certificate for the subdomain\.
 
 + We recommend that you consult with your CA to determine what values to specify for a CAA record\.
+
++ You can't create a CAA record and a CNAME record that have the same name because DNS doesn't allow using the same name for both a CNAME record and any other type of record\.
 
 
 + [Authorize a CA to Issue a Certificate for a Domain or Subdomain](#CAAFormat-issue)
@@ -211,7 +213,7 @@ A CNAME `Value` element is the same format as a domain name\.
 The DNS protocol does not allow you to create a CNAME record for the top node of a DNS namespace, also known as the zone apex\. For example, if you register the DNS name example\.com, the zone apex is example\.com\. You cannot create a CNAME record for example\.com, but you can create CNAME records for www\.example\.com, newproduct\.example\.com, and so on\.  
 In addition, if you create a CNAME record for a subdomain, you cannot create any other records for that subdomain\. For example, if you create a CNAME for www\.example\.com, you cannot create any other records for which the value of the Name field is www\.example\.com\.
 
-Amazon Route 53 also supports alias records, which allow you to route queries to a CloudFront distribution, an Elastic Beanstalk environment, an ELB Classic, Application, or Network Load Balancer, an Amazon S3 bucket that is configured as a static website, or another Route 53 record\. Aliases are similar in some ways to the CNAME record type; however, you can create an alias for the zone apex\. For more information, see [Choosing Between Alias and Non\-Alias Records](resource-record-sets-choosing-alias-non-alias.md)\.
+Amazon Route 53 also supports alias records, which allow you to route queries to AWS resources such as CloudFront distributions and Amazon S3 buckets\. Aliases are similar in some ways to the CNAME record type; however, you can create an alias for the zone apex\. For more information, see [Choosing Between Alias and Non\-Alias Records](resource-record-sets-choosing-alias-non-alias.md)\.
 
 **Example for the Route 53 console**
 
@@ -227,13 +229,13 @@ Amazon Route 53 also supports alias records, which allow you to route queries t
 
 ## MX Record Type<a name="MXFormat"></a>
 
-Each value for an MX record actually contains two values: 
+Each value for an MX record actually contains two values, priority and domain name:
 
-+ An integer that represents the priority for an email server
+**Priority**  
+An integer that represents the priority for an email server\. If you specify only one server, the priority can be any integer between 0 and 65535\. If you specify multiple servers, the value that you specify for the priority indicates which email server you want email to be routed to first, second, and so on\. The server with the lowest value for the priority takes precedence\. For example, if you have two email servers and you specify values of 10 and 20 for the priority, email always goes to the server with a priority of 10 unless it's unavailable\. If you specify values of 10 and 10, email is routed to the two servers approximately equally\.
 
-+ The domain name of the email server
-
-If you specify only one server, the priority can be any integer between 0 and 65535\. If you specify multiple servers, the value that you specify for the priority indicates which email server you want email to be routed to first, second, and so on\. For example, if you have two email servers and you specify values of 10 and 20 for the priority, email always goes to the server with a priority of 10 unless it's unavailable\. If you specify values of 10 and 10, email is routed to the two servers approximately equally\.
+**Domain name**  
+The domain name of the email server\. Specify the name \(such as mail\.example\.com\) of an A or AAAA record\. In [RFC 2181, Clarifications to the DNS Specification](https://tools.ietf.org/html/rfc2181), section 10\.3 forbids specifying the name of a CNAME record for the domain name value\. \(When the RFC mentions "alias," it means a CNAME record, not a Route 53 alias record\.\)
 
 **Example for the Amazon Route 53 console**
 

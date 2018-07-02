@@ -3,8 +3,7 @@
 The following procedure explains how to delete a hosted zone using the Amazon Route 53 console\. For information about how to delete a hosted zone using the Route 53 API, see [DeleteHostedZone](http://docs.aws.amazon.com/Route53/latest/APIReference/API_DeleteHostedZone.html) in the *Amazon Route 53 API Reference*\. 
 
 **Important**  
-If the name servers for the hosted zone are associated with a domain and if you want to make the domain unavailable on the internet, we recommend that you delete the name servers from the domain to prevent future DNS queries from possibly being misrouted\. If the domain is registered with Route 53, see [Adding or Changing Name Servers and Glue Records for a Domain](domain-name-servers-glue-records.md)\. If the domain is registered with another registrar, use the method provided by the registrar to delete name servers for the domain\.  
-Some domain registries don't allow you to remove all of the name servers for a domain\. If the registry for your domain requires one or more name servers, we recommend that you delete the hosted zone only if you transfer DNS service to another service provider, and you replace the name servers for the domain with name servers from the new provider\. 
+If the name servers for the hosted zone are associated with a domain and if you want to make the domain unavailable on the internet, we recommend that you transfer DNS service to a free DNS service and then delete the Route 53 hosted zone\. This prevents future DNS queries from possibly being misrouted\. If the domain is registered with Route 53, see [Adding or Changing Name Servers and Glue Records for a Domain](domain-name-servers-glue-records.md) for information about how to replace Route 53 name servers with name servers for the new DNS service\. If the domain is registered with another registrar, use the method provided by the registrar to update name servers for the domain\. For more information, perform an internet search on "free DNS service\."
 
 You can delete a hosted zone only if there are no records other than the default SOA and NS records\. If your hosted zone contains other records, you must delete them before you can delete your hosted zone\. This prevents you from accidentally deleting a hosted zone that still contains records\.
 
@@ -30,6 +29,8 @@ If you created any NS records for subdomains in the hosted zone, delete those re
 
 1. Choose **OK** to confirm\.
 
-1. If you want to make the domain unavailable on the internet, we recommend that you delete the name servers from the domain to prevent future DNS queries from possibly being misrouted\.
+1. If you want to make the domain unavailable on the internet, we recommend that you transfer DNS service to a free DNS service and then delete the Route 53 hosted zone\. This prevents future DNS queries from possibly being misrouted\. 
 
-   If the domain is registered with Route 53, see [Adding or Changing Name Servers and Glue Records for a Domain](domain-name-servers-glue-records.md)\. If the domain is registered with another registrar, use the method provided by the registrar to delete name servers for the domain\.
+   If the domain is registered with Route 53, see [Adding or Changing Name Servers and Glue Records for a Domain](domain-name-servers-glue-records.md) for information about how to replace Route 53 name servers with name servers for the new DNS service\. If the domain is registered with another registrar, use the method provided by the registrar to change name servers for the domain\.
+**Note**  
+If you're deleting a hosted zone for a subdomain \(acme\.example\.com\), you don't need to change name servers for the domain \(example\.com\)\.

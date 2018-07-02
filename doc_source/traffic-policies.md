@@ -97,7 +97,7 @@ Choose the applicable rule or endpoint based on the design for your configuratio
 
 **Failover rule**  
 Choose this option when you want to configure active\-passive failover, in which one resource takes all traffic when it's available and the other resource takes all traffic when the first resource isn't available\.  
-For more information, see [Configuring Active\-Passive Failover by Using Amazon Route 53 Failover and Failover Alias Records](dns-failover-configuring-options.md#dns-failover-failover-rrsets)\.
+For more information, see [Active\-Passive Failover](dns-failover-types.md#dns-failover-types-active-passive)\.
 
 **Geolocation rule**  
 Choose this option when you want Amazon Route 53 to respond to DNS queries based on the location of your users\.  

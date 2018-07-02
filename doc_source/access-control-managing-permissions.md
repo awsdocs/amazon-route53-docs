@@ -143,15 +143,21 @@ These permissions aren't required if you aren't using the Route 53 console\. Ro
 
 ## AWS Managed \(Predefined\) Policies for Route 53<a name="access-policy-examples-aws-managed"></a>
 
-AWS addresses many common use cases by providing standalone IAM policies that are created and administered by AWS\. These AWS managed policies grant necessary permissions for common use cases so that you can avoid having to investigate what permissions are needed\. For more information, see [AWS Managed Policies](http://docs.aws.amazon.com/IAM/latest/UserGuide/access_policies_managed-vs-inline.html#aws-managed-policies) in the *IAM User Guide*\. For Route 53, IAM provides four managed policies: 
+AWS addresses many common use cases by providing standalone IAM policies that are created and administered by AWS\. These AWS managed policies grant necessary permissions for common use cases so that you can avoid having to investigate what permissions are needed\. For more information, see [AWS Managed Policies](http://docs.aws.amazon.com/IAM/latest/UserGuide/access_policies_managed-vs-inline.html#aws-managed-policies) in the *IAM User Guide*\. For Route 53, IAM provides the following managed policies: 
 
-+ **AmazonRoute53FullAccess** – Grants full access to Route 53 resources\.
++ **AmazonRoute53FullAccess** – Grants full access to Route 53 resources
 
-+ **AmazonRoute53ReadOnlyAccess** – Grants read\-only access to Route 53 resources\.
++ **AmazonRoute53ReadOnlyAccess** – Grants read\-only access to Route 53 resources
 
-+ **AmazonRoute53DomainsFullAccess** – Grants full access to Route 53 domain registration resources\.
++ **AmazonRoute53DomainsFullAccess** – Grants full access to Route 53 domain registration resources
 
-+ **AmazonRoute53DomainsReadOnlyAccess** – Grants read\-only access to Route 53 domain registration resources\.
++ **AmazonRoute53DomainsReadOnlyAccess** – Grants read\-only access to Route 53 domain registration resources
+
++ **AmazonRoute53AutoNamingFullAccess** – Grants full access to Route 53 auto naming for service discovery resources
+
++ **AmazonRoute53AutoNamingReadOnlyAccess** – Grants read\-only access to Route 53 auto naming for service discovery resources
+
++ **AmazonRoute53AutoNamingRegistrantAccess** – Grants read\-only access to namespaces and services, and grants permission to register and deregister service instances
 
 **Note**  
 You can review these permissions policies by signing in to the IAM console and searching for specific policies there\. You can also create your own custom IAM policies to allow permissions for Route 53 API operations\. You can attach these custom policies to the IAM users or groups that require those permissions\.

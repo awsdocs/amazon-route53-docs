@@ -1,14 +1,18 @@
 # Naming and Tagging Health Checks<a name="health-checks-tagging"></a>
 
-You can add tags to Amazon Route 53 health checks, which lets you give each health check a name that is more comprehensible than the health check ID\. These are the same tags that AWS Billing and Cost Management provides for organizing your AWS bill to reflect your own cost structure\. For more information about using tags for cost allocation, see [Use Cost Allocation Tags for Custom Billing Reports](http://docs.aws.amazon.com/awsaccountbilling/latest/aboutv2/allocation.html) in the *AWS Billing and Cost Management User Guide*\. 
+You can add tags to Amazon Route 53 health checks, which lets you give each health check a name that is more comprehensible than the health check ID\. These are the same tags that AWS Billing and Cost Management provides for organizing your AWS bill\. For more information about using tags for cost allocation, see [Use Cost Allocation Tags for Custom Billing Reports](http://docs.aws.amazon.com/awsaccountbilling/latest/aboutv2/allocation.html) in the *AWS Billing and Cost Management User Guide*\. 
 
-Each tag consists of a key \(the name of the tag\) and a value, both of which you define\. When you add tags to a health check, we recommend that you add one tag for which the key is **Name** and the value is the name that you want to give to the health check\. The value of the **Name** tag appears in the list of health checks in the Route 53 console, which lets you readily distinguish health checks from one another\. You can view other tags in the console, but you need to select a health check to see tags other than the **Name** tag\. 
+Each tag consists of a key \(the name of the tag\) and a value, both of which you define\. When you add tags to a health check, we recommend that you add one tag that has the following values for the key and value:
+
++ **key** – **Name**
+
++ **value** – The name that you want to give to the health check
+
+The value of the **Name** tag appears in the list of health checks on the Route 53 console, which lets you readily distinguish health checks from one another\. To see other tags for a health check, you choose the health check and then choose the **Tags** tab\.
 
 For more information about tags, see the following topics:
 
 + To add, edit, or delete the **Name** tag when you add or edit health checks in the Route 53 console, see [Creating, Updating, and Deleting Health Checks](health-checks-creating-deleting.md)\.
-
-+ To add, edit, or delete tags for health checks and hosted zones by using the Route 53 API, see [ChangeTagsForResource](http://docs.aws.amazon.com/Route53/latest/APIReference/API_ChangeTagsForResource.html) in the *Amazon Route 53 API Reference*\.
 
 + For an overview of tagging Route 53 resources, see [Tagging Amazon Route 53 Resources](tagging-resources.md)\.
 
@@ -16,7 +20,7 @@ For more information about tags, see the following topics:
 
 The following basic restrictions apply to tags:
 
-+ Maximum number of tags per resource – 10
++ Maximum number of tags per resource – 50
 
 + Maximum **Key** length – 128 Unicode characters
 
@@ -30,9 +34,17 @@ The following basic restrictions apply to tags:
 
 ## Adding, Editing, and Deleting Tags for Health Checks<a name="health-checks-tagging-procedures"></a>
 
-The following procedures show you how to use tags for your health checks in the Route 53 console\. 
+The following procedures show you how to use tags for your health checks on the Route 53 console\. 
 
-**To add tags to health checks**
+*Topics*
+
++ [To add tags to health checks \(console\)](#health-checks-tagging-adding-procedure)
+
++ [To edit tags for health checks \(console\)](#health-checks-tagging-editing-procedure)
+
++ [To delete tags for health checks \(console\)](#health-checks-tagging-procedure)
+
+**To add tags to health checks \(console\)**
 
 1. Sign in to the AWS Management Console and open the Route 53 console at [https://console\.aws\.amazon\.com/route53/](https://console.aws.amazon.com/route53/)\.
 
@@ -42,11 +54,11 @@ The following procedures show you how to use tags for your health checks in the 
 
 1. In the bottom pane, choose the **Tags** tab, and then choose **Add/Edit Tags**\.
 
-1. In the **Add/Edit Tags** dialog box, enter a name for the tag in the **Key** field, and enter a value in the **Value** field\.
+1. In the **Add/Edit Tags** dialog box, type a name for the tag in the **Key** field, and type a value in the **Value** field\.
 
 1. Choose **Apply changes**\.
 
-**To edit tags for health checks**
+**To edit tags for health checks \(console\)**
 
 1. Sign in to the AWS Management Console and open the Route 53 console at [https://console\.aws\.amazon\.com/route53/](https://console.aws.amazon.com/route53/)\.
 
@@ -64,7 +76,7 @@ The following procedures show you how to use tags for your health checks in the 
 
 1. Choose **Save**\.
 
-**To delete tags for health checks**
+**To delete tags for health checks \(console\)**
 
 1. Sign in to the AWS Management Console and open the Route 53 console at [https://console\.aws\.amazon\.com/route53/](https://console.aws.amazon.com/route53/)\.
 

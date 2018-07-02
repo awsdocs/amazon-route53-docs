@@ -1,23 +1,22 @@
 # Enabling or Disabling Privacy Protection for Contact Information for a Domain<a name="domain-privacy-protection"></a>
 
-When you register a domain with Amazon Route 53, we enable privacy protection by default for all the contacts for the domain\. This typically hides most of your contact information from WHOIS \("Who is"\) queries and reduces the amount of spam that you receive\. Your contact information is replaced either with contact information for the registrar or with the phrase "Protected by policy\."
+When you register a domain with Amazon Route 53 or transfer a domain to Route 53, we enable privacy protection by default for all the contacts for the domain\. This typically hides most of your contact information from WHOIS \("Who is"\) queries and reduces the amount of spam that you receive\. Your contact information is replaced either with contact information for the registrar or with the phrase "REDACTED FOR PRIVACY\."
 
-**Important**  
-You can hide contact information only when the domain is locked to prevent transfers\. If you're transferring the domain to or from Route 53, you must disable privacy protection, so your contact information is visible in WHOIS queries\. You can re\-enable privacy protection when the transfer is complete\.
-
-You can choose to disable privacy protection for some or all contacts for a domain\. If you do, anyone can send a WHOIS query for the domain and, for most top\-level domains \(TLDs\), get all the contact information that you provided when you registered the domain, including name, address, phone number, and email address\. The WHOIS command is widely available; it's included in many operating systems, and it's also available as a web application on many websites\.
+You can choose to disable privacy protection for some or all contacts for a domain\. If you do, anyone can send a WHOIS query for the domain and, for most top\-level domains \(TLDs\), might be able to get all the contact information that you provided when you registered or transferred the domain, including name, address, phone number, and email address\. The WHOIS command is widely available; it's included in many operating systems, and it's also available as a web application on many websites\.
 
 The information that you can hide from WHOIS queries depends on two main factors:
 
 **The registry for the top level domain**  
-Some TLD registries hide all contact information automatically, some allow you to choose to hide all contact information, some allow you to hide only some information, and some do not allow you to hide any information\. For example, most registries allow you to hide your address, phone number, and email address\. Only a few also allow you to hide your name\. 
+Most TLD registries hide all contact information automatically, some allow you to choose to hide all contact information, some allow you to hide only some information, and some do not allow you to hide any information\.
 
 **The registrar**  
 When you register a domain with Route 53 or transfer a domain to Route 53, the registrar for the domain is either Amazon Registrar or our registrar associate, Gandi\. Amazon Registrar and Gandi hide different information by default:  
 
 + **Amazon Registrar** – By default, all of your contact information is hidden\. 
 
-+ **Gandi** – By default, all of your contact information is hidden except first and last name, and organization name\. However, regulations for the TLD registry take precedence\. 
++ **Gandi** – By default, all of your contact information is hidden except organization name, if any\. However, regulations for the TLD registry take precedence\. 
+
+  For [geographic TLDs](http://docs.aws.amazon.com/Route53/latest/DeveloperGuide/registrar-tld-list.html#registrar-tld-list-geographic) that don't allow privacy protection, your personal information will be marked as "redacted" on the [Whois Directory Search](https://v4.gandi.net/whois) page on the Gandi website\. However, your personal information might be available at the domain registry or on third\-party WHOIS websites\. 
 
 To find out what information is hidden for the TLD for your domain, see [Domains That You Can Register with Amazon Route 53](registrar-tld-list.md)\.
 

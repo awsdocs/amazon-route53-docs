@@ -9,9 +9,9 @@ To create records for complex routing configurations, you can also use the traff
 
 1. If you're not creating an alias record, go to step 2\. 
 
-   Also go to step 2 if you're creating an alias record that routes DNS traffic to a CloudFront distribution, an Elastic Beanstalk environment, an Amazon S3 bucket, or another Route 53 record\.
+   Also go to step 2 if you're creating an alias record that routes DNS traffic to an AWS resource other than an Elastic Load Balancing load balancer or another Route 53 record\.
 
-   If you're creating an alias record that routes traffic to an Elastic Load Balancing Classic, Application, or Network Load Balancer, and if you created your Route 53 hosted zone and your load balancer using different accounts, perform the procedure [Getting the DNS Name for an ELB Load Balancer](#resource-record-sets-elb-dns-name-procedure) to get the DNS name for the load balancer\. 
+   If you're creating an alias record that routes traffic to an ELB load balancer, and if you created your hosted zone and your load balancer using different accounts, perform the procedure [Getting the DNS Name for an ELB Load Balancer](#resource-record-sets-elb-dns-name-procedure) to get the DNS name for the load balancer\. 
 
 1. Sign in to the AWS Management Console and open the Route 53 console at [https://console\.aws\.amazon\.com/route53/](https://console.aws.amazon.com/route53/)\.
 

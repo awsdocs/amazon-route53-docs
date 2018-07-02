@@ -14,7 +14,7 @@ For more information, see [Using AWS CloudTrail to Capture Requests Sent to the 
 
 **Amazon CloudWatch**  
 You can use Amazon CloudWatch to monitor the status—healthy or unhealthy—of your Route 53 health checks\. Health checks monitor the health and performance of your web applications, web servers, and other resources\. At regular intervals that you specify, Route 53 submits automated requests over the internet to your application, server, or other resource to verify that it's reachable, available, and functional\.  
-For more information, see [Monitoring Health Checks Using CloudWatch](health-checks-monitor-view-status.md#monitoring-health-checks)\.
+For more information, see [Monitoring Health Checks Using CloudWatch](monitoring-health-checks.md)\.
 
 **Tag Editor**  
 A tag is a label that you assign to an AWS resource, including Route 53 domains, hosted zones, and health checks\. Each tag consists of a key and a value, both of which you define\. For example, you might assign a tag to a domain registration that has the key "Customer" and the value "Example Corp\." You can use tags for a variety of purposes; one common use is to categorize and track your AWS costs\.  

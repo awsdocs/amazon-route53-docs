@@ -31,6 +31,7 @@ You can also transfer an existing domain to Route 53, but the process is more c
 + [Step 4: Create a Website and Upload It to Your S3 Bucket](#getting-started-create-website)
 + [Step 5: Route DNS Traffic for Your Domain to Your Website Bucket](#getting-started-create-alias)
 + [Step 6: Test Your Website](#getting-started-test)
++ [Step 7 \(Optional\): Use Amazon CloudFront to Speed Up Distribution of Your Content](#getting-started-cloudfront)
 
 ## Prerequisites<a name="getting-started-prerequisites"></a>
 
@@ -210,7 +211,7 @@ Now that you have an S3 bucket to save your website in, you can create the first
    <h1>Routing Internet Traffic to an Amazon S3 Bucket for Your Website</h1>
    
    <p>For more information, see 
-   <a href url="http://docs.aws.amazon.com/Route53/latest/DeveloperGuide/getting-started.html">Getting Started with Amazon Route 53</a> 
+   <a href="http://docs.aws.amazon.com/Route53/latest/DeveloperGuide/getting-started.html">Getting Started with Amazon Route 53</a> 
    in the <emphasis>Amazon Route 53 Developer Guide</emphasis>.</p>
    
    </body>
@@ -277,3 +278,13 @@ To verify that the website is working correctly, open a web browser and browse t
 In some cases, you might need to clear the cache to see the expected behavior\.
 
 For more advanced information about routing your internet traffic, see [Configuring Amazon Route 53 as Your DNS Service](dns-configuring.md)\. For information about routing your internet traffic to AWS resources, see [Routing Internet Traffic to Your AWS Resources](routing-to-aws-resources.md)\.
+
+## Step 7 \(Optional\): Use Amazon CloudFront to Speed Up Distribution of Your Content<a name="getting-started-cloudfront"></a>
+
+CloudFront is a web service that speeds up distribution of your static and dynamic web content, such as \.html, \.css, \.js, and image files, to your users\. CloudFront delivers your content through a worldwide network of data centers called edge locations\. When a user requests content that you're serving with CloudFront, the user is routed to the edge location that provides the lowest latency \(time delay\), so that content is delivered with the best possible performance\.
+
++ If the content is already in the edge location with the lowest latency, CloudFront delivers it immediately\.
+
++ If the content is not in that edge location, CloudFront retrieves it from an Amazon S3 bucket or an HTTP server \(for example, a web server\) that you have identified as the source for the definitive version of your content\.
+
+For information about using CloudFront to distribute the content in your Amazon S3 bucket, see [Adding CloudFront When You're Distributing Content from Amazon S3](http://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/MigrateS3ToCloudFront.html#adding-cloudfront-to-s3) in the *Amazon CloudFront Developer Guide*\. 

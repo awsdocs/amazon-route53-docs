@@ -1,9 +1,12 @@
 # Values for Failover Alias Records<a name="resource-record-sets-values-failover-alias"></a>
 
-When you create failover alias records, you specify the following values:
+When you create failover alias records, you specify the following values\.
 
-**Note**  
-For information about creating failover records in a private hosted zone, see [Configuring Failover in a Private Hosted Zone](http://docs.aws.amazon.com/Route53/latest/DeveloperGuide/dns-failover-private-hosted-zones.html) in the *Amazon Route 53 Developer Guide*\.
+For information, see the following topics:
+
++ For information about creating failover records in a private hosted zone, see [Configuring Failover in a Private Hosted Zone](dns-failover-private-hosted-zones.md)\.
+
++ For information about alias records, see [Choosing Between Alias and Non\-Alias Records](resource-record-sets-choosing-alias-non-alias.md)\.
 
 
 + [Name](#rrsets-values-failover-alias-name)
@@ -64,9 +67,10 @@ Select **A — IPv4 address** or **AAAA — IPv6 address**
 Select **A — IPv4 address**
 
 **Another record in this hosted zone**  
-Select the type of the record that you're creating the alias for\. All types are supported except **NS** and **SOA**\.
+Select the type of the record that you're creating the alias for\. All types are supported except **NS** and **SOA**\.  
+If you're creating an alias record that has the same name as the hosted zone \(known as the *zone apex*\), you can't route traffic to a record for which the value of **Type** is **CNAME**\. This is because the alias record must have the same type as the record you're routing traffic to, and creating a CNAME record for the zone apex isn't supported even for an alias record\. 
 
-Select any value except **NS** or **SOA**\. Select the same value for both the primary and secondary failover records\.
+Select the same value for both the primary and secondary failover records\.
 
 ## Alias<a name="rrsets-values-failover-alias-alias"></a>
 
@@ -97,6 +101,7 @@ For CloudFront distributions, do one of the following:
   If you used one account to create the current hosted zone and one or more different accounts to create all of your distributions, the **Alias Targets** list shows **No Targets Available** under **CloudFront Distributions**\.
 Do not route queries to a CloudFront distribution that has not propagated to all edge locations, or your users won't be able to access the applicable content\. 
 Your CloudFront distribution must include an alternate domain name that matches the name of the record\. For example, if the name of the record is **acme\.example\.com**, your CloudFront distribution must include **acme\.example\.com** as one of the alternate domain names\. For more information, see [Using Alternate Domain Names \(CNAMEs\)](http://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/CNAMEs.html) in the *Amazon CloudFront Developer Guide*\.  
+For failover alias records, you can't specify a CloudFront distribution for both the primary and secondary records\. A distribution must include an alternate domain name that matches the name of the record\. However, the primary and secondary records have the same name, and you can't include the same alternate domain name in more than one distribution\.
 If IPv6 is enabled for the distribution, create two records, one with a value of **A — IPv4 address** for **Type**, and one with a value of **AAAA — IPv6 address**\.
 
 **Elastic Beanstalk environments that have regionalized subdomains**  
@@ -136,7 +141,8 @@ In a group of weighted alias, latency alias, failover alias, or geolocation alia
 
 **Records in this Hosted Zone**  
 For records in this hosted zone, choose **Alias Target** and choose the applicable record\. If you have a lot of records, you can type the first few characters of the name to filter the list\.  
-If the hosted zone contains only the default NS and SOA records, the **Alias Targets** list shows **No Targets Available**\.
+If the hosted zone contains only the default NS and SOA records, the **Alias Targets** list shows **No Targets Available**\.  
+If you're creating an alias record that has the same name as the hosted zone \(known as the *zone apex*\), you can't choose a record for which the value of **Type** is **CNAME**\. This is because the alias record must have the same type as the record you're routing traffic to, and creating a CNAME record for the zone apex isn't supported even for an alias record\. 
 
 ## Alias Hosted Zone ID<a name="rrsets-values-failover-alias-hosted-zone-id"></a>
 
@@ -191,7 +197,7 @@ If the AWS resource that you specify in **Alias Target** is a record or a group 
 
 Select **Yes** if you want Route 53 to check the health of a specified endpoint and to respond to DNS queries using this record only when the endpoint is healthy\. Then select the health check that you want Route 53 to perform for this record\. 
 
-Route 53 doesn't check the health of the endpoint specified in the record, for example, the endpoint specified by the IP address in the **Value** field\. When you select a health check for a record, Route 53 checks the health of the endpoint that you specified in the health check\. For information about how Route 53 determines whether an endpoint is healthy, see [How Amazon Route 53 Determines Whether an Endpoint Is Healthy](dns-failover-determining-health-of-endpoints.md)\.
+Route 53 doesn't check the health of the endpoint specified in the record, for example, the endpoint specified by the IP address in the **Value** field\. When you select a health check for a record, Route 53 checks the health of the endpoint that you specified in the health check\. For information about how Route 53 determines whether an endpoint is healthy, see [How Amazon Route 53 Determines Whether a Health Check Is HealthyHow Route 53 Determines Whether a Health Check Is Healthy](dns-failover-determining-health-of-endpoints.md)\.
 
 Associating a health check with a record is useful only when Route 53 is choosing between two or more records to respond to a DNS query, and you want Route 53 to base the choice in part on the status of a health check\. Use health checks only in the following configurations:
 
@@ -205,5 +211,3 @@ If your health checks specify the endpoint only by domain name, we recommend tha
 
 **Important**  
 In this configuration, if you create a health check for which the value of **Domain Name** matches the name of the records and then associate the health check with those records, health check results will be unpredictable\.
-
-For more information about checking the health of endpoints, see [Creating Amazon Route 53 Health Checks and Configuring DNS Failover](dns-failover.md)\.

@@ -23,9 +23,9 @@ Before you get started, you need the following:
 
 + A registered domain name\. \(You don't need to use Route 53 as the domain registrar\.\)
 
-+ Route 53 as the DNS service for the domain\. To use the procedures in this topic, Route 53 must be your DNS service provider, but you can also create a CNAME record with another DNS service provider\.
++ Route 53 as the DNS service for the domain\. If you register your domain name by using Route 53, we automatically configure Route 53 as the DNS service for the domain\. 
 
-  For more information, see [Using Amazon Route 53 as the DNS Service for Subdomains Without Migrating the Parent Domain](creating-migrating.md)\.
+  For information about using Route 53 as the DNS service provider for your domain, see [Making Amazon Route 53 the DNS Service for an Existing DomainMaking Route 53 the DNS Service for an Existing Domain](MigratingDNS.md)\.
 
 ## Configuring Amazon Route 53 So You Can Use Your Domain Name to Open Connections<a name="routing-to-rds-db-procedures"></a>
 

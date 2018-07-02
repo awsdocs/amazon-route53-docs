@@ -20,5 +20,5 @@ When you transfer a domain that has a geographic TLD \(for example, \.co\.uk\) t
 | --- | --- | 
 | Africa | **\.co\.za** – The expiration date remains the same\. | 
 | Americas |  **\.cl, \.com\.ar, \.com\.br** – The expiration date remains the same\. **\.ca, \.co, \.mx, \.us** – One year is added to the old expiration date\.  | 
-| Asia/Oceania |  **\.co\.nz, \.com\.au, \.com\.sg, \.jp, \.net\.au, \.net\.nz, \.org\.nz, \.ru, \.sg** – The expiration date remains the same\. **\.in** – One year is added to the old expiration date\.  | 
-| Europe |  **\.ch, \.co\.uk, \.de, \.es, \.fi, \.me\.uk, \.org\.uk, \.se** – The expiration date remains the same\. **\.berlin, \.eu, \.io, \.me, \.ruhr, \.wien** – One year is added to the old expiration date\. **\.be, \.fr, \.it, \.nl** – The new expiration date is one year after the date of transfer\.  | 
+| Asia/Oceania |  **\.co\.nz, \.com\.au, \.com\.sg, \.jp, \.net\.au, \.net\.nz, \.org\.nz, \.sg** – The expiration date remains the same\. **\.in** – One year is added to the old expiration date\.  | 
+| Europe |  **\.ch, \.co\.uk, \.es, \.fi, \.me\.uk, \.org\.uk, \.se** – The expiration date remains the same\. **\.berlin, \.eu, \.io, \.me, \.ruhr, \.wien** – One year is added to the old expiration date\. **\.be, \.de, \.fr, \.it, \.nl** – The new expiration date is one year after the date of transfer\.  | 

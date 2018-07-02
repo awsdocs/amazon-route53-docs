@@ -24,7 +24,7 @@ TLD registries have assigned special or premium prices to some domain names\. Yo
 + [Step 3: Change Settings with the Current Registrar](#domain-transfer-to-route-53-change-registrar-settings)
 + [Step 4: Get the Names of Your Name Servers](#domain-transfer-to-route-53-get-name-servers)
 + [Step 5: Request the Transfer](#domain-transfer-to-route-53-request-transfer)
-+ [Step 6: Click the Link in the Authorization Email](#domain-transfer-to-route-53-authorize-transfer)
++ [Step 6: Click the Link in the Confirmation and Authorization Emails](#domain-transfer-to-route-53-authorize-transfer)
 + [Step 7: Update the Domain Configuration](#domain-transfer-to-route-53-change-configuration)
 
 ## Transfer Requirements for Top\-Level Domains<a name="domain-transfer-to-route-53-requirements"></a>
@@ -39,13 +39,15 @@ Registries for top\-level domains \(TLDs\), such as \.com or \.org, have require
 
 + The domain cannot have any of the following domain name status codes:
 
+  + clientTransferProhibited
+
   + pendingDelete
 
   + pendingTransfer
 
   + redemptionPeriod
 
-  + clientTransferProhibited
+  + serverTransferProhibited
 
 + The registries for some top\-level domains don't allow transfers until changes are complete, such as changes to the domain owner\.
 
@@ -66,7 +68,7 @@ If the registrar for your domain is also the DNS service provider for the domain
 
 **Why transfer DNS first?**
 
-Some registrars provide free DNS service when you purchase a domain registration\. When you transfer the registration, the previous registrar will not renew your domain registration and might disable DNS service for the domain as soon as they receive a request from Route 53 to transfer the domain\. For more information, see [Migrating DNS Service for an Existing Domain to Amazon Route 53Migrating DNS Service for an Existing Domain to Route 53](MigratingDNS.md)\.
+Some registrars provide free DNS service when you purchase a domain registration\. When you transfer the registration, the previous registrar will not renew your domain registration and might disable DNS service for the domain as soon as they receive a request from Route 53 to transfer the domain\. For more information, see [Making Amazon Route 53 the DNS Service for an Existing DomainMaking Route 53 the DNS Service for an Existing Domain](MigratingDNS.md)\.
 
 **Important**  
 If the registrar for your domain is also the DNS service provider for the domain and you don't transfer DNS service to another provider, your website, email, and the web applications associated with the domain might become unavailable\. 
@@ -84,10 +86,6 @@ We'll send email to that email address to request authorization for the transfer
 
 **Unlock the domain so it can be transferred**  
 ICANN, the governing body for domain registrations, requires that you unlock your domain before you transfer it\.
-
-**Disable privacy protection for the domain**  
-To request authorization for the transfer, we send an email to the email address for the registrant contact that is listed in the WHOIS database\. If privacy protection is turned on, we can't get your email address\.  
-You can choose whether to re\-enable privacy protection when you request the transfer to Amazon Route 53 later in the process\. For more information, see [Enabling or Disabling Privacy Protection for Contact Information for a Domain](domain-privacy-protection.md)\.
 
 **Confirm that the domain status allows you to transfer the domain**  
 For more information, see [Transfer Requirements for Top\-Level Domains](#domain-transfer-to-route-53-requirements)\.
@@ -107,9 +105,7 @@ Some top\-level domains have additional requirements:
 **\.uk, \.co\.uk, \.me\.uk, and \.org\.uk domains**  
 If you're transferring a \.uk, \.co\.uk, \.me\.uk, or \.org\.uk domain to Route 53, you don't need to get an authorization code\. Instead, use the method provided by your current domain registrar to update the value of the IPS tag for the domain to **GANDI**, all uppercase\. \(An IPS tag is required by Nominet, the registry for \.uk domain names\.\) If your registrar will not change the value of the IPS tag, [contact Nominet](http://www.nominet.org.uk/uk-domain-names/manage-your-domain/change-registrar)\.  
 **\.jp domains**  
-If you're transferring a \.jp domain to Route 53, you don't need to get an authorization code\. Instead, use the method provided by your current domain registrar to update the value of the AGNT code to **AGNT\-1744**, all uppercase\.   
-**\.ru domains**  
-If you're transferring a \.ru domain to Route 53, you don't need to get an authorization code\. Instead, use the method provided by RU\-Center, the registry for \.ru domains, to update the **Partner Handle** for the domain to **5427/NIC\-REG**\. For more information, see the [Registrar's or Registrant's Transfer](https://www.nic.ru/dns/docs/en/domain_transf_letters.html) page on the RU\-Center website\.
+If you're transferring a \.jp domain to Route 53, you don't need to get an authorization code\. Instead, use the method provided by your current domain registrar to update the value of the AGNT code to **AGNT\-1744**, all uppercase\. 
 
 ## Step 4: Get the Names of Your Name Servers<a name="domain-transfer-to-route-53-get-name-servers"></a>
 
@@ -248,9 +244,17 @@ Choose **Add transferable domains to cart**\.
 
    We confirm that the domain is eligible for transfer, and we send an email to the registrant contact for the domain to request authorization to transfer the domain\. 
 
-## Step 6: Click the Link in the Authorization Email<a name="domain-transfer-to-route-53-authorize-transfer"></a>
+## Step 6: Click the Link in the Confirmation and Authorization Emails<a name="domain-transfer-to-route-53-authorize-transfer"></a>
 
-Soon after you request the transfer, we send an email to the registrant contact for the domain to get authorization for the transfer:
+Soon after you request the transfer, we send one or more emails to the registrant contact for the domain:
+
+**Email to confirm that the registrant contact is reachable**  
+If you've never registered a domain with Route 53 or transferred a domain to Route 53, we send you an email that asks you to confirm that the email address is valid\. We retain this information so we don't have to send this confirmation email again\.
+
+**Email to get authorization to transfer the domain**  
+If we can access your email address in the public WHOIS database, we're required to get your authorization to transfer the domain\. If you transfer 10 domains, we have to send you 10 emails, and you have to click the authorization link in each one\. If we can't access your email address by submitting a public WHOIS query, the transfer proceeds without this authorization\.
+
+The emails all go to the registrant contact for the domain:
 
 + If you're the registrant contact for the domain, follow the instructions in the email to authorize the transfer\.
 

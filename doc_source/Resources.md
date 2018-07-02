@@ -87,7 +87,7 @@ In addition to AWS resources, you can find a variety of third\-party tools and l
 
   Web\-based interface\.
 
-+ **[Ruby Fog](https://github.com/geemus/fog) \(via github\)**
++ **[Ruby Fog](https://github.com/fog/fog) \(via github\)**
 
   The Ruby cloud services library\.
 

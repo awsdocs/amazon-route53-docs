@@ -20,7 +20,7 @@ We recommend that you also create an [Elastic IP address](http://docs.aws.amazon
 
 + Route 53 as the DNS service for the domain\. If you register your domain name by using Route 53, we automatically configure Route 53 as the DNS service for the domain\. 
 
-  For information about migrating DNS service to Route 53, see [Using Amazon Route 53 as the DNS Service for Subdomains Without Migrating the Parent Domain](creating-migrating.md)\.
+  For information about using Route 53 as the DNS service provider for your domain, see [Making Amazon Route 53 the DNS Service for an Existing DomainMaking Route 53 the DNS Service for an Existing Domain](MigratingDNS.md)\.
 
 ## Configuring Amazon Route 53 to Route Traffic to an Amazon EC2 Instance<a name="routing-to-ec2-instance-configuring"></a>
 
@@ -40,13 +40,13 @@ To configure Amazon Route 53 to route traffic to an EC2 instance, perform the f
 
    1. In the bottom pane, on the **Description** tab, get the value of **Elastic IPs**\. 
 
-      If you didn't associate an Elastic IP with the instance, get the value of **Public IP**\.
+      If you didn't associate an Elastic IP with the instance, get the value of **IPv4 Public IP**\.
 
 1. Open the Route 53 console at [https://console\.aws\.amazon\.com/route53/](https://console.aws.amazon.com/route53/)\.
 
-1. In the navigation pane, choose **Hosted Zones**\.
+1. In the navigation pane, choose **Hosted zones**\.
 
-1. Choose the name of the hosted zone for the domain name that you want to use to route traffic to your EC2 instance\.
+1. Choose the name of the hosted zone that matches the name of the domain that you want to route traffic for\.
 
 1. Choose **Create Record Set**\.
 
@@ -57,7 +57,7 @@ For example, if the name of the hosted zone is example\.com and you want to use 
 **Type**  
 Choose **A – IPv4 address**\.  
 **Alias**  
-Choose **No**\.  
+Accept the default value of **No**\.  
 **TTL \(Seconds\)**  
 Accept the default value of **300**\.  
 **Value**  

@@ -1,4 +1,4 @@
-# Migrating DNS Service for a Domain that's in Use<a name="migrate-dns-domain-in-use"></a>
+# Making Route 53 the DNS Service for a Domain That's in Use<a name="migrate-dns-domain-in-use"></a>
 
 If you want to migrate DNS service to Amazon Route 53 for a domain that is currently getting traffic—for example, if your users are using the domain name to browse to a website or access a web application—perform the procedures in this section\.
 
@@ -28,7 +28,7 @@ The process that you use depends on the complexity of your current DNS configura
 
 + **If your current DNS configuration is more complex, and you're interested in Route 53 routing features** – Review the following documentation to see whether you want to use Route 53 features that aren't available from other DNS service providers\. If so, you can either create records manually, or you can import a zone file and then create or update records later:
 
-  + [Choosing Between Alias and Non\-Alias Records](resource-record-sets-choosing-alias-non-alias.md) explains the advantages of Route 53 alias records, which route traffic to some AWS resources for no charge\. Resources that you can create aliases for include CloudFront distributions, Elastic Beanstalk environments, Elastic Load Balancing load balancers, and Amazon S3 buckets\.
+  + [Choosing Between Alias and Non\-Alias Records](resource-record-sets-choosing-alias-non-alias.md) explains the advantages of Route 53 alias records, which route traffic to some AWS resources, such as CloudFront distributions and Amazon S3 buckets, for no charge\.
 
   + [Choosing a Routing Policy](routing-policy.md) explains the Route 53 routing options, for example, routing based on the location of your users, routing based on the latency between your users and your resources, routing based on whether your resources are healthy, and routing to resources based on weights that you specify\.
 **Note**  
@@ -152,11 +152,21 @@ To begin using Amazon Route 53 as the DNS service for a domain, update the NS r
 
    1. Make note of the four names listed for **Name Servers**\.
 
-1. Use the method that is provided by the current DNS service for the domain to perform the following steps:
+1. Use the method that is provided by the current DNS service for the domain to update the NS record for the hosted zone\. The process depends on whether the current DNS service lets you delete name servers:  
+**If you can delete name servers**  
 
-   + Get the names of the current name servers for the hosted zone\. If you need to revert to the current DNS configuration, these are the servers that you'll specify\.
+   + Make note of the names of the current name servers in the NS record for the hosted zone\. If you need to revert to the current DNS configuration, these are the servers that you'll specify\.
 
-   + Replace the current name servers with the names of the Route 53 name servers that you got in step 1 of this procedure\.
+   + Delete the current name servers from the NS record\. 
+
+   + Update the NS record with the names of all four of the Route 53 name servers that you got in step 1 of this procedure\.
+**Note**  
+When you're finished, the only name servers in the NS record will be the four Route 53 name servers\.  
+**If you cannot delete name servers**  
+
+   + Choose the option to use custom name servers\.
+
+   + Add all four Route 53 name servers that you got in step 1 of this procedure\. 
 
 ## Step 7: Monitor Traffic for the Domain<a name="migrate-dns-monitor-traffic"></a>
 

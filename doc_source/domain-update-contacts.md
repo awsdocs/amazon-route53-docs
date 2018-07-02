@@ -99,7 +99,7 @@ Provide the following information:
 
    + Domain that you want to change the owner for
 
-   + Account ID of the AWS account that the domain is registered to  
+   + [12\-digit account ID](http://docs.aws.amazon.com/general/latest/gr/acct-identifiers.html#FindingYourAccountIdentifiers) of the AWS account that the domain is registered to  
 **Add attachment**  
 Upload the documents that you scanned in step 4\.  
 **Contact method**  
@@ -117,6 +117,8 @@ When you change the email address for the registrant contact for a domain, the r
 You can use this procedure only if the domain is already registered with Route 53\. If you're transferring a domain to Route 53 and you can't access email at the email address for the registrant contact, you must work with the current registrar to update the email address\.
 
 ****
+
+1. Update settings for the domain to specify the correct email address for the registrant contact\. There must be an active change request before an AWS customer support engineer can process the change\. For more information, see [Updating Contact Information for a Domain](#domain-update-contacts-basic)\.
 
 1. Download the [Change of Registrant Email Form](https://s3.amazonaws.com/AWSCS_CustomerForms/AmazonRegistrarChangeOfRegistrantEmailForm.pdf)\. 
 
@@ -150,9 +152,9 @@ Provide the following information:
 
    + Domain that you want to change the email address for
 
-   + Account ID of the AWS account that the domain is registered to  
+   + [12\-digit account ID](http://docs.aws.amazon.com/general/latest/gr/acct-identifiers.html#FindingYourAccountIdentifiers) of the AWS account that the domain is registered to  
 **Add attachment**  
-Upload the documents that you scanned in step 4\.  
+Upload the documents that you scanned in step 5\.  
 **Contact method**  
 Specify a contact method and enter the applicable values\.
 

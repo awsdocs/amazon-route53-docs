@@ -1,8 +1,9 @@
 # Document History<a name="History"></a>
 
-The following entries describe important changes in each release of the Route 53 documentation\.
+The following entries describe important changes in each release of the Route 53 documentation\. For notification about updates to this documentation, you can subscribe to an RSS feed\. 
 
 
++ [2018 Releases](#doc-history-2018)
 + [2017 Releases](#doc-history-2017)
 + [2016 Releases](#doc-history-2016)
 + [2015 Releases](#doc-history-2015)
@@ -11,6 +12,17 @@ The following entries describe important changes in each release of the Route 5
 + [2012 Release](#doc-history-2012)
 + [2011 Releases](#doc-history-2011)
 + [2010 Release](#doc-history-2010)
+
+## 2018 Releases<a name="doc-history-2018"></a>
+
+**March 13, 2018**  
+If you're using auto naming, you can now use a third\-party health checker to evaluate the health of your resources\. This is useful when a resource isn't available over the internet, for example, because the instance is in an Amazon VPC\. For more information, see [HealthCheckCustomConfig](http://docs.aws.amazon.com/Route53/latest/APIReference/API_autonaming_HealthCheckCustomConfig.html) in the *Amazon Route 53 API Reference*\.
+
+**March 9, 2018**  
+IAM now includes managed policies for auto naming\. For more information, see [AWS Managed \(Predefined\) Policies for Route 53](access-control-managing-permissions.md#access-policy-examples-aws-managed)\.
+
+**February 6, 2018**  
+ For more information, see [Attributes](http://docs.aws.amazon.com/Route53/latest/APIReference/API_autonaming_RegisterInstance.html#ServiceDiscovery-autonaming_RegisterInstance-request-Attributes) in the documentation for the [RegisterInstance](http://docs.aws.amazon.com/Route53/latest/APIReference/API_autonaming_RegisterInstance.html) API in the *Amazon Route 53 API Reference*\.
 
 ## 2017 Releases<a name="doc-history-2017"></a>
 
@@ -106,13 +118,13 @@ With this release, Route 53 adds the following new features:
 
 + **Health checks based on CloudWatch metrics** – You can now create health checks that are based on the alarm state of any CloudWatch metric\. This is useful for checking the health of endpoints that can't be reached by a standard Route 53 health check, such as instances within an Amazon Virtual Private Cloud \(VPC\) that have only private IP addresses\. For more information, see the following documentation:
 
-  + **Route 53 console** – See [Monitoring a CloudWatch Alarm](health-checks-creating.md#health-checks-creating-values-cloudwatch) in the "Values that You Specify When You Create or Update Health Checks" topic\. 
+  + **Route 53 console** – See [Monitoring a CloudWatch Alarm](health-checks-creating-values.md#health-checks-creating-values-cloudwatch) in the "Values that You Specify When You Create or Update Health Checks" topic\. 
 
   + **Route 53 API** – See [CreateHealthCheck](http://docs.aws.amazon.com/Route53/latest/APIReference/API_CreateHealthCheck.html) and [UpdateHealthCheck](http://docs.aws.amazon.com/Route53/latest/APIReference/API_UpdateHealthCheck.html) in the *Amazon Route 53 API Reference*\.
 
 + **Configurable health check locations** – You can now choose the Route 53 health checking regions that check the health of your resources, which reduces the load on the endpoint from health checks\. This is useful if your customers are concentrated in one or a few geographic regions\. For more information, see the following documentation:
 
-  + **Route 53 console** – See [Health checker regions](health-checks-creating.md#health-checks-creating-values-health-checker-regions) in the "Values that You Specify When You Create or Update Health Checks" topic\. 
+  + **Route 53 console** – See [Health checker regions](health-checks-creating-values.md#health-checks-creating-values-health-checker-regions) in the "Values that You Specify When You Create or Update Health Checks" topic\. 
 
   + **Route 53 API** – See the `Regions` element for [CreateHealthCheck](http://docs.aws.amazon.com/Route53/latest/APIReference/API_CreateHealthCheck.html) and [UpdateHealthCheck](http://docs.aws.amazon.com/Route53/latest/APIReference/API_UpdateHealthCheck.html) in the *Amazon Route 53 API Reference*\.
 
@@ -129,7 +141,7 @@ With this release, Route 53 adds the following new features:
   + **Route 53 API** – See [ChangeResourceRecordSets](http://docs.aws.amazon.com/Route53/latest/APIReference/API_ChangeResourceRecordSets.html) in the *Amazon Route 53 API Reference*\.
 
 **February 23, 2016**  
-When you create or update HTTPS health checks, you can now configure Route 53 to send the host name to the endpoint during TLS negotiation\. This allows the endpoint to respond to the HTTPS request with the applicable SSL/TLS certificate\. For more information, see the description for the [Enable SNI](health-checks-creating.md#health-checks-creating-values-enable-sni) field in the "Values that You Specify When You Create or Update Health Checks" topic\. For information about how to enable SNI when you use the API to create or update a health check, see [CreateHealthCheck](http://docs.aws.amazon.com/Route53/latest/APIReference/API_CreateHealthCheck.html) and [UpdateHealthCheck](http://docs.aws.amazon.com/Route53/latest/APIReference/API_UpdateHealthCheck.html) in the *Amazon Route 53 API Reference*\.
+When you create or update HTTPS health checks, you can now configure Route 53 to send the host name to the endpoint during TLS negotiation\. This allows the endpoint to respond to the HTTPS request with the applicable SSL/TLS certificate\. For more information, see the description for the [Enable SNI](health-checks-creating-values.md#health-checks-creating-values-enable-sni) field in the "Values that You Specify When You Create or Update Health Checks" topic\. For information about how to enable SNI when you use the API to create or update a health check, see [CreateHealthCheck](http://docs.aws.amazon.com/Route53/latest/APIReference/API_CreateHealthCheck.html) and [UpdateHealthCheck](http://docs.aws.amazon.com/Route53/latest/APIReference/API_UpdateHealthCheck.html) in the *Amazon Route 53 API Reference*\.
 
 **January 27, 2016**  
 You can now register domains for over 100 additional top\-level domains \(TLDs\) such as \.accountants, \.band, and \.city\. For a complete list of supported TLDs, see [Domains That You Can Register with Amazon Route 53](registrar-tld-list.md)\.
@@ -154,7 +166,7 @@ With this release, Route 53 adds the following new features:
 
 + **Calculated health checks** – You can now create health checks whose status is determined by the health status of other health checks\. For more information, see [Creating and Updating Health Checks](health-checks-creating.md)\. In addition, see [CreateHealthCheck](http://docs.aws.amazon.com/Route53/latest/APIReference/API_CreateHealthCheck.html) in the *Amazon Route 53 API Reference*\.
 
-+ **Latency measurements for health checks** – You can now configure Route 53 to measure the latency between health checkers and your endpoint\. Latency data appears in Amazon CloudWatch graphs in the Route 53 console\. To enable latency measurements for new health checks, see the **Latency measurements** setting under [Advanced Configuration \("Monitor an endpoint" Only\)](health-checks-creating.md#health-checks-creating-values-advanced) in the topic [Values that You Specify When You Create or Update Health Checks](health-checks-creating.md#health-checks-creating-values)\. \(You can't enable latency measurements for existing health checks\.\) In addition, see **MeasureLatency** in the topic [CreateHealthCheck](http://docs.aws.amazon.com/Route53/latest/APIReference/API_CreateHealthCheck.html) in the *Amazon Route 53 API Reference*\.
++ **Latency measurements for health checks** – You can now configure Route 53 to measure the latency between health checkers and your endpoint\. Latency data appears in Amazon CloudWatch graphs in the Route 53 console\. To enable latency measurements for new health checks, see the **Latency measurements** setting under [Advanced Configuration \("Monitor an endpoint" Only\)](health-checks-creating-values.md#health-checks-creating-values-advanced) in the topic [Values That You Specify When You Create or Update Health Checks](health-checks-creating-values.md)\. \(You can't enable latency measurements for existing health checks\.\) In addition, see **MeasureLatency** in the topic [CreateHealthCheck](http://docs.aws.amazon.com/Route53/latest/APIReference/API_CreateHealthCheck.html) in the *Amazon Route 53 API Reference*\.
 
 + **Updates to the health checks dashboard in the Route 53 console** – The dashboard for monitoring health checks has been improved in a variety of ways, including CloudWatch graphs for monitoring latency between Route 53 health checkers and your endpoints\. For more information, see [Monitoring Health Check Status and Getting Notifications](health-checks-monitor-view-status.md)\.
 
@@ -167,7 +179,7 @@ You can now use the Route 53 API to list the hosted zones that are associated w
 **February 11, 2015**  
 With this release, Route 53 adds the following new features:  
 
-+ **Health Check Status** – The health checks page in the Route 53 console now includes a **Status** column that lets you view the overall status of all of your health checks\. For more information, see [Viewing Health Check Status and the Reason for Health Check Failures](health-checks-monitor-view-status.md#health-checks-view-status)\.
++ **Health Check Status** – The health checks page in the Route 53 console now includes a **Status** column that lets you view the overall status of all of your health checks\. For more information, see [Viewing Health Check Status and the Reason for Health Check Failures](health-checks-view-status.md)\.
 
 + **Integration with AWS CloudTrail** – Route 53 now works with CloudTrail to capture information about every request that your AWS account \(including your IAM users\) sends to the Route 53 API\. Integrating Route 53 and CloudTrail lets you determine which requests were made to the Route 53 API, the source IP address from which each request was made, who made the request, when it was made, and more\. For more information, see [Using AWS CloudTrail to Capture Requests Sent to the Amazon Route 53 API](logging-using-cloudtrail.md)\.
 
@@ -191,7 +203,7 @@ With this release, Route 53 adds the following new features:
 
 + **Private DNS for Amazon Virtual Private Clouds**–You can now use Route 53 to manage your internal domain names for Amazon Virtual Private Clouds \(VPCs\) without exposing DNS data to the public internet\. For more information, see [Working with Private Hosted Zones](hosted-zones-private.md)\.
 
-+ **Health check failure reasons**–You can now see the current status of a selected health check, as well as details on why the health check last failed, as reported by each of the Route 53 health checkers\. The status includes the HTTP status code, and failure reasons include information about numerous types of failures, such as string matching failures and response timeouts\. For more information, see [Viewing Health Check Status and the Reason for Health Check Failures](health-checks-monitor-view-status.md#health-checks-view-status)\.
++ **Health check failure reasons**–You can now see the current status of a selected health check, as well as details on why the health check last failed, as reported by each of the Route 53 health checkers\. The status includes the HTTP status code, and failure reasons include information about numerous types of failures, such as string matching failures and response timeouts\. For more information, see [Viewing Health Check Status and the Reason for Health Check Failures](health-checks-view-status.md)\.
 
 + **Reusable delegation sets**–You can now apply the same set of four authoritative name servers, known collectively as a delegation set, to multiple hosted zones that correspond with different domain names\. This greatly simplifies the process of migrating DNS service to Route 53 and managing large numbers of hosted zones\. Using reusable delegation sets currently requires that you use the Route 53 API or an AWS SDK\. For more information, see the [Amazon Route 53 API Reference](http://docs.aws.amazon.com/Route53/latest/APIReference/)\.
 
@@ -228,32 +240,32 @@ For more information, see [Creating, Updating, and Deleting Health Checks](healt
 **April 9, 2014**  
 With this release, you can now view what percentage of Route 53 health checkers are currently reporting that an endpoint is healthy\.  
 In addition, behavior of the Health Check Status metric in Amazon CloudWatch now shows only zero \(if your endpoint was unhealthy during a given time period\) or one \(if the endpoint was healthy for that time period\)\. The metric no longer shows values between 0 and 1 reflecting the portion of Route 53 health checks that are reporting the endpoint as healthy\.  
-For more information, see [Monitoring Health Checks Using CloudWatch](health-checks-monitor-view-status.md#monitoring-health-checks)\.
+For more information, see [Monitoring Health Checks Using CloudWatch](monitoring-health-checks.md)\.
 
 **February 18, 2014**  
 With this release, Route 53 adds the following features:  
 
-+ **Health check failover threshold:** You can now specify how many consecutive health checks an endpoint must fail before Route 53 considers the endpoint unhealthy, between 1 and 10 consecutive checks\. An unhealthy endpoint must pass the same number of checks to be considered healthy\. For more information, see [How Amazon Route 53 Determines Whether an Endpoint Is Healthy](dns-failover-determining-health-of-endpoints.md)\.
++ **Health check failover threshold:** You can now specify how many consecutive health checks an endpoint must fail before Route 53 considers the endpoint unhealthy, between 1 and 10 consecutive checks\. An unhealthy endpoint must pass the same number of checks to be considered healthy\. For more information, see [How Amazon Route 53 Determines Whether a Health Check Is HealthyHow Route 53 Determines Whether a Health Check Is Healthy](dns-failover-determining-health-of-endpoints.md)\.
 
-+ **Health check request interval:** You can now specify how frequently Route 53 sends requests to an endpoint to determine whether the endpoint is healthy\. Valid settings are 10 seconds and 30 seconds\. For more information, see [How Amazon Route 53 Determines Whether an Endpoint Is Healthy](dns-failover-determining-health-of-endpoints.md)\.
++ **Health check request interval:** You can now specify how frequently Route 53 sends requests to an endpoint to determine whether the endpoint is healthy\. Valid settings are 10 seconds and 30 seconds\. For more information, see [How Amazon Route 53 Determines Whether a Health Check Is HealthyHow Route 53 Determines Whether a Health Check Is Healthy](dns-failover-determining-health-of-endpoints.md)\.
 
 **January 30, 2014**  
 With this release, Route 53 adds the following features:  
 
-+ **HTTP and HTTPS string\-match health checks:** Route 53 now supports health checks that determine the health of an endpoint based on the appearance of a specified string in the response body\. For more information, see [How Amazon Route 53 Determines Whether an Endpoint Is Healthy](dns-failover-determining-health-of-endpoints.md)\.
++ **HTTP and HTTPS string\-match health checks:** Route 53 now supports health checks that determine the health of an endpoint based on the appearance of a specified string in the response body\. For more information, see [How Amazon Route 53 Determines Whether a Health Check Is HealthyHow Route 53 Determines Whether a Health Check Is Healthy](dns-failover-determining-health-of-endpoints.md)\.
 
-+ **HTTPS health checks:** Route 53 now supports health checks for secure, SSL\-only websites\. For more information, see [How Amazon Route 53 Determines Whether an Endpoint Is Healthy](dns-failover-determining-health-of-endpoints.md)\.
++ **HTTPS health checks:** Route 53 now supports health checks for secure, SSL\-only websites\. For more information, see [How Amazon Route 53 Determines Whether a Health Check Is HealthyHow Route 53 Determines Whether a Health Check Is Healthy](dns-failover-determining-health-of-endpoints.md)\.
 
 + **`UPSERT` for the `ChangeResourceRecordSets` API Action:** When creating or changing records using the `ChangeResourceRecordSets` API action, you can now use the `UPSERT` action either to create a new record if none exists with a given name and type, or to update an existing record\. For more information, see [ChangeResourceRecordSets](http://docs.aws.amazon.com/Route53/latest/APIReference/API_ChangeResourceRecordSets.html) in the *Amazon Route 53 API Reference*\.
 
 **January 7, 2014**  
-With this release, Route 53 adds support for health checks that determine the health of an endpoint based on whether a specified string appears in the response body\. For more information, see [How Amazon Route 53 Determines Whether an Endpoint Is Healthy](dns-failover-determining-health-of-endpoints.md)\.
+With this release, Route 53 adds support for health checks that determine the health of an endpoint based on whether a specified string appears in the response body\. For more information, see [How Amazon Route 53 Determines Whether a Health Check Is HealthyHow Route 53 Determines Whether a Health Check Is Healthy](dns-failover-determining-health-of-endpoints.md)\.
 
 ## 2013 Releases<a name="doc-history-2013"></a>
 
 **August 14, 2013**  
 With this release, Route 53 adds support for creating records by importing a BIND\-formatted zone file\. For more information, see [Creating Records By Importing a Zone File](resource-record-sets-creating-import.md)\.  
-In addition, CloudWatch metrics for Route 53 health checks have been integrated into the Route 53 console and streamlined\. For more information, see [Monitoring Health Checks Using CloudWatch](health-checks-monitor-view-status.md#monitoring-health-checks)\.
+In addition, CloudWatch metrics for Route 53 health checks have been integrated into the Route 53 console and streamlined\. For more information, see [Monitoring Health Checks Using CloudWatch](monitoring-health-checks.md)\.
 
 **June 26, 2013**  
 With this release, Route 53 adds support for integrating health checks with CloudWatch metrics so you can do the following:  
@@ -263,7 +275,7 @@ With this release, Route 53 adds support for integrating health checks with Clo
 + Review the health of a health check endpoint over a specified period of time\.
 
 + Configure CloudWatch to send an Amazon Simple Notification Service \(Amazon SNS\) alert when all Route 53 health checkers consider your specified endpoint to be unhealthy\. 
-For more information, see [Monitoring Health Checks Using CloudWatch](health-checks-monitor-view-status.md#monitoring-health-checks)\.
+For more information, see [Monitoring Health Checks Using CloudWatch](monitoring-health-checks.md)\.
 
 **June 11, 2013**  
 With this release, Route 53 adds support for creating alias records that route DNS queries to alternate domain names for Amazon CloudFront distributions\. You can use this feature both for alternate domain names at the zone apex \(example\.com\) and alternate domain names for subdomains \(www\.example\.com\)\. For more information, see [Routing Traffic to an Amazon CloudFront Web Distribution by Using Your Domain Name](routing-to-cloudfront-distribution.md)\.

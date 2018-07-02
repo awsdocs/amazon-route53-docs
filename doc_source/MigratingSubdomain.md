@@ -2,6 +2,9 @@
 
 You can migrate a subdomain to use Amazon Route 53 as the DNS service without migrating the parent domain from another DNS service\.
 
+**Important**  
+If you're already using Route 53 as the DNS service for your domain and you just want to create records for subdomains in your hosted zone, see [Routing Traffic for Subdomains](dns-routing-traffic-for-subdomains.md)\.
+
 The process has four basic steps:
 
 1. Create a Route 53 hosted zone for the subdomain\.
@@ -32,11 +35,15 @@ To create a hosted zone using the Route 53 console, perform the following proce
 
    If you're already using Route 53, choose **Hosted Zones** in the navigation pane\.
 
+1. Choose **Create Hosted Zone**\.
+
 1. In the right pane, enter the name of the subdomain, such as **apex\.example\.com**\. You can also enter an optional comment\. For more information about a field, see the tool tip for the field\.
 
    For information about how to specify characters other than a\-z, 0\-9, and \- \(hyphen\) and how to specify internationalized domain names, see [DNS Domain Name Format](DomainNameFormat.md)\.
 
-1. Below the right pane, choose **Create Hosted Zone**\.
+1. For **Type**, accept the default value of **Public Hosted Zone**\.
+
+1. At the bottom of the right pane, choose **Create**\.
 
 ## Getting Your Current DNS Configuration from Your DNS Service Provider<a name="GetParentDomainResourceRecords"></a>
 

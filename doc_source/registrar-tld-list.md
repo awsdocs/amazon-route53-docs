@@ -13,7 +13,7 @@ For most TLDs, you need to get an authorization code from the current registrar 
 For information about the cost to register domains or transfer them to Route 53, see [Amazon Route 53 Pricing for Domain Registration](https://d32ze2gidvkk54.cloudfront.net/Amazon_Route_53_Domain_Registration_Pricing_20140731.pdf)\.
 
 **Using Route 53 as your DNS service**  
-You can use Route 53 as the DNS service for any domain, even if the TLD for the domain isn't included on the following lists\. For more information about Route 53 as a DNS service, see [How Internet Traffic Is Routed to Your Website or Web Application](welcome-dns-service.md)\. For information about how to transfer DNS service for your domain to Route 53, see [Migrating DNS Service for an Existing Domain to Amazon Route 53Migrating DNS Service for an Existing Domain to Route 53](MigratingDNS.md)\.
+You can use Route 53 as the DNS service for any domain, even if the TLD for the domain isn't included on the following lists\. For more information about Route 53 as a DNS service, see [How Internet Traffic Is Routed to Your Website or Web Application](welcome-dns-service.md)\. For information about how to transfer DNS service for your domain to Route 53, see [Making Amazon Route 53 the DNS Service for an Existing DomainMaking Route 53 the DNS Service for an Existing Domain](MigratingDNS.md)\.
 
 
 + [Generic Top\-Level Domains](#registrar-tld-list-generic)
@@ -39,10 +39,7 @@ Used by educational institutions such as schools and universities\. Also used by
 **Registration and renewal period**  
 One to ten years\.  
 **Privacy protection \(applies to all contact types: person, company, association, and public body\)**  
-
-+ **Hidden** – address, phone number, fax number, and email address
-
-+ **Not hidden** – contact name and organization name  
+All information is hidden except organization name\.  
 **Internationalized domain names**  
 Supported for French and Spanish\.  
 **Authorization code required for transfer to Route 53**  
@@ -57,10 +54,7 @@ Used by businesses, groups, and individuals affiliated with the accounting profe
 **Registration and renewal period**  
 One to ten years\.  
 **Privacy protection \(applies to all contact types: person, company, association, and public body\)**  
-
-+ **Hidden** – address, phone number, fax number, and email address
-
-+ **Not hidden** – contact name and organization name  
+All information is hidden except organization name\.  
 **Internationalized domain names**  
 Supported for French and Spanish\.  
 **Authorization code required for transfer to Route 53**  
@@ -75,10 +69,7 @@ Used for websites that host adults\-only content\.
 **Registration and renewal period**  
 One to ten years\.  
 **Privacy protection \(applies to all contact types: person, company, association, and public body\)**  
-
-+ **Hidden** – address, phone number, fax number, and email address
-
-+ **Not hidden** – contact name and organization name  
+All information is hidden except organization name\.  
 **Internationalized domain names**  
 Not supported\.  
 **Authorization code required for transfer to Route 53**  
@@ -93,10 +84,7 @@ Used by any businesses or groups that identify as agencies\.
 **Registration and renewal period**  
 One to ten years\.  
 **Privacy protection \(applies to all contact types: person, company, association, and public body\)**  
-
-+ **Hidden** – address, phone number, fax number, and email address
-
-+ **Not hidden** – contact name and organization name  
+All information is hidden except organization name\.  
 **Internationalized domain names**  
 Supported for French and Spanish\.  
 **Authorization code required for transfer to Route 53**  
@@ -111,10 +99,7 @@ Used by real estate agents, landlords, and renters\.
 **Registration and renewal period**  
 One to ten years\.  
 **Privacy protection \(applies to all contact types: person, company, association, and public body\)**  
-
-+ **Hidden** – address, phone number, fax number, and email address
-
-+ **Not hidden** – contact name and organization name  
+All information is hidden except organization name\.  
 **Internationalized domain names**  
 Supported for French and Spanish\.  
 **Authorization code required for transfer to Route 53**  
@@ -129,10 +114,7 @@ Used by businesses and firms that include the term "associates" in their titles\
 **Registration and renewal period**  
 One to ten years\.  
 **Privacy protection \(applies to all contact types: person, company, association, and public body\)**  
-
-+ **Hidden** – address, phone number, fax number, and email address
-
-+ **Not hidden** – contact name and organization name  
+All information is hidden except organization name\.  
 **Internationalized domain names**  
 Supported for French and Spanish\.  
 **Authorization code required for transfer to Route 53**  
@@ -147,10 +129,7 @@ Used for events related to auctions and auction\-based buying and selling\.
 **Registration and renewal period**  
 One to ten years\.  
 **Privacy protection \(applies to all contact types: person, company, association, and public body\)**  
-
-+ **Hidden** – address, phone number, fax number, and email address
-
-+ **Not hidden** – contact name and organization name  
+All information is hidden except organization name\.  
 **Internationalized domain names**  
 Supported for Chinese, French, German, Spanish, and Latin\.  
 **Authorization code required for transfer to Route 53**  
@@ -170,7 +149,7 @@ Not supported\.
 **Internationalized domain names**  
 Supported for Cyrillic \(primarily Russian\), French, German, Italian, Portuguese, and Spanish\.  
 **Authorization code required for transfer to Route 53**  
-Yes  
+Not supported\. You can no longer transfer \.audio domains to Route 53\.  
 **DNSSEC**  
 Supported for domain registration\. For more information, see [Configuring DNSSEC for a Domain](domain-configure-dnssec.md)\.  
 **Registrar**  
@@ -185,10 +164,7 @@ Used for sharing information about musical bands and band events\. Also used by 
 **Registration and renewal period**  
 One to ten years\.  
 **Privacy protection \(applies to all contact types: person, company, association, and public body\)**  
-
-+ **Hidden** – address, phone number, fax number, and email address
-
-+ **Not hidden** – contact name and organization name  
+All information is hidden except organization name\.  
 **Internationalized domain names**  
 Supported for Chinese, French, German, Spanish, and Latin\.  
 **Authorization code required for transfer to Route 53**  
@@ -203,10 +179,7 @@ Used for information about sales and promotions\.
 **Registration and renewal period**  
 One to ten years\.  
 **Privacy protection \(applies to all contact types: person, company, association, and public body\)**  
-
-+ **Hidden** – address, phone number, fax number, and email address
-
-+ **Not hidden** – contact name and organization name  
+All information is hidden except organization name\.  
 **Internationalized domain names**  
 Supported for French and Spanish\.  
 **Authorization code required for transfer to Route 53**  
@@ -221,10 +194,7 @@ Used by businesses or groups that cater to cyclists, such as bike stores, motorc
 **Registration and renewal period**  
 One to ten years\.  
 **Privacy protection \(applies to all contact types: person, company, association, and public body\)**  
-
-+ **Hidden** – address, phone number, fax number, and email address
-
-+ **Not hidden** – contact name and organization name  
+All information is hidden except organization name\.  
 **Internationalized domain names**  
 Supported for French and Spanish\.  
 **Authorization code required for transfer to Route 53**  
@@ -239,10 +209,7 @@ Used for online gaming websites or for sharing information about the game of bin
 **Registration and renewal period**  
 One to ten years\.  
 **Privacy protection \(applies to all contact types: person, company, association, and public body\)**  
-
-+ **Hidden** – address, phone number, fax number, and email address
-
-+ **Not hidden** – contact name and organization name  
+All information is hidden except organization name\.  
 **Internationalized domain names**  
 Supported for French and Spanish\.  
 **Authorization code required for transfer to Route 53**  
@@ -257,10 +224,7 @@ Used for business or commercial use\.
 **Registration and renewal period**  
 One to ten years\.  
 **Privacy protection \(applies to all contact types: person, company, association, and public body\)**  
-
-+ **Hidden** – address, phone number, fax number, and email address
-
-+ **Not hidden** – contact name and organization name  
+All information is hidden except organization name\.  
 **Internationalized domain names**  
 Not supported\.  
 **Authorization code required for transfer to Route 53**  
@@ -275,10 +239,7 @@ Used by those who like the color black or those who want to associate the color 
 **Registration and renewal period**  
 One to ten years\.  
 **Privacy protection \(applies to all contact types: person, company, association, and public body\)**  
-
-+ **Hidden** – address, phone number, fax number, and email address
-
-+ **Not hidden** – contact name and organization name  
+All information is hidden except organization name\.  
 **Internationalized domain names**  
 Not supported\.  
 **Authorization code required for transfer to Route 53**  
@@ -293,10 +254,7 @@ Used by those who like the color blue or those who want to associate the color b
 **Registration and renewal period**  
 One to ten years\.  
 **Privacy protection \(applies to all contact types: person, company, association, and public body\)**  
-
-+ **Hidden** – address, phone number, fax number, and email address
-
-+ **Not hidden** – contact name and organization name  
+All information is hidden except organization name\.  
 **Internationalized domain names**  
 Not supported\.  
 **Authorization code required for transfer to Route 53**  
@@ -311,10 +269,7 @@ Used for information about boutiques and small specialty shops\.
 **Registration and renewal period**  
 One to ten years\.  
 **Privacy protection \(applies to all contact types: person, company, association, and public body\)**  
-
-+ **Hidden** – address, phone number, fax number, and email address
-
-+ **Not hidden** – contact name and organization name  
+All information is hidden except organization name\.  
 **Internationalized domain names**  
 Supported for French and Spanish\.  
 **Authorization code required for transfer to Route 53**  
@@ -329,10 +284,7 @@ Used by companies and individuals affiliated with the construction industry\.
 **Registration and renewal period**  
 One to ten years\.  
 **Privacy protection \(applies to all contact types: person, company, association, and public body\)**  
-
-+ **Hidden** – address, phone number, fax number, and email address
-
-+ **Not hidden** – contact name and organization name  
+All information is hidden except organization name\.  
 **Internationalized domain names**  
 Supported for French and Spanish\.  
 **Authorization code required for transfer to Route 53**  
@@ -347,10 +299,7 @@ Used by any kind of business\. Can be used as an alternative to the \.biz extens
 **Registration and renewal period**  
 One to ten years\.  
 **Privacy protection \(applies to all contact types: person, company, association, and public body\)**  
-
-+ **Hidden** – address, phone number, fax number, and email address
-
-+ **Not hidden** – contact name and organization name  
+All information is hidden except organization name\.  
 **Internationalized domain names**  
 Supported for French and Spanish\.  
 **Authorization code required for transfer to Route 53**  
@@ -365,10 +314,7 @@ Used for information about the latest news and events\.
 **Registration and renewal period**  
 One to ten years\.  
 **Privacy protection \(applies to all contact types: person, company, association, and public body\)**  
-
-+ **Hidden** – address, phone number, fax number, and email address
-
-+ **Not hidden** – contact name and organization name  
+All information is hidden except organization name\.  
 **Internationalized domain names**  
 Supported for Spanish\.  
 **Authorization code required for transfer to Route 53**  
@@ -387,10 +333,7 @@ Used by companies and individuals affiliated with the taxicab industry\.
 **Registration and renewal period**  
 One to ten years\.  
 **Privacy protection \(applies to all contact types: person, company, association, and public body\)**  
-
-+ **Hidden** – address, phone number, fax number, and email address
-
-+ **Not hidden** – contact name and organization name  
+All information is hidden except organization name\.  
 **Internationalized domain names**  
 Supported for French and Spanish\.  
 **Authorization code required for transfer to Route 53**  
@@ -405,10 +348,7 @@ Used by cafe businesses and those who have an interest in cafe culture\.
 **Registration and renewal period**  
 One to ten years\.  
 **Privacy protection \(applies to all contact types: person, company, association, and public body\)**  
-
-+ **Hidden** – address, phone number, fax number, and email address
-
-+ **Not hidden** – contact name and organization name  
+All information is hidden except organization name\.  
 **Internationalized domain names**  
 Supported for Chinese, French, German, and Spanish\.  
 **Authorization code required for transfer to Route 53**  
@@ -423,10 +363,7 @@ Used by photography enthusiasts and anyone who wants to share photos\.
 **Registration and renewal period**  
 One to ten years\.  
 **Privacy protection \(applies to all contact types: person, company, association, and public body\)**  
-
-+ **Hidden** – address, phone number, fax number, and email address
-
-+ **Not hidden** – contact name and organization name  
+All information is hidden except organization name\.  
 **Internationalized domain names**  
 Supported for French and Spanish\.  
 **Authorization code required for transfer to Route 53**  
@@ -441,10 +378,7 @@ Used by parks and recreation departments, summer camps, writers' workshops, fitn
 **Registration and renewal period**  
 One to ten years\.  
 **Privacy protection \(applies to all contact types: person, company, association, and public body\)**  
-
-+ **Hidden** – address, phone number, fax number, and email address
-
-+ **Not hidden** – contact name and organization name  
+All information is hidden except organization name\.  
 **Internationalized domain names**  
 Supported for French and Spanish\.  
 **Authorization code required for transfer to Route 53**  
@@ -459,10 +393,7 @@ Used as a general category that describes any kind of capital, such as financial
 **Registration and renewal period**  
 One to ten years\.  
 **Privacy protection \(applies to all contact types: person, company, association, and public body\)**  
-
-+ **Hidden** – address, phone number, fax number, and email address
-
-+ **Not hidden** – contact name and organization name  
+All information is hidden except organization name\.  
 **Internationalized domain names**  
 Supported for French and Spanish\.  
 **Authorization code required for transfer to Route 53**  
@@ -477,10 +408,7 @@ Used by businesses that specialize in cards such as ecards, printed greeting car
 **Registration and renewal period**  
 One to ten years\.  
 **Privacy protection \(applies to all contact types: person, company, association, and public body\)**  
-
-+ **Hidden** – address, phone number, fax number, and email address
-
-+ **Not hidden** – contact name and organization name  
+All information is hidden except organization name\.  
 **Internationalized domain names**  
 Supported for French and Spanish\.  
 **Authorization code required for transfer to Route 53**  
@@ -495,10 +423,7 @@ Used by businesses or agencies in the care\-giving field\. Also used by charitab
 **Registration and renewal period**  
 One to ten years\.  
 **Privacy protection \(applies to all contact types: person, company, association, and public body\)**  
-
-+ **Hidden** – address, phone number, fax number, and email address
-
-+ **Not hidden** – contact name and organization name  
+All information is hidden except organization name\.  
 **Internationalized domain names**  
 Supported for French and Spanish\.  
 **Authorization code required for transfer to Route 53**  
@@ -513,10 +438,7 @@ Used for information about job recruitment\.
 **Registration and renewal period**  
 One to ten years\.  
 **Privacy protection \(applies to all contact types: person, company, association, and public body\)**  
-
-+ **Hidden** – address, phone number, fax number, and email address
-
-+ **Not hidden** – contact name and organization name  
+All information is hidden except organization name\.  
 **Internationalized domain names**  
 Supported for French and Spanish\.  
 **Authorization code required for transfer to Route 53**  
@@ -531,10 +453,7 @@ Used by any organization, group, or individual engaged in money\-related activit
 **Registration and renewal period**  
 One to ten years\.  
 **Privacy protection \(applies to all contact types: person, company, association, and public body\)**  
-
-+ **Hidden** – address, phone number, fax number, and email address
-
-+ **Not hidden** – contact name and organization name  
+All information is hidden except organization name\.  
 **Internationalized domain names**  
 Supported for French and Spanish\.  
 **Authorization code required for transfer to Route 53**  
@@ -549,10 +468,7 @@ Used by the gambling industry or by gamers who want to share information about g
 **Registration and renewal period**  
 One to ten years\.  
 **Privacy protection \(applies to all contact types: person, company, association, and public body\)**  
-
-+ **Hidden** – address, phone number, fax number, and email address
-
-+ **Not hidden** – contact name and organization name  
+All information is hidden except organization name\.  
 **Internationalized domain names**  
 Supported for French and Spanish\.  
 **Authorization code required for transfer to Route 53**  
@@ -567,10 +483,7 @@ Used by catering businesses or those who share information about food\-related e
 **Registration and renewal period**  
 One to ten years\.  
 **Privacy protection \(applies to all contact types: person, company, association, and public body\)**  
-
-+ **Hidden** – address, phone number, fax number, and email address
-
-+ **Not hidden** – contact name and organization name  
+All information is hidden except organization name\.  
 **Internationalized domain names**  
 Supported for French and Spanish\.  
 **Authorization code required for transfer to Route 53**  
@@ -588,10 +501,7 @@ Used as a generic extension for everything from research organizations to commun
 **Registration and renewal period**  
 One to ten years\.  
 **Privacy protection \(applies to all contact types: person, company, association, and public body\)**  
-
-+ **Hidden** – address, phone number, fax number, and email address
-
-+ **Not hidden** – contact name and organization name  
+All information is hidden except organization name\.  
 **Internationalized domain names**  
 Supported for French and Spanish\.  
 **Authorization code required for transfer to Route 53**  
@@ -621,10 +531,7 @@ Used by any kind of online chat website\.
 **Registration and renewal period**  
 One to ten years\.  
 **Privacy protection \(applies to all contact types: person, company, association, and public body\)**  
-
-+ **Hidden** – address, phone number, fax number, and email address
-
-+ **Not hidden** – contact name and organization name  
+All information is hidden except organization name\.  
 **Internationalized domain names**  
 Supported for French and Spanish\.  
 **Authorization code required for transfer to Route 53**  
@@ -639,10 +546,7 @@ Used by e\-commerce websites to promote and sell inexpensive products\.
 **Registration and renewal period**  
 One to ten years\.  
 **Privacy protection \(applies to all contact types: person, company, association, and public body\)**  
-
-+ **Hidden** – address, phone number, fax number, and email address
-
-+ **Not hidden** – contact name and organization name  
+All information is hidden except organization name\.  
 **Internationalized domain names**  
 Supported for French and Spanish\.  
 **Authorization code required for transfer to Route 53**  
@@ -657,10 +561,7 @@ Used by churches of any size or denomination to connect with their congregations
 **Registration and renewal period**  
 One to ten years\.  
 **Privacy protection \(applies to all contact types: person, company, association, and public body\)**  
-
-+ **Hidden** – address, phone number, fax number, and email address
-
-+ **Not hidden** – contact name and organization name  
+All information is hidden except organization name\.  
 **Internationalized domain names**  
 Supported for French and Spanish\.  
 **Authorization code required for transfer to Route 53**  
@@ -675,10 +576,7 @@ Used to provide information about specific cities, such as points of interest, t
 **Registration and renewal period**  
 One to ten years\.  
 **Privacy protection \(applies to all contact types: person, company, association, and public body\)**  
-
-+ **Hidden** – address, phone number, fax number, and email address
-
-+ **Not hidden** – contact name and organization name  
+All information is hidden except organization name\.  
 **Internationalized domain names**  
 Supported for French and Spanish\.  
 **Authorization code required for transfer to Route 53**  
@@ -693,10 +591,7 @@ Used by companies that handle insurance claims or provide legal services\.
 **Registration and renewal period**  
 One to ten years\.  
 **Privacy protection \(applies to all contact types: person, company, association, and public body\)**  
-
-+ **Hidden** – address, phone number, fax number, and email address
-
-+ **Not hidden** – contact name and organization name  
+All information is hidden except organization name\.  
 **Internationalized domain names**  
 Supported for French and Spanish\.  
 **Authorization code required for transfer to Route 53**  
@@ -711,10 +606,7 @@ Used by businesses or individuals that provide cleaning services\.
 **Registration and renewal period**  
 One to ten years\.  
 **Privacy protection \(applies to all contact types: person, company, association, and public body\)**  
-
-+ **Hidden** – address, phone number, fax number, and email address
-
-+ **Not hidden** – contact name and organization name  
+All information is hidden except organization name\.  
 **Internationalized domain names**  
 Supported for French and Spanish\.  
 **Authorization code required for transfer to Route 53**  
@@ -744,10 +636,7 @@ Used by the health care industry and by medical professionals\.
 **Registration and renewal period**  
 One to ten years\.  
 **Privacy protection \(applies to all contact types: person, company, association, and public body\)**  
-
-+ **Hidden** – address, phone number, fax number, and email address
-
-+ **Not hidden** – contact name and organization name  
+All information is hidden except organization name\.  
 **Internationalized domain names**  
 Supported for French and Spanish\.  
 **Authorization code required for transfer to Route 53**  
@@ -762,10 +651,7 @@ Used by those in the fashion industry, including retailers, department stores, d
 **Registration and renewal period**  
 One to ten years\.  
 **Privacy protection \(applies to all contact types: person, company, association, and public body\)**  
-
-+ **Hidden** – address, phone number, fax number, and email address
-
-+ **Not hidden** – contact name and organization name  
+All information is hidden except organization name\.  
 **Internationalized domain names**  
 Supported for French and Spanish\.  
 **Authorization code required for transfer to Route 53**  
@@ -780,7 +666,7 @@ Used as a general extension, but ideal for companies that provide cloud computin
 **Registration and renewal period**  
 One to ten years\.  
 **Privacy protection**  
-Not supported\.  
+All information is hidden except organization name\.  
 **Internationalized domain names**  
 Not supported\.  
 **Authorization code required for transfer to Route 53**  
@@ -795,16 +681,13 @@ Used by any type of club or organization\.
 **Registration and renewal period**  
 One to ten years\.  
 **Privacy protection \(applies to all contact types: person, company, association, and public body\)**  
-
-+ **Hidden** – address, phone number, fax number, and email address
-
-+ **Not hidden** – contact name and organization name  
+All information is hidden except organization name\.  
 **Internationalized domain names**  
 Supported for Spanish and Japanese\.  
 **Authorization code required for transfer to Route 53**  
 Yes  
 **DNSSEC**  
-Not supported\.  
+Supported for domain registration\. For more information, see [Configuring DNSSEC for a Domain](domain-configure-dnssec.md)\.  
 **Registrar**  
 The registrar for this TLD is our registrar associate, Gandi\.
 
@@ -813,10 +696,7 @@ Used by anyone with an interest in coaching, such as sports professionals, lifes
 **Registration and renewal period**  
 One to ten years\.  
 **Privacy protection \(applies to all contact types: person, company, association, and public body\)**  
-
-+ **Hidden** – address, phone number, fax number, and email address
-
-+ **Not hidden** – contact name and organization name  
+All information is hidden except organization name\.  
 **Internationalized domain names**  
 Supported for French and Spanish\.  
 **Authorization code required for transfer to Route 53**  
@@ -831,10 +711,7 @@ Used as a generic extension for all kinds of code, such as codes of conduct, bui
 **Registration and renewal period**  
 One to ten years\.  
 **Privacy protection \(applies to all contact types: person, company, association, and public body\)**  
-
-+ **Hidden** – address, phone number, fax number, and email address
-
-+ **Not hidden** – contact name and organization name  
+All information is hidden except organization name\.  
 **Internationalized domain names**  
 Supported for French and Spanish\.  
 **Authorization code required for transfer to Route 53**  
@@ -849,10 +726,7 @@ Used by those in the coffee industry\.
 **Registration and renewal period**  
 One to ten years\.  
 **Privacy protection \(applies to all contact types: person, company, association, and public body\)**  
-
-+ **Hidden** – address, phone number, fax number, and email address
-
-+ **Not hidden** – contact name and organization name  
+All information is hidden except organization name\.  
 **Internationalized domain names**  
 Supported for French and Spanish\.  
 **Authorization code required for transfer to Route 53**  
@@ -897,10 +771,7 @@ Used by any type of community, club, organization, or special interest group\.
 **Registration and renewal period**  
 One to ten years\.  
 **Privacy protection \(applies to all contact types: person, company, association, and public body\)**  
-
-+ **Hidden** – address, phone number, fax number, and email address
-
-+ **Not hidden** – contact name and organization name  
+All information is hidden except organization name\.  
 **Internationalized domain names**  
 Supported for French and Spanish\.  
 **Authorization code required for transfer to Route 53**  
@@ -915,10 +786,7 @@ Used as a generic extension for companies of all kinds\.
 **Registration and renewal period**  
 One to ten years\.  
 **Privacy protection \(applies to all contact types: person, company, association, and public body\)**  
-
-+ **Hidden** – address, phone number, fax number, and email address
-
-+ **Not hidden** – contact name and organization name  
+All information is hidden except organization name\.  
 **Internationalized domain names**  
 Supported for French and Spanish\.  
 **Authorization code required for transfer to Route 53**  
@@ -933,10 +801,7 @@ Used as a generic extension for information about computers\.
 **Registration and renewal period**  
 One to ten years\.  
 **Privacy protection \(applies to all contact types: person, company, association, and public body\)**  
-
-+ **Hidden** – address, phone number, fax number, and email address
-
-+ **Not hidden** – contact name and organization name  
+All information is hidden except organization name\.  
 **Internationalized domain names**  
 Supported for French and Spanish\.  
 **Authorization code required for transfer to Route 53**  
@@ -951,10 +816,7 @@ Used by individuals and businesses associated with condominiums\.
 **Registration and renewal period**  
 One to ten years\.  
 **Privacy protection \(applies to all contact types: person, company, association, and public body\)**  
-
-+ **Hidden** – address, phone number, fax number, and email address
-
-+ **Not hidden** – contact name and organization name  
+All information is hidden except organization name\.  
 **Internationalized domain names**  
 Supported for French and Spanish\.  
 **Authorization code required for transfer to Route 53**  
@@ -969,10 +831,7 @@ Used by those in the construction industry, such as builders and contractors\.
 **Registration and renewal period**  
 One to ten years\.  
 **Privacy protection \(applies to all contact types: person, company, association, and public body\)**  
-
-+ **Hidden** – address, phone number, fax number, and email address
-
-+ **Not hidden** – contact name and organization name  
+All information is hidden except organization name\.  
 **Internationalized domain names**  
 Supported for French and Spanish\.  
 **Authorization code required for transfer to Route 53**  
@@ -987,10 +846,7 @@ Used by consultants and others who are affiliated with the consulting industry\.
 **Registration and renewal period**  
 One to ten years\.  
 **Privacy protection \(applies to all contact types: person, company, association, and public body\)**  
-
-+ **Hidden** – address, phone number, fax number, and email address
-
-+ **Not hidden** – contact name and organization name  
+All information is hidden except organization name\.  
 **Internationalized domain names**  
 Supported for Chinese, French, German, Latin, and Spanish\.  
 **Authorization code required for transfer to Route 53**  
@@ -1005,10 +861,7 @@ Used by contractors, such as contractors in the construction industry\.
 **Registration and renewal period**  
 One to ten years\.  
 **Privacy protection \(applies to all contact types: person, company, association, and public body\)**  
-
-+ **Hidden** – address, phone number, fax number, and email address
-
-+ **Not hidden** – contact name and organization name  
+All information is hidden except organization name\.  
 **Internationalized domain names**  
 Supported for French and Spanish\.  
 **Authorization code required for transfer to Route 53**  
@@ -1023,10 +876,7 @@ Used by organizations and groups who want to associate their brand with the late
 **Registration and renewal period**  
 One to ten years\.  
 **Privacy protection \(applies to all contact types: person, company, association, and public body\)**  
-
-+ **Hidden** – address, phone number, fax number, and email address
-
-+ **Not hidden** – contact name and organization name  
+All information is hidden except organization name\.  
 **Internationalized domain names**  
 Supported for French and Spanish\.  
 **Authorization code required for transfer to Route 53**  
@@ -1041,10 +891,7 @@ Used by retailers and manufacturers that provide online coupons and coupon codes
 **Registration and renewal period**  
 One to ten years\.  
 **Privacy protection \(applies to all contact types: person, company, association, and public body\)**  
-
-+ **Hidden** – address, phone number, fax number, and email address
-
-+ **Not hidden** – contact name and organization name  
+All information is hidden except organization name\.  
 **Internationalized domain names**  
 Supported for Chinese, French, German, and Spanish\.  
 **Authorization code required for transfer to Route 53**  
@@ -1059,10 +906,7 @@ Used by the credit industry\.
 **Registration and renewal period**  
 One to ten years\.  
 **Privacy protection \(applies to all contact types: person, company, association, and public body\)**  
-
-+ **Hidden** – address, phone number, fax number, and email address
-
-+ **Not hidden** – contact name and organization name  
+All information is hidden except organization name\.  
 **Internationalized domain names**  
 Supported for French and Spanish\.  
 **Authorization code required for transfer to Route 53**  
@@ -1092,10 +936,7 @@ Used by the voyage industry\.
 **Registration and renewal period**  
 One to ten years\.  
 **Privacy protection \(applies to all contact types: person, company, association, and public body\)**  
-
-+ **Hidden** – address, phone number, fax number, and email address
-
-+ **Not hidden** – contact name and organization name  
+All information is hidden except organization name\.  
 **Internationalized domain names**  
 Supported for French and Spanish\.  
 **Authorization code required for transfer to Route 53**  
@@ -1114,10 +955,7 @@ Used by dancers, dance instructors, and dance schools\.
 **Registration and renewal period**  
 One to ten years\.  
 **Privacy protection \(applies to all contact types: person, company, association, and public body\)**  
-
-+ **Hidden** – address, phone number, fax number, and email address
-
-+ **Not hidden** – contact name and organization name  
+All information is hidden except organization name\.  
 **Internationalized domain names**  
 Supported for Chinese, French, German, Latin, and Spanish\.  
 **Authorization code required for transfer to Route 53**  
@@ -1132,10 +970,7 @@ Used for dating websites\.
 **Registration and renewal period**  
 One to ten years\.  
 **Privacy protection \(applies to all contact types: person, company, association, and public body\)**  
-
-+ **Hidden** – address, phone number, fax number, and email address
-
-+ **Not hidden** – contact name and organization name  
+All information is hidden except organization name\.  
 **Internationalized domain names**  
 Supported for French and Spanish\.  
 **Authorization code required for transfer to Route 53**  
@@ -1150,10 +985,7 @@ Used to provide information about online bargains and sales\.
 **Registration and renewal period**  
 One to ten years\.  
 **Privacy protection \(applies to all contact types: person, company, association, and public body\)**  
-
-+ **Hidden** – address, phone number, fax number, and email address
-
-+ **Not hidden** – contact name and organization name  
+All information is hidden except organization name\.  
 **Internationalized domain names**  
 Supported for French and Spanish\.  
 **Authorization code required for transfer to Route 53**  
@@ -1168,10 +1000,7 @@ Used by companies that deliver any kind of merchandise or service\.
 **Registration and renewal period**  
 One to ten years\.  
 **Privacy protection \(applies to all contact types: person, company, association, and public body\)**  
-
-+ **Hidden** – address, phone number, fax number, and email address
-
-+ **Not hidden** – contact name and organization name  
+All information is hidden except organization name\.  
 **Internationalized domain names**  
 Supported for French and Spanish\.  
 **Authorization code required for transfer to Route 53**  
@@ -1186,10 +1015,7 @@ Used for information about the Democratic Party\. Also used by officials running
 **Registration and renewal period**  
 One to ten years\.  
 **Privacy protection \(applies to all contact types: person, company, association, and public body\)**  
-
-+ **Hidden** – address, phone number, fax number, and email address
-
-+ **Not hidden** – contact name and organization name  
+All information is hidden except organization name\.  
 **Internationalized domain names**  
 Supported for Chinese, French, German, Latin, and Spanish\.  
 **Authorization code required for transfer to Route 53**  
@@ -1204,10 +1030,7 @@ Used by dental professionals and dental suppliers\.
 **Registration and renewal period**  
 One to ten years\.  
 **Privacy protection \(applies to all contact types: person, company, association, and public body\)**  
-
-+ **Hidden** – address, phone number, fax number, and email address
-
-+ **Not hidden** – contact name and organization name  
+All information is hidden except organization name\.  
 **Internationalized domain names**  
 Supported for French and Spanish\.  
 **Authorization code required for transfer to Route 53**  
@@ -1222,10 +1045,7 @@ Used by diamond enthusiasts and those in the diamond industry, including sellers
 **Registration and renewal period**  
 One to ten years\.  
 **Privacy protection \(applies to all contact types: person, company, association, and public body\)**  
-
-+ **Hidden** – address, phone number, fax number, and email address
-
-+ **Not hidden** – contact name and organization name  
+All information is hidden except organization name\.  
 **Internationalized domain names**  
 Supported for French and Spanish\.  
 **Authorization code required for transfer to Route 53**  
@@ -1245,7 +1065,7 @@ Not supported\.
 **Internationalized domain names**  
 Supported for Cyrillic \(primarily Russian\), French, German, Italian, Portuguese, and Spanish\.  
 **Authorization code required for transfer to Route 53**  
-Yes  
+Not supported\. You can no longer transfer \.diet domains to Route 53\.  
 **DNSSEC**  
 Supported for domain registration\. For more information, see [Configuring DNSSEC for a Domain](domain-configure-dnssec.md)\.  
 **Registrar**  
@@ -1256,10 +1076,7 @@ Used for anything and everything digital, but ideal for technology businesses\.
 **Registration and renewal period**  
 One to ten years\.  
 **Privacy protection \(applies to all contact types: person, company, association, and public body\)**  
-
-+ **Hidden** – address, phone number, fax number, and email address
-
-+ **Not hidden** – contact name and organization name  
+All information is hidden except organization name\.  
 **Internationalized domain names**  
 Supported for French and Spanish\.  
 **Authorization code required for transfer to Route 53**  
@@ -1274,10 +1091,7 @@ Used as a general extension, but ideal for those who sell products directly to c
 **Registration and renewal period**  
 One to ten years\.  
 **Privacy protection \(applies to all contact types: person, company, association, and public body\)**  
-
-+ **Hidden** – address, phone number, fax number, and email address
-
-+ **Not hidden** – contact name and organization name  
+All information is hidden except organization name\.  
 **Internationalized domain names**  
 Supported for French and Spanish\.  
 **Authorization code required for transfer to Route 53**  
@@ -1292,10 +1106,7 @@ Used by the media sector\.
 **Registration and renewal period**  
 One to ten years\.  
 **Privacy protection \(applies to all contact types: person, company, association, and public body\)**  
-
-+ **Hidden** – address, phone number, fax number, and email address
-
-+ **Not hidden** – contact name and organization name  
+All information is hidden except organization name\.  
 **Internationalized domain names**  
 Supported for French and Spanish\.  
 **Authorization code required for transfer to Route 53**  
@@ -1310,10 +1121,7 @@ Used for discount websites and businesses that slash prices\.
 **Registration and renewal period**  
 One to ten years\.  
 **Privacy protection \(applies to all contact types: person, company, association, and public body\)**  
-
-+ **Hidden** – address, phone number, fax number, and email address
-
-+ **Not hidden** – contact name and organization name  
+All information is hidden except organization name\.  
 **Internationalized domain names**  
 Supported for French and Spanish\.  
 **Authorization code required for transfer to Route 53**  
@@ -1328,10 +1136,7 @@ Used by dog lovers and those who provide canine services and products\.
 **Registration and renewal period**  
 One to ten years\.  
 **Privacy protection \(applies to all contact types: person, company, association, and public body\)**  
-
-+ **Hidden** – address, phone number, fax number, and email address
-
-+ **Not hidden** – contact name and organization name  
+All information is hidden except organization name\.  
 **Internationalized domain names**  
 Supported for Chinese, French, German, and Spanish\.  
 **Authorization code required for transfer to Route 53**  
@@ -1346,10 +1151,7 @@ Used for information about domain names\.
 **Registration and renewal period**  
 One to ten years\.  
 **Privacy protection \(applies to all contact types: person, company, association, and public body\)**  
-
-+ **Hidden** – address, phone number, fax number, and email address
-
-+ **Not hidden** – contact name and organization name  
+All information is hidden except organization name\.  
 **Internationalized domain names**  
 Supported for French and Spanish\.  
 **Authorization code required for transfer to Route 53**  
@@ -1368,10 +1170,7 @@ Used for information about education\.
 **Registration and renewal period**  
 One to ten years\.  
 **Privacy protection \(applies to all contact types: person, company, association, and public body\)**  
-
-+ **Hidden** – address, phone number, fax number, and email address
-
-+ **Not hidden** – contact name and organization name  
+All information is hidden except organization name\.  
 **Internationalized domain names**  
 Supported for French and Spanish\.  
 **Authorization code required for transfer to Route 53**  
@@ -1386,10 +1185,7 @@ Used for information about promoting email\.
 **Registration and renewal period**  
 One to ten years\.  
 **Privacy protection \(applies to all contact types: person, company, association, and public body\)**  
-
-+ **Hidden** – address, phone number, fax number, and email address
-
-+ **Not hidden** – contact name and organization name  
+All information is hidden except organization name\.  
 **Internationalized domain names**  
 Supported for French and Spanish\.  
 **Authorization code required for transfer to Route 53**  
@@ -1404,10 +1200,7 @@ Used as a general extension, but ideal for those in the energy or energy conserv
 **Registration and renewal period**  
 One to ten years\.  
 **Privacy protection \(applies to all contact types: person, company, association, and public body\)**  
-
-+ **Hidden** – address, phone number, fax number, and email address
-
-+ **Not hidden** – contact name and organization name  
+All information is hidden except organization name\.  
 **Internationalized domain names**  
 Supported for French and Spanish\.  
 **Authorization code required for transfer to Route 53**  
@@ -1422,10 +1215,7 @@ Used by engineering firms and professionals\.
 **Registration and renewal period**  
 One to ten years\.  
 **Privacy protection \(applies to all contact types: person, company, association, and public body\)**  
-
-+ **Hidden** – address, phone number, fax number, and email address
-
-+ **Not hidden** – contact name and organization name  
+All information is hidden except organization name\.  
 **Internationalized domain names**  
 Supported for French and Spanish\.  
 **Authorization code required for transfer to Route 53**  
@@ -1440,10 +1230,7 @@ Used for information about enterprises and businesses\.
 **Registration and renewal period**  
 One to ten years\.  
 **Privacy protection \(applies to all contact types: person, company, association, and public body\)**  
-
-+ **Hidden** – address, phone number, fax number, and email address
-
-+ **Not hidden** – contact name and organization name  
+All information is hidden except organization name\.  
 **Internationalized domain names**  
 Supported for French and Spanish\.  
 **Authorization code required for transfer to Route 53**  
@@ -1458,10 +1245,7 @@ Used for information about equipment, equipment retailers or manufacturers, and 
 **Registration and renewal period**  
 One to ten years\.  
 **Privacy protection \(applies to all contact types: person, company, association, and public body\)**  
-
-+ **Hidden** – address, phone number, fax number, and email address
-
-+ **Not hidden** – contact name and organization name  
+All information is hidden except organization name\.  
 **Internationalized domain names**  
 Supported for French and Spanish\.  
 **Authorization code required for transfer to Route 53**  
@@ -1476,10 +1260,7 @@ Used for information about housing and the housing sector\.
 **Registration and renewal period**  
 One to ten years\.  
 **Privacy protection \(applies to all contact types: person, company, association, and public body\)**  
-
-+ **Hidden** – address, phone number, fax number, and email address
-
-+ **Not hidden** – contact name and organization name  
+All information is hidden except organization name\.  
 **Internationalized domain names**  
 Supported for French and Spanish\.  
 **Authorization code required for transfer to Route 53**  
@@ -1494,10 +1275,7 @@ Used for information about events of all kinds\.
 **Registration and renewal period**  
 One to ten years\.  
 **Privacy protection \(applies to all contact types: person, company, association, and public body\)**  
-
-+ **Hidden** – address, phone number, fax number, and email address
-
-+ **Not hidden** – contact name and organization name  
+All information is hidden except organization name\.  
 **Internationalized domain names**  
 Supported for French and Spanish\.  
 **Authorization code required for transfer to Route 53**  
@@ -1512,10 +1290,7 @@ Used for any type of exchange: the stock exchange, the exchange of goods, or eve
 **Registration and renewal period**  
 One to ten years\.  
 **Privacy protection \(applies to all contact types: person, company, association, and public body\)**  
-
-+ **Hidden** – address, phone number, fax number, and email address
-
-+ **Not hidden** – contact name and organization name  
+All information is hidden except organization name\.  
 **Internationalized domain names**  
 Supported for French and Spanish\.  
 **Authorization code required for transfer to Route 53**  
@@ -1530,10 +1305,7 @@ Used by those who have specialized knowledge in a variety of fields\.
 **Registration and renewal period**  
 One to ten years\.  
 **Privacy protection \(applies to all contact types: person, company, association, and public body\)**  
-
-+ **Hidden** – address, phone number, fax number, and email address
-
-+ **Not hidden** – contact name and organization name  
+All information is hidden except organization name\.  
 **Internationalized domain names**  
 Supported for French and Spanish\.  
 **Authorization code required for transfer to Route 53**  
@@ -1548,10 +1320,7 @@ Used as a generic extension for a variety of subjects, including photography, ta
 **Registration and renewal period**  
 One to ten years\.  
 **Privacy protection \(applies to all contact types: person, company, association, and public body\)**  
-
-+ **Hidden** – address, phone number, fax number, and email address
-
-+ **Not hidden** – contact name and organization name  
+All information is hidden except organization name\.  
 **Internationalized domain names**  
 Supported for French and Spanish\.  
 **Authorization code required for transfer to Route 53**  
@@ -1566,10 +1335,7 @@ Used as a general extension, but ideal for those who want to emphasize the speed
 **Registration and renewal period**  
 One to ten years\.  
 **Privacy protection \(applies to all contact types: person, company, association, and public body\)**  
-
-+ **Hidden** – address, phone number, fax number, and email address
-
-+ **Not hidden** – contact name and organization name  
+All information is hidden except organization name\.  
 **Internationalized domain names**  
 Supported for Chinese, French, German, and Spanish\.  
 **Authorization code required for transfer to Route 53**  
@@ -1588,10 +1354,7 @@ Used by anyone who has made mistakes, but ideal for publishing humorous "fail" b
 **Registration and renewal period**  
 One to ten years\.  
 **Privacy protection \(applies to all contact types: person, company, association, and public body\)**  
-
-+ **Hidden** – address, phone number, fax number, and email address
-
-+ **Not hidden** – contact name and organization name  
+All information is hidden except organization name\.  
 **Internationalized domain names**  
 Supported for French and Spanish\.  
 **Authorization code required for transfer to Route 53**  
@@ -1606,10 +1369,7 @@ Used by those in the farming industry, such as farmers and agricultural engineer
 **Registration and renewal period**  
 One to ten years\.  
 **Privacy protection \(applies to all contact types: person, company, association, and public body\)**  
-
-+ **Hidden** – address, phone number, fax number, and email address
-
-+ **Not hidden** – contact name and organization name  
+All information is hidden except organization name\.  
 **Internationalized domain names**  
 Supported for French and Spanish\.  
 **Authorization code required for transfer to Route 53**  
@@ -1624,10 +1384,7 @@ Used by the financial sector\.
 **Registration and renewal period**  
 One to ten years\.  
 **Privacy protection \(applies to all contact types: person, company, association, and public body\)**  
-
-+ **Hidden** – address, phone number, fax number, and email address
-
-+ **Not hidden** – contact name and organization name  
+All information is hidden except organization name\.  
 **Internationalized domain names**  
 Supported for French and Spanish\.  
 **Authorization code required for transfer to Route 53**  
@@ -1642,10 +1399,7 @@ Used by the financial sector\.
 **Registration and renewal period**  
 One to ten years\.  
 **Privacy protection \(applies to all contact types: person, company, association, and public body\)**  
-
-+ **Hidden** – address, phone number, fax number, and email address
-
-+ **Not hidden** – contact name and organization name  
+All information is hidden except organization name\.  
 **Internationalized domain names**  
 Supported for French and Spanish\.  
 **Authorization code required for transfer to Route 53**  
@@ -1660,10 +1414,7 @@ Used as a general extension, but ideal for websites related to fish and fishing\
 **Registration and renewal period**  
 One to ten years\.  
 **Privacy protection \(applies to all contact types: person, company, association, and public body\)**  
-
-+ **Hidden** – address, phone number, fax number, and email address
-
-+ **Not hidden** – contact name and organization name  
+All information is hidden except organization name\.  
 **Internationalized domain names**  
 Supported for French and Spanish\.  
 **Authorization code required for transfer to Route 53**  
@@ -1678,10 +1429,7 @@ Used to promote fitness and fitness services\.
 **Registration and renewal period**  
 One to ten years\.  
 **Privacy protection \(applies to all contact types: person, company, association, and public body\)**  
-
-+ **Hidden** – address, phone number, fax number, and email address
-
-+ **Not hidden** – contact name and organization name  
+All information is hidden except organization name\.  
 **Internationalized domain names**  
 Supported for French and Spanish\.  
 **Authorization code required for transfer to Route 53**  
@@ -1696,10 +1444,7 @@ Used by travel agents, airlines, and anyone affiliated with the travel industry\
 **Registration and renewal period**  
 One to ten years\.  
 **Privacy protection \(applies to all contact types: person, company, association, and public body\)**  
-
-+ **Hidden** – address, phone number, fax number, and email address
-
-+ **Not hidden** – contact name and organization name  
+All information is hidden except organization name\.  
 **Internationalized domain names**  
 Supported for French and Spanish\.  
 **Authorization code required for transfer to Route 53**  
@@ -1714,10 +1459,7 @@ Used by florists\.
 **Registration and renewal period**  
 One to ten years\.  
 **Privacy protection \(applies to all contact types: person, company, association, and public body\)**  
-
-+ **Hidden** – address, phone number, fax number, and email address
-
-+ **Not hidden** – contact name and organization name  
+All information is hidden except organization name\.  
 **Internationalized domain names**  
 Supported for French and Spanish\.  
 **Authorization code required for transfer to Route 53**  
@@ -1737,7 +1479,7 @@ Not supported\.
 **Internationalized domain names**  
 Supported for Cyrillic \(primarily Russian\), French, German, Italian, Portuguese, and Spanish\.  
 **Authorization code required for transfer to Route 53**  
-Yes  
+Not supported\. You can no longer transfer \.flowers domains to Route 53\.  
 **DNSSEC**  
 Supported for domain registration\. For more information, see [Configuring DNSSEC for a Domain](domain-configure-dnssec.md)\.  
 **Registrar**  
@@ -1751,10 +1493,7 @@ Used by anyone involved in the sport of football\.
 **Registration and renewal period**  
 One to ten years\.  
 **Privacy protection \(applies to all contact types: person, company, association, and public body\)**  
-
-+ **Hidden** – address, phone number, fax number, and email address
-
-+ **Not hidden** – contact name and organization name  
+All information is hidden except organization name\.  
 **Internationalized domain names**  
 Supported for French and Spanish\.  
 **Authorization code required for transfer to Route 53**  
@@ -1769,10 +1508,7 @@ Used for selling goods and services\.
 **Registration and renewal period**  
 One to ten years\.  
 **Privacy protection \(applies to all contact types: person, company, association, and public body\)**  
-
-+ **Hidden** – address, phone number, fax number, and email address
-
-+ **Not hidden** – contact name and organization name  
+All information is hidden except organization name\.  
 **Internationalized domain names**  
 Supported for Chinese, French, German, Latin, and Spanish\.  
 **Authorization code required for transfer to Route 53**  
@@ -1787,10 +1523,7 @@ Used by non\-profit organizations, charities, and other kinds of foundations\.
 **Registration and renewal period**  
 One to ten years\.  
 **Privacy protection \(applies to all contact types: person, company, association, and public body\)**  
-
-+ **Hidden** – address, phone number, fax number, and email address
-
-+ **Not hidden** – contact name and organization name  
+All information is hidden except organization name\.  
 **Internationalized domain names**  
 Supported for French and Spanish\.  
 **Authorization code required for transfer to Route 53**  
@@ -1805,10 +1538,7 @@ Used as a general extension for anything related to funding\.
 **Registration and renewal period**  
 One to ten years\.  
 **Privacy protection \(applies to all contact types: person, company, association, and public body\)**  
-
-+ **Hidden** – address, phone number, fax number, and email address
-
-+ **Not hidden** – contact name and organization name  
+All information is hidden except organization name\.  
 **Internationalized domain names**  
 Supported for French and Spanish\.  
 **Authorization code required for transfer to Route 53**  
@@ -1838,10 +1568,7 @@ Used for information about soccer \(futbol\)\.
 **Registration and renewal period**  
 One to ten years\.  
 **Privacy protection \(applies to all contact types: person, company, association, and public body\)**  
-
-+ **Hidden** – address, phone number, fax number, and email address
-
-+ **Not hidden** – contact name and organization name  
+All information is hidden except organization name\.  
 **Internationalized domain names**  
 Supported for Chinese, French, German, Latin, and Spanish\.  
 **Authorization code required for transfer to Route 53**  
@@ -1856,10 +1583,7 @@ Used as a general extension, but ideal for sharing information of all kinds\. "F
 **Registration and renewal period**  
 One to ten years\.  
 **Privacy protection \(applies to all contact types: person, company, association, and public body\)**  
-
-+ **Hidden** – address, phone number, fax number, and email address
-
-+ **Not hidden** – contact name and organization name  
+All information is hidden except organization name\.  
 **Internationalized domain names**  
 Supported for Chinese, French, German, and Spanish\.  
 **Authorization code required for transfer to Route 53**  
@@ -1878,10 +1602,7 @@ Used by owners of art galleries\.
 **Registration and renewal period**  
 One to ten years\.  
 **Privacy protection \(applies to all contact types: person, company, association, and public body\)**  
-
-+ **Hidden** – address, phone number, fax number, and email address
-
-+ **Not hidden** – contact name and organization name  
+All information is hidden except organization name\.  
 **Internationalized domain names**  
 Supported for French and Spanish\.  
 **Authorization code required for transfer to Route 53**  
@@ -1902,7 +1623,7 @@ Supported for Cyrillic \(primarily Russian\), French, German, Italian, Portugues
 **Authorization code required for transfer to Route 53**  
 Yes  
 **DNSSEC**  
-Not supported\.  
+Supported for domain registration\. For more information, see [Configuring DNSSEC for a Domain](domain-configure-dnssec.md)\.  
 **Registrar**  
 The registrar for this TLD is our registrar associate, Gandi\.
 
@@ -1911,10 +1632,7 @@ Used by businesses or organizations that sell gifts or provide gift\-related ser
 **Registration and renewal period**  
 One to ten years\.  
 **Privacy protection \(applies to all contact types: person, company, association, and public body\)**  
-
-+ **Hidden** – address, phone number, fax number, and email address
-
-+ **Not hidden** – contact name and organization name  
+All information is hidden except organization name\.  
 **Internationalized domain names**  
 Supported for French and Spanish\.  
 **Authorization code required for transfer to Route 53**  
@@ -1929,10 +1647,7 @@ Used by those in the glass industry, such as glass cutters and window installers
 **Registration and renewal period**  
 One to ten years\.  
 **Privacy protection \(applies to all contact types: person, company, association, and public body\)**  
-
-+ **Hidden** – address, phone number, fax number, and email address
-
-+ **Not hidden** – contact name and organization name  
+All information is hidden except organization name\.  
 **Internationalized domain names**  
 Supported for French and Spanish\.  
 **Authorization code required for transfer to Route 53**  
@@ -1946,8 +1661,8 @@ The registrar for this TLD is our registrar associate, Gandi\.
 Used by businesses or groups with an international market or vision\.    
 **Registration and renewal period**  
 One to ten years\.  
-**Privacy protection**  
-Not supported\.  
+**Privacy protection \(applies to all contact types: person, company, association, and public body\)**  
+All information is hidden except organization name\.  
 **Internationalized domain names**  
 Supported for Arabic, Belarusian, Bosnian, Bulgarian, Chinese \(Simplified\) Chinese \(Traditional\), Danish, German, Hindi, Hungarian, Icelandic, Korean, Latvian, Lithuanian, Macedonian, Montenegrin, Polish, Russian, Serbian, Spanish, Swedish, and Ukrainian\.  
 **Authorization code required for transfer to Route 53**  
@@ -1962,10 +1677,7 @@ Used as a general extension, but ideal for companies that purchase or sell gold 
 **Registration and renewal period**  
 One to ten years\.  
 **Privacy protection \(applies to all contact types: person, company, association, and public body\)**  
-
-+ **Hidden** – address, phone number, fax number, and email address
-
-+ **Not hidden** – contact name and organization name  
+All information is hidden except organization name\.  
 **Internationalized domain names**  
 Supported for Chinese, French, German, and Spanish\.  
 **Authorization code required for transfer to Route 53**  
@@ -1980,10 +1692,7 @@ Used for websites devoted to the game of golf\.
 **Registration and renewal period**  
 One to ten years\.  
 **Privacy protection \(applies to all contact types: person, company, association, and public body\)**  
-
-+ **Hidden** – address, phone number, fax number, and email address
-
-+ **Not hidden** – contact name and organization name  
+All information is hidden except organization name\.  
 **Internationalized domain names**  
 Supported for Chinese, French, German, and Spanish\.  
 **Authorization code required for transfer to Route 53**  
@@ -1998,10 +1707,7 @@ Used by those in the graphics industry\.
 **Registration and renewal period**  
 One to ten years\.  
 **Privacy protection \(applies to all contact types: person, company, association, and public body\)**  
-
-+ **Hidden** – address, phone number, fax number, and email address
-
-+ **Not hidden** – contact name and organization name  
+All information is hidden except organization name\.  
 **Internationalized domain names**  
 Supported for French and Spanish\.  
 **Authorization code required for transfer to Route 53**  
@@ -2016,10 +1722,7 @@ Used for websites that offer free products, such as promotional items, downloads
 **Registration and renewal period**  
 One to ten years\.  
 **Privacy protection \(applies to all contact types: person, company, association, and public body\)**  
-
-+ **Hidden** – address, phone number, fax number, and email address
-
-+ **Not hidden** – contact name and organization name  
+All information is hidden except organization name\.  
 **Internationalized domain names**  
 Supported for French and Spanish\.  
 **Authorization code required for transfer to Route 53**  
@@ -2033,8 +1736,8 @@ The registrar for this TLD is our registrar associate, Gandi\.
 Used for websites devoted to conservation, ecology, the environment, and the green lifestyle\.     
 **Registration and renewal period**  
 One to ten years\.  
-**Privacy protection**  
-Not supported\.  
+**Privacy protection \(applies to all contact types: person, company, association, and public body\)**  
+All information is hidden except organization name\.  
 **Internationalized domain names**  
 Not supported\.  
 **Authorization code required for transfer to Route 53**  
@@ -2049,10 +1752,7 @@ Used for sharing complaints and criticism\.
 **Registration and renewal period**  
 One to ten years\.  
 **Privacy protection \(applies to all contact types: person, company, association, and public body\)**  
-
-+ **Hidden** – address, phone number, fax number, and email address
-
-+ **Not hidden** – contact name and organization name  
+All information is hidden except organization name\.  
 **Internationalized domain names**  
 Supported for French and Spanish\.  
 **Authorization code required for transfer to Route 53**  
@@ -2067,10 +1767,7 @@ Used as a general extension, but ideal for websites that focus on travel destina
 **Registration and renewal period**  
 One to ten years\.  
 **Privacy protection \(applies to all contact types: person, company, association, and public body\)**  
-
-+ **Hidden** – address, phone number, fax number, and email address
-
-+ **Not hidden** – contact name and organization name  
+All information is hidden except organization name\.  
 **Internationalized domain names**  
 Supported for French and Spanish\.  
 **Authorization code required for transfer to Route 53**  
@@ -2090,9 +1787,9 @@ Not supported\.
 **Internationalized domain names**  
 Supported for Cyrillic \(primarily Russian\), French, German, Italian, Portuguese, and Spanish\.  
 **Authorization code required for transfer to Route 53**  
-Yes  
+Not supported\. You can no longer transfer \.guitars domains to Route 53\.  
 **DNSSEC**  
-Not supported\.  
+Supported for domain registration\. For more information, see [Configuring DNSSEC for a Domain](domain-configure-dnssec.md)\.  
 **Registrar**  
 The registrar for this TLD is our registrar associate, Gandi\.
 
@@ -2101,10 +1798,7 @@ Used by those who want to share their knowledge about a variety of subjects\.
 **Registration and renewal period**  
 One to ten years\.  
 **Privacy protection \(applies to all contact types: person, company, association, and public body\)**  
-
-+ **Hidden** – address, phone number, fax number, and email address
-
-+ **Not hidden** – contact name and organization name  
+All information is hidden except organization name\.  
 **Internationalized domain names**  
 Supported for French and Spanish\.  
 **Authorization code required for transfer to Route 53**  
@@ -2123,10 +1817,7 @@ Used by real estate and construction industries\. "Haus" is a German word that m
 **Registration and renewal period**  
 One to ten years\.  
 **Privacy protection \(applies to all contact types: person, company, association, and public body\)**  
-
-+ **Hidden** – address, phone number, fax number, and email address
-
-+ **Not hidden** – contact name and organization name  
+All information is hidden except organization name\.  
 **Internationalized domain names**  
 Supported for Chinese, French, German, Latin, and Spanish\.  
 **Authorization code required for transfer to Route 53**  
@@ -2141,10 +1832,7 @@ Used by the heathcare sector\.
 **Registration and renewal period**  
 One to ten years\.  
 **Privacy protection \(applies to all contact types: person, company, association, and public body\)**  
-
-+ **Hidden** – address, phone number, fax number, and email address
-
-+ **Not hidden** – contact name and organization name  
+All information is hidden except organization name\.  
 **Internationalized domain names**  
 Supported for French and Spanish\.  
 **Authorization code required for transfer to Route 53**  
@@ -2189,10 +1877,7 @@ Used for websites devoted to the game of hockey\.
 **Registration and renewal period**  
 One to ten years\.  
 **Privacy protection \(applies to all contact types: person, company, association, and public body\)**  
-
-+ **Hidden** – address, phone number, fax number, and email address
-
-+ **Not hidden** – contact name and organization name  
+All information is hidden except organization name\.  
 **Internationalized domain names**  
 Supported for Chinese, French, German, and Spanish\.  
 **Authorization code required for transfer to Route 53**  
@@ -2207,10 +1892,7 @@ Used by financial advisors, stockbrokers, and those who work with investments\.
 **Registration and renewal period**  
 One to ten years\.  
 **Privacy protection \(applies to all contact types: person, company, association, and public body\)**  
-
-+ **Hidden** – address, phone number, fax number, and email address
-
-+ **Not hidden** – contact name and organization name  
+All information is hidden except organization name\.  
 **Internationalized domain names**  
 Supported for French and Spanish\.  
 **Authorization code required for transfer to Route 53**  
@@ -2225,10 +1907,7 @@ Used by those in the travel industry and individuals and businesses involved in 
 **Registration and renewal period**  
 One to ten years\.  
 **Privacy protection \(applies to all contact types: person, company, association, and public body\)**  
-
-+ **Hidden** – address, phone number, fax number, and email address
-
-+ **Not hidden** – contact name and organization name  
+All information is hidden except organization name\.  
 **Internationalized domain names**  
 Supported for French and Spanish\.  
 **Authorization code required for transfer to Route 53**  
@@ -2243,10 +1922,7 @@ Used by companies that provide web hosting platforms and services\.
 **Registration and renewal period**  
 One to ten years\.  
 **Privacy protection \(applies to all contact types: person, company, association, and public body\)**  
-
-+ **Hidden** – address, phone number, fax number, and email address
-
-+ **Not hidden** – contact name and organization name  
+All information is hidden except organization name\.  
 **Internationalized domain names**  
 Not supported\.  
 **Authorization code required for transfer to Route 53**  
@@ -2266,7 +1942,7 @@ Not supported\.
 **Internationalized domain names**  
 Supported for Chinese, French, German, and Spanish\.  
 **Authorization code required for transfer to Route 53**  
-Yes  
+Not supported\. You can no longer transfer \.hosting domains to Route 53\.  
 **DNSSEC**  
 Supported for domain registration\. For more information, see [Configuring DNSSEC for a Domain](domain-configure-dnssec.md)\.  
 **Registrar**  
@@ -2277,10 +1953,7 @@ Used by real estate agents and buyers and sellers of houses\.
 **Registration and renewal period**  
 One to ten years\.  
 **Privacy protection \(applies to all contact types: person, company, association, and public body\)**  
-
-+ **Hidden** – address, phone number, fax number, and email address
-
-+ **Not hidden** – contact name and organization name  
+All information is hidden except organization name\.  
 **Internationalized domain names**  
 Supported for French and Spanish\.  
 **Authorization code required for transfer to Route 53**  
@@ -2302,10 +1975,7 @@ Used by the real estate sector\.
 **Registration and renewal period**  
 One to ten years\.  
 **Privacy protection \(applies to all contact types: person, company, association, and public body\)**  
-
-+ **Hidden** – address, phone number, fax number, and email address
-
-+ **Not hidden** – contact name and organization name  
+All information is hidden except organization name\.  
 **Internationalized domain names**  
 Supported for French and Spanish\.  
 **Authorization code required for transfer to Route 53**  
@@ -2320,10 +1990,7 @@ Used for information about real estate\.
 **Registration and renewal period**  
 One to ten years\.  
 **Privacy protection \(applies to all contact types: person, company, association, and public body\)**  
-
-+ **Hidden** – address, phone number, fax number, and email address
-
-+ **Not hidden** – contact name and organization name  
+All information is hidden except organization name\.  
 **Internationalized domain names**  
 Supported for Chinese, French, German, and Spanish\.  
 **Authorization code required for transfer to Route 53**  
@@ -2338,10 +2005,7 @@ Used by any business or commercial enterprise that wants to identify as an indus
 **Registration and renewal period**  
 One to ten years\.  
 **Privacy protection \(applies to all contact types: person, company, association, and public body\)**  
-
-+ **Hidden** – address, phone number, fax number, and email address
-
-+ **Not hidden** – contact name and organization name  
+All information is hidden except organization name\.  
 **Internationalized domain names**  
 Supported for French and Spanish\.  
 **Authorization code required for transfer to Route 53**  
@@ -2356,10 +2020,7 @@ Used for the dissemination of information\.
 **Registration and renewal period**  
 One to ten years\.  
 **Privacy protection \(applies to all contact types: person, company, association, and public body\)**  
-
-+ **Hidden** – address, phone number, fax number, and email address
-
-+ **Not hidden** – contact name and organization name  
+All information is hidden except organization name\.  
 **Internationalized domain names**  
 Not supported\.  
 **Authorization code required for transfer to Route 53**  
@@ -2389,10 +2050,7 @@ Used by any organization or group, especially research and educational organizat
 **Registration and renewal period**  
 One to ten years\.  
 **Privacy protection \(applies to all contact types: person, company, association, and public body\)**  
-
-+ **Hidden** – address, phone number, fax number, and email address
-
-+ **Not hidden** – contact name and organization name  
+All information is hidden except organization name\.  
 **Internationalized domain names**  
 Supported for French and Spanish\.  
 **Authorization code required for transfer to Route 53**  
@@ -2407,10 +2065,7 @@ Used by insurance companies and insurance brokers\.
 **Registration and renewal period**  
 One to ten years\.  
 **Privacy protection \(applies to all contact types: person, company, association, and public body\)**  
-
-+ **Hidden** – address, phone number, fax number, and email address
-
-+ **Not hidden** – contact name and organization name  
+All information is hidden except organization name\.  
 **Internationalized domain names**  
 Supported for French and Spanish\.  
 **Authorization code required for transfer to Route 53**  
@@ -2425,10 +2080,7 @@ Used by businesses that have international chains, individuals who travel intern
 **Registration and renewal period**  
 One to ten years\.  
 **Privacy protection \(applies to all contact types: person, company, association, and public body\)**  
-
-+ **Hidden** – address, phone number, fax number, and email address
-
-+ **Not hidden** – contact name and organization name  
+All information is hidden except organization name\.  
 **Internationalized domain names**  
 Supported for French and Spanish\.  
 **Authorization code required for transfer to Route 53**  
@@ -2443,10 +2095,7 @@ Used as a general extension, but ideal for promoting investment opportunities\.
 **Registration and renewal period**  
 One to ten years\.  
 **Privacy protection \(applies to all contact types: person, company, association, and public body\)**  
-
-+ **Hidden** – address, phone number, fax number, and email address
-
-+ **Not hidden** – contact name and organization name  
+All information is hidden except organization name\.  
 **Internationalized domain names**  
 Supported for French and Spanish\.  
 **Authorization code required for transfer to Route 53**  
@@ -2464,13 +2113,13 @@ Used for promoting Irish culture and organizations\.
 **Registration and renewal period**  
 One to ten years\.  
 **Privacy protection**  
-Not supported\.  
+All information is hidden except organization name\.  
 **Internationalized domain names**  
 Not supported\.  
 **Authorization code required for transfer to Route 53**  
 Yes  
 **DNSSEC**  
-Not supported\.  
+Supported for domain registration\. For more information, see [Configuring DNSSEC for a Domain](domain-configure-dnssec.md)\.  
 **Registrar**  
 The registrar for this TLD is our registrar associate, Gandi\.
 
@@ -2479,10 +2128,7 @@ Used by jewelry sellers and buyers\.
 **Registration and renewal period**  
 One to ten years\.  
 **Privacy protection \(applies to all contact types: person, company, association, and public body\)**  
-
-+ **Hidden** – address, phone number, fax number, and email address
-
-+ **Not hidden** – contact name and organization name  
+All information is hidden except organization name\.  
 **Internationalized domain names**  
 Supported for Chinese, French, German, and Spanish\.  
 **Authorization code required for transfer to Route 53**  
@@ -2502,7 +2148,7 @@ Not supported\.
 **Internationalized domain names**  
 Supported for Cyrillic \(primarily Russian\), French, German, Italian, Portuguese, and Spanish\.  
 **Authorization code required for transfer to Route 53**  
-Yes  
+Not supported\. You can no longer transfer \.juegos domains to Route 53\.  
 **DNSSEC**  
 Supported for domain registration\. For more information, see [Configuring DNSSEC for a Domain](domain-configure-dnssec.md)\.  
 **Registrar**  
@@ -2517,10 +2163,7 @@ Used for information about e\-commerce\.
 **Registration and renewal period**  
 One to ten years\.  
 **Privacy protection \(applies to all contact types: person, company, association, and public body\)**  
-
-+ **Hidden** – address, phone number, fax number, and email address
-
-+ **Not hidden** – contact name and organization name  
+All information is hidden except organization name\.  
 **Internationalized domain names**  
 Supported for Chinese, French, German, Latin, and Spanish\.  
 **Authorization code required for transfer to Route 53**  
@@ -2535,10 +2178,7 @@ Used by people whose name or surname is Kim\.
 **Registration and renewal period**  
 One to ten years\.  
 **Privacy protection \(applies to all contact types: person, company, association, and public body\)**  
-
-+ **Hidden** – address, phone number, fax number, and email address
-
-+ **Not hidden** – contact name and organization name  
+All information is hidden except organization name\.  
 **Internationalized domain names**  
 Supported\.  
 **Authorization code required for transfer to Route 53**  
@@ -2553,10 +2193,7 @@ Used by kitchen retailers, cooks, food bloggers, and anyone in the food industry
 **Registration and renewal period**  
 One to ten years\.  
 **Privacy protection \(applies to all contact types: person, company, association, and public body\)**  
-
-+ **Hidden** – address, phone number, fax number, and email address
-
-+ **Not hidden** – contact name and organization name  
+All information is hidden except organization name\.  
 **Internationalized domain names**  
 Supported for French and Spanish\.  
 **Authorization code required for transfer to Route 53**  
@@ -2577,7 +2214,7 @@ Supported for Maori\.
 **Authorization code required for transfer to Route 53**  
 Yes  
 **DNSSEC**  
-Not supported\.  
+Supported for domain registration\. For more information, see [Configuring DNSSEC for a Domain](domain-configure-dnssec.md)\.  
 **Registrar**  
 The registrar for this TLD is our registrar associate, Gandi\.
 
@@ -2590,10 +2227,7 @@ Used by farmers, real estate agents, commercial developers, and anyone with an i
 **Registration and renewal period**  
 One to ten years\.  
 **Privacy protection \(applies to all contact types: person, company, association, and public body\)**  
-
-+ **Hidden** – address, phone number, fax number, and email address
-
-+ **Not hidden** – contact name and organization name  
+All information is hidden except organization name\.  
 **Internationalized domain names**  
 Supported for French and Spanish\.  
 **Authorization code required for transfer to Route 53**  
@@ -2608,10 +2242,7 @@ Used by realtors, landlords, and renters\.
 **Registration and renewal period**  
 One to ten years\.  
 **Privacy protection \(applies to all contact types: person, company, association, and public body\)**  
-
-+ **Hidden** – address, phone number, fax number, and email address
-
-+ **Not hidden** – contact name and organization name  
+All information is hidden except organization name\.  
 **Internationalized domain names**  
 Supported for French and Spanish\.  
 **Authorization code required for transfer to Route 53**  
@@ -2626,10 +2257,7 @@ Used by members of the legal profession\.
 **Registration and renewal period**  
 One to ten years\.  
 **Privacy protection \(applies to all contact types: person, company, association, and public body\)**  
-
-+ **Hidden** – address, phone number, fax number, and email address
-
-+ **Not hidden** – contact name and organization name  
+All information is hidden except organization name\.  
 **Internationalized domain names**  
 Supported for French and Spanish\.  
 **Authorization code required for transfer to Route 53**  
@@ -2643,8 +2271,8 @@ The registrar for this TLD is our registrar associate, Gandi\.
 Used by the community of lesbian, gay, bisexual, and transgender people\.    
 **Registration and renewal period**  
 One to ten years\.  
-**Privacy protection**  
-Not supported\.  
+**Privacy protection \(applies to all contact types: person, company, association, and public body\)**  
+All information is hidden except organization name\.  
 **Internationalized domain names**  
 Not supported\.  
 **Authorization code required for transfer to Route 53**  
@@ -2659,10 +2287,7 @@ Used as a general extension, and suitable for a wide range of businesses, groups
 **Registration and renewal period**  
 One to ten years\.  
 **Privacy protection \(applies to all contact types: person, company, association, and public body\)**  
-
-+ **Hidden** – address, phone number, fax number, and email address
-
-+ **Not hidden** – contact name and organization name  
+All information is hidden except organization name\.  
 **Internationalized domain names**  
 Supported for French and Spanish\.  
 **Authorization code required for transfer to Route 53**  
@@ -2677,10 +2302,7 @@ Used by photographers, designers, architects, engineers, and others with an inte
 **Registration and renewal period**  
 One to ten years\.  
 **Privacy protection \(applies to all contact types: person, company, association, and public body\)**  
-
-+ **Hidden** – address, phone number, fax number, and email address
-
-+ **Not hidden** – contact name and organization name  
+All information is hidden except organization name\.  
 **Internationalized domain names**  
 Supported for French and Spanish\.  
 **Authorization code required for transfer to Route 53**  
@@ -2695,10 +2317,7 @@ Used as a general extension, and suitable for a wide range of businesses, groups
 **Registration and renewal period**  
 One to ten years\.  
 **Privacy protection \(applies to all contact types: person, company, association, and public body\)**  
-
-+ **Hidden** – address, phone number, fax number, and email address
-
-+ **Not hidden** – contact name and organization name  
+All information is hidden except organization name\.  
 **Internationalized domain names**  
 Supported for French and Spanish\.  
 **Authorization code required for transfer to Route 53**  
@@ -2713,10 +2332,7 @@ Used by chauffeurs, limousine companies, and car rental agencies\.
 **Registration and renewal period**  
 One to ten years\.  
 **Privacy protection \(applies to all contact types: person, company, association, and public body\)**  
-
-+ **Hidden** – address, phone number, fax number, and email address
-
-+ **Not hidden** – contact name and organization name  
+All information is hidden except organization name\.  
 **Internationalized domain names**  
 Supported for French and Spanish\.  
 **Authorization code required for transfer to Route 53**  
@@ -2746,10 +2362,7 @@ Used as a general extension, and suitable for a wide range of businesses, groups
 **Registration and renewal period**  
 One to ten years\.  
 **Privacy protection \(applies to all contact types: person, company, association, and public body\)**  
-
-+ **Hidden** – address, phone number, fax number, and email address
-
-+ **Not hidden** – contact name and organization name  
+All information is hidden except organization name\.  
 **Internationalized domain names**  
 Supported for Chinese, French, German, Latin, and Spanish\.  
 **Authorization code required for transfer to Route 53**  
@@ -2764,10 +2377,7 @@ Used by lenders, borrowers, and credit professionals\.
 **Registration and renewal period**  
 One to ten years\.  
 **Privacy protection \(applies to all contact types: person, company, association, and public body\)**  
-
-+ **Hidden** – address, phone number, fax number, and email address
-
-+ **Not hidden** – contact name and organization name  
+All information is hidden except organization name\.  
 **Internationalized domain names**  
 Supported for Danish, German, Norwegian, and Swedish\.  
 **Authorization code required for transfer to Route 53**  
@@ -2782,10 +2392,7 @@ Used by lenders, borrowers, and credit professionals\.
 **Registration and renewal period**  
 One to ten years\.  
 **Privacy protection \(applies to all contact types: person, company, association, and public body\)**  
-
-+ **Hidden** – address, phone number, fax number, and email address
-
-+ **Not hidden** – contact name and organization name  
+All information is hidden except organization name\.  
 **Internationalized domain names**  
 Supported for French and Spanish\.  
 **Authorization code required for transfer to Route 53**  
@@ -2819,10 +2426,7 @@ Used by the real estate sector\.
 **Registration and renewal period**  
 One to ten years\.  
 **Privacy protection \(applies to all contact types: person, company, association, and public body\)**  
-
-+ **Hidden** – address, phone number, fax number, and email address
-
-+ **Not hidden** – contact name and organization name  
+All information is hidden except organization name\.  
 **Internationalized domain names**  
 Supported for French and Spanish\.  
 **Authorization code required for transfer to Route 53**  
@@ -2837,10 +2441,7 @@ Used for information about the business world and company management\.
 **Registration and renewal period**  
 One to ten years\.  
 **Privacy protection \(applies to all contact types: person, company, association, and public body\)**  
-
-+ **Hidden** – address, phone number, fax number, and email address
-
-+ **Not hidden** – contact name and organization name  
+All information is hidden except organization name\.  
 **Internationalized domain names**  
 Supported for French and Spanish\.  
 **Authorization code required for transfer to Route 53**  
@@ -2855,10 +2456,7 @@ Used by the marketing sector for a variety of purposes\.
 **Registration and renewal period**  
 One to ten years\.  
 **Privacy protection \(applies to all contact types: person, company, association, and public body\)**  
-
-+ **Hidden** – address, phone number, fax number, and email address
-
-+ **Not hidden** – contact name and organization name  
+All information is hidden except organization name\.  
 **Internationalized domain names**  
 Supported for French and Spanish\.  
 **Authorization code required for transfer to Route 53**  
@@ -2873,10 +2471,7 @@ Used for websites that provide information about the master's degree in business
 **Registration and renewal period**  
 One to ten years\.  
 **Privacy protection \(applies to all contact types: person, company, association, and public body\)**  
-
-+ **Hidden** – address, phone number, fax number, and email address
-
-+ **Not hidden** – contact name and organization name  
+All information is hidden except organization name\.  
 **Internationalized domain names**  
 Supported for Chinese, French, German, and Spanish\.  
 **Authorization code required for transfer to Route 53**  
@@ -2891,10 +2486,7 @@ Used by the media and entertainment sectors\.
 **Registration and renewal period**  
 One to ten years\.  
 **Privacy protection \(applies to all contact types: person, company, association, and public body\)**  
-
-+ **Hidden** – address, phone number, fax number, and email address
-
-+ **Not hidden** – contact name and organization name  
+All information is hidden except organization name\.  
 **Internationalized domain names**  
 Supported for French and Spanish\.  
 **Authorization code required for transfer to Route 53**  
@@ -2909,10 +2501,7 @@ Used by commemorative organizations dedicated to honoring events and people\.
 **Registration and renewal period**  
 One to ten years\.  
 **Privacy protection \(applies to all contact types: person, company, association, and public body\)**  
-
-+ **Hidden** – address, phone number, fax number, and email address
-
-+ **Not hidden** – contact name and organization name  
+All information is hidden except organization name\.  
 **Internationalized domain names**  
 Supported for French and Spanish\.  
 **Authorization code required for transfer to Route 53**  
@@ -2927,13 +2516,13 @@ Used by companies and individuals who want to have their websites accessible on 
 **Registration and renewal period**  
 One to ten years\.  
 **Privacy protection**  
-Not supported\.  
+All information is hidden except organization name\.  
 **Internationalized domain names**  
 Not supported\.  
 **Authorization code required for transfer to Route 53**  
 Yes  
 **DNSSEC**  
-Not supported\.  
+Supported for domain registration\. For more information, see [Configuring DNSSEC for a Domain](domain-configure-dnssec.md)\.  
 **Registrar**  
 The registrar for this TLD is our registrar associate, Gandi\.
 
@@ -2942,10 +2531,7 @@ Used for information about fashion\.
 **Registration and renewal period**  
 One to ten years\.  
 **Privacy protection \(applies to all contact types: person, company, association, and public body\)**  
-
-+ **Hidden** – address, phone number, fax number, and email address
-
-+ **Not hidden** – contact name and organization name  
+All information is hidden except organization name\.  
 **Internationalized domain names**  
 Supported for Chinese, French, German, Latin, and Spanish\.  
 **Authorization code required for transfer to Route 53**  
@@ -2960,10 +2546,7 @@ Used for websites that focus on money and money\-related activities\.
 **Registration and renewal period**  
 One to ten years\.  
 **Privacy protection \(applies to all contact types: person, company, association, and public body\)**  
-
-+ **Hidden** – address, phone number, fax number, and email address
-
-+ **Not hidden** – contact name and organization name  
+All information is hidden except organization name\.  
 **Internationalized domain names**  
 Supported for French and Spanish\.  
 **Authorization code required for transfer to Route 53**  
@@ -2978,10 +2561,7 @@ Used by the mortgage industry\.
 **Registration and renewal period**  
 One to ten years\.  
 **Privacy protection \(applies to all contact types: person, company, association, and public body\)**  
-
-+ **Hidden** – address, phone number, fax number, and email address
-
-+ **Not hidden** – contact name and organization name  
+All information is hidden except organization name\.  
 **Internationalized domain names**  
 Supported for Chinese, French, German, Latin, and Spanish\.  
 **Authorization code required for transfer to Route 53**  
@@ -2996,10 +2576,7 @@ Used for websites that provide information about movies and movie\-making\. Suit
 **Registration and renewal period**  
 One to ten years\.  
 **Privacy protection \(applies to all contact types: person, company, association, and public body\)**  
-
-+ **Hidden** – address, phone number, fax number, and email address
-
-+ **Not hidden** – contact name and organization name  
+All information is hidden except organization name\.  
 **Internationalized domain names**  
 Supported for Chines, French, German, and Spanish\.  
 **Authorization code required for transfer to Route 53**  
@@ -3020,10 +2597,7 @@ One to ten years\.
 **Restrictions**  
 Verisign, the registry for \.name TLDs, allows you to register both second\-level domains \(*name*\.name\) and third\-level domains \(*firstname*\.*lastname*\.name\)\. Route 53 supports only second\-level domains, both for registering domains and for transferring existing domains to Route 53\.  
 **Privacy protection \(applies to all contact types: person, company, association, and public body\)**  
-
-+ **Hidden** – address, phone number, fax number, and email address
-
-+ **Not hidden** – contact name and organization name  
+All information is hidden except organization name\.  
 **Internationalized domain names**  
 Supported\.  
 **Authorization code required for transfer to Route 53**  
@@ -3053,10 +2627,7 @@ Used by those in the network industry or those who want to build connections thr
 **Registration and renewal period**  
 One to ten years\.  
 **Privacy protection \(applies to all contact types: person, company, association, and public body\)**  
-
-+ **Hidden** – address, phone number, fax number, and email address
-
-+ **Not hidden** – contact name and organization name  
+All information is hidden except organization name\.  
 **Internationalized domain names**  
 Supported for French and Spanish\.  
 **Authorization code required for transfer to Route 53**  
@@ -3071,10 +2642,7 @@ Used for distributing any newsworthy information such as current events or infor
 **Registration and renewal period**  
 One to ten years\.  
 **Privacy protection \(applies to all contact types: person, company, association, and public body\)**  
-
-+ **Hidden** – address, phone number, fax number, and email address
-
-+ **Not hidden** – contact name and organization name  
+All information is hidden except organization name\.  
 **Internationalized domain names**  
 Supported for Chinese, French, German, Latin, and Spanish\.  
 **Authorization code required for transfer to Route 53**  
@@ -3089,10 +2657,7 @@ Used by individuals and businesses who want to associate themselves with the abi
 **Registration and renewal period**  
 One to ten years\.  
 **Privacy protection \(applies to all contact types: person, company, association, and public body\)**  
-
-+ **Hidden** – address, phone number, fax number, and email address
-
-+ **Not hidden** – contact name and organization name  
+All information is hidden except organization name\.  
 **Internationalized domain names**  
 Supported for Chinese, French, German, Latin, and Spanish\.  
 **Authorization code required for transfer to Route 53**  
@@ -3111,10 +2676,7 @@ The \.onl extension is an abbreviation for "online," and it is also the short te
 **Registration and renewal period**  
 One to ten years\.  
 **Privacy protection \(applies to all contact types: person, company, association, and public body\)**  
-
-+ **Hidden** – address, phone number, fax number, and email address
-
-+ **Not hidden** – contact name and organization name  
+All information is hidden except organization name\.  
 **Internationalized domain names**  
 Supported for Arabic, Belarussian, Bosnian, Bulgarian, Chinese \(Simplified and Traditional\), Danish, German, Hindi, Hungarian, Icelandic, Korean, Lithuanian, Latvian, Macedonian, Polish, Russian, Serbian, and Spanish\.  
 **Authorization code required for transfer to Route 53**  
@@ -3129,10 +2691,7 @@ The \.onl extension is an abbreviation for "online," and it is also the short te
 **Registration and renewal period**  
 One to ten years\.  
 **Privacy protection \(applies to all contact types: person, company, association, and public body\)**  
-
-+ **Hidden** – address, phone number, fax number, and email address
-
-+ **Not hidden** – contact name and organization name  
+All information is hidden except organization name\.  
 **Internationalized domain names**  
 Supported\.  
 **Authorization code required for transfer to Route 53**  
@@ -3166,10 +2725,7 @@ Used by law firms, investors, and a variety of companies\. Also used for social 
 **Registration and renewal period**  
 One to ten years\.  
 **Privacy protection \(applies to all contact types: person, company, association, and public body\)**  
-
-+ **Hidden** – address, phone number, fax number, and email address
-
-+ **Not hidden** – contact name and organization name  
+All information is hidden except organization name\.  
 **Internationalized domain names**  
 Supported for French and Spanish\.  
 **Authorization code required for transfer to Route 53**  
@@ -3184,10 +2740,7 @@ Used as a general extension, but ideal for parts manufacturers, sellers, and buy
 **Registration and renewal period**  
 One to ten years\.  
 **Privacy protection \(applies to all contact types: person, company, association, and public body\)**  
-
-+ **Hidden** – address, phone number, fax number, and email address
-
-+ **Not hidden** – contact name and organization name  
+All information is hidden except organization name\.  
 **Internationalized domain names**  
 Supported for French and Spanish\.  
 **Authorization code required for transfer to Route 53**  
@@ -3217,10 +2770,7 @@ Used by photographers and anyone interested in photos\.
 **Registration and renewal period**  
 One to ten years\.  
 **Privacy protection \(applies to all contact types: person, company, association, and public body\)**  
-
-+ **Hidden** – address, phone number, fax number, and email address
-
-+ **Not hidden** – contact name and organization name  
+All information is hidden except organization name\.  
 **Internationalized domain names**  
 Supported for French and Spanish\.  
 **Authorization code required for transfer to Route 53**  
@@ -3235,10 +2785,7 @@ Used by photographers and anyone interested in photos\.
 **Registration and renewal period**  
 One to ten years\.  
 **Privacy protection \(applies to all contact types: person, company, association, and public body\)**  
-
-+ **Hidden** – address, phone number, fax number, and email address
-
-+ **Not hidden** – contact name and organization name  
+All information is hidden except organization name\.  
 **Internationalized domain names**  
 Supported for French and Spanish\.  
 **Authorization code required for transfer to Route 53**  
@@ -3259,7 +2806,7 @@ Supported for Cyrillic \(primarily Russian\), French, German, Italian, Portugues
 **Authorization code required for transfer to Route 53**  
 Yes  
 **DNSSEC**  
-Not supported\.  
+Supported for domain registration\. For more information, see [Configuring DNSSEC for a Domain](domain-configure-dnssec.md)\.  
 **Registrar**  
 The registrar for this TLD is our registrar associate, Gandi\.
 
@@ -3268,10 +2815,7 @@ Used by anyone interested in photography, art, and media\.
 **Registration and renewal period**  
 One to ten years\.  
 **Privacy protection \(applies to all contact types: person, company, association, and public body\)**  
-
-+ **Hidden** – address, phone number, fax number, and email address
-
-+ **Not hidden** – contact name and organization name  
+All information is hidden except organization name\.  
 **Internationalized domain names**  
 Supported for French and Spanish\.  
 **Authorization code required for transfer to Route 53**  
@@ -3286,10 +2830,7 @@ Used by those who like the color pink or those who want to associate the color p
 **Registration and renewal period**  
 One to ten years\.  
 **Privacy protection \(applies to all contact types: person, company, association, and public body\)**  
-
-+ **Hidden** – address, phone number, fax number, and email address
-
-+ **Not hidden** – contact name and organization name  
+All information is hidden except organization name\.  
 **Internationalized domain names**  
 Supported\.  
 **Authorization code required for transfer to Route 53**  
@@ -3304,10 +2845,7 @@ Used by pizza restaurants and pizza lovers\.
 **Registration and renewal period**  
 One to ten years\.  
 **Privacy protection \(applies to all contact types: person, company, association, and public body\)**  
-
-+ **Hidden** – address, phone number, fax number, and email address
-
-+ **Not hidden** – contact name and organization name  
+All information is hidden except organization name\.  
 **Internationalized domain names**  
 Supported for French and Spanish\.  
 **Authorization code required for transfer to Route 53**  
@@ -3322,10 +2860,7 @@ Used as a general extension, but ideal for the home and travel sectors\.
 **Registration and renewal period**  
 One to ten years\.  
 **Privacy protection \(applies to all contact types: person, company, association, and public body\)**  
-
-+ **Hidden** – address, phone number, fax number, and email address
-
-+ **Not hidden** – contact name and organization name  
+All information is hidden except organization name\.  
 **Internationalized domain names**  
 Supported for French and Spanish\.  
 **Authorization code required for transfer to Route 53**  
@@ -3340,10 +2875,7 @@ Used by those in the plumbing industry\.
 **Registration and renewal period**  
 One to ten years\.  
 **Privacy protection \(applies to all contact types: person, company, association, and public body\)**  
-
-+ **Hidden** – address, phone number, fax number, and email address
-
-+ **Not hidden** – contact name and organization name  
+All information is hidden except organization name\.  
 **Internationalized domain names**  
 Supported for French and Spanish\.  
 **Authorization code required for transfer to Route 53**  
@@ -3358,10 +2890,7 @@ Used as a general extension, but ideal for plus\-size clothing, add\-on software
 **Registration and renewal period**  
 One to ten years\.  
 **Privacy protection \(applies to all contact types: person, company, association, and public body\)**  
-
-+ **Hidden** – address, phone number, fax number, and email address
-
-+ **Not hidden** – contact name and organization name  
+All information is hidden except organization name\.  
 **Internationalized domain names**  
 Supported for Chinese, French, German, and Spanish\.  
 **Authorization code required for transfer to Route 53**  
@@ -3375,8 +2904,8 @@ The registrar for this TLD is our registrar associate, Gandi\.
 Used by poker players and gaming websites\.    
 **Registration and renewal period**  
 One to ten years\.  
-**Privacy protection**  
-Not supported\.  
+**Privacy protection \(applies to all contact types: person, company, association, and public body\)**  
+All information is hidden except organization name\.  
 **Internationalized domain names**  
 Not supported\.  
 **Authorization code required for transfer to Route 53**  
@@ -3391,10 +2920,7 @@ Used for adults\-only websites\.
 **Registration and renewal period**  
 One to ten years\.  
 **Privacy protection \(applies to all contact types: person, company, association, and public body\)**  
-
-+ **Hidden** – address, phone number, fax number, and email address
-
-+ **Not hidden** – contact name and organization name  
+All information is hidden except organization name\.  
 **Internationalized domain names**  
 Not supported\.  
 **Authorization code required for transfer to Route 53**  
@@ -3409,7 +2935,7 @@ Used by licensed and credentialed professionals and professional organizations\.
 **Registration and renewal period**  
 One to ten years\.  
 **Privacy protection \(applies to all contact types: person, company, association, and public body\)**  
-Not supported\.  
+All information is hidden except organization name\.  
 **Internationalized domain names**  
 Not supported\.  
 **Authorization code required for transfer to Route 53**  
@@ -3424,10 +2950,7 @@ Used by studios and production houses that make commercials, radio ads, and musi
 **Registration and renewal period**  
 One to ten years\.  
 **Privacy protection \(applies to all contact types: person, company, association, and public body\)**  
-
-+ **Hidden** – address, phone number, fax number, and email address
-
-+ **Not hidden** – contact name and organization name  
+All information is hidden except organization name\.  
 **Internationalized domain names**  
 Supported for French and Spanish\.  
 **Authorization code required for transfer to Route 53**  
@@ -3442,10 +2965,7 @@ Used for information about any type of property, including real estate or intell
 **Registration and renewal period**  
 One to ten years\.  
 **Privacy protection \(applies to all contact types: person, company, association, and public body\)**  
-
-+ **Hidden** – address, phone number, fax number, and email address
-
-+ **Not hidden** – contact name and organization name  
+All information is hidden except organization name\.  
 **Internationalized domain names**  
 Supported for French and Spanish\.  
 **Authorization code required for transfer to Route 53**  
@@ -3465,7 +2985,7 @@ Not supported\.
 **Internationalized domain names**  
 Supported for Cyrillic \(primarily Russian\), French, German, Italian, Portuguese, and Spanish\.  
 **Authorization code required for transfer to Route 53**  
-Yes  
+Not supported\. You can no longer transfer \.property domains to Route 53\.  
 **DNSSEC**  
 Supported for domain registration\. For more information, see [Configuring DNSSEC for a Domain](domain-configure-dnssec.md)\.  
 **Registrar**  
@@ -3476,16 +2996,13 @@ Used by those in the publication, advertising, or brewing business\.
 **Registration and renewal period**  
 One to ten years\.  
 **Privacy protection \(applies to all contact types: person, company, association, and public body\)**  
-
-+ **Hidden** – address, phone number, fax number, and email address
-
-+ **Not hidden** – contact name and organization name  
+All information is hidden except organization name\.  
 **Internationalized domain names**  
 Supported for Chinese, French, German, Latin, and Spanish\.  
 **Authorization code required for transfer to Route 53**  
 Yes  
 **DNSSEC**  
-Not supported\.  
+Supported for domain registration\. For more information, see [Configuring DNSSEC for a Domain](domain-configure-dnssec.md)\.  
 **Registrar**  
 The registrar for this TLD is our registrar associate, Gandi\.
 
@@ -3498,10 +3015,7 @@ Used for coupons and promo codes\.
 **Registration and renewal period**  
 One to ten years\.  
 **Privacy protection \(applies to all contact types: person, company, association, and public body\)**  
-
-+ **Hidden** – address, phone number, fax number, and email address
-
-+ **Not hidden** – contact name and organization name  
+All information is hidden except organization name\.  
 **Internationalized domain names**  
 Supported for Spanish\.  
 **Authorization code required for transfer to Route 53**  
@@ -3520,10 +3034,7 @@ Used by those with recipes to share\.
 **Registration and renewal period**  
 One to ten years\.  
 **Privacy protection \(applies to all contact types: person, company, association, and public body\)**  
-
-+ **Hidden** – address, phone number, fax number, and email address
-
-+ **Not hidden** – contact name and organization name  
+All information is hidden except organization name\.  
 **Internationalized domain names**  
 Supported for French and Spanish\.  
 **Authorization code required for transfer to Route 53**  
@@ -3538,10 +3049,7 @@ Used by those who like the color red or those who want to associate the color re
 **Registration and renewal period**  
 One to ten years\.  
 **Privacy protection \(applies to all contact types: person, company, association, and public body\)**  
-
-+ **Hidden** – address, phone number, fax number, and email address
-
-+ **Not hidden** – contact name and organization name  
+All information is hidden except organization name\.  
 **Internationalized domain names**  
 Supported\.  
 **Authorization code required for transfer to Route 53**  
@@ -3556,7 +3064,7 @@ Used for websites related to travels or journeys\. "Reise" is a German word that
 **Registration and renewal period**  
 One to ten years\.  
 **Privacy protection**  
-Not supported\.  
+All information is hidden except organization name\.  
 **Internationalized domain names**  
 Supported for Chinese, French, German, and Spanish\.  
 **Authorization code required for transfer to Route 53**  
@@ -3571,10 +3079,7 @@ Used for websites related to travels or journeys\. "Reisen" is a German word tha
 **Registration and renewal period**  
 One to ten years\.  
 **Privacy protection \(applies to all contact types: person, company, association, and public body\)**  
-
-+ **Hidden** – address, phone number, fax number, and email address
-
-+ **Not hidden** – contact name and organization name  
+All information is hidden except organization name\.  
 **Internationalized domain names**  
 Supported for French and Spanish\.  
 **Authorization code required for transfer to Route 53**  
@@ -3589,10 +3094,7 @@ Used for all types of rentals\.
 **Registration and renewal period**  
 One to ten years\.  
 **Privacy protection \(applies to all contact types: person, company, association, and public body\)**  
-
-+ **Hidden** – address, phone number, fax number, and email address
-
-+ **Not hidden** – contact name and organization name  
+All information is hidden except organization name\.  
 **Internationalized domain names**  
 Supported for French and Spanish\.  
 **Authorization code required for transfer to Route 53**  
@@ -3607,10 +3109,7 @@ Used by repair services or by those who want to teach others how to repair all k
 **Registration and renewal period**  
 One to ten years\.  
 **Privacy protection \(applies to all contact types: person, company, association, and public body\)**  
-
-+ **Hidden** – address, phone number, fax number, and email address
-
-+ **Not hidden** – contact name and organization name  
+All information is hidden except organization name\.  
 **Internationalized domain names**  
 Supported for French and Spanish\.  
 **Authorization code required for transfer to Route 53**  
@@ -3625,10 +3124,7 @@ Used as a general extension, but ideal for information about business reports, c
 **Registration and renewal period**  
 One to ten years\.  
 **Privacy protection \(applies to all contact types: person, company, association, and public body\)**  
-
-+ **Hidden** – address, phone number, fax number, and email address
-
-+ **Not hidden** – contact name and organization name  
+All information is hidden except organization name\.  
 **Internationalized domain names**  
 Supported for French and Spanish\.  
 **Authorization code required for transfer to Route 53**  
@@ -3643,10 +3139,7 @@ Used for information about the Republican Party\. Also used by officials running
 **Registration and renewal period**  
 One to ten years\.  
 **Privacy protection \(applies to all contact types: person, company, association, and public body\)**  
-
-+ **Hidden** – address, phone number, fax number, and email address
-
-+ **Not hidden** – contact name and organization name  
+All information is hidden except organization name\.  
 **Internationalized domain names**  
 Supported for Chinese, French, German, Latin, and Spanish\.  
 **Authorization code required for transfer to Route 53**  
@@ -3661,10 +3154,7 @@ Used by the restaurant industry\.
 **Registration and renewal period**  
 One to ten years\.  
 **Privacy protection \(applies to all contact types: person, company, association, and public body\)**  
-
-+ **Hidden** – address, phone number, fax number, and email address
-
-+ **Not hidden** – contact name and organization name  
+All information is hidden except organization name\.  
 **Internationalized domain names**  
 Supported for French and Spanish\.  
 **Authorization code required for transfer to Route 53**  
@@ -3679,10 +3169,7 @@ Used by those who want give their opinions and read the comments of others\.
 **Registration and renewal period**  
 One to ten years\.  
 **Privacy protection \(applies to all contact types: person, company, association, and public body\)**  
-
-+ **Hidden** – address, phone number, fax number, and email address
-
-+ **Not hidden** – contact name and organization name  
+All information is hidden except organization name\.  
 **Internationalized domain names**  
 Supported for Chinese, French, German, Latin, and Spanish\.  
 **Authorization code required for transfer to Route 53**  
@@ -3697,10 +3184,7 @@ Used for websites dedicated to death and memorials\. "RIP" is an acronym for "re
 **Registration and renewal period**  
 One to ten years\.  
 **Privacy protection \(applies to all contact types: person, company, association, and public body\)**  
-
-+ **Hidden** – address, phone number, fax number, and email address
-
-+ **Not hidden** – contact name and organization name  
+All information is hidden except organization name\.  
 **Internationalized domain names**  
 Supported for Chinese, French, German, Latin, and Spanish\.  
 **Authorization code required for transfer to Route 53**  
@@ -3715,10 +3199,7 @@ Used as a general extension, but ideal for anyone who “rocks”: musicians, ge
 **Registration and renewal period**  
 One to ten years\.  
 **Privacy protection \(applies to all contact types: person, company, association, and public body\)**  
-
-+ **Hidden** – address, phone number, fax number, and email address
-
-+ **Not hidden** – contact name and organization name  
+All information is hidden except organization name\.  
 **Internationalized domain names**  
 Supported for Chinese, French, German, Latin, and Spanish\.  
 **Authorization code required for transfer to Route 53**  
@@ -3733,10 +3214,7 @@ Used as a general extension, but ideal for the fitness and sports industry\.
 **Registration and renewal period**  
 One to ten years\.  
 **Privacy protection \(applies to all contact types: person, company, association, and public body\)**  
-
-+ **Hidden** – address, phone number, fax number, and email address
-
-+ **Not hidden** – contact name and organization name  
+All information is hidden except organization name\.  
 **Internationalized domain names**  
 Supported for Chinese, French, German, and Spanish\.  
 **Authorization code required for transfer to Route 53**  
@@ -3755,10 +3233,7 @@ Used by e\-commerce websites\.
 **Registration and renewal period**  
 One to ten years\.  
 **Privacy protection \(applies to all contact types: person, company, association, and public body\)**  
-
-+ **Hidden** – address, phone number, fax number, and email address
-
-+ **Not hidden** – contact name and organization name  
+All information is hidden except organization name\.  
 **Internationalized domain names**  
 Supported for Chinese, French, German, Latin, and Spanish\.  
 **Authorization code required for transfer to Route 53**  
@@ -3773,10 +3248,7 @@ Used by limited liability companies typically located in France\. "SARL" is an a
 **Registration and renewal period**  
 One to ten years\.  
 **Privacy protection \(applies to all contact types: person, company, association, and public body\)**  
-
-+ **Hidden** – address, phone number, fax number, and email address
-
-+ **Not hidden** – contact name and organization name  
+All information is hidden except organization name\.  
 **Internationalized domain names**  
 Supported for French and Spanish\.  
 **Authorization code required for transfer to Route 53**  
@@ -3791,10 +3263,7 @@ Used for information about education, educational institutions, and school\-rela
 **Registration and renewal period**  
 One to ten years\.  
 **Privacy protection \(applies to all contact types: person, company, association, and public body\)**  
-
-+ **Hidden** – address, phone number, fax number, and email address
-
-+ **Not hidden** – contact name and organization name  
+All information is hidden except organization name\.  
 **Internationalized domain names**  
 Supported for French and Spanish\.  
 **Authorization code required for transfer to Route 53**  
@@ -3809,10 +3278,7 @@ Used for information about German\-based education, educational institutions, an
 **Registration and renewal period**  
 One to ten years\.  
 **Privacy protection \(applies to all contact types: person, company, association, and public body\)**  
-
-+ **Hidden** – address, phone number, fax number, and email address
-
-+ **Not hidden** – contact name and organization name  
+All information is hidden except organization name\.  
 **Internationalized domain names**  
 Supported for French and Spanish\.  
 **Authorization code required for transfer to Route 53**  
@@ -3842,10 +3308,7 @@ Used for adults\-only content\.
 **Registration and renewal period**  
 One to ten years\.  
 **Privacy protection \(applies to all contact types: person, company, association, and public body\)**  
-
-+ **Hidden** – address, phone number, fax number, and email address
-
-+ **Not hidden** – contact name and organization name  
+All information is hidden except organization name\.  
 **Internationalized domain names**  
 Not supported\.  
 **Authorization code required for transfer to Route 53**  
@@ -3866,7 +3329,7 @@ Supported for Cyrillic \(primarily Russian\), French, German, Italian, Portugues
 **Authorization code required for transfer to Route 53**  
 Yes  
 **DNSSEC**  
-Not supported\.  
+Supported for domain registration\. For more information, see [Configuring DNSSEC for a Domain](domain-configure-dnssec.md)\.  
 **Registrar**  
 The registrar for this TLD is our registrar associate, Gandi\.
 
@@ -3875,10 +3338,7 @@ Used by educational institutions\. "Shiksha" is an Indian term for school\.
 **Registration and renewal period**  
 One to ten years\.  
 **Privacy protection \(applies to all contact types: person, company, association, and public body\)**  
-
-+ **Hidden** – address, phone number, fax number, and email address
-
-+ **Not hidden** – contact name and organization name  
+All information is hidden except organization name\.  
 **Internationalized domain names**  
 Supported\.  
 **Authorization code required for transfer to Route 53**  
@@ -3893,10 +3353,7 @@ Used by shoe retailers, designers, manufacturers, or fashion bloggers\.
 **Registration and renewal period**  
 One to ten years\.  
 **Privacy protection \(applies to all contact types: person, company, association, and public body\)**  
-
-+ **Hidden** – address, phone number, fax number, and email address
-
-+ **Not hidden** – contact name and organization name  
+All information is hidden except organization name\.  
 **Internationalized domain names**  
 Supported for French and Spanish\.  
 **Authorization code required for transfer to Route 53**  
@@ -3911,10 +3368,7 @@ Used as a general extension, but ideal for the entertainment industry\.
 **Registration and renewal period**  
 One to ten years\.  
 **Privacy protection \(applies to all contact types: person, company, association, and public body\)**  
-
-+ **Hidden** – address, phone number, fax number, and email address
-
-+ **Not hidden** – contact name and organization name  
+All information is hidden except organization name\.  
 **Internationalized domain names**  
 Supported for Chinese, French, German, and Spanish\.  
 **Authorization code required for transfer to Route 53**  
@@ -3929,10 +3383,7 @@ Used by dating services, resorts, and other businesses that cater to those who w
 **Registration and renewal period**  
 One to ten years\.  
 **Privacy protection \(applies to all contact types: person, company, association, and public body\)**  
-
-+ **Hidden** – address, phone number, fax number, and email address
-
-+ **Not hidden** – contact name and organization name  
+All information is hidden except organization name\.  
 **Internationalized domain names**  
 Supported for French and Spanish\.  
 **Authorization code required for transfer to Route 53**  
@@ -3947,10 +3398,7 @@ Used for websites dedicated to the game of soccer\.
 **Registration and renewal period**  
 One to ten years\.  
 **Privacy protection \(applies to all contact types: person, company, association, and public body\)**  
-
-+ **Hidden** – address, phone number, fax number, and email address
-
-+ **Not hidden** – contact name and organization name  
+All information is hidden except organization name\.  
 **Internationalized domain names**  
 Supported for Chinese, French, German, and Spanish\.  
 **Authorization code required for transfer to Route 53**  
@@ -3965,10 +3413,7 @@ Used for information about social media, forums, and online conversations\.
 **Registration and renewal period**  
 One to ten years\.  
 **Privacy protection \(applies to all contact types: person, company, association, and public body\)**  
-
-+ **Hidden** – address, phone number, fax number, and email address
-
-+ **Not hidden** – contact name and organization name  
+All information is hidden except organization name\.  
 **Internationalized domain names**  
 Supported for Chinese, French, German, Latin, and Spanish\.  
 **Authorization code required for transfer to Route 53**  
@@ -3983,10 +3428,7 @@ Used for information about the solar system or solar energy\.
 **Registration and renewal period**  
 One to ten years\.  
 **Privacy protection \(applies to all contact types: person, company, association, and public body\)**  
-
-+ **Hidden** – address, phone number, fax number, and email address
-
-+ **Not hidden** – contact name and organization name  
+All information is hidden except organization name\.  
 **Internationalized domain names**  
 Supported for French and Spanish\.  
 **Authorization code required for transfer to Route 53**  
@@ -4001,10 +3443,7 @@ Used by consultants, do\-it\-yourself services, and advisors of all kinds\.
 **Registration and renewal period**  
 One to ten years\.  
 **Privacy protection \(applies to all contact types: person, company, association, and public body\)**  
-
-+ **Hidden** – address, phone number, fax number, and email address
-
-+ **Not hidden** – contact name and organization name  
+All information is hidden except organization name\.  
 **Internationalized domain names**  
 Supported for French and Spanish\.  
 **Authorization code required for transfer to Route 53**  
@@ -4019,10 +3458,7 @@ Used as a general extension, but ideal for those in the real estate, art, or ent
 **Registration and renewal period**  
 One to ten years\.  
 **Privacy protection \(applies to all contact types: person, company, association, and public body\)**  
-
-+ **Hidden** – address, phone number, fax number, and email address
-
-+ **Not hidden** – contact name and organization name  
+All information is hidden except organization name\.  
 **Internationalized domain names**  
 Supported for Chinese, French, German, Latin, and Spanish\.  
 **Authorization code required for transfer to Route 53**  
@@ -4037,10 +3473,7 @@ Used as a general extension, but ideal for websites dedicated to the latest tren
 **Registration and renewal period**  
 One to ten years\.  
 **Privacy protection \(applies to all contact types: person, company, association, and public body\)**  
-
-+ **Hidden** – address, phone number, fax number, and email address
-
-+ **Not hidden** – contact name and organization name  
+All information is hidden except organization name\.  
 **Internationalized domain names**  
 Supported for French and Spanish\.  
 **Authorization code required for transfer to Route 53**  
@@ -4070,10 +3503,7 @@ Used by businesses that sell goods online\.
 **Registration and renewal period**  
 One to ten years\.  
 **Privacy protection \(applies to all contact types: person, company, association, and public body\)**  
-
-+ **Hidden** – address, phone number, fax number, and email address
-
-+ **Not hidden** – contact name and organization name  
+All information is hidden except organization name\.  
 **Internationalized domain names**  
 Supported for French and Spanish\.  
 **Authorization code required for transfer to Route 53**  
@@ -4088,10 +3518,7 @@ Used by businesses that sell goods online\.
 **Registration and renewal period**  
 One to ten years\.  
 **Privacy protection \(applies to all contact types: person, company, association, and public body\)**  
-
-+ **Hidden** – address, phone number, fax number, and email address
-
-+ **Not hidden** – contact name and organization name  
+All information is hidden except organization name\.  
 **Internationalized domain names**  
 Supported for French and Spanish\.  
 **Authorization code required for transfer to Route 53**  
@@ -4106,10 +3533,7 @@ Used by businesses, groups, or charities that offer any kind of support, includi
 **Registration and renewal period**  
 One to ten years\.  
 **Privacy protection \(applies to all contact types: person, company, association, and public body\)**  
-
-+ **Hidden** – address, phone number, fax number, and email address
-
-+ **Not hidden** – contact name and organization name  
+All information is hidden except organization name\.  
 **Internationalized domain names**  
 Supported for French and Spanish\.  
 **Authorization code required for transfer to Route 53**  
@@ -4124,10 +3548,7 @@ Used for information about surgery, medicine, and healthcare\.
 **Registration and renewal period**  
 One to ten years\.  
 **Privacy protection \(applies to all contact types: person, company, association, and public body\)**  
-
-+ **Hidden** – address, phone number, fax number, and email address
-
-+ **Not hidden** – contact name and organization name  
+All information is hidden except organization name\.  
 **Internationalized domain names**  
 Supported for French and Spanish\.  
 **Authorization code required for transfer to Route 53**  
@@ -4142,10 +3563,7 @@ Used primarily by the technology industry and those who offer technology service
 **Registration and renewal period**  
 One to ten years\.  
 **Privacy protection \(applies to all contact types: person, company, association, and public body\)**  
-
-+ **Hidden** – address, phone number, fax number, and email address
-
-+ **Not hidden** – contact name and organization name  
+All information is hidden except organization name\.  
 **Internationalized domain names**  
 Supported for French and Spanish\.  
 **Authorization code required for transfer to Route 53**  
@@ -4170,7 +3588,7 @@ Supported for Cyrillic \(primarily Russian\), French, German, Italian, Portugues
 **Authorization code required for transfer to Route 53**  
 Yes  
 **DNSSEC**  
-Not supported\.  
+Supported for domain registration\. For more information, see [Configuring DNSSEC for a Domain](domain-configure-dnssec.md)\.  
 **Registrar**  
 The registrar for this TLD is our registrar associate, Gandi\.
 
@@ -4179,10 +3597,7 @@ Used for information about taxes, tax preparation, and tax law\.
 **Registration and renewal period**  
 One to ten years\.  
 **Privacy protection \(applies to all contact types: person, company, association, and public body\)**  
-
-+ **Hidden** – address, phone number, fax number, and email address
-
-+ **Not hidden** – contact name and organization name  
+All information is hidden except organization name\.  
 **Internationalized domain names**  
 Supported for French and Spanish\.  
 **Authorization code required for transfer to Route 53**  
@@ -4197,10 +3612,7 @@ Used by cab, chauffeur, and shuttle companies\.
 **Registration and renewal period**  
 One to ten years\.  
 **Privacy protection \(applies to all contact types: person, company, association, and public body\)**  
-
-+ **Hidden** – address, phone number, fax number, and email address
-
-+ **Not hidden** – contact name and organization name  
+All information is hidden except organization name\.  
 **Internationalized domain names**  
 Supported for Chinese, French, German, and Spanish\.  
 **Authorization code required for transfer to Route 53**  
@@ -4215,10 +3627,7 @@ Used by any business or organization that wants to identify as a team\.
 **Registration and renewal period**  
 One to ten years\.  
 **Privacy protection \(applies to all contact types: person, company, association, and public body\)**  
-
-+ **Hidden** – address, phone number, fax number, and email address
-
-+ **Not hidden** – contact name and organization name  
+All information is hidden except organization name\.  
 **Internationalized domain names**  
 Supported for Chinese, French, German, and Spanish\.  
 **Authorization code required for transfer to Route 53**  
@@ -4233,10 +3642,7 @@ Used by technology enthusiasts and those dedicated to technology in companies, s
 **Registration and renewal period**  
 One to ten years\.  
 **Privacy protection \(applies to all contact types: person, company, association, and public body\)**  
-
-+ **Hidden** – address, phone number, fax number, and email address
-
-+ **Not hidden** – contact name and organization name  
+All information is hidden except organization name\.  
 **Internationalized domain names**  
 Supported for French and Spanish\.  
 **Authorization code required for transfer to Route 53**  
@@ -4251,10 +3657,7 @@ Used for information related to the game of tennis\.
 **Registration and renewal period**  
 One to ten years\.  
 **Privacy protection \(applies to all contact types: person, company, association, and public body\)**  
-
-+ **Hidden** – address, phone number, fax number, and email address
-
-+ **Not hidden** – contact name and organization name  
+All information is hidden except organization name\.  
 **Internationalized domain names**  
 Supported for French and Spanish\.  
 **Authorization code required for transfer to Route 53**  
@@ -4269,10 +3672,7 @@ Used for websites dedicated to theaters, plays, and musicals\.
 **Registration and renewal period**  
 One to ten years\.  
 **Privacy protection \(applies to all contact types: person, company, association, and public body\)**  
-
-+ **Hidden** – address, phone number, fax number, and email address
-
-+ **Not hidden** – contact name and organization name  
+All information is hidden except organization name\.  
 **Internationalized domain names**  
 Supported for Chinese, French, German, and Spanish\.  
 **Authorization code required for transfer to Route 53**  
@@ -4287,10 +3687,7 @@ Used by retail businesses that want to connect with Spanish\-speaking consumers\
 **Registration and renewal period**  
 One to ten years\.  
 **Privacy protection \(applies to all contact types: person, company, association, and public body\)**  
-
-+ **Hidden** – address, phone number, fax number, and email address
-
-+ **Not hidden** – contact name and organization name  
+All information is hidden except organization name\.  
 **Internationalized domain names**  
 Supported for French and Spanish\.  
 **Authorization code required for transfer to Route 53**  
@@ -4305,10 +3702,7 @@ Used by those who want to share their knowledge and advice on virtually any topi
 **Registration and renewal period**  
 One to ten years\.  
 **Privacy protection \(applies to all contact types: person, company, association, and public body\)**  
-
-+ **Hidden** – address, phone number, fax number, and email address
-
-+ **Not hidden** – contact name and organization name  
+All information is hidden except organization name\.  
 **Internationalized domain names**  
 Supported for French and Spanish\.  
 **Authorization code required for transfer to Route 53**  
@@ -4323,10 +3717,7 @@ Used by manufacturers, distributors, or buyers of tires\.
 **Registration and renewal period**  
 One to ten years\.  
 **Privacy protection \(applies to all contact types: person, company, association, and public body\)**  
-
-+ **Hidden** – address, phone number, fax number, and email address
-
-+ **Not hidden** – contact name and organization name  
+All information is hidden except organization name\.  
 **Internationalized domain names**  
 Supported for French and Spanish\.  
 **Authorization code required for transfer to Route 53**  
@@ -4341,10 +3732,7 @@ Used for information about current events, news, weather, entertainment, and mor
 **Registration and renewal period**  
 One to ten years\.  
 **Privacy protection \(applies to all contact types: person, company, association, and public body\)**  
-
-+ **Hidden** – address, phone number, fax number, and email address
-
-+ **Not hidden** – contact name and organization name  
+All information is hidden except organization name\.  
 **Internationalized domain names**  
 Supported for French and Spanish\.  
 **Authorization code required for transfer to Route 53**  
@@ -4359,10 +3747,7 @@ Used for information about any kind of tool\.
 **Registration and renewal period**  
 One to ten years\.  
 **Privacy protection \(applies to all contact types: person, company, association, and public body\)**  
-
-+ **Hidden** – address, phone number, fax number, and email address
-
-+ **Not hidden** – contact name and organization name  
+All information is hidden except organization name\.  
 **Internationalized domain names**  
 Supported for French and Spanish\.  
 **Authorization code required for transfer to Route 53**  
@@ -4377,10 +3762,7 @@ Used as a general extension, but ideal for travel companies\.
 **Registration and renewal period**  
 One to ten years\.  
 **Privacy protection \(applies to all contact types: person, company, association, and public body\)**  
-
-+ **Hidden** – address, phone number, fax number, and email address
-
-+ **Not hidden** – contact name and organization name  
+All information is hidden except organization name\.  
 **Internationalized domain names**  
 Supported for Chinese, French, German, and Spanish\.  
 **Authorization code required for transfer to Route 53**  
@@ -4395,10 +3777,7 @@ Used to promote a city's locale, culture, and community\.
 **Registration and renewal period**  
 One to ten years\.  
 **Privacy protection \(applies to all contact types: person, company, association, and public body\)**  
-
-+ **Hidden** – address, phone number, fax number, and email address
-
-+ **Not hidden** – contact name and organization name  
+All information is hidden except organization name\.  
 **Internationalized domain names**  
 Supported for French and Spanish\.  
 **Authorization code required for transfer to Route 53**  
@@ -4413,10 +3792,7 @@ Used by the toy industry\.
 **Registration and renewal period**  
 One to ten years\.  
 **Privacy protection \(applies to all contact types: person, company, association, and public body\)**  
-
-+ **Hidden** – address, phone number, fax number, and email address
-
-+ **Not hidden** – contact name and organization name  
+All information is hidden except organization name\.  
 **Internationalized domain names**  
 Supported for French and Spanish\.  
 **Authorization code required for transfer to Route 53**  
@@ -4431,10 +3807,7 @@ Used as a general extension, but ideal for commerce websites or trading services
 **Registration and renewal period**  
 One to ten years\.  
 **Privacy protection \(applies to all contact types: person, company, association, and public body\)**  
-
-+ **Hidden** – address, phone number, fax number, and email address
-
-+ **Not hidden** – contact name and organization name  
+All information is hidden except organization name\.  
 **Internationalized domain names**  
 Supported for Danish, German, Norwegian, and Swedish\.  
 **Authorization code required for transfer to Route 53**  
@@ -4449,10 +3822,7 @@ Used by trainers, coaches, and educators\.
 **Registration and renewal period**  
 One to ten years\.  
 **Privacy protection \(applies to all contact types: person, company, association, and public body\)**  
-
-+ **Hidden** – address, phone number, fax number, and email address
-
-+ **Not hidden** – contact name and organization name  
+All information is hidden except organization name\.  
 **Internationalized domain names**  
 Supported for French and Spanish\.  
 **Authorization code required for transfer to Route 53**  
@@ -4469,10 +3839,7 @@ One to ten years\.
 **Restrictions**  
 Domain names that are at least three letters long \(such as aaa\.tv\) are generally open to the public\. Www\.tv, the registry for \.tv domains, reserves two\-letter domain names\. You can't register two\-letter domains with or transfer them to Route 53\. For more information about \.tv domain names, see the [\.tv page](https://www.verisign.com/en_US/domain-names/tv-domain-names/index.xhtml?dmn=www.tv) on the Verisign website\.  
 **Privacy protection \(applies to all contact types: person, company, association, and public body\)**  
-
-+ **Hidden** – address, phone number, fax number, and email address
-
-+ **Not hidden** – contact name and organization name  
+All information is hidden except organization name\.  
 **Internationalized domain names**  
 Not supported\.  
 **Authorization code required for transfer to Route 53**  
@@ -4491,10 +3858,7 @@ Used by universities and other educational organizations\.
 **Registration and renewal period**  
 One to ten years\.  
 **Privacy protection \(applies to all contact types: person, company, association, and public body\)**  
-
-+ **Hidden** – address, phone number, fax number, and email address
-
-+ **Not hidden** – contact name and organization name  
+All information is hidden except organization name\.  
 **Internationalized domain names**  
 Supported for French and Spanish\.  
 **Authorization code required for transfer to Route 53**  
@@ -4509,10 +3873,7 @@ Used for information about the Hispanic, Portuguese, and Italian communities\.
 **Registration and renewal period**  
 One to ten years\.  
 **Privacy protection \(applies to all contact types: person, company, association, and public body\)**  
-
-+ **Hidden** – address, phone number, fax number, and email address
-
-+ **Not hidden** – contact name and organization name  
+All information is hidden except organization name\.  
 **Internationalized domain names**  
 Supported for Spanish\.  
 **Authorization code required for transfer to Route 53**  
@@ -4531,10 +3892,7 @@ Used by the travel and tourism industry\.
 **Registration and renewal period**  
 One to ten years\.  
 **Privacy protection \(applies to all contact types: person, company, association, and public body\)**  
-
-+ **Hidden** – address, phone number, fax number, and email address
-
-+ **Not hidden** – contact name and organization name  
+All information is hidden except organization name\.  
 **Internationalized domain names**  
 Supported for French and Spanish\.  
 **Authorization code required for transfer to Route 53**  
@@ -4549,10 +3907,7 @@ Used to promote the city of Las Vegas and the Las Vegas lifestyle\.
 **Registration and renewal period**  
 One to ten years\.  
 **Privacy protection \(applies to all contact types: person, company, association, and public body\)**  
-
-+ **Hidden** – address, phone number, fax number, and email address
-
-+ **Not hidden** – contact name and organization name  
+All information is hidden except organization name\.  
 **Internationalized domain names**  
 Not supported\.  
 **Authorization code required for transfer to Route 53**  
@@ -4567,10 +3922,7 @@ Used by entrepreneurs, startups, venture capitalists, investment banks, and fina
 **Registration and renewal period**  
 One to ten years\.  
 **Privacy protection \(applies to all contact types: person, company, association, and public body\)**  
-
-+ **Hidden** – address, phone number, fax number, and email address
-
-+ **Not hidden** – contact name and organization name  
+All information is hidden except organization name\.  
 **Internationalized domain names**  
 Supported for French and Spanish\.  
 **Authorization code required for transfer to Route 53**  
@@ -4588,10 +3940,7 @@ Used by travel agencies, tour operators, travel blogs, tour companies, rental se
 **Registration and renewal period**  
 One to ten years\.  
 **Privacy protection \(applies to all contact types: person, company, association, and public body\)**  
-
-+ **Hidden** – address, phone number, fax number, and email address
-
-+ **Not hidden** – contact name and organization name  
+All information is hidden except organization name\.  
 **Internationalized domain names**  
 Supported for French and Spanish\.  
 **Authorization code required for transfer to Route 53**  
@@ -4606,10 +3955,7 @@ Used by media and video industries\.
 **Registration and renewal period**  
 One to ten years\.  
 **Privacy protection \(applies to all contact types: person, company, association, and public body\)**  
-
-+ **Hidden** – address, phone number, fax number, and email address
-
-+ **Not hidden** – contact name and organization name  
+All information is hidden except organization name\.  
 **Internationalized domain names**  
 Supported for Chinese, French, German, Latin, and Spanish\.  
 **Authorization code required for transfer to Route 53**  
@@ -4624,10 +3970,7 @@ Used by real estate agents and property owners who have villas to sell, rent, or
 **Registration and renewal period**  
 One to ten years\.  
 **Privacy protection \(applies to all contact types: person, company, association, and public body\)**  
-
-+ **Hidden** – address, phone number, fax number, and email address
-
-+ **Not hidden** – contact name and organization name  
+All information is hidden except organization name\.  
 **Internationalized domain names**  
 Supported for French and Spanish\.  
 **Authorization code required for transfer to Route 53**  
@@ -4657,10 +4000,7 @@ Used by travel agencies, tour operators, travel blogs, tour companies, rental se
 **Registration and renewal period**  
 One to ten years\.  
 **Privacy protection \(applies to all contact types: person, company, association, and public body\)**  
-
-+ **Hidden** – address, phone number, fax number, and email address
-
-+ **Not hidden** – contact name and organization name  
+All information is hidden except organization name\.  
 **Internationalized domain names**  
 Supported for French and Spanish\.  
 **Authorization code required for transfer to Route 53**  
@@ -4679,10 +4019,7 @@ Used for information about streaming websites, web TVs, video, or watches\.
 **Registration and renewal period**  
 One to ten years\.  
 **Privacy protection \(applies to all contact types: person, company, association, and public body\)**  
-
-+ **Hidden** – address, phone number, fax number, and email address
-
-+ **Not hidden** – contact name and organization name  
+All information is hidden except organization name\.  
 **Internationalized domain names**  
 Supported for French and Spanish\.  
 **Authorization code required for transfer to Route 53**  
@@ -4697,10 +4034,7 @@ Used for information about website development, promotion, improvements, and exp
 **Registration and renewal period**  
 One to ten years\.  
 **Privacy protection \(applies to all contact types: person, company, association, and public body\)**  
-
-+ **Hidden** – address, phone number, fax number, and email address
-
-+ **Not hidden** – contact name and organization name  
+All information is hidden except organization name\.  
 **Internationalized domain names**  
 Not supported\.  
 **Authorization code required for transfer to Route 53**  
@@ -4730,10 +4064,7 @@ Used by businesses, organizations, and individuals for information about work, j
 **Registration and renewal period**  
 One to ten years\.  
 **Privacy protection \(applies to all contact types: person, company, association, and public body\)**  
-
-+ **Hidden** – address, phone number, fax number, and email address
-
-+ **Not hidden** – contact name and organization name  
+All information is hidden except organization name\.  
 **Internationalized domain names**  
 Supported for French and Spanish\.  
 **Authorization code required for transfer to Route 53**  
@@ -4748,10 +4079,7 @@ Used by anyone who wants to provide information about global subjects\.
 **Registration and renewal period**  
 One to ten years\.  
 **Privacy protection \(applies to all contact types: person, company, association, and public body\)**  
-
-+ **Hidden** – address, phone number, fax number, and email address
-
-+ **Not hidden** – contact name and organization name  
+All information is hidden except organization name\.  
 **Internationalized domain names**  
 Supported\.  
 **Authorization code required for transfer to Route 53**  
@@ -4766,10 +4094,7 @@ Used by anyone who wants to identify with the popular \(but profane\) acronym "W
 **Registration and renewal period**  
 One to ten years\.  
 **Privacy protection \(applies to all contact types: person, company, association, and public body\)**  
-
-+ **Hidden** – address, phone number, fax number, and email address
-
-+ **Not hidden** – contact name and organization name  
+All information is hidden except organization name\.  
 **Internationalized domain names**  
 Supported for French and Spanish\.  
 **Authorization code required for transfer to Route 53**  
@@ -4784,10 +4109,7 @@ Used as a general extension for any purpose\.
 **Registration and renewal period**  
 One to ten years\.  
 **Privacy protection \(applies to all contact types: person, company, association, and public body\)**  
-
-+ **Hidden** – address, phone number, fax number, and email address
-
-+ **Not hidden** – contact name and organization name  
+All information is hidden except organization name\.  
 **Internationalized domain names**  
 Supported\.  
 **Authorization code required for transfer to Route 53**  
@@ -4802,10 +4124,7 @@ Used for information about any kind of zone, including time zones, climate zones
 **Registration and renewal period**  
 One to ten years\.  
 **Privacy protection \(applies to all contact types: person, company, association, and public body\)**  
-
-+ **Hidden** – address, phone number, fax number, and email address
-
-+ **Not hidden** – contact name and organization name  
+All information is hidden except organization name\.  
 **Internationalized domain names**  
 Supported for French and Spanish\.  
 **Authorization code required for transfer to Route 53**  
@@ -4863,7 +4182,7 @@ Open to the public, with some restrictions:
 
 + The domain name must pass a zone check during the registration process\.  
 **Privacy protection**  
-Determined by the registry\.  
+Not supported\.  
 **Internationalized domain names**  
 Not supported\.  
 **Authorization code required for transfer to Route 53**  
@@ -4879,7 +4198,7 @@ One year\.
 **Restrictions**  
 Open to the public, with no restrictions\.  
 **Privacy protection**  
-Determined by the registry\.  
+Not supported\.  
 **Internationalized domain names**  
 Supported\.  
 **Authorization code required for transfer to Route 53**  
@@ -4965,9 +4284,9 @@ You can no longer use Route 53 to register new \.cl domains or transfer \.cl do
 **Renewal period**  
 Two years\.  
 **Privacy protection**  
-Determined by the registry\.  
+Not supported\.  
 **Authorization code required for transfer to Route 53**  
-No  
+Not supported\. You can no longer transfer \.cl domains to Route 53\.  
 **DNSSEC**  
 Not supported\.  
 **Registrar**  
@@ -4999,7 +4318,7 @@ One year\.
 **Privacy protection**  
 Not supported\.  
 **Authorization code required for transfer to Route 53**  
-No  
+Not supported\. You can no longer transfer \.com\.ar domains to Route 53\.  
 **DNSSEC**  
 Not supported\.  
 **Registrar**  
@@ -5010,9 +4329,9 @@ You can no longer use Route 53 to register new \.com\.br domains or transfer \.
 **Renewal period**  
 One year\.  
 **Privacy protection**  
-Determined by the registry\.  
+Not supported\.  
 **Authorization code required for transfer to Route 53**  
-Yes  
+Not supported\. You can no longer transfer \.com\.br domains to Route 53\.  
 **DNSSEC**  
 Not supported\.  
 **Registrar**  
@@ -5076,10 +4395,7 @@ One to ten years\.
 **Restrictions**  
 Open to the public, with no restrictions\.  
 **Privacy protection \(applies to all contact types: person, company, association, and public body\)**  
-
-+ **Hidden** – address, phone number, fax number, and email address
-
-+ **Not hidden** – contact name and organization name  
+Not supported\.  
 **Internationalized domain names**  
 Not supported\.  
 **Authorization code required for transfer to Route 53**  
@@ -5193,9 +4509,9 @@ One year\.
 **Deletion of domain registration**  
 The registry for \.com\.sg domains doesn't allow you to delete domain registrations\. Instead, you must disable automatic renewal and wait for the domain to expire\. For more information, see [Deleting a Domain Name Registration](domain-delete.md)\.  
 **Privacy protection**  
-Determined by the registry\.  
+Not supported\.  
 **Authorization code required for transfer to Route 53**  
-Yes  
+Not supported\. You can no longer transfer \.com\.sg domains to Route 53\.  
 **DNSSEC**  
 Not supported\.  
 **Registrar**  
@@ -5208,10 +4524,7 @@ One to five years\.
 **Restrictions**  
 Open to the public, with no restrictions\.  
 **Privacy protection \(applies to all contact types: person, company, association, and public body\)**  
-
-+ **Hidden** – address, phone number, fax number, and email address
-
-+ **Not hidden** – contact name and organization name  
+Not supported\.  
 **Internationalized domain names**  
 Not supported\.  
 **Authorization code required for transfer to Route 53**  
@@ -5245,7 +4558,7 @@ Open to the public, with one restriction:
 
 + Only individuals or companies in Japan can register a \.jp domain name\.  
 **Privacy protection**  
-Determined by the registry\.  
+Not supported\.  
 **Internationalized domain names**  
 Supported for Japanese\.  
 **Authorization code required for transfer to Route 53**  
@@ -5262,7 +4575,7 @@ One year\.
 **Restrictions**  
 Open to the public, with no restrictions\.  
 **Privacy protection**  
-Determined by the registry\.  
+Not supported\.  
 **Internationalized domain names**  
 Supported\.  
 **Authorization code required for transfer to Route 53**  
@@ -5297,11 +4610,8 @@ Open to the public, with some restrictions:
   + Your ID number, which can be a Medicare card number, a tax file number \(TFN\), a state driver's license number, or an Australian Business Number \(ABN\)\.
 
   + Your state or province\.  
-**Privacy protection \(applies to all contact types: person, company, association, and public body\)**  
-
-+ **Hidden** – address, phone number, fax number, and email address
-
-+ **Not hidden** – contact name and organization name  
+**Privacy protection**  
+Not supported\.  
 **Internationalized domain names**  
 Not supported\.  
 **Authorization code required for transfer to Route 53**  
@@ -5360,9 +4670,9 @@ You can no longer use Route 53 to register new \.qa domains or transfer \.qa do
 **Renewal period**  
 One to five years\.  
 **Privacy protection**  
-Determined by the registry\.  
+Not supported\.  
 **Authorization code required for transfer to Route 53**  
-Yes  
+Not supported\. You can no longer transfer \.qa domains to Route 53\.  
 **DNSSEC**  
 Not supported\.  
 **Registrar**  
@@ -5383,7 +4693,7 @@ Determined by the registry\.
 **Internationalized domain names**  
 Not supported\.  
 **Authorization code required for transfer to Route 53**  
-If you're transferring a \.ru domain to Route 53, you don't need to get an authorization code\. Instead, use the method provided by RU\-Center, the registry for \.ru domains, to update the **Partner Handle** for the domain to **5427/NIC\-REG**\. For more information, see the [Registrar's or Registrant's Transfer](https://www.nic.ru/dns/docs/en/domain_transf_letters.html) page on the RU\-Center website\.  
+Not supported\. You can no longer transfer \.ru domains to Route 53\.  
 **DNSSEC**  
 Not supported\.  
 **Registrar**  
@@ -5396,9 +4706,9 @@ You can no longer use Route 53 to register new \.sg domains or transfer \.sg do
 **Renewal period**  
 One year\.  
 **Privacy protection**  
-Determined by the registry\.  
+Not supported\.  
 **Authorization code required for transfer to Route 53**  
-Yes  
+Not supported\. You can no longer transfer \.sg domains to Route 53\.  
 **DNSSEC**  
 Not supported\.  
 **Registrar**  
@@ -5416,7 +4726,7 @@ One year\.
 **Restrictions**  
 Open to the public, with no restrictions\.  
 **Privacy protection**  
-Determined by the registry\.  
+Not supported\.  
 **Internationalized domain names**  
 Supported\.  
 **Authorization code required for transfer to Route 53**  
@@ -5454,7 +4764,7 @@ One year\.
 **Restrictions**  
 Open to the public, with no restrictions\.   
 **Privacy protection**  
-Determined by the registry\.  
+Not supported\.  
 **Internationalized domain names**  
 Supported\.  
 **Authorization code required for transfer to Route 53**  
@@ -5484,7 +4794,7 @@ For more information, see [\.uk Rights FAQs](https://www.theukdomain.uk/advice/d
 If you want the \.uk domain for a \.co\.uk, \.me\.uk, or \.org\.uk that you already own, use the Route 53 console or API, the AWS CLI, or the SDKs to register the \.uk domain as you would any other domain\. If someone else has a higher priority on an existing \.co\.uk, \.me\.uk, or \.org\.uk domain, we'll notify you by email\. The email will contain the following text:   
 `ErrorState at registrar: 2201 : Authorization error (V334 Your request for domain 'domain name' has failed because the 'account name' for the registrant does not fully match any registrant which has rights for this domain)`  
 **Privacy protection**  
-Determined by the registry\.  
+Not supported\.  
 **Internationalized domain names**  
 Not supported\.  
 **Authorization code required for transfer to Route 53**  
@@ -5507,7 +4817,7 @@ Open to the public, with some restrictions:
 
 + During registration, the DNS \(A, MX, and CNAME\) of the domain name must be correctly configured so that it can pass the registry's zone check\. Three servers of two different C classes are required\.  
 **Privacy protection**  
-Determined by the registry\.  
+Not supported\.  
 **Internationalized domain names**  
 Supported\.  
 **Authorization code required for transfer to Route 53**  
@@ -5525,7 +4835,7 @@ One to five years\.
 **Restrictions**  
 Open to the public, for those who have an interest in or connection with Spain\.  
 **Privacy protection**  
-Determined by the registry\.  
+Not supported\.  
 **Internationalized domain names**  
 Supported\.  
 **Authorization code required for transfer to Route 53**  
@@ -5543,7 +4853,7 @@ Open to the public, with one restriction:
 
 + You must provide a valid postal address in one of the 27 member\-states of the European Union\. A local presence is required\.  
 **Privacy protection**  
-Determined by the registry\.  
+Not supported\.  
 **Internationalized domain names**  
 Supported\.  
 **Authorization code required for transfer to Route 53**  
@@ -5573,13 +4883,13 @@ Open to the public, with some restrictions:
 
   + The identification number for a physical person in Finland\.  
 **Privacy protection**  
-Determined by the registry\.  
+Not supported\.  
 **Internationalized domain names**  
 Supported\.  
 **Authorization code required for transfer to Route 53**  
 Yes  
 **DNSSEC**  
-Not supported\.  
+Supported for domain registration\. For more information, see [Configuring DNSSEC for a Domain](domain-configure-dnssec.md)\.  
 **Registrar**  
 The registrar for this TLD is our registrar associate, Gandi\.  
 **Deletion of domain registration**  
@@ -5621,7 +4931,7 @@ One to ten years\.
 **Restrictions**  
 Open to the public, with no restrictions\.  
 **Privacy protection**  
-Determined by the registry\.  
+Not supported\.  
 **Internationalized domain names**  
 Supported\.  
 **Authorization code required for transfer to Route 53**  
@@ -5638,7 +4948,7 @@ One year\.
 **Restrictions**  
 Open to the public, with no restrictions\.  
 **Privacy protection**  
-Determined by the registry\.  
+Not supported\.  
 **Internationalized domain names**  
 Not supported\.  
 **Authorization code required for transfer to Route 53**  
@@ -5662,7 +4972,7 @@ Open to the public, with some restrictions:
 
 + Name servers for your domain must pass a DNS check\. If your domain name does not comply with the technical requirements, and you do not correct it within 30 days, your domain name will be deleted by the registry\. We don't issue refunds for domains that are deleted because they don't meet technical requirements\.  
 **Privacy protection**  
-Determined by the registry\.  
+Not supported\.  
 **Internationalized domain names**  
 Supported\.  
 **Authorization code required for transfer to Route 53**  
@@ -5678,10 +4988,7 @@ One to ten years\.
 **Restrictions**  
 Domain names that are at least three letters long \(such as aaa\.me\) are generally open to the public\. Domain\.me, the registry for \.me domains, considers two\-letter domain names and some longer domain names to be premium domain names\. You can't register premium \.me domains with or transfer them to Route 53\. For more information about premium \.me domain names, see the [domain\.me](https://domain.me/) website\.  
 **Privacy protection \(applies to all contact types: person, company, association, and public body\)**  
-
-+ **Hidden** – address, phone number, fax number, and email address
-
-+ **Not hidden** – contact name and organization name  
+Not supported\.  
 **Internationalized domain names**  
 Not supported\.  
 **Authorization code required for transfer to Route 53**  
@@ -5711,7 +5018,7 @@ For more information, see [\.uk Rights FAQs](https://www.theukdomain.uk/advice/d
 If you want the \.uk domain for a \.co\.uk, \.me\.uk, or \.org\.uk that you already own, use the Route 53 console or API, the AWS CLI, or the SDKs to register the \.uk domain as you would any other domain\. If someone else has a higher priority on an existing \.co\.uk, \.me\.uk, or \.org\.uk domain, we'll notify you by email\. The email will contain the following text:   
 `ErrorState at registrar: 2201 : Authorization error (V334 Your request for domain 'domain name' has failed because the 'account name' for the registrant does not fully match any registrant which has rights for this domain)`  
 **Privacy protection**  
-Determined by the registry\.  
+Not supported\.  
 **Internationalized domain names**  
 Not supported\.  
 **Authorization code required for transfer to Route 53**  
@@ -5764,7 +5071,7 @@ For more information, see [\.uk Rights FAQs](https://www.theukdomain.uk/advice/d
 If you want the \.uk domain for a \.co\.uk, \.me\.uk, or \.org\.uk that you already own, use the Route 53 console or API, the AWS CLI, or the SDKs to register the \.uk domain as you would any other domain\. If someone else has a higher priority on an existing \.co\.uk, \.me\.uk, or \.org\.uk domain, we'll notify you by email\. The email will contain the following text:   
 `ErrorState at registrar: 2201 : Authorization error (V334 Your request for domain 'domain name' has failed because the 'account name' for the registrant does not fully match any registrant which has rights for this domain)`  
 **Privacy protection**  
-Determined by the registry\.  
+Not supported\.  
 **Internationalized domain names**  
 Not supported\.  
 **Authorization code required for transfer to Route 53**  
@@ -5806,7 +5113,7 @@ Open to the public, with some restrictions:
 
 + If you are located outside of Sweden, you must enter a valid ID number such as a tax ID number\.  
 **Privacy protection**  
-Determined by the registry\.  
+Not supported\.  
 **Internationalized domain names**  
 Supported for Latin, Swedish, and Yiddish\.  
 **Authorization code required for transfer to Route 53**  
@@ -5834,7 +5141,7 @@ If different registrants have registered the same name with \.co\.uk, \.me\.uk, 
 If you want the \.uk domain for a \.co\.uk, \.me\.uk, or \.org\.uk that you already own, use the Route 53 console or API, the AWS CLI, or the SDKs to register the \.uk domain as you would any other domain\. If someone else has a higher priority on an existing \.co\.uk, \.me\.uk, or \.org\.uk domain, we'll notify you by email\. The email will contain the following text:   
 `ErrorState at registrar: 2201 : Authorization error (V334 Your request for domain 'domain name' has failed because the 'account name' for the registrant does not fully match any registrant which has rights for this domain)`  
 **Privacy protection**  
-Determined by the registry\.  
+Not supported\.  
 **Internationalized domain names**  
 Not supported\.  
 **Authorization code required for transfer to Route 53**  
@@ -5863,6 +5170,6 @@ Supported for Latin\.
 **Authorization code required for transfer to Route 53**  
 Yes  
 **DNSSEC**  
-Not supported\.  
+Supported for domain registration\. For more information, see [Configuring DNSSEC for a Domain](domain-configure-dnssec.md)\.  
 **Registrar**  
 The registrar for this TLD is our registrar associate, Gandi\.

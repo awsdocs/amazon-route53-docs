@@ -19,13 +19,17 @@ Before you get started, you need the following:
 
 + Route 53 as the DNS service for the domain\. If you register your domain name by using Route 53, we automatically configure Route 53 as the DNS service for the domain\. 
 
-  For information about migrating DNS service to Route 53, see [Using Amazon Route 53 as the DNS Service for Subdomains Without Migrating the Parent Domain](creating-migrating.md)\.
+  For information about using Route 53 as the DNS service provider for your domain, see [Making Amazon Route 53 the DNS Service for an Existing DomainMaking Route 53 the DNS Service for an Existing Domain](MigratingDNS.md)\.
 
 ## Configuring Amazon Route 53 to Route Traffic to an ELB Load Balancer<a name="routing-to-elb-load-balancer-configuring"></a>
 
 To configure Amazon Route 53 to route traffic to an ELB load balancer, perform the following procedure\.
 
 **To route traffic to an ELB load balancer**
+
+1. If you created the Route 53 hosted zone and ELB load balancer using the same account, skip to step 2\.
+
+   If you created the hosted zone and the ELB load balancer using different accounts, perform the procedure [Getting the DNS Name for an ELB Load Balancer](resource-record-sets-creating.md#resource-record-sets-elb-dns-name-procedure) to get the DNS name for the load balancer\. 
 
 1. Sign in to the AWS Management Console and open the Route 53 console at [https://console\.aws\.amazon\.com/route53/](https://console.aws.amazon.com/route53/)\.
 
@@ -44,7 +48,8 @@ Choose **A – IPv4 address**\.
 **Alias**  
 Choose **Yes**\.  
 **Alias Target**  
-Find the applicable category in the list \(**ELB Application Load Balancers**, **ELB Classic Load Balancers**, or **ELB Network Load Balancers**\), and then choose the name that you assigned to the load balancer when you created it\.  
+**If you created the hosted zone and the ELB load balancer using the same AWS account** – Find the applicable category in the list \(**ELB Application Load Balancers**, **ELB Classic Load Balancers**, or **ELB Network Load Balancers**\), and then choose the name that you assigned to the load balancer when you created it\.  
+**If you created the hosted zone and the ELB load balancer using different accounts** – Enter the value that you got in step 1 of this procedure\.  
 **Routing Policy**  
 Accept the default value of **Simple**\.  
 **Evaluate Target Health**  

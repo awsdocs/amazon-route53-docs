@@ -47,7 +47,10 @@ For information on getting current limits, see the following Route 53 actions:
 | Hosted zones | 500 per AWS account [Request a higher limit](https://console.aws.amazon.com/support/home#/case/create?issueType=service-limit-increase&limitType=service-code-route53)\. | 
 | Hosted zones that can use the same reusable delegation set  | 100 [Request a higher limit](https://console.aws.amazon.com/support/home#/case/create?issueType=service-limit-increase&limitType=service-code-route53)\. | 
 | Amazon VPCs that you can associate with a private hosted zone | 100 [Request a higher limit](https://console.aws.amazon.com/support/home#/case/create?issueType=service-limit-increase&limitType=service-code-route53)\. | 
+| Private hosted zones that you can associate a VPC with | No limit **\*** | 
 | Authorizations that you can create so you can associate Amazon VPCs that were created by one account with a hosted zone that was created by another account | 100 | 
+
+**\*** You can associate a VPC with any or all of the private hosted zones that you control through your AWS accounts\. For example, suppose you have three AWS accounts and all three have the default limit of 500 hosted zones\. If you create 500 private hosted zones for all three accounts, you can associate a VPC with all 1,500 private hosted zones\.
 
 ### Limits on Records<a name="limits-api-entities-records"></a>
 
@@ -58,7 +61,8 @@ For information on getting current limits, see the following Route 53 actions:
 | --- | --- | 
 | Records | 10,000 per hosted zone [Request a higher limit](https://console.aws.amazon.com/support/home#/case/create?issueType=service-limit-increase&limitType=service-code-route53)\. For a limit greater than 10,000 records in a hosted zone, an additional charge applies\.  | 
 | Values in a record | 100 per record | 
-| Geolocation, geoproximity, latency, multivalue answer, and weighted records | 100 records that have the same name and type | 
+| Geolocation, latency, multivalue answer, and weighted records | 100 records that have the same name and type | 
+| Geoproximity records | 30 records that have the same name and type | 
 
 ### Limits on Health Checks<a name="limits-api-entities-health-checks"></a>
 
@@ -68,6 +72,7 @@ For information on getting current limits, see the following Route 53 actions:
 | Entity | Limit | 
 | --- | --- | 
 | Health checks | 200 active health checks per AWS account [Request a higher limit](https://console.aws.amazon.com/support/home#/case/create?issueType=service-limit-increase&limitType=service-code-route53)\. | 
+| Child health checks that a calculated health check can monitor | 255 | 
 
 ### Limits on Query Log Configurations<a name="limits-api-entities-query-log-configs"></a>
 
@@ -86,7 +91,7 @@ For information on getting current limits, see the following Route 53 actions:
 | Entity | Limit | 
 | --- | --- | 
 | Traffic policies For more information about Route 53 traffic flow, see [Using Traffic Flow to Route DNS Traffic](traffic-flow.md)\. | 50 per AWS account [Request a higher limit](https://console.aws.amazon.com/support/home#/case/create?issueType=service-limit-increase&limitType=service-code-route53)\. | 
-| Traffic policy versions | 1000 per traffic policy | 
+| Traffic policy versions | 1,000 per traffic policy | 
 | Traffic policy records \(referred to as "policy instances" in the Route 53 API, AWS SDKs, AWS Command Line Interface, and AWS Tools for Windows PowerShell\) | 5 per AWS account [Request a higher limit](https://console.aws.amazon.com/support/home#/case/create?issueType=service-limit-increase&limitType=service-code-route53)\. | 
 
 ### Limits on ReusableDelegationSets<a name="limits-api-entities-reusable-delegation-sets"></a>
@@ -107,9 +112,11 @@ Each limit listed applies to each region where you create autonaming resources\.
 
 | Entity | Limit | 
 | --- | --- | 
-| Namespaces per AWS account | 50 per region [Request a higher limit](https://console.aws.amazon.com/support/home?region=us-west-2#/case/create?issueType=service-limit-increase)  | 
-| Instances per namespace | 2000 per region [Request a higher limit](https://console.aws.amazon.com/support/home?region=us-west-2#/case/create?issueType=service-limit-increase)  | 
-| Instances per service | 100 per region [Request a higher limit](https://console.aws.amazon.com/support/home?region=us-west-2#/case/create?issueType=service-limit-increase)  | 
+| Namespaces | 50 per region **\*** [Request a higher limit](https://console.aws.amazon.com/support/home?region=us-west-2#/case/create?issueType=service-limit-increase)  | 
+| Instances | 2,000 per namespace [Request a higher limit](https://console.aws.amazon.com/support/home?region=us-west-2#/case/create?issueType=service-limit-increase)  | 
+| Instances | 1,000 per service | 
+
+**\*** When you create a namespace, we automatically create a Route 53 hosted zone\. This hosted zone counts against the limit on the number of hosted zones that you can create with an AWS account\. See [Limits on Hosted Zones](#limits-api-entities-hosted-zones)\.
 
 ## Limits on API Requests<a name="limits-api-requests"></a>
 
@@ -118,7 +125,7 @@ Amazon Route 53 API requests are subject to the following limits\.
 ### Number of Elements and Characters in `ChangeResourceRecordSets` Requests<a name="limits-api-requests-changeresourcerecordsets"></a>
 
 **`ResourceRecord` elements**  
-A request cannot contain more than 1000 `ResourceRecord` elements\. When the value of the `Action` element is `UPSERT`, each `ResourceRecord` element is counted twice\.
+A request cannot contain more than 1,000 `ResourceRecord` elements\. When the value of the `Action` element is `UPSERT`, each `ResourceRecord` element is counted twice\.
 
 **Maximum number of characters**  
 The sum of the number of characters \(including spaces\) in all `Value` elements in a request cannot exceed 32,000 characters\. When the value of the `Action` element is `UPSERT`, each character in a `Value` element is counted twice\.
@@ -132,4 +139,4 @@ Five requests per second per AWS account\. If you submit more than five requests
 If Route 53 can't process a request before the next request arrives, it will reject subsequent requests for the same hosted zone and return an HTTP 400 error \(`Bad request`\)\. The response header also includes a `Code` element with a value of `PriorRequestNotComplete` and a `Message` element with a value of `The request was rejected because Route 53 was still processing a prior request.`
 
 **`CreateHealthCheck` requests**  
-You can submit a maximum of 1000 `CreateHealthCheck` requests in a 24\-hour period\.
+You can submit a maximum of 1,000 `CreateHealthCheck` requests in a 24\-hour period\.

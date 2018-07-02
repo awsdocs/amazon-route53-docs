@@ -1,4 +1,4 @@
-# Migrating DNS Service for an Inactive Domain<a name="migrate-dns-domain-inactive"></a>
+# Making Route 53 the DNS Service for an Inactive Domain<a name="migrate-dns-domain-inactive"></a>
 
 If you want to migrate DNS service to Amazon Route 53 for a domain that isn't getting any traffic \(or is getting very little traffic\), perform the procedures in this section\.
 
@@ -22,7 +22,7 @@ The process that you use depends on the complexity of your current DNS configura
 
 + **If your current DNS configuration is more complex, and you're interested in Route 53 routing features** – Review the following documentation to see whether you want to use Route 53 features that aren't available from other DNS service providers\. If so, you can either create records manually, or you can import a zone file and then create or update records later:
 
-  + [Choosing Between Alias and Non\-Alias Records](resource-record-sets-choosing-alias-non-alias.md) explains the advantages of Route 53 alias records, which route traffic to some AWS resources for no charge\. Resources that you can create aliases for include CloudFront distributions, Elastic Beanstalk environments, Elastic Load Balancing load balancers, and Amazon S3 buckets\.
+  + [Choosing Between Alias and Non\-Alias Records](resource-record-sets-choosing-alias-non-alias.md) explains the advantages of Route 53 alias records, which route traffic to some AWS resources, such as CloudFront distributions and Amazon S3 buckets, for no charge\.
 
   + [Choosing a Routing Policy](routing-policy.md) explains the Route 53 routing options, for example, routing based on the location of your users, routing based on the latency between your users and your resources, routing based on whether your resources are healthy, and routing to resources based on weights that you specify\.
 **Note**  

@@ -17,6 +17,7 @@ When you create a record, you choose a routing policy, which determines how Amaz
 + **Weighted routing policy** – Use to route traffic to multiple resources in proportions that you specify\.
 
 
++ [Simple Routing](#routing-policy-simple)
 + [Failover Routing](#routing-policy-failover)
 + [Geolocation Routing](#routing-policy-geo)
 + [Geoproximity Routing \(Traffic Flow Only\)](#routing-policy-geoproximity)
@@ -25,9 +26,27 @@ When you create a record, you choose a routing policy, which determines how Amaz
 + [Weighted Routing](#routing-policy-weighted)
 + [How Amazon Route 53 Estimates the Location of a User \(Geolocation and Geoproximity Routing\)](#routing-policy-edns0)
 
+## Simple Routing<a name="routing-policy-simple"></a>
+
+Simple routing lets you configure standard DNS records, with no special Route 53 routing such as weighted or latency\. With simple routing, you typically route traffic to a single resource, for example, to a web server for your website\. 
+
+If you choose the simple routing policy in the Route 53 console, you can't create multiple records that have the same name and type, but you can specify multiple values in the same record, such as multiple IP addresses\. \(If you choose the simple routing policy for an alias record, you can specify only one AWS resource or one record in the current hosted zone\.\) If you specify multiple values in a record, Route 53 returns all values to the recursive resolver in random order, and the resolver returns the values to the client \(such as a web browser\) that submitted the DNS query\. The client then chooses a value and resubmits the query\.
+
+For information about values that you specify when you use the simple routing policy to create records, see the following topics:
+
++ [Values for Basic Records](resource-record-sets-values-basic.md)
+
++ [Values for Alias Records](resource-record-sets-values-alias.md)
+
 ## Failover Routing<a name="routing-policy-failover"></a>
 
-Failover routing lets you route traffic to a resource when the resource is healthy or to a different resource when the first resource is unhealthy\. The primary and secondary records can route traffic to anything from an Amazon S3 bucket that is configured as a website to a complex tree of records\. For more information, see [Configuring Active\-Passive Failover by Using Amazon Route 53 Failover and Failover Alias Records](dns-failover-configuring-options.md#dns-failover-failover-rrsets) and [Configuring Failover in a Private Hosted Zone](dns-failover-private-hosted-zones.md)\. 
+Failover routing lets you route traffic to a resource when the resource is healthy or to a different resource when the first resource is unhealthy\. The primary and secondary records can route traffic to anything from an Amazon S3 bucket that is configured as a website to a complex tree of records\. For more information, see [Active\-Passive Failover](dns-failover-types.md#dns-failover-types-active-passive)\.
+
+For information about values that you specify when you use the failover routing policy to create records, see the following topics:
+
++ [Values for Failover Records](resource-record-sets-values-failover.md)
+
++ [Values for Failover Alias Records](resource-record-sets-values-failover-alias.md)
 
 ## Geolocation Routing<a name="routing-policy-geo"></a>
 
@@ -40,6 +59,12 @@ You can specify geographic locations by continent, by country, or by state in th
 Geolocation works by mapping IP addresses to locations\. However, some IP addresses aren't mapped to geographic locations, so even if you create geolocation records that cover all seven continents, Amazon Route 53 will receive some DNS queries from locations that it can't identify\. You can create a default record that handles both queries from IP addresses that aren't mapped to any location and queries that come from locations that you haven't created geolocation records for\. If you don't create a default record, Route 53 returns a "no answer" response for queries from those locations\.
 
 For more information, see [How Amazon Route 53 Estimates the Location of a User \(Geolocation and Geoproximity Routing\)](#routing-policy-edns0)\.
+
+For information about values that you specify when you use the geolocation routing policy to create records, see the following topics:
+
++ [Values for Geolocation Records](resource-record-sets-values-geo.md)
+
++ [Values for Geolocation Alias Records](resource-record-sets-values-geo-alias.md)
 
 ## Geoproximity Routing \(Traffic Flow Only\)<a name="routing-policy-geoproximity"></a>
 
@@ -115,16 +140,22 @@ To use latency\-based routing, you create latency records for your resources in 
 
 For example, suppose you have ELB load balancers in the US West \(Oregon\) Region and in the Asia Pacific \(Singapore\) Region\. You created a latency record for each load balancer\. Here's what happens when a user in London enters the name of your domain in a browser:
 
-1. DNS routes the request to a Route 53 name server\.
+1. DNS routes the query to a Route 53 name server\.
 
 1. Route 53 refers to its data on latency between London and the Singapore region and between London and the Oregon region\. 
 
-1. If latency is lower between the London and Oregon regions, Route 53 responds to the query with the IP address for the Oregon load balancer\. If latency is lower between London and the Singapore region, Route 53 responds with the IP address for the Singapore load balancer Singapore\. 
+1. If latency is lower between the London and Oregon regions, Route 53 responds to the query with the IP address for the Oregon load balancer\. If latency is lower between London and the Singapore region, Route 53 responds with the IP address for the Singapore load balancer\. 
 
 Latency between hosts on the internet can change over time as a result of changes in network connectivity and routing\. Latency\-based routing is based on latency measurements performed over a period of time, and the measurements reflect these changes\. A request that is routed to the Oregon region this week might be routed to the Singapore region next week\.
 
 **Note**  
 When a browser or other viewer uses a DNS resolver that supports the edns\-client\-subnet extension of EDNS0, the DNS resolver sends Route 53 a truncated version of the user's IP address\. If you configure latency\-based routing, Route 53 considers this value when routing traffic to your resources\.
+
+For information about values that you specify when you use the latency routing policy to create records, see the following topics:
+
++ [Values for Latency Records](resource-record-sets-values-latency.md)
+
++ [Values for Latency Alias Records](resource-record-sets-values-latency-alias.md)
 
 ## Multivalue Answer Routing<a name="routing-policy-multivalue"></a>
 
@@ -134,13 +165,15 @@ To route traffic approximately randomly to multiple resources, such as web serve
 
 Note the following:
 
-+ If you associate a health check with a multivalue answer records, Route 53 responds to DNS queries with the corresponding IP address only when the health check is healthy\.
++ If you associate a health check with a multivalue answer record, Route 53 responds to DNS queries with the corresponding IP address only when the health check is healthy\.
 
 + If you don't associate a health check with a multivalue answer record, Route 53 always considers the record to be healthy\.
 
 + If you have eight or fewer healthy records, Route 53 responds to all DNS queries with all the healthy records\.
 
 + When all records are unhealthy, Route 53 responds to DNS queries with up to eight unhealthy records\.
+
+For information about values that you specify when you use the multivalue answer routing policy to create records, see [Values for Multivalue Answer Records](resource-record-sets-values-multivalue.md)\.
 
 ## Weighted Routing<a name="routing-policy-weighted"></a>
 
@@ -151,6 +184,12 @@ To configure weighted routing, you create records that have the same name and ty
 ![\[Formula for how much traffic is routed to a given resource: weight for a specified record / sum of the weights for all records.\]](http://docs.aws.amazon.com/Route53/latest/DeveloperGuide/images/WRR_calculation.png)
 
 For example, if you want to send a tiny portion of your traffic to one resource and the rest to another resource, you might specify weights of 1 and 255\. The resource with a weight of 1 gets 1/256th of the traffic \(1/1\+255\), and the other resource gets 255/256ths \(255/1\+255\)\. You can gradually change the balance by changing the weights\. If you want to stop sending traffic to a resource, you can change the weight for that record to 0\.
+
+For information about values that you specify when you use the weighted routing policy to create records, see the following topics:
+
++ [Values for Weighted Records](resource-record-sets-values-weighted.md)
+
++ [Values for Weighted Alias Records](resource-record-sets-values-weighted-alias.md)
 
 ## How Amazon Route 53 Estimates the Location of a User \(Geolocation and Geoproximity Routing\)<a name="routing-policy-edns0"></a>
 

@@ -1,6 +1,6 @@
 # Values for Basic Records<a name="resource-record-sets-values-basic"></a>
 
-When you create basic records, you specify the following values:
+When you create basic records, you specify the following values\.
 
 
 + [Name](#rrsets-values-basic-name)

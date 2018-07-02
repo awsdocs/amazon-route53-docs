@@ -38,7 +38,7 @@ Before you get started, you need the following:
 
 + Route 53 as the DNS service for the domain\. If you register your domain name by using Route 53, we automatically configure Route 53 as the DNS service for the domain\. 
 
-  For information about migrating DNS service to Route 53, see [Using Amazon Route 53 as the DNS Service for Subdomains Without Migrating the Parent Domain](creating-migrating.md)\.
+  For information about using Route 53 as the DNS service provider for your domain, see [Making Amazon Route 53 the DNS Service for an Existing DomainMaking Route 53 the DNS Service for an Existing Domain](MigratingDNS.md)\.
 
 ## Configuring Amazon Route 53 to Route Traffic to a CloudFront Web Distribution<a name="routing-to-cloudfront-distribution-config"></a>
 

@@ -2,10 +2,10 @@
 
 For most top\-level domains \(TLDs\), you can delete the registration if you no longer want it\. Registries for some TLDs don't allow you to delete a domain name registration; instead, you must wait for it to expire\. To determine whether you can delete the registration for your domain, see [Domains That You Can Register with Amazon Route 53](registrar-tld-list.md)\.
 
-If the registry allows you to delete the registration, perform the procedure in this topic\. If the registry doesn't allow you to delete a domain name registration, disable automatic renewal of domain registration for this domain\. When the **Expires on** date passes, Amazon Route 53 will automatically delete the registration for the domain\. For information about how to change the automatic renewal setting, see [Enabling or Disabling Automatic Renewal for a Domain](domain-enable-disable-auto-renewal.md)\.
+If the registry allows you to delete the registration, perform the procedure in this topic\. If the registry doesn't allow you to delete a domain name registration, disable automatic renewal of domain registration for the domain\. When the **Expires on** date passes, Amazon Route 53 automatically deletes the registration for the domain\. For information about how to change the automatic renewal setting, see [Enabling or Disabling Automatic Renewal for a Domain](domain-enable-disable-auto-renewal.md)\.
 
 **Important**  
-If you delete a domain name registration before the registration was scheduled to expire, we will not refund the registration fee\. 
+If you delete a domain name registration before the registration is scheduled to expire, AWS does not refund the registration fee\. 
 
 **To delete a domain name registration**
 
@@ -26,12 +26,14 @@ If you delete a domain name registration before the registration was scheduled t
    + noreply@domainnameverification\.net – for TLDs registered by our registrar associate, Gandi\.
 
    To determine who the registrar is for your TLD, see [Domains That You Can Register with Amazon Route 53](registrar-tld-list.md)\.
+
+1. When you receive the verification email, choose the link in the email, and either approve or reject the request to delete the domain\. 
 **Important**  
-The registrant contact must follow the instructions in the email, or we must cancel the deletion request as required by ICANN\.
+The registrant contact must follow the instructions in the email, or we must cancel the deletion request after five days as required by ICANN\.
 
    You'll receive another email when your domain has been deleted\. To determine the current status of your request, see [Viewing the Status of a Domain Registration](domain-view-status.md)\.
 
-1. Delete the records in the hosted zone for the deleted domain, and then delete the hosted zone\. After you delete the hosted zone, Route 53 will stop billing you the monthly charge for a hosted zone\. For more information, see the following documentation:
+1. Delete the records in the hosted zone for the deleted domain, and then delete the hosted zone\. After you delete the hosted zone, Route 53 stops billing you the monthly charge for a hosted zone\. For more information, see the following documentation:
 
    + [Deleting Records](resource-record-sets-deleting.md)
 
