@@ -76,6 +76,25 @@ After you create a hosted zone, you create records in the hosted zone that defin
 
 You can create records in a variety of ways:
 
+**Export a zone file**
+If you are migrating resource records from one AWS account to another one, it is currently not possible to export them from the AWS console. Instead, using the following AWSCLI command (requires [jq](https://stedolan.github.io/jq/)) will help you prepare an importable TSV:
+
+```bash
+echo -e "\$ORIGIN\tEXAMPLE.COM." && echo -e "\$TTL\t1h" && aws route53 list-resource-record-sets --hosted-zone-id Z1EEXAMPLE9SF3 | jq -r '.ResourceRecordSets[] | [.Name, .Type, .ResourceRecords[0].Value] | join("\t")' - | grep -vE "NS|SOA"
+```
+
+Make sure to substitute the `EXAMPLE.COM` for your desired domain name. The command above will generate a TSV you can use later on the destination hosted zone:
+
+```
+$ORIGIN   EXAMPLE.COM.
+$TTL      1h
+EXAMPLE.COM.	MX	10 inbound-smtp.eu-west-1.amazonaws.com
+EXAMPLE.COM.	TXT	"google-site-verification=foo"
+(...)
+```
+
+SOA/NS records are excluded from the export since they cannot be automatically imported between accounts.
+
 **Import a zone file**  
 This is the easiest method if you got a zone file from your current DNS service in [Step 1: Get Your Current DNS Configuration from the Current DNS Service Provider \(Inactive Domains\)](#migrate-dns-get-zone-file-domain-inactive)\. Amazon Route 53 can't predict when to create alias records or to use special routing types such as weighted or failover\. As a result, if you import a zone file, Route 53 creates standard DNS records using the simple routing policy\.  
 For more information, see [Creating Records By Importing a Zone File](resource-record-sets-creating-import.md)\.
