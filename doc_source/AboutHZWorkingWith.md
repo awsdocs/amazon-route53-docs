@@ -11,7 +11,7 @@ In both cases, you then create records in the hosted zone to specify how you wan
 This topic explains how to use the Amazon Route 53 console to create, list, and delete public hosted zones\. 
 
 **Note**  
-You can also use a Route 53 *private* hosted zone to route traffic within one or more Amazon Virtual Private Clouds\. For more information, see [Working with Private Hosted Zones](hosted-zones-private.md)\.
+You can also use a Route 53 *private* hosted zone to route traffic within one or more VPCs that you create with the Amazon VPC service\. For more information, see [Working with Private Hosted Zones](hosted-zones-private.md)\.
 
 
 + [Considerations When Working with Public Hosted Zones](hosted-zone-public-considerations.md)

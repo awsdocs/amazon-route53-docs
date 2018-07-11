@@ -10,7 +10,7 @@ You can integrate Amazon Route 53 with other AWS services to log requests that 
 
 **AWS CloudTrail**  
 Amazon Route 53 is integrated with AWS CloudTrail, a service that captures information about every request that is sent to the Route 53 API by your AWS account\. You can use information in the CloudTrail log files to determine which requests were made to Route 53, the source IP address from which each request was made, who made the request, when it was made, and so on\.  
-For more information, see [Using AWS CloudTrail to Capture Requests Sent to the Amazon Route 53 API](logging-using-cloudtrail.md)\.
+For more information, see [Logging Amazon Route 53 API Calls with AWS CloudTrail](logging-using-cloudtrail.md)\.
 
 **Amazon CloudWatch**  
 You can use Amazon CloudWatch to monitor the status—healthy or unhealthy—of your Route 53 health checks\. Health checks monitor the health and performance of your web applications, web servers, and other resources\. At regular intervals that you specify, Route 53 submits automated requests over the internet to your application, server, or other resource to verify that it's reachable, available, and functional\.  

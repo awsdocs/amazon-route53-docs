@@ -17,4 +17,4 @@ Monitoring is an important part of maintaining the reliability, availability, an
 
 + [Monitoring Domain Registrations](monitoring-domain-registrations.md)
 + [Monitoring Your Resources with Amazon Route 53 Health Checks and Amazon CloudWatch](monitoring-cloudwatch.md)
-+ [Using AWS CloudTrail to Capture Requests Sent to the Amazon Route 53 API](logging-using-cloudtrail.md)
++ [Logging Amazon Route 53 API Calls with AWS CloudTrail](logging-using-cloudtrail.md)

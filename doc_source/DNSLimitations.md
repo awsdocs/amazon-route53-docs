@@ -48,7 +48,7 @@ For information on getting current limits, see the following Route 53 actions:
 | Hosted zones that can use the same reusable delegation set  | 100 [Request a higher limit](https://console.aws.amazon.com/support/home#/case/create?issueType=service-limit-increase&limitType=service-code-route53)\. | 
 | Amazon VPCs that you can associate with a private hosted zone | 100 [Request a higher limit](https://console.aws.amazon.com/support/home#/case/create?issueType=service-limit-increase&limitType=service-code-route53)\. | 
 | Private hosted zones that you can associate a VPC with | No limit **\*** | 
-| Authorizations that you can create so you can associate Amazon VPCs that were created by one account with a hosted zone that was created by another account | 100 | 
+| Authorizations that you can create so you can associate VPCs that were created by one account with a hosted zone that was created by another account | 100 | 
 
 **\*** You can associate a VPC with any or all of the private hosted zones that you control through your AWS accounts\. For example, suppose you have three AWS accounts and all three have the default limit of 500 hosted zones\. If you create 500 private hosted zones for all three accounts, you can associate a VPC with all 1,500 private hosted zones\.
 

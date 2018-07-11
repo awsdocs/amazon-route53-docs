@@ -95,7 +95,7 @@ In addition to AWS resources, you can find a variety of third\-party tools and l
 
   Java API, including a one\-way\-sync utility for Windows DNS server files\.
 
-+ **[WebService::Amazon::Route53](http://search.cpan.org/~odyniec/WebService-Amazon-Route53/) \(via CPAN\)**
++ **[WebService::Amazon::Route53](https://metacpan.org/pod/WebService::Amazon::Route53) \(via CPAN\)**
 
   Perl interface to Amazon Route 53 API\.
 

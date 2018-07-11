@@ -10,7 +10,7 @@ When you create a record, you choose a routing policy, which determines how Amaz
 
 + **Geoproximity routing policy** – Use when you want to route traffic based on the location of your resources and, optionally, shift traffic from resources in one location to resources in another\.
 
-+ **Latency routing policy** – Use when you have resources in multiple locations and you want to route traffic to the resource that provides the best latency\.
++ **Latency routing policy** – Use when you have resources in multiple AWS Regions and you want to route traffic to the region that provides the best latency\.
 
 + **Multivalue answer routing policy** – Use when you want Route 53 to respond to DNS queries with up to eight healthy records selected at random\.
 
@@ -134,9 +134,9 @@ Biased distance = 75 kilometers
 
 ## Latency\-based Routing<a name="routing-policy-latency"></a>
 
-If your application is hosted in multiple Amazon EC2 regions, you can improve performance for your users by serving their requests from the Amazon EC2 region that provides the lowest latency\. 
+If your application is hosted in multiple AWS Regions, you can improve performance for your users by serving their requests from the AWS Region that provides the lowest latency\. 
 
-To use latency\-based routing, you create latency records for your resources in multiple EC2 Regions\. When Amazon Route 53 receives a DNS query for your domain or subdomain \(example\.com or apex\.example\.com\), it determines which Amazon EC2 regions you've created latency records for, determines which region gives the user the lowest latency, and then selects a latency record for that region\. Route 53 responds with the value from the selected record, such as the IP address for a web server\. 
+To use latency\-based routing, you create latency records for your resources in multiple AWS Regions\. When Route 53 receives a DNS query for your domain or subdomain \(example\.com or apex\.example\.com\), it determines which AWS Regions you've created latency records for, determines which region gives the user the lowest latency, and then selects a latency record for that region\. Route 53 responds with the value from the selected record, such as the IP address for a web server\. 
 
 For example, suppose you have ELB load balancers in the US West \(Oregon\) Region and in the Asia Pacific \(Singapore\) Region\. You created a latency record for each load balancer\. Here's what happens when a user in London enters the name of your domain in a browser:
 

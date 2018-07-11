@@ -24,7 +24,8 @@ You can use the following routing policies when you create records in a private 
 Creating records in a private hosted zone using other routing policies is not supported\.
 
 **Split\-View DNS**  
-You can use Route 53 to configure split\-view DNS, also known as split\-horizon DNS\. If you want to maintain internal and external versions of the same website or application \(for example, for testing changes before you make them public\), you can configure public and private hosted zones to return different internal and external IP addresses for the same domain name\. Just create a public hosted zone and a private hosted zone that have the same domain name, and create the same subdomains in both hosted zones\. 
+You can use Route 53 to configure split\-view DNS, also known as split\-horizon DNS\. If you want to maintain internal and external versions of the same website or application \(for example, for testing changes before you make them public\), you can configure public and private hosted zones to return different internal and external IP addresses for the same domain name\. Just create a public hosted zone and a private hosted zone that have the same domain name, and create the same subdomains in both hosted zones\.   
+If you need to perform name resolution of both your VPC and on\-premises workloads, additional configuration is required\. For more information, see [Hybrid Cloud DNS Solutions for Amazon VPC](https://d1.awsstatic.com/whitepapers/hybrid-cloud-dns-options-for-vpc.pdf)\.
 
 **Associating an Amazon VPC with More than One Private Hosted Zone**  
 You can associate a VPC with more than one private hosted zone, but the namespaces must not overlap\. For example, you cannot associate a VPC with hosted zones for both example\.com and acme\.example\.com because both namespaces end with example\.com\. There is no limit on the number of private hosted zones that you can associate a VPC with\.

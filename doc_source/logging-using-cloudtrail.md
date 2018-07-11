@@ -1,38 +1,48 @@
-# Using AWS CloudTrail to Capture Requests Sent to the Amazon Route 53 API<a name="logging-using-cloudtrail"></a>
+# Logging Amazon Route 53 API Calls with AWS CloudTrail<a name="logging-using-cloudtrail"></a>
 
-Amazon Route 53 is integrated with AWS CloudTrail, a service that captures information about every request that is sent to the Route 53 API by your AWS account, including requests that are sent by your IAM users\. CloudTrail periodically saves log files of these requests to an Amazon S3 bucket that you specify\. CloudTrail captures information about all requests, whether they were sent by using the Route 53 console, the Route 53 API, the AWS SDKs, the Route 53 CLI, or another service, such as AWS CloudFormation\.
-
-You can use information in the CloudTrail log files to determine which requests were sent to Route 53, the source IP address that the request was sent from, who sent the request, when it was sent, and so on\. To learn more about CloudTrail, including how to configure and enable it, see the [http://docs.aws.amazon.com/awscloudtrail/latest/userguide/](http://docs.aws.amazon.com/awscloudtrail/latest/userguide/)\.
+Route 53 is integrated with AWS CloudTrail, a service that provides a record of actions taken by a user, role, or an AWS service in Route 53\. CloudTrail captures all API calls for Route 53 as events, including calls from the Route 53 console and from code calls to the Route 53 APIs\. If you create a trail, you can enable continuous delivery of CloudTrail events to an Amazon S3 bucket, including events for Route 53\. If you don't configure a trail, you can still view the most recent events in the CloudTrail console in **Event history**\. Using the information collected by CloudTrail, you can determine the request that was made to Route 53, the IP address that the request was made from, who made the request, when it was made, and additional details\. 
 
 
-+ [Configuring CloudTrail for Amazon Route 53](#cloudtrail-configuring-for-route-53)
-+ [Amazon Route 53 Information in CloudTrail Log Files](#cloudtrail-route-53-info-in-logs)
-+ [Understanding Amazon Route 53 Log File Entries](#cloudtrail-understanding-route-53-entries)
++ [Route 53 Information in CloudTrail](#route-53-info-in-cloudtrail)
++ [Viewing Route 53 Events in Event History](#route-53-events-in-cloudtrail-event-history)
++ [Understanding Route 53 Log File Entries](#understanding-route-53-entries-in-cloudtrail)
 
-## Configuring CloudTrail for Amazon Route 53<a name="cloudtrail-configuring-for-route-53"></a>
+## Route 53 Information in CloudTrail<a name="route-53-info-in-cloudtrail"></a>
 
-When you configure CloudTrail to capture information about API requests sent by AWS accounts, you start by choosing a region\. For Amazon Route 53, you must choose **US East \(N\. Virginia\)** as the region, or you won't get any log entries for Route 53 API requests\. 
+CloudTrail is enabled on your AWS account when you create the account\. When activity occurs in Route 53, that activity is recorded in a CloudTrail event along with other AWS service events in **Event history**\. You can view, search, and download recent events in your AWS account\. For more information, see [Viewing Events with CloudTrail Event History](http://docs.aws.amazon.com/awscloudtrail/latest/userguide/view-cloudtrail-events.html)\. 
 
-## Amazon Route 53 Information in CloudTrail Log Files<a name="cloudtrail-route-53-info-in-logs"></a>
+For an ongoing record of events in your AWS account, including events for Route 53, create a trail\. A trail enables CloudTrail to deliver log files to an Amazon S3 bucket\. By default, when you create a trail in the console, the trail applies to all regions\. The trail logs events from all regions in the AWS partition and delivers the log files to the Amazon S3 bucket that you specify\. Additionally, you can configure other AWS services to further analyze and act upon the event data collected in CloudTrail logs\. For more information, see: 
 
-When you enable CloudTrail, CloudTrail captures every request sent to every AWS service that CloudTrail supports\. \(For a list of supported services, see [Supported Services](http://docs.aws.amazon.com/awscloudtrail/latest/userguide/what_is_cloud_trail_supported_services.html) in the *AWS CloudTrail User Guide*\.\) The log files aren't organized or sorted by service; each log file might contain records from more than one service\. CloudTrail determines when to create a new log file\.
++ [Overview for Creating a Trail](http://docs.aws.amazon.com/awscloudtrail/latest/userguide/cloudtrail-create-and-update-a-trail.html)
 
-Every log file entry contains information about who sent the request\. The user identity information in the log file helps you determine whether the request was sent by a user with root or IAM user credentials, by a user with temporary security credentials, or by another AWS service, such as AWS CloudFormation\. For more information, see [userIdentity Element](http://docs.aws.amazon.com/awscloudtrail/latest/userguide/event_reference_user_identity.html) in the *AWS CloudTrail User Guide*\.
++ [CloudTrail Supported Services and Integrations](http://docs.aws.amazon.com/awscloudtrail/latest/userguide/cloudtrail-aws-service-specific-topics.html#cloudtrail-aws-service-specific-topics-integrations)
 
-You can store log files for as long as you want\. You can also define Amazon S3 lifecycle rules to archive or delete log files automatically\.
++ [Configuring Amazon SNS Notifications for CloudTrail](http://docs.aws.amazon.com/awscloudtrail/latest/userguide/getting_notifications_top_level.html)
 
-By default, your log files are encrypted by using Amazon S3 server\-side encryption \(SSE\)\.
++ [Receiving CloudTrail Log Files from Multiple Regions](http://docs.aws.amazon.com/awscloudtrail/latest/userguide/receive-cloudtrail-log-files-from-multiple-regions.html) and [Receiving CloudTrail Log Files from Multiple Accounts](http://docs.aws.amazon.com/awscloudtrail/latest/userguide/cloudtrail-receive-logs-from-multiple-accounts.html)
 
-If you want to review log files as soon as CloudTrail delivers them to your Amazon S3 bucket, you can choose to have CloudTrail publish Amazon SNS notifications when new log files are delivered\. For more information, see [Configuring Amazon SNS Notifications](http://docs.aws.amazon.com/awscloudtrail/latest/userguide/getting_notifications_top_level.html) in the *AWS CloudTrail User Guide*\.
+All Route 53 actions are logged by CloudTrail and are documented in the [Amazon Route 53 API Reference](http://docs.aws.amazon.com/Route53/latest/APIReference/)\. For example, calls to the `CreateHostedZone`, `CreateHealthCheck`, and `RegisterDomain` actions generate entries in the CloudTrail log files\. 
 
-You can also aggregate log files from multiple AWS regions and multiple AWS accounts into a single Amazon S3 bucket\. For more information, see [Aggregating CloudTrail Log Files to a Single Amazon S3 Bucket](http://docs.aws.amazon.com/awscloudtrail/latest/userguide/aggregating_logs_top_level.html) in the *AWS CloudTrail User Guide*\. 
+Every event or log entry contains information about who generated the request\. The identity information helps you determine the following: 
 
-## Understanding Amazon Route 53 Log File Entries<a name="cloudtrail-understanding-route-53-entries"></a>
++ Whether the request was made with root or IAM user credentials\.
 
-Each JSON\-formatted CloudTrail log file can contain one or more log entries\. A log entry represents a single request from any source and includes information about the requested action, including any parameters, the date and time of the action, and so on\. The log entries are not guaranteed to be in any particular order; they are not an ordered stack trace of API calls\.
++ Whether the request was made with temporary security credentials for a role or federated user\.
+
++ Whether the request was made by another AWS service\.
+
+For more information, see the [CloudTrail userIdentity Element](http://docs.aws.amazon.com/awscloudtrail/latest/userguide/cloudtrail-event-reference-user-identity.html)\.
+
+## Viewing Route 53 Events in Event History<a name="route-53-events-in-cloudtrail-event-history"></a>
+
+CloudTrail lets you view recent events in **Event history**\. To view events for Route 53 API requests, you must choose **US East \(N\. Virginia\)** in the region selector at the top of the console\. For more information, see [Viewing Events with CloudTrail Event History](http://docs.aws.amazon.com/awscloudtrail/latest/userguide/view-cloudtrail-events.html) in the *AWS CloudTrail User Guide*\.
+
+## Understanding Route 53 Log File Entries<a name="understanding-route-53-entries-in-cloudtrail"></a>
+
+A trail is a configuration that enables delivery of events as log files to an Amazon S3 bucket that you specify\. CloudTrail log files contain one or more log entries\. An event represents a single request from any source and includes information about the requested action, the date and time of the action, request parameters, and so on\. CloudTrail log files are not an ordered stack trace of the public API calls, so they do not appear in any specific order\. 
 
 **Important**  
-Don't use CloudTrail log entries to reconstruct a hosted zone or to revert a hosted zone to a prior state\. Although extremely rare, it is possible that an Amazon Route 53 API request is not successfully recorded in the CloudTrail log\. If you try to reproduce a hosted zone and a log entry is missing, the record that you don't create or update could adversely affect the availability of your domain\.
+Don't use CloudTrail log entries to reconstruct a hosted zone or to revert a hosted zone to a prior state\. Although extremely rare, it is possible that an Route 53 API request is not successfully recorded in the CloudTrail log\. If you try to reproduce a hosted zone and a log entry is missing, the record that you don't create or update could adversely affect the availability of your domain\.
 
 The `eventName` element identifies the action that occurred\. \(In CloudTrail logs, the first letter is lowercase for domain registration actions even though it's uppercase in the names of the actions\. For example, `UpdateDomainContact` appears as `updateDomainContact` in the logs\)\. CloudTrail supports all Route 53 API actions\. The following example shows a CloudTrail log entry that demonstrates the following actions:
 

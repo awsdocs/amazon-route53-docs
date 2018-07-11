@@ -181,7 +181,7 @@ With this release, Route 53 adds the following new features:
 
 + **Health Check Status** – The health checks page in the Route 53 console now includes a **Status** column that lets you view the overall status of all of your health checks\. For more information, see [Viewing Health Check Status and the Reason for Health Check Failures](health-checks-view-status.md)\.
 
-+ **Integration with AWS CloudTrail** – Route 53 now works with CloudTrail to capture information about every request that your AWS account \(including your IAM users\) sends to the Route 53 API\. Integrating Route 53 and CloudTrail lets you determine which requests were made to the Route 53 API, the source IP address from which each request was made, who made the request, when it was made, and more\. For more information, see [Using AWS CloudTrail to Capture Requests Sent to the Amazon Route 53 API](logging-using-cloudtrail.md)\.
++ **Integration with AWS CloudTrail** – Route 53 now works with CloudTrail to capture information about every request that your AWS account \(including your IAM users\) sends to the Route 53 API\. Integrating Route 53 and CloudTrail lets you determine which requests were made to the Route 53 API, the source IP address from which each request was made, who made the request, when it was made, and more\. For more information, see [Logging Amazon Route 53 API Calls with AWS CloudTrail](logging-using-cloudtrail.md)\.
 
 + **Quick Alarms for Health Checks** – When you create a health check by using the Route 53 console, you can now simultaneously create an Amazon CloudWatch alarm for the health check and specify who to notify when Route 53 considers the endpoint unhealthy for one minute\. For more information, see [Creating and Updating Health Checks](health-checks-creating.md)\.
 
@@ -201,15 +201,15 @@ With this release, you can now edit the comment that you specified for a hosted 
 **November 5, 2014**  
 With this release, Route 53 adds the following new features:  
 
-+ **Private DNS for Amazon Virtual Private Clouds**–You can now use Route 53 to manage your internal domain names for Amazon Virtual Private Clouds \(VPCs\) without exposing DNS data to the public internet\. For more information, see [Working with Private Hosted Zones](hosted-zones-private.md)\.
++ **Private DNS for VPCs created using the Amazon Virtual Private Cloud service** – You can now use Route 53 to manage your internal domain names for VPCs without exposing DNS data to the public internet\. For more information, see [Working with Private Hosted Zones](hosted-zones-private.md)\.
 
-+ **Health check failure reasons**–You can now see the current status of a selected health check, as well as details on why the health check last failed, as reported by each of the Route 53 health checkers\. The status includes the HTTP status code, and failure reasons include information about numerous types of failures, such as string matching failures and response timeouts\. For more information, see [Viewing Health Check Status and the Reason for Health Check Failures](health-checks-view-status.md)\.
++ **Health check failure reasons** – You can now see the current status of a selected health check, as well as details on why the health check last failed, as reported by each of the Route 53 health checkers\. The status includes the HTTP status code, and failure reasons include information about numerous types of failures, such as string matching failures and response timeouts\. For more information, see [Viewing Health Check Status and the Reason for Health Check Failures](health-checks-view-status.md)\.
 
-+ **Reusable delegation sets**–You can now apply the same set of four authoritative name servers, known collectively as a delegation set, to multiple hosted zones that correspond with different domain names\. This greatly simplifies the process of migrating DNS service to Route 53 and managing large numbers of hosted zones\. Using reusable delegation sets currently requires that you use the Route 53 API or an AWS SDK\. For more information, see the [Amazon Route 53 API Reference](http://docs.aws.amazon.com/Route53/latest/APIReference/)\.
++ **Reusable delegation sets** – You can now apply the same set of four authoritative name servers, known collectively as a delegation set, to multiple hosted zones that correspond with different domain names\. This greatly simplifies the process of migrating DNS service to Route 53 and managing large numbers of hosted zones\. Using reusable delegation sets currently requires that you use the Route 53 API or an AWS SDK\. For more information, see the [Amazon Route 53 API Reference](http://docs.aws.amazon.com/Route53/latest/APIReference/)\.
 
-+ **Improved geolocation routing**–We further improved the accuracy of geolocation routing by adding support for the edns\-client\-subnet extension of EDNS0\. For more information, see [Geolocation Routing](routing-policy.md#routing-policy-geo)\.
++ **Improved geolocation routing** – We further improved the accuracy of geolocation routing by adding support for the edns\-client\-subnet extension of EDNS0\. For more information, see [Geolocation Routing](routing-policy.md#routing-policy-geo)\.
 
-+ **Support for Signature v4**–You can now sign all Route 53 API requests using Signature version 4\. For more information, see [Signing Route 53 API Requests](http://docs.aws.amazon.com/Route53/latest/APIReference/requests-authentication.html) in the *Amazon Route 53 API Reference*\.
++ **Support for Signature v4** – You can now sign all Route 53 API requests using Signature version 4\. For more information, see [Signing Route 53 API Requests](http://docs.aws.amazon.com/Route53/latest/APIReference/requests-authentication.html) in the *Amazon Route 53 API Reference*\.
 
 **July 31, 2014**  
 With this release, you can now do the following:  
