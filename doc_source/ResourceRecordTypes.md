@@ -69,6 +69,8 @@ Note the following about the format for CAA records:
 
 + Always enclose `value` in quotation marks \(""\)\.
 
++ The `tag` must be alphanumeric (A-Za-z0-9)  
+
 + Some CAs allow or require additional values for `value`\. Specify additional values as name\-value pairs, and separate them with semicolons \(;\), for example:
 
   `0 issue "ca.example.net; account=123456"`
@@ -137,7 +139,7 @@ For example, suppose you don't want any CA to issue a certificate for example\.c
 
 `0 issue ";"`
 
-If you don't want any CA to issue a certificate for example\.com or its subdomains, you create a CAA record for example\.com with the following settings: 
+If you don't want any CA to issue a certificate for example\.com or its subdomains, you create a CAA record for example\.com with the following settings:
 
 `0 issuewild ";"`
 
@@ -184,7 +186,7 @@ If your CA supports a feature that isn't defined in the RFC for CAA records, spe
 For example, suppose your CA supports sending a text message if the CA receives an invalid certificate request\. \(We aren't aware of any CAs that support this option\.\) Settings for the record might be the following:
 
 ```
-128 example-text-tag "1-555-555-1212"
+128 exampletexttag "1-555-555-1212"
 ```
 
 ### Examples<a name="CAAFormat-examples"></a>
@@ -251,7 +253,7 @@ The domain name of the email server\. Specify the name \(such as mail\.example\.
 
 ## NAPTR Record Type<a name="NAPTRFormat"></a>
 
-A Name Authority Pointer \(NAPTR\) is a type of record that is used by Dynamic Delegation Discovery System \(DDDS\) applications to convert one value to another or to replace one value with another\. For example, one common use is to convert phone numbers into SIP URIs\. 
+A Name Authority Pointer \(NAPTR\) is a type of record that is used by Dynamic Delegation Discovery System \(DDDS\) applications to convert one value to another or to replace one value with another\. For example, one common use is to convert phone numbers into SIP URIs\.
 
 The `Value` element for an NAPTR record consists of six space\-separated values:
 
@@ -262,7 +264,7 @@ When you specify more than one record, the sequence that you want the DDDS appli
 When you specify two or more records that have the same **Order**, your preference for the sequence that those records are evaluated in\. For example, if two records have an **Order** of 1, the DDDS application first evaluates the record that has the lower **Preference**\. Valid values: 0\-65535\.
 
 **Flags**  
-A setting that is specific to DDDS applications\. Values currently defined in [RFC 3404](https://www.ietf.org/rfc/rfc3404.txt) are uppercase\- and lowercase letters **"A"**, **"P"**, **"S"**, and **"U"**, and the empty string, **""**\. Enclose **Flags** in quotation marks\. 
+A setting that is specific to DDDS applications\. Values currently defined in [RFC 3404](https://www.ietf.org/rfc/rfc3404.txt) are uppercase\- and lowercase letters **"A"**, **"P"**, **"S"**, and **"U"**, and the empty string, **""**\. Enclose **Flags** in quotation marks\.
 
 **Service**  
 A setting that is specific to DDDS applications\. Enclose **Service** in quotation marks\.  
@@ -424,7 +426,7 @@ A single string can include up to 255 characters, including the following:
 
 + \- \(hyphen\)
 
-+ \! " \# $ % & ' \( \) \* \+ , \- / : ; < = > ? @ \[ \\ \] ^ \_ ` \{ | \} \~ \. 
++ \! " \# $ % & ' \( \) \* \+ , \- / : ; < = > ? @ \[ \\ \] ^ \_ ` \{ | \} \~ \.
 
 If your TXT record contains any of the following characters, you must specify the characters by using escape codes in the format `\`*three\-digit octal code*:
 
@@ -434,11 +436,11 @@ If your TXT record contains any of the following characters, you must specify th
 
 For example, if the value of your TXT record is `"exämple.com"`, you specify `"ex\344mple.com"`\.
 
-For a mapping between ASCII characters and octal codes, perform an internet search for "ascii octal codes\." One useful reference is [ASCII Code \- The extended ASCII table](https://www.ascii-code.com/)\. 
+For a mapping between ASCII characters and octal codes, perform an internet search for "ascii octal codes\." One useful reference is [ASCII Code \- The extended ASCII table](https://www.ascii-code.com/)\.
 
 Case is preserved, so `"Ab"` and `"aB"` are different values\.
 
-To include a quotation mark \(`"`\) in a string, put a backslash \(`\`\) character before the quotation mark: `\"`\. 
+To include a quotation mark \(`"`\) in a string, put a backslash \(`\`\) character before the quotation mark: `\"`\.
 
 **Example for the Amazon Route 53 console**
 
