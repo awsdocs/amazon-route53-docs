@@ -155,14 +155,16 @@ If you want Amazon Route 53 to stop sending query logs to CloudWatch Logs, perf
 
 ## Values that Appear in DNS Query Logs<a name="query-logs-format"></a>
 
-Each log file contains one log entry for each DNS query that Amazon Route 53 received from DNS resolvers in the corresponding edge location\. Each log entry includes the following values:
+Each log file contains one log entry for each DNS query that Amazon Route 53 received from DNS resolvers in the corresponding edge location\. This file is <space> delimited. Each log entry includes the following values:
+
+**Query timestamp**
+The date and time that Route 53 responded to the request, in ISO 8601 format and Coordinated Universal Time \(UTC\), for example, `2017-03-16T19:20:25.177Z`\. For information about ISO 8601 format, see the Wikipedia article [ISO 8601](https://en.wikipedia.org/wiki/ISO_8601)\. For information about UTC, see the Wikipedia article [Coordinated Universal Time](https://en.wikipedia.org/wiki/Coordinated_Universal_Time)\.
 
 **Log format version**  
 The version number of this query log\. If we add fields to the log or change the format of existing fields, we'll increment this value\.
 
-**Query timestamp**  
-The date and time that Route 53 responded to the request, in ISO 8601 format and Coordinated Universal Time \(UTC\), for example, `2017-03-16T19:20:25.177Z`\.   
-For information about ISO 8601 format, see the Wikipedia article [ISO 8601](https://en.wikipedia.org/wiki/ISO_8601)\. For information about UTC, see the Wikipedia article [Coordinated Universal Time](https://en.wikipedia.org/wiki/Coordinated_Universal_Time)\.
+**Timestamp**  
+The date and time that Route 53 responded to the request, in ISO 8601 format and Coordinated Universal Time \(UTC\), for example, `2017-03-16T19:20:25Z`\.   
 
 **Hosted zone ID**  
 The ID of the hosted zone that is associated with all the DNS queries in this log\.
@@ -195,9 +197,9 @@ For more information, see the IETF draft [Client Subnet in DNS Requests](https:/
 Here's an example query log:
 
 ```
-1.0 2017-12-13T08:16:02.130Z Z123412341234 example.com A NOERROR UDP FRA6 192.168.1.1 -
-1.0 2017-12-13T08:15:50.235Z Z123412341234 example.com AAAA NOERROR TCP IAD12 192.168.3.1 192.168.222.0/24
-1.0 2017-12-13T08:16:03.983Z Z123412341234 example.com ANY NOERROR UDP FRA6 2001:db8::1234 2001:db8:abcd::/48
-1.0 2017-12-13T08:15:50.342Z Z123412341234 bad.example.com A NXDOMAIN UDP IAD12 192.168.3.1 192.168.111.0/24
-1.0 2017-12-13T08:16:05.744Z Z123412341234 txt.example.com TXT NOERROR UDP JFK5 192.168.1.2 -
+2018-08-16T22:47:10.000Z 1.0 2018-08-16T22:47:10Z Z2BCRTCS2QIEI0 example.com A NOERROR UDP FRA6 192.168.1.1 -
+2018-08-16T22:47:10.000Z 1.0 2018-08-16T22:47:10Z Z2BCRTCS2QIEI0 example.com AAAA NOERROR TCP IAD12 192.168.3.1 192.168.222.0/24
+2018-08-16T22:47:10.000Z 1.0 2018-08-16T22:47:10Z Z2BCRTCS2QIEI0 example.com ANY NOERROR UDP FRA6 2001:db8::1234 2001:db8:abcd::/48
+2018-08-16T22:47:10.000Z 1.0 2018-08-16T22:47:10Z Z2BCRTCS2QIEI0 bad.example.com A NXDOMAIN UDP IAD12 192.168.3.1 192.168.111.0/24
+2018-08-16T22:47:10.000Z 1.0 2018-08-16T22:47:10Z Z2BCRTCS2QIEI0 txt.example.com TXT NOERROR UDP JFK5 192.168.1.2 -
 ```
