@@ -158,6 +158,7 @@ If you want Amazon Route 53 to stop sending query logs to CloudWatch Logs, perf
 Each log file contains one log entry for each DNS query that Amazon Route 53 received from DNS resolvers in the corresponding edge location\. This file is <space> delimited. Each log entry includes the following values:
 
 **Query timestamp**
+
 The date and time that Route 53 responded to the request, in ISO 8601 format and Coordinated Universal Time \(UTC\), for example, `2017-03-16T19:20:25.177Z`\. For information about ISO 8601 format, see the Wikipedia article [ISO 8601](https://en.wikipedia.org/wiki/ISO_8601)\. For information about UTC, see the Wikipedia article [Coordinated Universal Time](https://en.wikipedia.org/wiki/Coordinated_Universal_Time)\.
 
 **Log format version**  
