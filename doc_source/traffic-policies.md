@@ -141,7 +141,7 @@ For more information, see [Multivalue Answer Routing](routing-policy.md#routing-
 
 **Weighted rule**  
 Choose this option when you have multiple resources that perform the same function \(for example, web servers that serve the same website\) and you want Route 53 to route traffic to those resources in proportions that you specify \(for example, 1/3rd to one server and 2/3rds to the other\)\.  
-When you choose **Weighted rule**, type the weight that you want to apply to this rule\.  
+When you choose **Weighted rule**, enter the weight that you want to apply to this rule\.  
 For more information, see [Weighted Routing](routing-policy.md#routing-policy-weighted)\.
 
 **Endpoint**  
@@ -173,7 +173,7 @@ Choose this option if you want Route 53 to respond to DNS queries using the val
 
 ### Value<a name="traffic-policies-creating-values-value"></a>
 
-Choose or type a value based on the option that you chose for **Value type**:
+Choose or enter a value based on the option that you chose for **Value type**:
 
 **CloudFront distribution**  
 Choose a CloudFront distribution from the list of distributions that are associated with the current AWS account\.
@@ -186,7 +186,7 @@ Choose an Amazon S3 bucket from the list of Amazon S3 buckets that are configure
 When you create a policy record based on this traffic policy, the bucket that you choose here must match the domain name \(such as www\.example\.com\) that you specify for [Policy record DNS name](traffic-policy-records.md#traffic-policy-records-creating-values-policy-record-dns-name) in the policy record\. If **Value** and **Policy record DNS name** don't match, Amazon S3 won't respond to DNS queries for the domain name\.
 
 **Type *DNS type* value**  
-Enter a value that corresponds with the value that you specified for **DNS type** when you started this traffic policy\. For example, if you chose **MX** for **DNS type**, type two values: the priority that you want to assign to a mail server and the domain name of the mail server, such as `10 sydney.mail.example.com`\.  
+Enter a value that corresponds with the value that you specified for **DNS type** when you started this traffic policy\. For example, if you chose **MX** for **DNS type**, enter two values: the priority that you want to assign to a mail server and the domain name of the mail server, such as `10 sydney.mail.example.com`\.  
 For more information about supported DNS types, see [Supported DNS Record Types](ResourceRecordTypes.md)\.
 
 ## Creating Additional Versions of a Traffic Policy<a name="traffic-policies-creating-versions"></a>
@@ -209,7 +209,7 @@ To create a new traffic policy version, perform the following procedure\.
 
 1. Choose **Edit policy as new version**\.
 
-1. On the **Update description** page, type a description for the new traffic policy version\. We recommend that you specify a description that distinguishes this version from other versions of the same traffic policy\. When you create a new policy record, the value that you specify appears in the list of available versions for this traffic policy\.
+1. On the **Update description** page, enter a description for the new traffic policy version\. We recommend that you specify a description that distinguishes this version from other versions of the same traffic policy\. When you create a new policy record, the value that you specify appears in the list of available versions for this traffic policy\.
 
 1. Choose **Next**\.
 
@@ -261,7 +261,7 @@ The easiest way to get the JSON\-formatted document for an existing traffic poli
 
    1. Choose **Edit policy as new version**\.
 
-   1. On the **Update description** page, type a description for the new version\.
+   1. On the **Update description** page, enter a description for the new version\.
 
    1. Skip to step 4\.
 
@@ -269,7 +269,7 @@ The easiest way to get the JSON\-formatted document for an existing traffic poli
 
 1. Choose **Import traffic policy**\.
 
-1. Type a new traffic policy, paste an example traffic policy, or paste an existing traffic policy\. 
+1. Enter a new traffic policy, paste an example traffic policy, or paste an existing traffic policy\. 
 
 1. Choose **Import traffic policy**\.
 

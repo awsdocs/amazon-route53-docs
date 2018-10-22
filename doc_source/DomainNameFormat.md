@@ -48,21 +48,35 @@ To specify an internationalized domain name \(IDN\), convert the name to Punycod
 
 ## Using an Asterisk \(\*\) in the Names of Hosted Zones and Records<a name="domain-name-format-asterisk"></a>
 
-You can create hosted zones that include \* in the name\. Note the following:
+You can create hosted zones and records that include \* in the name\. 
+
+**Hosted Zones**
 
 + You can't include an \* in the leftmost label in a domain name\. For example, \*\.example\.com is not allowed\.
 
 + If you include \* in other positions, DNS treats it as an \* character \(ASCII 42\), not as a wildcard\.
 
-You can also create records that include \* in the name\. DNS treats the \* character either as a wildcard or as the \* character \(ASCII 42\), depending on where it appears in the name\. Note the following restrictions on using \* as a wildcard in the name of records:
+**Records**
 
-+ The \* must replace the leftmost label in a domain name, for example, \*\.example\.com\. It can't replace any of the middle labels, for example, marketing\.\*\.example\.com\.
+DNS treats the \* character either as a wildcard or as the \* character \(ASCII 42\), depending on where it appears in the name\. Note the following restrictions on using \* as a wildcard in the name of a record:
+
++ The \* must replace the leftmost label in a domain name, for example, \*\.example\.com or \*\.acme\.example\.com\. If you include \* in any other position, such as prod\.\*\.example\.com, DNS treats it as an \* character \(ASCII 42\), not as a wildcard\.
 
 + The \* must replace the entire label\. For example, you can't specify \*prod\.example\.com or prod\*\.example\.com\.
 
-+ You can't use the \* as a wildcard for records that have a type of NS\.
++ Specific domain names take precedence\. For example, if you create records for \*\.example\.com and acme\.example\.com, Route 53 always responds to DNS queries for acme\.example\.com with the values in the acme\.example\.com record\.
 
-For records, if you include \* in any position other than the leftmost label in a domain name, DNS treats it as an \* character \(ASCII 42\), not as a wildcard\.
++ The \* applies to DNS queries for the subdomain level that includes the asterisk, and all the subdomains of that subdomain\. For example, if you create a record named \*\.example\.com, Route 53 uses the values in that record to respond to DNS queries for apex\.example\.com, acme\.apex\.example\.com, and pinnacle\.acme\.apex\.example\.com \(if there are no records that have those names\)\. 
+
+  If you create a record named \*\.example\.com and there's no example\.com record, Route 53 responds to DNS queries for example\.com with `NXDOMAIN` \(non\-existent domain\)\.
+
++ You can configure Route 53 to return the same response to DNS queries both for all subdomains at the same level and for the domain name\. For example, you can configure Route 53 to respond to DNS queries such as apex\.example\.com and acme\.example\.com using the example\.com record\. Perform the following steps:
+
+  1. Create a record for the domain, such as example\.com\.
+
+  1. Create an alias record for the subdomain, such as \*\.example\.com\. Specify the record that you created in step 1 as the target for the alias record\.
+
++ You can't use the \* as a wildcard for records that have a type of NS\.
 
 ## Formatting Internationalized Domain Names<a name="domain-name-format-idns"></a>
 

@@ -14,7 +14,7 @@ The following procedure describes how to create and update health checks using t
 
    If you want to create a health check, choose **Create Health Check**\. For more information about each setting, move the mouse pointer over a label to see its tooltip\.
 
-1. Type the applicable values\. Note that some values can't be changed after you create a health check\. For more information, see [Values That You Specify When You Create or Update Health Checks](health-checks-creating-values.md)\.
+1. Enter the applicable values\. Note that some values can't be changed after you create a health check\. For more information, see [Values That You Specify When You Create or Update Health Checks](health-checks-creating-values.md)\.
 
 1. Choose **Create Health Check**\.
 

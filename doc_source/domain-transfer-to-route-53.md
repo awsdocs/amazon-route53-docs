@@ -87,6 +87,11 @@ We'll send email to that email address to request authorization for the transfer
 **Unlock the domain so it can be transferred**  
 ICANN, the governing body for domain registrations, requires that you unlock your domain before you transfer it\.
 
+**Geographic TLDs only – Disable privacy protection for the domain**  
+If you're transferring a domain that has a [geographic TLD](http://docs.aws.amazon.com/Route53/latest/DeveloperGuide/registrar-tld-list.html#registrar-tld-list-geographic) to Route 53, we send an email to the email address for the registrant contact that is listed in the WHOIS database to request authorization for the transfer\. If privacy protection is turned on, we can't get your email address\.  
+You can choose whether to re\-enable privacy protection when you request the transfer to Amazon Route 53 later in the process\. For more information, see [Enabling or Disabling Privacy Protection for Contact Information for a Domain](domain-privacy-protection.md)\.  
+Authorization isn't required for domains that have a [generic TLD](http://docs.aws.amazon.com/Route53/latest/DeveloperGuide/registrar-tld-list.html#registrar-tld-list-generic), such as \.com, \.net, or \.org\.
+
 **Confirm that the domain status allows you to transfer the domain**  
 For more information, see [Transfer Requirements for Top\-Level Domains](#domain-transfer-to-route-53-requirements)\.
 
@@ -160,13 +165,13 @@ Some registrars stop providing DNS service as soon as you request a transfer to 
 
    + **Import name servers from a Route 53 hosted zone that has the same name as the domain** – When you select this option, the console displays a list of the hosted zones that have the same name as the domain\. Choose the hosted zone that you want to use for routing traffic for the domain\.
 
-   + **Specify new name servers to replace the current registrar's name servers \(not recommended\)** – If you're using a DNS service other than Route 53 for this domain, type the names of the name servers that you got in [Step 4: Get the Names of Your Name Servers](#domain-transfer-to-route-53-get-name-servers)\. 
+   + **Specify new name servers to replace the current registrar's name servers \(not recommended\)** – If you're using a DNS service other than Route 53 for this domain, enter the names of the name servers that you got in [Step 4: Get the Names of Your Name Servers](#domain-transfer-to-route-53-get-name-servers)\. 
 **Important**  
 We don't recommend choosing this option because transferring DNS service from one DNS service provider to another can take up to two days\. The current registrar might stop providing DNS service as soon as you request a transfer to another registrar\. If the current registrar disables DNS service, your domain will become unavailable on the internet until the change to another DNS service provider takes effect\.  
 **Name servers**  
-If you chose the option **Specify new name servers to replace the current registrar's name servers**, type the names of the name servers that you got from the DNS service for the domain in [Step 4: Get the Names of Your Name Servers](#domain-transfer-to-route-53-get-name-servers)\. By default, the **Name server** fields display the names of the current name servers for the domain\.  
+If you chose the option **Specify new name servers to replace the current registrar's name servers**, enter the names of the name servers that you got from the DNS service for the domain in [Step 4: Get the Names of Your Name Servers](#domain-transfer-to-route-53-get-name-servers)\. By default, the **Name server** fields display the names of the current name servers for the domain\.  
 **Glue records**  
-If the name of a name server is a subdomain of the domain that you're transferring \(such as ns1\.example\.com in the domain example\.com\), enter one or more IP addresses for each name server\. You can enter addresses in IPv4 or IPv6 format\. If a name server has multiple IP addresses, type each address on a separate line\.
+If the name of a name server is a subdomain of the domain that you're transferring \(such as ns1\.example\.com in the domain example\.com\), enter one or more IP addresses for each name server\. You can enter addresses in IPv4 or IPv6 format\. If a name server has multiple IP addresses, enter each address on a separate line\.
 
 1. On the **Contact Details for Your** *n* **Domains** page, enter contact information for the domain registrant, administrator, and technical contact\. The values that you enter here are applied to all the domains that you're transferring\. 
 **Important**  
@@ -176,7 +181,7 @@ For **First Name** and **Last Name**, we recommend that you specify the name on 
 **Note**  
 For \.it domains, the registrant and administrative contacts must be the same\.
 
-   For more information, see [Values that You Specify When You Register a Domain](domain-register-values-specify.md)\.
+   For more information, see [Values that You Specify When You Register or Transfer a Domain](domain-register-values-specify.md)\.
 
 1. For some TLDs, we're required to collect additional information\. For these TLDs, enter the applicable values after the **Postal/Zip Code** field\.
 
@@ -200,7 +205,7 @@ For \.it domains, the registrant and administrative contacts must be the same\.
 
 1. On the **Transfer domain to Route 53** page, choose **Transfer multiple domains to Route 53**\.
 
-1. For each domain that you want to transfer, type the domain name and the authorization code in the following format\. Note the comma between the domain name and the authorization code:
+1. For each domain that you want to transfer, enter the domain name and the authorization code in the following format\. Note the comma between the domain name and the authorization code:
 
    ```
    domain-name-1,authorization-code-1
@@ -220,7 +225,7 @@ For \.it domains, the registrant and administrative contacts must be the same\.
 Choose **Add transferable domains to cart**\.  
 **If one or more domains are untransferable and you want to transfer them**  
 Review [Transfer Requirements for Top\-Level Domains](#domain-transfer-to-route-53-requirements) to confirm that each untransferable domain meets the transfer requirements\. If you don't find any obvious problems, contact the current registrar to determine why the domain can't be transferred to Route 53\.  
-After you make any changes so that domains are transferable \(for example, disabling privacy protection\), choose **Check transferability**, and Route 53 will repeat the transferability check\.  
+After you make any changes so that domains are transferable \(for example, disabling the transfer lock\), choose **Check transferability**, and Route 53 will repeat the transferability check\.  
 **If one or more domains are untransferable and you don't want to transfer them**  
 Choose **Add transferable domains to cart**\.
 
@@ -230,7 +235,7 @@ Choose **Add transferable domains to cart**\.
 
    By default, we use the same information for all three contacts\. If you want to enter different information for one or more contacts, change the value of **My Registrant, Administrative, and Technical contacts are all the same** to **No**\.
 
-   For more information, see [Values that You Specify When You Register a Domain](domain-register-values-specify.md)\.
+   For more information, see [Values that You Specify When You Register or Transfer a Domain](domain-register-values-specify.md)\.
 
 1. For some TLDs, we're required to collect additional information\. For these TLDs, enter the applicable values after the **Postal/Zip Code** field\.
 
@@ -248,11 +253,12 @@ Choose **Add transferable domains to cart**\.
 
 Soon after you request the transfer, we send one or more emails to the registrant contact for the domain:
 
-**Email to confirm that the registrant contact is reachable**  
+**All TLDs – Email to confirm that the registrant contact is reachable**  
 If you've never registered a domain with Route 53 or transferred a domain to Route 53, we send you an email that asks you to confirm that the email address is valid\. We retain this information so we don't have to send this confirmation email again\.
 
-**Email to get authorization to transfer the domain**  
-If we can access your email address in the public WHOIS database, we're required to get your authorization to transfer the domain\. If you transfer 10 domains, we have to send you 10 emails, and you have to click the authorization link in each one\. If we can't access your email address by submitting a public WHOIS query, the transfer proceeds without this authorization\.
+**Geographic TLDs only – Email to get authorization to transfer the domain**  
+For domains that have a [geographic TLD](http://docs.aws.amazon.com/Route53/latest/DeveloperGuide/registrar-tld-list.html#registrar-tld-list-geographic), we're required to get your authorization to transfer the domain\. If you transfer 10 domains, we have to send you 10 emails, and you have to click the authorization link in each one\. If we can't access your email address by submitting a public WHOIS query, we cancel the transfer\.  
+Authorization isn't required for domains that have a [generic TLD](http://docs.aws.amazon.com/Route53/latest/DeveloperGuide/registrar-tld-list.html#registrar-tld-list-generic), such as \.com, \.net, or \.org\.
 
 The emails all go to the registrant contact for the domain:
 
@@ -261,7 +267,7 @@ The emails all go to the registrant contact for the domain:
 + If someone else is the registrant contact, ask that person to follow the instructions in the email to authorize the transfer\.
 
 **Important**  
-We wait up to five days for the registrant contact to authorize the transfer\. If the registrant contact doesn't respond within five days, we cancel the transfer operation and send an email to the registrant contact about the cancellation\. 
+If you're transferring a domain that has a geographic TLD, we wait up to five days for the registrant contact to authorize the transfer\. If the registrant contact doesn't respond within five days, we cancel the transfer operation and send an email to the registrant contact about the cancellation\. 
 
 
 + [Authorization Email for a New Owner or Email Address](#domain-transfer-to-route-53-authorize-transfer-additional-email)

@@ -4,15 +4,25 @@ AWS provides free customer support for issues related to domain registration, fo
 
 + Transferring domains to or from Amazon Route 53
 
++ Transferring domains between AWS accounts
+
++ Increasing limits on Route 53 entities, such as the number of domains that you can register \(See [Limits](DNSLimitations.md)\.\)
+
 + Changing the owner of a domain
 
 + Changing contact information for the owner of a domain
 
 + Resending confirmation and authorization emails
 
-+ Renewing a domain
++ Renewing domains
 
-+ Deleting a domain or disabling automatic renewal after you close your AWS account
++ Restoring expired domains
+
++ Getting information about Route 53 billing
+
++ Providing proof of identity for \.uk domains
+
++ Deleting domains or disabling automatic renewal after you close your AWS account
 
 To contact customer support about these and other issues related to domain registration, perform the applicable procedure\.
 
@@ -38,7 +48,7 @@ Accept the default value of **Domain name registration issue**\.
 **Severity**  
 Choose the applicable severity\.  
 **Subject**  
-Type a brief summary of the issue\.  
+Enter a brief summary of the issue\.  
 **Description**  
 Describe the issue that you're having in more detail, and attach any relevant documents or screenshots\.  
 **Contact method**  

@@ -4,11 +4,9 @@ When you transfer a domain from Amazon Route 53 to another registrar, you get s
 
 **Important**  
 If you're currently using Route 53 as your DNS service provider and you also want to transfer DNS service to another provider, be aware that the following Route 53 features don't have direct parallels with features provided by other DNS service providers\. You'll need to work with the new DNS service provider to determine how to achieve comparable functionality:  
-Alias records
-Weighted records
-Latency records
-Failover records
-Geo records
+Alias records\. For more information, see [Choosing Between Alias and Non\-Alias Records](resource-record-sets-choosing-alias-non-alias.md)\.
+Routing policies other than the simple routing policy\. For more information, see [Choosing a Routing Policy](routing-policy.md)\.
+Health checks that are associated with records\. For more information, see [Configuring DNS Failover](dns-failover-configuring.md)\.
 
 Usually, you can transfer registration of a domain name to another registrar without much trouble\. Requirements vary among TLDs, but the following requirements are typical:
 
@@ -38,7 +36,7 @@ For a current list of domain name status codes and an explanation of what each c
 
 1. Choose the name of the domain that you want to transfer to another registrar\.
 
-1. On the **Your Domains > ** *domain name* page, check the value of **Domain name status**\. If it is one of the following values, you can't currently transfer the domain: 
+1. On the **Registered domains > ** *domain name* page, check the value of **Domain name status code**\. If it is one of the following values, you can't currently transfer the domain: 
 
    + pendingDelete
 
@@ -54,19 +52,19 @@ For a current list of domain name status codes and an explanation of what each c
 
 1. Choose **Edit contacts**\.
 
-1. On the **Edit Contact Details for ** *domain name* page, for **Privacy Protection**, select **Don't hide contact information** for all contacts\.
+1. On the **Registered Domain** *domain name* **Edit Contacts** page, for **Privacy Protection**, select **Disable** for all contacts\.
 
    In addition, update the contact information so the new registrar can contact you\.
 
 1. Choose **Save**\.
 
-1. *All domains except \.uk, \.co\.uk, \.me\.uk, and \.org\.uk domains* – On the **Your Domains >** *domain name* page, at **Authorization Code**, choose **Generate** and make note of the authorization code\. You'll provide this value to your registrar later in this procedure\.
+1. *All domains except \.uk, \.co\.uk, \.me\.uk, and \.org\.uk domains* – On the **Registered Domains >** *domain name* page, at **Authorization Code**, choose **Get code** and make note of the authorization code\. You'll provide this value to your registrar later in this procedure\.
 
    *\.uk, \.co\.uk, \.me\.uk, and \.org\.uk domains* – Change the IPS tag to the value for the new registrar:
 
    1. Go to the [Find a Registrar](http://www.nominet.uk/registrar-list/) page on the Nominet website, and find the IPS tag for the new registrar\. \(Nominet is the registry for \.uk, \.co\.uk, \.me\.uk, and \.org\.uk domains\.\)
 
-   1. On the **Your Domains** > *domain name* page, at **IPS Tag**, choose **Change IPS Tag**, and specify the value that you got in step a\.
+   1. On the **Registered Domains >** *domain name* page, at **IPS Tag**, choose **Change IPS Tag**, and specify the value that you got in step a\.
 
    1. Choose **Update**\.
 
@@ -76,7 +74,7 @@ For a current list of domain name status codes and an explanation of what each c
 
    1. Choose **Hosted Zones\.**
 
-   1. Double\-click the name of the hosted zone for your domain\. The domain and the hosted zone have the same name\.
+   1. Choose the name of the hosted zone for your domain\. The domain and the hosted zone have the same name\.
 
    1. *If you want to continue using Route 53 as the DNS service provider for the domain:* Find the NS record for the hosted zone, and make note of the names of the four name servers\. These names all begin with **ns\-**\.
 

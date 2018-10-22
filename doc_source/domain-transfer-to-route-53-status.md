@@ -16,18 +16,19 @@ We're confirming that your domain's status is eligible for transfer\. You must u
 
 + redemptionPeriod
 
-**Verifying WHOIS information \(step 2 of 14\)**  
-We sent a WHOIS query for your domain to determine whether you've disabled the privacy protection for the domain\. If privacy protection is still enabled with your current registrar, we won't be able to access the information we need to transfer the domain\.  
-If the current registrar for the domain won't let you turn off privacy protection, we can still transfer the domain if you specified a valid authorization code in [Step 5: Request the Transfer](domain-transfer-to-route-53.md#domain-transfer-to-route-53-request-transfer)\.
+**Geographic TLDs only – verifying WHOIS information \(step 2 of 14\)**  
+If you're transferring a domain that has a [geographic TLD](http://docs.aws.amazon.com/Route53/latest/DeveloperGuide/registrar-tld-list.html#registrar-tld-list-geographic), we sent a WHOIS query for your domain to determine whether you've disabled the privacy protection for the domain\. If privacy protection is still enabled with your current registrar, we won't be able to access the information we need to transfer the domain\.  
+Authorization isn't required for domains that have a [generic TLD](http://docs.aws.amazon.com/Route53/latest/DeveloperGuide/registrar-tld-list.html#registrar-tld-list-generic), such as \.com, \.net, or \.org\.
 
-**Sent email to registrant contact to get transfer authorization \(step 3 of 14\)**  
-We've sent an email to the registrant contact for the domain to confirm that the transfer was requested by an authorized contact of the domain\.
+**Geographic TLDs only – Sent email to registrant contact to get transfer authorization \(step 3 of 14\)**  
+If you're transferring a domain that has a [geographic TLD](http://docs.aws.amazon.com/Route53/latest/DeveloperGuide/registrar-tld-list.html#registrar-tld-list-geographic), we've sent an email to the registrant contact for the domain\. The purpose of the email is confirm that the transfer was requested by an authorized contact of the domain\.  
+Authorization isn't required for domains that have a [generic TLD](http://docs.aws.amazon.com/Route53/latest/DeveloperGuide/registrar-tld-list.html#registrar-tld-list-generic), such as \.com, \.net, or \.org\.
 
 **Verifying transfer with current registrar \(step 4 of 14\)**  
 We've sent a request to the current registrar for the domain to initiate the transfer\.
 
-**Awaiting authorization from registrant contact \(step 5 of 14\)**  
-We sent email to the registrant contact for the domain \(see step 3 of 14\), and we're waiting for the registrant contact to click a link in the email to authorize the transfer\. If you didn't receive the email for some reason, see [Resending Authorization and Confirmation Emails](domain-click-email-link.md)\.
+**Geographic TLDs only – Awaiting authorization from registrant contact \(step 5 of 14\)**  
+We sent email to the registrant contact for the domain \(see step 3 of 14\), and we're waiting for the registrant contact to click a link in the email to authorize the transfer\. If you're transferring a domain that has a [geographic TLD](http://docs.aws.amazon.com/Route53/latest/DeveloperGuide/registrar-tld-list.html#registrar-tld-list-geographic) and you didn't receive the email for some reason, see [Resending Authorization and Confirmation Emails](domain-click-email-link.md)\.
 
 **Contacted current registrar to request transfer \(step 6 of 14\)**  
 We're working with the current registrar for the domain to finalize the transfer\.

@@ -7,8 +7,9 @@ If you don't click the link in the email in the allotted amount of time, ICANN g
 **Register a domain**  
 We suspend the domain, so that it's not accessible on the internet\. To resend the confirmation email, see [To resend the confirmation email for a domain registration](#domain-click-email-link-register-procedure)\.
 
-**Transfer a domain to Amazon Route 53**  
-We cancel the transfer\. To resend the authorization email, see [To resend the authorization email for a domain transfer](#domain-click-email-link-transfer-procedure)\.
+**Geographic TLDs only – Transfer a domain to Amazon Route 53**  
+If you're transferring a domain that has a [geographic TLD](http://docs.aws.amazon.com/Route53/latest/DeveloperGuide/registrar-tld-list.html#registrar-tld-list-geographic), we cancel the transfer\. To resend the authorization email, see [To resend the authorization email for a domain transfer](#domain-click-email-link-transfer-procedure)\.  
+Authorization isn't required for domains that have a [generic TLD](http://docs.aws.amazon.com/Route53/latest/DeveloperGuide/registrar-tld-list.html#registrar-tld-list-generic), such as \.com, \.net, or \.org\.
 
 **Change the name or email address of the registrant contact for the domain \(the owner\)**  
 We cancel the change\. To resend the authorization email, see [To resend the authorization email to update the registrant contact or delete a domain](#domain-click-email-link-update-procedure)\.
@@ -16,8 +17,9 @@ We cancel the change\. To resend the authorization email, see [To resend the aut
 **Delete a domain**  
 We cancel the deletion request\. To resend the authorization email, see [To resend the authorization email to update the registrant contact or delete a domain](#domain-click-email-link-update-procedure)\.
 
-**Transfer a domain from Route 53 to another registrar**  
-The transfer proceeds\. Although you don't need to respond to an email from Route 53, you must respond to an email from the new registrar, or the new registrar must cancel the transfer\.
+**Geographic TLDs only – Transfer a domain from Route 53 to another registrar**  
+If you're transferring a domain that has a [geographic TLD](http://docs.aws.amazon.com/Route53/latest/DeveloperGuide/registrar-tld-list.html#registrar-tld-list-geographic), the new registrar cancels the transfer\.  
+Authorization isn't required for domains that have a [generic TLD](http://docs.aws.amazon.com/Route53/latest/DeveloperGuide/registrar-tld-list.html#registrar-tld-list-generic), such as \.com, \.net, or \.org\.
 
 
 + [Updating Your Email Address](#domain-click-email-link-update-address)

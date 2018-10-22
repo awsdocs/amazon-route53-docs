@@ -27,51 +27,53 @@ When you register a domain with Route 53, we automatically create a hosted zone
 
    If you're already using Route 53, in the navigation pane, choose **Registered Domains**\.
 
-1. Choose **Register Domain**\.
+1. Choose **Register Domain**, and specify the domain that you want to register:
 
-1. Enter the domain name that you want to register, and choose **Check** to find out whether the domain name is available\.
+   1. Enter the domain name that you want to register, and choose **Check** to find out whether the domain name is available\.
 
-   For information about how to specify characters other than a\-z, 0\-9, and \- \(hyphen\) and how to specify internationalized domain names, see [DNS Domain Name Format](DomainNameFormat.md)\.
+      For information about how to specify characters other than a\-z, 0\-9, and \- \(hyphen\) and how to specify internationalized domain names, see [DNS Domain Name Format](DomainNameFormat.md)\.
 
-1. If the domain is available, choose **Add to cart**\. The domain name appears in your shopping cart\. 
+   1. If the domain is available, choose **Add to cart**\. The domain name appears in your shopping cart\. 
 
-   The **Related domain suggestions** list shows other domains that you might want to register instead of your first choice \(if it's not available\) or in addition to your first choice\. Choose **Add to cart** for each additional domain that you want to register, up to a maximum of five domains\.
+      The **Related domain suggestions** list shows other domains that you might want to register instead of your first choice \(if it's not available\) or in addition to your first choice\. Choose **Add to cart** for each additional domain that you want to register, up to a maximum of five domains\.
 
-1. In the shopping cart, choose the number of years that you want to register the domain for\.
+   1. In the shopping cart, choose the number of years that you want to register the domain for\.
 
-1. To register more domains, repeat steps 4 through 6\.
+   1. To register more domains, repeat steps 3a through 3c\.
 
 1. Choose **Continue**\.
 
-1. On the **Contact Details for Your** *n* **Domains** page, enter contact information for the domain registrant, administrator, and technical contacts\. The values that you enter here are applied to all of the domains that you're registering\. 
-**Important**  
-For **First Name** and **Last Name**, we recommend that you specify the name on your official ID\. For some changes to domain settings, some domain registries require that you provide proof of identity\. The name on your ID must match the name of the registrant contact for the domain\.
+1. On the **Contact Details for Your** *n* **Domains** page, enter contact information for the domain registrant, administrator, and technical contacts\. The values that you enter here are applied to all of the domains that you're registering\. For more information, see [Values that You Specify When You Register or Transfer a Domain](domain-register-values-specify.md)\.
 
-   By default, we use the same information for all three contacts\. If you want to enter different information for one or more contacts, change the value of **My Registrant, Administrative, and Technical Contacts are all the same** to **No**\.
-**Note**  
-For \.it domains, the registrant and administrative contacts must be the same\.
-
-   If you're registering more than one domain, we use the same contact information for all of the domains\. 
-
-   For more information, see [Values that You Specify When You Register a Domain](domain-register-values-specify.md)\.
-
-1. For some top\-level domains \(TLDs\), we're required to collect additional information\. For these TLDs, enter the applicable values after the **Postal/Zip Code** field\.
-
-1. Choose whether you want to hide your contact information from WHOIS queries\. For more information, see the following topics:
+   Note the following considerations:  
+**First Name and Last Name**  
+For **First Name** and **Last Name**, we recommend that you specify the name on your official ID\. For some changes to domain settings, some domain registries require that you provide proof of identity\. The name on your ID must match the name of the registrant contact for the domain\.  
+**Different Contacts**  
+By default, we use the same information for all three contacts\. If you want to enter different information for one or more contacts, change the value of **My Registrant, Administrative, and Technical Contacts are all the same** to **No**\.  
+For \.it domains, the registrant and administrative contacts must be the same\.  
+**Multiple Domains**  
+If you're registering more than one domain, we use the same contact information for all of the domains\.   
+**Additional Required Information**  
+For some top\-level domains \(TLDs\), we're required to collect additional information\. For these TLDs, enter the applicable values after the **Postal/Zip Code** field\.  
+**Privacy Protection**  
+Choose whether you want to hide your contact information from WHOIS queries\. For more information, see the following topics:  
 
    + [Enabling or Disabling Privacy Protection for Contact Information for a Domain](domain-privacy-protection.md)
 
    + [Domains That You Can Register with Amazon Route 53](registrar-tld-list.md)
+To enable privacy protection for \.co\.uk, \.me\.uk, and \.org\.uk domains, you must open a support case and request privacy protection\. For more information, see [\.co\.uk \(United Kingdom\)](http://docs.aws.amazon.com/Route53/latest/DeveloperGuide/registrar-tld-list.html#registrar-tld-list-geographic) in [Domains That You Can Register with Amazon Route 53](registrar-tld-list.md)\.
 
 1. Choose **Continue**\.
 
-1. For [generic TLDs](http://docs.aws.amazon.com/Route53/latest/DeveloperGuide/registrar-tld-list.html#registrar-tld-list-generic), if you specified an email address for the registrant contact that has never been used to register a domain with Route 53, you need to verify that the address is valid\.
+1. **Generic TLDs only** – If you're registering a domain that has a [generic TLD](http://docs.aws.amazon.com/Route53/latest/DeveloperGuide/registrar-tld-list.html#registrar-tld-list-generic), such as \.com, \.org, or \.net, and you specified an email address for the registrant contact that has never been used to register a domain with Route 53, you need to verify that the address is valid\.
+**Note**  
+Verification isn't required for domains that have a [geographic TLD](http://docs.aws.amazon.com/Route53/latest/DeveloperGuide/registrar-tld-list.html#registrar-tld-list-geographic), such as \.ca, \.com\.au, \.co\.uk, or \.jp\.
 
    If the registry requires verification and if you can verify the address during domain registration, the console displays a **Verify the Email Address for the Registrant Contact** section:
 
-   + If the section doesn't appear, skip to step 14\.
+   + If the section doesn't appear, skip to step 8\.
 
-   + If the section appears and the status is **email\-address is verified**, skip to step 14\.
+   + If the section appears and the status is **email\-address is verified**, skip to step 8\.
 
    + If the section appears and the value is **Registrant email not verified**, continue with this step\.
 
@@ -93,9 +95,9 @@ The registrant contact must follow the instructions in the email to verify that 
 
 1. Choose **Complete Purchase**\.
 
-1. Verify that the email address for the registrant contact is valid\.
+1. **Generic TLDs only** – Verify that the email address for the registrant contact is valid\.
 **Note**  
-If you were able to verify your email address in step 13, skip to step 17\.
+If you were able to verify your email address in step 7, skip to step 11\.
 
    If the registry requires us to verify the email address for the registrant contact but doesn't allow us to verify earlier in the process, we send a verification email from one of the following email addresses: 
 
@@ -114,6 +116,8 @@ The registrant contact must follow the instructions in the email to confirm that
 1. For all TLDs, you'll receive an email when your domain registration has been approved\.
 
    To determine the current status of your request, see [Viewing the Status of a Domain Registration](domain-view-status.md)\.
+
+1. \(Optional\) We configure the domain to automatically renew as the expiration date approaches\. If you want to change this setting, see [Enabling or Disabling Automatic Renewal for a Domain](domain-enable-disable-auto-renewal.md)\. 
 
 1. When domain registration is complete, your next step depends on whether you want to use Route 53 or another DNS service as the DNS service for the domain:
 

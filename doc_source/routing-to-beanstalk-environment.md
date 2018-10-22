@@ -58,8 +58,8 @@ See the procedure [To create an Amazon Route 53 alias record to route traffic t
 
 1. Specify the following values:  
 **Name**  
-Type the domain name that you want to use to route traffic to your Elastic Beanstalk environment\. The default value is the name of the hosted zone\.  
-For example, if the name of the hosted zone is example\.com and you want to use acme\.example\.com to route traffic to your environment, type **acme**\.  
+Enter the domain name that you want to use to route traffic to your Elastic Beanstalk environment\. The default value is the name of the hosted zone\.  
+For example, if the name of the hosted zone is example\.com and you want to use acme\.example\.com to route traffic to your environment, enter **acme**\.  
 You can't create a CNAME record that has the same name as the hosted zone\.  
 **Type**  
 Choose **CNAME – Canonical name**\.  
@@ -68,7 +68,7 @@ Choose **No**\.
 **TTL \(Seconds\)**  
 Accept the default value of **300**\.  
 **Value**  
-Type the domain name of the environment that you want to route traffic to\. This is the value that you get when you perform the procedure in the topic [Getting the Domain Name for Your Elastic Beanstalk Environment](#routing-to-beanstalk-environment-get-domain-name)\.  
+Enter the domain name of the environment that you want to route traffic to\. This is the value that you get when you perform the procedure in the topic [Getting the Domain Name for Your Elastic Beanstalk Environment](#routing-to-beanstalk-environment-get-domain-name)\.  
 **Routing Policy**  
 Accept the default value, **Simple**\.
 
@@ -88,8 +88,8 @@ Accept the default value, **Simple**\.
 
 1. Specify the following values:  
 **Name**  
-Type the domain name that you want to use to route traffic to your Elastic Beanstalk environment\. The default value is the name of the hosted zone\.  
-For example, if the name of the hosted zone is example\.com and you want to use acme\.example\.com to route traffic to your environment, type **acme**\.  
+Enter the domain name that you want to use to route traffic to your Elastic Beanstalk environment\. The default value is the name of the hosted zone\.  
+For example, if the name of the hosted zone is example\.com and you want to use acme\.example\.com to route traffic to your environment, enter **acme**\.  
 **Type**  
 Accept the default, **A – Ipv4 address**\.  
 **Alias**  

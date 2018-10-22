@@ -7,6 +7,7 @@ Here are the most common reasons that your domain is not available on the intern
 + [You transferred domain registration to Amazon Route 53, but you didn't transfer DNS service](#troubleshooting-domain-unavailable-transferred-domain-not-dns)
 + [You transferred domain registration and specified the wrong name servers in the domain settings](#troubleshooting-domain-unavailable-transferred-domain-wrong-name-servers)
 + [You transferred DNS service first, but you didn't wait long enough before transferring domain registration](#troubleshooting-domain-unavailable-transferred-domain-too-soon-after-dns-transfer)
++ [You deleted the hosted zone that Route 53 is using to route internet traffic for the domain](#troubleshooting-domain-unavailable-deleted-hosted-zone)
 + [Your domain has been suspended](#troubleshooting-domain-unavailable-suspended)
 
 ## You registered a new domain, but you didn't click the link in the confirmation email<a name="troubleshooting-domain-unavailable-didnt-click-link"></a>
@@ -103,6 +104,31 @@ Here's how transferring your DNS service and then transferring your domain too s
 1. DNS resolvers are still routing queries to your old DNS service, but there are no longer any records that tell how to route your traffic\.
 
 When caching expires for the name servers for the old DNS service, DNS will start to use your new DNS service\. Unfortunately, there is no way to accelerate this process\.
+
+## You deleted the hosted zone that Route 53 is using to route internet traffic for the domain<a name="troubleshooting-domain-unavailable-deleted-hosted-zone"></a>
+
+If Route 53 is the DNS service for your domain and if you delete the hosted zone that is used to route internet traffic for the domain, the domain will become unavailable on the internet\. This is true regardless of whether the domain is registered with Route 53\.
+
+**Important**  
+Restoring internet service for the domain can take up to 48 hours\.
+
+**To restore internet service if you delete a hosted zone that Route 53 is using to route internet traffic for a domain**
+
+1. Create another hosted zone that has the same name as the domain\. For more information, see [Creating a Public Hosted Zone](CreatingHostedZone.md)\.
+
+1. Recreate the records that were in the hosted zone that you deleted\. For more information, see [Working with Records](rrsets-working-with.md)\.
+
+1. Get the names of the name servers that Route 53 assigned to the new hosted zone\. For more information, see [Getting the Name Servers for a Public Hosted Zone](GetInfoAboutHostedZone.md)\.
+
+1. Update the domain registration to use the name servers that you got in step 3:
+
+   + If the domain is registered with Route 53, see [Adding or Changing Name Servers and Glue Records for a Domain](domain-name-servers-glue-records.md)\.
+
+   + If the domain is registered with another domain registrar, use the method provided by the registrar to update the domain registration to use the new name servers\.
+
+1. Wait for the TTL for the name servers to pass for recursive resolvers that have cached the names of the name servers for the deleted hosted zone\. After the TTL has passed, when a browser or application submits a DNS query for the domain or one of its subdomains, a recursive resolver forwards the query to the Route 53 name servers for the new hosted zone\. For more information, see [How Amazon Route 53 Routes Traffic for Your Domain](welcome-dns-service.md#welcome-dns-service-how-route-53-routes-traffic)\.
+
+   The TTL for name servers can be as long as 48 hours, depending on the TLD of the domain\.
 
 ## Your domain has been suspended<a name="troubleshooting-domain-unavailable-suspended"></a>
 

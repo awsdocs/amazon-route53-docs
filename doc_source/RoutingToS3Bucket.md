@@ -41,8 +41,8 @@ To configure Amazon Route 53 to route traffic to an S3 bucket that is configure
 
 1. Specify the following values:  
 **Name**  
-Type the domain name that you want to use to route traffic to your S3 bucket\. The default value is the name of the hosted zone\.  
-For example, if the name of the hosted zone is example\.com and you want to use acme\.example\.com to route traffic to your bucket, type **acme**\.  
+Enter the domain name that you want to use to route traffic to your S3 bucket\. The default value is the name of the hosted zone\.  
+For example, if the name of the hosted zone is example\.com and you want to use acme\.example\.com to route traffic to your bucket, enter **acme**\.  
 **Type**  
 Choose **A – IPv4 address**\.  
 **Alias**  
@@ -57,7 +57,7 @@ The **Alias Target** list includes a bucket only if the bucket meets the followi
 
    + The bucket was created by the current AWS account\.
 
-     If you created the bucket using a different AWS account, type the name of the region that you created your S3 bucket in\. For the correct format for the region name, see the **Website Endpoint** column in the [Amazon Simple Storage Service Website Endpoints](http://docs.aws.amazon.com/general/latest/gr/rande.html#s3_website_region_endpoints) table in the [AWS Regions and Endpoints](http://docs.aws.amazon.com/general/latest/gr/rande.html) chapter of the *Amazon Web Services General Reference*\.  
+     If you created the bucket using a different AWS account, enter the name of the region that you created your S3 bucket in\. For the correct format for the region name, see the **Website Endpoint** column in the [Amazon Simple Storage Service Website Endpoints](http://docs.aws.amazon.com/general/latest/gr/rande.html#s3_website_region_endpoints) table in the [AWS Regions and Endpoints](http://docs.aws.amazon.com/general/latest/gr/rande.html) chapter of the *Amazon Web Services General Reference*\.  
 **Routing Policy**  
 Accept the default value of **Simple**\.  
 **Evaluate Target Health**  

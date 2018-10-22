@@ -7,7 +7,16 @@ You can choose to disable privacy protection for some or all contacts for a doma
 The information that you can hide from WHOIS queries depends on two main factors:
 
 **The registry for the top level domain**  
-Most TLD registries hide all contact information automatically, some allow you to choose to hide all contact information, some allow you to hide only some information, and some do not allow you to hide any information\.
+Most TLD registries hide all contact information automatically, some allow you to choose to hide all contact information, some allow you to hide only some information, and some do not allow you to hide any information\.  
+To enable or disable privacy protection for some domains, you must open a support case and request privacy protection\. For more information, see the applicable section in [Domains That You Can Register with Amazon Route 53](registrar-tld-list.md):  
+
++ [\.co\.uk \(United Kingdom\)](http://docs.aws.amazon.com/Route53/latest/DeveloperGuide/registrar-tld-list.html#registrar-tld-list#co.uk)
+
++ [\.me\.uk \(United Kingdom\)](http://docs.aws.amazon.com/Route53/latest/DeveloperGuide/registrar-tld-list.html#registrar-tld-list#me.uk)
+
++ [\.org\.uk \(United Kingdom\)](http://docs.aws.amazon.com/Route53/latest/DeveloperGuide/registrar-tld-list.html#registrar-tld-list#org.uk)
+
++ [\.link](http://docs.aws.amazon.com/Route53/latest/DeveloperGuide/registrar-tld-list.html#registrar-tld-list#link)
 
 **The registrar**  
 When you register a domain with Route 53 or transfer a domain to Route 53, the registrar for the domain is either Amazon Registrar or our registrar associate, Gandi\. Amazon Registrar and Gandi hide different information by default:  
@@ -22,7 +31,7 @@ To find out what information is hidden for the TLD for your domain, see [Domains
 
 When you want to enable or disable privacy protection for a domain that you registered using Route 53, perform the following procedure\.
 
-**To enable or disable privacy protection for contact information for domain**
+**To enable or disable privacy protection for contact information for a domain**
 
 1. Sign in to the AWS Management Console and open the Route 53 console at [https://console\.aws\.amazon\.com/route53/](https://console.aws.amazon.com/route53/)\.
 

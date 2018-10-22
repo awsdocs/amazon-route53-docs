@@ -108,12 +108,15 @@ If you want this health check to monitor the status of other health checks, spec
 
 + [Invert health check status](#health-checks-creating-values-invert-health-check-status)
 
-**Health checks to monitor**  
++ [Disabled](#health-checks-creating-values-disabled)
+
+**  Health checks to monitor **  
 The health checks that you want Route 53 to monitor to determine the health of this health check\.   
 You can add up to 256 health checks to **Health checks to monitor**\. To remove a health check from the list, choose the **x** at the right of the highlight for that health check\.  
 You can't configure a calculated health check to monitor the health of other calculated health checks\.
+If you disable a health check that a calculated health check is monitoring, Route 53 considers the disabled health check to be healthy as it calculates whether the calculated health check is healthy\. If you want the disabled health check to be considered unhealthy, choose the **Invert health check status** check box\.
 
-**Report healthy when**  
+**  Report healthy when **  
 The calculation that you want Route 53 to perform to determine whether this health check is healthy:  
 
 + **Report healthy when at least x of y selected health checks are healthy** – Route 53 considers this health check to be healthy when the specified number of health checks that you added to **Health checks to monitor** are healthy\. Note the following:
@@ -126,8 +129,13 @@ The calculation that you want Route 53 to perform to determine whether this hea
 
 + **Report healthy when one or more health checks are healthy \(OR\)** – Route 53 considers this health check to be healthy when at least one of the health checks that you added to **Health checks to monitor** is healthy\.
 
-**Invert health check status**  
+**  Invert health check status **  
 Choose whether you want Route 53 to invert the status of a health check\. If you choose this option, Route 53 considers health checks to be unhealthy when the status is healthy and vice versa\.
+
+**  Disabled **  
+Stops Route 53 from performing health checks\. When you disable a health check, Route 53 stops aggregating the status of the referenced health checks\.  
+After you disable a health check, Route 53 considers the status of the health check to always be healthy\. If you configured DNS failover, Route 53 continues to route traffic to the corresponding resources\. If you want to stop routing traffic to a resource, change the value of [Invert health check status](#health-checks-creating-values-invert-health-check-status)\.  
+Charges for a health check still apply when the health check is disabled\.
 
 ## Monitoring a CloudWatch Alarm<a name="health-checks-creating-values-cloudwatch"></a>
 
@@ -138,6 +146,8 @@ If you want this health check to monitor the alarm state of a CloudWatch alarm, 
 + [Health check status](#health-checks-creating-values-health-check-status)
 
 + [Invert health check status](#health-checks-creating-values-invert-health-check-status-cloudwatch)
+
++ [Disabled](#health-checks-creating-values-disabled-cloudwatch)
 
 **CloudWatch alarm**  
 Choose the CloudWatch alarm that you want Route 53 to use to determine whether this health check is healthy\.  
@@ -150,7 +160,7 @@ If you want to create an alarm, perform the following steps:
 
 1. Choose **create**\. The CloudWatch console appears in a new browser tab\.
 
-1. Type the applicable values\. For more information, see [Create or Edit a CloudWatch Alarm](http://docs.aws.amazon.com/AmazonCloudWatch/latest/DeveloperGuide/ConsoleAlarms.html) in the *Amazon CloudWatch User Guide*\.
+1. Enter the applicable values\. For more information, see [Create or Edit a CloudWatch Alarm](http://docs.aws.amazon.com/AmazonCloudWatch/latest/DeveloperGuide/ConsoleAlarms.html) in the *Amazon CloudWatch User Guide*\.
 
 1. Return to the browser tab that the Route 53 console appears in\.
 
@@ -160,10 +170,16 @@ If you want to create an alarm, perform the following steps:
 If you change settings for the CloudWatch alarm after you create a health check, you must update the health check\. For more information, see [Updating Health Checks When You Change CloudWatch Alarm Settings \(Health Checks That Monitor a CloudWatch Alarm Only\)Updating Health Checks When You Change CloudWatch Alarm Settings](health-checks-updating-cloudwatch-alarm-settings.md)\.
 
 **Health check status**  
-Choose the status of the health check when CloudWatch has insufficient data to determine the state of the alarm that you chose in **CloudWatch alarm**\. If you choose to use the last known status, Route 53 uses the status of the health check from the last time that CloudWatch had sufficient data to determine the alarm state\. For new health checks that have no last known status, the default status for the health check is healthy\. 
+Choose the status of the health check \(healthy, unhealthy, or last known status\) when CloudWatch has insufficient data to determine the state of the alarm that you chose for **CloudWatch alarm**\. If you choose to use the last known status, Route 53 uses the status of the health check from the last time that CloudWatch had sufficient data to determine the alarm state\. For new health checks that have no last known status, the default status for the health check is healthy\.   
+The value of **Health check status** provides a temporary status when the data stream for a CloudWatch metric is briefly unavailable\. \(Route 53 monitors data streams for CloudWatch metrics, not the state of the corresponding alarm\.\) If the metric will be unavailable frequently or for long periods \(longer than a few hours\), we recommend that you not use the last known status\.
 
 **Invert health check status**  
 Choose whether you want Route 53 to invert the status of a health check\. If you choose this option, Route 53 considers health checks to be unhealthy when the status is healthy and vice versa\.
+
+**  Disabled **  
+Stops Route 53 from performing health checks\. When you disable a health check, Route 53 stops monitoring the corresponding CloudWatch metrics\.  
+After you disable a health check, Route 53 considers the status of the health check to always be healthy\. If you configured DNS failover, Route 53 continues to route traffic to the corresponding resources\. If you want to stop routing traffic to a resource, change the value of [Invert health check status](#health-checks-creating-values-invert-health-check-status-cloudwatch)\.  
+Charges for a health check still apply when the health check is disabled\.
 
 ## Advanced Configuration \("Monitor an endpoint" Only\)<a name="health-checks-creating-values-advanced"></a>
 
@@ -184,6 +200,8 @@ If you choose the option to monitor an endpoint, you can also specify the follow
 + [Health checker regions](#health-checks-creating-values-health-checker-regions)
 
 + [Invert health check status](#health-checks-creating-values-invert-health-check-status-advanced)
+
++ [Disabled](#health-checks-creating-values-disabled-advanced)
 
 **Request interval**  
 The number of seconds between the time that each Route 53 health checker gets a response from your endpoint and the time that it sends the next health check request\. If you choose an interval of 30 seconds, each of the Route 53 health checkers in data centers around the world will send your endpoint a health check request every 30 seconds\. On average, your endpoint will receive a health check request about every two seconds\. If you choose an interval of 10 seconds, the endpoint will receive a request more than once per second\.  
@@ -225,6 +243,11 @@ If you choose **Customize**, choose the **x** for a region to remove it\. Click 
 **Invert health check status**  
 Choose whether you want Route 53 to invert the status of a health check\. If you choose this option, Route 53 considers health checks to be unhealthy when the status is healthy and vice versa\. For example, you might want Route 53 to consider a health check *unhealthy* if you configure string matching and the endpoint returns a specified value\. For more information about health checks that perform string matching, see [String matching](#health-checks-creating-values-string-matching)\.
 
+**  Disabled **  
+Stops Route 53 from performing health checks\. When you disable a health check, Route 53 stops trying to establish a TCP connection with the endpoint\.  
+After you disable a health check, Route 53 considers the status of the health check to always be healthy\. If you configured DNS failover, Route 53 continues to route traffic to the corresponding resources\. If you want to stop routing traffic to a resource, change the value of [Invert health check status](#health-checks-creating-values-invert-health-check-status-advanced)\.  
+Charges for a health check still apply when the health check is disabled\.
+
 ## Get Notified When a Health Check Fails<a name="health-checks-creating-values-alarm"></a>
 
 Use the following options to configure email notification when a health check fails:
@@ -239,6 +262,7 @@ Use the following options to configure email notification when a health check fa
 
 **Create alarm \(Only When Creating Health Checks\)**  
 Specify whether you want to create a default CloudWatch alarm\. If you choose **Yes**, CloudWatch sends you an Amazon SNS notification when the status of this endpoint changes to unhealthy and Route 53 considers the endpoint unhealthy for one minute\.  
+If you want CloudWatch to send you another Amazon SNS notification when the status changes back to healthy, you can create another alarm after you create the health check\. For more information, see [Creating Amazon CloudWatch Alarms](http://docs.aws.amazon.com/AmazonCloudWatch/latest/monitoring/AlarmThatSendsEmail.html) in the *Amazon CloudWatch User Guide*\.
 If you want to create an alarm for an existing health check or you want to receive notifications when Route 53 considers the endpoint unhealthy for more or less than one minute \(the default value\), select **No**, and add an alarm after you create the health check\. For more information, see [Monitoring Health Checks Using CloudWatch](monitoring-health-checks.md)\.
 
 **Send notification to \(Only When Creating an Alarm\)**  
@@ -246,12 +270,12 @@ Specify whether you want CloudWatch to send notifications to an existing Amazon 
 
 + **Existing SNS topic** – Select the name of the topic from the list\. The topic must be in the US East \(N\. Virginia\) Region\.
 
-+ **New SNS topic** – Type a name for the topic in **Topic name**, and type the email addresses that you want to send notifications to in **Recipients**\. Separate multiple addresses with commas \(,\), semicolons \(;\), or spaces\. 
++ **New SNS topic** – Enter a name for the topic in **Topic name**, and enter the email addresses that you want to send notifications to in **Recipients**\. Separate multiple addresses with commas \(,\), semicolons \(;\), or spaces\. 
 
   Route 53 will create the topic in the US East \(N\. Virginia\) Region\.
 
 **Topic name \(Only When Creating a New SNS Topic\)**  
-If you specified **New SNS Topic**, type the name of the new topic\. 
+If you specified **New SNS Topic**, enter the name of the new topic\. 
 
 **Recipient email addresses \(Only When Creating a New SNS Topic\)**  
-If you specified **New SNS topic**, type the email addresses that you want to send notifications to\. Separate multiple names with commas \(,\), semicolons \(;\), or spaces\.
+If you specified **New SNS topic**, enter the email addresses that you want to send notifications to\. Separate multiple names with commas \(,\), semicolons \(;\), or spaces\.

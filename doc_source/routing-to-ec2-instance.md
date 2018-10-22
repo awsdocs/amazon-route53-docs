@@ -52,8 +52,8 @@ To configure Amazon Route 53 to route traffic to an EC2 instance, perform the f
 
 1. Specify the following values:  
 **Name**  
-Type the domain name that you want to use to route traffic to your EC2 instance\. The default value is the name of the hosted zone\.  
-For example, if the name of the hosted zone is example\.com and you want to use acme\.example\.com to route traffic to your EC2 instance, type **acme**\.  
+Enter the domain name that you want to use to route traffic to your EC2 instance\. The default value is the name of the hosted zone\.  
+For example, if the name of the hosted zone is example\.com and you want to use acme\.example\.com to route traffic to your EC2 instance, enter **acme**\.  
 **Type**  
 Choose **A – IPv4 address**\.  
 **Alias**  
@@ -61,7 +61,7 @@ Accept the default value of **No**\.
 **TTL \(Seconds\)**  
 Accept the default value of **300**\.  
 **Value**  
-Type the IP address that you got in step 1\.  
+Enter the IP address that you got in step 1\.  
 **Routing Policy**  
 Accept the default value, **Simple**\.
 

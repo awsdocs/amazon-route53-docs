@@ -35,6 +35,7 @@ For more information, see [How Amazon Route 53 Determines Whether a Health Chec
 The graph shows the Route 53 assessment of endpoint health\. **1** indicates healthy and **0** indicates unhealthy\.  
 **Health checkers that report the endpoint healthy \(%\)**  
 For health checks that monitor an endpoint only, the graph shows the percentage of Route 53 health checkers that consider the selected endpoint to be healthy\.  
+When a health check is disabled, this metric isn't available\.  
 **Number of healthy child health checks**  
 For calculated health checks only, the graph shows the number of child health checks that are healthy\. 
 **Note**  
@@ -68,9 +69,9 @@ Changes the interval between data points in the graph\.
 
 1. Specify the following values:  
 **Alarm name**  
-Type the name that you want Route 53 to display in the **Name** column on the **Alarms** tab\.  
+Enter the name that you want Route 53 to display in the **Name** column on the **Alarms** tab\.  
 **Alarm description**  
-\(Optional\) Type a description for the alarm\. This value appears in the CloudWatch console\.  
+\(Optional\) Enter a description for the alarm\. This value appears in the CloudWatch console\.  
 **Send notification**  
 Choose whether you want Route 53 to send you notification if the status of this health check triggers an alarm\.  
 **Notification target \(Only when "Send notification" is "Yes"\)**  
@@ -81,9 +82,9 @@ If you want CloudWatch to send notification but not to an existing SNS topic, do
 
    + **If you want CloudWatch to send notification by another method** – Open a new browser tab, go to the Amazon SNS console, and create the new topic\. Then return to the Route 53 console, choose the name of the new topic from the **Notification target** list, and continue with this procedure\.  
 **Topic name \(Only when you choose to create a new Amazon SNS topic\)**  
-Type a name for the new Amazon SNS topic\.  
+Enter a name for the new Amazon SNS topic\.  
 **Recipient email addresses \(Only when you choose to create a new Amazon SNS topic\)**  
-Type the email address that you want Route 53 to send an SNS notification to when a health check triggers an alarm\.  
+Enter the email address that you want Route 53 to send an SNS notification to when a health check triggers an alarm\.  
 **Alarm target**  
 Choose the value that you want Route 53 to evaluate for this health check:  
 

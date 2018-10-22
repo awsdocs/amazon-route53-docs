@@ -9,7 +9,9 @@ The method that Amazon Route 53 uses to determine whether a health check is hea
 
 ## Health Checks That Monitor an Endpoint<a name="dns-failover-determining-health-of-endpoints-monitor-endpoint"></a>
 
-Route 53 has health checkers in locations around the world\. When you create a health check that monitors an endpoint, health checkers start to send requests to the endpoint that you specify to determine whether the endpoint is healthy\. \(You can choose which locations you want Route 53 to use, and you can specify the interval between checks: every 10 seconds or every 30 seconds\.\) Each health checker evaluates the health of the endpoint based on two values:
+Route 53 has health checkers in locations around the world\. When you create a health check that monitors an endpoint, health checkers start to send requests to the endpoint that you specify to determine whether the endpoint is healthy\. You can choose which locations you want Route 53 to use, and you can specify the interval between checks: every 10 seconds or every 30 seconds\. Note that Route 53 health checkers in different data centers don't coordinate with one another, so you'll sometimes see several requests per second regardless of the interval you chose, followed by a few seconds with no health checks at all\. 
+
+Each health checker evaluates the health of the endpoint based on two values:
 
 + Response time
 

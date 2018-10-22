@@ -71,7 +71,7 @@ If you have created latency or geolocation records, you can use the checking too
 **Resolver IP address**  
 Specify an IPv4 or IPv6 address to simulate the location of the DNS resolver that a client uses to make requests\. This is useful for testing latency and geolocation records\. If you omit this value, the tool uses the IP address of a DNS resolver in the AWS US East \(N\. Virginia\) Region \(us\-east\-1\)\.   
 **EDNS0 client subnet IP**  
-If the resolver supports EDNS0, type the client subnet IP for an IP address in the applicable geographic location, for example, **192\.0\.2\.0** or **2001:db8:85a3::8a2e:370:7334**\.   
+If the resolver supports EDNS0, enter the client subnet IP for an IP address in the applicable geographic location, for example, **192\.0\.2\.0** or **2001:db8:85a3::8a2e:370:7334**\.   
 **Subnet mask**  
 If you specify an IP address for **EDNS0 client subnet IP**, you can optionally specify the number of bits of the IP address that you want the checking tool to include in the DNS query\. For example, if you specify **192\.0\.2\.44** for **EDNS0 client subnet IP** and **24** for **Subnet mask**, the checking tool will simulate a query from **192\.0\.2\.0/24**\. The default value is 24 bits for IPv4 addresses and 64 bits for IPv6 addresses\. 
 

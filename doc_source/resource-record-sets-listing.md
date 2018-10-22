@@ -11,7 +11,7 @@ The following procedure explains how to use the Amazon Route 53 console to list
    To display only selected records, enter the applicable search criteria above the list of records\. Search behavior depends on whether the hosted zone contains up to 2,000 records or more than 2,000 records:  
 **Up to 2,000 records**  
 
-   + To display the records that have specific values in either the **Name** or **Value** field, enter a value in the **Search** field and press **Enter**\. For example, to display the records that have an IP address beginning with **192\.0**, type that value in the **Search** field and press **Enter**\.
+   + To display the records that have specific values in either the **Name** or **Value** field, enter a value in the **Search** field and press **Enter**\. For example, to display the records that have an IP address beginning with **192\.0**, enter that value in the **Search** field and press **Enter**\.
 
    + To display only the records that have the same DNS record type, select the type in the dropdown list\. 
 
@@ -22,7 +22,7 @@ The following procedure explains how to use the Amazon Route 53 console to list
 
    + You can search only on record names, not on record values\. You also can't filter based on the record type, or on alias or weighted records\.
 
-   + For records that have three labels \(three parts separated by dots\), when you type a value in the search field and press **Enter**, the Route 53 console automatically performs a wildcard search on the third label from the right in the record name\. For example, suppose the hosted zone example\.com contains 100 records named record1\.example\.com through record100\.example\.com\. \(Record1 is the third label from the right\.\) Here's what happens when you search on the following values:
+   + For records that have three labels \(three parts separated by dots\), when you enter a value in the search field and press **Enter**, the Route 53 console automatically performs a wildcard search on the third label from the right in the record name\. For example, suppose the hosted zone example\.com contains 100 records named record1\.example\.com through record100\.example\.com\. \(Record1 is the third label from the right\.\) Here's what happens when you search on the following values:
 
      + **record1** – The Route 53 console searches for **record1\*\.example\.com**, which returns **record1\.example\.com**, **record10\.example\.com** through **record19\.example\.com**, and **record100\.example\.com**\.
 

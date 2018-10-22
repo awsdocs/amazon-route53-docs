@@ -171,7 +171,7 @@ With this release, Route 53 adds the following new features:
 + **Updates to the health checks dashboard in the Route 53 console** – The dashboard for monitoring health checks has been improved in a variety of ways, including CloudWatch graphs for monitoring latency between Route 53 health checkers and your endpoints\. For more information, see [Monitoring Health Check Status and Getting Notifications](health-checks-monitor-view-status.md)\.
 
 **March 3, 2015**  
-The *Amazon Route 53 Developer Guide* now explains how to configure white label name servers for Route 53 hosted zones\. For more information, see [Configuring White Label Name Servers](white-label-name-servers.md)\.
+The *Amazon Route 53 Developer Guide* now explains how to configure white\-label name servers for Route 53 hosted zones\. For more information, see [Configuring White\-Label Name Servers](white-label-name-servers.md)\.
 
 **February 26, 2015**  
 You can now use the Route 53 API to list the hosted zones that are associated with an AWS account in alphabetical order by name\. You can also get a count of the hosted zones that are associated with an account\. For more information, see [ListHostedZonesByName](http://docs.aws.amazon.com/Route53/latest/APIReference/API_ListHostedZonesByName.html) and [GetHostedZoneCount](http://docs.aws.amazon.com/Route53/latest/APIReference/API_GetHostedZoneCount.html) in the *Amazon Route 53 API Reference*\.
@@ -188,7 +188,7 @@ With this release, Route 53 adds the following new features:
 + **Tagging for Hosted Zones and Domains** – You can now assign tags, which are commonly used for cost allocation, to Route 53 hosted zones and domains\. For more information, see [Tagging Amazon Route 53 Resources](tagging-resources.md)\.
 
 **February 5, 2015**  
-You can now use the Route 53 console to update contact information for a domain\. For more information, see [Values that You Specify When You Register a Domain](domain-register-values-specify.md)\.
+You can now use the Route 53 console to update contact information for a domain\. For more information, see [Values that You Specify When You Register or Transfer a Domain](domain-register-values-specify.md)\.
 
 **January 22, 2015**  
 You can now specify internationalized domain names when you're registering a new domain name with Route 53\. \(Route 53 already supported internationalized domain names for hosted zones and records\.\) For more information, see [DNS Domain Name Format](DomainNameFormat.md)\.

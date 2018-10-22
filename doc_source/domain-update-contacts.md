@@ -36,7 +36,7 @@ To update contact information for a domain, perform the following procedure\.
 
 1. Choose **Edit Contacts**\.
 
-1. Update the applicable values\. For more information, see [Values that You Specify When You Register a Domain](domain-register-values-specify.md)\.
+1. Update the applicable values\. For more information, see [Values that You Specify When You Register or Transfer a Domain](domain-register-values-specify.md)\.
 
    Depending on the TLD for your domain and the values that you're changing, the console might display the following message:
 
@@ -73,11 +73,13 @@ Perform the following procedure to request the ownership change\. When your owne
 
 1. Fill out the form\.
 
-1. If a legal entity is listed as the registrant name or organization, gather the following information:
+1. For the registrant contact for the former owner of the domain *and* for the new owner, get a copy of a signed proof of identity \(identity card, driver's license, passport, or other legal proof of identity\)\.
+
+   In addition, if a legal entity is listed as the registrant organization, gather the following information for the former owner of the domain *and* for the new owner:
 
    + Proof that the organization that the domain is registered to exists\.
 
-   + Proof that you're authorized to act on the organization's behalf\. This document must be a certified legal document that contains both the name of the organization and your name as a signing officer \(for example, CEO, President, or Executive Director\)\.
+   + Proof that the representatives for the former owner and the new owner are authorized to act on the organization's behalf\. This document must be a certified legal document that contains both the name of the organization and the names of the representatives as signing officers \(for example, CEO, President, or Executive Director\)\.
 
 1. Scan the Change of Domain Ownership form and the required proof, if applicable\. Save the scanned documents in a common format, such as a \.pdf file or a \.png file\.
 

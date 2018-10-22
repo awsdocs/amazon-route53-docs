@@ -1,15 +1,15 @@
-# Configuring White Label Name Servers<a name="white-label-name-servers"></a>
+# Configuring White\-Label Name Servers<a name="white-label-name-servers"></a>
 
-Each Amazon Route 53 hosted zone is associated with four name servers, known collectively as a delegation set\. By default, the name servers have names like ns\-2048\.awsdns\-64\.com\. If you want the domain name of your name servers to be the same as the domain name of your hosted zone, for example, ns1\.example\.com, you can configure white label name servers, also known as vanity name servers or private name servers\.
+Each Amazon Route 53 hosted zone is associated with four name servers, known collectively as a delegation set\. By default, the name servers have names like ns\-2048\.awsdns\-64\.com\. If you want the domain name of your name servers to be the same as the domain name of your hosted zone, for example, ns1\.example\.com, you can configure white\-label name servers, also known as vanity name servers or private name servers\.
 
-The following steps explain how to configure one set of four white label name servers that you can reuse for multiple domains\. For example, suppose you own the domains example\.com, example\.org, and example\.net\. With these steps, you can configure white label name servers for example\.com and reuse them for example\.org and example\.net\.
+The following steps explain how to configure one set of four white\-label name servers that you can reuse for multiple domains\. For example, suppose you own the domains example\.com, example\.org, and example\.net\. With these steps, you can configure white\-label name servers for example\.com and reuse them for example\.org and example\.net\.
 
 
 + [Step 1: Create a Route 53 reusable delegation set](#white-label-name-servers-create-reusable-delegation-set)
 + [Step 2: Create or recreate Amazon Route 53 hosted zones, and change the TTL for NS and SOA records](#white-label-name-servers-create-hosted-zones)
 + [Step 3: Recreate records for your hosted zones](#white-label-name-servers-create-resource-record-sets)
 + [Step 4: Get IP addresses](#white-label-name-servers-get-ip-addresses)
-+ [Step 5: Create records for white label name servers](#white-label-name-servers-create-white-label-resource-record-sets)
++ [Step 5: Create records for white\-label name servers](#white-label-name-servers-create-white-label-resource-record-sets)
 + [Step 6: Update NS and SOA records](#white-label-name-servers-update-ns-soa-records)
 + [Step 7: Create glue records and change the registrar's name servers](#white-label-name-servers-create-glue-records)
 + [Step 8: Monitor traffic for the website or application](#white-label-name-servers-monitor-traffic)
@@ -30,9 +30,9 @@ To create a reusable delegation set, you can use the Route 53 API, the AWS CLI,
 
 Create or recreate Amazon Route 53 hosted zones:
 
-+ **If you aren't currently using Route 53 as the DNS service for the domains for which you want to use white label name servers** – Create the hosted zones and specify the reusable delegation set that you created in the previous step with each hosted zone\. For more information, see [CreateHostedZone](http://docs.aws.amazon.com/Route53/latest/APIReference/API_CreateHostedZone.html) in the *Amazon Route 53 API Reference*\. 
++ **If you aren't currently using Route 53 as the DNS service for the domains for which you want to use white\-label name servers** – Create the hosted zones and specify the reusable delegation set that you created in the previous step with each hosted zone\. For more information, see [CreateHostedZone](http://docs.aws.amazon.com/Route53/latest/APIReference/API_CreateHostedZone.html) in the *Amazon Route 53 API Reference*\. 
 
-+ **If you are using Route 53 as the DNS service for the domains for which you want to use white label name servers** – You must recreate the hosted zones for which you want to use white label name servers, and specify the reusable delegation set that you created in the previous step for each hosted zone\.
++ **If you are using Route 53 as the DNS service for the domains for which you want to use white\-label name servers** – You must recreate the hosted zones for which you want to use white\-label name servers, and specify the reusable delegation set that you created in the previous step for each hosted zone\.
 **Important**  
 You cannot change the name servers that are associated with an existing hosted zone\. You can associate a reusable delegation set with a hosted zone only when you create the hosted zone\.
 
@@ -42,7 +42,7 @@ When you create the hosted zones and before you try to access the resources for 
 
 + Change the minimum TTL for the SOA record for the hosted zone to 60 seconds or less\. This is the last value in the SOA record\.
 
-If you accidentally give your registrar the wrong IP addresses for your white label name servers, your website will become unavailable and remain unavailable for the duration of the TTL after you correct the problem\. By setting a low TTL, you reduce the amount of time that your website is unavailable\.
+If you accidentally give your registrar the wrong IP addresses for your white\-label name servers, your website will become unavailable and remain unavailable for the duration of the TTL after you correct the problem\. By setting a low TTL, you reduce the amount of time that your website is unavailable\.
 
 For more information about creating hosted zones and specifying a reusable delegation set for the name servers for the hosted zones, see [CreateHostedZone](http://docs.aws.amazon.com/Route53/latest/APIReference/API_CreateHostedZone.html) in the *Amazon Route 53 API Reference*\.
 
@@ -52,7 +52,7 @@ Create records in the hosted zones that you created in Step 2:
 
 + **If you're migrating DNS service for your domains to Amazon Route 53** – You might be able to create records by importing information about your existing records\. For more information, see [Creating Records By Importing a Zone File](resource-record-sets-creating-import.md)\.
 
-+ **If you're replacing existing hosted zones so that you can use white label name servers** – In the new hosted zones, recreate the records that appear in your current hosted zones\. Route 53 doesn't provide a method of exporting records from a hosted zone, but some third\-party vendors do\. You can then use the Route 53 import feature to import non\-alias records for which the routing policy is simple\. There is no way to export and re\-import alias records or records for which the routing policy is anything other than simple\.
++ **If you're replacing existing hosted zones so that you can use white\-label name servers** – In the new hosted zones, recreate the records that appear in your current hosted zones\. Route 53 doesn't provide a method of exporting records from a hosted zone, but some third\-party vendors do\. You can then use the Route 53 import feature to import non\-alias records for which the routing policy is simple\. There is no way to export and re\-import alias records or records for which the routing policy is anything other than simple\.
 
   For information about creating records by using the Route 53 API, see [CreateHostedZone](http://docs.aws.amazon.com/Route53/latest/APIReference/API_CreateHostedZone.html) in the *Amazon Route 53 API Reference*\. For information about creating records by using the Route 53 console, see [Working with Records](rrsets-working-with.md)\.
 
@@ -63,7 +63,7 @@ Get the IPv4 and IPv6 addresses of the name servers in the reusable delegation s
 
 ****  
 
-| Name of a name server in your reusable delegation set \(example: ns\-2048\.awsdns\-64\.com\) | IPv4 and IPv6 addresses                                             | Name that you want to assign to the white label name server \(example: ns1\.example\.com\) | 
+| Name of a name server in your reusable delegation set \(example: ns\-2048\.awsdns\-64\.com\) | IPv4 and IPv6 addresses                                             | Name that you want to assign to the white\-label name server \(example: ns1\.example\.com\) | 
 | --- | --- | --- | 
 |   | IPv4: IPv6:   |   | 
 |   | IPv4: IPv6:   |   | 
@@ -104,21 +104,21 @@ Addresses:  2001:db8:85a3::8a2e:370:7334
           192.0.2.117
 ```
 
-## Step 5: Create records for white label name servers<a name="white-label-name-servers-create-white-label-resource-record-sets"></a>
+## Step 5: Create records for white\-label name servers<a name="white-label-name-servers-create-white-label-resource-record-sets"></a>
 
-In the hosted zone that has the same name \(such as example\.com\) as the domain name of the white label name servers \(such as ns1\.example\.com\), create eight records: 
+In the hosted zone that has the same name \(such as example\.com\) as the domain name of the white\-label name servers \(such as ns1\.example\.com\), create eight records: 
 
-+ One A record for each white label name server
++ One A record for each white\-label name server
 
-+ One AAAA record for each white label name server
++ One AAAA record for each white\-label name server
 
 **Important**  
-If you're using the same white label name servers for two or more hosted zones, do not perform this step for the other hosted zones\.
+If you're using the same white\-label name servers for two or more hosted zones, do not perform this step for the other hosted zones\.
 
 For each record, specify the following values\. Refer to the table that you filled in for the previous step:
 
 **Name**  
-The name that you want to assign to one of your white label name servers, for example, ns1\.example\.com\. For the prefix \(ns1 in this example\), you can use any value that is valid in a domain name\.
+The name that you want to assign to one of your white\-label name servers, for example, ns1\.example\.com\. For the prefix \(ns1 in this example\), you can use any value that is valid in a domain name\.
 
 **Type**  
 Specify **A** when you're creating records for the IPv4 addresses\.  
@@ -132,19 +132,19 @@ This value is the amount of time that DNS resolvers cache the information in thi
 
 **Value**  
 The IPv4 or IPv6 address of one of the Route 53 name servers in your reusable delegation set\.  
-If you specify the wrong IP addresses when you created records for your white label name servers, your website or web application will become unavailable on the internet when you perform subsequent steps\. Even if you correct the IP addresses immediately, your website or web application will remain unavailable for the duration of the TTL\.
+If you specify the wrong IP addresses when you created records for your white\-label name servers, your website or web application will become unavailable on the internet when you perform subsequent steps\. Even if you correct the IP addresses immediately, your website or web application will remain unavailable for the duration of the TTL\.
 
 **Routing Policy**  
 Specify **Simple**\.
 
 ## Step 6: Update NS and SOA records<a name="white-label-name-servers-update-ns-soa-records"></a>
 
-Update SOA and NS records in the hosted zones that you want to use white label name servers for\. Perform Step 6 through Step 8 for one hosted zone and the corresponding domain at a time, then repeat for another hosted zone and domain\.
+Update SOA and NS records in the hosted zones that you want to use white\-label name servers for\. Perform Step 6 through Step 8 for one hosted zone and the corresponding domain at a time, then repeat for another hosted zone and domain\.
 
 **Important**  
-Start with the Amazon Route 53 hosted zone that has the same domain name \(such as example\.com\) as the white label name servers \(such as ns1\.example\.com\)\.
+Start with the Amazon Route 53 hosted zone that has the same domain name \(such as example\.com\) as the white\-label name servers \(such as ns1\.example\.com\)\.
 
-1. Update the SOA record by replacing the name of the Route 53 name server with the name of one of your white label name servers
+1. Update the SOA record by replacing the name of the Route 53 name server with the name of one of your white\-label name servers
 
    **Example**
 
@@ -152,7 +152,7 @@ Start with the Amazon Route 53 hosted zone that has the same domain name \(such
 
    `ns-2048.awsdns-64.net. hostmaster.example.com. 1 7200 900 1209600 60`
 
-   with the name of one of your white label name servers:
+   with the name of one of your white\-label name servers:
 
    `ns1.example.com. hostmaster.example.com. 1 7200 900 1209600 60`
 **Note**  
@@ -162,7 +162,7 @@ You changed the last value, the minimum time to live \(TTL\), in [Step 2: Create
 
 1. In the NS record, make note of the names of the current name servers for the domain, so you can revert to these name servers if necessary\.
 
-1. Update the NS record\. Replace the name of the Route 53 name servers with the names of your four white label name servers, for example, `ns1.example.com`, `ns2.example.com`, `ns3.example.com`, and `ns4.example.com`\. 
+1. Update the NS record\. Replace the name of the Route 53 name servers with the names of your four white\-label name servers, for example, `ns1.example.com`, `ns2.example.com`, `ns3.example.com`, and `ns4.example.com`\. 
 
 ## Step 7: Create glue records and change the registrar's name servers<a name="white-label-name-servers-create-glue-records"></a>
 
@@ -170,7 +170,7 @@ Use the method provided by the registrar to create glue records and change the r
 
 1. Add glue records:
 
-   + **If you're updating the domain that has the same domain name as the white label name servers** – Create four glue records for which the names and IP addresses match the values that you got in step 4\. Include both the IPv4 and the IPv6 address for a white label name server in the corresponding glue record, for example:
+   + **If you're updating the domain that has the same domain name as the white\-label name servers** – Create four glue records for which the names and IP addresses match the values that you got in step 4\. Include both the IPv4 and the IPv6 address for a white\-label name server in the corresponding glue record, for example:
 
      **ns1\.example\.com** – IP addresses = 192\.0\.2\.117 and 2001:db8:85a3::8a2e:370:7334
 
@@ -178,7 +178,7 @@ Use the method provided by the registrar to create glue records and change the r
 
    + **If you're updating another domain** – Skip to step 2 in this procedure\.
 
-1. Change the name servers for the domain to the names of your white label name servers\.
+1. Change the name servers for the domain to the names of your white\-label name servers\.
 
 If you're using Amazon Route 53 as your DNS service, see [Adding or Changing Name Servers and Glue Records for a Domain](domain-name-servers-glue-records.md)\.
 
@@ -188,11 +188,11 @@ Monitor the traffic for the website or application for which you created glue re
 
 + **If the traffic stops** – Use the method provided by the registrar to change the name servers for the domain back to the previous Route 53 name servers\. These are the name servers that you made note of in step 6b\. Then determine what went wrong\.
 
-+ **If the traffic is unaffected** – Repeat Step 6 through Step 8 for the rest of the hosted zones for which you want to use the same white label name servers\. 
++ **If the traffic is unaffected** – Repeat Step 6 through Step 8 for the rest of the hosted zones for which you want to use the same white\-label name servers\. 
 
 ## Step 9: Change TTLs back to their original values<a name="white-label-name-servers-change-ttls-back"></a>
 
-For all of the hosted zones that are now using white label name servers, change the following values:
+For all of the hosted zones that are now using white\-label name servers, change the following values:
 
 + Change the TTL for the NS record for the hosted zone to a more typical value for NS records, for example, 172800 seconds \(two days\)\.
 
@@ -200,6 +200,6 @@ For all of the hosted zones that are now using white label name servers, change 
 
 ## Step 10: \(Optional\) Contact recursive DNS services<a name="white-label-name-servers-contact-recursive-dns-services"></a>
 
-*Optional* If you're using Amazon Route 53 geolocation routing, contact the recursive DNS services that support the edns\-client\-subnet extension of EDNS0, and give them the names of your white label name servers\. This ensures that these DNS services will continue to route DNS queries to the optimal Route 53 location based on the approximate geographical location that the query came from\.
+*Optional* If you're using Amazon Route 53 geolocation routing, contact the recursive DNS services that support the edns\-client\-subnet extension of EDNS0, and give them the names of your white\-label name servers\. This ensures that these DNS services will continue to route DNS queries to the optimal Route 53 location based on the approximate geographical location that the query came from\.
 
 For a list of the recursive DNS services that support edns\-client\-subnet, see [A Faster Internet: Participants](http://www.afasterinternet.com/participants.htm)\. For more information about how edns\-client\-subnet works, see [A Faster Internet: How It Works](http://www.afasterinternet.com/howitworks.htm)\.

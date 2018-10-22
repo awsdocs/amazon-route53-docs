@@ -87,7 +87,7 @@ For example, if a Route 53 name server receives a request for www\.example\.com
 Usually a request that is submitted by a device, such as a computer or a smart phone, to the Domain Name System \(DNS\) for a resource that is associated with a domain name\. The most common example of a DNS query is when a user opens a browser and types the domain name in the address bar\. The response to a DNS query typically is the IP address that is associated with a resource such as a web server\. The device that initiated the request uses the IP address to communicate with the resource\. For example, a browser can use the IP address to get a web page from a web server\. 
 
 **DNS resolver**  
-A DNS server, often managed by an internet service provider \(ISP\), that acts as an intermediary between user requests and DNS name servers\. When you open a browser and type a domain name in the address bar, your query goes first to a DNS resolver\. The resolver communicates with DNS name servers to get the IP address for the corresponding resource, such as a web server\. A DNS resolver is also known as a recursive name server because it sends requests to a sequence of authoritative DNS name servers until it gets the response \(typically an IP address\) that it returns to a user's device, for example, a web browser on a laptop computer\.
+A DNS server, often managed by an internet service provider \(ISP\), that acts as an intermediary between user requests and DNS name servers\. When you open a browser and enter a domain name in the address bar, your query goes first to a DNS resolver\. The resolver communicates with DNS name servers to get the IP address for the corresponding resource, such as a web server\. A DNS resolver is also known as a recursive name server because it sends requests to a sequence of authoritative DNS name servers until it gets the response \(typically an IP address\) that it returns to a user's device, for example, a web browser on a laptop computer\.
 
 **Domain Name System \(DNS\)**  
 A worldwide network of servers that help computers, smart phones, tablets, and other IP\-enabled devices to communicate with one another\. The Domain Name System translates easily understood names such as example\.com into the numbers, known as *IP addresses*, that allow computers to find each other on the internet\.  
@@ -103,7 +103,7 @@ A number that is assigned to a device on the internet—such as a laptop, a smar
 
 + Internet Protocol version 4 \(IPv4\) format, such as 192\.0\.2\.44
 
-+ Internet Protocal version 6 \(IPv6\) format, such as 2001:0db8:85a3:0000:0000:abcd:0001:2345
++ Internet Protocol version 6 \(IPv6\) format, such as 2001:0db8:85a3:0000:0000:abcd:0001:2345
 Route 53 supports both IPv4 and IPv6 addresses for the following purposes:  
 
 + You can create records that have a type of A, for IPv4 addresses, or a type of AAAA, for IPv6 addresses\.

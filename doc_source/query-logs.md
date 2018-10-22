@@ -56,7 +56,7 @@ If users are submitting DNS queries for your domain, you should start to see que
 
 1. Choose whether you want Route 53 to publish logs to an existing CloudWatch Logs log group or to a new log group\.
 
-1. Either type a name for the new log group or choose an existing log group from the list\.
+1. Either enter a name for the new log group or choose an existing log group from the list\.
 **Important**  
 If you want to configure logging for multiple hosted zones, we recommend that you use a consistent prefix for every log group, for example:   
 `/aws/route53/`*hosted\-zone\-name*  
@@ -86,9 +86,9 @@ Route 53 can use the permissions in any existing resource policy\. When you cho
 
 1. If you chose to create a resource policy, perform the following steps:
 
-   1. For **Resource policy name**, type a name for the resource policy\.
+   1. For **Resource policy name**, enter a name for the resource policy\.
 
-   1. For **Log groups that the resource policy applies to**, type a value that includes the log group that you chose or created on the previous page\. The name of that log group is at the top of the current page\.
+   1. For **Log groups that the resource policy applies to**, enter a value that includes the log group that you chose or created on the previous page\. The name of that log group is at the top of the current page\.
 
       You can include the wildcard character \(`*`\) to replace 0 or more characters in the name of the log group, for example, `/aws/route53/*`\.
 

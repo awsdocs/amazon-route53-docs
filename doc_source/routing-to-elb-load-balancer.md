@@ -41,8 +41,8 @@ To configure Amazon Route 53 to route traffic to an ELB load balancer, perform 
 
 1. Specify the following values:  
 **Name**  
-Type the domain name that you want to use to route traffic to your ELB load balancer\. The default value is the name of the hosted zone\.  
-For example, if the name of the hosted zone is example\.com and you want to use acme\.example\.com to route traffic to your load balancer, type **acme**\.  
+Enter the domain name that you want to use to route traffic to your ELB load balancer\. The default value is the name of the hosted zone\.  
+For example, if the name of the hosted zone is example\.com and you want to use acme\.example\.com to route traffic to your load balancer, enter **acme**\.  
 **Type**  
 Choose **A – IPv4 address**\.  
 **Alias**  

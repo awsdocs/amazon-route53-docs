@@ -12,7 +12,7 @@ A public hosted zone is a container that holds information about how you want to
 
 1. Choose **Create Hosted Zone**\.
 
-1. In the **Create Hosted Zone** pane, type the name of the domain that you want to route traffic for\. You can also optionally type a comment\.
+1. In the **Create Hosted Zone** pane, enter the name of the domain that you want to route traffic for\. You can also optionally enter a comment\.
 
    For information about how to specify characters other than a\-z, 0\-9, and \- \(hyphen\) and how to specify internationalized domain names, see [DNS Domain Name Format](DomainNameFormat.md)\.
 

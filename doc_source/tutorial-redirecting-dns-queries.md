@@ -87,9 +87,9 @@ In this tutorial, we're using an S3 bucket as the origin for your CloudFront dis
 
 1. Choose **Redirect requests**\.
 
-1. For **Target bucket or domain**, type the name of the domain \(example\.com\) or subdomain \(www\.example\.com\) that you want to redirect requests to\.
+1. For **Target bucket or domain**, enter the name of the domain \(example\.com\) or subdomain \(www\.example\.com\) that you want to redirect requests to\.
 
-1. For **Protocol**, type **https**, all lowercase\.
+1. For **Protocol**, enter **https**, all lowercase\.
 
 1. Choose **Save**\.
 
@@ -109,7 +109,7 @@ You can either create a new CloudFront web distribution or update an existing di
 
 1. On the **Select a delivery method for your content** page, in the **Web** section, choose **Get Started**\.
 
-1. On the **Create Distribution** page, for **Origin Domain Name**, type or paste the **Endpoint URL** that you got when you created the bucket, for example:
+1. On the **Create Distribution** page, for **Origin Domain Name**, enter or paste the **Endpoint URL** that you got when you created the bucket, for example:
 
    **http://example\.com\.s3\-website\-us\-west\-2\.amazonaws\.com**
 **Note**  
@@ -123,7 +123,7 @@ Don't choose the name of the bucket from the **Origin Domain Name** list\. The f
 
 1. In the **Distribution Settings** section, accept the default values for all settings except the following:  
 **Alternate domain names \(CNAMEs\)**  
-Type the names of the two domains that you want users to use to access your content, such as example\.com and example\.net, or www\.example\.com and example\.com\.  
+Enter the names of the two domains that you want users to use to access your content, such as example\.com and example\.net, or www\.example\.com and example\.com\.  
 **SSL Certificate**  
 Choose **Custom SSL Certificate**\. Then choose the certificate that you got in [Step 3: Get an SSL/TLS Certificate from ACM](#tutorial-redirecting-dns-queries-get-certificate)\.
 
@@ -143,7 +143,7 @@ Choose **Custom SSL Certificate**\. Then choose the certificate that you got in 
 
 1. Update the following values:  
 **Alternate domain names \(CNAMEs\)**  
-Type the names of the two domains that you want users to use to access your content, such as example\.com and example\.net, or www\.example\.com and example\.com\.  
+Enter the names of the two domains that you want users to use to access your content, such as example\.com and example\.net, or www\.example\.com and example\.com\.  
 **SSL Certificate**  
 Choose **Custom SSL Certificate**\. Then choose the certificate that you got in [Step 3: Get an SSL/TLS Certificate from ACM](#tutorial-redirecting-dns-queries-get-certificate)\.
 
@@ -153,7 +153,7 @@ Choose **Custom SSL Certificate**\. Then choose the certificate that you got in 
 
 1. Choose **Create Origin**\.
 
-1. For **Origin Domain Name**, type or paste the **Endpoint URL** that you got when you created the bucket, for example:
+1. For **Origin Domain Name**, enter or paste the **Endpoint URL** that you got when you created the bucket, for example:
 
    **http://example\.com\.s3\-website\-us\-west\-2\.amazonaws\.com**
 **Note**  
@@ -192,7 +192,7 @@ The final step before you can test the configuration is to add a record to Route
 1. Specify the following values:  
 **Name**  
 Specify the domain or subdomain name that you want to redirect internet traffic for\. The default value is the name of the domain\.  
-If you want to redirect traffic for a subdomain, type the value that precedes the domain name\. For example, to redirect traffic for www\.example\.com, type **www**\.  
+If you want to redirect traffic for a subdomain, enter the value that precedes the domain name\. For example, to redirect traffic for www\.example\.com, enter **www**\.  
 **Type**  
 Accept the default value, **A – IPv4 address**\.  
 **Alias**  

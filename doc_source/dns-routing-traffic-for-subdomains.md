@@ -41,7 +41,7 @@ To create a hosted zone for a subdomain using the Route 53 console, perform the 
 
 1. Choose **Create Hosted Zone**\.
 
-1. In the right pane, enter the name of the subdomain, such as apex\.example\.com\. You can also optionally type a comment\.
+1. In the right pane, enter the name of the subdomain, such as apex\.example\.com\. You can also optionally enter a comment\.
 
    For information about how to specify characters other than a\-z, 0\-9, and \- \(hyphen\) and how to specify internationalized domain names, see [DNS Domain Name Format](DomainNameFormat.md)\.
 
@@ -97,7 +97,7 @@ To configure Route 53 to route traffic for the subdomain using the hosted zone 
 
 1. Specify the following values:  
 **Name**  
-Type the name of the subdomain\.  
+Enter the name of the subdomain\.  
 **Type**  
 Choose **NS – Name server**\.  
 **TTL \(Seconds\)**  
@@ -117,7 +117,7 @@ Accept the default value of **Simple**\.
 
 You route traffic to a subdomain of a subdomain, such as backend\.apex\.example\.com, the same way that you route traffic to a subdomain, such as apex\.example\.com\. Either you create records in the hosted zone for the domain, or you create a hosted zone for the lower\-level subdomain, and then you create records in that new hosted zone\.
 
-To ensure that traffic is correctly routed to your resources, create the NS record for a lower\-level subdomain in the hosted zone for the subdomain that is one level closer to the domain name\. For example, suppose you want to route traffic for the following subdomains:
+If you choose to create a separate hosted zone for the lower\-level subdomain, create the NS record for the lower\-level subdomain in the hosted zone for the subdomain that is one level closer to the domain name\. This helps to ensure that traffic is correctly routed to your resources\. For example, suppose you want to route traffic for the following subdomains:
 
 + subdomain1\.example\.com
 

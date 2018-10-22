@@ -82,7 +82,7 @@ The value that you specify depends on the AWS resource that you're routing traff
 **CloudFront Distributions**  
 For CloudFront distributions, do one of the following:  
 
-+ **If you used the same account to create your Route 53 hosted zone and your CloudFront distribution** – Choose **Alias Target** and choose a distribution from the list\. If you have a lot of distributions, you can type the first few characters of the domain name for your distribution to filter the list\.
++ **If you used the same account to create your Route 53 hosted zone and your CloudFront distribution** – Choose **Alias Target** and choose a distribution from the list\. If you have a lot of distributions, you can enter the first few characters of the domain name for your distribution to filter the list\.
 
   If your distribution doesn't appear in the list, note the following:
 
@@ -104,14 +104,14 @@ If the domain name for your Elastic Beanstalk environment includes the region th
 For environments that were created before early 2016, the domain name doesn't include the region\. To route traffic to these environments, you must create a CNAME record instead of an alias record\. Note that you can't create a CNAME record for the root domain name\. For example, if your domain name is example\.com, you can create a record that routes traffic for acme\.example\.com to your Elastic Beanstalk environment, but you can't create a record that routes traffic for example\.com to your Elastic Beanstalk environment\.
 For Elastic Beanstalk environments that have regionalized subdomains, do one of the following:  
 
-+ **If you used the same account to create your Route 53 hosted zone and your Elastic Beanstalk environment** – Choose **Alias Target**, and then choose an environment from the list\. If you have a lot of environments, you can type the first few characters of the CNAME attribute for the environment to filter the list\.
++ **If you used the same account to create your Route 53 hosted zone and your Elastic Beanstalk environment** – Choose **Alias Target**, and then choose an environment from the list\. If you have a lot of environments, you can enter the first few characters of the CNAME attribute for the environment to filter the list\.
 
 + **If you used different accounts to create your Route 53 hosted zone and your Elastic Beanstalk environment** – Enter the CNAME attribute for the Elastic Beanstalk environment\.
 
 **ELB Load Balancers**  
 For ELB load balancers, do one of the following:  
 
-+ **If you used the same account to create your Route 53 hosted zone and your load balancer** – Choose **Alias Target** and choose a load balancer from the list\. If you have a lot of load balancers, you can type the first few characters of the DNS name to filter the list\.
++ **If you used the same account to create your Route 53 hosted zone and your load balancer** – Choose **Alias Target** and choose a load balancer from the list\. If you have a lot of load balancers, you can enter the first few characters of the DNS name to filter the list\.
 
 + **If you used different accounts to create your Route 53 hosted zone and your load balancer** – Enter the value that you got in the procedure [Getting the DNS Name for an ELB Load Balancer](resource-record-sets-creating.md#resource-record-sets-elb-dns-name-procedure)\.
 
@@ -123,11 +123,11 @@ In either case, the console prepends **dualstack\.** to the DNS name\. When a cl
 **Amazon S3 Buckets**  
 For Amazon S3 buckets that are configured as website endpoints, do one of the following:  
 
-+ **If you used the same account to create your Route 53 hosted zone and your Amazon S3 bucket** – Choose **Alias Target** and choose a bucket from the list\. If you have a lot of buckets, you can type the first few characters of the DNS name to filter the list\.
++ **If you used the same account to create your Route 53 hosted zone and your Amazon S3 bucket** – Choose **Alias Target** and choose a bucket from the list\. If you have a lot of buckets, you can enter the first few characters of the DNS name to filter the list\.
 
   The value of **Alias Target** changes to the Amazon S3 website endpoint for your bucket\.
 
-+ **If you used different accounts to create your Route 53 hosted zone and your Amazon S3 bucket** – Type the name of the region that you created your S3 bucket in\. Use the value that appears in the **Website Endpoint** column in the [Amazon Simple Storage Service Website Endpoints](http://docs.aws.amazon.com/general/latest/gr/rande.html#s3_website_region_endpoints) table in the [AWS Regions and Endpoints](http://docs.aws.amazon.com/general/latest/gr/rande.html) chapter of the *Amazon Web Services General Reference*\.
++ **If you used different accounts to create your Route 53 hosted zone and your Amazon S3 bucket** – Enter the name of the region that you created your S3 bucket in\. Use the value that appears in the **Website Endpoint** column in the [Amazon Simple Storage Service Website Endpoints](http://docs.aws.amazon.com/general/latest/gr/rande.html#s3_website_region_endpoints) table in the [AWS Regions and Endpoints](http://docs.aws.amazon.com/general/latest/gr/rande.html) chapter of the *Amazon Web Services General Reference*\.
 
   If you used AWS accounts other than the current account to create your Amazon S3 buckets, the bucket won't appear in the **Alias Targets** list\.
 You must configure the bucket for website hosting\. For more information, see [Configure a Bucket for Website Hosting](http://docs.aws.amazon.com/AmazonS3/latest/dev/HowDoIWebsiteConfiguration.html) in the *Amazon Simple Storage Service Developer Guide*\.  
@@ -135,7 +135,7 @@ The name of the record must match the name of your Amazon S3 bucket\. For exampl
 In a group of weighted alias, latency alias, failover alias, or geolocation alias records, you can create only one record that routes queries to an Amazon S3 bucket because the name of the record must match the name of the bucket and bucket names must be globally unique\.
 
 **Records in this Hosted Zone**  
-For records in this hosted zone, choose **Alias Target** and choose the applicable record\. If you have a lot of records, you can type the first few characters of the name to filter the list\.  
+For records in this hosted zone, choose **Alias Target** and choose the applicable record\. If you have a lot of records, you can enter the first few characters of the name to filter the list\.  
 If the hosted zone contains only the default NS and SOA records, the **Alias Targets** list shows **No Targets Available**\.  
 If you're creating an alias record that has the same name as the hosted zone \(known as the *zone apex*\), you can't choose a record for which the value of **Type** is **CNAME**\. This is because the alias record must have the same type as the record you're routing traffic to, and creating a CNAME record for the zone apex isn't supported even for an alias record\. 
 

@@ -40,18 +40,24 @@ The start of authority \(SOA\) record identifies the base DNS information about 
 1. ns-2048.awsdns-64.net. hostmaster.example.com. 1 7200 900 1209600 86400
 ```
 
-The elements of the SOA record include:
+A SOA record includes the following elements:
 
-+ The host that created the SOA record, for example, `ns-2048.awsdns-64.net`\.
++ The Route 53 name server that created the SOA record, for example, `ns-2048.awsdns-64.net`\.
 
-+ The email address of the administrator in a format with the `@` symbol replaced by a period, for example, `hostmaster.example.com`\. The default value is an amazon\.com email address that is not monitored\.
++ The email address of the administrator\. The `@` symbol is replaced by a period, for example, `hostmaster.example.com`\. The default value is an amazon\.com email address that is not monitored\.
 
-+ A revision number to increment when you change the zone file and distribute changes to secondary DNS servers, for example `1`\.
++ A serial number that you can optionally increment whenever you update a record in the hosted zone\. Route 53 doesn't increment the number automatically\. \(The serial number is used by DNS services that support secondary DNS\.\) In the example, this value is `1`\.
 
-+ A refresh time in seconds that secondary DNS servers wait before querying the primary DNS server's SOA record to check for changes, for example `7200`\.
++ A refresh time in seconds that secondary DNS servers wait before querying the primary DNS server's SOA record to check for changes\. In the example, this value is `7200`\.
 
-+ The retry interval in seconds that a secondary server waits before retrying a failed zone transfer, for example `900` \(15 minutes\)\. Normally, the retry time is less than the refresh time\.
++ The retry interval in seconds that a secondary server waits before retrying a failed zone transfer\. Normally, the retry time is less than the refresh time\. In the example, this value is `900` \(15 minutes\)\. 
 
-+ The expire time in seconds that a secondary server will keep trying to complete a zone transfer, for example `1209600` \(two weeks\)\. If this time expires prior to a successful zone transfer, the secondary server will expire its zone file\. This means that the secondary server will stop answering queries because it considers its data too old to be reliable\.
++ The time in seconds that a secondary server will keep trying to complete a zone transfer\. If this time elapses before a successful zone transfer, the secondary server will stop answering queries because it considers its data too old to be reliable\. In the example, this value is `1209600` \(two weeks\)\.
 
-+ The minimum time to live \(TTL\)\. This value helps define the length of time that an NXDOMAIN result, which indicates that a domain does not exist, should be cached by a DNS resolver\. Caching this negative result is referred to as negative caching\. The duration of negative caching is the lesser of the SOA record's TTL or the value of the minimum TTL field\. The default minimum TTL on Amazon Route 53 SOA records is 900 seconds\. To change the TTL for records, including SOA records, you can use the Route 53 console\. For more information, see [Editing Records](resource-record-sets-editing.md)\. You can also use the `ChangeResourceRecordSets` API\. For more information, see [ChangeResourceRecordSets](http://docs.aws.amazon.com/Route53/latest/APIReference/API_ChangeResourceRecordSets.html) in the *Amazon Route 53 API Reference*\.
++ The minimum time to live \(TTL\)\. This value helps define the length of time that an NXDOMAIN result, which indicates that a domain does not exist, should be cached by a DNS resolver\. When a DNS resolver caches an NXDOMAIN result, this is referred to as *negative caching*\. 
+
+  The duration of negative caching is the lesser of the following values:
+
+  + This value—the minimum TTL in the SOA record\. In the example, the value is `86400` \(one day\)\.
+
+  + The value of the minimum TTL for the SOA record\. The default value is 900 seconds\. For information about changing this value, see [Editing Records](resource-record-sets-editing.md)\.

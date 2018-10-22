@@ -67,6 +67,8 @@ When you add a CAA record to your hosted zone, you specify three settings separa
 
 Note the following about the format for CAA records:
 
++ The value of `tag` can contain only the characters A\-Z, a\-z, and 0\-9\.
+
 + Always enclose `value` in quotation marks \(""\)\.
 
 + Some CAs allow or require additional values for `value`\. Specify additional values as name\-value pairs, and separate them with semicolons \(;\), for example:
@@ -184,7 +186,7 @@ If your CA supports a feature that isn't defined in the RFC for CAA records, spe
 For example, suppose your CA supports sending a text message if the CA receives an invalid certificate request\. \(We aren't aware of any CAs that support this option\.\) Settings for the record might be the following:
 
 ```
-128 example-text-tag "1-555-555-1212"
+128 exampletag "15555551212"
 ```
 
 ### Examples<a name="CAAFormat-examples"></a>
@@ -328,7 +330,7 @@ For more information about DDDS applications and about NAPTR records, see the fo
 
 ## NS Record Type<a name="NSFormat"></a>
 
-An NS record identifies the name servers for the hosted zone\. The value for an NS record is the domain name of a name server\. For more information about NS records, see [NS and SOA Records that Amazon Route 53 Creates for a Public Hosted Zone](SOA-NSrecords.md)\. For information about configuring white label name servers, see [Configuring White Label Name Servers](white-label-name-servers.md)\.
+An NS record identifies the name servers for the hosted zone\. The value for an NS record is the domain name of a name server\. For more information about NS records, see [NS and SOA Records that Amazon Route 53 Creates for a Public Hosted Zone](SOA-NSrecords.md)\. For information about configuring white\-label name servers, see [Configuring White\-Label Name Servers](white-label-name-servers.md)\.
 
 **Example for the Amazon Route 53 console**
 

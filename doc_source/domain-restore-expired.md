@@ -27,7 +27,7 @@ Accept the default value of **Billing**\.
 **Category**  
 Accept the default value of **Domain name registration issue**\.  
 **Subject**  
-Type **Restore an expired domain** or **Restore a deleted domain**\.  
+Enter **Restore an expired domain** or **Restore a deleted domain**\.  
 **Description**  
 Provide the following information:  
 

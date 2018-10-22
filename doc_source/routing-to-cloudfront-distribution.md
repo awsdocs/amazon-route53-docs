@@ -75,8 +75,8 @@ Changes generally propagate to all Route 53 servers within 60 seconds\. When pr
 
 1. Specify the following values:  
 **Name**  
-Type the domain name that you want to use to route traffic to your CloudFront distribution\. The default value is the name of the hosted zone\.  
-For example, if the name of the hosted zone is example\.com and you want to use **acme\.example\.com** to route traffic to your distribution, type **acme**\.  
+Enter the domain name that you want to use to route traffic to your CloudFront distribution\. The default value is the name of the hosted zone\.  
+For example, if the name of the hosted zone is example\.com and you want to use **acme\.example\.com** to route traffic to your distribution, enter **acme**\.  
 **Type**  
 Choose **A – IPv4 address**\.  
 If IPv6 is enabled for the distribution and you're creating a second record, choose **AAAA – IPv6 address**\.   

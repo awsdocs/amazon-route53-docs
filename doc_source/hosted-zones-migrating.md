@@ -18,8 +18,9 @@ If you want to migrate a hosted zone from one AWS account to a different account
 + [Step 5: Split Large Files into Smaller Files](#hosted-zones-migrating-split-file)
 + [Step 6: Create Records in the New Hosted Zone](#hosted-zones-migrating-create-records)
 + [Step 7: Compare Records in the Old and New Hosted Zones](#hosted-zones-migrating-compare)
-+ [Step 8: Update the Domain to Use Name Servers for the New Hosted Zone](#hosted-zones-migrating-update-domain)
-+ [Step 9: \(Optional\) Delete the Old Hosted Zone](#hosted-zones-migrating-delete-old-hosted-zone)
++ [Step 8: Update the Domain Registration to Use Name Servers for the New Hosted Zone](#hosted-zones-migrating-update-domain)
++ [Step 9: Wait for DNS Resolvers to Start Using the New Hosted Zone](#hosted-zones-migrating-wait-for-ttl)
++ [Step 10: \(Optional\) Delete the Old Hosted Zone](#hosted-zones-migrating-delete-old-hosted-zone)
 
 ## Step 1: Install or Upgrade the AWS CLI<a name="hosted-zones-migrating-install-cli"></a>
 
@@ -35,7 +36,7 @@ If you're already using the AWS CLI, we recommend that you upgrade to the latest
 The following procedure explains how to use the Route 53 console to create the hosted zone that you want to migrate to\.
 
 **Note**  
-Route 53 assigns a new set of four name servers to the new hosted zone\. After you migrate a hosted zone to another AWS account, you need to update the domain to use the name servers for the new hosted zone\. We remind you about this step later in the process\.
+Route 53 assigns a new set of four name servers to the new hosted zone\. After you migrate a hosted zone to another AWS account, you need to update the domain registration to use the name servers for the new hosted zone\. We remind you about this step later in the process\.
 
 **To create the new hosted zone using a different account**
 
@@ -63,7 +64,7 @@ To migrate records from one hosted zone to another, you create a file that conta
 
    1. In the navigation pane, choose **Hosted zones**\.
 
-   1. Find the hosted zone that you want to migrate\. If you have a lot of hosted zones, you can type part of the name in the **Search all fields** field and press **Enter** to filter the list\.
+   1. Find the hosted zone that you want to migrate\. If you have a lot of hosted zones, you can enter part of the name in the **Search all fields** field and press **Enter** to filter the list\.
 
    1. Get the value of the **Hosted zone ID** column\.
 
@@ -253,12 +254,12 @@ To confirm that you successfully created all of your records in the new hosted z
 
      + [Step 7: Compare Records in the Old and New Hosted Zones](#hosted-zones-migrating-compare)
 
-## Step 8: Update the Domain to Use Name Servers for the New Hosted Zone<a name="hosted-zones-migrating-update-domain"></a>
+## Step 8: Update the Domain Registration to Use Name Servers for the New Hosted Zone<a name="hosted-zones-migrating-update-domain"></a>
 
-When you finish creating records in the new hosted zone, change the name servers for the domain to use the name servers for the new hosted zone\.
+When you finish creating records in the new hosted zone, change the name servers for the domain registration to use the name servers for the new hosted zone\.
 
 **Important**  
-If you don't update the domain to use the name servers for the new hosted zone, Route 53 will continue to use the old hosted zone to route traffic for the domain\. If you delete the old hosted zone without updating name servers for the domain, the domain will become unavailable on the internet\. If you add, update, or delete records in the new hosted zone without updating name servers for the domain, then traffic won't be routed based on those changes\.
+If you don't update the domain registration to use the name servers for the new hosted zone, Route 53 will continue to use the old hosted zone to route traffic for the domain\. If you delete the old hosted zone without updating name servers for the domain registration, the domain will become unavailable on the internet\. If you add, update, or delete records in the new hosted zone without updating name servers for the domain registration, then traffic won't be routed based on those changes\.
 
 For more information, see [Making Amazon Route 53 the DNS Service for an Existing DomainMaking Route 53 the DNS Service for an Existing Domain](MigratingDNS.md)\.
 
@@ -268,9 +269,23 @@ Step 1: Get Your Current DNS Configuration from the Current DNS Service Provider
 Step 2: Create a Hosted Zone
 Step 3: Create Records
 
-## Step 9: \(Optional\) Delete the Old Hosted Zone<a name="hosted-zones-migrating-delete-old-hosted-zone"></a>
+## Step 9: Wait for DNS Resolvers to Start Using the New Hosted Zone<a name="hosted-zones-migrating-wait-for-ttl"></a>
 
-When you're confident that you don't need the old hosted zone any longer, you can optionally delete it\. The hosted zone must be empty except for the default NS and SOA records\. If the old hosted zone contains a lot of records, deleting them using the console can take a long time\. One option is to perform the following steps:
+If your domain is in use—for example, if your users are using the domain name to browse to a website or access a web application—then DNS resolvers have cached the names of the name servers that were provided by your current DNS service provider\. A DNS resolver that cached that information a few minutes ago will save it for up to two days\.
+
+**Note**  
+If you created any records in the new hosted zone that don't appear in the old hosted zone, your users can't use the new records to access your resources until resolvers start using the name servers for the new hosted zone\. For example, suppose you create a record, test\.example\.com, in the new hosted zone that should route internet traffic to your website\. If the record doesn't appear in the old hosted zone, you can't enter test\.example\.com in a web browser until resolvers start using the new hosted zone\.
+
+To ensure that migrating a hosted zone to another AWS account has completed before you delete the old hosted zone, wait for two days after you update the domain registration to use name servers for the new hosted zone\. After the two\-day TTL expires and resolvers request the name servers for your domain, the resolvers will get the current name servers\.
+
+## Step 10: \(Optional\) Delete the Old Hosted Zone<a name="hosted-zones-migrating-delete-old-hosted-zone"></a>
+
+When you're confident that you don't need the old hosted zone any longer, you can optionally delete it\.
+
+**Important**  
+Don't delete the old hosted zone or any records in that hosted zone for at least 48 hours after you update the domain registration to use name servers for the new hosted zone\. If you delete the old hosted zone before DNS resolvers stop using the records in that hosted zone, your domain could be unavailable on the internet until resolvers start using the new hosted zone\.
+
+The hosted zone must be empty except for the default NS and SOA records\. If the old hosted zone contains a lot of records, deleting them using the console can take a long time\. One option is to perform the following steps:
 
 1. Make another copy of the edited file from [Step 4: Edit the Records That You Want to Migrate](#hosted-zones-migrating-edit-records)\.
 
@@ -292,7 +307,7 @@ Make sure that the value that you specify for the hosted zone ID is the ID of th
 
    1. In the navigation pane, choose **Hosted zones**\.
 
-   1. Choose the name of the old hosted zone\. If you have a lot of hosted zones, you can type part of the name in the **Search all fields** field and press **Enter** to filter the list\.
+   1. Choose the name of the old hosted zone\. If you have a lot of hosted zones, you can enter part of the name in the **Search all fields** field and press **Enter** to filter the list\.
 
    1. If the hosted zone contains any records other than the default NS and SOA records \(such as alias records that route traffic to a traffic policy instance\), choose the corresponding check boxes and choose **Delete Record Set**\.
 

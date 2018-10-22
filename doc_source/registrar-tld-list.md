@@ -2347,7 +2347,7 @@ Used for information about the creation of online shortcut links\.
 **Registration and renewal period**  
 One to ten years\.  
 **Privacy protection**  
-Not supported\.  
+Supported, but you must open a case with customer support and request that they enable or disable privacy protection for your domains\. When you open the case, specify the domain names in the **Description** field\. For more information, see [Contacting Customer Support About Domain Registration Issues](domain-contact-support.md)\.  
 **Internationalized domain names**  
 Supported for Cyrillic \(primarily Russian\), French, German, Italian, Portuguese, and Spanish\.  
 **Authorization code required for transfer to Route 53**  
@@ -4296,12 +4296,9 @@ The registrar for this TLD is our registrar associate, Gandi\.
 **Registration and renewal period**  
 One to five years\.  
 **Restrictions**  
-Open to the public, with no restrictions\.  
+The registry for \.co domains, \.CO Internet S\.A\.S\., considers domain names up to four letters long to be premium domain names\. You can't register premium \.co domains with or transfer them to Route 53\.  
 **Privacy protection \(applies to all contact types: person, company, association, and public body\)**  
-
-+ **Hidden** – address, phone number, fax number, and email address
-
-+ **Not hidden** – contact name and organization name  
+All information is hidden\.  
 **Internationalized domain names**  
 Supported\.  
 **Authorization code required for transfer to Route 53**  
@@ -4575,7 +4572,7 @@ One year\.
 **Restrictions**  
 Open to the public, with no restrictions\.  
 **Privacy protection**  
-Not supported\.  
+All information is hidden except state/province and country\.  
 **Internationalized domain names**  
 Supported\.  
 **Authorization code required for transfer to Route 53**  
@@ -4794,7 +4791,11 @@ For more information, see [\.uk Rights FAQs](https://www.theukdomain.uk/advice/d
 If you want the \.uk domain for a \.co\.uk, \.me\.uk, or \.org\.uk that you already own, use the Route 53 console or API, the AWS CLI, or the SDKs to register the \.uk domain as you would any other domain\. If someone else has a higher priority on an existing \.co\.uk, \.me\.uk, or \.org\.uk domain, we'll notify you by email\. The email will contain the following text:   
 `ErrorState at registrar: 2201 : Authorization error (V334 Your request for domain 'domain name' has failed because the 'account name' for the registrant does not fully match any registrant which has rights for this domain)`  
 **Privacy protection**  
-Not supported\.  
+Supported, but the registry for \.co\.uk, \.me\.uk, and \.org\.uk domains requires that you agree to a privacy protection agreement\. To enable privacy protection for one or more \.co\.uk, \.me\.uk, or \.org\.uk domains, perform the following steps:  
+
+1. Download and review the document [SPECIAL CONDITIONS FOR THE \.UK ccTLD – ANNEX : WHOIS PRIVACY SERVICE](https://d3i8amvg2lfxz7.cloudfront.net/0118727488_1500313663_whois_privacy_uk_1.0.pdf)\.
+
+1. If you agree with the terms in the document, open a case with customer support and request that they enable privacy protection for your domains\. When you open the case, specify the domain names in the **Description** field\. For more information, see [Contacting Customer Support About Domain Registration Issues](domain-contact-support.md)\.  
 **Internationalized domain names**  
 Not supported\.  
 **Authorization code required for transfer to Route 53**  
@@ -4986,9 +4987,9 @@ The registrar for this TLD is our registrar associate, Gandi\.
 **Registration and renewal period**  
 One to ten years\.  
 **Restrictions**  
-Domain names that are at least three letters long \(such as aaa\.me\) are generally open to the public\. Domain\.me, the registry for \.me domains, considers two\-letter domain names and some longer domain names to be premium domain names\. You can't register premium \.me domains with or transfer them to Route 53\. For more information about premium \.me domain names, see the [domain\.me](https://domain.me/) website\.  
-**Privacy protection \(applies to all contact types: person, company, association, and public body\)**  
-Not supported\.  
+Domain\.me, the registry for \.me domains, considers two\-letter domain names and some longer domain names to be premium domain names\. You can't register premium \.me domains with or transfer them to Route 53\. For more information about premium \.me domain names, see the [domain\.me](https://domain.me/) website\.  
+**Privacy protection**  
+All information is hidden\.  
 **Internationalized domain names**  
 Not supported\.  
 **Authorization code required for transfer to Route 53**  
@@ -5018,7 +5019,11 @@ For more information, see [\.uk Rights FAQs](https://www.theukdomain.uk/advice/d
 If you want the \.uk domain for a \.co\.uk, \.me\.uk, or \.org\.uk that you already own, use the Route 53 console or API, the AWS CLI, or the SDKs to register the \.uk domain as you would any other domain\. If someone else has a higher priority on an existing \.co\.uk, \.me\.uk, or \.org\.uk domain, we'll notify you by email\. The email will contain the following text:   
 `ErrorState at registrar: 2201 : Authorization error (V334 Your request for domain 'domain name' has failed because the 'account name' for the registrant does not fully match any registrant which has rights for this domain)`  
 **Privacy protection**  
-Not supported\.  
+Supported, but the registry for \.co\.uk, \.me\.uk, and \.org\.uk domains requires that you agree to a privacy protection agreement\. To enable privacy protection for one or more \.co\.uk, \.me\.uk, or \.org\.uk domains, perform the following steps:  
+
+1. Download and review the document [SPECIAL CONDITIONS FOR THE \.UK ccTLD – ANNEX : WHOIS PRIVACY SERVICE](https://d3i8amvg2lfxz7.cloudfront.net/0118727488_1500313663_whois_privacy_uk_1.0.pdf)\.
+
+1. If you agree with the terms in the document, open a case with customer support and request that they enable privacy protection for your domains\. When you open the case, specify the domain names in the **Description** field\. For more information, see [Contacting Customer Support About Domain Registration Issues](domain-contact-support.md)\.  
 **Internationalized domain names**  
 Not supported\.  
 **Authorization code required for transfer to Route 53**  
@@ -5071,7 +5076,11 @@ For more information, see [\.uk Rights FAQs](https://www.theukdomain.uk/advice/d
 If you want the \.uk domain for a \.co\.uk, \.me\.uk, or \.org\.uk that you already own, use the Route 53 console or API, the AWS CLI, or the SDKs to register the \.uk domain as you would any other domain\. If someone else has a higher priority on an existing \.co\.uk, \.me\.uk, or \.org\.uk domain, we'll notify you by email\. The email will contain the following text:   
 `ErrorState at registrar: 2201 : Authorization error (V334 Your request for domain 'domain name' has failed because the 'account name' for the registrant does not fully match any registrant which has rights for this domain)`  
 **Privacy protection**  
-Not supported\.  
+Supported, but the registry for \.co\.uk, \.me\.uk, and \.org\.uk domains requires that you agree to a privacy protection agreement\. To enable privacy protection for one or more \.co\.uk, \.me\.uk, or \.org\.uk domains, perform the following steps:  
+
+1. Download and review the document [SPECIAL CONDITIONS FOR THE \.UK ccTLD – ANNEX : WHOIS PRIVACY SERVICE](https://d3i8amvg2lfxz7.cloudfront.net/0118727488_1500313663_whois_privacy_uk_1.0.pdf)\.
+
+1. If you agree with the terms in the document, open a case with customer support and request that they enable privacy protection for your domains\. When you open the case, specify the domain names in the **Description** field\. For more information, see [Contacting Customer Support About Domain Registration Issues](domain-contact-support.md)\.  
 **Internationalized domain names**  
 Not supported\.  
 **Authorization code required for transfer to Route 53**  

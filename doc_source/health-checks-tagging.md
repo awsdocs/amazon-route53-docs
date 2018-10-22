@@ -54,7 +54,7 @@ The following procedures show you how to use tags for your health checks on the 
 
 1. In the bottom pane, choose the **Tags** tab, and then choose **Add/Edit Tags**\.
 
-1. In the **Add/Edit Tags** dialog box, type a name for the tag in the **Key** field, and type a value in the **Value** field\.
+1. In the **Add/Edit Tags** dialog box, enter a name for the tag in the **Key** field, and enter a value in the **Value** field\.
 
 1. Choose **Apply changes**\.
 

@@ -1,4 +1,4 @@
-# Values that You Specify When You Register a Domain<a name="domain-register-values-specify"></a>
+# Values that You Specify When You Register or Transfer a Domain<a name="domain-register-values-specify"></a>
 
 When you register a domain or transfer domain registration to Amazon Route 53, you specify the values that are described in this topic\.
 
@@ -13,6 +13,38 @@ You can also change values for a domain that is currently registered with Route�
 
 For more information about changing settings for an existing domain, see [Updating Settings for a Domain](domain-update-settings.md)\.
 
+**Values That You Specify**
+
++ [My Registrant, Administrative, and Technical contacts are all the same](#same-contacts-field)
+
++ [Contact Type](#contact-type-field)
+
++ [First Name, Last Name](#first-last-field)
+
++ [Organization](#organization-field)
+
++ [Email](#email-field)
+
++ [Phone](#phone-field)
+
++ [Address 1](#address-1-field)
+
++ [Address 2](#address-2-field)
+
++ [Country](#country-field)
+
++ [State](#state-field)
+
++ [City](#city-field)
+
++ [Postal/Zip Code](#postal-code-field)
+
++ [Fields for selected top-level domains](#tld-fields)
+
++ [Privacy Protection](#privacy-field)
+
++ [Auto Renew (Only available when editing domain settings)](#auto-renew-field)
+
 **My Registrant, Administrative, and Technical contacts are all the same**  
 Specifies whether you want to use the same contact information for the registrant of the domain, the administrative contact, and the technical contact\. 
 
@@ -23,7 +55,12 @@ For some TLDs, the privacy protection available depends on the value that you ch
 **First Name, Last Name**  
 The first and last names of the contact\.  
 For **First Name** and **Last Name**, we recommend that you specify the name on your official ID\. For some changes to domain settings, you must provide proof of identity, and the name on your ID must match the name of the registrant contact for the domain\.
-When the contact type is **Person** and you change the **First Name** and/or **Last Name** fields for the registrant contact, you change the owner of the domain\. ICANN requires that we email the registrant contact to get approval\. The email comes from one of the following email addresses:    
+If you're transferring a domain to Route 53 and the following are true, then you're changing the owner of the domain:  
+
++ The contact type is **Person**\.
+
++ You're changing the **First Name** and/or **Last Name** fields for the registrant contact from the current settings\. 
+In that case, ICANN requires that we email the registrant contact to get approval\. The email comes from one of the following email addresses:    
 ****    
 [\[See the AWS documentation website for more details\]](http://docs.aws.amazon.com/Route53/latest/DeveloperGuide/domain-register-values-specify.html)
 To determine who the registrar is for your TLD, see [Domains That You Can Register with Amazon Route 53](registrar-tld-list.md)\.  
@@ -66,7 +103,7 @@ The state or province for the contact, if any\.
 **City**  
 The city for the contact\.
 
-**Postal/Zip code**  
+**Postal/Zip Code**  
 The postal or zip code for the contact\.
 
 **Fields for selected top\-level domains**  
@@ -77,7 +114,16 @@ Whether you want to conceal your contact information from WHOIS queries\. If you
 If you select **Don't hide contact information**, you'll get more email spam at the email address that you specified\.  
 Anyone can send a WHOIS query for a domain and get back all of the contact information for that domain\. The WHOIS command is available in many operating systems, and it's also available as a web application on many websites\.   
 Although there are legitimate users for the contact information associated with your domain, the most common users are spammers, who target domain contacts with unwanted email and bogus offers\. In general, we recommend that you choose **Hide contact information** for **Privacy Protection**\.
-For more information, see the following topics:  
+To enable or disable privacy protection for some domains, you must open a support case and request privacy protection\. For more information, see the applicable section in [Domains That You Can Register with Amazon Route 53](registrar-tld-list.md):  
+
++ [\.co\.uk \(United Kingdom\)](http://docs.aws.amazon.com/Route53/latest/DeveloperGuide/registrar-tld-list.html#registrar-tld-list#co.uk)
+
++ [\.me\.uk \(United Kingdom\)](http://docs.aws.amazon.com/Route53/latest/DeveloperGuide/registrar-tld-list.html#registrar-tld-list#me.uk)
+
++ [\.org\.uk \(United Kingdom\)](http://docs.aws.amazon.com/Route53/latest/DeveloperGuide/registrar-tld-list.html#registrar-tld-list#org.uk)
+
++ [\.link](http://docs.aws.amazon.com/Route53/latest/DeveloperGuide/registrar-tld-list.html#registrar-tld-list#link)
+For more information about privacy protection, see the following topics:  
 
 + [Enabling or Disabling Privacy Protection for Contact Information for a Domain](domain-privacy-protection.md)
 

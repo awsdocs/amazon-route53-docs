@@ -75,7 +75,7 @@ If you also want your users to be able to use www\.*your\-domain\-name*, such as
 
    If you're registering more than one domain, we use the same contact information for all of the domains\. 
 
-   For more information, see [Values that You Specify When You Register a Domain](domain-register-values-specify.md)\.
+   For more information, see [Values that You Specify When You Register or Transfer a Domain](domain-register-values-specify.md)\.
 
 1. For some top\-level domains \(TLDs\), we're required to collect additional information\. For these TLDs, enter the applicable values after the **Postal/Zip Code** field\.
 
@@ -125,7 +125,7 @@ Amazon S3 lets you store and retrieve your data from anywhere on the internet\. 
 
 1. Choose **Create bucket**\.
 
-1. For **Bucket Name**, type the name of your domain, such as **example\.com**\.
+1. For **Bucket Name**, enter the name of your domain, such as **example\.com**\.
 
 1. For **Region**, choose the region closest to most of your users\.
 
@@ -164,7 +164,7 @@ Amazon S3 lets you store and retrieve your data from anywhere on the internet\. 
 
 1. Choose **Enable website hosting**\.
 
-1. For **Index document**, type **index\.html**\. This is the name that you'll give the HTML file that you'll create later in this process\.
+1. For **Index document**, enter **index\.html**\. This is the name that you'll give the HTML file that you'll create later in this process\.
 
 1. Choose **Save**\.
 
@@ -178,7 +178,7 @@ If you also want your users to be able to use **www**\.*your\-domain\-name*, suc
 
 1. Choose **Create bucket**\.
 
-1. For **Bucket Name**, type **www\.*your\-domain\-name***\. For example, if you registered the domain name example\.com, type **www\.example\.com**\.
+1. For **Bucket Name**, enter **www\.*your\-domain\-name***\. For example, if you registered the domain name example\.com, enter **www\.example\.com**\.
 
 1. For **Region**, choose the same region that you created the first bucket in\. 
 
@@ -188,7 +188,7 @@ If you also want your users to be able to use **www**\.*your\-domain\-name*, suc
 
 1. Choose **Redirect all requests to another host name**\.
 
-1. For **Redirect all requests to**, type your domain name\.
+1. For **Redirect all requests to**, enter your domain name\.
 
 1. Choose **Save**\.
 
@@ -250,13 +250,13 @@ Each record contains information about how you want to route traffic for one dom
 1. Specify the following values:  
 **Name**  
 For the first record that you'll create, accept the default value, which is the name of your hosted zone and your domain\. This will route internet traffic to the bucket that has the same name as your domain\.  
-If you created a second S3 bucket, for www\.*your\-domain\-name*, you'll repeat this step to create a second record\. For the second record, type **www**\. This will route internet traffic to the www\.*your\-domain\-name* bucket\.  
+If you created a second S3 bucket, for www\.*your\-domain\-name*, you'll repeat this step to create a second record\. For the second record, enter **www**\. This will route internet traffic to the www\.*your\-domain\-name* bucket\.  
 **Type**  
 Choose **A – IPv4 address**\.  
 **Alias**  
 Choose **Yes**\.  
 **Alias Target**  
-Type the name of the region that you created your S3 bucket in\. Use the applicable value from the **Website Endpoint** column in the [Amazon Simple Storage Service Website Endpoints](http://docs.aws.amazon.com/general/latest/gr/rande.html#s3_website_region_endpoints) table in the [AWS Regions and Endpoints](http://docs.aws.amazon.com/general/latest/gr/rande.html) chapter of the *Amazon Web Services General Reference*\.  
+Enter the name of the region that you created your S3 bucket in\. Use the applicable value from the **Website Endpoint** column in the [Amazon Simple Storage Service Website Endpoints](http://docs.aws.amazon.com/general/latest/gr/rande.html#s3_website_region_endpoints) table in the [AWS Regions and Endpoints](http://docs.aws.amazon.com/general/latest/gr/rande.html) chapter of the *Amazon Web Services General Reference*\.  
 You specify the same value for **Alias Target** for both records\. Route 53 figures out which bucket to route traffic to based on the name of the record\.  
 **Routing Policy**  
 Accept the default value of **Simple**\.  
