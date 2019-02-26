@@ -2,7 +2,7 @@
 
 Amazon Route 53 API requests and entities are subject to the following limits\.
 
-
+**Topics**
 + [Limits on Entities](#limits-api-entities)
 + [Limits on API Requests](#limits-api-requests)
 
@@ -11,22 +11,19 @@ Amazon Route 53 API requests and entities are subject to the following limits\.
 Amazon Route 53 entities are subject to the following limits\.
 
 For information on getting current limits, see the following Route 53 actions:
++ [GetAccountLimit](https://docs.aws.amazon.com/Route53/latest/APIReference/API_GetAccountLimit.html) – Gets limits on health checks, hosted zones, reusable delegation sets, traffic flow policies, and traffic flow policy records
++ [GetHostedZoneLimit](https://docs.aws.amazon.com/Route53/latest/APIReference/API_GetHostedZoneLimit.html) – Gets limits on records in a hosted zone and on Amazon VPCs that you can associate with a private hosted zone
++ [GetReusableDelegationSetLimit](https://docs.aws.amazon.com/Route53/latest/APIReference/API_GetReusableDelegationSetLimit.html) – Gets the limit on the number of hosted zones that you can associate with a reusable delegation set
 
-+ [GetAccountLimit](http://docs.aws.amazon.com/Route53/latest/APIReference/API_GetAccountLimit.html) – Gets limits on health checks, hosted zones, reusable delegation sets, traffic flow policies, and traffic flow policy records
-
-+ [GetHostedZoneLimit](http://docs.aws.amazon.com/Route53/latest/APIReference/API_GetHostedZoneLimit.html) – Gets limits on records in a hosted zone and on Amazon VPCs that you can associate with a private hosted zone
-
-+ [GetReusableDelegationSetLimit](http://docs.aws.amazon.com/Route53/latest/APIReference/API_GetReusableDelegationSetLimit.html) – Gets the limit on the number of hosted zones that you can associate with a reusable delegation set
-
-
+**Topics**
 + [Limits on Domains](#limits-api-entities-domains)
 + [Limits on Hosted Zones](#limits-api-entities-hosted-zones)
 + [Limits on Records](#limits-api-entities-records)
++ [Limits on Route 53 Resolver](#limits-api-entities-resolver)
 + [Limits on Health Checks](#limits-api-entities-health-checks)
 + [Limits on Query Log Configurations](#limits-api-entities-query-log-configs)
 + [Limits on Traffic Flow Policies and Policy Records](#limits-api-entities-traffic-flow)
 + [Limits on ReusableDelegationSets](#limits-api-entities-reusable-delegation-sets)
-+ [Limits on Autonaming](#limits-api-entities-autonaming)
 
 ### Limits on Domains<a name="limits-api-entities-domains"></a>
 
@@ -60,9 +57,23 @@ For information on getting current limits, see the following Route 53 actions:
 | Entity | Limit | 
 | --- | --- | 
 | Records | 10,000 per hosted zone [Request a higher limit](https://console.aws.amazon.com/support/home#/case/create?issueType=service-limit-increase&limitType=service-code-route53)\. For a limit greater than 10,000 records in a hosted zone, an additional charge applies\.  | 
-| Values in a record | 100 per record | 
+| Values in a record | 400 per record | 
 | Geolocation, latency, multivalue answer, and weighted records | 100 records that have the same name and type | 
 | Geoproximity records | 30 records that have the same name and type | 
+
+### Limits on Route 53 Resolver<a name="limits-api-entities-resolver"></a>
+
+
+****  
+
+| Entity | Limit | 
+| --- | --- | 
+| Endpoints per AWS Region | 4 per AWS account [Request a higher limit](https://console.aws.amazon.com/support/home#/case/create?issueType=service-limit-increase&limitType=service-code-route53)\. | 
+| IP addresses per endpoint | 6 | 
+| IP addresses per rule | 6 | 
+| Rules per AWS Region | 1000 per AWS account [Request a higher limit](https://console.aws.amazon.com/support/home#/case/create?issueType=service-limit-increase&limitType=service-code-route53)\. | 
+| Associations between rules and VPCs per AWS Region | 2000 per AWS account [Request a higher limit](https://console.aws.amazon.com/support/home#/case/create?issueType=service-limit-increase&limitType=service-code-route53)\. | 
+| Queries per second per IP address in an endpoint | 10,000 | 
 
 ### Limits on Health Checks<a name="limits-api-entities-health-checks"></a>
 
@@ -103,24 +114,14 @@ For information on getting current limits, see the following Route 53 actions:
 | --- | --- | 
 | Reusable delegation sets | 100 per AWS account [Request a higher limit](https://console.aws.amazon.com/support/home#/case/create?issueType=service-limit-increase&limitType=service-code-route53)\. | 
 
-### Limits on Autonaming<a name="limits-api-entities-autonaming"></a>
-
-Each limit listed applies to each region where you create autonaming resources\. For example, each AWS account can create 50 namespaces in each region\.
-
-
-****  
-
-| Entity | Limit | 
-| --- | --- | 
-| Namespaces | 50 per region **\*** [Request a higher limit](https://console.aws.amazon.com/support/home?region=us-west-2#/case/create?issueType=service-limit-increase)  | 
-| Instances | 2,000 per namespace [Request a higher limit](https://console.aws.amazon.com/support/home?region=us-west-2#/case/create?issueType=service-limit-increase)  | 
-| Instances | 1,000 per service | 
-
-**\*** When you create a namespace, we automatically create a Route 53 hosted zone\. This hosted zone counts against the limit on the number of hosted zones that you can create with an AWS account\. See [Limits on Hosted Zones](#limits-api-entities-hosted-zones)\.
-
 ## Limits on API Requests<a name="limits-api-requests"></a>
 
 Amazon Route 53 API requests are subject to the following limits\.
+
+**Topics**
++ [Number of Elements and Characters in `ChangeResourceRecordSets` Requests](#limits-api-requests-changeresourcerecordsets)
++ [Frequency of Amazon Route 53 API Requests](#limits-api-requests-route-53)
++ [Frequency of Route 53 Resolver API Requests](#limits-api-requests-route-53-resolver)
 
 ### Number of Elements and Characters in `ChangeResourceRecordSets` Requests<a name="limits-api-requests-changeresourcerecordsets"></a>
 
@@ -140,3 +141,8 @@ If Route 53 can't process a request before the next request arrives, it will re
 
 **`CreateHealthCheck` requests**  
 You can submit a maximum of 1,000 `CreateHealthCheck` requests in a 24\-hour period\.
+
+### Frequency of Route 53 Resolver API Requests<a name="limits-api-requests-route-53-resolver"></a>
+
+**All requests**  
+Five requests per second per AWS account per Region\. If you submit more than five requests per second in a Region, Resolver returns an HTTP 400 error \(`Bad request`\)\. The response header also includes a `Code` element with a value of `Throttling` and a `Message` element with a value of `Rate exceeded`\.

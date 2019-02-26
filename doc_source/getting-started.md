@@ -1,13 +1,9 @@
 # Getting Started with Amazon Route 53<a name="getting-started"></a>
 
 This Getting Started tutorial shows you how to perform the following tasks:
-
 + Register a domain name, such as example\.com
-
 + Create an Amazon S3 bucket and configure it to host a website
-
 + Create a sample website and save the file in your S3 bucket
-
 + Configure Amazon Route 53 to route traffic to your new website
 
 When you're finished, you'll be able to open a browser, enter the name of your domain, and view your website\.
@@ -16,14 +12,11 @@ When you're finished, you'll be able to open a browser, enter the name of your d
 You can also transfer an existing domain to Route 53, but the process is more complex and time consuming than registering a new domain\. For more information, see [Transferring Registration for a Domain to Amazon Route 53](domain-transfer-to-route-53.md)\. 
 
 **Estimated cost**
-
 + There's an annual fee to register a domain, ranging from $9 to several hundred dollars, depending on the top\-level domain, such as \.com\. For more information, see [Route 53 Pricing for Domain Registration](https://d32ze2gidvkk54.cloudfront.net/Amazon_Route_53_Domain_Registration_Pricing_20140731.pdf)\. This fee is not refundable\.
-
 + When you register a domain, we automatically create a hosted zone that has the same name as the domain\. You use the hosted zone to specify where you want Route 53 to route traffic for your domain\. The fee for a hosted zone is $0\.50 per month\. You can delete the hosted zone if you want to avoid this charge\.
++ During this tutorial, you create an Amazon S3 bucket and upload a sample web page\. If you're a new AWS customer, you can get started with Amazon S3 for free\. If you're an existing AWS customer, charges are based on how much data you store, on the number of requests for your data, and on the amount of data transferred\. For more information, see [Amazon S3 Pricing](https://aws.amazon.com/s3/pricing/)\.
 
-+ If you're a new AWS customer, you can get started with Amazon S3 for free\. If you're an existing AWS customer, charges are based on how much data you store, on the number of requests for your data, and on the amount of data transferred\. For more information, see [Amazon S3 Pricing](https://aws.amazon.com/s3/pricing/)\.
-
-
+**Topics**
 + [Prerequisites](#getting-started-prerequisites)
 + [Step 1: Register a domain](#getting-started-find-domain-name)
 + [Step 2: Create an S3 Bucket and Configure It to Host a Website](#getting-started-create-s3-website-bucket)
@@ -39,7 +32,7 @@ Before you begin, be sure that you've completed the steps in [Setting Up Amazon 
 
 ## Step 1: Register a domain<a name="getting-started-find-domain-name"></a>
 
-To use a domain name such as example\.com, you need to find a domain name that isn't already in use by someone else and register it\. When you register a domain name, you reserve it for your exclusive use everywhere on the internet, typically for one year\. By default, we automatically renew your domain name at the end of each year, but you can disable automatic renewal\.
+To use a domain name such as example\.com, you need to find a domain name that isn't already in use by someone else and register it\. When you register a domain name, you reserve it for your exclusive use everywhere on the internet, typically for one year\. By default, we automatically renew your domain name at the end of each year, but you can disable automatic renewal\.<a name="getting-started-domain-register-procedure"></a>
 
 **To register a new domain using Amazon Route 53**
 
@@ -80,9 +73,7 @@ If you also want your users to be able to use www\.*your\-domain\-name*, such as
 1. For some top\-level domains \(TLDs\), we're required to collect additional information\. For these TLDs, enter the applicable values after the **Postal/Zip Code** field\.
 
 1. Choose whether you want to hide your contact information from WHOIS queries\. For more information, see the following topics:
-
    + [Enabling or Disabling Privacy Protection for Contact Information for a Domain](domain-privacy-protection.md)
-
    + [Domains That You Can Register with Amazon Route 53](registrar-tld-list.md)
 
 1. Choose **Continue**\.
@@ -92,16 +83,14 @@ If you also want your users to be able to use www\.*your\-domain\-name*, such as
 1. Choose **Complete Purchase**\.
 
    We send an email to the registrant for the domain to verify that the registrant contact can be reached at the email address that you specified\. \(This is an ICANN requirement\.\) The email comes from one of the following email addresses:
-
    + **noreply@registrar\.amazon\.com ** – for TLDs registered by Amazon Registrar\.
-
    + **noreply@domainnameverification\.net** – for TLDs registered by our registrar associate, Gandi\. To determine who the registrar is for your TLD, see [Domains That You Can Register with Amazon Route 53](registrar-tld-list.md)\.
 **Important**  
 The registrant contact must follow the instructions in the email to confirm that the email was received, or we must suspend the domain as required by ICANN\. When a domain is suspended, it's not accessible on the internet\.
 
    You'll receive another email when your domain registration has been approved\. To determine the current status of your request, see [Viewing the Status of a Domain Registration](domain-view-status.md)\.
 
-By default, you register a domain for one year\. If you won't want to keep the domain, you can disable automatic renewal, so the domain expires at the end of a year\. 
+By default, you register a domain for one year\. If you won't want to keep the domain, you can disable automatic renewal, so the domain expires at the end of a year\. <a name="getting-started-disable-renewal-procedure"></a>
 
 ***\(Optional\)* To disable automatic renewal for a domain**
 
@@ -115,7 +104,7 @@ By default, you register a domain for one year\. If you won't want to keep the d
 
 ## Step 2: Create an S3 Bucket and Configure It to Host a Website<a name="getting-started-create-s3-website-bucket"></a>
 
-Amazon S3 lets you store and retrieve your data from anywhere on the internet\. To organize your data, you create buckets and upload your data to the buckets by using the AWS Management Console\. You can use S3 to host a static website in a bucket\. The following procedure explains how to create a bucket and configure it for website hosting\.
+Amazon S3 lets you store and retrieve your data from anywhere on the internet\. To organize your data, you create buckets and upload your data to the buckets by using the AWS Management Console\. You can use S3 to host a static website in a bucket\. The following procedure explains how to create a bucket and configure it for website hosting\.<a name="getting-started-create-s3-website-bucket-procedure"></a>
 
 **To create an S3 bucket and configure it to host a website**
 
@@ -172,7 +161,7 @@ Amazon S3 lets you store and retrieve your data from anywhere on the internet\. 
 
 In the preceding procedure, you created a bucket for your domain name, such as example\.com\. This allows your users to access your website by using your domain name, such as example\.com\.
 
-If you also want your users to be able to use **www**\.*your\-domain\-name*, such as www\.example\.com, to access your sample website, you create a second S3 bucket\. You then configure the second bucket to route traffic to the first bucket\.
+If you also want your users to be able to use **www**\.*your\-domain\-name*, such as www\.example\.com, to access your sample website, you create a second S3 bucket\. You then configure the second bucket to route traffic to the first bucket\.<a name="getting-started-create-s3-www-bucket-procedure"></a>
 
 **To create an S3 bucket for www\.*your\-domain\-name***
 
@@ -194,7 +183,7 @@ If you also want your users to be able to use **www**\.*your\-domain\-name*, suc
 
 ## Step 4: Create a Website and Upload It to Your S3 Bucket<a name="getting-started-create-website"></a>
 
-Now that you have an S3 bucket to save your website in, you can create the first page for your website and upload it to \(save it in\) your bucket\.
+Now that you have an S3 bucket to save your website in, you can create the first page for your website and upload it to \(save it in\) your bucket\.<a name="getting-started-create-website-procedure"></a>
 
 **To create a website and upload it to your S3 bucket**
 
@@ -211,7 +200,7 @@ Now that you have an S3 bucket to save your website in, you can create the first
    <h1>Routing Internet Traffic to an Amazon S3 Bucket for Your Website</h1>
    
    <p>For more information, see 
-   <a href="http://docs.aws.amazon.com/Route53/latest/DeveloperGuide/getting-started.html">Getting Started with Amazon Route 53</a> 
+   <a href="https://docs.aws.amazon.com/Route53/latest/DeveloperGuide/getting-started.html">Getting Started with Amazon Route 53</a> 
    in the <emphasis>Amazon Route 53 Developer Guide</emphasis>.</p>
    
    </body>
@@ -231,7 +220,7 @@ Now that you have an S3 bucket to save your website in, you can create the first
 
 ## Step 5: Route DNS Traffic for Your Domain to Your Website Bucket<a name="getting-started-create-alias"></a>
 
-You now have a one\-page website in your S3 bucket\. To start routing internet traffic for your domain to your S3 bucket, perform the following procedure\. 
+You now have a one\-page website in your S3 bucket\. To start routing internet traffic for your domain to your S3 bucket, perform the following procedure\. <a name="getting-started-create-alias-procedure"></a>
 
 **To route traffic to your website**
 
@@ -256,7 +245,7 @@ Choose **A – IPv4 address**\.
 **Alias**  
 Choose **Yes**\.  
 **Alias Target**  
-Enter the name of the region that you created your S3 bucket in\. Use the applicable value from the **Website Endpoint** column in the [Amazon Simple Storage Service Website Endpoints](http://docs.aws.amazon.com/general/latest/gr/rande.html#s3_website_region_endpoints) table in the [AWS Regions and Endpoints](http://docs.aws.amazon.com/general/latest/gr/rande.html) chapter of the *Amazon Web Services General Reference*\.  
+Enter the name of the region that you created your S3 bucket in\. Use the applicable value from the **Website Endpoint** column in the [Amazon Simple Storage Service Website Endpoints](https://docs.aws.amazon.com/general/latest/gr/rande.html#s3_website_region_endpoints) table in the [AWS Regions and Endpoints](https://docs.aws.amazon.com/general/latest/gr/rande.html) chapter of the *Amazon Web Services General Reference*\.  
 You specify the same value for **Alias Target** for both records\. Route 53 figures out which bucket to route traffic to based on the name of the record\.  
 **Routing Policy**  
 Accept the default value of **Simple**\.  
@@ -270,9 +259,7 @@ Accept the default value of **No**\.
 ## Step 6: Test Your Website<a name="getting-started-test"></a>
 
 To verify that the website is working correctly, open a web browser and browse to the following URLs:
-
 + http://*your\-domain\-name* – Displays the index document in the *your\-domain\-name* bucket
-
 + http://www\.*your\-domain\-name* – Redirects your request to the *your\-domain\-name* bucket
 
 In some cases, you might need to clear the cache to see the expected behavior\.
@@ -282,9 +269,7 @@ For more advanced information about routing your internet traffic, see [Configur
 ## Step 7 \(Optional\): Use Amazon CloudFront to Speed Up Distribution of Your Content<a name="getting-started-cloudfront"></a>
 
 CloudFront is a web service that speeds up distribution of your static and dynamic web content, such as \.html, \.css, \.js, and image files, to your users\. CloudFront delivers your content through a worldwide network of data centers called edge locations\. When a user requests content that you're serving with CloudFront, the user is routed to the edge location that provides the lowest latency \(time delay\), so that content is delivered with the best possible performance\.
-
 + If the content is already in the edge location with the lowest latency, CloudFront delivers it immediately\.
-
 + If the content is not in that edge location, CloudFront retrieves it from an Amazon S3 bucket or an HTTP server \(for example, a web server\) that you have identified as the source for the definitive version of your content\.
 
-For information about using CloudFront to distribute the content in your Amazon S3 bucket, see [Adding CloudFront When You're Distributing Content from Amazon S3](http://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/MigrateS3ToCloudFront.html#adding-cloudfront-to-s3) in the *Amazon CloudFront Developer Guide*\. 
+For information about using CloudFront to distribute the content in your Amazon S3 bucket, see [Adding CloudFront When You're Distributing Content from Amazon S3](https://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/MigrateS3ToCloudFront.html#adding-cloudfront-to-s3) in the *Amazon CloudFront Developer Guide*\. 

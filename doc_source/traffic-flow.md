@@ -16,6 +16,6 @@ Here's an overview of how traffic flow works:
 
 1. When a user browses to www\.example\.com, Route 53 responds to the query based on the configuration in the traffic policy that you used to create the policy record\.
 
-
+**Topics**
 + [Creating and Managing Traffic Policies](traffic-policies.md)
 + [Creating and Managing Policy Records](traffic-policy-records.md)

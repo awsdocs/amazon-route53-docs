@@ -5,7 +5,7 @@ This topic provides examples of identity\-based policies that demonstrate how an
 **Important**  
 We recommend that you first review the introductory topics that explain the basic concepts and options to manage access to your Route 53 resources\. For more information, see [Overview of Managing Access Permissions to Your Amazon Route 53 Resources](access-control-overview.md)\. 
 
-
+**Topics**
 + [Permissions Required to Use the Amazon Route 53 Console](#console-required-permissions)
 + [AWS Managed \(Predefined\) Policies for Route 53](#access-policy-examples-aws-managed)
 + [Customer Managed Policy Examples](#access-policy-examples-for-sdk-cli)
@@ -53,9 +53,7 @@ The following example shows a permissions policy\. The `Sid`, or statement ID, i
 ```
 
 The policy includes two statements:
-
 + The first statement grants permissions to the actions that are required to create and manage public hosted zones and their records\. The wildcard character \(\*\) in the Amazon Resource Name \(ARN\) grants access to all the hosted zones that are owned by the current AWS account\. 
-
 + The second statement grants permissions to all the actions that are required to create and manage health checks\.
 
 For a list of actions and the ARN that you specify to grant or deny permission to use each action, see [Amazon Route 53 API Permissions: Actions, Resources, and Conditions Reference](r53-api-permissions-ref.md)\.
@@ -90,6 +88,11 @@ To grant full access to the Amazon Route 53 console, you grant the permissions 
             "cloudwatch:GetMetricStatistics"
          ],
          "Resource":"*"
+      },
+      {
+         "Effect": "Allow",
+         "Action": "apigateway:GET",
+         "Resource": "arn:aws:apigateway:*::/domainnames"
       }
    ]
 }
@@ -99,15 +102,10 @@ Here's why the permissions are required:
 
 **`route53:*`**  
 Lets you perform all Route 53 actions *except* the following:  
-
 + Create and update alias records for which the value of **Alias Target** is a CloudFront distribution, an Elastic Load Balancing load balancer, an Elastic Beanstalk environment, or an Amazon S3 bucket\. \(With these permissions, you can create alias records for which the value of **Alias Target** is another record in the same hosted zone\.\)
-
 + Work with private hosted zones\.
-
 + Work with domains\.
-
 + Create, delete, and view CloudWatch alarms\.
-
 + Render CloudWatch metrics in the Route 53 console\.
 
 **`route53domains:*`**  
@@ -141,23 +139,17 @@ Let you create, delete, and view CloudWatch alarms\.
 Lets you create CloudWatch metric health checks\.  
 These permissions aren't required if you aren't using the Route 53 console\. Route 53 uses it only to get statistics to display in the console\. 
 
+**`apigateway:GET`**  
+Lets you create and update alias records for which the value of **Alias Target** is an Amazon API Gateway API\.  
+This permission isn't required if you aren't using the Route 53 console\. Route 53 uses it only to get a list of APIs to display in the console\.
+
 ## AWS Managed \(Predefined\) Policies for Route 53<a name="access-policy-examples-aws-managed"></a>
 
-AWS addresses many common use cases by providing standalone IAM policies that are created and administered by AWS\. These AWS managed policies grant necessary permissions for common use cases so that you can avoid having to investigate what permissions are needed\. For more information, see [AWS Managed Policies](http://docs.aws.amazon.com/IAM/latest/UserGuide/access_policies_managed-vs-inline.html#aws-managed-policies) in the *IAM User Guide*\. For Route 53, IAM provides the following managed policies: 
-
+AWS addresses many common use cases by providing standalone IAM policies that are created and administered by AWS\. These AWS managed policies grant necessary permissions for common use cases so that you can avoid having to investigate what permissions are needed\. For more information, see [AWS Managed Policies](https://docs.aws.amazon.com/IAM/latest/UserGuide/access_policies_managed-vs-inline.html#aws-managed-policies) in the *IAM User Guide*\. For Route 53, IAM provides the following managed policies: 
 + **AmazonRoute53FullAccess** – Grants full access to Route 53 resources
-
 + **AmazonRoute53ReadOnlyAccess** – Grants read\-only access to Route 53 resources
-
 + **AmazonRoute53DomainsFullAccess** – Grants full access to Route 53 domain registration resources
-
 + **AmazonRoute53DomainsReadOnlyAccess** – Grants read\-only access to Route 53 domain registration resources
-
-+ **AmazonRoute53AutoNamingFullAccess** – Grants full access to Route 53 auto naming for service discovery resources
-
-+ **AmazonRoute53AutoNamingReadOnlyAccess** – Grants read\-only access to Route 53 auto naming for service discovery resources
-
-+ **AmazonRoute53AutoNamingRegistrantAccess** – Grants read\-only access to namespaces and services, and grants permission to register and deregister service instances
 
 **Note**  
 You can review these permissions policies by signing in to the IAM console and searching for specific policies there\. You can also create your own custom IAM policies to allow permissions for Route 53 API operations\. You can attach these custom policies to the IAM users or groups that require those permissions\.
@@ -166,7 +158,7 @@ You can review these permissions policies by signing in to the IAM console and s
 
 You can create your own custom IAM policies to allow permissions for Route 53 actions\. You can attach these custom policies to the IAM users or groups that require the specified permissions\. These policies work when you are using the Route 53 API, the AWS SDKs, or the AWS CLI\. The following examples show permissions for several common use cases\. For the policy that grants a user full access to Route 53, see [Permissions Required to Use the Amazon Route 53 Console](#console-required-permissions)\.
 
-
+**Topics**
 + [Example 1: Allow Read Access to All Hosted Zones](#access-policy-example-allow-read-hosted-zones)
 + [Example 2: Allow Creation and Deletion of Hosted Zones](#access-policy-example-allow-create-delete-hosted-zones)
 + [Example 3: Allow Full Access to All Domains \(Public Hosted Zones Only\)](#access-policy-example-allow-full-domain-access)

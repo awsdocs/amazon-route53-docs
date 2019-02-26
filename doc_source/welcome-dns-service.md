@@ -1,14 +1,12 @@
 # How Internet Traffic Is Routed to Your Website or Web Application<a name="welcome-dns-service"></a>
 
 All computers on the internet, from your smart phone or laptop to the servers that serve content for massive retail websites, communicate with one another by using numbers\. These numbers, known as *IP addresses*, are in one of the following formats:
-
 + Internet Protocol version 4 \(IPv4\) format, such as 192\.0\.2\.44
-
 + Internet Protocol version 6 \(IPv6\) format, such as 2001:0db8:85a3:0000:0000:abcd:0001:2345
 
 When you open a browser and go to a website, you don't have to remember and enter a long number like that\. Instead, you can enter a domain name like example\.com and still end up in the right place\. A DNS service such as Amazon Route 53 helps to make that connection between domain names and IP addresses\.
 
-
+**Topics**
 + [Overview of How You Configure Amazon Route 53 to Route Internet Traffic for Your Domain](#welcome-dns-service-how-to-configure)
 + [How Amazon Route 53 Routes Traffic for Your Domain](#welcome-dns-service-how-route-53-routes-traffic)
 

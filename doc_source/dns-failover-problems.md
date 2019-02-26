@@ -2,7 +2,7 @@
 
 The failover algorithms implemented by Route 53 are designed not only to route traffic to endpoints that are healthy, but also to avoid making disaster scenarios worse due to misconfigured health checks and applications, endpoint overloads, and partition failures\.
 
-
+**Topics**
 + [How Amazon Route 53 Averts Cascading Failures](#dns-failover-cascading-failures)
 + [How Amazon Route 53 Handles Internet Partitions](#dns-failover-internet-partitions)
 

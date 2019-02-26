@@ -1,15 +1,12 @@
 # Monitoring the Latency Between Health Checkers and Your Endpoint<a name="monitoring-health-check-latency"></a>
 
 When you create a health check, if you choose to monitor the status of an endpoint \(not the status of other health checks\) and you choose the **Latency graphs** option, you can view the following values on CloudWatch graphs on the Route 53 console:
-
 + The average time, in milliseconds, that it took Route 53 health checkers to establish a TCP connection with the endpoint
-
 + The average time, in milliseconds, that it took Route 53 health checkers to receive the first byte of the response to an HTTP or HTTPS request
-
 + The average time, in milliseconds, that it took Route 53 health checkers to complete the SSL/TLS handshake
 
 **Note**  
-You can't enable latency monitoring for existing health checks\.
+You can't enable latency monitoring for existing health checks\.<a name="monitoring-latency-procedure"></a>
 
 **To view the latency between Route 53 health checkers and your endpoint \(console\)**
 
@@ -42,9 +39,6 @@ Displays the status of a health check over a different period, for example, over
 Changes the interval between data points in the graph\.
 
    Note the following:
-
    + If you just created a health check, you might need to wait for a few minutes for data to appear in the graph and for the health check metric to appear in the list of available metrics\.
-
    + The graph doesn't refresh itself automatically\. To update the display, choose the refresh \(![\[Icon to refresh the CloudWatch graph\]](http://docs.aws.amazon.com/Route53/latest/DeveloperGuide/images/cloudwatch-refresh-icon.png)\) icon\.
-
    + If health checks are failing for some reason, such as a connection timeout, Route 53 can't measure latency, and latency data will be missing from the graph for the affected period\.

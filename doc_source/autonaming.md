@@ -1,3 +1,3 @@
-# Using Auto Naming to Create Records and Health Checks<a name="autonaming"></a>
+# Using AWS Cloud Map to Create Records and Health Checks<a name="autonaming"></a>
 
-If you want to route internet traffic or traffic within an Amazon VPC to application components or microservices, you can use Amazon Route 53 auto naming \(also known as service discovery\) to create records and, optionally, health checks for you automatically\. For more information, see [Using Auto Naming for Service Discovery](http://docs.aws.amazon.com/Route53/latest/APIReference/overview-service-discovery.html) in the *Amazon Route 53 API Reference*\.
+If you want to route internet traffic or traffic within an Amazon VPC to application components or microservices, you can use AWS Cloud Map to create records and, optionally, create health checks for you automatically\. For more information, see the [AWS Cloud Map Developer Guide](https://docs.aws.amazon.com/cloud-map/latest/dg/)\.

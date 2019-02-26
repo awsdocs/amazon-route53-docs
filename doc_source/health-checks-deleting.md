@@ -1,6 +1,6 @@
 # Deleting Health Checks<a name="health-checks-deleting"></a>
 
-To delete health checks, perform the following procedure\.
+To delete health checks, perform the following procedure\.<a name="health-checks-deleting-console-proc"></a>
 
 **To delete a health check \(console\)**
 

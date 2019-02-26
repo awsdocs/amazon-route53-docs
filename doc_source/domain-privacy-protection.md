@@ -9,27 +9,21 @@ The information that you can hide from WHOIS queries depends on two main factors
 **The registry for the top level domain**  
 Most TLD registries hide all contact information automatically, some allow you to choose to hide all contact information, some allow you to hide only some information, and some do not allow you to hide any information\.  
 To enable or disable privacy protection for some domains, you must open a support case and request privacy protection\. For more information, see the applicable section in [Domains That You Can Register with Amazon Route 53](registrar-tld-list.md):  
-
-+ [\.co\.uk \(United Kingdom\)](http://docs.aws.amazon.com/Route53/latest/DeveloperGuide/registrar-tld-list.html#registrar-tld-list#co.uk)
-
-+ [\.me\.uk \(United Kingdom\)](http://docs.aws.amazon.com/Route53/latest/DeveloperGuide/registrar-tld-list.html#registrar-tld-list#me.uk)
-
-+ [\.org\.uk \(United Kingdom\)](http://docs.aws.amazon.com/Route53/latest/DeveloperGuide/registrar-tld-list.html#registrar-tld-list#org.uk)
-
-+ [\.link](http://docs.aws.amazon.com/Route53/latest/DeveloperGuide/registrar-tld-list.html#registrar-tld-list#link)
++ [\.co\.uk \(United Kingdom\)](https://docs.aws.amazon.com/Route53/latest/DeveloperGuide/registrar-tld-list.html#registrar-tld-list#co.uk)
++ [\.me\.uk \(United Kingdom\)](https://docs.aws.amazon.com/Route53/latest/DeveloperGuide/registrar-tld-list.html#registrar-tld-list#me.uk)
++ [\.org\.uk \(United Kingdom\)](https://docs.aws.amazon.com/Route53/latest/DeveloperGuide/registrar-tld-list.html#registrar-tld-list#org.uk)
++ [\.link](https://docs.aws.amazon.com/Route53/latest/DeveloperGuide/registrar-tld-list.html#registrar-tld-list#link)
 
 **The registrar**  
 When you register a domain with Route 53 or transfer a domain to Route 53, the registrar for the domain is either Amazon Registrar or our registrar associate, Gandi\. Amazon Registrar and Gandi hide different information by default:  
-
 + **Amazon Registrar** – By default, all of your contact information is hidden\. 
-
 + **Gandi** – By default, all of your contact information is hidden except organization name, if any\. However, regulations for the TLD registry take precedence\. 
 
-  For [geographic TLDs](http://docs.aws.amazon.com/Route53/latest/DeveloperGuide/registrar-tld-list.html#registrar-tld-list-geographic) that don't allow privacy protection, your personal information will be marked as "redacted" on the [Whois Directory Search](https://v4.gandi.net/whois) page on the Gandi website\. However, your personal information might be available at the domain registry or on third\-party WHOIS websites\. 
+  For [geographic TLDs](https://docs.aws.amazon.com/Route53/latest/DeveloperGuide/registrar-tld-list.html#registrar-tld-list-geographic) that don't allow privacy protection, your personal information will be marked as "redacted" on the [Whois Directory Search](https://v4.gandi.net/whois) page on the Gandi website\. However, your personal information might be available at the domain registry or on third\-party WHOIS websites\. 
 
 To find out what information is hidden for the TLD for your domain, see [Domains That You Can Register with Amazon Route 53](registrar-tld-list.md)\.
 
-When you want to enable or disable privacy protection for a domain that you registered using Route 53, perform the following procedure\.
+When you want to enable or disable privacy protection for a domain that you registered using Route 53, perform the following procedure\.<a name="domain-privacy-protection-procedure"></a>
 
 **To enable or disable privacy protection for contact information for a domain**
 
@@ -44,3 +38,5 @@ When you want to enable or disable privacy protection for a domain that you regi
 1. For each type of contact, choose whether to hide contact information\. 
 
 1. Choose **Save**\.
+
+1. If you encounter issues while enabling or disabling privacy protection, you can contact customer support for free\. For more information, see [Contacting Customer Support About Domain Registration Issues](domain-contact-support.md)\.

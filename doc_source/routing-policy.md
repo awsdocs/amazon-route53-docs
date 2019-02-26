@@ -1,22 +1,15 @@
 # Choosing a Routing Policy<a name="routing-policy"></a>
 
 When you create a record, you choose a routing policy, which determines how Amazon Route 53 responds to queries: 
-
 + **Simple routing policy** – Use for a single resource that performs a given function for your domain, for example, a web server that serves content for the example\.com website\.
-
 + **Failover routing policy** – Use when you want to configure active\-passive failover\. 
-
 + **Geolocation routing policy** – Use when you want to route traffic based on the location of your users\.
-
 + **Geoproximity routing policy** – Use when you want to route traffic based on the location of your resources and, optionally, shift traffic from resources in one location to resources in another\.
-
 + **Latency routing policy** – Use when you have resources in multiple AWS Regions and you want to route traffic to the region that provides the best latency\.
-
 + **Multivalue answer routing policy** – Use when you want Route 53 to respond to DNS queries with up to eight healthy records selected at random\.
-
 + **Weighted routing policy** – Use to route traffic to multiple resources in proportions that you specify\.
 
-
+**Topics**
 + [Simple Routing](#routing-policy-simple)
 + [Failover Routing](#routing-policy-failover)
 + [Geolocation Routing](#routing-policy-geo)
@@ -24,7 +17,7 @@ When you create a record, you choose a routing policy, which determines how Amaz
 + [Latency\-based Routing](#routing-policy-latency)
 + [Multivalue Answer Routing](#routing-policy-multivalue)
 + [Weighted Routing](#routing-policy-weighted)
-+ [How Amazon Route 53 Estimates the Location of a User \(Geolocation and Geoproximity Routing\)](#routing-policy-edns0)
++ [How Amazon Route 53 Uses EDNS0 to Estimate the Location of a User](#routing-policy-edns0)
 
 ## Simple Routing<a name="routing-policy-simple"></a>
 
@@ -33,9 +26,7 @@ Simple routing lets you configure standard DNS records, with no special Route 5
 If you choose the simple routing policy in the Route 53 console, you can't create multiple records that have the same name and type, but you can specify multiple values in the same record, such as multiple IP addresses\. \(If you choose the simple routing policy for an alias record, you can specify only one AWS resource or one record in the current hosted zone\.\) If you specify multiple values in a record, Route 53 returns all values to the recursive resolver in random order, and the resolver returns the values to the client \(such as a web browser\) that submitted the DNS query\. The client then chooses a value and resubmits the query\.
 
 For information about values that you specify when you use the simple routing policy to create records, see the following topics:
-
 + [Values for Basic Records](resource-record-sets-values-basic.md)
-
 + [Values for Alias Records](resource-record-sets-values-alias.md)
 
 ## Failover Routing<a name="routing-policy-failover"></a>
@@ -43,9 +34,7 @@ For information about values that you specify when you use the simple routing po
 Failover routing lets you route traffic to a resource when the resource is healthy or to a different resource when the first resource is unhealthy\. The primary and secondary records can route traffic to anything from an Amazon S3 bucket that is configured as a website to a complex tree of records\. For more information, see [Active\-Passive Failover](dns-failover-types.md#dns-failover-types-active-passive)\.
 
 For information about values that you specify when you use the failover routing policy to create records, see the following topics:
-
 + [Values for Failover Records](resource-record-sets-values-failover.md)
-
 + [Values for Failover Alias Records](resource-record-sets-values-failover-alias.md)
 
 ## Geolocation Routing<a name="routing-policy-geo"></a>
@@ -58,49 +47,44 @@ You can specify geographic locations by continent, by country, or by state in th
 
 Geolocation works by mapping IP addresses to locations\. However, some IP addresses aren't mapped to geographic locations, so even if you create geolocation records that cover all seven continents, Amazon Route 53 will receive some DNS queries from locations that it can't identify\. You can create a default record that handles both queries from IP addresses that aren't mapped to any location and queries that come from locations that you haven't created geolocation records for\. If you don't create a default record, Route 53 returns a "no answer" response for queries from those locations\.
 
-For more information, see [How Amazon Route 53 Estimates the Location of a User \(Geolocation and Geoproximity Routing\)](#routing-policy-edns0)\.
+For more information, see [How Amazon Route 53 Uses EDNS0 to Estimate the Location of a User](#routing-policy-edns0)\.
 
 For information about values that you specify when you use the geolocation routing policy to create records, see the following topics:
-
 + [Values for Geolocation Records](resource-record-sets-values-geo.md)
-
 + [Values for Geolocation Alias Records](resource-record-sets-values-geo-alias.md)
 
 ## Geoproximity Routing \(Traffic Flow Only\)<a name="routing-policy-geoproximity"></a>
 
-Geoproximity routing lets Amazon Route 53 route traffic to your resources based on the geographic location of your users and your resources\. You can also optionally choose to route more traffic or less to a given resource by specifying a value, known as a *bias*, that expands or shrinks the size of the geographic region from which traffic is routed to a resource\.
+Geoproximity routing lets Amazon Route 53 route traffic to your resources based on the geographic location of your users and your resources\. You can also optionally choose to route more traffic or less to a given resource by specifying a value, known as a *bias*\. A bias expands or shrinks the size of the geographic region from which traffic is routed to a resource\.
 
-To use geoproximity routing, you must use Route 53 [traffic flow](http://docs.aws.amazon.com/Route53/latest/DeveloperGuide/traffic-flow.html)\. You create geoproximity rules for your resources and specify one of the following values for each rule:
-
+To use geoproximity routing, you must use Route 53 [traffic flow](https://docs.aws.amazon.com/Route53/latest/DeveloperGuide/traffic-flow.html)\. You create geoproximity rules for your resources and specify one of the following values for each rule:
 + If you're using AWS resources, the AWS Region that you created the resource in
-
 + If you're using non\-AWS resources, the latitude and longitude of the resource
 
 To optionally change the size of the geographic region from which Route 53 routes traffic to a resource, specify the applicable value for the bias:
-
 + To expand the size of the geographic region from which Route 53 routes traffic to a resource, specify a positive integer from 1 to 99 for the bias\. Route 53 shrinks the size of adjacent regions\. 
-
 + To shrink the size of the geographic region from which Route 53 routes traffic to a resource, specify a negative bias of \-1 to \-99\. Route 53 expands the size of adjacent regions\. 
 
-In the following illustration, suppose you increase the bias for the record for the endpoint in Boston and decrease the bias for the record for the endpoint in Washington, D\.C\. \(You can change one value or both\.\)
+The following map shows four AWS Regions \(numbered 1 through 4\) and a location in Johannesburg, South Africa that is specified by latitude and longitude \(5\)\.
 
-+ Increasing the bias for the endpoint in Boston has the effect of increasing the geographic area that the endpoint serves\. A user in Philadelphia who was originally routed to an endpoint in Washington, D\.C\. is now routed to the endpoint in Boston\.
+![\[A map of the world that shows how traffic is routed when you have geoproximity records for resources in the AWS Regions in US West (Oregon), US East (Northern Virginia), EU West (Paris), and Asia Pacific (Tokyo), and you have a record for a non-AWS resource in Johannesburg, South Africa.\]](http://docs.aws.amazon.com/Route53/latest/DeveloperGuide/images/traffic-flow-geoproximity-map-example-no-bias.png)
 
-+ Decreasing the bias for the endpoint in Washington, D\.C\. has the effect of decreasing the geographic area that the endpoint serves\.
+The following map shows what happens if you add a bias of \+25 for the US East \(Northern Virginia\) Region \(number **2** on the map\)\. Traffic is routed to the resource in that Region from a larger portion of North America than previously, and from all of South America\.
 
-![\[Adding a bias, either positive or negative, can shift a user from one endpoint to another.\]](http://docs.aws.amazon.com/Route53/latest/DeveloperGuide/images/geoproximity-routing-bias.png)
+![\[A map of the world that shows how traffic is routed when you add a bias of +25 in the US East (Northern Virginia) Region.\]](http://docs.aws.amazon.com/Route53/latest/DeveloperGuide/images/traffic-flow-geoproximity-map-example-bias-plus-25.png)
+
+The following map shows what happens if you change the bias to \-25 for the US East \(Northern Virginia\) Region\. Traffic is routed to the resource in that Region from smaller portions of North and South America than previously, and more traffic is routed to resources in the adjacent regions **1**, **3**, and **5**\. 
+
+![\[A map of the world that shows how traffic is routed when you add a bias of -25 in the US East (Northern Virginia) Region.\]](http://docs.aws.amazon.com/Route53/latest/DeveloperGuide/images/traffic-flow-geoproximity-map-example-bias-minus-25.png)
 
 The effect of changing the bias for your resources depends on a number of factors, including the following:
-
 + The number of resources that you have\.
-
 + How close the resources are to one another\.
-
-+ The number of users that you have near the border area between geographic regions\. For example, if you have resources in Boston and Washington, D\.C\. and you have a lot of users in New York City, which is roughly equidistant between your resources, a small change in bias could result in a large swing in traffic from resources in Boston to resources in D\.C\. or vice versa\.
++ The number of users that you have near the border area between geographic regions\. For example, suppose you have resources in the AWS Regions US East \(Northern Virginia\) and US West \(Oregon\) and you have a lot of users in Dallas, Austin, and San Antonio, Texas, USA\. Those cities are roughly equidistant between your resources, so a small change in bias could result in a large swing in traffic from resources in one AWS Region to the other\.
 
 We recommend that you change the bias in small increments to prevent overwhelming your resources due to an unanticipated swing in traffic\.
 
-For more information, see [How Amazon Route 53 Estimates the Location of a User \(Geolocation and Geoproximity Routing\)](#routing-policy-edns0)\.
+For more information, see [How Amazon Route 53 Uses EDNS0 to Estimate the Location of a User](#routing-policy-edns0)\.
 
 ### How Amazon Route 53 Uses Bias to Route Traffic<a name="routing-policy-geoproximity-bias"></a>
 
@@ -113,9 +97,7 @@ Here's the formula that Amazon Route 53 uses to determine how to route traffic:
 `Biased distance = actual distance / [1 + (bias/100)]`
 
 When the value of the bias is positive, Route 53 treats the source of a DNS query and the resource that you specify in a geoproximity record \(such as an EC2 instance in an AWS Region\) as if they were closer together than they really are\. For example, suppose you have the following geoproximity records:
-
 + A record for web server A, which has a positive bias of 50
-
 + A record for web server B, which has no bias
 
 When a geoproximity record has a positive bias of 50, Route 53 halves the distance between the source of a query and the resource for that record\. Then Route 53 calculates which resource is closer to the source of the query\. Suppose web server A is 150 kilometers from the source of a query and web server B is 100 kilometers from the source of the query\. If neither record had a bias, Route 53 would route the query to web server B because it's closer\. However, because the record for web server A has a positive bias of 50, Route 53 treats web server A as if it's 75 kilometers from the source of the query\. As a result, Route 53 routes the query to web server A\. 
@@ -136,7 +118,7 @@ Biased distance = 75 kilometers
 
 If your application is hosted in multiple AWS Regions, you can improve performance for your users by serving their requests from the AWS Region that provides the lowest latency\. 
 
-To use latency\-based routing, you create latency records for your resources in multiple AWS Regions\. When Route 53 receives a DNS query for your domain or subdomain \(example\.com or apex\.example\.com\), it determines which AWS Regions you've created latency records for, determines which region gives the user the lowest latency, and then selects a latency record for that region\. Route 53 responds with the value from the selected record, such as the IP address for a web server\. 
+To use latency\-based routing, you create latency records for your resources in multiple AWS Regions\. When Route 53 receives a DNS query for your domain or subdomain \(example\.com or acme\.example\.com\), it determines which AWS Regions you've created latency records for, determines which region gives the user the lowest latency, and then selects a latency record for that region\. Route 53 responds with the value from the selected record, such as the IP address for a web server\. 
 
 For example, suppose you have ELB load balancers in the US West \(Oregon\) Region and in the Asia Pacific \(Singapore\) Region\. You created a latency record for each load balancer\. Here's what happens when a user in London enters the name of your domain in a browser:
 
@@ -149,12 +131,10 @@ For example, suppose you have ELB load balancers in the US West \(Oregon\) Regio
 Latency between hosts on the internet can change over time as a result of changes in network connectivity and routing\. Latency\-based routing is based on latency measurements performed over a period of time, and the measurements reflect these changes\. A request that is routed to the Oregon region this week might be routed to the Singapore region next week\.
 
 **Note**  
-When a browser or other viewer uses a DNS resolver that supports the edns\-client\-subnet extension of EDNS0, the DNS resolver sends Route 53 a truncated version of the user's IP address\. If you configure latency\-based routing, Route 53 considers this value when routing traffic to your resources\.
+When a browser or other viewer uses a DNS resolver that supports the edns\-client\-subnet extension of EDNS0, the DNS resolver sends Route 53 a truncated version of the user's IP address\. If you configure latency\-based routing, Route 53 considers this value when routing traffic to your resources\. For more information, see [How Amazon Route 53 Uses EDNS0 to Estimate the Location of a User](#routing-policy-edns0)\.
 
 For information about values that you specify when you use the latency routing policy to create records, see the following topics:
-
 + [Values for Latency Records](resource-record-sets-values-latency.md)
-
 + [Values for Latency Alias Records](resource-record-sets-values-latency-alias.md)
 
 ## Multivalue Answer Routing<a name="routing-policy-multivalue"></a>
@@ -164,13 +144,9 @@ Multivalue answer routing lets you configure Amazon Route 53 to return multiple
 To route traffic approximately randomly to multiple resources, such as web servers, you create one multivalue answer record for each resource and, optionally, associate a Route 53 health check with each record\. Route 53 responds to DNS queries with up to eight healthy records and gives different answers to different DNS resolvers\. If a web server becomes unavailable after a resolver caches a response, client software can try another IP address in the response\.
 
 Note the following:
-
 + If you associate a health check with a multivalue answer record, Route 53 responds to DNS queries with the corresponding IP address only when the health check is healthy\.
-
 + If you don't associate a health check with a multivalue answer record, Route 53 always considers the record to be healthy\.
-
 + If you have eight or fewer healthy records, Route 53 responds to all DNS queries with all the healthy records\.
-
 + When all records are unhealthy, Route 53 responds to DNS queries with up to eight unhealthy records\.
 
 For information about values that you specify when you use the multivalue answer routing policy to create records, see [Values for Multivalue Answer Records](resource-record-sets-values-multivalue.md)\.
@@ -186,17 +162,13 @@ To configure weighted routing, you create records that have the same name and ty
 For example, if you want to send a tiny portion of your traffic to one resource and the rest to another resource, you might specify weights of 1 and 255\. The resource with a weight of 1 gets 1/256th of the traffic \(1/1\+255\), and the other resource gets 255/256ths \(255/1\+255\)\. You can gradually change the balance by changing the weights\. If you want to stop sending traffic to a resource, you can change the weight for that record to 0\.
 
 For information about values that you specify when you use the weighted routing policy to create records, see the following topics:
-
 + [Values for Weighted Records](resource-record-sets-values-weighted.md)
-
 + [Values for Weighted Alias Records](resource-record-sets-values-weighted-alias.md)
 
-## How Amazon Route 53 Estimates the Location of a User \(Geolocation and Geoproximity Routing\)<a name="routing-policy-edns0"></a>
+## How Amazon Route 53 Uses EDNS0 to Estimate the Location of a User<a name="routing-policy-edns0"></a>
 
-To improve the accuracy of geolocation and geoproximity routing, Amazon Route 53 supports the edns\-client\-subnet extension of EDNS0\. \(EDNS0 adds several optional extensions to the DNS protocol\.\) Route 53 can use edns\-client\-subnet only when DNS resolvers support it:
-
+To improve the accuracy of geolocation, geoproximity, and latency routing, Amazon Route 53 supports the edns\-client\-subnet extension of EDNS0\. \(EDNS0 adds several optional extensions to the DNS protocol\.\) Route 53 can use edns\-client\-subnet only when DNS resolvers support it:
 + When a browser or other viewer uses a DNS resolver that does not support edns\-client\-subnet, Route 53 uses the source IP address of the DNS resolver to approximate the location of the user and responds to geolocation queries with the DNS record for the resolver's location\.
-
 + When a browser or other viewer uses a DNS resolver that does support edns\-client\-subnet, the DNS resolver sends Route 53 a truncated version of the user's IP address\. Route 53 determines the location of the user based on the truncated IP address rather than the source IP address of the DNS resolver; this typically provides a more accurate estimate of the user's location\. Route 53 then responds to geolocation queries with the DNS record for the user's location\.
 
 For more information about edns\-client\-subnet, see the IETF draft [Client Subnet in DNS Requests](https://tools.ietf.org/html/draft-ietf-dnsop-edns-client-subnet-08)\.

@@ -2,7 +2,7 @@
 
 If you registered a domain using one AWS account and you want to transfer the domain to another AWS account, you can do so by contacting the AWS Support Center and requesting the transfer\.
 
-
+**Topics**
 + [Step 1: Transferring a Domain to a Different AWS Account](#domain-transfer-between-aws-accounts-domain)
 + [Step 2: Migrating a Hosted Zone to a Different AWS Account](#domain-transfer-between-aws-accounts-hosted-zone)
 
@@ -11,7 +11,7 @@ If you registered a domain using one AWS account and you want to transfer the do
 To transfer registration for a domain from one AWS account to another, perform the following procedure\.
 
 **Important**  
-When someone in AWS Support transfers a domain to a different AWS account for you, they aren't able to transfer the hosted zone for the domain\. If you also want to transfer the hosted zone, wait until the domain has been transferred, and then see [Step 2: Migrating a Hosted Zone to a Different AWS Account](#domain-transfer-between-aws-accounts-hosted-zone)\. 
+When someone in AWS Support transfers a domain to a different AWS account for you, they aren't able to transfer the hosted zone for the domain\. If you also want to transfer the hosted zone, wait until the domain has been transferred, and then see [Step 2: Migrating a Hosted Zone to a Different AWS Account](#domain-transfer-between-aws-accounts-hosted-zone)\. <a name="domain-transfer-between-aws-accounts-procedure"></a>
 
 **To transfer a domain to a different AWS account**
 
@@ -35,12 +35,9 @@ Accept the default value of **Domain name registration issue**\.
 Specify **Transfer a domain to another AWS account**\.  
 **Description**  
 Provide the following information:  
-
    + Domain that you want to transfer
-
-   + [12\-digit account ID](http://docs.aws.amazon.com/general/latest/gr/acct-identifiers.html#FindingYourAccountIdentifiers) of the AWS account that the domain is currently registered to
-
-   + [12\-digit account ID](http://docs.aws.amazon.com/general/latest/gr/acct-identifiers.html#FindingYourAccountIdentifiers) of the AWS account that you want to transfer domain registration to  
+   + [12\-digit account ID](https://docs.aws.amazon.com/general/latest/gr/acct-identifiers.html#FindingYourAccountIdentifiers) of the AWS account that the domain is currently registered to
+   + [12\-digit account ID](https://docs.aws.amazon.com/general/latest/gr/acct-identifiers.html#FindingYourAccountIdentifiers) of the AWS account that you want to transfer domain registration to  
 **Contact method**  
 Choose a contact method, **Web** or **Phone**\. If you choose **Web**, we'll contact you using the email address that's associated with your AWS account\. If you choose **Phone**, enter the applicable values\.
 

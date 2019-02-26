@@ -1,6 +1,6 @@
 # Listing Public Hosted Zones<a name="ListInfoOnHostedZone"></a>
 
-You can use the Amazon Route 53 console to list all of the hosted zones that you created with the current AWS account\. For information about how to list hosted zones using the Route 53 API, see [ListHostedZones](http://docs.aws.amazon.com/Route53/latest/APIReference/API_ListHostedZones.html) in the *Amazon Route 53 API Reference*\. 
+You can use the Amazon Route 53 console to list all of the hosted zones that you created with the current AWS account\. For information about how to list hosted zones using the Route 53 API, see [ListHostedZones](https://docs.aws.amazon.com/Route53/latest/APIReference/API_ListHostedZones.html) in the *Amazon Route 53 API Reference*\. 
 
 **To list the public hosted zones associated with an AWS account using the Route 53 console**
 

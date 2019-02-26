@@ -5,7 +5,7 @@ If you're using Amazon WorkMail for your business email and you're using Amazon 
 **Note**  
 You can route traffic to an Amazon WorkMail domain only for public hosted zones\.
 
-To route traffic to Amazon WorkMail, perform the following four procedures\.
+To route traffic to Amazon WorkMail, perform the following four procedures\.<a name="routing-to-workmail-dns-procedure"></a>
 
 **To configure Amazon Route 53 as your DNS service and add an Amazon WorkMail organization and email domain**
 
@@ -13,7 +13,7 @@ To route traffic to Amazon WorkMail, perform the following four procedures\.
 
    If Amazon Route 53 is not the DNS service for the email domain that you added to Amazon WorkMail, migrate DNS service for the domain to Route 53\. For more information, see [Making Amazon Route 53 the DNS Service for an Existing DomainMaking Route 53 the DNS Service for an Existing Domain](MigratingDNS.md)\.
 
-1. Add an Amazon WorkMail organization and email domain\. For more information, see [Getting Started for New Users](http://docs.aws.amazon.com/workmail/latest/adminguide/getting_started_new_user.html) in the *Amazon WorkMail Administrator Guide*\.
+1. Add an Amazon WorkMail organization and email domain\. For more information, see [Getting Started for New Users](https://docs.aws.amazon.com/workmail/latest/adminguide/getting_started_new_user.html) in the *Amazon WorkMail Administrator Guide*\.<a name="routing-to-workmail-txt-procedure"></a>
 
 **To create a Route 53 TXT record for Amazon WorkMail**
 
@@ -49,7 +49,7 @@ To route traffic to Amazon WorkMail, perform the following four procedures\.
 
       Don't change any other settings\.
 
-   1. Choose **Create**\.
+   1. Choose **Create**\.<a name="routing-to-workmail-mx-procedure"></a>
 
 **To create a Route 53 MX record for Amazon WorkMail**
 
@@ -65,7 +65,7 @@ To route traffic to Amazon WorkMail, perform the following four procedures\.
 
       Don't change any other settings\.
 
-   1. Choose **Create**\.
+   1. Choose **Create**\.<a name="routing-to-workmail-cname-procedure"></a>
 
 **To create four Route 53 CNAME records for Amazon WorkMail**
 

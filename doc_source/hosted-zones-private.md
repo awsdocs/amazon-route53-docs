@@ -6,7 +6,7 @@ A *private hosted zone* is a container that holds information about how you want
 
 1. You create records in the hosted zone that determine how Route 53 responds to DNS queries for your domain and subdomains within and among your VPCs\. For example, suppose you have a database server that runs on an EC2 instance in one of the VPCs that you associated with your private hosted zone\. You create an A or AAAA record, such as db\.example\.com, and you specify the IP address of the database server\. 
 
-   For more information about records, see [Working with Records](rrsets-working-with.md)\. For information about the Amazon VPC requirements for using private hosted zones, see [Using Private Hosted Zones](http://docs.aws.amazon.com/AmazonVPC/latest/UserGuide/vpc-dns.html#vpc-private-hosted-zones) in the *Amazon VPC User Guide*\.
+   For more information about records, see [Working with Records](rrsets-working-with.md)\. For information about the Amazon VPC requirements for using private hosted zones, see [Using Private Hosted Zones](https://docs.aws.amazon.com/vpc/latest/userguide/vpc-dns.html#vpc-private-hosted-zones) in the *Amazon VPC User Guide*\.
 
 1. When an application submits a DNS query for db\.example\.com, Route 53 returns the corresponding IP address\. The application must also be running on an EC2 instance in one of the VPCs that you associated with the example\.com private hosted zone\.
 
@@ -14,7 +14,7 @@ A *private hosted zone* is a container that holds information about how you want
 
 If you want to route traffic for your domain on the internet, you use a Route 53 *public* hosted zone\. For more information, see [Working with Public Hosted Zones](AboutHZWorkingWith.md)\.
 
-
+**Topics**
 + [Considerations When Working with a Private Hosted Zone](hosted-zone-private-considerations.md)
 + [Creating a Private Hosted Zone](hosted-zone-private-creating.md)
 + [Listing Private Hosted Zones](hosted-zone-private-listing.md)

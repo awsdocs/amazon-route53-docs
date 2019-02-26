@@ -4,7 +4,7 @@ For the administrative and technical contacts for a domain, you can change all c
 
 For the registrant contact, you can change most values without having to authorize the changes\. However, for some TLDs, changing the owner of a domain or changing the email address of the registrant contact requires authorization\. For more information, see the applicable topic\.
 
-
+**Topics**
 + [Who Is the Owner of a Domain?](#domain-update-contacts-who-is-domain-owner)
 + [Updating Contact Information for a Domain](#domain-update-contacts-basic)
 + [Changing the Owner of a Domain When the Registry Requires a Change of Domain Ownership Form](#domain-update-contacts-domain-owership-form)
@@ -17,14 +17,12 @@ When the contact type is **Person** and you change the **First Name** or **Last 
 When the contact type is any value except **Person** and you change **Organization**, you change the owner of the domain\.
 
 Note the following about changing the owner of a domain:
-
 + For some TLDs, when you change the owner of a domain, we send an authorization email to the email address for the registrant contact\. The registrant contact must follow the instructions in the email to authorize the change\.
-
 + For some TLDs, you need to fill out a Change of Domain Ownership Form and provide proof of identity so that an Amazon Route 53 support engineer can update the values for you\. If the TLD for your domain requires a Change of Domain Ownership form, the console displays a message that links to a form for opening a support case\. For more information, see [Changing the Owner of a Domain When the Registry Requires a Change of Domain Ownership Form](#domain-update-contacts-domain-owership-form)\.
 
 ## Updating Contact Information for a Domain<a name="domain-update-contacts-basic"></a>
 
-To update contact information for a domain, perform the following procedure\. 
+To update contact information for a domain, perform the following procedure\. <a name="domain-update-contacts-procedure"></a>
 
 **To update contact information for a domain**
 
@@ -59,15 +57,23 @@ If you get an authorization email at your new email address and you don't have a
 ****    
 [\[See the AWS documentation website for more details\]](http://docs.aws.amazon.com/Route53/latest/DeveloperGuide/domain-update-contacts.html)
 
+1. If you encounter issues while updating contact information, you can contact customer support for free\. For more information, see [Contacting Customer Support About Domain Registration Issues](domain-contact-support.md)\.
+
 ## Changing the Owner of a Domain When the Registry Requires a Change of Domain Ownership Form<a name="domain-update-contacts-domain-owership-form"></a>
 
-If the Amazon Route 53 console displays the following message when you try to change contact information, the registry for your TLD requires that you fill out a Change of Domain Ownership form:
+When you change the owner of a domain, the registries for the following TLDs require you to fill out a Change of Domain Ownership form:
 
-"To change the registrant name or organization, open a case\."
+\.ac, \.cl, \.com\.ar, \.com\.br, \.com\.sg, \.es, \.fi, \.qa, \.ru, \.se, \.sg, \.sh
 
-Perform the following procedure to request the ownership change\. When your ownership has been verified, an AWS customer support engineer will change contact information for you\.
+To determine whether the value you're changing is considered a change of owner, see [Who Is the Owner of a Domain?](#domain-update-contacts-who-is-domain-owner)\.<a name="domain-update-contacts-domain-owership-form-procedure"></a>
 
 **To change the owner of a domain when the registry requires a Change of Domain Ownership form**
+
+1. If you're changing the owner for a domain that has one of the following TLDs, skip to step 2:
+
+   \.ac, \.cl, \.com\.ar, \.com\.br, \.com\.sg, \.es, \.fi, \.qa, \.ru, \.se, \.sg, \.sh
+
+   If you're changing the owner for any other domain, you don't need to fill out a Change of Domain Ownership form\. Perform the procedure in [Updating Contact Information for a Domain](#domain-update-contacts-basic) instead\.
 
 1. Download the [Change of Domain Ownership Form](https://s3.amazonaws.com/AWSCS_CustomerForms/AmazonRegistrarChangeOfDomainOwnershipForm.pdf)\.
 
@@ -76,12 +82,10 @@ Perform the following procedure to request the ownership change\. When your owne
 1. For the registrant contact for the former owner of the domain *and* for the new owner, get a copy of a signed proof of identity \(identity card, driver's license, passport, or other legal proof of identity\)\.
 
    In addition, if a legal entity is listed as the registrant organization, gather the following information for the former owner of the domain *and* for the new owner:
-
    + Proof that the organization that the domain is registered to exists\.
-
    + Proof that the representatives for the former owner and the new owner are authorized to act on the organization's behalf\. This document must be a certified legal document that contains both the name of the organization and the names of the representatives as signing officers \(for example, CEO, President, or Executive Director\)\.
 
-1. Scan the Change of Domain Ownership form and the required proof, if applicable\. Save the scanned documents in a common format, such as a \.pdf file or a \.png file\.
+1. Scan the Change of Domain Ownership form and the required proof\. Save the scanned documents in a common format, such as a \.pdf file or a \.png file\.
 
 1. Using the AWS account that the domain is currently registered to, sign in to the [AWS Support Center](https://console.aws.amazon.com/support/home?region=us-east-1#/case/create?issueType=customer-service&serviceCode=billing&categoryCode=domain-name-registration-issue)\.
 **Important**  
@@ -95,15 +99,13 @@ Accept the default value of **Billing**\.
 **Category**  
 Accept the default value of **Domain name registration issue**\.  
 **Subject**  
-Specify **Change the owner of a domain**  
+Specify **Change the owner of a domain**\.  
 **Description**  
 Provide the following information:  
-
    + Domain that you want to change the owner for
-
-   + [12\-digit account ID](http://docs.aws.amazon.com/general/latest/gr/acct-identifiers.html#FindingYourAccountIdentifiers) of the AWS account that the domain is registered to  
+   + [12\-digit account ID](https://docs.aws.amazon.com/general/latest/gr/acct-identifiers.html#FindingYourAccountIdentifiers) of the AWS account that the domain is registered to  
 **Add attachment**  
-Upload the documents that you scanned in step 4\.  
+Upload the documents that you scanned in step 5\.  
 **Contact method**  
 Specify a contact method and enter the applicable values\.
 
@@ -113,14 +115,22 @@ Specify a contact method and enter the applicable values\.
 
 ## Updating the Email Address for a Domain When You Can't Access Email at the Old Address<a name="domain-update-contacts-change-email-form"></a>
 
-When you change the email address for the registrant contact for a domain, the registries for some TLDs require us to get authorization from the registrant contact at the old email address and at the new email address\. If you receive an authorization email at the new email address, your TLD requires us to get authorization from both email addresses\. If you no longer have access to the old email address, perform the following procedure\.
+When you change the email address for the registrant contact for a domain, the registries for some TLDs require us to get authorization from the registrant contact at the old email address and at the new email address\. If you receive an authorization email at the new email address, your TLD requires us to get authorization from both email addresses\.
+
+If you no longer have access to the old email address, perform the following procedure\.
 
 **Note**  
-You can use this procedure only if the domain is already registered with Route 53\. If you're transferring a domain to Route 53 and you can't access email at the email address for the registrant contact, you must work with the current registrar to update the email address\.
+You can use this procedure only if the domain is already registered with Route 53\. If you're transferring a domain to Route 53 and you can't access email at the email address for the registrant contact, you must work with the current registrar to update the email address\.<a name="domain-update-contacts-change-email-form-procedure"></a>
 
-****
+**To update the email address for a domain when you can't access email at the old address**
 
 1. Update settings for the domain to specify the correct email address for the registrant contact\. There must be an active change request before an AWS customer support engineer can process the change\. For more information, see [Updating Contact Information for a Domain](#domain-update-contacts-basic)\.
+
+1. If you want to change the email address for the registrant contact for one of the following domains, continue with step 3:
+
+   \.ac, \.cl, \.com\.ar, \.com\.br, \.com\.sg, \.es, \.fi, \.qa, \.ru, \.se, \.sg, \.sh
+
+   If you want to change the email address for any other domain, skip to step 7\.
 
 1. Download the [Change of Registrant Email Form](https://s3.amazonaws.com/AWSCS_CustomerForms/AmazonRegistrarChangeOfRegistrantEmailForm.pdf)\. 
 
@@ -129,9 +139,7 @@ You can use this procedure only if the domain is already registered with Route 
 1. Have a copy of your personal signed proof of identity available: an identity card, a driver's license, a passport, or another legal proof of identity\. The name on the document must exactly match the name of the current registrant contact for the domain\.
 
    If the value of **Contact type** is a value other than **Person** and if the organization is a legal entity, gather the following information:
-
    + Proof that the organization that the domain is registered to exists\.
-
    + Proof that you're authorized to act on the organization's behalf\. This document must be a certified legal document that contains both the name of the organization and your name as a signing officer \(for example, CEO, President, or Executive Director\)\.
 
 1. Scan the Change of Registrant Email form and the required proof, if applicable\. Save the scanned documents in a common format, such as a \.pdf file or a \.png file\.
@@ -148,15 +156,13 @@ Accept the default value of **Billing**\.
 **Category**  
 Accept the default value of **Domain name registration issue**\.  
 **Subject**  
-Specify **Change the email address for a domain**  
+Specify **Change the email address for a domain**\.  
 **Description**  
 Provide the following information:  
-
    + Domain that you want to change the email address for
-
-   + [12\-digit account ID](http://docs.aws.amazon.com/general/latest/gr/acct-identifiers.html#FindingYourAccountIdentifiers) of the AWS account that the domain is registered to  
-**Add attachment**  
-Upload the documents that you scanned in step 5\.  
+   + [12\-digit account ID](https://docs.aws.amazon.com/general/latest/gr/acct-identifiers.html#FindingYourAccountIdentifiers) of the AWS account that the domain is registered to  
+**Add attachment \(\.ac, \.cl, \.com\.ar, \.com\.br, \.com\.sg, \.es, \.fi, \.qa, \.ru, \.se, \.sg, and \.sh domains only\)**  
+Upload the documents that you scanned in step 6\.  
 **Contact method**  
 Specify a contact method and enter the applicable values\.
 

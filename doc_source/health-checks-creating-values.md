@@ -2,7 +2,7 @@
 
 When you create or update health checks, you specify the applicable values\. Note that you can't change some values after you create a health check\. 
 
-
+**Topics**
 + [Monitoring an Endpoint](#health-checks-creating-values-endpoint)
 + [Monitoring Other Health Checks \(Calculated Health Checks\)](#health-checks-creating-values-calculated)
 + [Monitoring a CloudWatch Alarm](#health-checks-creating-values-cloudwatch)
@@ -15,31 +15,21 @@ For more information about tagging and health checks, see [Naming and Tagging He
 
 **What to monitor**  
 Whether you want this health check to monitor an endpoint or the status of other health checks:  
-
 + **Endpoint** – Route 53 monitors the health of an endpoint that you specify\. You can specify the endpoint by providing either a domain name or an IP address and a port\.
 **Note**  
 If you specify a non\-AWS endpoint, an additional charge applies\. For more information, including a definition of AWS endpoints, see "Health Checks" on the [Route 53 Pricing](https://aws.amazon.com/route53/pricing/) page\.
-
 + **Status of other health checks \(calculated health check\)** – Route 53 determines whether this health check is healthy based on the status of other health checks that you specify\. You also specify how many of the health checks need to be healthy for this health check to be considered healthy\.
-
 + **State of CloudWatch alarm** – Route 53 determines whether this health check is healthy by monitoring the data stream for a CloudWatch alarm\. 
 
 ## Monitoring an Endpoint<a name="health-checks-creating-values-endpoint"></a>
 
 If you want this health check to monitor an endpoint, specify the following values:
-
 + [Specify endpoint by](#health-checks-creating-values-specify-endpoint-by)
-
 + [Protocol](#health-checks-creating-values-protocol)
-
 + [IP address](#health-checks-creating-values-ip-address)
-
 + [Host name](#health-checks-creating-values-host-name)
-
 + [Port](#health-checks-creating-values-port)
-
 + [Domain name](#health-checks-creating-values-domain-name)
-
 + [Path](#health-checks-creating-values-path)
 
 **Specify endpoint by**  
@@ -48,15 +38,12 @@ After you create a health check, you can't change the value of **Specify endpoin
 
 **Protocol**  
 The method that you want Route 53 to use to check the health of your endpoint:  
-
 + **HTTP** – Route 53 tries to establish a TCP connection\. If successful, Route 53 submits an HTTP request and waits for an HTTP status code of 2xx or 3xx\.
-
 + **HTTPS** – Route 53 tries to establish a TCP connection\. If successful, Route 53 submits an HTTPS request and waits for an HTTP status code of 2xx or 3xx\.
 **Important**  
 If you choose **HTTPS**, the endpoint must support TLS v1\.0 or later\. 
 
   If you choose **HTTPS** for the value of **Protocol**, an additional charge applies\. For more information, see [Route 53 Pricing](https://aws.amazon.com/route53/pricing/)\.
-
 + **TCP** – Route 53 tries to establish a TCP connection\.
 For more information, see [How Amazon Route 53 Determines Whether a Health Check Is HealthyHow Route 53 Determines Whether a Health Check Is Healthy](dns-failover-determining-health-of-endpoints.md)\.  
 After you create a health check, you can't change the value of **Protocol**\. 
@@ -64,22 +51,16 @@ After you create a health check, you can't change the value of **Protocol**\.
 **IP address \("Specify endpoint by IP address" Only\)**  
 The IPv4 or IPv6 address of the endpoint on which you want Route 53 to perform health checks, if you chose **Specify endpoint by IP address**\.  
 Route 53 cannot check the health of endpoints for which the IP address is in local, private, nonroutable, or multicast ranges\. For more information about IP addresses that you can't create health checks for, see the following documents:  
-
 + [RFC 5735, Special Use IPv4 Addresses](http://tools.ietf.org/html/rfc5735)
-
 + [RFC 6598, IANA\-Reserved IPv4 Prefix for Shared Address Space](http://tools.ietf.org/html/rfc6598)\.
-
 + [RFC 5156, Special\-Use IPv6 Addresses](https://tools.ietf.org/html/rfc5156)
-If the endpoint is an Amazon EC2 instance, we recommend that you create an Elastic IP address, associate it with your EC2 instance, and specify the Elastic IP address\. This ensures that the IP address of your instance will never change\. For more information, see [Elastic IP Addresses \(EIP\)](http://docs.aws.amazon.com/AWSEC2/latest/UserGuide/elastic-ip-addresses-eip.html) in the *Amazon EC2 User Guide for Linux Instances*\.  
+If the endpoint is an Amazon EC2 instance, we recommend that you create an Elastic IP address, associate it with your EC2 instance, and specify the Elastic IP address\. This ensures that the IP address of your instance will never change\. For more information, see [Elastic IP Addresses \(EIP\)](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/elastic-ip-addresses-eip.html) in the *Amazon EC2 User Guide for Linux Instances*\.  
 If you specify a non\-AWS endpoint, an additional charge applies\. For more information, including a definition of AWS endpoints, see "Health Checks" on the [Route 53 Pricing](https://aws.amazon.com/route53/pricing/) page\.
 
 **Host name \("Specify endpoint by IP address" Only, HTTP and HTTPS Protocols Only\)**  
 The value that you want Route 53 to pass in the `Host` header in HTTP and HTTPS health checks\. This is typically the fully qualified DNS name of the website on which you want Route 53 to perform health checks\. When Route 53 checks the health of an endpoint, here is how it constructs the `Host` header:  
-
 + If you specify a value of **80** for **Port** and **HTTP** for **Protocol**, Route 53 passes to the endpoint a `Host` header that contains the value of **Host name**\. 
-
 + If you specify a value of **443** for **Port** and **HTTPS** for **Protocol**, Route 53 passes to the endpoint a `Host` header that contains the value of **Host name**\.
-
 + If you specify another value for **Port** and either **HTTP** or **HTTPS** for **Protocol**, Route 53 passes to the endpoint a `Host` header that contains the value *Host name***:***Port*\.
 If you choose to specify the endpoint by IP address and you don't specify a value for **Host name**, Route 53 substitutes the value of **IP address** in the `Host` header in each of the preceding cases\.
 
@@ -101,13 +82,9 @@ The path that you want Route 53 to request when performing health checks\. The 
 ## Monitoring Other Health Checks \(Calculated Health Checks\)<a name="health-checks-creating-values-calculated"></a>
 
 If you want this health check to monitor the status of other health checks, specify the following values:
-
 + [Health checks to monitor](#health-checks-creating-values-health-checks-to-monitor)
-
 + [Report healthy when](#health-checks-creating-values-report-healthy-when)
-
 + [Invert health check status](#health-checks-creating-values-invert-health-check-status)
-
 + [Disabled](#health-checks-creating-values-disabled)
 
 **  Health checks to monitor **  
@@ -118,15 +95,10 @@ If you disable a health check that a calculated health check is monitoring, Rout
 
 **  Report healthy when **  
 The calculation that you want Route 53 to perform to determine whether this health check is healthy:  
-
 + **Report healthy when at least x of y selected health checks are healthy** – Route 53 considers this health check to be healthy when the specified number of health checks that you added to **Health checks to monitor** are healthy\. Note the following:
-
   + If you specify a number greater than the number of health checks in **Health checks to monitor**, Route 53 always considers this health check to be unhealthy\.
-
   + If you specify **0**, Route 53 always considers this health check to be healthy\.
-
 + **Report healthy when all health checks are healthy \(AND\)** – Route 53 considers this health check to be healthy only when all the health checks that you added to **Health checks to monitor** are healthy\.
-
 + **Report healthy when one or more health checks are healthy \(OR\)** – Route 53 considers this health check to be healthy when at least one of the health checks that you added to **Health checks to monitor** is healthy\.
 
 **  Invert health check status **  
@@ -140,27 +112,21 @@ Charges for a health check still apply when the health check is disabled\.
 ## Monitoring a CloudWatch Alarm<a name="health-checks-creating-values-cloudwatch"></a>
 
 If you want this health check to monitor the alarm state of a CloudWatch alarm, specify the following values:
-
 + [CloudWatch alarm](#health-checks-creating-values-cloudwatch-alarm)
-
 + [Health check status](#health-checks-creating-values-health-check-status)
-
 + [Invert health check status](#health-checks-creating-values-invert-health-check-status-cloudwatch)
-
 + [Disabled](#health-checks-creating-values-disabled-cloudwatch)
 
 **CloudWatch alarm**  
 Choose the CloudWatch alarm that you want Route 53 to use to determine whether this health check is healthy\.  
 Route 53 supports CloudWatch alarms with the following features:  
-
-+ Standard\-resolution metrics\. High\-resolution metrics aren't supported\. For more information, see [High\-Resolution Metrics](http://docs.aws.amazon.com/AmazonCloudWatch/latest/monitoring/publishingMetrics.html#high-resolution-metrics) in the *Amazon CloudWatch User Guide*\.
-
++ Standard\-resolution metrics\. High\-resolution metrics aren't supported\. For more information, see [High\-Resolution Metrics](https://docs.aws.amazon.com/AmazonCloudWatch/latest/monitoring/publishingMetrics.html#high-resolution-metrics) in the *Amazon CloudWatch User Guide*\.
 + Statistics: `Average`, `Minimum`, `Maximum`, `Sum`, and `SampleCount`\. Extended statistics aren't supported\.
 If you want to create an alarm, perform the following steps:  
 
 1. Choose **create**\. The CloudWatch console appears in a new browser tab\.
 
-1. Enter the applicable values\. For more information, see [Create or Edit a CloudWatch Alarm](http://docs.aws.amazon.com/AmazonCloudWatch/latest/DeveloperGuide/ConsoleAlarms.html) in the *Amazon CloudWatch User Guide*\.
+1. Enter the applicable values\. For more information, see [Create or Edit a CloudWatch Alarm](https://docs.aws.amazon.com/AmazonCloudWatch/latest/DeveloperGuide/ConsoleAlarms.html) in the *Amazon CloudWatch User Guide*\.
 
 1. Return to the browser tab that the Route 53 console appears in\.
 
@@ -184,23 +150,14 @@ Charges for a health check still apply when the health check is disabled\.
 ## Advanced Configuration \("Monitor an endpoint" Only\)<a name="health-checks-creating-values-advanced"></a>
 
 If you choose the option to monitor an endpoint, you can also specify the following settings:
-
 + [Request interval](#health-checks-creating-values-request-interval)
-
 + [Failure threshold](#health-checks-creating-values-failure-threshold)
-
 + [String matching](#health-checks-creating-values-string-matching)
-
 + [Search string](#health-checks-creating-values-search-string)
-
 + [Latency graphs](#health-checks-creating-values-latency-graphs)
-
 + [Enable SNI](#health-checks-creating-values-enable-sni)
-
 + [Health checker regions](#health-checks-creating-values-health-checker-regions)
-
 + [Invert health check status](#health-checks-creating-values-invert-health-check-status-advanced)
-
 + [Disabled](#health-checks-creating-values-disabled-advanced)
 
 **Request interval**  
@@ -230,14 +187,12 @@ If you configure Route 53 to measure the latency between health checkers and yo
 Specify whether you want Route 53 to send the host name to the endpoint in the `client_hello` message during TLS negotiation\. This allows the endpoint to respond to the HTTPS request with the applicable SSL/TLS certificate\.  
 Some endpoints require that HTTPS requests include the host name in the `client_hello` message\. If you don't enable SNI, the status of the health check will be `SSL alert handshake_failure`\. A health check can also have that status for other reasons\. If SNI is enabled and you're still getting the error, check the SSL/TLS configuration on your endpoint and confirm that your certificate is valid\.  
 Note the following requirements:  
-
 + The endpoint must support SNI\.
-
 + The SSL/TLS certificate on your endpoint includes a domain name in the `Common Name` field and possibly several more in the `Subject Alternative Names` field\. One of the domain names in the certificate must match the value that you specify for **Host name**\.  
 
 **Health checker regions**  
 Choose whether you want Route 53 to check the health of the endpoint by using health checkers in the recommended regions or by using health checkers in regions that you specify\.  
-If you update a health check to remove a region that has been performing health checks, Route 53 will briefly continue to perform checks from that region to ensure that some health checkers are always checking the endpoint \(for example, if you replace three regions with four different regions\)\.   
+If you update a health check to remove a region that has been performing health checks, Route 53 continues to perform checks from that region for up to an hour\. This ensures that some health checkers are always checking the endpoint \(for example, if you replace three regions with four different regions\)\.   
 If you choose **Customize**, choose the **x** for a region to remove it\. Click the space at the bottom of the list to add a region back to the list\. You must specify at least three regions\.
 
 **Invert health check status**  
@@ -251,25 +206,19 @@ Charges for a health check still apply when the health check is disabled\.
 ## Get Notified When a Health Check Fails<a name="health-checks-creating-values-alarm"></a>
 
 Use the following options to configure email notification when a health check fails:
-
 + [Create alarm](#health-checks-creating-values-create-alarm)
-
 + [Send notification to](#health-checks-creating-values-send-notification-to)
-
 + [Topic name](#health-checks-creating-values-topic-name)
-
 + [Recipient email addresses](#health-checks-creating-values-recipient-email-addresses)
 
 **Create alarm \(Only When Creating Health Checks\)**  
 Specify whether you want to create a default CloudWatch alarm\. If you choose **Yes**, CloudWatch sends you an Amazon SNS notification when the status of this endpoint changes to unhealthy and Route 53 considers the endpoint unhealthy for one minute\.  
-If you want CloudWatch to send you another Amazon SNS notification when the status changes back to healthy, you can create another alarm after you create the health check\. For more information, see [Creating Amazon CloudWatch Alarms](http://docs.aws.amazon.com/AmazonCloudWatch/latest/monitoring/AlarmThatSendsEmail.html) in the *Amazon CloudWatch User Guide*\.
+If you want CloudWatch to send you another Amazon SNS notification when the status changes back to healthy, you can create another alarm after you create the health check\. For more information, see [Creating Amazon CloudWatch Alarms](https://docs.aws.amazon.com/AmazonCloudWatch/latest/monitoring/AlarmThatSendsEmail.html) in the *Amazon CloudWatch User Guide*\.
 If you want to create an alarm for an existing health check or you want to receive notifications when Route 53 considers the endpoint unhealthy for more or less than one minute \(the default value\), select **No**, and add an alarm after you create the health check\. For more information, see [Monitoring Health Checks Using CloudWatch](monitoring-health-checks.md)\.
 
 **Send notification to \(Only When Creating an Alarm\)**  
 Specify whether you want CloudWatch to send notifications to an existing Amazon SNS topic or to a new one:  
-
 + **Existing SNS topic** – Select the name of the topic from the list\. The topic must be in the US East \(N\. Virginia\) Region\.
-
 + **New SNS topic** – Enter a name for the topic in **Topic name**, and enter the email addresses that you want to send notifications to in **Recipients**\. Separate multiple addresses with commas \(,\), semicolons \(;\), or spaces\. 
 
   Route 53 will create the topic in the US East \(N\. Virginia\) Region\.

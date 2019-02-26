@@ -33,9 +33,7 @@ We send an email to the registrant contact for the domain that tells you that au
 
 **30 days and 7 days before expiration**  
 If automatic renewal is disabled for the domain, ICANN, the governing body for domain registration, requires the registrar to send you an email\. The email comes from one of the following email addresses:  
-
 + **noreply@registrar\.amazon\.com ** – For domains for which the registrar is Amazon Registrar\.
-
 + **noreply@domainnameverification\.net** – For domains for which the registrar is our registrar associate, Gandi\.
 To determine who the registrar is for your TLD, see [Domains That You Can Register with Amazon Route 53](registrar-tld-list.md)\.  
 If you enable automatic renewal less than 30 days before expiration, and the renewal period has not passed, we renew the domain within 24 hours\.  
@@ -45,4 +43,4 @@ For more information about renewal periods, go to the "Renewal, restoration, and
 **After the expiration date**  
 Most domains are held by the registrar for a brief time after expiration, so you might be able to renew an expired domain after the expiration date, but we strongly recommend that you keep automatic renewal enabled if you want to keep your domain\. For information about trying to renew a domain after the expiration date, see [Restoring an Expired Domain](domain-restore-expired.md)\.  
 If your domain expires but late renewal is allowed for the domain, you can renew the domain for the standard renewal price\. To determine whether a domain is still within the late\-renewal period, perform the procedure in the [Extending the Registration Period for a Domain](domain-extend.md) section\. If the domain is still listed, it's within the late\-renewal period\.  
-For information about the renewal period for each TLD, see the "Renewal, restoration, and deletion times" table on the [Renewing a Domain Name](http://wiki.gandi.net/en/domains/renew) page on the Gandi website\. Note that the list includes some TLDs that Route 53 doesn't support\.
+For information about the renewal period for each TLD, see the [Renewal Deadlines](https://docs.gandi.net/en/domain_names/renew/deadlines.html) page on the Gandi website\. Note that the list includes some TLDs that Route 53 doesn't support\.

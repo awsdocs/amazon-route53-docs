@@ -7,15 +7,10 @@ Here's an overview of how health checking works if you want to be notified when 
 ![\[Conceptual graphic that shows how you configure Route 53 to monitor the health of specified endpoints.\]](http://docs.aws.amazon.com/Route53/latest/DeveloperGuide/images/how-health-checks-work.png)
 
 1. You create a health check and specify values that define how you want the health check to work, such as the following:
-
    + The IP address or domain name of the endpoint, such as a web server, that you want Route 53 to monitor\. \(You can also monitor the status of other health checks, or the state of a CloudWatch alarm\.\)
-
    + The protocol that you want Amazon Route 53 to use to perform the check: HTTP, HTTPS, or TCP\.
-
    + How often you want Route 53 to send a request to the endpoint\. This is the *request interval*\.
-
    + How many consecutive times the endpoint must fail to respond to requests before Route 53 considers it unhealthy\. This is the *failure threshold*\.
-
    + Optionally, how you want to be notified when Route 53 detects that the endpoint is unhealthy\. When you configure notification, Route 53 automatically sets a CloudWatch alarm\. CloudWatch uses Amazon SNS to notify users that an endpoint is unhealthy\.
 
 1. Route 53 starts to send requests to the endpoint at the interval that you specified in the health check\. 
@@ -23,9 +18,7 @@ Here's an overview of how health checking works if you want to be notified when 
    If the endpoint responds to the requests, Route 53 considers the endpoint to be healthy and takes no action\. 
 
 1. If the endpoint doesn't respond to a request, Route 53 starts to count the number of consecutive requests that the endpoint doesn't respond to:
-
    + If the count reaches the value that you specified for the failure threshold, Route 53 considers the endpoint unhealthy\. 
-
    + If the endpoint starts to respond again before the count reaches the failure threshold, Route 53 resets the count to 0, and CloudWatch doesn't contact you\.
 
 1. If Route 53 considers the endpoint unhealthy and if you configured notification for the health check, Route 53 notifies CloudWatch\.

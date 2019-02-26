@@ -11,9 +11,6 @@ Create a private hosted zone if you want to route traffic within an Amazon VPC\.
 1. Create records in the hosted zone\. Records define where you want to route traffic for each domain name or subdomain name\. For example, to route traffic for www\.example\.com to a web server in your data center, you typically create a www\.example\.com record in the example\.com hosted zone\. 
 
    For more information, see the following topics:
-
    + [Working with Records](rrsets-working-with.md)
-
    + [Routing Traffic for Subdomains](dns-routing-traffic-for-subdomains.md)
-
    + [Routing Internet Traffic to Your AWS Resources](routing-to-aws-resources.md)

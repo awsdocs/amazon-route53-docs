@@ -1,6 +1,6 @@
 # Disassociating VPCs from a Private Hosted Zone<a name="hosted-zone-private-disassociate-vpcs"></a>
 
-You can use the Amazon Route 53 console to disassociate VPCs from a private hosted zone\. For information about how to disassociate VPCs from a private hosted zone using the Route 53 API, see [DisassociateVPCFromHostedZone](http://docs.aws.amazon.com/Route53/latest/APIReference/API_DisassociateVPCFromHostedZone.html) in the *Amazon Route 53 API Reference*\. 
+You can use the Amazon Route 53 console to disassociate VPCs from a private hosted zone\. For information about how to disassociate VPCs from a private hosted zone using the Route 53 API, see [DisassociateVPCFromHostedZone](https://docs.aws.amazon.com/Route53/latest/APIReference/API_DisassociateVPCFromHostedZone.html) in the *Amazon Route 53 API Reference*\. 
 
 **To disassociate VPCs from a private hosted zone**
 

@@ -3,7 +3,7 @@
 If you create a Route 53 health check that monitors the data stream for a CloudWatch alarm and then you update the settings in the CloudWatch alarm, Route 53 doesn't automatically update the alarm settings in the health check\. If you want the health check to start using the new alarm settings, you need to update the health check\.
 
 **Note**  
-To update a health check programmatically, you can use the `UpdateHealthCheck` API\. Just specify the current values for `AlarmIdentifier` and `Region`, and Route 53 will get the latest settings from CloudWatch\. For more information, see [UpdateHealthCheck](http://docs.aws.amazon.com/Route53/latest/APIReference/API_UpdateHealthCheck.html) in the *Amazon Route 53 API Reference*\.
+To update a health check programmatically, you can use the `UpdateHealthCheck` API\. Just specify the current values for `AlarmIdentifier` and `Region`, and Route 53 will get the latest settings from CloudWatch\. For more information, see [UpdateHealthCheck](https://docs.aws.amazon.com/Route53/latest/APIReference/API_UpdateHealthCheck.html) in the *Amazon Route 53 API Reference*\.<a name="health-checks-updating-cloudwatch-alarm-settings-procedure"></a>
 
 **To update a health check with new CloudWatch alarm settings \(console\)**
 

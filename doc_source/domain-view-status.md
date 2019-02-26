@@ -2,7 +2,7 @@
 
 ICANN, the organization that maintains a central database of domain names, has developed a set of domain name status codes \(also known as EPP status codes\) that tell you the status of a variety of operations, for example, registering a domain name, transferring a domain name to another registrar, renewing the registration for a domain name, and so on\. All registrars use this same set of status codes\.
 
-To view the status code for your domains, perform the following procedure\. 
+To view the status code for your domains, perform the following procedure\. <a name="domain-view-status-procedure"></a>
 
 **To view the status of a domain**
 

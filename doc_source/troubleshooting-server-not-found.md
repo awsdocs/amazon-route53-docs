@@ -2,7 +2,7 @@
 
 If your browser displays a "Server not found" error when you try to browse to a domain \(example\.com\) or a subdomain \(www\.example\.com\), here are some common explanations\.
 
-
+**Topics**
 + [You didn't create a record for the domain or subdomain name](#troubleshooting-server-not-found-no-resource-record-set)
 + [You created a record but specified the wrong value](#troubleshooting-server-not-found-wrong-value-in-resource-record-set)
 + [The resource that you're routing traffic to is unavailable](#troubleshooting-server-not-found-resource-unavailable)

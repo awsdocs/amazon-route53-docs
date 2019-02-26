@@ -1,16 +1,14 @@
 # My domain is suspended \(status is ClientHold\)<a name="troubleshooting-domain-suspended"></a>
 
 If Amazon Route 53 suspends your domain, the domain becomes unavailable on the internet\. You can use either of the following methods to determine whether a domain has been suspended:
-
 + On the **Registered domains** page of the Route 53 console, find the domain name in the **Alerts** table at the bottom of the page\. If the value of the **Status** column is **clientHold**, the domain has been suspended\.
-
 + Send a WHOIS query for the domain\. If the value of **Domain Status** is **clientHold**, the domain has been suspended\. The WHOIS command is available in many operating systems, and it's also available as a web application on many websites\.
 
 In addition, when we suspend a domain, we generally send an email to the email address for the registrant contact for the domain\. However, if the domain was suspended based on a court order, the court might not let us notify the registrant contact\.
 
 To make a domain available on the internet again, you must get it unsuspended\. Here are the reasons that a domain can be suspended and how you get it unsuspended\.
 
-
+**Topics**
 + [You registered a new domain, but you didn't click the link in the confirmation email](#troubleshooting-domain-suspended-click-link)
 + [You disabled automatic renewal for the domain, and the domain expired](#troubleshooting-domain-suspended-automatic-renewal-disabled)
 + [We couldn't process your payment for automatic domain renewal, and the domain expired](#troubleshooting-domain-suspended-process-payment)

@@ -2,7 +2,7 @@
 
 For information about updating settings for a domain, see the applicable topic\.
 
-
+**Topics**
 + [Updating Contact Information and Ownership for a Domain](domain-update-contacts.md)
 + [Enabling or Disabling Privacy Protection for Contact Information for a Domain](domain-privacy-protection.md)
 + [Enabling or Disabling Automatic Renewal for a Domain](domain-enable-disable-auto-renewal.md)

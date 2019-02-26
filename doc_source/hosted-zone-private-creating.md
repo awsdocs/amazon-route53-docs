@@ -6,17 +6,15 @@ A private hosted zone is a container for records for a domain that you host in o
 When you create a private hosted zone, you must associate a VPC with the hosted zone, and the VPC that you specify must have been created by using the same account that you're using to create the hosted zone\. After you create the hosted zone, you can associate additional VPCs with it, including VPCs that you created by using a different AWS account\.  
 To associate VPCs that you created by using one account with a private hosted zone that you created by using a different account, you must authorize the association and then make the association programmatically\. For more information, see [Associating an Amazon VPC and a Private Hosted Zone That You Created with Different AWS Accounts](hosted-zone-private-associate-vpcs-different-accounts.md)\.
 
-For information about creating a private hosted zone by using the Route 53 API, see the [Amazon Route 53 API Reference](http://docs.aws.amazon.com/Route53/latest/APIReference/)\.
+For information about creating a private hosted zone by using the Route 53 API, see the [Amazon Route 53 API Reference](https://docs.aws.amazon.com/Route53/latest/APIReference/)\.
 
 **To create a private hosted zone using the Route 53 console**
 
 1. For each VPC that you want to associate with the Route 53 hosted zone, change the following VPC settings to `true`:
-
    + `enableDnsHostnames`
-
    + `enableDnsSupport`
 
-   For more information, see [Updating DNS Support for Your VPC](http://docs.aws.amazon.com/AmazonVPC/latest/UserGuide/vpc-dns.html#vpc-dns-updating) in the *Amazon VPC User Guide*\.
+   For more information, see [Updating DNS Support for Your VPC](https://docs.aws.amazon.com/vpc/latest/userguide/vpc-dns.html#vpc-dns-updating) in the *Amazon VPC User Guide*\.
 
 1. Sign in to the AWS Management Console and open the Route 53 console at [https://console\.aws\.amazon\.com/route53/](https://console.aws.amazon.com/route53/)\.
 

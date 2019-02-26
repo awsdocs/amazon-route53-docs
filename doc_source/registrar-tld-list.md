@@ -15,7 +15,7 @@ For information about the cost to register domains or transfer them to Route 53
 **Using Route 53 as your DNS service**  
 You can use Route 53 as the DNS service for any domain, even if the TLD for the domain isn't included on the following lists\. For more information about Route 53 as a DNS service, see [How Internet Traffic Is Routed to Your Website or Web Application](welcome-dns-service.md)\. For information about how to transfer DNS service for your domain to Route 53, see [Making Amazon Route 53 the DNS Service for an Existing DomainMaking Route 53 the DNS Service for an Existing Domain](MigratingDNS.md)\.
 
-
+**Topics**
 + [Generic Top\-Level Domains](#registrar-tld-list-generic)
 + [Geographic Top\-Level Domains](#registrar-tld-list-geographic)
 
@@ -25,7 +25,7 @@ You can use Route 53 as the DNS service for any domain, even if the TLD for the
 
 Not all gTLDs support internationalized domain names \(IDNs\)\. The following list indicates whether each gTLD supports IDNs\. For more information about internationalized domain names, see [DNS Domain Name Format](DomainNameFormat.md)\.
 
- [A](#A) | [B](#B) | [C](#C) | [D](#D) | [E](#E) | [F](#F) | [G](#G) | [H](#H) | [I,J](#I) | [K](#K) | [L](#L) | [M](#M) | [N](#N) | [O](#O) | [P](#P) | [Q](#Q) | [R](#R) | [S](#S) | [T](#T) | [U](#U) | [V](#V) | [W,X,Y,Z](#WXYZ) 
+ [A](#A) \| [B](#B) \| [C](#C) \| [D](#D) \| [E](#E) \| [F](#F) \| [G](#G) \| [H](#H) \| [I,J](#I) \| [K](#K) \| [L](#L) \| [M](#M) \| [N](#N) \| [O](#O) \| [P](#P) \| [Q](#Q) \| [R](#R) \| [S](#S) \| [T](#T) \| [U](#U) \| [V](#V) \| [W,X,Y,Z](#WXYZ) 
 
 ### A<a name="registrar-tld-list-generic-a"></a>
 
@@ -4108,6 +4108,8 @@ The registrar for this TLD is our registrar associate, Gandi\.
 Used as a general extension for any purpose\.    
 **Registration and renewal period**  
 One to ten years\.  
+**Restrictions**  
+The registry for \.xyz domains, Generation XYZ, considers some domain names to be premium domain names\. You can't register premium \.xyz domains with or transfer them to Route 53\. For more information, see the [Generation XYZ](https://gen.xyz) website\.  
 **Privacy protection \(applies to all contact types: person, company, association, and public body\)**  
 All information is hidden except organization name\.  
 **Internationalized domain names**  
@@ -4141,13 +4143,9 @@ The following domain extensions are grouped by geography and include official co
 Not all ccTLDs support internationalized domain names \(IDNs\)\. The following list indicates whether each ccTLD supports IDNs\. For more information about internationalized domain names, see [DNS Domain Name Format](DomainNameFormat.md)\.
 
 **Geographic Regions**
-
 + [Africa](#registrar-tld-list-africa)
-
 + [Americas](#registrar-tld-list-americas)
-
 + [Asia/Oceania](#registrar-tld-list-asiaoceania)
-
 + [Europe](#registrar-tld-list-europe)
 
 ### Africa<a name="registrar-tld-list-africa"></a>
@@ -4162,6 +4160,8 @@ One year\.
 Open to the public, with no restrictions\.  
 **Privacy protection**  
 Determined by the registry\.  
+**Domain locking to prevent unauthorized transfers**  
+Supported\.  
 **Internationalized domain names**  
 Supported\.  
 **Authorization code required for transfer to Route 53**  
@@ -4177,12 +4177,12 @@ One year\.
 **Restrictions**  
 Only second\-level domains are available for the \.za extension\. Route 53 supports the second\-level domain \.co\.za\.  
 Open to the public, with some restrictions:  
-
 + Registration is open to identifiable legal entities \(individuals and legal persons\)\.
-
 + The domain name must pass a zone check during the registration process\.  
 **Privacy protection**  
 Not supported\.  
+**Domain locking to prevent unauthorized transfers**  
+Not supported\. We recommend that you prevent unauthorized transfers by restricting access to the [RetrieveDomainAuthCode](https://docs.aws.amazon.com/Route53/latest/APIReference/API_domains_RetrieveDomainAuthCode.html) API action\. \(When you restrict access to this Route 53 API, you also restrict who can generate an authorization code using the Route 53 console, AWS SDKs, and other programmatic methods\.\) For more information, see [Authentication and Access Control for Amazon Route 53](auth-and-access-control.md)\.  
 **Internationalized domain names**  
 Not supported\.  
 **Authorization code required for transfer to Route 53**  
@@ -4199,6 +4199,8 @@ One year\.
 Open to the public, with no restrictions\.  
 **Privacy protection**  
 Not supported\.  
+**Domain locking to prevent unauthorized transfers**  
+Supported\.  
 **Internationalized domain names**  
 Supported\.  
 **Authorization code required for transfer to Route 53**  
@@ -4219,55 +4221,33 @@ When you register a \.ca domain, you will receive an email with a link to the ac
 One to ten years\.  
 **Restrictions**  
 Open to the public, with some restrictions:  
-
 + Registration is open to individuals or organizations connected to Canada, as described by the Canadian Presence Requirements for Registrants\.
-
 + Registrant contact: You must provide the full and exact legal name of the owner of the domain\. 
-
 + Admin and tech contacts: You must specify **Person** as the contact type and provide contact information for individuals living in Canada\.
-
 + You must select one of the following legal types during the registration process:
-
   + CCO represents a corporation\.
-
   + CCT represents a Canadian citizen\.
-
   + RES represents a Canadian resident\.
-
   + GOV represents a government entity\.
-
   + EDU represents an educational entity\.
-
   + ASS represents an unincorporated association\.
-
   + HOP represents a hospital\.
-
   + PRT represents a partnership\.
-
   + TDM represents a trademark\.
-
   + TRD represents a trade union\.
-
   + PLT represents a political party\.
-
   + LAM represents libraries, archives, and museums\.
-
   + TRS represents a trust\.
-
   + ABO represents Aboriginal Peoples\.
-
   + INB represents Indian Band\.
-
   + LGR represents legal representative\.
-
   + OMK represents an official mark \(protected by the Trademarks Act\)\.
-
   + MAJ represents Her Majesty the Queen\.  
 **Privacy protection**  
-
 + **Person** – For all contacts, contact name, address, phone number, fax number, and email address are hidden\.
-
 + **Company, association, or public body** – Not supported\.  
+**Domain locking to prevent unauthorized transfers**  
+Supported\.  
 **Internationalized domain names**  
 Supported\.  
 **Authorization code required for transfer to Route 53**  
@@ -4285,6 +4265,8 @@ You can no longer use Route 53 to register new \.cl domains or transfer \.cl do
 Two years\.  
 **Privacy protection**  
 Not supported\.  
+**Domain locking to prevent unauthorized transfers**  
+Not supported\. We recommend that you prevent unauthorized transfers by restricting access to the [RetrieveDomainAuthCode](https://docs.aws.amazon.com/Route53/latest/APIReference/API_domains_RetrieveDomainAuthCode.html) API action\. \(When you restrict access to this Route 53 API, you also restrict who can generate an authorization code using the Route 53 console, AWS SDKs, and other programmatic methods\.\) For more information, see [Authentication and Access Control for Amazon Route 53](auth-and-access-control.md)\.  
 **Authorization code required for transfer to Route 53**  
 Not supported\. You can no longer transfer \.cl domains to Route 53\.  
 **DNSSEC**  
@@ -4296,9 +4278,11 @@ The registrar for this TLD is our registrar associate, Gandi\.
 **Registration and renewal period**  
 One to five years\.  
 **Restrictions**  
-The registry for \.co domains, \.CO Internet S\.A\.S\., considers domain names up to four letters long to be premium domain names\. You can't register premium \.co domains with or transfer them to Route 53\.  
+The registry for \.co domains, Go\.co, considers some domain names to be premium domain names\. You can't register premium \.co domains with or transfer them to Route 53\. For more information, see the [Go\.co](https://www.go.co/) website\.  
 **Privacy protection \(applies to all contact types: person, company, association, and public body\)**  
 All information is hidden\.  
+**Domain locking to prevent unauthorized transfers**  
+Not supported\. We recommend that you prevent unauthorized transfers by restricting access to the [RetrieveDomainAuthCode](https://docs.aws.amazon.com/Route53/latest/APIReference/API_domains_RetrieveDomainAuthCode.html) API action\. \(When you restrict access to this Route 53 API, you also restrict who can generate an authorization code using the Route 53 console, AWS SDKs, and other programmatic methods\.\) For more information, see [Authentication and Access Control for Amazon Route 53](auth-and-access-control.md)\.  
 **Internationalized domain names**  
 Supported\.  
 **Authorization code required for transfer to Route 53**  
@@ -4314,6 +4298,8 @@ You can no longer use Route 53 to register new \.com\.ar domains or transfer \.
 One year\.  
 **Privacy protection**  
 Not supported\.  
+**Domain locking to prevent unauthorized transfers**  
+Not supported\. We recommend that you prevent unauthorized transfers by restricting access to the [RetrieveDomainAuthCode](https://docs.aws.amazon.com/Route53/latest/APIReference/API_domains_RetrieveDomainAuthCode.html) API action\. \(When you restrict access to this Route 53 API, you also restrict who can generate an authorization code using the Route 53 console, AWS SDKs, and other programmatic methods\.\) For more information, see [Authentication and Access Control for Amazon Route 53](auth-and-access-control.md)\.  
 **Authorization code required for transfer to Route 53**  
 Not supported\. You can no longer transfer \.com\.ar domains to Route 53\.  
 **DNSSEC**  
@@ -4327,6 +4313,8 @@ You can no longer use Route 53 to register new \.com\.br domains or transfer \.
 One year\.  
 **Privacy protection**  
 Not supported\.  
+**Domain locking to prevent unauthorized transfers**  
+Supported\.  
 **Authorization code required for transfer to Route 53**  
 Not supported\. You can no longer transfer \.com\.br domains to Route 53\.  
 **DNSSEC**  
@@ -4341,6 +4329,8 @@ One to ten years\.
 Open to the public, with no restrictions\.  
 **Privacy protection**  
 Determined by the registry\.  
+**Domain locking to prevent unauthorized transfers**  
+Supported\.  
 **Internationalized domain names**  
 Not supported\.  
 **Authorization code required for transfer to Route 53**  
@@ -4357,6 +4347,8 @@ One to ten years\.
 Open to the public, with no restrictions\.  
 **Privacy protection**  
 Determined by the registry\.  
+**Domain locking to prevent unauthorized transfers**  
+Supported\.  
 **Internationalized domain names**  
 Not supported\.  
 **Authorization code required for transfer to Route 53**  
@@ -4372,10 +4364,11 @@ One to ten years\.
 **Restrictions**  
 The registry for \.us domains doesn't allow domain names that contain any of the seven words identified in the "Appendix to Opinion of the Court" of [Federal Communications Commission v\. Pacifica Foundation No\. 77\-528](https://en.wikipedia.org/wiki/FCC_v._Pacifica_Foundation)\.  
 Open to the public, with one restriction:  
-
 + The \.us extension is for websites or activities that are located in the United States of America\.  
 **Privacy protection**  
 Not supported\.  
+**Domain locking to prevent unauthorized transfers**  
+Not supported\. We recommend that you prevent unauthorized transfers by restricting access to the [RetrieveDomainAuthCode](https://docs.aws.amazon.com/Route53/latest/APIReference/API_domains_RetrieveDomainAuthCode.html) API action\. \(When you restrict access to this Route 53 API, you also restrict who can generate an authorization code using the Route 53 console, AWS SDKs, and other programmatic methods\.\) For more information, see [Authentication and Access Control for Amazon Route 53](auth-and-access-control.md)\.  
 **Internationalized domain names**  
 Not supported\.  
 **Authorization code required for transfer to Route 53**  
@@ -4393,6 +4386,8 @@ One to ten years\.
 Open to the public, with no restrictions\.  
 **Privacy protection \(applies to all contact types: person, company, association, and public body\)**  
 Not supported\.  
+**Domain locking to prevent unauthorized transfers**  
+Supported\.  
 **Internationalized domain names**  
 Not supported\.  
 **Authorization code required for transfer to Route 53**  
@@ -4410,6 +4405,8 @@ One to ten years\.
 Open to the public, with no restrictions\.  
 **Privacy protection**  
 Not supported\.  
+**Domain locking to prevent unauthorized transfers**  
+Supported\.  
 **Internationalized domain names**  
 Not supported\.  
 **Authorization code required for transfer to Route 53**  
@@ -4430,10 +4427,10 @@ One to ten years\.
 **Restrictions**  
 Open to the public, with no restrictions\.  
 **Privacy protection \(applies to all contact types: person, company, association, and public body\)**  
-
 + **Hidden** – address, phone number, fax number, and email address
-
 + **Not hidden** – contact name and organization name  
+**Domain locking to prevent unauthorized transfers**  
+Supported\.  
 **Internationalized domain names**  
 Not supported\.  
 **Authorization code required for transfer to Route 53**  
@@ -4449,12 +4446,12 @@ One to ten years\.
 **Restrictions**  
 Your can register the following second\-level domains with Route 53: \.co\.nz, \.net\.nz, and \.org\.nz\. You can't register \.nz \(first\-level\) domains with Route 53 or transfer \.nz domains to Route 53\.  
 Open to the public, with some restrictions:  
-
 + Individuals must be at least 18\.
-
 + Organizations must be registered\.  
 **Privacy protection**  
 Not supported\.  
+**Domain locking to prevent unauthorized transfers**  
+Not supported\. We recommend that you prevent unauthorized transfers by restricting access to the [RetrieveDomainAuthCode](https://docs.aws.amazon.com/Route53/latest/APIReference/API_domains_RetrieveDomainAuthCode.html) API action\. \(When you restrict access to this Route 53 API, you also restrict who can generate an authorization code using the Route 53 console, AWS SDKs, and other programmatic methods\.\) For more information, see [Authentication and Access Control for Amazon Route 53](auth-and-access-control.md)\.  
 **Internationalized domain names**  
 Supported\.  
 **Authorization code required for transfer to Route 53**  
@@ -4472,22 +4469,17 @@ Two years\.
 **Restrictions**  
 Only second\-level domains are available\. Route 53 supports the second\-level domains \.com\.au and net\.au\.   
 Open to the public, with some restrictions:  
-
 + The \.com\.au and \.net\.au domains are open to legal persons, partnerships, or sole traders registered in Australia; to foreign companies licensed to trade in Australia; and to owners or applicants of an Australian\-registered trademark\. 
-
 + Your domain name must be identical to your name \(as registered with the relevant Australian authorities\) or to your trademark \(or to the abbreviation or acronym for your trademark\)\. 
-
 + The domain name should indicate your activity\. For example, it should indicate a product that you sell or a service that you provide\.
-
 + During the registration process, you must provide the following information:
-
   + Your registration type: ABN \(Australian Business Number\), ACN \(Australian Company Number\), or TM \(Trademark\) if the domain name corresponds to your trademark\.
-
   + Your ID number, which can be a Medicare card number, a tax file number \(TFN\), a state driver's license number, or an Australian Business Number \(ABN\)\.
-
   + Your state or province\.  
 **Privacy protection**  
-Not supported\.  
+All information is hidden except the name of the registrant contact\.  
+**Domain locking to prevent unauthorized transfers**  
+Not supported\. We recommend that you prevent unauthorized transfers by restricting access to the [RetrieveDomainAuthCode](https://docs.aws.amazon.com/Route53/latest/APIReference/API_domains_RetrieveDomainAuthCode.html) API action\. \(When you restrict access to this Route 53 API, you also restrict who can generate an authorization code using the Route 53 console, AWS SDKs, and other programmatic methods\.\) For more information, see [Authentication and Access Control for Amazon Route 53](auth-and-access-control.md)\.  
 **Internationalized domain names**  
 Not supported\.  
 **Authorization code required for transfer to Route 53**  
@@ -4507,6 +4499,8 @@ One year\.
 The registry for \.com\.sg domains doesn't allow you to delete domain registrations\. Instead, you must disable automatic renewal and wait for the domain to expire\. For more information, see [Deleting a Domain Name Registration](domain-delete.md)\.  
 **Privacy protection**  
 Not supported\.  
+**Domain locking to prevent unauthorized transfers**  
+Supported\.  
 **Authorization code required for transfer to Route 53**  
 Not supported\. You can no longer transfer \.com\.sg domains to Route 53\.  
 **DNSSEC**  
@@ -4522,6 +4516,8 @@ One to five years\.
 Open to the public, with no restrictions\.  
 **Privacy protection \(applies to all contact types: person, company, association, and public body\)**  
 Not supported\.  
+**Domain locking to prevent unauthorized transfers**  
+Supported\.  
 **Internationalized domain names**  
 Not supported\.  
 **Authorization code required for transfer to Route 53**  
@@ -4538,6 +4534,8 @@ One to ten years\.
 Open to the public, with no restrictions\.  
 **Privacy protection**  
 Not supported\.  
+**Domain locking to prevent unauthorized transfers**  
+Supported\.  
 **Internationalized domain names**  
 Not supported\.  
 **Authorization code required for transfer to Route 53**  
@@ -4552,10 +4550,11 @@ The registrar for this TLD is our registrar associate, Gandi\.
 One year\.  
 **Restrictions**  
 Open to the public, with one restriction:  
-
 + Only individuals or companies in Japan can register a \.jp domain name\.  
 **Privacy protection**  
 Not supported\.  
+**Domain locking to prevent unauthorized transfers**  
+Supported\.  
 **Internationalized domain names**  
 Supported for Japanese\.  
 **Authorization code required for transfer to Route 53**  
@@ -4573,6 +4572,8 @@ One year\.
 Open to the public, with no restrictions\.  
 **Privacy protection**  
 All information is hidden except state/province and country\.  
+**Domain locking to prevent unauthorized transfers**  
+Supported\.  
 **Internationalized domain names**  
 Supported\.  
 **Authorization code required for transfer to Route 53**  
@@ -4581,9 +4582,7 @@ The registry for \.io domains also uses the authorization code as a single\-use 
 **DNSSEC**  
 Supported for domain registration\. For more information, see [Configuring DNSSEC for a Domain](domain-configure-dnssec.md)\.  
 **Registrar**  
-The registrar for this TLD is our registrar associate, Gandi\.  
-**Deletion of domain registration**  
-The registry for \.io domains doesn't allow you to delete domain registrations\. Instead, you must disable automatic renewal and wait for the domain to expire\. For more information, see [Deleting a Domain Name Registration](domain-delete.md)\.
+The registrar for this TLD is our registrar associate, Gandi\.
 
 **\.net\.au \(Australia\)**    
 **Confirmation email from the TLD registry**  
@@ -4593,22 +4592,17 @@ Two years\.
 **Restrictions**  
 Only second\-level domains are available\. Route 53 supports the second\-level domains \.com\.au and net\.au\.   
 Open to the public, with some restrictions:  
-
 + The \.com\.au and \.net\.au domains are open to legal persons, trading, partnerships, or sole traders registered in Australia; to foreign companies licensed to trade in Australia; and to owners or applicants of an Australian\-registered trademark\. 
-
 + Your domain name must be identical to your name, as registered with the relevant Australian authorities or to your trademark \(or to the abbreviation or acronym\)\. 
-
 + The domain name should indicate your activity\. For example, it should indicate a product that you sell or a service that you provide\.
-
 + During the registration process, you must indicate the following:
-
   + Your registration type: ABN \(Australian Business Number\), ACN \(Australian Company Number\), or TM \(Trademark\) if the domain name corresponds to your trademark\.
-
   + Your ID number, which can be a Medicare card number, a tax file number \(TFN\), a state driver's license number, or an Australian Business Number \(ABN\)\.
-
   + Your state or province\.  
 **Privacy protection**  
-Not supported\.  
+All information is hidden except the name of the registrant contact\.  
+**Domain locking to prevent unauthorized transfers**  
+Not supported\. We recommend that you prevent unauthorized transfers by restricting access to the [RetrieveDomainAuthCode](https://docs.aws.amazon.com/Route53/latest/APIReference/API_domains_RetrieveDomainAuthCode.html) API action\. \(When you restrict access to this Route 53 API, you also restrict who can generate an authorization code using the Route 53 console, AWS SDKs, and other programmatic methods\.\) For more information, see [Authentication and Access Control for Amazon Route 53](auth-and-access-control.md)\.  
 **Internationalized domain names**  
 Not supported\.  
 **Authorization code required for transfer to Route 53**  
@@ -4626,12 +4620,12 @@ One to ten years\.
 **Restrictions**  
 Your can register the following second\-level domains with Route 53: \.co\.nz, \.net\.nz, and \.org\.nz\. You can't register \.nz \(first\-level\) domains with Route 53 or transfer \.nz domains to Route 53\.  
 Open to the public, with some restrictions:  
-
 + Individuals must be at least 18\.
-
 + Organizations must be registered\.  
 **Privacy protection**  
 Not supported\.  
+**Domain locking to prevent unauthorized transfers**  
+Not supported\. We recommend that you prevent unauthorized transfers by restricting access to the [RetrieveDomainAuthCode](https://docs.aws.amazon.com/Route53/latest/APIReference/API_domains_RetrieveDomainAuthCode.html) API action\. \(When you restrict access to this Route 53 API, you also restrict who can generate an authorization code using the Route 53 console, AWS SDKs, and other programmatic methods\.\) For more information, see [Authentication and Access Control for Amazon Route 53](auth-and-access-control.md)\.  
 **Internationalized domain names**  
 Supported\.  
 **Authorization code required for transfer to Route 53**  
@@ -4647,12 +4641,12 @@ One to ten years\.
 **Restrictions**  
 Your can register the following second\-level domains with Route 53: \.co\.nz, \.net\.nz, and \.org\.nz\. You can't register \.nz \(first\-level\) domains with Route 53 or transfer \.nz domains to Route 53\.  
 Open to the public, with some restrictions:  
-
 + Individuals must be at least 18\.
-
 + Organizations must be registered\.  
 **Privacy protection**  
 Not supported\.  
+**Domain locking to prevent unauthorized transfers**  
+Not supported\. We recommend that you prevent unauthorized transfers by restricting access to the [RetrieveDomainAuthCode](https://docs.aws.amazon.com/Route53/latest/APIReference/API_domains_RetrieveDomainAuthCode.html) API action\. \(When you restrict access to this Route 53 API, you also restrict who can generate an authorization code using the Route 53 console, AWS SDKs, and other programmatic methods\.\) For more information, see [Authentication and Access Control for Amazon Route 53](auth-and-access-control.md)\.  
 **Internationalized domain names**  
 Supported\.  
 **Authorization code required for transfer to Route 53**  
@@ -4668,6 +4662,8 @@ You can no longer use Route 53 to register new \.qa domains or transfer \.qa do
 One to five years\.  
 **Privacy protection**  
 Not supported\.  
+**Domain locking to prevent unauthorized transfers**  
+Not supported\. We recommend that you prevent unauthorized transfers by restricting access to the [RetrieveDomainAuthCode](https://docs.aws.amazon.com/Route53/latest/APIReference/API_domains_RetrieveDomainAuthCode.html) API action\. \(When you restrict access to this Route 53 API, you also restrict who can generate an authorization code using the Route 53 console, AWS SDKs, and other programmatic methods\.\) For more information, see [Authentication and Access Control for Amazon Route 53](auth-and-access-control.md)\.  
 **Authorization code required for transfer to Route 53**  
 Not supported\. You can no longer transfer \.qa domains to Route 53\.  
 **DNSSEC**  
@@ -4679,14 +4675,15 @@ The registrar for this TLD is our registrar associate, Gandi\.
 You can no longer use Route 53 to register new \.ru domains or transfer \.ru domains to Route 53\. We'll continue to support \.ru domains that are already registered with Route 53\.  
 **Registration and renewal period**  
 One year\.  
+The registry for \.ru domains updates the expiration date for a domain on the day that the domain expires\. WHOIS queries will show the old expiration date for the domain until that date regardless of when you renew the domain with Route 53\.  
 **Restrictions**  
 Open to the public, with some restrictions:  
-
 + Individuals might need to provide a passport number or government\-issued ID number\. 
-
 + Foreign companies might need to provide a company ID or company registration\.   
 **Privacy protection**  
 Determined by the registry\.  
+**Domain locking to prevent unauthorized transfers**  
+Not supported\. We recommend that you prevent unauthorized transfers by restricting access to the [RetrieveDomainAuthCode](https://docs.aws.amazon.com/Route53/latest/APIReference/API_domains_RetrieveDomainAuthCode.html) API action\. \(When you restrict access to this Route 53 API, you also restrict who can generate an authorization code using the Route 53 console, AWS SDKs, and other programmatic methods\.\) For more information, see [Authentication and Access Control for Amazon Route 53](auth-and-access-control.md)\.  
 **Internationalized domain names**  
 Not supported\.  
 **Authorization code required for transfer to Route 53**  
@@ -4704,6 +4701,8 @@ You can no longer use Route 53 to register new \.sg domains or transfer \.sg do
 One year\.  
 **Privacy protection**  
 Not supported\.  
+**Domain locking to prevent unauthorized transfers**  
+Supported\.  
 **Authorization code required for transfer to Route 53**  
 Not supported\. You can no longer transfer \.sg domains to Route 53\.  
 **DNSSEC**  
@@ -4724,6 +4723,8 @@ One year\.
 Open to the public, with no restrictions\.  
 **Privacy protection**  
 Not supported\.  
+**Domain locking to prevent unauthorized transfers**  
+Supported\.  
 **Internationalized domain names**  
 Supported\.  
 **Authorization code required for transfer to Route 53**  
@@ -4738,14 +4739,13 @@ The registrar for this TLD is our registrar associate, Gandi\.
 One to ten years\.  
 **Restrictions**  
 Open to the public, with some restrictions:  
-
 + The owner, administrative, or technical contact must provide an address in Berlin, and the administrative contact must be an individual\.
-
 + You must activate and use your \.berlin domain within 12 months following its registration \(applies to a website, redirection, or email address\)\. 
-
 + If you publish a website under your \.berlin domain, or if your \.berlin domain redirects to another website, the content of the website must be related to Berlin\.   
 **Privacy protection**  
 Not supported\.  
+**Domain locking to prevent unauthorized transfers**  
+Not supported\. We recommend that you prevent unauthorized transfers by restricting access to the [RetrieveDomainAuthCode](https://docs.aws.amazon.com/Route53/latest/APIReference/API_domains_RetrieveDomainAuthCode.html) API action\. \(When you restrict access to this Route 53 API, you also restrict who can generate an authorization code using the Route 53 console, AWS SDKs, and other programmatic methods\.\) For more information, see [Authentication and Access Control for Amazon Route 53](auth-and-access-control.md)\.  
 **Internationalized domain names**  
 Supported for Latin and Cyrillic\.  
 **Authorization code required for transfer to Route 53**  
@@ -4762,6 +4762,8 @@ One year\.
 Open to the public, with no restrictions\.   
 **Privacy protection**  
 Not supported\.  
+**Domain locking to prevent unauthorized transfers**  
+Not supported\. We recommend that you prevent unauthorized transfers by restricting access to the [RetrieveDomainAuthCode](https://docs.aws.amazon.com/Route53/latest/APIReference/API_domains_RetrieveDomainAuthCode.html) API action\. \(When you restrict access to this Route 53 API, you also restrict who can generate an authorization code using the Route 53 console, AWS SDKs, and other programmatic methods\.\) For more information, see [Authentication and Access Control for Amazon Route 53](auth-and-access-control.md)\.  
 **Internationalized domain names**  
 Supported\.  
 **Authorization code required for transfer to Route 53**  
@@ -4780,22 +4782,21 @@ Open to the public, with no restrictions\.
 If you registered a \.co\.uk, \.me\.uk, or \.org\.uk domain on or before October 28, 2013, you have priority for registering the corresponding \.uk domain until June 10, 2019\.  
 You cannot register a \.uk domain \(such as example\.uk\) for which someone else has already registered a \.co\.uk, \.me\.uk, or \.org\.uk domain \(such as example\.co\.uk\) until the priority period has expired\.
 If different registrants have registered the same name with \.co\.uk, \.me\.uk, and \.org\.uk TLDs \(such as example\.co\.uk, example\.me\.uk, and example\.org\.uk\), priority for registering the \.uk domain name is in the following order:  
-
 + The registrant of the \.co\.uk domain
-
 + The registrant of the \.org\.uk domain
-
 + The registrant of the \.me\.uk domain
 If you registered a \.co\.uk domain between October 29, 2013 and June 10, 2014, you have priority for registering the corresponding \.uk domain until June 10, 2019 unless someone else registered the corresponding \.org\.uk or \.me\.uk domain on or before October 28, 2013\.  
 For more information, see [\.uk Rights FAQs](https://www.theukdomain.uk/advice/do-i-have-uk-rights/uk-rights-faqs/)\.  
 If you want the \.uk domain for a \.co\.uk, \.me\.uk, or \.org\.uk that you already own, use the Route 53 console or API, the AWS CLI, or the SDKs to register the \.uk domain as you would any other domain\. If someone else has a higher priority on an existing \.co\.uk, \.me\.uk, or \.org\.uk domain, we'll notify you by email\. The email will contain the following text:   
 `ErrorState at registrar: 2201 : Authorization error (V334 Your request for domain 'domain name' has failed because the 'account name' for the registrant does not fully match any registrant which has rights for this domain)`  
 **Privacy protection**  
-Supported, but the registry for \.co\.uk, \.me\.uk, and \.org\.uk domains requires that you agree to a privacy protection agreement\. To enable privacy protection for one or more \.co\.uk, \.me\.uk, or \.org\.uk domains, perform the following steps:  
+Supported, but the registry for \.co\.uk, \.me\.uk, \.org\.uk, and \.uk domains requires that you agree to a privacy protection agreement\. To enable privacy protection for one or more \.co\.uk, \.me\.uk, \.org\.uk, or \.uk domains, perform the following steps:  
 
 1. Download and review the document [SPECIAL CONDITIONS FOR THE \.UK ccTLD – ANNEX : WHOIS PRIVACY SERVICE](https://d3i8amvg2lfxz7.cloudfront.net/0118727488_1500313663_whois_privacy_uk_1.0.pdf)\.
 
 1. If you agree with the terms in the document, open a case with customer support and request that they enable privacy protection for your domains\. When you open the case, specify the domain names in the **Description** field\. For more information, see [Contacting Customer Support About Domain Registration Issues](domain-contact-support.md)\.  
+**Domain locking to prevent unauthorized transfers**  
+Not supported\. We recommend that you prevent unauthorized transfers by restricting access to the [RetrieveDomainAuthCode](https://docs.aws.amazon.com/Route53/latest/APIReference/API_domains_RetrieveDomainAuthCode.html) API action\. \(When you restrict access to this Route 53 API, you also restrict who can generate an authorization code using the Route 53 console, AWS SDKs, and other programmatic methods\.\) For more information, see [Authentication and Access Control for Amazon Route 53](auth-and-access-control.md)\.  
 **Internationalized domain names**  
 Not supported\.  
 **Authorization code required for transfer to Route 53**  
@@ -4813,12 +4814,12 @@ The registry for \.co\.uk domains doesn't allow you to delete domain registratio
 One year\.  
 **Restrictions**  
 Open to the public, with some restrictions:  
-
 + You must reside in Germany or have an administrative contact \(physical person\) who resides in Germany and has an address other than a P\.O\. box\.
-
 + During registration, the DNS \(A, MX, and CNAME\) of the domain name must be correctly configured so that it can pass the registry's zone check\. Three servers of two different C classes are required\.  
 **Privacy protection**  
 Not supported\.  
+**Domain locking to prevent unauthorized transfers**  
+Not supported\. We recommend that you prevent unauthorized transfers by restricting access to the [RetrieveDomainAuthCode](https://docs.aws.amazon.com/Route53/latest/APIReference/API_domains_RetrieveDomainAuthCode.html) API action\. \(When you restrict access to this Route 53 API, you also restrict who can generate an authorization code using the Route 53 console, AWS SDKs, and other programmatic methods\.\) For more information, see [Authentication and Access Control for Amazon Route 53](auth-and-access-control.md)\.  
 **Internationalized domain names**  
 Supported\.  
 **Authorization code required for transfer to Route 53**  
@@ -4837,6 +4838,8 @@ One to five years\.
 Open to the public, for those who have an interest in or connection with Spain\.  
 **Privacy protection**  
 Not supported\.  
+**Domain locking to prevent unauthorized transfers**  
+Not supported\. We recommend that you prevent unauthorized transfers by restricting access to the [RetrieveDomainAuthCode](https://docs.aws.amazon.com/Route53/latest/APIReference/API_domains_RetrieveDomainAuthCode.html) API action\. \(When you restrict access to this Route 53 API, you also restrict who can generate an authorization code using the Route 53 console, AWS SDKs, and other programmatic methods\.\) For more information, see [Authentication and Access Control for Amazon Route 53](auth-and-access-control.md)\.  
 **Internationalized domain names**  
 Supported\.  
 **Authorization code required for transfer to Route 53**  
@@ -4851,10 +4854,11 @@ The registrar for this TLD is our registrar associate, Gandi\.
 One to ten years\.  
 **Restrictions**  
 Open to the public, with one restriction:  
-
 + You must provide a valid postal address in one of the 27 member\-states of the European Union\. A local presence is required\.  
 **Privacy protection**  
 Not supported\.  
+**Domain locking to prevent unauthorized transfers**  
+Not supported\. We recommend that you prevent unauthorized transfers by restricting access to the [RetrieveDomainAuthCode](https://docs.aws.amazon.com/Route53/latest/APIReference/API_domains_RetrieveDomainAuthCode.html) API action\. \(When you restrict access to this Route 53 API, you also restrict who can generate an authorization code using the Route 53 console, AWS SDKs, and other programmatic methods\.\) For more information, see [Authentication and Access Control for Amazon Route 53](auth-and-access-control.md)\.  
 **Internationalized domain names**  
 Supported\.  
 **Authorization code required for transfer to Route 53**  
@@ -4869,22 +4873,17 @@ The registrar for this TLD is our registrar associate, Gandi\.
 One year\.  
 **Restrictions**  
 Open to the public, with some restrictions:  
-
 + The \.fi extension is available to individuals who have a domicile in Finland and have a Finnish identity number, and legal persons or private entrepreneurs registered in Finland\. 
-
 + You must provide the following information during registration:
-
   + Whether or not the contact is based on a physical or moral person in Finland\.
-
   + The identifier of the register where the name is recorded, if based on a moral person's name\.
-
   + The number of the record in the register where the name is recorded, if based on a moral person's name\.
-
   + The identification number for a moral person in Finland\.
-
   + The identification number for a physical person in Finland\.  
 **Privacy protection**  
 Not supported\.  
+**Domain locking to prevent unauthorized transfers**  
+Not supported\. We recommend that you prevent unauthorized transfers by restricting access to the [RetrieveDomainAuthCode](https://docs.aws.amazon.com/Route53/latest/APIReference/API_domains_RetrieveDomainAuthCode.html) API action\. \(When you restrict access to this Route 53 API, you also restrict who can generate an authorization code using the Route 53 console, AWS SDKs, and other programmatic methods\.\) For more information, see [Authentication and Access Control for Amazon Route 53](auth-and-access-control.md)\.  
 **Internationalized domain names**  
 Supported\.  
 **Authorization code required for transfer to Route 53**  
@@ -4901,22 +4900,17 @@ The registry for \.fi domains doesn't allow you to delete domain registrations\.
 One year\.  
 **Restrictions**  
 Open to the public, with some restrictions:  
-
 + Individuals must be at least 18 and must provide their date\-of\-birth\. 
-
 + Organizations must be located in the European Economic Area or in Switzerland\. 
-
 + Organizations should fill out all company identification fields \(VAT number, SIREN, WALDEC, DUNS, and so on\), as this will facilitate any verification that AFNIC might perform at a later date\.
-
 + The same eligibility conditions apply to the administrative contact\.
-
 + Names and terms are subject to an AFNIC prior review \(Naming Charter Article 2\.4\) and to the following additional conditions:
-
   + Domain names previously reserved or prohibited are open to applicants that justify a legitimate right and act in good faith\.
-
   + Names beginning with ville, mairie, agglo, cc, cg, and cr are subject to AFNIC naming conventions\.   
 **Privacy protection**  
 Determined by the registry\.  
+**Domain locking to prevent unauthorized transfers**  
+Not supported\. We recommend that you prevent unauthorized transfers by restricting access to the [RetrieveDomainAuthCode](https://docs.aws.amazon.com/Route53/latest/APIReference/API_domains_RetrieveDomainAuthCode.html) API action\. \(When you restrict access to this Route 53 API, you also restrict who can generate an authorization code using the Route 53 console, AWS SDKs, and other programmatic methods\.\) For more information, see [Authentication and Access Control for Amazon Route 53](auth-and-access-control.md)\.  
 **Internationalized domain names**  
 Supported\.  
 **Authorization code required for transfer to Route 53**  
@@ -4933,6 +4927,8 @@ One to ten years\.
 Open to the public, with no restrictions\.  
 **Privacy protection**  
 Not supported\.  
+**Domain locking to prevent unauthorized transfers**  
+Supported\.  
 **Internationalized domain names**  
 Supported\.  
 **Authorization code required for transfer to Route 53**  
@@ -4950,6 +4946,8 @@ One year\.
 Open to the public, with no restrictions\.  
 **Privacy protection**  
 Not supported\.  
+**Domain locking to prevent unauthorized transfers**  
+Supported\.  
 **Internationalized domain names**  
 Not supported\.  
 **Authorization code required for transfer to Route 53**  
@@ -4964,16 +4962,14 @@ The registrar for this TLD is our registrar associate, Gandi\.
 One year\.  
 **Restrictions**  
 Open to the public, with some restrictions:  
-
 + Individuals or organizations must have a registered address in the European Union\.
-
 + If your country of origin is Italy, you must enter a fiscal code\. If your country of origin is within the European Union, you must enter an identity document number \(ID number\)\.
-
 + If you specify **Company**, **Association**, or **Public body** for the contact type, a VAT number \(a value\-added tax identification number\) is required\.
-
 + Name servers for your domain must pass a DNS check\. If your domain name does not comply with the technical requirements, and you do not correct it within 30 days, your domain name will be deleted by the registry\. We don't issue refunds for domains that are deleted because they don't meet technical requirements\.  
 **Privacy protection**  
 Not supported\.  
+**Domain locking to prevent unauthorized transfers**  
+Not supported\. We recommend that you prevent unauthorized transfers by restricting access to the [RetrieveDomainAuthCode](https://docs.aws.amazon.com/Route53/latest/APIReference/API_domains_RetrieveDomainAuthCode.html) API action\. \(When you restrict access to this Route 53 API, you also restrict who can generate an authorization code using the Route 53 console, AWS SDKs, and other programmatic methods\.\) For more information, see [Authentication and Access Control for Amazon Route 53](auth-and-access-control.md)\.  
 **Internationalized domain names**  
 Supported\.  
 **Authorization code required for transfer to Route 53**  
@@ -4990,6 +4986,8 @@ One to ten years\.
 Domain\.me, the registry for \.me domains, considers two\-letter domain names and some longer domain names to be premium domain names\. You can't register premium \.me domains with or transfer them to Route 53\. For more information about premium \.me domain names, see the [domain\.me](https://domain.me/) website\.  
 **Privacy protection**  
 All information is hidden\.  
+**Domain locking to prevent unauthorized transfers**  
+Supported\.  
 **Internationalized domain names**  
 Not supported\.  
 **Authorization code required for transfer to Route 53**  
@@ -5008,22 +5006,21 @@ Open to the public, with no restrictions\.
 If you registered a \.co\.uk, \.me\.uk, or \.org\.uk domain on or before October 28, 2013, you have priority for registering the corresponding \.uk domain until June 10, 2019\.  
 You cannot register a \.uk domain \(such as example\.uk\) for which someone else has already registered a \.co\.uk, \.me\.uk, or \.org\.uk domain \(such as example\.co\.uk\) until the priority period has expired\.
 If different registrants have registered the same name with \.co\.uk, \.me\.uk, and \.org\.uk TLDs \(such as example\.co\.uk, example\.me\.uk, and example\.org\.uk\), priority for registering the \.uk domain name is in the following order:  
-
 + The registrant of the \.co\.uk domain
-
 + The registrant of the \.org\.uk domain
-
 + The registrant of the \.me\.uk domain
 If you registered a \.co\.uk domain between October 29, 2013 and June 10, 2014, you have priority for registering the corresponding \.uk domain until June 10, 2019 unless someone else registered the corresponding \.org\.uk or \.me\.uk domain on or before October 28, 2013\.  
 For more information, see [\.uk Rights FAQs](https://www.theukdomain.uk/advice/do-i-have-uk-rights/uk-rights-faqs/)\.  
 If you want the \.uk domain for a \.co\.uk, \.me\.uk, or \.org\.uk that you already own, use the Route 53 console or API, the AWS CLI, or the SDKs to register the \.uk domain as you would any other domain\. If someone else has a higher priority on an existing \.co\.uk, \.me\.uk, or \.org\.uk domain, we'll notify you by email\. The email will contain the following text:   
 `ErrorState at registrar: 2201 : Authorization error (V334 Your request for domain 'domain name' has failed because the 'account name' for the registrant does not fully match any registrant which has rights for this domain)`  
 **Privacy protection**  
-Supported, but the registry for \.co\.uk, \.me\.uk, and \.org\.uk domains requires that you agree to a privacy protection agreement\. To enable privacy protection for one or more \.co\.uk, \.me\.uk, or \.org\.uk domains, perform the following steps:  
+Supported, but the registry for \.co\.uk, \.me\.uk, \.org\.uk, and \.uk domains requires that you agree to a privacy protection agreement\. To enable privacy protection for one or more \.co\.uk, \.me\.uk, \.org\.uk, or \.uk domains, perform the following steps:  
 
 1. Download and review the document [SPECIAL CONDITIONS FOR THE \.UK ccTLD – ANNEX : WHOIS PRIVACY SERVICE](https://d3i8amvg2lfxz7.cloudfront.net/0118727488_1500313663_whois_privacy_uk_1.0.pdf)\.
 
 1. If you agree with the terms in the document, open a case with customer support and request that they enable privacy protection for your domains\. When you open the case, specify the domain names in the **Description** field\. For more information, see [Contacting Customer Support About Domain Registration Issues](domain-contact-support.md)\.  
+**Domain locking to prevent unauthorized transfers**  
+Not supported\. We recommend that you prevent unauthorized transfers by restricting access to the [RetrieveDomainAuthCode](https://docs.aws.amazon.com/Route53/latest/APIReference/API_domains_RetrieveDomainAuthCode.html) API action\. \(When you restrict access to this Route 53 API, you also restrict who can generate an authorization code using the Route 53 console, AWS SDKs, and other programmatic methods\.\) For more information, see [Authentication and Access Control for Amazon Route 53](auth-and-access-control.md)\.  
 **Internationalized domain names**  
 Not supported\.  
 **Authorization code required for transfer to Route 53**  
@@ -5041,12 +5038,12 @@ The registry for \.me\.uk domains doesn't allow you to delete domain registratio
 One year\.  
 **Restrictions**  
 Open to the public, with some restrictions:  
-
 + The owner or the administrative contact must provide a valid address in the Netherlands\. A local presence is required\.
-
 + If you do not have a valid address in the Netherlands, the Registry SIDN will provide you with a domicile address, as per the Domicile Address Procedure\.  
 **Privacy protection**  
 Determined by the registry\.  
+**Domain locking to prevent unauthorized transfers**  
+Not supported\. We recommend that you prevent unauthorized transfers by restricting access to the [RetrieveDomainAuthCode](https://docs.aws.amazon.com/Route53/latest/APIReference/API_domains_RetrieveDomainAuthCode.html) API action\. \(When you restrict access to this Route 53 API, you also restrict who can generate an authorization code using the Route 53 console, AWS SDKs, and other programmatic methods\.\) For more information, see [Authentication and Access Control for Amazon Route 53](auth-and-access-control.md)\.  
 **Internationalized domain names**  
 Not supported\.  
 **Authorization code required for transfer to Route 53**  
@@ -5065,22 +5062,21 @@ Open to the public, with no restrictions\.
 If you registered a \.co\.uk, \.me\.uk, or \.org\.uk domain on or before October 28, 2013, you have priority for registering the corresponding \.uk domain until June 10, 2019\.  
 You cannot register a \.uk domain \(such as example\.uk\) for which someone else has already registered a \.co\.uk, \.me\.uk, or \.org\.uk domain \(such as example\.co\.uk\) until the priority period has expired\.
 If different registrants have registered the same name with \.co\.uk, \.me\.uk, and \.org\.uk TLDs \(such as example\.co\.uk, example\.me\.uk, and example\.org\.uk\), priority for registering the \.uk domain name is in the following order:  
-
 + The registrant of the \.co\.uk domain
-
 + The registrant of the \.org\.uk domain
-
 + The registrant of the \.me\.uk domain
 If you registered a \.co\.uk domain between October 29, 2013 and June 10, 2014, you have priority for registering the corresponding \.uk domain until June 10, 2019 unless someone else registered the corresponding \.org\.uk or \.me\.uk domain on or before October 28, 2013\.  
 For more information, see [\.uk Rights FAQs](https://www.theukdomain.uk/advice/do-i-have-uk-rights/uk-rights-faqs/)\.  
 If you want the \.uk domain for a \.co\.uk, \.me\.uk, or \.org\.uk that you already own, use the Route 53 console or API, the AWS CLI, or the SDKs to register the \.uk domain as you would any other domain\. If someone else has a higher priority on an existing \.co\.uk, \.me\.uk, or \.org\.uk domain, we'll notify you by email\. The email will contain the following text:   
 `ErrorState at registrar: 2201 : Authorization error (V334 Your request for domain 'domain name' has failed because the 'account name' for the registrant does not fully match any registrant which has rights for this domain)`  
 **Privacy protection**  
-Supported, but the registry for \.co\.uk, \.me\.uk, and \.org\.uk domains requires that you agree to a privacy protection agreement\. To enable privacy protection for one or more \.co\.uk, \.me\.uk, or \.org\.uk domains, perform the following steps:  
+Supported, but the registry for \.co\.uk, \.me\.uk, \.org\.uk, and \.uk domains requires that you agree to a privacy protection agreement\. To enable privacy protection for one or more \.co\.uk, \.me\.uk, \.org\.uk, or \.uk domains, perform the following steps:  
 
 1. Download and review the document [SPECIAL CONDITIONS FOR THE \.UK ccTLD – ANNEX : WHOIS PRIVACY SERVICE](https://d3i8amvg2lfxz7.cloudfront.net/0118727488_1500313663_whois_privacy_uk_1.0.pdf)\.
 
 1. If you agree with the terms in the document, open a case with customer support and request that they enable privacy protection for your domains\. When you open the case, specify the domain names in the **Description** field\. For more information, see [Contacting Customer Support About Domain Registration Issues](domain-contact-support.md)\.  
+**Domain locking to prevent unauthorized transfers**  
+Not supported\. We recommend that you prevent unauthorized transfers by restricting access to the [RetrieveDomainAuthCode](https://docs.aws.amazon.com/Route53/latest/APIReference/API_domains_RetrieveDomainAuthCode.html) API action\. \(When you restrict access to this Route 53 API, you also restrict who can generate an authorization code using the Route 53 console, AWS SDKs, and other programmatic methods\.\) For more information, see [Authentication and Access Control for Amazon Route 53](auth-and-access-control.md)\.  
 **Internationalized domain names**  
 Not supported\.  
 **Authorization code required for transfer to Route 53**  
@@ -5099,10 +5095,11 @@ The \.ruhr extension is for the Ruhr region \(western part of Germany\)\.
 One to ten years\.  
 **Restrictions**  
 Open to the public, with one restriction:  
-
 + The administrative contact must be an individual who has an address in Germany\.  
 **Privacy protection**  
 Not supported\.  
+**Domain locking to prevent unauthorized transfers**  
+Not supported\. We recommend that you prevent unauthorized transfers by restricting access to the [RetrieveDomainAuthCode](https://docs.aws.amazon.com/Route53/latest/APIReference/API_domains_RetrieveDomainAuthCode.html) API action\. \(When you restrict access to this Route 53 API, you also restrict who can generate an authorization code using the Route 53 console, AWS SDKs, and other programmatic methods\.\) For more information, see [Authentication and Access Control for Amazon Route 53](auth-and-access-control.md)\.  
 **Internationalized domain names**  
 Supported \(ä, ö, ü, ß\)\.  
 **Authorization code required for transfer to Route 53**  
@@ -5117,12 +5114,12 @@ The registrar for this TLD is our registrar associate, Gandi\.
 One to ten years\.  
 **Restrictions**  
 Open to the public, with some restrictions:  
-
 + If you are located in Sweden, you must provide a valid Swedish ID number\. 
-
 + If you are located outside of Sweden, you must enter a valid ID number such as a tax ID number\.  
 **Privacy protection**  
 Not supported\.  
+**Domain locking to prevent unauthorized transfers**  
+Not supported\. We recommend that you prevent unauthorized transfers by restricting access to the [RetrieveDomainAuthCode](https://docs.aws.amazon.com/Route53/latest/APIReference/API_domains_RetrieveDomainAuthCode.html) API action\. \(When you restrict access to this Route 53 API, you also restrict who can generate an authorization code using the Route 53 console, AWS SDKs, and other programmatic methods\.\) For more information, see [Authentication and Access Control for Amazon Route 53](auth-and-access-control.md)\.  
 **Internationalized domain names**  
 Supported for Latin, Swedish, and Yiddish\.  
 **Authorization code required for transfer to Route 53**  
@@ -5141,16 +5138,19 @@ Open to the public, with no restrictions\.
 If you registered a \.co\.uk domain before June 10, 2014 or a \.me\.uk or \.org\.uk domain before October 29, 2013, you have priority for registering the corresponding \.uk domain for five years\.   
 You cannot register a \.uk domain \(such as example\.uk\) for which someone else has already registered a \.co\.uk, \.me\.uk, or \.org\.uk domain \(such as example\.co\.uk\) until the priority period has expired\.
 If different registrants have registered the same name with \.co\.uk, \.me\.uk, and \.org\.uk TLDs \(such as example\.co\.uk, example\.me\.uk, and example\.org\.uk\), priority for registering the \.uk domain name is in the following order:  
-
 + The registrant of the \.co\.uk domain
-
 + The registrant of the \.org\.uk domain
-
 + The registrant of the \.me\.uk domain
 If you want the \.uk domain for a \.co\.uk, \.me\.uk, or \.org\.uk that you already own, use the Route 53 console or API, the AWS CLI, or the SDKs to register the \.uk domain as you would any other domain\. If someone else has a higher priority on an existing \.co\.uk, \.me\.uk, or \.org\.uk domain, we'll notify you by email\. The email will contain the following text:   
 `ErrorState at registrar: 2201 : Authorization error (V334 Your request for domain 'domain name' has failed because the 'account name' for the registrant does not fully match any registrant which has rights for this domain)`  
 **Privacy protection**  
-Not supported\.  
+Supported, but the registry for \.co\.uk, \.me\.uk, \.org\.uk, and \.uk domains requires that you agree to a privacy protection agreement\. To enable privacy protection for one or more \.co\.uk, \.me\.uk, \.org\.uk, or \.uk domains, perform the following steps:  
+
+1. Download and review the document [SPECIAL CONDITIONS FOR THE \.UK ccTLD – ANNEX : WHOIS PRIVACY SERVICE](https://d3i8amvg2lfxz7.cloudfront.net/0118727488_1500313663_whois_privacy_uk_1.0.pdf)\.
+
+1. If you agree with the terms in the document, open a case with customer support and request that they enable privacy protection for your domains\. When you open the case, specify the domain names in the **Description** field\. For more information, see [Contacting Customer Support About Domain Registration Issues](domain-contact-support.md)\.  
+**Domain locking to prevent unauthorized transfers**  
+Not supported\. We recommend that you prevent unauthorized transfers by restricting access to the [RetrieveDomainAuthCode](https://docs.aws.amazon.com/Route53/latest/APIReference/API_domains_RetrieveDomainAuthCode.html) API action\. \(When you restrict access to this Route 53 API, you also restrict who can generate an authorization code using the Route 53 console, AWS SDKs, and other programmatic methods\.\) For more information, see [Authentication and Access Control for Amazon Route 53](auth-and-access-control.md)\.  
 **Internationalized domain names**  
 Not supported\.  
 **Authorization code required for transfer to Route 53**  
@@ -5168,12 +5168,12 @@ The registry for \.uk domains doesn't allow you to delete domain registrations\.
 One to ten years\.  
 **Restrictions**  
 Open to the public, with some restrictions:  
-
 + You must show an economic, cultural, tourist, historical, social, or other affinity with the city of Vienna in Austria\. 
-
 + The \.wien domain names must be used in connection with the above conditions, throughout the term of registration\.  
 **Privacy protection**  
 Not supported\.  
+**Domain locking to prevent unauthorized transfers**  
+Not supported\. We recommend that you prevent unauthorized transfers by restricting access to the [RetrieveDomainAuthCode](https://docs.aws.amazon.com/Route53/latest/APIReference/API_domains_RetrieveDomainAuthCode.html) API action\. \(When you restrict access to this Route 53 API, you also restrict who can generate an authorization code using the Route 53 console, AWS SDKs, and other programmatic methods\.\) For more information, see [Authentication and Access Control for Amazon Route 53](auth-and-access-control.md)\.  
 **Internationalized domain names**  
 Supported for Latin\.  
 **Authorization code required for transfer to Route 53**  

@@ -5,17 +5,13 @@ To use Route 53 to configure DNS failover, perform the following tasks:
 1. Draw a complete tree diagram of your configuration, and indicate which type of record you're creating \(weighted alias, failover, latency, and so on\) for each node\. At the top of the tree put the records for the domain name, such as example\.com, that your users will use to access your website or web application\.
 
    The kinds of records that appear in your tree diagram depend on the complexity of the configuration:
-
    + In a simple configuration, either your diagram won't include any alias records, or the alias records will route traffic directly to a resource, such as an ELB load balancer, instead of to another Route 53 record\. For more information, see [How Health Checks Work in Simple Amazon Route 53 ConfigurationsHow Health Checks Work in Simple Configurations](dns-failover-simple-configs.md)\.
-
    + In a complex configuration, your diagram will include a combination of alias records \(such as weighted alias and failover alias\) and non\-alias records in a multi\-level tree like the examples in the topic [How Health Checks Work in Complex Amazon Route 53 ConfigurationsHow Health Checks Work in Complex Configurations](dns-failover-complex-configs.md)\.
 **Note**  
 To quickly and easily create records for complex routing configurations and associate the records with health checks, you can use the traffic flow visual editor and save the configuration as a traffic policy\. You can then associate the traffic policy with one or more domain names \(such as example\.com\) or subdomain names \(such as www\.example\.com\), in the same hosted zone or in multiple hosted zones\. In addition, you can roll back the updates if the new configuration isn't performing as you expected it to\. For more information, see [Using Traffic Flow to Route DNS Traffic](traffic-flow.md)\.
 
    For more information, see the following documentation:
-
    + [Choosing a Routing Policy](routing-policy.md)
-
    + [Choosing Between Alias and Non\-Alias Records](resource-record-sets-choosing-alias-non-alias.md)
 
 1. Create health checks for the resources that you can't create alias records for, such as Amazon EC2 servers and email servers running in your data center\. You'll associate these health checks with your non\-alias records\.

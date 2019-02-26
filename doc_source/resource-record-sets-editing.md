@@ -1,9 +1,9 @@
 # Editing Records<a name="resource-record-sets-editing"></a>
 
-The following procedure explains how to edit records using the Amazon Route 53 console\. For information about how to edit records using the Route 53 API, see [ChangeResourceRecordSets](http://docs.aws.amazon.com/Route53/latest/APIReference/API_ChangeResourceRecordSets.html) in the *Amazon Route 53 API Reference*\.
+The following procedure explains how to edit records using the Amazon Route 53 console\. For information about how to edit records using the Route 53 API, see [ChangeResourceRecordSets](https://docs.aws.amazon.com/Route53/latest/APIReference/API_ChangeResourceRecordSets.html) in the *Amazon Route 53 API Reference*\.
 
 **Note**  
-Your changes to records take time to propagate to the Route 53 DNS servers\. Currently, the only way to verify that changes have propagated is to use the [GetChange](http://docs.aws.amazon.com/Route53/latest/APIReference/API_GetChange.html) API action\. Changes generally propagate to all Route 53 name servers within 60 seconds\.
+Your changes to records take time to propagate to the Route 53 DNS servers\. Currently, the only way to verify that changes have propagated is to use the [GetChange](https://docs.aws.amazon.com/Route53/latest/APIReference/API_GetChange.html) API action\. Changes generally propagate to all Route 53 name servers within 60 seconds\.<a name="resource-record-sets-editing-procedure"></a>
 
 **To edit records using the Route 53 console**
 
@@ -15,12 +15,14 @@ Your changes to records take time to propagate to the Route 53 DNS servers\. Cu
 
 1. Sign in to the AWS Management Console and open the Route 53 console at [https://console\.aws\.amazon\.com/route53/](https://console.aws.amazon.com/route53/)\.
 
-1. On the **Hosted Zones** page, double\-click the row for the hosted zone in which you want to edit records\.
+1. In the navigation pane, choose **Hosted zones**\.
 
-1. Double\-click the row for the record that you want to edit\. 
+1. On the **Hosted Zones** page, choose the row for the hosted zone that contains the records that you want to edit\.
+
+1. Choose the row for the record that you want to edit\. 
 
 1. Enter the applicable values\. For more information, see [Values That You Specify When You Create or Edit Amazon Route 53 Records](resource-record-sets-values.md)\. 
 
-1. Click **Save Record Set**\.
+1. Choose **Save Record Set**\.
 
-1. If you're editing multiple records, repeat steps 4 through 6\.
+1. If you're editing multiple records, repeat steps 5 through 7\.

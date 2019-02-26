@@ -2,7 +2,7 @@
 
 The topics in this chapter can help you troubleshoot problems with your domain registration and DNS configuration\.
 
-
+**Topics**
 + [My domain is unavailable on the internet](troubleshooting-domain-unavailable.md)
 + [My domain is suspended \(status is ClientHold\)](troubleshooting-domain-suspended.md)
 + [Transferring my domain to Amazon Route 53 failed](troubleshooting-domain-transfer-failed.md)

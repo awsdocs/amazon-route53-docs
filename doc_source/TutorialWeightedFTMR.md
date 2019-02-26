@@ -12,29 +12,19 @@ Multi\-record answers are also useful when a large number of clients \(for examp
 These types of weighted multi\-record answers can be achieved by using a combination of records and weighted alias records\. You can group eight endpoints into two distinct record sets containing four IP addresses each:
 
 `endpoint-a.example.com`, type A, with the following values:
-
 + 192\.0\.2\.1
-
 + 192\.0\.2\.2
-
 + 192\.0\.2\.128
-
 + 192\.0\.2\.129
 
 `endpoint-b.example.com`, type A, with the following values:
-
 + 192\.0\.2\.3
-
 + 192\.0\.2\.4
-
 + 192\.0\.2\.130
-
 + 192\.0\.2\.131
 
 You can then create a weighted alias record that points to each group:
-
 + `www.example.com` aliases to `endpoint-a.example.com`, type A, weight 1
-
 + `www.example.com` aliases to `endpoint-b.example.com`, type A, weight 1
 
 For more information about creating records, see [Working with Records](rrsets-working-with.md)\.

@@ -3,11 +3,8 @@
 After you create a hosted zone for your domain, such as example\.com, you create records to tell the Domain Name System \(DNS\) how you want traffic to be routed for that domain\.
 
 For example, you might create records that cause DNS to do the following:
-
 + Route internet traffic for example\.com to the IP address of a host in your data center\.
-
 + Route email for that domain \(ichiro@example\.com\) to a mail server \(mail\.example\.com\)\.
-
 + Route traffic for a subdomain called operations\.tokyo\.example\.com to the IP address of a different host\. 
 
 Each record includes the name of a domain or a subdomain, a record type \(for example, a record with a type of MX routes email\), and other information applicable to the record type \(for MX records, the host name of one or more mail servers and a priority for each server\)\. For information about the different record types, see [DNS Domain Name Format](DomainNameFormat.md)\.
@@ -19,7 +16,7 @@ To create records for complex routing configurations, you can also use the traff
 
 Amazon Route 53 doesn't charge for the records that you add to a hosted zone\. For information about limits on the number of records that you can create in a hosted zone, see [Limits](DNSLimitations.md)\. 
 
-
+**Topics**
 + [Choosing a Routing Policy](routing-policy.md)
 + [Choosing Between Alias and Non\-Alias Records](resource-record-sets-choosing-alias-non-alias.md)
 + [Supported DNS Record Types](ResourceRecordTypes.md)

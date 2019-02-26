@@ -6,7 +6,7 @@ When you have two or more resources that perform the same function, such as two 
 If you're routing traffic to resources that you can't create alias records for, such as EC2 instances, you create a record and a health check for each resource\. Then you associate each health check with the applicable record\. Health checks regularly check the health of the corresponding resources, and Route 53 routes traffic only to the resources that health checks report as healthy\.
 
 **Evaluate the health of an AWS resource \(alias records\)**  
-If you're using [alias records](http://docs.aws.amazon.com/Route53/latest/DeveloperGuide/resource-record-sets-choosing-alias-non-alias.html) to route traffic to selected AWS resources, such as ELB load balancers, you can configure Route 53 to evaluate the health of the resource and to route traffic only to resources that are healthy\. When you configure an alias record to evaluate the health of a resource, you don't need to create a health check for the resource\.
+If you're using [alias records](https://docs.aws.amazon.com/Route53/latest/DeveloperGuide/resource-record-sets-choosing-alias-non-alias.html) to route traffic to selected AWS resources, such as ELB load balancers, you can configure Route 53 to evaluate the health of the resource and to route traffic only to resources that are healthy\. When you configure an alias record to evaluate the health of a resource, you don't need to create a health check for the resource\.
 
 Here's an overview of how you configure Route 53 to check the health of your resources in simple configurations:
 
@@ -27,9 +27,7 @@ Route 53 can't check the health of resources that have an IP address in local, 
 1. You create a group of records for your resources, for example, a group of weighted records\. You can mix alias and non\-alias records, but they all must have the same value for **Name**, **Type**, and **Routing Policy**\.
 
    How you configure Route 53 to check the health of your resources depends on whether you're creating alias records or non\-alias records:
-
    + **Alias records** – Specify **Yes** for **Evaluate Target Health**\.
-
    + **Non\-alias records** – Associate the health checks that you created in step 2 with the corresponding records\. 
 
    When you're finished, your configuration looks similar to the following diagram, which includes only non\-alias records\.  
@@ -54,9 +52,7 @@ Here's what happens when Route 53 receives a query for example\.com:
 1. When Route 53 finds a healthy record, it responds to the query with the applicable value, such as the IP address in an A record\. 
 
 The following example shows a group of weighted records in which the third record is unhealthy\. Initially, Route 53 selects a record based on the weights of all three records\. If it happens to select the unhealthy record the first time, Route 53 selects another record, but this time it omits the weight of the third record from the calculation:
-
 + When Route 53 initially selects from among all three records, it responds to requests using the first record about 20% of the time, 10/\(10 \+ 20 \+ 20\)\. 
-
 + When Route 53 determines that the third record is unhealthy, it responds to requests using the first record about 33% of the time, 10/\(10 \+ 20\)\.
 
 ![\[Three weighted records and the corresponding health checks. The third health check is unhealthy, so Route 53 considers the associated record to be unhealthy.\]](http://docs.aws.amazon.com/Route53/latest/DeveloperGuide/images/hc-weighted-failed-hc.png)

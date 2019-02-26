@@ -2,7 +2,7 @@
 
 You can integrate Amazon Route 53 with other AWS services to log requests that are sent to the Route 53 API, monitor the status of your resources, and assign tags to your resources\. In addition, you can use Route 53 to route internet traffic to your AWS resources\.
 
-
+**Topics**
 + [Logging, Monitoring, and Tagging](#integration-logging-monitoring-tagging)
 + [Routing Traffic to Other AWS Resources](#integration-routing-traffic)
 
@@ -24,6 +24,10 @@ For more information, see [Tagging Amazon Route 53 Resources](tagging-resources
 
 You can use Amazon Route 53 to route traffic to a variety of AWS resources\.
 
+**Amazon API Gateway**  
+Amazon API Gateway lets you create, publish, maintain, monitor, and secure APIs at any scale\. You can create APIs that access AWS or other web services, as well as data stored in the AWS Cloud\.  
+You can use Route 53 to route traffic to an API Gateway API\. For more information, see [Routing Traffic to an Amazon API Gateway API by Using Your Domain Name](routing-to-api-gateway.md)\.
+
 **Amazon CloudFront**  
 To speed up delivery of your web content, you can use Amazon CloudFront, the AWS content delivery network \(CDN\)\. CloudFront can deliver your entire website—including dynamic, static, streaming, and interactive content—by using a global network of edge locations\. CloudFront routes requests for your content to the edge location that gives your users the lowest latency\. You can use Route 53 to route traffic for your domain to your CloudFront distribution\. For more information, see [Routing Traffic to an Amazon CloudFront Web Distribution by Using Your Domain Name](routing-to-cloudfront-distribution.md)\.
 
@@ -43,10 +47,12 @@ If you use an Amazon RDS database instance for data storage for your web applica
 
 **Amazon S3**  
 Amazon Simple Storage Service \(Amazon S3\) provides secure, durable, highly scalable cloud storage\. You can configure an S3 bucket to host a static website that can include web pages and client\-side scripts\. \(S3 doesn't support server\-side scripting\.\) You can use Route 53 to route traffic to an Amazon S3 bucket\. For more information, see the following topics:  
-
 + For information about routing traffic to a bucket, see [Routing Traffic to a Website that Is Hosted in an Amazon S3 Bucket](RoutingToS3Bucket.md)\.
-
 + For a more detailed explanation of how to host a static website in an S3 bucket, see [Getting Started with Amazon Route 53](getting-started.md)\.
+
+**Amazon Virtual Private Cloud \(Amazon VPC\)**  
+An interface endpoint lets you connect to services that are powered by AWS PrivateLink\. These services include some AWS services, services hosted by other AWS customers and partners in their own VPCs \(referred to as *endpoint services*\), and supported AWS Marketplace partner services\.  
+You can use Route 53 to route traffic to an interface endpoint\. For more information, see [Routing Traffic to an Amazon Virtual Private Cloud Interface Endpoint by Using Your Domain Name](routing-to-vpc-interface-endpoint.md)\.
 
 **Amazon WorkMail**  
 If you're using Amazon WorkMail for your business email and you're using Route 53 as your DNS service, you can use Route 53 to route traffic to your Amazon WorkMail email domain\. For more information, see [Routing Traffic to Amazon WorkMail](routing-to-workmail.md)\.

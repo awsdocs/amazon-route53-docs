@@ -7,13 +7,13 @@ The DNS checking tool does not indicate whether Route 53 is currently the DNS s
 
 The DNS checking tool works only for public hosted zones\.
 
-
+**Topics**
 + [Using the Checking Tool to See How Amazon Route 53 Responds to DNS Queries](#dns-test-how-route-53-responds)
 + [Using the Checking Tool to Simulate Queries from Specific IP Addresses \(Geolocation and Latency Records Only\)](#dns-test-simulate-requests)
 
 ## Using the Checking Tool to See How Amazon Route 53 Responds to DNS Queries<a name="dns-test-how-route-53-responds"></a>
 
-You can use the tool to see what response Amazon Route 53 returns in response to a DNS query for a record\.
+You can use the tool to see what response Amazon Route 53 returns in response to a DNS query for a record\.<a name="dns-test-how-route-53-responds-procedure"></a>
 
 **To use the checking tool to see how Route 53 responds to DNS queries**
 
@@ -40,18 +40,14 @@ A code that indicates whether the query was valid or not\. The most common respo
 The protocol that Amazon Route 53 used to respond to the query, either **UDP** or **TCP**\.  
 **Response returned by Route 53**  
 The value that Route 53 would return to a web application\. The value is one of the following:  
-
    + For non\-alias records, the response contains the value or values in the record\.
-
    + For multiple records that have the same name and type, which includes weighted, latency, geolocation, and failover, the response contains the value from the appropriate record, based on the request\. 
-
    + For alias records that refer to AWS resources other than another record, the response contains an IP address or a domain name for the AWS resource, depending on the type of resource\.
-
    + For alias records that refer to other records, the response contains the value or values from the referenced record\.
 
 ## Using the Checking Tool to Simulate Queries from Specific IP Addresses \(Geolocation and Latency Records Only\)<a name="dns-test-simulate-requests"></a>
 
-If you have created latency or geolocation records, you can use the checking tool to simulate queries from the IP address for a DNS resolver and a client\.
+If you have created latency or geolocation records, you can use the checking tool to simulate queries from the IP address for a DNS resolver and a client\.<a name="dns-test-simulate-requests-procedure"></a>
 
 **To use the checking tool to simulate queries from specified IP addresses**
 
@@ -86,11 +82,7 @@ A code that indicates whether the query was valid or not\. The most common respo
 The protocol that Amazon Route 53 used to respond to the query, either **UDP** or **TCP**\.  
 **Response returned by Route 53**  
 The value that Route 53 would return to a web application\. The value is one of the following:  
-
    + For non\-alias records, the response contains the value or values in the record\.
-
    + For multiple records that have the same name and type, which includes weighted, latency, geolocation, and failover, the response contains the value from the appropriate record, based on the request\. 
-
    + For alias records that refer to AWS resources other than another record, the response contains an IP address or a domain name for the AWS resource, depending on the type of resource\.
-
    + For alias records that refer to other records, the response contains the value or values from the referenced record\.

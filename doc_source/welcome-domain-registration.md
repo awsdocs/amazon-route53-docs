@@ -11,11 +11,8 @@ Here's an overview of how you register a domain name with Amazon Route 53:
 1. You register the domain name with Route 53\. When you register a domain, you provide names and contact information for the domain owner and other contacts\.
 
    When you register a domain with Route 53, the service automatically makes itself the DNS service for the domain by doing the following:
-
    + Creates a [hosted zone](route-53-concepts.md#route-53-concepts-hosted-zone) that has the same name as your domain\.
-
-   + Assigns a set of four name servers to the hosted zone\. When someone uses a browser to access your website, such as www\.example\.com, these name servers tell the browser where to find your resources, such as a web server or an Amazon S3 bucket\. \([Amazon S3](http://docs.aws.amazon.com/s3/) is object storage for storing and retrieving any amount of data from anywhere on the web\. A bucket is a container for objects that you store in S3\.\)
-
+   + Assigns a set of four name servers to the hosted zone\. When someone uses a browser to access your website, such as www\.example\.com, these name servers tell the browser where to find your resources, such as a web server or an Amazon S3 bucket\. \([Amazon S3](https://docs.aws.amazon.com/s3/) is object storage for storing and retrieving any amount of data from anywhere on the web\. A bucket is a container for objects that you store in S3\.\)
    + Gets the name servers from the hosted zone and adds them to the domain\. 
 
    For more information, see [How Internet Traffic Is Routed to Your Website or Web Application](welcome-dns-service.md)\.

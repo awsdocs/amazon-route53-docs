@@ -2,7 +2,7 @@
 
 Here are the most common reasons that your domain is not available on the internet\.
 
-
+**Topics**
 + [You registered a new domain, but you didn't click the link in the confirmation email](#troubleshooting-domain-unavailable-didnt-click-link)
 + [You transferred domain registration to Amazon Route 53, but you didn't transfer DNS service](#troubleshooting-domain-unavailable-transferred-domain-not-dns)
 + [You transferred domain registration and specified the wrong name servers in the domain settings](#troubleshooting-domain-unavailable-transferred-domain-wrong-name-servers)
@@ -18,16 +18,13 @@ If you don't click the link in the email in the allotted amount of time, ICANN r
 
 ## You transferred domain registration to Amazon Route 53, but you didn't transfer DNS service<a name="troubleshooting-domain-unavailable-transferred-domain-not-dns"></a>
 
-If your previous registrar offered free DNS service with domain registration, the registrar might have stopped providing DNS service when you transferred domain registration to Route 53\. Perform the following procedure to determine whether this is the problem and, if so, to resolve it\.
+If your previous registrar offered free DNS service with domain registration, the registrar might have stopped providing DNS service when you transferred domain registration to Route 53\. Perform the following procedure to determine whether this is the problem and, if so, to resolve it\.<a name="troubleshooting-domain-unavailable-transferred-domain-not-dns-procedure"></a>
 
 **To restore DNS service if your previous registrar canceled it after you transferred domain registration to Route 53**
 
 1. Contact your previous registrar and confirm that they canceled DNS service for your domain\. If so, here are the three quickest ways to restore DNS service for the domain, in order of desirability:
-
    + If the previous registrar provides paid DNS service, ask them to restore DNS service using the old DNS records and name servers for your domain\. 
-
    + If the previous registrar doesn't provide paid DNS service without domain registration, ask whether you can transfer domain registration back to them and have them restore DNS service using the old DNS records and name servers for your domain\. 
-
    + If you can transfer domain registration back to the previous registrar but they don't have your DNS records any longer, ask whether you can transfer domain registration back to them and get the same set of name servers that were formerly assigned to the domain\. If this is possible, you'll have to recreate your old DNS records yourself\. However, as soon as you do that, your domain will become available again\.
 
    If your previous registrar can't help with any of these options, continue with step 2\.
@@ -55,7 +52,7 @@ When you transfer domain registration to Amazon Route 53, one of the settings t
 You might have accidentally specified the name servers for the wrong hosted zone, which is especially easy if you have more than one hosted zone that has the same name as the domain\. To confirm that the domain is using the name servers for the correct hosted zone and, if necessary, update the name servers for the domain, perform the following procedures\.
 
 **Important**  
-If you specified the wrong name server records when you transferred the domain to Route 53, it can take up to two days after you correct the name servers for the domain before DNS service is fully restored\. This is because DNS resolvers across the internet typically request the name servers only once every two days and cache the answer\.
+If you specified the wrong name server records when you transferred the domain to Route 53, it can take up to two days after you correct the name servers for the domain before DNS service is fully restored\. This is because DNS resolvers across the internet typically request the name servers only once every two days and cache the answer\.<a name="troubleshooting-domain-unavailable-transferred-domain-wrong-name-servers-procedure-1"></a>
 
 **To get the name servers for your hosted zone**
 
@@ -69,7 +66,7 @@ If you specified the wrong name server records when you transferred the domain t
 **Important**  
 If you have more than one hosted zone with the same name, make sure you're getting the name servers for the correct hosted zone\.
 
-1. In the right pane, make note of the four servers listed for **Name Servers**\.
+1. In the right pane, make note of the four servers listed for **Name Servers**\.<a name="troubleshooting-domain-unavailable-transferred-domain-wrong-name-servers-procedure-2"></a>
 
 **To confirm that the domain is using the correct name servers**
 
@@ -110,7 +107,7 @@ When caching expires for the name servers for the old DNS service, DNS will star
 If Route 53 is the DNS service for your domain and if you delete the hosted zone that is used to route internet traffic for the domain, the domain will become unavailable on the internet\. This is true regardless of whether the domain is registered with Route 53\.
 
 **Important**  
-Restoring internet service for the domain can take up to 48 hours\.
+Restoring internet service for the domain can take up to 48 hours\.<a name="troubleshooting-domain-unavailable-deleted-hosted-zone-procedure"></a>
 
 **To restore internet service if you delete a hosted zone that Route 53 is using to route internet traffic for a domain**
 
@@ -121,9 +118,7 @@ Restoring internet service for the domain can take up to 48 hours\.
 1. Get the names of the name servers that Route 53 assigned to the new hosted zone\. For more information, see [Getting the Name Servers for a Public Hosted Zone](GetInfoAboutHostedZone.md)\.
 
 1. Update the domain registration to use the name servers that you got in step 3:
-
    + If the domain is registered with Route 53, see [Adding or Changing Name Servers and Glue Records for a Domain](domain-name-servers-glue-records.md)\.
-
    + If the domain is registered with another domain registrar, use the method provided by the registrar to update the domain registration to use the new name servers\.
 
 1. Wait for the TTL for the name servers to pass for recursive resolvers that have cached the names of the name servers for the deleted hosted zone\. After the TTL has passed, when a browser or application submits a DNS query for the domain or one of its subdomains, a recursive resolver forwards the query to the Route 53 name servers for the new hosted zone\. For more information, see [How Amazon Route 53 Routes Traffic for Your Domain](welcome-dns-service.md#welcome-dns-service-how-route-53-routes-traffic)\.

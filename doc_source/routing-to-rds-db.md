@@ -6,7 +6,7 @@ If you use an Amazon RDS database instance for data storage for your web applica
 
 Whenever you open a connection to your Amazon RDS DB instance, you must specify the domain name in your application code\. 
 
-If you want to use a domain name that's easier to remember, you can use your own domain name instead\. To do this, you can use Amazon Route 53 to create a [CNAME record](http://docs.aws.amazon.com/Route53/latest/DeveloperGuide/resource-record-sets-choosing-alias-non-alias.html) that associates your domain name with the domain name of your DB instance\.
+If you want to use a domain name that's easier to remember, you can use your own domain name instead\. To do this, you can use Amazon Route 53 to create a [CNAME record](https://docs.aws.amazon.com/Route53/latest/DeveloperGuide/resource-record-sets-choosing-alias-non-alias.html) that associates your domain name with the domain name of your DB instance\.
 
 For example, you could create a CNAME record to map `productdata.example.com` to the domain name `myexampledb.a1b2c3d4wxyz.us-west-2.rds.amazonaws.com`\. After you create the CNAME record, you can use `productdata.example.com` in your application code whenever you open a connection to your Amazon RDS DB instance\.
 
@@ -18,18 +18,15 @@ You must use a CNAME record to associate a domain name with an Amazon RDS DB ins
 ## Prerequisites<a name="routing-to-rds-db-prerequisites"></a>
 
 Before you get started, you need the following:
-
 + An Amazon RDS DB instance\.
-
 + A registered domain name\. \(You don't need to use Route 53 as the domain registrar\.\)
-
 + Route 53 as the DNS service for the domain\. If you register your domain name by using Route 53, we automatically configure Route 53 as the DNS service for the domain\. 
 
   For information about using Route 53 as the DNS service provider for your domain, see [Making Amazon Route 53 the DNS Service for an Existing DomainMaking Route 53 the DNS Service for an Existing Domain](MigratingDNS.md)\.
 
 ## Configuring Amazon Route 53 So You Can Use Your Domain Name to Open Connections<a name="routing-to-rds-db-procedures"></a>
 
-To configure Amazon Route 53 so you can use your domain name to open connections to an Amazon RDS database instance, perform the following procedures\. First you get the domain name that is associated with your DB instance, and then you create a CNAME record that maps your domain name to the domain name of your DB instance\.
+To configure Amazon Route 53 so you can use your domain name to open connections to an Amazon RDS database instance, perform the following procedures\. First you get the domain name that is associated with your DB instance, and then you create a CNAME record that maps your domain name to the domain name of your DB instance\.<a name="routing-to-rds-db-get-instance-domain-name-procedure"></a>
 
 **To get the domain name for your Amazon RDS DB instance**
 
@@ -41,7 +38,7 @@ To configure Amazon Route 53 so you can use your domain name to open connection
 
 1. In the table, expand the DB instance that you want to open connections to\.
 
-1. Get the value of **Endpoint**\.
+1. Get the value of **Endpoint**\.<a name="routing-to-rds-db-create-cname-procedure"></a>
 
 **To create a CNAME record**
 
@@ -67,7 +64,7 @@ Accept the default value of **300**\.
 **Value**  
 Enter the domain name of the DB instance that you want to open connections to\. This is the value that you got when you performed the procedure [To get the domain name for your Amazon RDS DB instance](#routing-to-rds-db-get-instance-domain-name-procedure)\.  
 **Routing Policy**  
-Accept the default value of **Simple**\.
+Choose the applicable routing policy\. For more information, see [Choosing a Routing Policy](routing-policy.md)\.
 
 1. Choose **Create**\.
 

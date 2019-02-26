@@ -4,6 +4,9 @@ When you want to register a new domain using the Amazon Route 53 console, perfo
 
 Note the following:
 
+**Contacting customer support**  
+If you encounter issues while registering a domain, you can contact customer support for free\. For more information, see [Contacting Customer Support About Domain Registration Issues](domain-contact-support.md)\.
+
 **Domain registration pricing**  
 For information about the cost to register domains, see [Amazon Route 53 Pricing for Domain Registration](https://d32ze2gidvkk54.cloudfront.net/Amazon_Route_53_Domain_Registration_Pricing_20140731.pdf)\.
 
@@ -17,7 +20,7 @@ You can't use AWS credits to pay the fee for registering a new domain with Route
 TLD registries have assigned special or premium prices to some domain names\. You can't use Route 53 to register a domain that has a special or premium price\.
 
 **Charges for hosted zones**  
-When you register a domain with Route 53, we automatically create a hosted zone for the domain and charge a small monthly fee for the hosted zone in addition to the annual charge for the domain registration\. This hosted zone is where you store information about how to route traffic for your domain, for example, to an Amazon EC2 instance or a CloudFront distribution\. If you don't want to use your domain right now, you can delete the hosted zone; if you delete it within 12 hours of registering the domain, there won't be any charge for the hosted zone on your AWS bill\. We also charge a small fee for the DNS queries that we receive for your domain\. For more information, see [Amazon Route 53 Pricing](https://aws.amazon.com/route53/pricing/)\.
+When you register a domain with Route 53, we automatically create a hosted zone for the domain and charge a small monthly fee for the hosted zone in addition to the annual charge for the domain registration\. This hosted zone is where you store information about how to route traffic for your domain, for example, to an Amazon EC2 instance or a CloudFront distribution\. If you don't want to use your domain right now, you can delete the hosted zone; if you delete it within 12 hours of registering the domain, there won't be any charge for the hosted zone on your AWS bill\. We also charge a small fee for the DNS queries that we receive for your domain\. For more information, see [Amazon Route 53 Pricing](https://aws.amazon.com/route53/pricing/)\.<a name="domain-register-procedure"></a>
 
 **To register a new domain using Route 53**
 
@@ -57,32 +60,25 @@ If you're registering more than one domain, we use the same contact information 
 For some top\-level domains \(TLDs\), we're required to collect additional information\. For these TLDs, enter the applicable values after the **Postal/Zip Code** field\.  
 **Privacy Protection**  
 Choose whether you want to hide your contact information from WHOIS queries\. For more information, see the following topics:  
-
    + [Enabling or Disabling Privacy Protection for Contact Information for a Domain](domain-privacy-protection.md)
-
    + [Domains That You Can Register with Amazon Route 53](registrar-tld-list.md)
-To enable privacy protection for \.co\.uk, \.me\.uk, and \.org\.uk domains, you must open a support case and request privacy protection\. For more information, see [\.co\.uk \(United Kingdom\)](http://docs.aws.amazon.com/Route53/latest/DeveloperGuide/registrar-tld-list.html#registrar-tld-list-geographic) in [Domains That You Can Register with Amazon Route 53](registrar-tld-list.md)\.
+To enable privacy protection for \.co\.uk, \.me\.uk, and \.org\.uk domains, you must open a support case and request privacy protection\. For more information, see [\.co\.uk \(United Kingdom\)](https://docs.aws.amazon.com/Route53/latest/DeveloperGuide/registrar-tld-list.html#registrar-tld-list-geographic) in [Domains That You Can Register with Amazon Route 53](registrar-tld-list.md)\.
 
 1. Choose **Continue**\.
 
-1. **Generic TLDs only** – If you're registering a domain that has a [generic TLD](http://docs.aws.amazon.com/Route53/latest/DeveloperGuide/registrar-tld-list.html#registrar-tld-list-generic), such as \.com, \.org, or \.net, and you specified an email address for the registrant contact that has never been used to register a domain with Route 53, you need to verify that the address is valid\.
+1. **Generic TLDs only** – If you're registering a domain that has a [generic TLD](https://docs.aws.amazon.com/Route53/latest/DeveloperGuide/registrar-tld-list.html#registrar-tld-list-generic), such as \.com, \.org, or \.net, and you specified an email address for the registrant contact that has never been used to register a domain with Route 53, you need to verify that the address is valid\.
 **Note**  
-Verification isn't required for domains that have a [geographic TLD](http://docs.aws.amazon.com/Route53/latest/DeveloperGuide/registrar-tld-list.html#registrar-tld-list-geographic), such as \.ca, \.com\.au, \.co\.uk, or \.jp\.
+Verification isn't required for domains that have a [geographic TLD](https://docs.aws.amazon.com/Route53/latest/DeveloperGuide/registrar-tld-list.html#registrar-tld-list-geographic), such as \.ca, \.com\.au, \.co\.uk, or \.jp\.
 
    If the registry requires verification and if you can verify the address during domain registration, the console displays a **Verify the Email Address for the Registrant Contact** section:
-
    + If the section doesn't appear, skip to step 8\.
-
    + If the section appears and the status is **email\-address is verified**, skip to step 8\.
-
    + If the section appears and the value is **Registrant email not verified**, continue with this step\.
 
    Perform the following steps:
 
    1. Choose **Send verification email**\. We send a verification email from one of the following email addresses:
-
       + **noreply@registrar\.amazon\.com** – for TLDs registered by Amazon Registrar\.
-
       + **noreply@domainnameverification\.net** – for TLDs registered by our registrar associate, Gandi\. To determine who the registrar is for your TLD, see [Domains That You Can Register with Amazon Route 53](registrar-tld-list.md)\.
 **Important**  
 The registrant contact must follow the instructions in the email to verify that the email was received, or we must suspend the domain as required by ICANN\. When a domain is suspended, it's not accessible on the internet\.
@@ -100,15 +96,11 @@ The registrant contact must follow the instructions in the email to verify that 
 If you were able to verify your email address in step 7, skip to step 11\.
 
    If the registry requires us to verify the email address for the registrant contact but doesn't allow us to verify earlier in the process, we send a verification email from one of the following email addresses: 
-
    + **noreply@registrar\.amazon\.com ** – for TLDs registered by Amazon Registrar\.
-
    + **noreply@domainnameverification\.net** – for TLDs registered by our registrar associate, Gandi\. To determine who the registrar is for your TLD, see [Domains That You Can Register with Amazon Route 53](registrar-tld-list.md)\.
 
    When you receive the verification email, choose the link in the email that verifies that the email address is valid\. If you don't receive the email immediately:
-
    + Check the settings for the domain to verify that you specified the correct email address for the registrant contact\.
-
    + Check your junk email folder\.
 **Important**  
 The registrant contact must follow the instructions in the email to confirm that the email was received, or we must suspend the domain as required by ICANN\. When a domain is suspended, it's not accessible on the internet\.
@@ -120,7 +112,6 @@ The registrant contact must follow the instructions in the email to confirm that
 1. \(Optional\) We configure the domain to automatically renew as the expiration date approaches\. If you want to change this setting, see [Enabling or Disabling Automatic Renewal for a Domain](domain-enable-disable-auto-renewal.md)\. 
 
 1. When domain registration is complete, your next step depends on whether you want to use Route 53 or another DNS service as the DNS service for the domain:
-
    + **Route 53** – In the hosted zone that Route 53 created when you registered the domain, create records to tell Route 53 how you want to route traffic for the domain and subdomains\. 
 
      For example, when someone enters your domain name in a browser and that query is forwarded to Route 53, do you want Route 53 to respond to the query with the IP address of a web server in your data center or with the name of an ELB load balancer?
@@ -128,8 +119,7 @@ The registrant contact must follow the instructions in the email to confirm that
      For more information, see [Working with Records](rrsets-working-with.md)\.
 **Important**  
 If you create records in a hosted zone other than the one that Route 53 creates automatically, you must update the name servers for the domain to use the name servers for the new hosted zone\.
-
-   + **Another DNS service** – Configure your new domain to route DNS queries to the other DNS service\. Perform the procedure [To update the name servers for your domain when you want to use another DNS service](#domain-register-other-dns-service-procedure)\.
+   + **Another DNS service** – Configure your new domain to route DNS queries to the other DNS service\. Perform the procedure [To update the name servers for your domain when you want to use another DNS service](#domain-register-other-dns-service-procedure)\.<a name="domain-register-other-dns-service-procedure"></a>
 
 **To update the name servers for your domain when you want to use another DNS service**
 

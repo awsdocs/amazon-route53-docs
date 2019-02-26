@@ -11,7 +11,7 @@ If you are using a language for which an AWS SDK exists, use the SDK rather than
 
 Domain name registration services are provided under our [Domain Name Registration Agreement](https://aws.amazon.com/route53/domain-registration-agreement/)\.
 
-
+**Topics**
 + [Registering Domains](domain-register-update.md)
 + [Updating Settings for a Domain](domain-update-settings.md)
 + [Renewing Registration for a Domain](domain-renew.md)

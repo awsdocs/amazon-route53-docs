@@ -2,7 +2,7 @@
 
 Here's an overview of the concepts that are discussed throughout the *Amazon Route 53 Developer Guide*\.
 
-
+**Topics**
 + [Domain Registration Concepts](#route-53-concepts-domain-registration)
 + [Domain Name System \(DNS\) Concepts](#route-53-concepts-domain-name-system-dns)
 + [Health Checking Concepts](#route-53-concepts-health-checking)
@@ -10,15 +10,10 @@ Here's an overview of the concepts that are discussed throughout the *Amazon Rou
 ## Domain Registration Concepts<a name="route-53-concepts-domain-registration"></a>
 
 Here's an overview of the concepts that are related to domain registration\.
-
 + [domain name](#route-53-concepts-domain-name)
-
 + [domain registrar](#route-53-concepts-domain-registrar)
-
 + [domain registry](#route-53-concepts-domain-registry)
-
 + [domain reseller](#route-53-concepts-domain-reseller)
-
 + [top-level domain (TLD)](#route-53-concepts-top-level-domain)
 
 **domain name**  
@@ -44,35 +39,20 @@ For a list of the TLDs that you can use when you register a domain name with Rou
 ## Domain Name System \(DNS\) Concepts<a name="route-53-concepts-domain-name-system-dns"></a>
 
 Here's an overview of the concepts that are related to the Domain Name System \(DNS\)\.
-
 + [alias record](#route-53-concepts-alias-resource-record-set)
-
 + [authoritative name server](#route-53-concepts-authoritative-name-server)
-
 + [DNS query](#route-53-concepts-dns-query)
-
 + [DNS resolver](#route-53-concepts-dns-resolver)
-
 + [Domain Name System (DNS)](#route-53-concepts-domain-name-system)
-
 + [hosted zone](#route-53-concepts-hosted-zone)
-
 + [IP address](#route-53-concepts-ip-address)
-
 + [name servers](#route-53-concepts-name-servers)
-
 + [private DNS](#route-53-concepts-private-dns)
-
 + [recursive name server](#route-53-concepts-recursive-name-server)
-
 + [record (DNS record)](#route-53-concepts-resource-record-set)
-
 + [reusable delegation set](#route-53-concepts-reusable-delegation-set)
-
 + [routing policy](#route-53-concepts-routing-policy)
-
 + [subdomain](#route-53-concepts-subdomain)
-
 + [time to live (TTL)](#route-53-concepts-time-to-live)
 
 **alias record**  
@@ -100,16 +80,11 @@ See also [record (DNS record)](#route-53-concepts-resource-record-set)\.
 
 **IP address**  
 A number that is assigned to a device on the internet—such as a laptop, a smart phone, or a web server—that allows the device to communicate with other devices on the internet\. IP addresses are in one of the following formats:  
-
 + Internet Protocol version 4 \(IPv4\) format, such as 192\.0\.2\.44
-
 + Internet Protocol version 6 \(IPv6\) format, such as 2001:0db8:85a3:0000:0000:abcd:0001:2345
 Route 53 supports both IPv4 and IPv6 addresses for the following purposes:  
-
 + You can create records that have a type of A, for IPv4 addresses, or a type of AAAA, for IPv6 addresses\.
-
 + You can create health checks that send requests either to IPv4 or to IPv6 addresses\.
-
 + If a DNS resolver is on an IPv6 network, it can use either IPv4 or IPv6 to submit requests to Route 53\.
 
 **name servers**  
@@ -128,23 +103,16 @@ See [DNS resolver](#route-53-concepts-dns-resolver)\.
 
 **reusable delegation set**  
 A set of four authoritative name servers that you can use with more than one hosted zone\. By default, Route 53 assigns a random selection of name servers to each new hosted zone\. To make it easier to migrate DNS service to Route 53 for a large number of domains, you can create a reusable delegation set and then associate the reusable delegation set with new hosted zones\. \(You can't change the name servers that are associated with an existing hosted zone\.\)  
-You create a reusable delegation set and associate it with a hosted zone programmatically; using the Route 53 console isn't supported\. For more information, see [CreateHostedZone](http://docs.aws.amazon.com/Route53/latest/APIReference/API_CreateHostedZone.html) and [CreateReusableDelegationSet](http://docs.aws.amazon.com/Route53/latest/APIReference/API_CreateReusableDelegationSet.html) in the *Amazon Route 53 API Reference*\. The same feature is also available in the [AWS SDKs](http://docs.aws.amazon.com/), the [AWS Command Line Interface](http://docs.aws.amazon.com/cli/latest/reference/route53/index.html), and [AWS Tools for Windows PowerShell](http://docs.aws.amazon.com/powershell/latest/reference/)\.
+You create a reusable delegation set and associate it with a hosted zone programmatically; using the Route 53 console isn't supported\. For more information, see [CreateHostedZone](https://docs.aws.amazon.com/Route53/latest/APIReference/API_CreateHostedZone.html) and [CreateReusableDelegationSet](https://docs.aws.amazon.com/Route53/latest/APIReference/API_CreateReusableDelegationSet.html) in the *Amazon Route 53 API Reference*\. The same feature is also available in the [AWS SDKs](https://docs.aws.amazon.com/), the [AWS Command Line Interface](https://docs.aws.amazon.com/cli/latest/reference/route53/index.html), and [AWS Tools for Windows PowerShell](https://docs.aws.amazon.com/powershell/latest/reference/)\.
 
 **routing policy**  
 A setting for records that determines how Route 53 responds to DNS queries\. Route 53 supports the following routing policies:  
-
 + **Simple routing policy** – Use to route internet traffic to a single resource that performs a given function for your domain, for example, a web server that serves content for the example\.com website\.
-
 + **Failover routing policy** – Use when you want to configure active\-passive failover\. 
-
 + **Geolocation routing policy** – Use when you want to route internet traffic to your resources based on the location of your users\.
-
 + **Geoproximity routing policy** – Use when you want to route traffic based on the location of your resources and, optionally, shift traffic from resources in one location to resources in another\.
-
 + **Latency routing policy** – Use when you have resources in multiple locations and you want to route traffic to the resource that provides the best latency\.
-
 + **Multivalue answer routing policy** – Use when you want Route 53 to respond to DNS queries with up to eight healthy records selected at random\.
-
 + **Weighted routing policy** – Use to route traffic to multiple resources in proportions that you specify\.
 For more information, see [Choosing a Routing Policy](routing-policy.md)\.
 
@@ -159,11 +127,8 @@ A longer TTL reduces your Route 53 charges, which are based in part on the numb
 ## Health Checking Concepts<a name="route-53-concepts-health-checking"></a>
 
 Here's an overview of the concepts that are related to Amazon Route 53 health checking\.
-
 + [DNS failover](#route-53-concepts-dns-failover)
-
 + [endpoint](#route-53-concepts-endpoint)
-
 + [health check](#route-53-concepts-health-check)
 
 **DNS failover**  
@@ -176,10 +141,7 @@ You can also create health checks that monitor the status of other health checks
 
 **health check**  
 A Route 53 component that lets you do the following:  
-
 + Monitor whether a specified endpoint, such as a web server, is healthy
-
 + Optionally, get notified when an endpoint becomes unhealthy
-
 + Optionally, configure DNS failover, which allows you to reroute internet traffic from an unhealthy resource to a healthy resource
 For more information about how to create and use health checks, see [Creating Amazon Route 53 Health Checks and Configuring DNS Failover](dns-failover.md)\.

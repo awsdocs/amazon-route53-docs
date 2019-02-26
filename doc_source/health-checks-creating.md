@@ -1,6 +1,6 @@
 # Creating and Updating Health Checks<a name="health-checks-creating"></a>
 
-The following procedure describes how to create and update health checks using the Route 53 console\.
+The following procedure describes how to create and update health checks using the Route 53 console\.<a name="health-checks-creating-console-proc"></a>
 
 **To create or update a health check \(console\)**
 

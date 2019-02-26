@@ -7,19 +7,13 @@ If you need to direct traffic to more than 100 endpoints, one way to achieve thi
 A simple two\-level tree might look like this:
 
 **Weighted alias records**
-
 + `www.example.com` aliases to `www-a.example.com` with a weight of 1
-
 + `www.example.com` aliases to `www-b.example.com` with a weight of 1
 
 **Weighted records**
-
 + `www-a.example.com`, type A, value 192\.0\.2\.1, weight 1
-
 + `www-a.example.com`, type A, value 192\.0\.2\.2, weight 1
-
 + `www-b.example.com`, type A, value 192\.0\.2\.3, weight 1
-
 + `www-b.example.com`, type A, value 192\.0\.2\.4, weight 1
 
 For more information about creating records, see [Working with Records](rrsets-working-with.md)\.

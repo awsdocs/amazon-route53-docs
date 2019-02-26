@@ -2,7 +2,7 @@
 
 Here are some common reasons that transferring a domain to Amazon Route 53 fails\.
 
-
+**Topics**
 + [You didn't click the link in the authorization email](#troubleshooting-domain-transfer-failed-click-link)
 + [The authorization code that you got from the current registrar is not valid](#troubleshooting-domain-transfer-failed-authorization-code-invalid)
 + ["Parameters in request are not valid" error when trying to transfer a \.es domain to Amazon Route 53](#troubleshooting-domain-transfer-failed-parameters-in-request-are-not-valid)
@@ -15,12 +15,10 @@ If you don't click the link in the email in the allotted amount of time, ICANN r
 
 ## The authorization code that you got from the current registrar is not valid<a name="troubleshooting-domain-transfer-failed-authorization-code-invalid"></a>
 
-If you request the transfer of a domain to Amazon Route 53 and you don't receive the authorization email, check [the status page in the Route 53 console](http://docs.aws.amazon.com/Route53/latest/DeveloperGuide/domain-transfer-to-route-53-status.html)\. If the status page shows that the transfer authorization code that you got from your registrar is not valid, perform the following steps:
+If you request the transfer of a domain to Amazon Route 53 and you don't receive the authorization email, check [the status page in the Route 53 console](https://docs.aws.amazon.com/Route53/latest/DeveloperGuide/domain-transfer-to-route-53-status.html)\. If the status page shows that the transfer authorization code that you got from your registrar is not valid, perform the following steps:
 
 1. Contact the current registrar for the domain and request a new authorization code\. Confirm the following:
-
    + How long the new authorization code will remain active\. You must request a domain transfer before the code expires\.
-
    + The new authorization code is different from the code that isn't valid\. If not, ask the current registrar to refresh the authorization code\.
 
 1. Submit another request to transfer the domain\. For more information, see [Step 5: Request the Transfer](domain-transfer-to-route-53.md#domain-transfer-to-route-53-request-transfer) in the topic "Transferring Registration for a Domain to Route 53\."

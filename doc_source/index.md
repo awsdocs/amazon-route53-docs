@@ -1,7 +1,7 @@
 # Amazon Route 53 Developer Guide
 
 -----
-*****Copyright &copy; 2018 Amazon Web Services, Inc. and/or its affiliates. All rights reserved.*****
+*****Copyright &copy; 2019 Amazon Web Services, Inc. and/or its affiliates. All rights reserved.*****
 
 -----
 Amazon's trademarks and trade dress may not be used in 
@@ -103,19 +103,28 @@ Amazon's trademarks and trade dress may not be used in
       + [Editing Records](resource-record-sets-editing.md)
       + [Deleting Records](resource-record-sets-deleting.md)
       + [Listing Records](resource-record-sets-listing.md)
-   + [Using Auto Naming to Create Records and Health Checks](autonaming.md)
+   + [Using AWS Cloud Map to Create Records and Health Checks](autonaming.md)
    + [Using Traffic Flow to Route DNS Traffic](traffic-flow.md)
       + [Creating and Managing Traffic Policies](traffic-policies.md)
       + [Creating and Managing Policy Records](traffic-policy-records.md)
    + [DNS Constraints and Behaviors](DNSBehavior.md)
++ [Resolving DNS Queries Between VPCs and Your Network](resolver.md)
+   + [Getting Started with Route 53 Resolver](resolver-getting-started.md)
+   + [Forwarding Inbound DNS Queries to Your VPCs](resolver-forwarding-inbound-queries.md)
+   + [Forwarding Outbound DNS Queries to Your Network](resolver-forwarding-outbound-queries.md)
+   + [Managing Inbound Endpoints](resolver-forwarding-inbound-queries-managing.md)
+   + [Managing Outbound Endpoints](resolver-forwarding-outbound-queries-managing.md)
+   + [Managing Forwarding Rules](resolver-rules-managing.md)
 + [DNS Domain Name Format](DomainNameFormat.md)
 + [Routing Internet Traffic to Your AWS Resources](routing-to-aws-resources.md)
+   + [Routing Traffic to an Amazon API Gateway API by Using Your Domain Name](routing-to-api-gateway.md)
    + [Routing Traffic to an Amazon CloudFront Web Distribution by Using Your Domain Name](routing-to-cloudfront-distribution.md)
    + [Routing Traffic to an Amazon EC2 Instance](routing-to-ec2-instance.md)
    + [Routing Traffic to an AWS Elastic Beanstalk Environment](routing-to-beanstalk-environment.md)
    + [Routing Traffic to an ELB Load Balancer](routing-to-elb-load-balancer.md)
    + [Opening Connections to an Amazon RDS Database Instance Using Your Domain Name](routing-to-rds-db.md)
    + [Routing Traffic to a Website that Is Hosted in an Amazon S3 Bucket](RoutingToS3Bucket.md)
+   + [Routing Traffic to an Amazon Virtual Private Cloud Interface Endpoint by Using Your Domain Name](routing-to-vpc-interface-endpoint.md)
    + [Routing Traffic to Amazon WorkMail](routing-to-workmail.md)
 + [Creating Amazon Route 53 Health Checks and Configuring DNS Failover](dns-failover.md)
    + [Types of Amazon Route 53 Health Checks](health-checks-types.md)
@@ -159,7 +168,7 @@ Amazon's trademarks and trade dress may not be used in
 + [Monitoring Amazon Route 53](monitoring-overview.md)
    + [Monitoring Domain Registrations](monitoring-domain-registrations.md)
    + [Monitoring Your Resources with Amazon Route 53 Health Checks and Amazon CloudWatch](monitoring-cloudwatch.md)
-      + [Amazon Route 53 Metrics and Dimensions](metrics_dimensions.md)
+   + [Monitoring Route 53 Resolver Endpoints with Amazon CloudWatch](monitoring-resolver-with-cloudwatch.md)
    + [Logging Amazon Route 53 API Calls with AWS CloudTrail](logging-using-cloudtrail.md)
 + [Tagging Amazon Route 53 Resources](tagging-resources.md)
 + [Tutorials](Tutorials.md)
@@ -173,6 +182,6 @@ Amazon's trademarks and trade dress may not be used in
    + [Managing Over 100 Weighted Records in Amazon Route 53](TutorialManagingOver100WRR.md)
    + [Weighting Fault-Tolerant Multi-Record Answers in Amazon Route 53](TutorialWeightedFTMR.md)
 + [Limits](DNSLimitations.md)
-+ [Resources for Amazon Route 53](Resources.md)
++ [Related Information](Resources.md)
 + [Document History](History.md)
 + [AWS Glossary](glossary.md)

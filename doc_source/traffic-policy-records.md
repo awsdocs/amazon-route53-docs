@@ -2,7 +2,7 @@
 
 You create policy records to apply the configuration that you created in a traffic policy to one or more domain names or subdomain names\.
 
-
+**Topics**
 + [Creating Policy Records](#traffic-policy-records-creating)
 + [Values that You Specify When You Create or Update a Policy Record](#traffic-policy-records-creating-values)
 + [Updating Policy Records](#traffic-policy-records-updating)
@@ -13,7 +13,7 @@ You create policy records to apply the configuration that you created in a traff
 To create a policy record, perform the following procedure\.
 
 **Important**  
-For each policy record that you create, you incur a monthly charge\. If you later delete the policy record, the charge is prorated\. For more information, see [Amazon Route 53 Pricing](https://aws.amazon.com/route53/pricing/)\.
+For each policy record that you create, you incur a monthly charge\. If you later delete the policy record, the charge is prorated\. For more information, see [Amazon Route 53 Pricing](https://aws.amazon.com/route53/pricing/)\.<a name="traffic-policy-records-creating-procedure"></a>
 
 **To create a policy record**
 
@@ -32,15 +32,10 @@ For each policy record that you create, you incur a monthly charge\. If you late
 ## Values that You Specify When You Create or Update a Policy Record<a name="traffic-policy-records-creating-values"></a>
 
 When you create or update a policy record, you specify the following values
-
 + [Traffic policy](#traffic-policy-records-creating-values-traffic-policy)
-
 + [Version](#traffic-policy-records-creating-values-version)
-
 + [Hosted zone](#traffic-policy-records-creating-values-hosted-zone)
-
 + [Policy record DNS name](#traffic-policy-records-creating-values-policy-record-dns-name)
-
 + [TTL](#traffic-policy-records-creating-values-ttl)
 
 **Traffic policy**  
@@ -63,7 +58,7 @@ Enter the amount of time, in seconds, that you want DNS recursive resolvers to c
 
 ## Updating Policy Records<a name="traffic-policy-records-updating"></a>
 
-To update the settings in a policy record, perform the following procedure\. 
+To update the settings in a policy record, perform the following procedure\. <a name="traffic-policy-records-updating-procedure"></a>
 
 **To update a policy record**
 
@@ -84,7 +79,7 @@ To update the settings in a policy record, perform the following procedure\.
 To delete policy records, perform the following procedure\.
 
 **Important**  
-If you delete policy records that Amazon Route 53 is using to respond to DNS queries, Route 53 will stop responding to queries for the corresponding DNS names\. For example, if Route 53 is using the policy record for www\.example\.com to respond to DNS queries for www\.example\.com and you delete the policy record, your users will not be able to access your website or web application by using the domain name www\.example\.com\. 
+If you delete policy records that Amazon Route 53 is using to respond to DNS queries, Route 53 will stop responding to queries for the corresponding DNS names\. For example, if Route 53 is using the policy record for www\.example\.com to respond to DNS queries for www\.example\.com and you delete the policy record, your users will not be able to access your website or web application by using the domain name www\.example\.com\. <a name="traffic-policy-records-deleting-procedure"></a>
 
 **To delete a policy record**
 

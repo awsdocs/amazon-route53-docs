@@ -2,7 +2,7 @@
 
 When you create basic records, you specify the following values\.
 
-
+**Topics**
 + [Name](#rrsets-values-basic-name)
 + [Type](#rrsets-values-basic-type)
 + [Alias](#rrsets-values-basic-alias)
@@ -55,9 +55,7 @@ An IP address in IPv6 format, for example, **2001:0db8:85a3:0:0:8a2e:0370:7334**
 
 **CAA — Certificate Authority Authorization**  
 Three space\-separated values that control which certificate authorities are allowed to issue certificates or wildcard certificates for the domain or subdomain that is specified by **Name**\. You can use CAA records to specify the following:  
-
 + Which certificate authorities \(CAs\) can issue SSL/TLS certificates, if any
-
 + The email address or URL to contact when a CA issues a certificate for the domain or subdomain
 
 **CNAME — Canonical name**  

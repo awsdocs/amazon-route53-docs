@@ -5,7 +5,7 @@ If you're currently using another DNS service and you want to migrate to Amazon 
 **Note**  
 Some registrars only allow you to specify name servers using IP addresses; they don't allow you to specify fully qualified domain names\. If your registrar requires using IP addresses, you can get the IP addresses for your name servers using the dig utility \(for Mac, Unix, or Linux\) or the nslookup utility \(for Windows\)\. We rarely change the IP addresses of name servers; if we need to change IP addresses, we'll notify you in advance\.
 
-The following procedure explains how to get the name servers for a hosted zone using the Route 53 console\. For information about how to get name servers using the Route 53 API, see [GetHostedZone](http://docs.aws.amazon.com/Route53/latest/APIReference/API_GetHostedZone.html) in the *Amazon Route 53 API Reference*\. 
+The following procedure explains how to get the name servers for a hosted zone using the Route 53 console\. For information about how to get name servers using the Route 53 API, see [GetHostedZone](https://docs.aws.amazon.com/Route53/latest/APIReference/API_GetHostedZone.html) in the *Amazon Route 53 API Reference*\. 
 
 **To get the name servers for a hosted zone using the Route 53 console**
 

@@ -7,18 +7,15 @@ For example, you might use latency alias records to select a region close to a u
 ![\[DNS configuration that includes latency alias records and weighted alias records.\]](http://docs.aws.amazon.com/Route53/latest/DeveloperGuide/images/hc-latency-alias-weighted.png)
 
 Here's how Amazon EC2 and Route 53 are configured\. Let's start at the bottom of the tree because that's the order that you'll create records in:
-
 + You have two EC2 instances in each of two regions, us\-east\-1 and ap\-southeast\-2\. You want Route 53 to route traffic to your EC2 instances based on whether they're healthy, so you create a health check for each instance\. You configure each health check to send health\-checking requests to the corresponding instance at the Elastic IP address for the instance\.
 
   Route 53 is a global service, so you don't specify the region that you want to create health checks in\.
-
 + You want to route traffic to the two instances in each region based on the instance type, so you create a weighted record for each instance and give each record a weight\. \(You can change the weight later to route more or less traffic to an instance\.\) You also associate the applicable health check with each instance\.
 
   When you create the records, you use names such as us\-east\-1\-www\.example\.com\. and ap\-southeast\-2\-www\.example\.com\. You'll wait until you get to the top of the tree to give records the names that your users will use to access your website or web application, such as example\.com\.
++ You want to route traffic to the region that provides the lowest latency for your users, so you choose the latency [routing policy](https://docs.aws.amazon.com/Route53/latest/DeveloperGuide/routing-policy.html) for the records at the top of the tree\.
 
-+ You want to route traffic to the region that provides the lowest latency for your users, so you choose the latency [routing policy](http://docs.aws.amazon.com/Route53/latest/DeveloperGuide/routing-policy.html) for the records at the top of the tree\.
-
-  You want to route traffic to the *records* in each region, not directly to the *resources* in each region \(the weighted records already do that\)\. As a result, you create latency [alias records](http://docs.aws.amazon.com/Route53/latest/DeveloperGuide/resource-record-sets-choosing-alias-non-alias.html)\. 
+  You want to route traffic to the *records* in each region, not directly to the *resources* in each region \(the weighted records already do that\)\. As a result, you create latency [alias records](https://docs.aws.amazon.com/Route53/latest/DeveloperGuide/resource-record-sets-choosing-alias-non-alias.html)\. 
 
   When you create the alias records, you give them the name that you want your users to use to access your website or web application, such as example\.com\. The alias records route traffic for example\.com to the us\-east\-1\-www\.example\.com and ap\-southeast\-2\-www\.example\.com records\.
 
@@ -38,7 +35,7 @@ The preceding diagram illustrates the following sequence of events:
 
 1. Route 53 again selects a record based on weight, and then checks the health of the selected resource\. The resource is healthy, so Route 53 returns the applicable value in response to the query\.
 
-
+**Topics**
 + [What Happens When You Associate a Health Check with an Alias Record?](#dns-failover-complex-configs-hc-alias)
 + [What Happens When You Omit Health Checks?](#dns-failover-complex-configs-hc-omitting)
 + [What Happens When You Set Evaluate Target Health to No?](#dns-failover-complex-configs-eth-no)
@@ -46,15 +43,11 @@ The preceding diagram illustrates the following sequence of events:
 ## What Happens When You Associate a Health Check with an Alias Record?<a name="dns-failover-complex-configs-hc-alias"></a>
 
 You can associate a health check with an alias record instead of or in addition to setting the value of **Evaluate Target Health** to **Yes**\. However, it's generally more useful if Route 53 responds to queries based on the health of the underlying resources—the HTTP servers, database servers, and other resources that your alias records refer to\. For example, suppose the following configuration:
-
 + You assign a health check to a latency alias record for which the alias target is a group of weighted records\.
-
 + You set the value of **Evaluate Target Health** to **Yes** for the latency alias record\.
 
 In this configuration, both of the following must be true before Route 53 will return the applicable value for a weighted record:
-
 + The health check associated with the latency alias record must pass\.
-
 + At least one weighted record must be considered healthy, either because it's associated with a health check that passes or because it's not associated with a health check\. In the latter case, Route 53 always considers the weighted record healthy\.
 
 In the following illustration, the health check for the latency alias record on the top left failed\. As a result, Route 53 stops responding to queries using any of the weighted records that the latency alias record refers to even if they're all healthy\. Route 53 begins to consider these weighted records again only when the health check for the latency alias record is healthy again\. \(For exceptions, see [How Amazon Route 53 Chooses Records When Health Checking Is ConfiguredHow Route 53 Chooses Records When Health Checking Is Configured](health-checks-how-route-53-chooses-records.md)\.\) 

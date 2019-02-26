@@ -5,7 +5,7 @@ If you don't renew a domain before the end of the late\-renewal period or if you
 When a domain is deleted or it passes the end of the late\-renewal period, it no longer appears in the Amazon Route 53 console\. 
 
 **Important**  
-The price for restoring a domain is typically higher and sometimes much higher than the price for registering or renewing a domain\. For the current price for restoring a domain, see the "Restoration Price" column in [Amazon Route 53 Pricing for Domain Registration](https://d32ze2gidvkk54.cloudfront.net/Amazon_Route_53_Domain_Registration_Pricing_20140731.pdf)\.
+The price for restoring a domain is typically higher and sometimes much higher than the price for registering or renewing a domain\. For the current price for restoring a domain, see the "Restoration Price" column in [Amazon Route 53 Pricing for Domain Registration](https://d32ze2gidvkk54.cloudfront.net/Amazon_Route_53_Domain_Registration_Pricing_20140731.pdf)\.<a name="domain-restore-expired-procedure"></a>
 
 **To try to restore domain registration when a domain is deleted or the late\-renewal period has expired**
 
@@ -30,13 +30,13 @@ Accept the default value of **Domain name registration issue**\.
 Enter **Restore an expired domain** or **Restore a deleted domain**\.  
 **Description**  
 Provide the following information:  
-
    + The domain that you want to restore
-
-   + The [12\-digit account ID](http://docs.aws.amazon.com/general/latest/gr/acct-identifiers.html#FindingYourAccountIdentifiers) of the AWS account that the domain was registered to  
+   + The [12\-digit account ID](https://docs.aws.amazon.com/general/latest/gr/acct-identifiers.html#FindingYourAccountIdentifiers) of the AWS account that the domain was registered to  
 **Contact method**  
 Specify a contact method and, if you choose **Phone**, enter the applicable values\.
 
 1. Choose **Submit**\.
 
-1. When we learn whether we were able to restore your domain, a customer support representative will contact you\. In addition, if we were able to restore your domain, the domain will reappear in the console with the new expiration date\. 
+1. When we learn whether we were able to restore your domain, a customer support representative will contact you\. In addition, if we were able to restore your domain, the domain will reappear in the console with the new expiration date\. The new expiration date will be a year \(or two years for some TLDs\) after the old expiration date\.
+**Note**  
+The new expiration date is not calculated from the date that the domain was restored\.

@@ -1,11 +1,8 @@
 # Creating Amazon Route 53 Health Checks and Configuring DNS Failover<a name="dns-failover"></a>
 
 Amazon Route 53 health checks monitor the health and performance of your web applications, web servers, and other resources\. Each health check that you create can monitor one of the following:
-
 + The health of a specified resource, such as a web server
-
 + The status of other health checks
-
 + The status of an Amazon CloudWatch alarm
 
 For an overview of the three types of health checks, see [Types of Amazon Route 53 Health ChecksTypes of Health Checks](health-checks-types.md)\. For information about creating health checks, see [Creating and Updating Health Checks](health-checks-creating.md)\.
@@ -20,7 +17,7 @@ For information about viewing health check status and receiving notifications, s
 **Configuring DNS failover**  
 If you have multiple resources that perform the same function, you can configure DNS failover so that Route 53 will route your traffic from an unhealthy resource to a healthy resource\. For example, if you have two web servers and one web server becomes unhealthy, Route 53 can route traffic to the other web server\. For more information, see [Configuring DNS Failover](dns-failover-configuring.md)\.
 
-
+**Topics**
 + [Types of Amazon Route 53 Health Checks](health-checks-types.md)
 + [How Amazon Route 53 Determines Whether a Health Check Is Healthy](dns-failover-determining-health-of-endpoints.md)
 + [Creating, Updating, and Deleting Health Checks](health-checks-creating-deleting.md)

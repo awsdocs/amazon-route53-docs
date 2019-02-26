@@ -2,7 +2,7 @@
 
 If you changed DNS settings, here are some common reasons that the changes haven't taken effect yet\.
 
-
+**Topics**
 + [You transferred DNS service to Amazon Route 53 in the last 48 hours, so DNS is still using your previous DNS service](#troubleshooting-new-dns-settings-not-in-effect-recent-dns-transfer)
 + [You recently transferred DNS service to Amazon Route 53, but you didn't update the name servers with the domain registrar](#troubleshooting-new-dns-settings-not-in-effect-recent-transfer-wrong-name-servers)
 + [DNS resolvers still are using the old settings for the record](#troubleshooting-new-dns-settings-not-in-effect-cached-resource-record-set)
@@ -22,7 +22,7 @@ The registrar for your domain has a variety of information about the domain, inc
 
 When you transfer DNS service to Amazon Route 53, you need to use the method that is provided by your domain registrar to change the name servers that are associated with your domain\. You're usually replacing the name servers that are provided by the registrar with the four Route 53 name servers that are associated with the hosted zone that you created for the domain\.
 
-If you created a new hosted zone and records for your domain and specified different settings than you used for the previous DNS service, and if DNS is still routing traffic to the old resources, it's possible that you didn't update the name servers with the domain registrar\. To determine whether the registrar is using the name servers for your Route 53 hosted zone and, if necessary, to update the name servers for the domain, perform the following procedure:
+If you created a new hosted zone and records for your domain and specified different settings than you used for the previous DNS service, and if DNS is still routing traffic to the old resources, it's possible that you didn't update the name servers with the domain registrar\. To determine whether the registrar is using the name servers for your Route 53 hosted zone and, if necessary, to update the name servers for the domain, perform the following procedure:<a name="troubleshooting-new-dns-settings-not-in-effect-recent-transfer-wrong-name-servers-procedure"></a>
 
 **To get the name servers for your hosted zone and update the name server setting with the domain registrar**
 
@@ -50,7 +50,7 @@ When you change the name servers for the domain to the name servers from your Ro
 If you changed the settings in a record but your traffic is still being routed to the old resource, such as a web server for your website, one possible cause is that DNS still has the previous settings cached\. Each record has a TTL \(time to live\) value that specifies how long, in seconds, that you want DNS resolvers to cache the information in the record, such as the IP address for a web server\. Until the amount of time that is specified by the TTL passes, DNS resolvers will continue to return the old value in response to DNS queries\. If you want to know what the TTL is for a record, perform the following procedure\.
 
 **Note**  
-For alias records, the TTL is determined by the AWS resource that the record routes traffic to\. For more information, see [Choosing Between Alias and Non\-Alias Records](resource-record-sets-choosing-alias-non-alias.md)\.
+For alias records, the TTL is determined by the AWS resource that the record routes traffic to\. For more information, see [Choosing Between Alias and Non\-Alias Records](resource-record-sets-choosing-alias-non-alias.md)\.<a name="troubleshooting-new-dns-settings-not-in-effect-cached-resource-record-set-procedure"></a>
 
 **To view the TTL for a record**
 

@@ -19,14 +19,11 @@ You can use a combination of AWS services to redirect internet traffic from one 
 1. The DNS service for example\.net routes the request to the applicable resource, such as another S3 bucket or an EC2 instance running a web server\.
 
 **Estimated cost**
-
 + There's an annual fee to register a domain, ranging from $9 to several hundred dollars, depending on the top\-level domain \(TLD\), such as \.com\. For more information, see [Route 53 Pricing for Domain Registration](https://d32ze2gidvkk54.cloudfront.net/Amazon_Route_53_Domain_Registration_Pricing_20140731.pdf)\. This fee is not refundable\.
-
 + When you register a domain, we automatically create a hosted zone that has the same name as the domain\. You use the hosted zone to specify where you want Route 53 to route traffic for your domain\. The fee for a hosted zone is $0\.50 per month\.
-
 + If you're a new AWS customer, you can get started with Amazon S3 for free\. If you're an existing AWS customer, charges are based on how much data you store, on the number of requests for your data, and on the amount of data transferred\. For more information, see [Amazon S3 Pricing](https://aws.amazon.com/s3/pricing/)\.
 
-
+**Topics**
 + [Step 1: Set up Route 53](#tutorial-redirecting-dns-queries-set-up-route-53)
 + [Step 2: Register a Domain](#tutorial-redirecting-dns-queries-register-domain)
 + [Step 3: Get an SSL/TLS Certificate from ACM](#tutorial-redirecting-dns-queries-get-certificate)
@@ -49,7 +46,7 @@ You can ensure that any HTTP requests are converted to HTTPS, so traffic is encr
 
 If you already have an SSL/TLS certificate for the domain that you're redirecting traffic to, you can skip this step\.
 
-If you don't have a certificate, perform the following steps in the [Getting Started](http://docs.aws.amazon.com/acm/latest/userguide/gs.html) topic in the *AWS Certificate Manager User Guide*:
+If you don't have a certificate, perform the following steps in the [Getting Started](https://docs.aws.amazon.com/acm/latest/userguide/gs.html) topic in the *AWS Certificate Manager User Guide*:
 
 1. Request a certificate\.
 
@@ -57,7 +54,7 @@ If you don't have a certificate, perform the following steps in the [Getting Sta
 
 ## Step 4: Create an S3 Bucket and Configure It to Redirect Requests to Another Domain Name<a name="tutorial-redirecting-dns-queries-create-s3-bucket"></a>
 
-In this tutorial, we're using an S3 bucket as the origin for your CloudFront distribution, but the bucket won't contain your content\. Instead, we're using the bucket only to redirect requests from one domain name to another\.
+In this tutorial, we're using an S3 bucket as the origin for your CloudFront distribution, but the bucket won't contain your content\. Instead, we're using the bucket only to redirect requests from one domain name to another\.<a name="tutorial-redirecting-dns-queries-create-s3-bucket-procedure"></a>
 
 **To create an S3 bucket and configure it to redirect requests to another domain name**
 
@@ -96,10 +93,8 @@ In this tutorial, we're using an S3 bucket as the origin for your CloudFront dis
 ## Step 5: Create or Update a CloudFront Distribution<a name="tutorial-redirecting-dns-queries-cloudfront"></a>
 
 You can either create a new CloudFront web distribution or update an existing distribution\. Perform the applicable procedure:
-
 +  [To create a CloudFront web distribution](#tutorial-redirecting-dns-queries-cloudfront-procedure-create) 
-
-+  [To update an existing CloudFront web distribution](#tutorial-redirecting-dns-queries-cloudfront-procedure-update) 
++  [To update an existing CloudFront web distribution](#tutorial-redirecting-dns-queries-cloudfront-procedure-update) <a name="tutorial-redirecting-dns-queries-cloudfront-procedure-create"></a>
 
 **To create a CloudFront web distribution**
 
@@ -127,11 +122,11 @@ Enter the names of the two domains that you want users to use to access your con
 **SSL Certificate**  
 Choose **Custom SSL Certificate**\. Then choose the certificate that you got in [Step 3: Get an SSL/TLS Certificate from ACM](#tutorial-redirecting-dns-queries-get-certificate)\.
 
-1. Also in the **Distribution Settings** section, for **Custom SSL Client Support**, accept the default value of **Only Clients that Support Server Name Indication \(SNI\)**\. If you choose the other option, you have to pay for dedicated IP addresses to serve HTTPS requests\. For more information, see [Choosing How CloudFront Serves HTTPS Requests](http://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/cnames-https-dedicated-ip-or-sni.html) in the *Amazon CloudFront Developer Guide*\.
+1. Also in the **Distribution Settings** section, for **Custom SSL Client Support**, accept the default value of **Only Clients that Support Server Name Indication \(SNI\)**\. If you choose the other option, you have to pay for dedicated IP addresses to serve HTTPS requests\. For more information, see [Choosing How CloudFront Serves HTTPS Requests](https://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/cnames-https-dedicated-ip-or-sni.html) in the *Amazon CloudFront Developer Guide*\.
 
 1. Choose **Create Distribution**\.
 
-1. On the **CloudFront Distributions** page, find the distribution that you just created, and wait for the value of the **Status** column to change from **In Progress** to **Deployed**\.
+1. On the **CloudFront Distributions** page, find the distribution that you just created, and wait for the value of the **Status** column to change from **In Progress** to **Deployed**\.<a name="tutorial-redirecting-dns-queries-cloudfront-procedure-update"></a>
 
 **To update an existing CloudFront web distribution**
 
@@ -147,7 +142,7 @@ Enter the names of the two domains that you want users to use to access your con
 **SSL Certificate**  
 Choose **Custom SSL Certificate**\. Then choose the certificate that you got in [Step 3: Get an SSL/TLS Certificate from ACM](#tutorial-redirecting-dns-queries-get-certificate)\.
 
-1. Also in the **Distribution Settings** section, for **Custom SSL Client Support**, accept the default value of **Only Clients that Support Server Name Indication \(SNI\)**\. If you choose the other option, you have to pay for dedicated IP addresses to serve HTTPS requests\. For more information, see [Choosing How CloudFront Serves HTTPS Requests](http://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/cnames-https-dedicated-ip-or-sni.html) in the *Amazon CloudFront Developer Guide*\.
+1. Also in the **Distribution Settings** section, for **Custom SSL Client Support**, accept the default value of **Only Clients that Support Server Name Indication \(SNI\)**\. If you choose the other option, you have to pay for dedicated IP addresses to serve HTTPS requests\. For more information, see [Choosing How CloudFront Serves HTTPS Requests](https://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/cnames-https-dedicated-ip-or-sni.html) in the *Amazon CloudFront Developer Guide*\.
 
 1. Choose the **Origins** tab\.
 
@@ -177,7 +172,7 @@ Don't choose the name of the bucket from the **Origin Domain Name** list\. The f
 
 ## Step 6: Create a Route 53 Record that Routes Traffic to Your CloudFront Distribution<a name="tutorial-redirecting-dns-queries-create-route-53-record"></a>
 
-The final step before you can test the configuration is to add a record to Route 53 that routes traffic to your CloudFront distribution\. Perform the following procedure\.
+The final step before you can test the configuration is to add a record to Route 53 that routes traffic to your CloudFront distribution\. Perform the following procedure\.<a name="tutorial-redirecting-dns-queries-create-route-53-record-procedure"></a>
 
 **To create a Route 53 record that routes traffic to your CloudFront distribution**
 
@@ -210,9 +205,7 @@ Accept the default value of **No**\.
 ## Step 7: Test the Configuration<a name="tutorial-redirecting-dns-queries-test"></a>
 
 To verify that the website is working correctly, open a web browser and browse to the following URLs\. In both cases, you should see the content for the domain that you're redirecting DNS queries to:
-
 + http://domain\-name\-that\-you're\-redirecting\-from
-
 + https://domain\-name\-that\-you're\-redirecting\-from
 
 In some cases, you might need to clear the cache to see the expected behavior\.

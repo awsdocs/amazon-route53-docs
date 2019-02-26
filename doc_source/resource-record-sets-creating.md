@@ -1,9 +1,9 @@
 # Creating Records by Using the Amazon Route 53 Console<a name="resource-record-sets-creating"></a>
 
-The following procedure explains how to create records using the Amazon Route 53 console\. For information about how to create records using the Route 53 API, see [ChangeResourceRecordSets](http://docs.aws.amazon.com/Route53/latest/APIReference/API_ChangeResourceRecordSets.html) in the *Amazon Route 53 API Reference*\.
+The following procedure explains how to create records using the Amazon Route 53 console\. For information about how to create records using the Route 53 API, see [ChangeResourceRecordSets](https://docs.aws.amazon.com/Route53/latest/APIReference/API_ChangeResourceRecordSets.html) in the *Amazon Route 53 API Reference*\.
 
 **Note**  
-To create records for complex routing configurations, you can also use the traffic flow visual editor and save the configuration as a traffic policy\. You can then associate the traffic policy with one or more domain names \(such as example\.com\) or subdomain names \(such as www\.example\.com\), in the same hosted zone or in multiple hosted zones\. In addition, you can roll back the updates if the new configuration isn't performing as you expected it to\. For more information, see [Using Traffic Flow to Route DNS Traffic](traffic-flow.md)\.
+To create records for complex routing configurations, you can also use the traffic flow visual editor and save the configuration as a traffic policy\. You can then associate the traffic policy with one or more domain names \(such as example\.com\) or subdomain names \(such as www\.example\.com\), in the same hosted zone or in multiple hosted zones\. In addition, you can roll back the updates if the new configuration isn't performing as you expected it to\. For more information, see [Using Traffic Flow to Route DNS Traffic](traffic-flow.md)\.<a name="resource-record-sets-creating-procedure"></a>
 
 **To create a record using the Route 53 console**
 
@@ -15,49 +15,34 @@ To create records for complex routing configurations, you can also use the traff
 
 1. Sign in to the AWS Management Console and open the Route 53 console at [https://console\.aws\.amazon\.com/route53/](https://console.aws.amazon.com/route53/)\.
 
-1. If you already have a hosted zone for your domain, skip to step 4\. If you don't, perform the following steps: 
+1. In the navigation pane, choose **Hosted zones**\.
 
-   1. Click **Create Hosted Zone**\.
+1. If you already have a hosted zone for your domain, skip to step 5\. If you don't, perform the applicable procedure to create a hosted zone:
+   + To route internet traffic to your resources, such as Amazon S3 buckets or Amazon EC2 instances, see [Creating a Public Hosted Zone](CreatingHostedZone.md)\.
+   + To route traffic in your VPC, see [Creating a Private Hosted Zone](hosted-zone-private-creating.md)\.
 
-   1. For **Domain Name**, enter the name of your domain\.
+1. On the **Hosted Zones** page, choose the name of the hosted zone that you want to create records in\.
 
-   1. *Optional:* For **Comment**, enter a comment about the hosted zone\.
-
-   1. Click **Create**\.
-
-1. On the **Hosted Zones** page, choose the name of the hosted zone in which you want to create records\.
-
-1. Click **Create Record Set**\.
+1. Choose **Create Record Set**\.
 
 1. Enter the applicable values\. For more information, see the topic for the kind of record that you want to create:
-
    + [Values for Basic Records](resource-record-sets-values-basic.md)
-
    + [Values for Alias Records](resource-record-sets-values-alias.md)
-
    + [Values for Failover Records](resource-record-sets-values-failover.md)
-
    + [Values for Failover Alias Records](resource-record-sets-values-failover-alias.md)
-
    + [Values for Geolocation Records](resource-record-sets-values-geo.md)
-
    + [Values for Geolocation Alias Records](resource-record-sets-values-geo-alias.md)
-
    + [Values for Latency Records](resource-record-sets-values-latency.md)
-
    + [Values for Latency Alias Records](resource-record-sets-values-latency-alias.md)
-
    + [Values for Multivalue Answer Records](resource-record-sets-values-multivalue.md)
-
    + [Values for Weighted Records](resource-record-sets-values-weighted.md)
-
    + [Values for Weighted Alias Records](resource-record-sets-values-weighted-alias.md)
 
-1. Click **Create**\.
+1. Choose **Create**\.
 **Note**  
-Your new records take time to propagate to the Route 53 DNS servers\. Currently, the only way to verify that changes have propagated is to use the [GetChange](http://docs.aws.amazon.com/Route53/latest/APIReference/API_GetChange.html) API action\. Changes generally propagate to all Route 53 name servers within 60 seconds\.
+Your new records take time to propagate to the Route 53 DNS servers\. Currently, the only way to verify that changes have propagated is to use the [GetChange](https://docs.aws.amazon.com/Route53/latest/APIReference/API_GetChange.html) API action\. Changes generally propagate to all Route 53 name servers within 60 seconds\.
 
-1. If you're creating multiple records, repeat steps 5 through 7\.
+1. If you're creating multiple records, repeat steps 6 through 8\.<a name="resource-record-sets-elb-dns-name-procedure"></a>
 
 **Getting the DNS Name for an ELB Load Balancer**
 
@@ -65,7 +50,7 @@ Your new records take time to propagate to the Route 53 DNS servers\. Currently
 
 1. Open the Amazon EC2 console at [https://console\.aws\.amazon\.com/ec2/](https://console.aws.amazon.com/ec2/)\.
 
-1. In the navigation pane, click **Load Balancers**\.
+1. In the navigation pane, choose **Load Balancers**\.
 
 1. In the list of load balancers, select the load balancer for which you want to create an alias record\.
 

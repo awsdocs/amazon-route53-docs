@@ -5,7 +5,7 @@ Amazon Route 53 supports the DNS record types that are listed in this section\.
 **Note**  
 For record types that include a domain name, enter a fully qualified domain name, for example, *www\.example\.com*\. The trailing dot is optional; Route 53 assumes that the domain name is fully qualified\. This means that Route 53 treats *www\.example\.com* \(without a trailing dot\) and *www\.example\.com\.* \(with a trailing dot\) as identical\.
 
-
+**Topics**
 + [A Record Type](#AFormat)
 + [AAAA Record Type](#AAAAFormat)
 + [CAA Record Type](#CAAFormat)
@@ -56,9 +56,7 @@ The value for a AAAA record is an IPv6 address in colon\-separated hexadecimal f
 A CAA record lets you specify which certificate authorities \(CAs\) are allowed to issue certificates for a domain or subdomain\. Creating a CAA record helps to prevent the wrong CAs from issuing certificates for your domains\. A CAA record isn't a substitute for the security requirements that are specified by your certificate authority, such as the requirement to validate that you're the owner of a domain\.
 
 You can use CAA records to specify the following:
-
 + Which certificate authorities \(CAs\) can issue SSL/TLS certificates, if any
-
 + The email address or URL to contact when a CA issues a certificate for the domain or subdomain
 
 When you add a CAA record to your hosted zone, you specify three settings separated by spaces:
@@ -66,22 +64,16 @@ When you add a CAA record to your hosted zone, you specify three settings separa
 `flags tag "value"`
 
 Note the following about the format for CAA records:
-
 + The value of `tag` can contain only the characters A\-Z, a\-z, and 0\-9\.
-
 + Always enclose `value` in quotation marks \(""\)\.
-
 + Some CAs allow or require additional values for `value`\. Specify additional values as name\-value pairs, and separate them with semicolons \(;\), for example:
 
   `0 issue "ca.example.net; account=123456"`
-
 + If a CA receives a request for a certificate for a subdomain \(such as www\.example\.com\) and if no CAA record for the subdomain exists, the CA submits a DNS query for a CAA record for the parent domain \(such as example\.com\)\. If a record for the parent domain exists and if the certificate request is valid, the CA issues the certificate for the subdomain\.
-
 + We recommend that you consult with your CA to determine what values to specify for a CAA record\.
-
 + You can't create a CAA record and a CNAME record that have the same name because DNS doesn't allow using the same name for both a CNAME record and any other type of record\.
 
-
+**Topics**
 + [Authorize a CA to Issue a Certificate for a Domain or Subdomain](#CAAFormat-issue)
 + [Authorize a CA to Issue a Wildcard Certificate for a Domain or Subdomain](#CAAFormat-issue-wild)
 + [Prevent any CA from Issuing a Certificate for a Domain or Subdomain](#CAAFormat-prevent-issue)
@@ -92,11 +84,8 @@ Note the following about the format for CAA records:
 ### Authorize a CA to Issue a Certificate for a Domain or Subdomain<a name="CAAFormat-issue"></a>
 
 To authorize a CA to issue a certificate for a domain or subdomain, create a record that has the same name as the domain or subdomain, and specify the following settings:
-
 + **flags** – `0`
-
 + **tag** – `issue`
-
 + **value** – the code for the CA that you authorize to issue a certificate for the domain or subdomain
 
 For example, suppose you want to authorize ca\.example\.net to issue a certificate for example\.com\. You create a CAA record for example\.com with the following settings:
@@ -105,16 +94,13 @@ For example, suppose you want to authorize ca\.example\.net to issue a certifica
 0 issue "ca.example.net"
 ```
 
-For information about how to authorize AWS Certificate Manager to issue a certificate, see [Configure a CAA Record](http://docs.aws.amazon.com/acm/latest/userguide/setup-caa.html) in the *AWS Certificate Manager User Guide*\.
+For information about how to authorize AWS Certificate Manager to issue a certificate, see [Configure a CAA Record](https://docs.aws.amazon.com/acm/latest/userguide/setup-caa.html) in the *AWS Certificate Manager User Guide*\.
 
 ### Authorize a CA to Issue a Wildcard Certificate for a Domain or Subdomain<a name="CAAFormat-issue-wild"></a>
 
 To authorize a CA to issue a wildcard certificate for a domain or subdomain, create a record that has the same name as the domain or subdomain, and specify the following settings\. A wildcard certificate applies to the domain or subdomain and all of its subdomains\.
-
 + **flags** – `0`
-
 + **tag** – `issuewild`
-
 + **value** – the code for the CA that you authorize to issue a certificate for a domain or subdomain, and its subdomains
 
 For example, suppose you want to authorize ca\.example\.net to issue a wildcard certificate for example\.com, which applies to example\.com and all of its subdomains\. You create a CAA record for example\.com with the following settings:
@@ -128,11 +114,8 @@ When you want to authorize a CA to issue a wildcard certificate for a domain or 
 ### Prevent any CA from Issuing a Certificate for a Domain or Subdomain<a name="CAAFormat-prevent-issue"></a>
 
 To prevent any CA from issuing a certificate for a domain or subdomain, create a record that has the same name as the domain or subdomain, and specify the following settings:
-
 + **flags** – `0`
-
 + **tag** – `issue`
-
 + **value** – `";"`
 
 For example, suppose you don't want any CA to issue a certificate for example\.com\. You create a CAA record for example\.com with the following settings:
@@ -154,11 +137,8 @@ If you create a CAA record for example\.com and specify both of the following va
 ### Request that any CA Contacts You if the CA Receives an Invalid Certificate Request<a name="CAAFormat-contact"></a>
 
 If you want any CA that receives an invalid request for a certificate to contact you, specify the following settings:
-
 + **flags** – `0`
-
 + **tag** – `iodef`
-
 + **value** – the URL or email address that you want the CA to notify if the CA receives an invalid request for a certificate\. Use the applicable format:
 
   `"mailto:email-address"`
@@ -176,11 +156,8 @@ For example, if you want any CA that receives an invalid request for a certifica
 ### Use Another Setting that Is Supported by the CA<a name="CAAFormat-custom-setting"></a>
 
 If your CA supports a feature that isn't defined in the RFC for CAA records, specify the following settings:
-
 + **flags** – 128 \(This value prevents the CA from issuing a certificate if the CA doesn't support the specified feature\.\)
-
 + **tag** – the tag that you authorize the CA to use
-
 + **value** – the value that corresponds with the value of tag
 
 For example, suppose your CA supports sending a text message if the CA receives an invalid certificate request\. \(We aren't aware of any CAs that support this option\.\) Settings for the record might be the following:
@@ -269,29 +246,19 @@ A setting that is specific to DDDS applications\. Values currently defined in [R
 **Service**  
 A setting that is specific to DDDS applications\. Enclose **Service** in quotation marks\.  
 For more information, see the applicable RFCs:  
-
 + **URI DDDS application** – [https://tools\.ietf\.org/html/rfc3404\#section\-4\.4](https://tools.ietf.org/html/rfc3404#section-4.4)
-
 + **S\-NAPTR DDDS application** – [https://tools\.ietf\.org/html/rfc3958\#section\-6\.5](https://tools.ietf.org/html/rfc3958#section-6.5)
-
 + **U\-NAPTR DDDS application** – [https://tools\.ietf\.org/html/rfc4848\#section\-4\.5](https://tools.ietf.org/html/rfc4848#section-4.5)
 
 **Regexp**  
 A regular expression that the DDDS application uses to convert an input value into an output value\. For example, an IP phone system might use a regular expression to convert a phone number that is entered by a user into a SIP URI\. Enclose **Regexp** in quotation marks\. Specify either a value for **Regexp** or a value for **Replacement**, but not both\.  
 The regular expression can include any of the following printable ASCII characters:  
-
 + a\-z
-
 + 0\-9
-
 + \- \(hyphen\)
-
 + \(space\)
-
-+ \! \# $ % & ' \( \) \* \+ , \- / : ; < = > ? @ \[ \] ^ \_ ` \{ | \} \~ \.
-
++ \! \# $ % & ' \( \) \* \+ , \- / : ; < = > ? @ \[ \] ^ \_ ` \{ \| \} \~ \.
 + " \(quotation mark\)\. To include a literal quote in a string, precede it with a \\ character: \\"\.
-
 + \\ \(backslash\)\. To include a backslash in a string, precede it with a \\ character: \\\\\.
 Specify all other values, such as internationalized domain names, in octal format\.  
 For the syntax for **Regexp**, see [RFC 3402, section 3\.2, Substitution Expression Syntax](https://tools.ietf.org/html/rfc3402#section-3.2)
@@ -301,13 +268,9 @@ The fully qualified domain name \(FQDN\) of the next domain name that you want t
 The domain name can include a\-z, 0\-9, and \- \(hyphen\)\.
 
 For more information about DDDS applications and about NAPTR records, see the following RFCs:
-
 + [RFC 3401](https://www.ietf.org/rfc/rfc3401.txt)
-
 + [RFC 3402](https://www.ietf.org/rfc/rfc3402.txt)
-
 + [RFC 3403](https://www.ietf.org/rfc/rfc3403.txt)
-
 + [RFC 3404](https://www.ietf.org/rfc/rfc3404.txt)
 
 **Example for the Amazon Route 53 console**
@@ -412,26 +375,18 @@ An SRV record `Value` element consists of four space\-separated values\. The fir
 
 ## TXT Record Type<a name="TXTFormat"></a>
 
-A TXT record contains one or more strings that are enclosed in double quotation marks \(`"`\)\. When you use the simple [routing policy](http://docs.aws.amazon.com/Route53/latest/DeveloperGuide/routing-policy.html), include all values for a domain \(example\.com\) or subdomain \(www\.example\.com\) in the same TXT record\.
+A TXT record contains one or more strings that are enclosed in double quotation marks \(`"`\)\. When you use the simple [routing policy](https://docs.aws.amazon.com/Route53/latest/DeveloperGuide/routing-policy.html), include all values for a domain \(example\.com\) or subdomain \(www\.example\.com\) in the same TXT record\.
 
 A single string can include up to 255 characters, including the following:
-
 + a\-z
-
 + A\-Z
-
 + 0\-9
-
 + Space
-
 + \- \(hyphen\)
-
-+ \! " \# $ % & ' \( \) \* \+ , \- / : ; < = > ? @ \[ \\ \] ^ \_ ` \{ | \} \~ \. 
++ \! " \# $ % & ' \( \) \* \+ , \- / : ; < = > ? @ \[ \\ \] ^ \_ ` \{ \| \} \~ \. 
 
 If your TXT record contains any of the following characters, you must specify the characters by using escape codes in the format `\`*three\-digit octal code*:
-
 + Characters 000 to 040 octal \(0 to 32 decimal, 0x00 to 0x20 hexadecimal\)
-
 + Characters 177 to 377 octal \(127 to 255 decimal, 0x7F to 0xFF hexadecimal\)
 
 For example, if the value of your TXT record is `"exämple.com"`, you specify `"ex\344mple.com"`\.

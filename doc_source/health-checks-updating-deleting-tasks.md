@@ -8,19 +8,15 @@ Route 53 doesn't prevent you from deleting a health check even if the health ch
 To update or delete health checks that are already associated with records, we recommend that you perform the following tasks:
 
 1. Identify the records that are associated with the health checks\. To identify the records that are associated with a health check, you must do one of the following: 
-
    + Review the records in each hosted zone using the Route 53 console\. For more information, see [Listing Records](resource-record-sets-listing.md)\.
-
-   + Run the `ListResourceRecordSets` API action on each hosted zone and review the response\. For more information, see [ListResourceRecordSets](http://docs.aws.amazon.com/Route53/latest/APIReference/API_ListResourceRecordSets.html) in the *Amazon Route 53 API Reference*\.
+   + Run the `ListResourceRecordSets` API action on each hosted zone and review the response\. For more information, see [ListResourceRecordSets](https://docs.aws.amazon.com/Route53/latest/APIReference/API_ListResourceRecordSets.html) in the *Amazon Route 53 API Reference*\.
 
 1. Assess the change in behavior that will result from updating or deleting health checks, or from updating records\. Based on that assessment, determine which changes to make\. 
 
    For more information, see [What Happens When You Omit Health Checks?](dns-failover-complex-configs.md#dns-failover-complex-configs-hc-omitting)
 
 1. Change health checks and records as applicable\. For more information, see the following topics:
-
    + [Creating and Updating Health Checks](health-checks-creating.md)
-
    + [Editing Records](resource-record-sets-editing.md)
 
 1. Delete the health checks that you're no longer using, if any\. For more information, see [Deleting Health Checks](health-checks-deleting.md)\. 

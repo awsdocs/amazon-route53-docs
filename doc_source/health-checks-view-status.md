@@ -1,6 +1,6 @@
 # Viewing Health Check Status and the Reason for Health Check Failures<a name="health-checks-view-status"></a>
 
-On the Route 53 console, you can view the status \(healthy or unhealthy\) of your health checks as reported by Route 53 health checkers\. For all health checks except calculated health checks, you can also view the reason for the last health check failure, for example, health checkers were unable to establish a connection with the endpoint\. 
+On the Route 53 console, you can view the status \(healthy or unhealthy\) of your health checks as reported by Route 53 health checkers\. For all health checks except calculated health checks, you can also view the reason for the last health check failure, for example, health checkers were unable to establish a connection with the endpoint\. <a name="health-checks-view-status-console-proc"></a>
 
 **To view the status and last failure reason for a health check \(console\)**
 
