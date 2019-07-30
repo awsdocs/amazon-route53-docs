@@ -89,7 +89,7 @@ If you're using a programming language that AWS doesn't provide an SDK for, you 
 
 ## Step 4: Lower TTL Settings<a name="migrate-dns-lower-ttl"></a>
 
-The TTL \(time to live\) setting for a record specifies how long you want DNS resolvers to cache the record and used the cached information\. When the TTL expires, a resolver sends another query to the DNS service provider for a domain to get the latest information\.
+The TTL \(time to live\) setting for a record specifies how long you want DNS resolvers to cache the record and use the cached information\. When the TTL expires, a resolver sends another query to the DNS service provider for a domain to get the latest information\.
 
 The typical TTL setting for the NS record is 172800 seconds, or two days\. The NS record lists the name servers that the Domain Name System \(DNS\) can use to get information about how to route traffic for your domain\. Lowering the TTL for the NS record, both with your current DNS service provider and with Amazon Route 53, reduces downtime for your domain if you discover a problem while you're migrating DNS to Route 53\. If you don't lower the TTL, your domain could be unavailable on the internet for up to two days if something goes wrong\.
 
