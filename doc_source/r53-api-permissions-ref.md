@@ -335,7 +335,7 @@ Resources: `*`
 ## Required Permissions for Route 53 Resolver Actions<a name="required-permissions-resolver"></a><a name="resolver-table"></a>
 
 [AssociateResolverEndpointIpAddress](https://docs.aws.amazon.com/Route53/latest/APIReference/API_route53resolver_AssociateResolverEndpointIpAddress.html)  
-Required Permissions \(API Action\): `route53:route53resolver:AssociateResolverEndpointIpAddress`, `ec2:DescribeSubnets`, `ec2:DescribeNetworkInterfaces`, `ec2:CreateNetworkInterfacePermission`  
+Required Permissions \(API Action\): `route53resolver:AssociateResolverEndpointIpAddress`, `ec2:DescribeSubnets`, `ec2:DescribeNetworkInterfaces`, `ec2:CreateNetworkInterfacePermission`  
 Resources: `*`
 
 [AssociateResolverRule](https://docs.aws.amazon.com/Route53/latest/APIReference/API_route53resolver_AssociateResolverRule.html)  
