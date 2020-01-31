@@ -5,7 +5,7 @@ Attackers sometimes hijack traffic to internet endpoints such as web servers by 
 You can protect your domain from this type of attack, known as DNS spoofing or a man\-in\-the\-middle attack, by configuring Domain Name System Security Extensions \(DNSSEC\), a protocol for securing DNS traffic\. 
 
 **Important**  
-Amazon Route 53 supports DNSSEC for domain registration\. However, Route 53 does not support DNSSEC for DNS service, regardless of whether the domain is registered with Route 53\. If you want to configure DNSSEC for a domain that is registered with Route 53, you must use another DNS service provider\.
+Amazon Route 53 supports DNSSEC for domain registration\. However, Route 53 does not support DNSSEC for DNS service, regardless of whether the domain is registered with Route 53\. If you want to configure DNSSEC for a domain that is registered with Route 53, you must use another DNS service provider or alternatively, launch a BIND DNS server on an EC2 instance.
 
 **Topics**
 + [Overview of How DNSSEC Protects Your Domain](#domain-configure-dnssec-how-it-works)
