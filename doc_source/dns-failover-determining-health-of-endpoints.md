@@ -22,7 +22,7 @@ Route 53 aggregates the data from the health checkers and determines whether th
 The 18% value was chosen to ensure that health checkers in multiple regions consider the endpoint healthy\. This prevents an endpoint from being considered unhealthy only because network conditions have isolated the endpoint from some health\-checking locations\. This value might change in a future release\.
 
 The response time that an individual health checker uses to determine whether an endpoint is healthy depends on the type of health check:
-+ **HTTP and HTTPS health checks** – Route 53 must be able to establish a TCP connection with the endpoint within four seconds\. In addition, the endpoint must respond with an HTTP status code of 2xx or 3xx within two seconds after connecting\.
++ **HTTP and HTTPS health checks** – Route 53 must be able to establish a TCP connection with the endpoint within four seconds\. In addition, the endpoint must respond with an HTTP status code of 2xx or 3xx within two seconds after connecting\.  Furthermore, Route 53 health checks ignore the certificate when looking for a response from the domain or IP address\. This behavior is similar to what `curl -k` or `wget --no-check-certificate` would return ([reference](https://forums.aws.amazon.com/thread.jspa?threadID=155393))\.
 + **TCP health checks** – Route 53 must be able to establish a TCP connection with the endpoint within ten seconds\.
 + **HTTP and HTTPS health checks with string matching** – As with HTTP and HTTPS health checks, Route 53 must be able to establish a TCP connection with the endpoint within four seconds, and the endpoint must respond with an HTTP status code of 2xx or 3xx within two seconds after connecting\. 
 
