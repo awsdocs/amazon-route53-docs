@@ -1,22 +1,22 @@
-# DNS Domain Name Format<a name="DomainNameFormat"></a>
+# DNS domain name format<a name="DomainNameFormat"></a>
 
 Domain names \(including the names of domains, hosted zones, and records\) consist of a series of labels separated by dots\. Each label can be up to 63 bytes long\. The total length of a domain name cannot exceed 255 bytes, including the dots\. Amazon Route 53 supports any valid domain name\. 
 
 Naming requirements depend on whether you're registering a domain name or you're specifying the name of a hosted zone or a record\. See the applicable topic\.
 
 **Topics**
-+ [Formatting Domain Names for Domain Name Registration](#domain-name-format-registration)
-+ [Formatting Domain Names for Hosted Zones and Records](#domain-name-format-hosted-zones)
-+ [Using an Asterisk \(\*\) in the Names of Hosted Zones and Records](#domain-name-format-asterisk)
-+ [Formatting Internationalized Domain Names](#domain-name-format-idns)
++ [Formatting domain names for domain name registration](#domain-name-format-registration)
++ [Formatting domain names for hosted zones and records](#domain-name-format-hosted-zones)
++ [Using an asterisk \(\*\) in the names of hosted zones and records](#domain-name-format-asterisk)
++ [Formatting internationalized domain names](#domain-name-format-idns)
 
-## Formatting Domain Names for Domain Name Registration<a name="domain-name-format-registration"></a>
+## Formatting domain names for domain name registration<a name="domain-name-format-registration"></a>
 
-For domain name registration, a domain name can contain only the characters a\-z, 0\-9, and – \(hyphen\)\. You can't specify a hyphen at the beginning or end of a label\.
+For domain name registration, a domain name can contain only the characters a\-z, 0\-9, and \- \(hyphen\)\. You can't specify a hyphen at the beginning or end of a label\.
 
-For information about how to register an internationalized domain name \(IDN\), see [Formatting Internationalized Domain Names](#domain-name-format-idns)\.
+For information about how to register an internationalized domain name \(IDN\), see [Formatting internationalized domain names](#domain-name-format-idns)\.
 
-## Formatting Domain Names for Hosted Zones and Records<a name="domain-name-format-hosted-zones"></a>
+## Formatting domain names for hosted zones and records<a name="domain-name-format-hosted-zones"></a>
 
 For hosted zones and records, the domain name can include any of the following printable ASCII characters \(excluding spaces\):
 + a\-z
@@ -37,13 +37,13 @@ If the domain name includes any characters other than a to z, 0 to 9, \- \(hyphe
 
 For a list of ASCII characters the corresponding octal codes, do an internet search on "ascii table"\. 
 
-To specify an internationalized domain name \(IDN\), convert the name to Punycode\. For more information, see [Formatting Internationalized Domain Names](#domain-name-format-idns)\.
+To specify an internationalized domain name \(IDN\), convert the name to Punycode\. For more information, see [Formatting internationalized domain names](#domain-name-format-idns)\.
 
-## Using an Asterisk \(\*\) in the Names of Hosted Zones and Records<a name="domain-name-format-asterisk"></a>
+## Using an asterisk \(\*\) in the names of hosted zones and records<a name="domain-name-format-asterisk"></a>
 
 You can create hosted zones and records that include \* in the name\. 
 
-**Hosted Zones**
+**Hosted zones**
 + You can't include an \* in the leftmost label in a domain name\. For example, \*\.example\.com is not allowed\.
 + If you include \* in other positions, DNS treats it as an \* character \(ASCII 42\), not as a wildcard\.
 
@@ -63,7 +63,7 @@ DNS treats the \* character either as a wildcard or as the \* character \(ASCII 
   1. Create an alias record for the subdomain, such as \*\.example\.com\. Specify the record that you created in step 1 as the target for the alias record\.
 + You can't use the \* as a wildcard for records that have a type of NS\.
 
-## Formatting Internationalized Domain Names<a name="domain-name-format-idns"></a>
+## Formatting internationalized domain names<a name="domain-name-format-idns"></a>
 
 When you register a new domain name or create hosted zones and records, you can specify characters in other alphabets \(for example, Cyrillic or Arabic\) and characters in Chinese, Japanese, or Korean\. Amazon Route 53 stores these internationalized domain names \(IDNs\) in Punycode, which represents Unicode characters as ASCII strings\.
 
@@ -78,4 +78,4 @@ How you enter an IDN depends on what you're creating \(domain names, hosted zone
 + If you're using the Route 53 console to register a domain name, you can paste the name, including Unicode characters, into the name field, and the console converts the value to Punycode before saving it\.
 + If you're using the Route 53 console to create hosted zones or records, you need to convert the domain name to Punycode before you enter the name in the applicable **Name** field\. For information about online converters, perform an internet search on "punycode converter"\.
 
-If you're registering a domain name, note that not all top\-level domains \(TLDs\) support IDNs\. For a list of TLDs supported by Route 53, see [Domains That You Can Register with Amazon Route 53](registrar-tld-list.md)\. TLDs that don't support IDNs are noted\. 
+If you're registering a domain name, note that not all top\-level domains \(TLDs\) support IDNs\. For a list of TLDs supported by Route 53, see [Domains that you can register with Amazon Route 53](registrar-tld-list.md)\. TLDs that don't support IDNs are noted\. 

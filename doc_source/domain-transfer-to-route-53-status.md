@@ -1,6 +1,6 @@
-# Viewing the Status of a Domain Transfer<a name="domain-transfer-to-route-53-status"></a>
+# Viewing the status of a domain transfer<a name="domain-transfer-to-route-53-status"></a>
 
-After you initiate the transfer of a domain from another domain registrar to Amazon Route 53, you can track the status on the **Registered Domains** page of the Route 53 console\. The **Status** column includes a brief description of the current step\. The following list includes the text in the console and a more detailed description of each step\.
+After you initiate the transfer of a domain from another domain registrar to Amazon Route 53, you can track the status on the **Pending requests** page of the Route 53 console\. The **Status** column includes a brief description of the current step\. The following list includes the text in the console and a more detailed description of each step\.
 
 **Note**  
 When you submit a transfer request, the initial status is **Domain transfer request submitted**, which indicates that we've received your request\.
@@ -24,17 +24,17 @@ Authorization isn't required for domains that have a [generic TLD](https://docs.
 We've sent a request to the current registrar for the domain to initiate the transfer\.
 
 **Geographic TLDs only – Awaiting authorization from registrant contact \(step 5 of 14\)**  
-We sent email to the registrant contact for the domain \(see step 3 of 14\), and we're waiting for the registrant contact to click a link in the email to authorize the transfer\. If you're transferring a domain that has a [geographic TLD](https://docs.aws.amazon.com/Route53/latest/DeveloperGuide/registrar-tld-list.html#registrar-tld-list-geographic) and you didn't receive the email for some reason, see [Resending Authorization and Confirmation Emails](domain-click-email-link.md)\.
+We sent email to the registrant contact for the domain \(see step 3 of 14\), and we're waiting for the registrant contact to click a link in the email to authorize the transfer\. If you're transferring a domain that has a [geographic TLD](https://docs.aws.amazon.com/Route53/latest/DeveloperGuide/registrar-tld-list.html#registrar-tld-list-geographic) and you didn't receive the email for some reason, see [Resending authorization and confirmation emails](domain-click-email-link.md)\.
 
 **Contacted current registrar to request transfer \(step 6 of 14\)**  
 We're working with the current registrar for the domain to finalize the transfer\.
 
 **Waiting for the current registrar to complete the transfer \(step 7 of 14\)**  
 Your current registrar is confirming that your domain meets the requirements for being transferred\. This step might take up to ten days, depending on the TLD for your domain:  
-+ [Generic Top\-Level Domains](registrar-tld-list.md#registrar-tld-list-generic) – take up to seven days
-+ [Geographic Top\-Level Domains](registrar-tld-list.md#registrar-tld-list-geographic) \(also known as country code top\-level domains\) – take up to ten days
++ [Generic top\-level domains](registrar-tld-list-generic.md) – take up to seven days
++ [Geographic top\-level domains](registrar-tld-list-geographic.md) \(also known as country code top\-level domains\) – take up to ten days
 For most registrars, the process is entirely automated and can't be accelerated\. Some registrars send you an email that asks you to approve the transfer; if your registrar sends this confirmation email, the transfer process might be much faster than seven to ten days\.  
-For information about reasons that a registrar might reject the transfer, see [Transfer Requirements for Top\-Level Domains](domain-transfer-to-route-53.md#domain-transfer-to-route-53-requirements)\.
+For information about reasons that a registrar might reject the transfer, see [Transfer requirements for top\-level domains](domain-transfer-to-route-53.md#domain-transfer-to-route-53-requirements)\.
 
 **Confirming with the registrant contact that the contact initiated the transfer \(step 8 of 14\)**  
 Some TLD registries send the registrant contact another email to confirm that the domain transfer was requested by an authorized user\.

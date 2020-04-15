@@ -1,21 +1,21 @@
-# Values for Geolocation Records<a name="resource-record-sets-values-geo"></a>
+# Values for geolocation records<a name="resource-record-sets-values-geo"></a>
 
 When you create geolocation records, you specify the following values\.
 
 **Note**  
-Creating geolocation records in private hosted zones is not supported\.
+Although creating geolocation records in private hosted zones is allowed, it's not supported\.
 
 **Topics**
 + [Name](#rrsets-values-geo-name)
 + [Type](#rrsets-values-geo-type)
 + [Alias](#rrsets-values-geo-alias)
-+ [TTL \(Time to Live\)](#rrsets-values-geo-ttl)
++ [TTL \(time to live\)](#rrsets-values-geo-ttl)
 + [Value](#rrsets-values-geo-value)
-+ [Routing Policy](#rrsets-values-geo-routing-policy)
++ [Routing policy](#rrsets-values-geo-routing-policy)
 + [Location](#rrsets-values-geo-location)
 + [Sublocation](#rrsets-values-geo-sublocation)
 + [Set ID](#rrsets-values-geo-set-id)
-+ [Associate with Health Check/Health Check to Associate](#rrsets-values-geo-associate-with-health-check)
++ [Associate with health check/Health check to associate](#rrsets-values-geo-associate-with-health-check)
 
 ## Name<a name="rrsets-values-geo-name"></a>
 
@@ -30,24 +30,26 @@ Enter the same name for all of the records in the group of geolocation records\.
 If you're creating a record that has a value of **CNAME** for **Type**, the name of the record can't be the same as the name of the hosted zone\.
 
 **Special characters**  
-For information about how to specify characters other than a\-z, 0\-9, and \- \(hyphen\) and how to specify internationalized domain names, see [DNS Domain Name Format](DomainNameFormat.md)\.
+For information about how to specify characters other than a\-z, 0\-9, and \- \(hyphen\) and how to specify internationalized domain names, see [DNS domain name format](DomainNameFormat.md)\.
 
 **Wildcard characters**  
-You can use an asterisk \(\*\) character in the name\. DNS treats the \* character either as a wildcard or as the \* character \(ASCII 42\), depending on where it appears in the name\. For more information, see [Using an Asterisk \(\*\) in the Names of Hosted Zones and Records](DomainNameFormat.md#domain-name-format-asterisk)\.
+You can use an asterisk \(\*\) character in the name\. DNS treats the \* character either as a wildcard or as the \* character \(ASCII 42\), depending on where it appears in the name\. For more information, see [Using an asterisk \(\*\) in the names of hosted zones and records](DomainNameFormat.md#domain-name-format-asterisk)\.
 
 ## Type<a name="rrsets-values-geo-type"></a>
 
-The DNS record type\. For more information, see [Supported DNS Record Types](ResourceRecordTypes.md)\.
+The DNS record type\. For more information, see [Supported DNS record types](ResourceRecordTypes.md)\.
 
-Select the same value for all of the records in the group of geolocation records\.
+Select the same value for all of the records in the group of geolocation records\.zzz
 
 ## Alias<a name="rrsets-values-geo-alias"></a>
 
 Select **No**\. 
 
-## TTL \(Time to Live\)<a name="rrsets-values-geo-ttl"></a>
+## TTL \(time to live\)<a name="rrsets-values-geo-ttl"></a>
 
-The amount of time, in seconds, that you want DNS recursive resolvers to cache information about this record\. If you specify a longer value \(for example, 172800 seconds, or two days\), you pay less for Route 53 service because recursive resolvers send requests to Route 53 less often\. However, it takes longer for changes to the record \(for example, a new IP address\) to take effect because recursive resolvers use the values in their cache for longer periods instead of asking Route 53 for the latest information\. 
+The amount of time, in seconds, that you want DNS recursive resolvers to cache information about this record\. If you specify a longer value \(for example, 172800 seconds, or two days\), you reduce the number of calls that DNS recursive resolvers must make to Route 53 to get the latest information in this record\. This has the effect of reducing latency and reducing your bill for Route 53 service\. For more information, see [How Amazon Route 53 routes traffic for your domain](welcome-dns-service.md#welcome-dns-service-how-route-53-routes-traffic)\.
+
+However, if you specify a longer value for TTL, it takes longer for changes to the record \(for example, a new IP address\) to take effect because recursive resolvers use the values in their cache for longer periods before they ask Route 53 for the latest information\. If you're changing settings for a domain or subdomain that's already in use, we recommend that you initially specify a shorter value, such as 300 seconds, and increase the value after you confirm that the new settings are correct\.
 
 If you're associating this record with a health check, we recommend that you specify a TTL of 60 seconds or less so clients respond quickly to changes in health status\.
 
@@ -73,13 +75,13 @@ The fully qualified domain name \(for example, *www\.example\.com*\) that you wa
 A priority and a domain name that specifies a mail server, for example, **10 mailserver\.example\.com**\.
 
 **NAPTR — Name Authority Pointer**  
-Six space\-separated settings that are used by Dynamic Delegation Discovery System \(DDDS\) applications to convert one value to another or to replace one value with another\. For more information, see [NAPTR Record Type](ResourceRecordTypes.md#NAPTRFormat)\.
+Six space\-separated settings that are used by Dynamic Delegation Discovery System \(DDDS\) applications to convert one value to another or to replace one value with another\. For more information, see [NAPTR record type](ResourceRecordTypes.md#NAPTRFormat)\.
 
 **PTR — Pointer**  
 The domain name that you want Route 53 to return\.
 
 **SPF — Sender Policy Framework**  
-An SPF record enclosed in quotation marks, for example, **"v=spf1 ip4:192\.168\.0\.1/16\-all"**\. SPF records are not recommended\. For more information, see [Supported DNS Record Types](ResourceRecordTypes.md)\.
+An SPF record enclosed in quotation marks, for example, **"v=spf1 ip4:192\.168\.0\.1/16\-all"**\. SPF records are not recommended\. For more information, see [Supported DNS record types](ResourceRecordTypes.md)\.
 
 **SRV — Service locator**  
 An SRV record\. For information about SRV record format, refer to the applicable documentation\. The format of an SRV record is:  
@@ -90,7 +92,7 @@ For example:
 **TXT — Text**  
 A text record\. Enclose text in quotation marks, for example, **"Sample Text Entry"**\. 
 
-## Routing Policy<a name="rrsets-values-geo-routing-policy"></a>
+## Routing policy<a name="rrsets-values-geo-routing-policy"></a>
 
 Select **Geolocation**\. 
 
@@ -103,7 +105,7 @@ We recommend that you create one geolocation record that has a value of **Defaul
 
 You can't create non\-geolocation records that have the same values for **Name** and **Type** as geolocation records\.
 
-For more information, see [Geolocation Routing](routing-policy.md#routing-policy-geo)\.
+For more information, see [Geolocation routing](routing-policy.md#routing-policy-geo)\.
 
 Here are the countries that Amazon Route 53 associates with each continent\. The country codes are from ISO 3166\. For more information, see the Wikipedia article [ISO 3166\-1 alpha\-2](http://en.wikipedia.org/wiki/ISO_3166-1_alpha-2):
 
@@ -114,10 +116,10 @@ AO, BF, BI, BJ, BW, CD, CF, CG, CI, CM, CV, DJ, DZ, EG, ER, ET, GA, GH, GM, GN, 
 AQ, GS, TF
 
 **Asia \(AS\)**  
-AE, AF, AM, AZ, BD, BH, BN, BT, CC, CN, GE, HK, ID, IL, IN, IO, IQ, IR, JO, JP, KG, KH, KP, KR, KW, KZ, LA, LB, LK, MM, MN, MO, MV, MY, NP, OM, PH, PK, PS, QA, SA, SG, SY, TH, TJ, TM, TR, TW, UZ, VN, YE
+AE, AF, AM, AZ, BD, BH, BN, BT, CC, CN, GE, HK, ID, IL, IN, IO, IQ, IR, JO, JP, KG, KH, KP, KR, KW, KZ, LA, LB, LK, MM, MN, MO, MV, MY, NP, OM, PH, PK, PS, QA, SA, SG, SY, TH, TJ, TM, TW, UZ, VN, YE
 
 **Europe \(EU\)**  
-AD, AL, AT, AX, BA, BE, BG, BY, CH, CY, CZ, DE, DK, EE, ES, FI, FO, FR, GB, GG, GI, GR, HR, HU, IE, IM, IS, IT, JE, LI, LT, LU, LV, MC, MD, ME, MK, MT, NL, NO, PL, PT, RO, RS, RU, SE, SI, SJ, SK, SM, UA, VA, XK
+AD, AL, AT, AX, BA, BE, BG, BY, CH, CY, CZ, DE, DK, EE, ES, FI, FO, FR, GB, GG, GI, GR, HR, HU, IE, IM, IS, IT, JE, LI, LT, LU, LV, MC, MD, ME, MK, MT, NL, NO, PL, PT, RO, RS, RU, SE, SI, SJ, SK, SM, TR, UA, VA, XK
 
 **North America \(NA\)**  
 AG, AI, AW, BB, BL, BM, BQ, BS, BZ, CA, CR, CU, CW, DM, DO, GD, GL, GP, GT, HN, HT, JM, KN, KY, LC, MF, MQ, MS, MX, NI, PA, PM, PR, SV, SX, TC, TT, US, VC, VG, VI
@@ -142,11 +144,11 @@ Some IP addresses are associated with the United States, but not with an individ
 
 Enter a value that uniquely identifies this record in the group of geolocation records\.
 
-## Associate with Health Check/Health Check to Associate<a name="rrsets-values-geo-associate-with-health-check"></a>
+## Associate with health check/Health check to associate<a name="rrsets-values-geo-associate-with-health-check"></a>
 
 Select **Yes** if you want Route 53 to check the health of a specified endpoint and to respond to DNS queries using this record only when the endpoint is healthy\. Then select the health check that you want Route 53 to perform for this record\. 
 
-Route 53 doesn't check the health of the endpoint specified in the record, for example, the endpoint specified by the IP address in the **Value** field\. When you select a health check for a record, Route 53 checks the health of the endpoint that you specified in the health check\. For information about how Route 53 determines whether an endpoint is healthy, see [How Amazon Route 53 Determines Whether a Health Check Is HealthyHow Route 53 Determines Whether a Health Check Is Healthy](dns-failover-determining-health-of-endpoints.md)\.
+Route 53 doesn't check the health of the endpoint specified in the record, for example, the endpoint specified by the IP address in the **Value** field\. When you select a health check for a record, Route 53 checks the health of the endpoint that you specified in the health check\. For information about how Route 53 determines whether an endpoint is healthy, see [How Amazon Route 53 determines whether a health check is healthyHow Route 53 determines whether a health check is healthy](dns-failover-determining-health-of-endpoints.md)\.
 
 Associating a health check with a record is useful only when Route 53 is choosing between two or more records to respond to a DNS query, and you want Route 53 to base the choice in part on the status of a health check\. Use health checks only in the following configurations:
 + You're checking the health of all of the records in a group of records that have the same name, type, and routing policy \(such as failover or weighted records\), and you specify health check IDs for all the records\. If the health check for a record specifies an endpoint that is not healthy, Route 53 stops responding to queries using the value for that record\.

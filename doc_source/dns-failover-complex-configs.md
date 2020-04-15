@@ -1,4 +1,4 @@
-# How Health Checks Work in Complex Amazon Route 53 Configurations<a name="dns-failover-complex-configs"></a>
+# How health checks work in complex Amazon Route 53 configurations<a name="dns-failover-complex-configs"></a>
 
 Checking the health of resources in complex configurations works much the same way as in simple configurations\. However, in complex configurations, you use a combination of alias records \(such as weighted alias and failover alias\) and non\-alias records to build a decision tree that gives you greater control over how Route 53 responds to requests\.
 
@@ -36,11 +36,11 @@ The preceding diagram illustrates the following sequence of events:
 1. Route 53 again selects a record based on weight, and then checks the health of the selected resource\. The resource is healthy, so Route 53 returns the applicable value in response to the query\.
 
 **Topics**
-+ [What Happens When You Associate a Health Check with an Alias Record?](#dns-failover-complex-configs-hc-alias)
-+ [What Happens When You Omit Health Checks?](#dns-failover-complex-configs-hc-omitting)
-+ [What Happens When You Set Evaluate Target Health to No?](#dns-failover-complex-configs-eth-no)
++ [What happens when you associate a health check with an alias record?](#dns-failover-complex-configs-hc-alias)
++ [What happens when you omit health checks?](#dns-failover-complex-configs-hc-omitting)
++ [What happens when you set evaluate target health to No?](#dns-failover-complex-configs-eth-no)
 
-## What Happens When You Associate a Health Check with an Alias Record?<a name="dns-failover-complex-configs-hc-alias"></a>
+## What happens when you associate a health check with an alias record?<a name="dns-failover-complex-configs-hc-alias"></a>
 
 You can associate a health check with an alias record instead of or in addition to setting the value of **Evaluate Target Health** to **Yes**\. However, it's generally more useful if Route 53 responds to queries based on the health of the underlying resources—the HTTP servers, database servers, and other resources that your alias records refer to\. For example, suppose the following configuration:
 + You assign a health check to a latency alias record for which the alias target is a group of weighted records\.
@@ -50,11 +50,11 @@ In this configuration, both of the following must be true before Route 53 will 
 + The health check associated with the latency alias record must pass\.
 + At least one weighted record must be considered healthy, either because it's associated with a health check that passes or because it's not associated with a health check\. In the latter case, Route 53 always considers the weighted record healthy\.
 
-In the following illustration, the health check for the latency alias record on the top left failed\. As a result, Route 53 stops responding to queries using any of the weighted records that the latency alias record refers to even if they're all healthy\. Route 53 begins to consider these weighted records again only when the health check for the latency alias record is healthy again\. \(For exceptions, see [How Amazon Route 53 Chooses Records When Health Checking Is ConfiguredHow Route 53 Chooses Records When Health Checking Is Configured](health-checks-how-route-53-chooses-records.md)\.\) 
+In the following illustration, the health check for the latency alias record on the top left failed\. As a result, Route 53 stops responding to queries using any of the weighted records that the latency alias record refers to even if they're all healthy\. Route 53 begins to consider these weighted records again only when the health check for the latency alias record is healthy again\. \(For exceptions, see [How Amazon Route 53 chooses records when health checking is configuredHow Route 53 chooses records when health checking is configured](health-checks-how-route-53-chooses-records.md)\.\) 
 
 ![\[DNS configuration that includes an alias record with both Evaluate Target Health set to Yes and a health check on the alias record.\]](http://docs.aws.amazon.com/Route53/latest/DeveloperGuide/images/hc-latency-alias-weighted-alias-hc-failed.png)
 
-## What Happens When You Omit Health Checks?<a name="dns-failover-complex-configs-hc-omitting"></a>
+## What happens when you omit health checks?<a name="dns-failover-complex-configs-hc-omitting"></a>
 
 In a complex configuration, it's important to associate health checks with all the non\-alias records\. In the following example, a health check is missing on one of the weighted records in the us\-east\-1 region\.
 
@@ -68,7 +68,7 @@ Here's what happens when you omit a health check on a non\-alias record in this 
 
 1. The other weighted record in the alias target for the us\-east\-1 region has no health check\. The corresponding resource might or might not be healthy, but without a health check, Route 53 has no way to know\. Route 53 assumes that the resource is healthy and returns the applicable value in response to the query\.
 
-## What Happens When You Set Evaluate Target Health to No?<a name="dns-failover-complex-configs-eth-no"></a>
+## What happens when you set evaluate target health to No?<a name="dns-failover-complex-configs-eth-no"></a>
 
 In general, you should set **Evaluate Target Health** to **Yes** for all the alias records in a tree\. If you set **Evaluate Target Health** to **No**, Route 53 continues to route traffic to the records that an alias record refers to even if health checks for those records are failing\.
 

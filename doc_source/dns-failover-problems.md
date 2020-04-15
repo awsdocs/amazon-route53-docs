@@ -1,12 +1,12 @@
-# How Amazon Route 53 Averts Failover Problems<a name="dns-failover-problems"></a>
+# How Amazon Route 53 averts failover problems<a name="dns-failover-problems"></a>
 
 The failover algorithms implemented by Route 53 are designed not only to route traffic to endpoints that are healthy, but also to avoid making disaster scenarios worse due to misconfigured health checks and applications, endpoint overloads, and partition failures\.
 
 **Topics**
-+ [How Amazon Route 53 Averts Cascading Failures](#dns-failover-cascading-failures)
-+ [How Amazon Route 53 Handles Internet Partitions](#dns-failover-internet-partitions)
++ [How Amazon Route 53 averts cascading failures](#dns-failover-cascading-failures)
++ [How Amazon Route 53 handles internet partitions](#dns-failover-internet-partitions)
 
-## How Amazon Route 53 Averts Cascading Failures<a name="dns-failover-cascading-failures"></a>
+## How Amazon Route 53 averts cascading failures<a name="dns-failover-cascading-failures"></a>
 
 As a first defense against cascading failures, each request routing algorithm \(such as weighted and failover\) has a mode of last resort\. In this special mode, when all records are considered unhealthy, the Route 53 algorithm reverts to considering all records healthy\.
 
@@ -14,7 +14,7 @@ For example, if all instances of an application, on several hosts, are rejecting
 
 Similarly, if an application is overloaded, and one out of three endpoints fails its health checks, so that it's excluded from Route 53 DNS responses, Route 53 distributes responses between the two remaining endpoints\. If the remaining endpoints are unable to handle the additional load and they fail, Route 53 reverts to distributing requests to all three endpoints\.
 
-## How Amazon Route 53 Handles Internet Partitions<a name="dns-failover-internet-partitions"></a>
+## How Amazon Route 53 handles internet partitions<a name="dns-failover-internet-partitions"></a>
 
 Although uncommon, there occasionally are significant internet partitions, meaning that large geographic regions can't communicate with one another over the internet\. During these partitions, Route 53 locations might reach different conclusions about the health status of an endpoint and might differ from the status reported to CloudWatch\. Route 53 health checkers in each AWS Region are constantly sending health check statuses to all Route 53 locations\. During internet partitions, each Route 53 location might have access only to a partial set of these statuses, usually from its closest regions\.
 

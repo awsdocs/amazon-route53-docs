@@ -1,4 +1,4 @@
-# Editing Records<a name="resource-record-sets-editing"></a>
+# Editing records<a name="resource-record-sets-editing"></a>
 
 The following procedure explains how to edit records using the Amazon Route 53 console\. For information about how to edit records using the Route 53 API, see [ChangeResourceRecordSets](https://docs.aws.amazon.com/Route53/latest/APIReference/API_ChangeResourceRecordSets.html) in the *Amazon Route 53 API Reference*\.
 
@@ -9,7 +9,7 @@ Your changes to records take time to propagate to the Route 53 DNS servers\. Cu
 
 1. If you're not editing alias records, skip to step 2\. 
 
-   If you're editing alias records that route traffic to ELB Classic, Application, or Network Load Balancers, and if you created your Route 53 hosted zone and your load balancer using different accounts, perform the procedure [Getting the DNS Name for an ELB Load Balancer](resource-record-sets-creating.md#resource-record-sets-elb-dns-name-procedure) to get the DNS name for the load balancer\. 
+   If you're editing alias records that route traffic to ELB Classic, Application, or Network Load Balancers, and if you created your Route 53 hosted zone and your load balancer using different accounts, perform the procedure [Getting the DNS name for an ELB load balancer](resource-record-sets-creating.md#resource-record-sets-elb-dns-name-procedure) to get the DNS name for the load balancer\. 
 
    If you're editing alias records for any other AWS resource, skip to step 2\.
 
@@ -21,7 +21,7 @@ Your changes to records take time to propagate to the Route 53 DNS servers\. Cu
 
 1. Choose the row for the record that you want to edit\. 
 
-1. Enter the applicable values\. For more information, see [Values That You Specify When You Create or Edit Amazon Route 53 Records](resource-record-sets-values.md)\. 
+1. Enter the applicable values\. For more information, see [Values that you specify when you create or edit Amazon Route 53 records](resource-record-sets-values.md)\. 
 
 1. Choose **Save Record Set**\.
 

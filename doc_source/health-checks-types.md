@@ -1,4 +1,4 @@
-# Types of Amazon Route 53 Health Checks<a name="health-checks-types"></a>
+# Types of Amazon Route 53 health checks<a name="health-checks-types"></a>
 
 You can create three types of Amazon Route 53 health checks:
 

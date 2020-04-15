@@ -1,23 +1,23 @@
-# Values for Latency Alias Records<a name="resource-record-sets-values-latency-alias"></a>
+# Values for latency alias records<a name="resource-record-sets-values-latency-alias"></a>
 
 When you create latency alias records, you specify the following values\.
 
 **Note**  
-Creating latency alias records in private hosted zones is not supported\.
+Although creating latency alias records in a private hosted zone is allowed, it's not supported\.
 
-For more information, see [Choosing Between Alias and Non\-Alias Records](resource-record-sets-choosing-alias-non-alias.md)\.
+For more information, see [Choosing between alias and non\-alias records](resource-record-sets-choosing-alias-non-alias.md)\.
 
 **Topics**
 + [Name](#rrsets-values-latency-alias-name)
 + [Type](#rrsets-values-latency-alias-type)
 + [Alias](#rrsets-values-latency-alias-alias)
-+ [Alias Target](#rrsets-values-latency-alias-alias-target)
-+ [Alias Hosted Zone ID](#rrsets-values-latency-alias-hosted-zone-id)
-+ [Routing Policy](#rrsets-values-latency-alias-routing-policy)
++ [Alias target](#rrsets-values-latency-alias-alias-target)
++ [Alias hosted zone ID](#rrsets-values-latency-alias-hosted-zone-id)
++ [Routing policy](#rrsets-values-latency-alias-routing-policy)
 + [Region](#rrsets-values-latency-alias-region)
 + [Set ID](#rrsets-values-latency-alias-set-id)
-+ [Evaluate Target Health](#rrsets-values-latency-alias-evaluate-target-health)
-+ [Associate with Health Check/Health Check to Associate](#rrsets-values-latency-alias-associate-with-health-check)
++ [Evaluate target health](#rrsets-values-latency-alias-evaluate-target-health)
++ [Associate with health check/Health check to associate](#rrsets-values-latency-alias-associate-with-health-check)
 
 ## Name<a name="rrsets-values-latency-alias-name"></a>
 
@@ -33,20 +33,20 @@ If you're creating a record that has a value of **CNAME** for **Type**, the name
 
 **Aliases to CloudFront distributions and Amazon S3 buckets**  
 The value that you specify depends in part on the AWS resource that you're routing traffic to:  
-+ **CloudFront distribution** – Your distribution must include an alternate domain name that matches the name of the record\. For example, if the name of the record is **acme\.example\.com**, your CloudFront distribution must include **acme\.example\.com** as one of the alternate domain names\. For more information, see [Using Alternate Domain Names \(CNAMEs\)](https://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/CNAMEs.html) in the *Amazon CloudFront Developer Guide*\.
++ **CloudFront distribution** – Your distribution must include an alternate domain name that matches the name of the record\. For example, if the name of the record is **acme\.example\.com**, your CloudFront distribution must include **acme\.example\.com** as one of the alternate domain names\. For more information, see [Using alternate domain names \(CNAMEs\)](https://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/CNAMEs.html) in the *Amazon CloudFront Developer Guide*\. 
 + **Amazon S3 bucket** – The name of the record must match the name of your Amazon S3 bucket\. For example, if the name of your bucket is **acme\.example\.com**, the name of this record must also be **acme\.example\.com**\.
 
-  In addition, you must configure the bucket for website hosting\. For more information, see [Configure a Bucket for Website Hosting](https://docs.aws.amazon.com/AmazonS3/latest/dev/HowDoIWebsiteConfiguration.html) in the *Amazon Simple Storage Service Developer Guide*\.
+  In addition, you must configure the bucket for website hosting\. For more information, see [Configure a bucket for website hosting](https://docs.aws.amazon.com/AmazonS3/latest/dev/HowDoIWebsiteConfiguration.html) in the *Amazon Simple Storage Service Developer Guide*\. 
 
 **Special characters**  
-For information about how to specify characters other than a\-z, 0\-9, and \- \(hyphen\) and how to specify internationalized domain names, see [DNS Domain Name Format](DomainNameFormat.md)\.
+For information about how to specify characters other than a\-z, 0\-9, and \- \(hyphen\) and how to specify internationalized domain names, see [DNS domain name format](DomainNameFormat.md)\.
 
 **Wildcard characters**  
-You can use an asterisk \(\*\) character in the name\. DNS treats the \* character either as a wildcard or as the \* character \(ASCII 42\), depending on where it appears in the name\. For more information, see [Using an Asterisk \(\*\) in the Names of Hosted Zones and Records](DomainNameFormat.md#domain-name-format-asterisk)\.
+You can use an asterisk \(\*\) character in the name\. DNS treats the \* character either as a wildcard or as the \* character \(ASCII 42\), depending on where it appears in the name\. For more information, see [Using an asterisk \(\*\) in the names of hosted zones and records](DomainNameFormat.md#domain-name-format-asterisk)\.
 
 ## Type<a name="rrsets-values-latency-alias-type"></a>
 
-The DNS record type\. For more information, see [Supported DNS Record Types](ResourceRecordTypes.md)\.
+The DNS record type\. For more information, see [Supported DNS record types](ResourceRecordTypes.md)\.
 
 Select the applicable value based on the AWS resource that you're routing traffic to:
 
@@ -79,9 +79,16 @@ Select the same value for all of the records in the group of latency records\.
 
 Select **Yes**\. 
 
-## Alias Target<a name="rrsets-values-latency-alias-alias-target"></a>
+## Alias target<a name="rrsets-values-latency-alias-alias-target"></a>
 
-The value that you specify depends on the AWS resource that you're routing traffic to\.
+The value that you choose from the list or that you type in the field depends on the AWS resource that you're routing traffic to\.
+
+**Important**  
+If you used the same AWS account to create your hosted zone and the resource that you're routing traffic to, and if your resource doesn't appear in the **Alias Target** list, check the following:  
+Confirm that you chose a supported value for **Type**\. Supported values are specific to the resource that you're routing traffic to\. For example, to route traffic to an S3 bucket, you must choose **A — IPv4 address** for **Type**\.
+Confirm that the account has the IAM permissions that are required to list the applicable resources\. For example, for CloudFront distributions to appear in the **Alias Target** list, the account must have permission to perform the following action: `cloudfront:ListDistributions`\.  
+For an example IAM policy, see [Permissions required to use the Amazon Route 53 console](access-control-managing-permissions.md#console-required-permissions)\.
+If you used different AWS accounts to create the hosted zone and the resource, the **Alias Target** list doesn't display your resource\. See the following documentation for your resource type to determine what value to type in **Alias Target**\.
 
 **API Gateway custom regional APIs and edge\-optimized APIs**  
 For API Gateway custom regional APIs and edge\-optimized APIs, do one of the following:  
@@ -107,7 +114,7 @@ For CloudFront distributions, do one of the following:
 
   If you used one account to create the current hosted zone and one or more different accounts to create all of your distributions, the **Alias Targets** list shows **No Targets Available** under **CloudFront Distributions**\.
 Do not route queries to a CloudFront distribution that has not propagated to all edge locations, or your users won't be able to access the applicable content\. 
-Your CloudFront distribution must include an alternate domain name that matches the name of the record\. For example, if the name of the record is **acme\.example\.com**, your CloudFront distribution must include **acme\.example\.com** as one of the alternate domain names\. For more information, see [Using Alternate Domain Names \(CNAMEs\)](https://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/CNAMEs.html) in the *Amazon CloudFront Developer Guide*\.  
+Your CloudFront distribution must include an alternate domain name that matches the name of the record\. For example, if the name of the record is **acme\.example\.com**, your CloudFront distribution must include **acme\.example\.com** as one of the alternate domain names\. For more information, see [Using alternate domain names \(CNAMEs\)](https://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/CNAMEs.html) in the *Amazon CloudFront Developer Guide*\.  
 If IPv6 is enabled for the distribution, create two records, one with a value of **A — IPv4 address** for **Type**, and one with a value of **AAAA — IPv6 address**\.
 
 **Elastic Beanstalk environments that have regionalized subdomains**  
@@ -120,22 +127,25 @@ For Elastic Beanstalk environments that have regionalized subdomains, do one of 
 **ELB Load Balancers**  
 For ELB load balancers, do one of the following:  
 + **If you used the same account to create your Route 53 hosted zone and your load balancer** – Choose **Alias Target** and choose a load balancer from the list\. If you have a lot of load balancers, you can enter the first few characters of the DNS name to filter the list\.
-+ **If you used different accounts to create your Route 53 hosted zone and your load balancer** – Enter the value that you got in the procedure [Getting the DNS Name for an ELB Load Balancer](resource-record-sets-creating.md#resource-record-sets-elb-dns-name-procedure)\.
++ **If you used different accounts to create your Route 53 hosted zone and your load balancer** – Enter the value that you got in the procedure [Getting the DNS name for an ELB load balancer](resource-record-sets-creating.md#resource-record-sets-elb-dns-name-procedure)\.
 
   If you used one AWS account to create the current hosted zone and a different account to create a load balancer, the load balancer will not appear in the **Alias Targets** list\.
 
   If you used one account to create the current hosted zone and one or more different accounts to create all of your load balancers, the **Alias Targets** list shows **No Targets Available** under **Elastic Load Balancers**\.
 In either case, the console prepends **dualstack\.** to the DNS name\. When a client, such as a web browser, requests the IP address for your domain name \(example\.com\) or subdomain name \(www\.example\.com\), the client can request an IPv4 address \(an A record\), an IPv6 address \(a AAAA record\), or both IPv4 and IPv6 addresses \(in separate requests\)\. The **dualstack\.** designation allows Route 53 to respond with the appropriate IP address for your load balancer based on which IP address format the client requested\.
 
+**AWS Global Accelerator accelerators**  
+For AWS Global Accelerator accelerators, enter the DNS name for the accelerator\. You can enter the DNS name of an accelerator that you created using the current AWS account or using a different AWS account\. 
+
 **Amazon S3 Buckets**  
 For Amazon S3 buckets that are configured as website endpoints, do one of the following:  
 + **If you used the same account to create your Route 53 hosted zone and your Amazon S3 bucket** – Choose **Alias Target** and choose a bucket from the list\. If you have a lot of buckets, you can enter the first few characters of the DNS name to filter the list\.
 
   The value of **Alias Target** changes to the Amazon S3 website endpoint for your bucket\.
-+ **If you used different accounts to create your Route 53 hosted zone and your Amazon S3 bucket** – Enter the name of the region that you created your S3 bucket in\. Use the value that appears in the **Website Endpoint** column in the [Amazon Simple Storage Service Website Endpoints](https://docs.aws.amazon.com/general/latest/gr/rande.html#s3_website_region_endpoints) table in the [AWS Regions and Endpoints](https://docs.aws.amazon.com/general/latest/gr/rande.html) chapter of the *Amazon Web Services General Reference*\.
++ **If you used different accounts to create your Route 53 hosted zone and your Amazon S3 bucket** – Enter the name of the region that you created your S3 bucket in\. Use the value that appears in the **Website Endpoint** column in the table [Amazon S3 website endpoints](https://docs.aws.amazon.com/general/latest/gr/s3.html#s3_website_region_endpoints) in the *Amazon Web Services General Reference*\.
 
   If you used AWS accounts other than the current account to create your Amazon S3 buckets, the bucket won't appear in the **Alias Targets** list\.
-You must configure the bucket for website hosting\. For more information, see [Configure a Bucket for Website Hosting](https://docs.aws.amazon.com/AmazonS3/latest/dev/HowDoIWebsiteConfiguration.html) in the *Amazon Simple Storage Service Developer Guide*\.  
+You must configure the bucket for website hosting\. For more information, see [Configure a bucket for website hosting](https://docs.aws.amazon.com/AmazonS3/latest/dev/HowDoIWebsiteConfiguration.html) in the *Amazon Simple Storage Service Developer Guide*\.  
 The name of the record must match the name of your Amazon S3 bucket\. For example, if the name of your Amazon S3 bucket is **acme\.example\.com**, the name of this record must also be **acme\.example\.com**\.  
 In a group of weighted alias, latency alias, failover alias, or geolocation alias records, you can create only one record that routes queries to an Amazon S3 bucket because the name of the record must match the name of the bucket and bucket names must be globally unique\.
 
@@ -153,16 +163,16 @@ For records in this hosted zone, choose **Alias Target** and choose the applicab
 If the hosted zone contains only the default NS and SOA records, the **Alias Targets** list shows **No Targets Available**\.  
 If you're creating an alias record that has the same name as the hosted zone \(known as the *zone apex*\), you can't choose a record for which the value of **Type** is **CNAME**\. This is because the alias record must have the same type as the record you're routing traffic to, and creating a CNAME record for the zone apex isn't supported even for an alias record\. 
 
-## Alias Hosted Zone ID<a name="rrsets-values-latency-alias-hosted-zone-id"></a>
+## Alias hosted zone ID<a name="rrsets-values-latency-alias-hosted-zone-id"></a>
 
 This value appears automatically based on the value that you selected or entered for **Alias Target**\.
 
-## Routing Policy<a name="rrsets-values-latency-alias-routing-policy"></a>
+## Routing policy<a name="rrsets-values-latency-alias-routing-policy"></a>
 
 Select **Latency**\. 
 
 **Note**  
-Creating latency alias records in a private hosted zone is unsupported\.
+Although creating latency alias records in a private hosted zone is allowed, it's not supported\.
 
 ## Region<a name="rrsets-values-latency-alias-region"></a>
 
@@ -174,13 +184,13 @@ Note the following:
 + You can't create non\-latency records that have the same values for **Name** and **Type** as latency records\.
 + If you create a record tagged with the region **cn\-north\-1**, Route 53 always responds to queries from within China using this record, regardless of the latency\.
 
-For more information about using latency records, see [Latency\-based Routing](routing-policy.md#routing-policy-latency)\. 
+For more information about using latency records, see [Latency\-based routing](routing-policy.md#routing-policy-latency)\. 
 
 ## Set ID<a name="rrsets-values-latency-alias-set-id"></a>
 
 Enter a value that uniquely identifies this record in the group of latency records\.
 
-## Evaluate Target Health<a name="rrsets-values-latency-alias-evaluate-target-health"></a>
+## Evaluate target health<a name="rrsets-values-latency-alias-evaluate-target-health"></a>
 
 Select **Yes** if you want Route 53 to determine whether to respond to DNS queries using this record by checking the health of the resource specified by **Alias Target**\. 
 
@@ -211,13 +221,13 @@ There are no special requirements for setting **Evaluate Target Health** to **Ye
 There are no special requirements for setting **Evaluate Target Health** to **Yes** when the alias target is an Amazon VPC interface endpoint\.
 
 **Other records in the same hosted zone**  
-If the AWS resource that you specify in **Alias Target** is a record or a group of records \(for example, a group of weighted records\) but is not another alias record, we recommend that you associate a health check with all of the records in the alias target\. For more information, see [What Happens When You Omit Health Checks?](dns-failover-complex-configs.md#dns-failover-complex-configs-hc-omitting)\.
+If the AWS resource that you specify in **Alias Target** is a record or a group of records \(for example, a group of weighted records\) but is not another alias record, we recommend that you associate a health check with all of the records in the alias target\. For more information, see [What happens when you omit health checks?](dns-failover-complex-configs.md#dns-failover-complex-configs-hc-omitting)\.
 
-## Associate with Health Check/Health Check to Associate<a name="rrsets-values-latency-alias-associate-with-health-check"></a>
+## Associate with health check/Health check to associate<a name="rrsets-values-latency-alias-associate-with-health-check"></a>
 
 Select **Yes** if you want Route 53 to check the health of a specified endpoint and to respond to DNS queries using this record only when the endpoint is healthy\. Then select the health check that you want Route 53 to perform for this record\. 
 
-Route 53 doesn't check the health of the endpoint specified in the record, for example, the endpoint specified by the IP address in the **Value** field\. When you select a health check for a record, Route 53 checks the health of the endpoint that you specified in the health check\. For information about how Route 53 determines whether an endpoint is healthy, see [How Amazon Route 53 Determines Whether a Health Check Is HealthyHow Route 53 Determines Whether a Health Check Is Healthy](dns-failover-determining-health-of-endpoints.md)\.
+Route 53 doesn't check the health of the endpoint specified in the record, for example, the endpoint specified by the IP address in the **Value** field\. When you select a health check for a record, Route 53 checks the health of the endpoint that you specified in the health check\. For information about how Route 53 determines whether an endpoint is healthy, see [How Amazon Route 53 determines whether a health check is healthyHow Route 53 determines whether a health check is healthy](dns-failover-determining-health-of-endpoints.md)\.
 
 Associating a health check with a record is useful only when Route 53 is choosing between two or more records to respond to a DNS query, and you want Route 53 to base the choice in part on the status of a health check\. Use health checks only in the following configurations:
 + You're checking the health of all of the records in a group of records that have the same name, type, and routing policy \(such as failover or weighted records\), and you specify health check IDs for all the records\. If the health check for a record specifies an endpoint that is not healthy, Route 53 stops responding to queries using the value for that record\.

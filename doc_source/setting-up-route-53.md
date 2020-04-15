@@ -1,33 +1,31 @@
-# Setting Up Amazon Route 53<a name="setting-up-route-53"></a>
+# Setting up Amazon Route 53<a name="setting-up-route-53"></a>
 
 The overview and procedures in this section help you get started with AWS\.
 
 **Topics**
-+ [Sign Up for AWS](#setting-up-sign-up-for-aws)
-+ [Access Your Account](#setting-up-access-account)
-+ [Create an IAM User](#setting-up-create-iam-user)
-+ [Set Up the AWS Command Line Interface or AWS Tools for Windows PowerShell](#setting-up-aws-cli)
++ [Sign up for AWS](#setting-up-sign-up-for-aws)
++ [Access your account](#setting-up-access-account)
++ [Create an IAM user](#setting-up-create-iam-user)
++ [Set up the AWS Command Line Interface or AWS Tools for Windows PowerShell](#setting-up-aws-cli)
 + [Download an AWS SDK](#setting-up-sdk)
 
-## Sign Up for AWS<a name="setting-up-sign-up-for-aws"></a>
+## Sign up for AWS<a name="setting-up-sign-up-for-aws"></a>
 
 When you sign up for AWS, your AWS account is automatically signed up for all services in AWS, including Amazon Route 53\. You are charged only for the services that you use\.
 
-If you have an AWS account already, skip to [Access Your Account](#setting-up-access-account)\. If you don't have an AWS account, use the following procedure to create one\.<a name="setting-up-sign-up-for-aws-procedure"></a>
+If you have an AWS account already, skip to [Access your account](#setting-up-access-account)\. If you don't have an AWS account, use the following procedure to create one\.<a name="setting-up-sign-up-for-aws-procedure"></a>
 
 **To create an AWS account**
 
-1. Open [https://aws\.amazon\.com/](https://aws.amazon.com/), and then choose **Create an AWS Account**\.
-**Note**  
-If you previously signed in to the AWS Management Console using AWS account root user credentials, choose **Sign in to a different account**\. If you previously signed in to the console using IAM credentials, choose **Sign\-in using root account credentials**\. Then choose **Create a new AWS account**\.
+1. Open [https://portal\.aws\.amazon\.com/billing/signup](https://portal.aws.amazon.com/billing/signup)\.
 
 1. Follow the online instructions\.
 
-   Part of the sign\-up procedure involves receiving a phone call and entering a verification code using the phone keypad\.
+   Part of the sign\-up procedure involves receiving a phone call and entering a verification code on the phone keypad\.
 
 Note your AWS account number, because you'll need it later\.
 
-## Access Your Account<a name="setting-up-access-account"></a>
+## Access your account<a name="setting-up-access-account"></a>
 
 You use AWS services by using any of the following options:
 + AWS Management Console
@@ -38,7 +36,7 @@ You use AWS services by using any of the following options:
 
 For each of those options, you need to access your AWS account by providing credentials that verify that you have permissions to use the services\.
 
-### Access the Console<a name="setting-up-access-account-console"></a>
+### Access the console<a name="setting-up-access-account-console"></a>
 
 To access the AWS Management Console for the first time, you provide an email address and a password\. This combination of your email address and password is called your *root identity* or *root account credentials*\. After you access your account for the first time, we strongly recommend that you don't use your root account credentials again for everyday use\. Instead, you should create new credentials by using [AWS Identity and Access Management](https://docs.aws.amazon.com/IAM/latest/UserGuide/introduction.html)\. To do that, you create a user account for yourself known as an *IAM user*, and then add the IAM user to an IAM group with administrative permissions or grant the IAM user administrative permissions\. You then can access AWS using a special URL and the credentials for the IAM user\. You also can add other IAM users later, and restrict their access to specified resources in the account\.
 
@@ -49,43 +47,49 @@ Some ad\-blocking plugins for web browsers interfere with Amazon Route 53 conso
 
 To use the API, the AWS CLI, AWS Tools for Windows PowerShell, or the AWS SDKs, you must create *access keys*\. These keys consist of an access key ID and secret access key, which are used to sign programmatic requests that you make to AWS\.
 
-To create the keys, you sign in to the AWS Management Console\. We strongly recommend that you sign in with your IAM user credentials instead of your root credentials\. For more information, see [Managing Access Keys for IAM Users](https://docs.aws.amazon.com/IAM/latest/UserGuide/id_credentials_access-keys.html) in the *IAM User Guide*\.
+To create the keys, you sign in to the AWS Management Console\. We strongly recommend that you sign in with your IAM user credentials instead of your root credentials\. For more information, see [Managing access keys for IAM users](https://docs.aws.amazon.com/IAM/latest/UserGuide/id_credentials_access-keys.html) in the *IAM User Guide*\.
 
-## Create an IAM User<a name="setting-up-create-iam-user"></a>
+## Create an IAM user<a name="setting-up-create-iam-user"></a>
 
 Perform the following procedures to create a group for administrators, create an IAM user, and then add the IAM user to the administrators group\. If you signed up for AWS but have not created an IAM user for yourself, you can create one using the IAM console\. If you aren't familiar with using the console, see [Working with the AWS Management Console](https://docs.aws.amazon.com/awsconsolehelpdocs/latest/gsg/getting-started.html) for an overview\. 
 
-**To create an IAM user for yourself and add the user to an Administrators group**
+**To create an administrator user for yourself and add the user to an administrators group \(console\)**
 
 1. Use your AWS account email address and password to sign in as the *[AWS account root user](https://docs.aws.amazon.com/IAM/latest/UserGuide/id_root-user.html)* to the IAM console at [https://console\.aws\.amazon\.com/iam/](https://console.aws.amazon.com/iam/)\.
 **Note**  
 We strongly recommend that you adhere to the best practice of using the **Administrator** IAM user below and securely lock away the root user credentials\. Sign in as the root user only to perform a few [account and service management tasks](https://docs.aws.amazon.com/general/latest/gr/aws_tasks-that-require-root.html)\.
 
-1. In the navigation pane of the console, choose **Users**, and then choose **Add user**\.
+1. In the navigation pane, choose **Users** and then choose **Add user**\.
 
-1. For **User name**, type **Administrator**\.
+1. For **User name**, enter **Administrator**\.
 
-1. Select the check box next to **AWS Management Console access**, select **Custom password**, and then type the new user's password in the text box\. You can optionally select **Require password reset** to force the user to create a new password the next time the user signs in\.
+1. Select the check box next to **AWS Management Console access**\. Then select **Custom password**, and then enter your new password in the text box\.
+
+1. \(Optional\) By default, AWS requires the new user to create a new password when first signing in\. You can clear the check box next to **User must create a new password at next sign\-in** to allow the new user to reset their password after they sign in\.
 
 1. Choose **Next: Permissions**\.
 
-1. On the **Set permissions** page, choose **Add user to group**\.
+1. Under **Set permissions**, choose **Add user to group**\.
 
 1. Choose **Create group**\.
 
-1. In the **Create group** dialog box, for **Group name** type **Administrators**\.
+1. In the **Create group** dialog box, for **Group name** enter **Administrators**\.
 
-1. For **Filter policies**, select the check box for **AWS managed \- job function**\.
+1. Choose **Filter policies**, and then select **AWS managed \-job function** to filter the table contents\.
 
 1. In the policy list, select the check box for **AdministratorAccess**\. Then choose **Create group**\.
+**Note**  
+You must activate IAM user and role access to Billing before you can use the `AdministratorAccess` permissions to access the AWS Billing and Cost Management console\. To do this, follow the instructions in [step 1 of the tutorial about delegating access to the billing console](https://docs.aws.amazon.com/IAM/latest/UserGuide/tutorial_billing.html)\.
 
 1. Back in the list of groups, select the check box for your new group\. Choose **Refresh** if necessary to see the group in the list\.
 
-1. Choose **Next: Tags** to add metadata to the user by attaching tags as key\-value pairs\.
+1. Choose **Next: Tags**\.
+
+1. \(Optional\) Add metadata to the user by attaching tags as key\-value pairs\. For more information about using tags in IAM, see [Tagging IAM Entities](https://docs.aws.amazon.com/IAM/latest/UserGuide/id_tags.html) in the *IAM User Guide*\.
 
 1. Choose **Next: Review** to see the list of group memberships to be added to the new user\. When you are ready to proceed, choose **Create user**\.
 
-You can use this same process to create more groups and users, and to give your users access to your AWS account resources\. To learn about using policies to restrict users' permissions to specific AWS resources, go to [Access Management](https://docs.aws.amazon.com/IAM/latest/UserGuide/access.html) and [Example Policies](https://docs.aws.amazon.com/IAM/latest/UserGuide/access_policies_examples.html)\.<a name="setting-up-sign-in-iam-user-procedure"></a>
+You can use this same process to create more groups and users and to give your users access to your AWS account resources\. To learn about using policies that restrict user permissions to specific AWS resources, see [Access Management](https://docs.aws.amazon.com/IAM/latest/UserGuide/access.html) and [Example Policies](https://docs.aws.amazon.com/IAM/latest/UserGuide/access_policies_examples.html)\.<a name="setting-up-sign-in-iam-user-procedure"></a>
 
 **To sign in as your new IAM user**
 
@@ -117,14 +121,14 @@ If you don't want the URL for your sign\-in page to contain your AWS account ID,
 
 To verify the sign\-in link for IAM users for your account, open the IAM console and check under **IAM users sign\-in link** on the dashboard\.
 
-For more information about using IAM, see [Authentication and Access Control for Amazon Route 53](auth-and-access-control.md)\.
+For more information about using IAM, see [Identity and access management in Amazon Route 53](auth-and-access-control.md)\.
 
-## Set Up the AWS Command Line Interface or AWS Tools for Windows PowerShell<a name="setting-up-aws-cli"></a>
+## Set up the AWS Command Line Interface or AWS Tools for Windows PowerShell<a name="setting-up-aws-cli"></a>
 
-The AWS Command Line Interface \(AWS CLI\) is a unified tool for managing AWS services\. For information about how to install and configure the AWS CLI, see [Getting Set Up with the AWS Command Line Interface](https://docs.aws.amazon.com/cli/latest/userguide/cli-chap-getting-set-up.html) in the *AWS Command Line Interface User Guide*\.
+The AWS Command Line Interface \(AWS CLI\) is a unified tool for managing AWS services\. For information about how to install and configure the AWS CLI, see [Getting set up with the AWS Command Line Interface](https://docs.aws.amazon.com/cli/latest/userguide/cli-chap-getting-set-up.html) in the *AWS Command Line Interface User Guide*\.
 
 If you have experience with Windows PowerShell, you might prefer to use AWS Tools for Windows PowerShell\. For more information, see [Setting up the AWS Tools for Windows PowerShell](https://docs.aws.amazon.com/powershell/latest/userguide/pstools-getting-set-up.html) in the *AWS Tools for Windows PowerShell User Guide*\.
 
 ## Download an AWS SDK<a name="setting-up-sdk"></a>
 
-If you're using a programming language that AWS provides an SDK for, we recommend that you use an SDK instead of the Amazon Route 53 API\. The SDKs make authentication simpler, integrate easily with your development environment, and provide easy access to Route 53 commands\. For more information, see [Tools for Amazon Web Services](https://aws.amazon.com//tools/)\.
+If you're using a programming language that AWS provides an SDK for, we recommend that you use an SDK instead of the Amazon Route 53 API\. The SDKs make authentication simpler, integrate easily with your development environment, and provide easy access to Route 53 commands\. For more information, see [Tools for Amazon Web Services](https://aws.amazon.com/tools/)\.

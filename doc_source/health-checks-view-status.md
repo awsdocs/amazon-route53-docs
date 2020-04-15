@@ -1,4 +1,4 @@
-# Viewing Health Check Status and the Reason for Health Check Failures<a name="health-checks-view-status"></a>
+# Viewing health check status and the reason for health check failures<a name="health-checks-view-status"></a>
 
 On the Route 53 console, you can view the status \(healthy or unhealthy\) of your health checks as reported by Route 53 health checkers\. For all health checks except calculated health checks, you can also view the reason for the last health check failure, for example, health checkers were unable to establish a connection with the endpoint\. <a name="health-checks-view-status-console-proc"></a>
 
@@ -8,7 +8,7 @@ On the Route 53 console, you can view the status \(healthy or unhealthy\) of yo
 
 1. In the navigation pane, choose **Health Checks**\.
 
-1. For an overview of the status of all of your health checks—healthy or unhealthy—view the **Status** column\. For more information, see [How Amazon Route 53 Determines Whether a Health Check Is HealthyHow Route 53 Determines Whether a Health Check Is Healthy](dns-failover-determining-health-of-endpoints.md)\.
+1. For an overview of the status of all of your health checks—healthy or unhealthy—view the **Status** column\. For more information, see [How Amazon Route 53 determines whether a health check is healthyHow Route 53 determines whether a health check is healthy](dns-failover-determining-health-of-endpoints.md)\.
 
 1. For all health checks except calculated health checks, you can view the status of the Route 53 health checkers that are checking the health of a specified endpoint\. Select the health check\.
 

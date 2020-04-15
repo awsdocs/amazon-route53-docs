@@ -1,4 +1,4 @@
-# Using Latency and Weighted Records in Amazon Route 53 to Route Traffic to Multiple Amazon EC2 Instances in a Region<a name="TutorialLBRMultipleEC2InRegion"></a>
+# Using latency and weighted records in Amazon Route 53 to route traffic to multiple Amazon EC2 instances in a Region<a name="TutorialLBRMultipleEC2InRegion"></a>
 
 If your application is running on Amazon EC2 instances in two or more Amazon EC2 regions, and if you have more than one Amazon EC2 instance in one or more regions, you can use latency\-based routing to route traffic to the correct region and then use weighted records to route traffic to instances within the region based on weights that you specify\. 
 
@@ -18,4 +18,4 @@ For example, suppose you have three Amazon EC2 instances with Elastic IP address
 
 1. For each region in which you have one Amazon EC2 instance, create a latency record\. For the value of **Name**, specify the same value that you specified for the latency alias records that you created in Step 3\. For **Value**, specify the Elastic IP address of the Amazon EC2 instance in that region\.
 
-For more information about creating records, see [Creating Records by Using the Amazon Route 53 Console](resource-record-sets-creating.md)\.
+For more information about creating records, see [Creating records by using the Amazon Route 53 console](resource-record-sets-creating.md)\.

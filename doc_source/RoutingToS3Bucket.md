@@ -1,4 +1,4 @@
-# Routing Traffic to a Website that Is Hosted in an Amazon S3 Bucket<a name="RoutingToS3Bucket"></a>
+# Routing traffic to a website that is hosted in an Amazon S3 bucket<a name="RoutingToS3Bucket"></a>
 
 Amazon Simple Storage Service \(Amazon S3\) provides secure, durable, highly scalable [cloud storage](https://aws.amazon.com/what-is-cloud-storage/)\. You can configure an S3 bucket to host a static website that can include web pages and client\-side scripts\. \(S3 doesn't support server\-side scripting\.\)
 
@@ -9,20 +9,20 @@ Route 53 doesn't charge for alias queries to S3 buckets or other AWS resources\
 
 ## Prerequisites<a name="routing-to-s3-bucket-prereqs"></a>
 
-Before you get started, you need the following\. If you're new to Amazon Route 53 or S3, see [Getting Started with Amazon Route 53](getting-started.md), which guides you through the entire process, including registering a domain name, and creating and configuring an S3 bucket\.
+Before you get started, you need the following\. If you're new to Amazon Route 53 or S3, see [Getting started with Amazon Route 53](getting-started.md), which guides you through the entire process, including registering a domain name, and creating and configuring an S3 bucket\.
 + An S3 bucket and, if you want to use SSL/TLS, a CloudFront distribution:  
 **If you don't want to use SSL/TLS to encrypt traffic**  
-An S3 bucket that's configured to host a static website\. For more information, see [Configure a Bucket for Website Hosting](https://docs.aws.amazon.com/AmazonS3/latest/dev/HowDoIWebsiteConfiguration.html) in the *Amazon Simple Storage Service Developer Guide*\.  
+An S3 bucket that's configured to host a static website\. For more information, see [Configure a bucket for website hosting](https://docs.aws.amazon.com/AmazonS3/latest/dev/HowDoIWebsiteConfiguration.html) in the *Amazon Simple Storage Service Developer Guide*\.  
 The bucket must have the same name as your domain or subdomain\. For example, if you want to use the subdomain acme\.example\.com, the name of the bucket must be acme\.example\.com\.
-You can route traffic for a domain and its subdomains, such as example\.com and www\.example\.com, to a single bucket\. Create a bucket for the domain and each subdomain, and configure all but one of the buckets to redirect traffic to the remaining bucket\. For more information, see [Getting Started with Amazon Route 53](getting-started.md)\.  
+You can route traffic for a domain and its subdomains, such as example\.com and www\.example\.com, to a single bucket\. Create a bucket for the domain and each subdomain, and configure all but one of the buckets to redirect traffic to the remaining bucket\. For more information, see [Getting started with Amazon Route 53](getting-started.md)\.  
 **If you do want to use SSL/TLS to encrypt traffic**  
-An S3 bucket that's *not* configured to host a static website, and a CloudFront distribution that's configured to use your S3 bucket as the origin\. An S3 bucket that's configured as a website endpoint doesn't support SSL/TLS, so you need to route traffic to the CloudFront distribution and use the S3 bucket as the origin for the distribution\. For more information, see [Requiring HTTPS for Communication Between Viewers and CloudFront](https://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/using-https-viewers-to-cloudfront.html) in the *Amazon CloudFront Developer Guide*\.
+An S3 bucket that's *not* configured to host a static website, and a CloudFront distribution that's configured to use your S3 bucket as the origin\. An S3 bucket that's configured as a website endpoint doesn't support SSL/TLS, so you need to route traffic to the CloudFront distribution and use the S3 bucket as the origin for the distribution\. For more information, see [Requiring HTTPS for communication between viewers and CloudFront](https://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/using-https-viewers-to-cloudfront.html) in the *Amazon CloudFront Developer Guide*\.
 + A registered domain name\. You can use Route 53 as your domain registrar, or you can use a different registrar\.
 + Route 53 as the DNS service for the domain\. If you register your domain name by using Route 53, we automatically configure Route 53 as the DNS service for the domain\. 
 
-  For information about using Route 53 as the DNS service provider for your domain, see [Making Amazon Route 53 the DNS Service for an Existing DomainMaking Route 53 the DNS Service for an Existing Domain](MigratingDNS.md)\.
+  For information about using Route 53 as the DNS service provider for your domain, see [Making Amazon Route 53 the DNS service for an existing domainMaking Route 53 the DNS service for an existing domain](MigratingDNS.md)\.
 
-## Configuring Amazon Route 53 to Route Traffic to an S3 Bucket<a name="routing-to-s3-bucket-configuring"></a>
+## Configuring Amazon Route 53 to route traffic to an S3 Bucket<a name="routing-to-s3-bucket-configuring"></a>
 
 To configure Amazon Route 53 to route traffic to an S3 bucket that is configured to host a static website, perform the following procedure\.<a name="routing-to-s3-bucket-procedure"></a>
 
@@ -51,9 +51,9 @@ The **Alias Target** list includes a bucket only if the bucket meets the followi
    + The bucket is configured as a website endpoint\.
    + The bucket was created by the current AWS account\.
 
-     If you created the bucket using a different AWS account, enter the name of the region that you created your S3 bucket in\. For the correct format for the region name, see the **Website Endpoint** column in the [Amazon Simple Storage Service Website Endpoints](https://docs.aws.amazon.com/general/latest/gr/rande.html#s3_website_region_endpoints) table in the [AWS Regions and Endpoints](https://docs.aws.amazon.com/general/latest/gr/rande.html) chapter of the *Amazon Web Services General Reference*\.  
+     If you created the bucket using a different AWS account, enter the name of the Region that you created your S3 bucket in\. For the correct format for the Region name, see the **Website Endpoint** column in the table [Amazon S3 website endpoints](https://docs.aws.amazon.com/general/latest/gr/s3.html#s3_website_region_endpoints) in the *Amazon Web Services General Reference*\.  
 **Routing Policy**  
-Choose the applicable routing policy\. For more information, see [Choosing a Routing Policy](routing-policy.md)\.  
+Choose the applicable routing policy\. For more information, see [Choosing a routing policy](routing-policy.md)\.  
 **Evaluate Target Health**  
 Accept the default value of **No**\.
 

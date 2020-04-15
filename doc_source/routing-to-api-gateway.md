@@ -1,4 +1,4 @@
-# Routing Traffic to an Amazon API Gateway API by Using Your Domain Name<a name="routing-to-api-gateway"></a>
+# Routing traffic to an Amazon API Gateway API by using your domain name<a name="routing-to-api-gateway"></a>
 
 Amazon API Gateway lets you create, publish, maintain, monitor, and secure APIs\. You can create APIs that access AWS services or other web services, as well as data stored in the AWS Cloud\.
 
@@ -9,7 +9,7 @@ Route 53 doesn't charge for alias queries to API Gateway APIs or other AWS reso
 
 **Topics**
 + [Prerequisites](#routing-to-api-gateway-prereqs)
-+ [Configuring Route 53 to Route Traffic to an API Gateway API](#routing-to-api-gateway-config)
++ [Configuring Route 53 to route traffic to an API Gateway API](#routing-to-api-gateway-config)
 
 ## Prerequisites<a name="routing-to-api-gateway-prereqs"></a>
 
@@ -18,9 +18,9 @@ Before you get started, you need the following:
 + A registered domain name\. You can use Amazon Route 53 as your domain registrar, or you can use a different registrar\.
 + Route 53 as the DNS service for the domain\. If you register your domain name by using Route 53, we automatically configure Route 53 as the DNS service for the domain\. 
 
-  For information about using Route 53 as the DNS service provider for your domain, see [Making Amazon Route 53 the DNS Service for an Existing DomainMaking Route 53 the DNS Service for an Existing Domain](MigratingDNS.md)\.
+  For information about using Route 53 as the DNS service provider for your domain, see [Making Amazon Route 53 the DNS service for an existing domainMaking Route 53 the DNS service for an existing domain](MigratingDNS.md)\.
 
-## Configuring Route 53 to Route Traffic to an API Gateway API<a name="routing-to-api-gateway-config"></a>
+## Configuring Route 53 to route traffic to an API Gateway API<a name="routing-to-api-gateway-config"></a>
 
 To configure Route 53 to route traffic to an API Gateway API, perform the following procedure\.<a name="routing-to-api-gateway-config-procedure"></a>
 
@@ -57,7 +57,7 @@ How you specify the value for **Alias Target** depends on whether you created th
    + **Same account** – Choose the list, and find the category **API Gateway APIs**\. The list of target domain names includes only APIs that have a custom domain name that matches the value that you specified for **Name**\. Choose the applicable value\.
    + **Different accounts** – Enter the value that you got in step 1 of this procedure\.  
 **Routing Policy**  
-Choose the applicable routing policy\. For more information, see [Choosing a Routing Policy](routing-policy.md)\.  
+Choose the applicable routing policy\. For more information, see [Choosing a routing policy](routing-policy.md)\.  
 **Evaluate Target Health**  
 Accept the default value of **No**\.
 

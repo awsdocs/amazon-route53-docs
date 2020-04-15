@@ -1,4 +1,4 @@
-# Monitoring Domain Registrations<a name="monitoring-domain-registrations"></a>
+# Monitoring domain registrations<a name="monitoring-domain-registrations"></a>
 
 The Amazon Route 53 dashboard provides detailed information about the status of your domain registrations, including the following:
 + Status of new domain registrations

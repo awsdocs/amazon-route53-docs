@@ -1,4 +1,4 @@
-# Creating a Subdomain That Uses Amazon Route 53 as the DNS Service without Migrating the Parent Domain<a name="CreatingNewSubdomain"></a>
+# Creating a subdomain that uses Amazon Route 53 as the DNS service without migrating the parent domain<a name="CreatingNewSubdomain"></a>
 
 You can create a subdomain that uses Amazon Route 53 as the DNS service without migrating the parent domain from another DNS service\.
 
@@ -16,37 +16,37 @@ Currently, the only way to verify that changes have propagated is to use the [Ge
 
 1. [Update the DNS service for the parent domain by adding name server records for the subdomain](#UpdateDNSParentDomain)\.
 
-## Deciding Which Procedures to Use for Creating a Subdomain<a name="decide-procedure-create-subdomain"></a>
+## Deciding which procedures to use for creating a subdomain<a name="decide-procedure-create-subdomain"></a>
 
-The procedures in this topic explain how to perform an uncommon operation\. If you're already using Route 53 as the DNS service for your domain and you just want to route traffic for a subdomain, such as www\.example\.com, to your resources, such as a web server running on an EC2 instance, see [Routing Traffic for Subdomains](dns-routing-traffic-for-subdomains.md)\.
+The procedures in this topic explain how to perform an uncommon operation\. If you're already using Route 53 as the DNS service for your domain and you just want to route traffic for a subdomain, such as www\.example\.com, to your resources, such as a web server running on an EC2 instance, see [Routing traffic for subdomains](dns-routing-traffic-for-subdomains.md)\.
 
 Use this procedure *only* if you're using another DNS service for a domain, such as example\.com, and you want to start using Route 53 as the DNS service for a new subdomain of that domain, such as www\.example\.com\.
 
-## Creating a Hosted Zone for the New Subdomain<a name="CreateZoneNewSubdomain"></a>
+## Creating a hosted zone for the new subdomain<a name="CreateZoneNewSubdomain"></a>
 
 When you want to use Amazon Route 53 as the DNS service for a new subdomain without migrating the parent domain, you start by creating a hosted zone for the subdomain\. Route 53 stores information about your subdomain in the hosted zone\.
 
-For information about how to create a hosted zone using the Route 53 console, see [Creating a Public Hosted Zone](CreatingHostedZone.md)\.
+For information about how to create a hosted zone using the Route 53 console, see [Creating a public hosted zone](CreatingHostedZone.md)\.
 
-## Creating Records<a name="AddNewSubdomainRecords"></a>
+## Creating records<a name="AddNewSubdomainRecords"></a>
 
-You can create records using either the Amazon Route 53 console or the Route 53 API\. The records that you create in Route 53 will become the records that DNS uses after you delegate responsibility for the subdomain to Route 53, as explained in [Updating Your DNS Service with Name Server Records for the Subdomain](#UpdateDNSParentDomain), later in the process\.
+You can create records using either the Amazon Route 53 console or the Route 53 API\. The records that you create in Route 53 will become the records that DNS uses after you delegate responsibility for the subdomain to Route 53, as explained in [Updating your DNS service with name server records for the subdomain](#UpdateDNSParentDomain), later in the process\.
 
 **Important**  
 Do not create additional name server \(NS\) or start of authority \(SOA\) records in the Route 53 hosted zone, and do not delete the existing NS and SOA records\. 
 
-To create records using the Route 53 console, see [Working with Records](rrsets-working-with.md)\. To create records using the Route 53 API, use `ChangeResourceRecordSets`\. For more information, see [ChangeResourceRecordSets](https://docs.aws.amazon.com/Route53/latest/APIReference/API_ChangeResourceRecordSets.html) in the *[Amazon Route 53 API Reference](https://docs.aws.amazon.com/Route53/latest/APIReference/)*\.
+To create records using the Route 53 console, see [Working with records](rrsets-working-with.md)\. To create records using the Route 53 API, use `ChangeResourceRecordSets`\. For more information, see [ChangeResourceRecordSets](https://docs.aws.amazon.com/Route53/latest/APIReference/API_ChangeResourceRecordSets.html) in the *[Amazon Route 53 API Reference](https://docs.aws.amazon.com/Route53/latest/APIReference/)*\.
 
-## Checking the Status of Your Changes \(API Only\)<a name="CheckStatusNewSubdomain"></a>
+## Checking the status of your changes \(API only\)<a name="CheckStatusNewSubdomain"></a>
 
 Creating a new hosted zone and changing records take time to propagate to the Route 53 DNS servers\. If you used [ChangeResourceRecordSets](https://docs.aws.amazon.com/Route53/latest/APIReference/API_ChangeResourceRecordSets.html) to create your records, you can use the `GetChange` action to determine whether your changes have propagated\. \(`ChangeResourceRecordSets` returns a value for `ChangeId`, which you can include in a subsequent `GetChange` request\. `ChangeId` is not available if you created the records by using the console\.\) For more information, see [GET GetChange](https://docs.aws.amazon.com/Route53/latest/APIReference/API_GetChange.html) in the *Amazon Route 53 API Reference*\.
 
 **Note**  
 Changes generally propagate to all Route 53 name servers within 60 seconds\.
 
-## Updating Your DNS Service with Name Server Records for the Subdomain<a name="UpdateDNSParentDomain"></a>
+## Updating your DNS service with name server records for the subdomain<a name="UpdateDNSParentDomain"></a>
 
-After your changes to Amazon Route 53 records have propagated \(see [Checking the Status of Your Changes \(API Only\)](#CheckStatusNewSubdomain)\), update the DNS service for the parent domain by adding NS records for the subdomain\. This is known as delegating responsibility for the subdomain to Route 53\. For example, if the parent domain example\.com is hosted with another DNS service and you created the subdomain test\.example\.com in Route 53, you must update the DNS service for example\.com with new NS records for test\.example\.com\.
+After your changes to Amazon Route 53 records have propagated \(see [Checking the status of your changes \(API only\)](#CheckStatusNewSubdomain)\), update the DNS service for the parent domain by adding NS records for the subdomain\. This is known as delegating responsibility for the subdomain to Route 53\. For example, if the parent domain example\.com is hosted with another DNS service and you created the subdomain test\.example\.com in Route 53, you must update the DNS service for example\.com with new NS records for test\.example\.com\.
 
 Perform the following procedure\.
 

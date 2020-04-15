@@ -1,22 +1,22 @@
-# Related Information<a name="Resources"></a>
+# Related information<a name="Resources"></a>
 
 The following related resources can help you as you work with this service\.
 
 **Topics**
-+ [AWS Resources](#AWSResources)
-+ [Third\-Party Tools and Libraries](#R53-Tools-Libraries)
-+ [Graphical User Interfaces](#GUIs)
++ [AWS resources](#AWSResources)
++ [Third\-party tools and libraries](#R53-Tools-Libraries)
++ [Graphical user interfaces](#GUIs)
 
-## AWS Resources<a name="AWSResources"></a>
+## AWS resources<a name="AWSResources"></a>
 
 Several helpful guides, forums, and other resources are available from Amazon Web Services\.
 + [Amazon Route 53 API Reference](https://docs.aws.amazon.com/Route53/latest/APIReference/) – A reference guide that includes the schema location; complete descriptions of the API actions, parameters, and data types; and a list of errors that the service returns\.
-+ **[AWS::Route53::RecordSet Type](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide//aws-properties-route53-recordset.html) in the *AWS CloudFormation User Guide*** – A property for using Amazon Route 53 with AWS CloudFormation to create customized DNS names for your AWS CloudFormation stacks\.
++ **[AWS::Route53::RecordSet Type](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-route53-recordset.html) in the *AWS CloudFormation User Guide*** – A property for using Amazon Route 53 with AWS CloudFormation to create customized DNS names for your AWS CloudFormation stacks\.
 + **[Discussion Forums](https://forums.aws.amazon.com/forum.jspa?forumID=87)** – A community\-based forum for developers to discuss technical questions related to Route 53\.
 + [AWS Support Center](https://console.aws.amazon.com/support/home#/) – This site brings together information about your recent support cases and results from AWS Trusted Advisor and health checks, as well as providing links to discussion forums, technical FAQs, the service health dashboard, and information about AWS support plans\.
 + [AWS Premium Support Information](https://aws.amazon.com/premiumsupport/) – The primary web page for information about AWS Premium Support, a one\-on\-one, fast\-response support channel to help you build and run applications on AWS Infrastructure Services\.
 + [Contact Us](http://aws.amazon.com/contact-us/) – Links for inquiring about your billing or account\. For technical questions, use the discussion forums or support links above\.
-+ **[Route 53 product information ](https://aws.amazon.com/route53)** – The primary web page for information about Route 53, including features, pricing, and more\.
++ **[Route 53 product information](https://aws.amazon.com/route53)** – The primary web page for information about Route 53, including features, pricing, and more\.
 + ** [Classes & Workshops](https://aws.amazon.com/training/course-descriptions/)** – Links to role\-based and specialty courses as well as self\-paced labs to help sharpen your AWS skills and gain practical experience\.
 + ** [AWS Developer Tools](https://aws.amazon.com/tools/)** – Links to developer tools, SDKs, IDE toolkits, and command line tools for developing and managing AWS applications\.
 + ** [AWS Whitepapers](https://aws.amazon.com/whitepapers/)** – Links to a comprehensive list of technical AWS whitepapers, covering topics such as architecture, security, and economics and authored by AWS Solutions Architects or other technical experts\.
@@ -25,7 +25,7 @@ Several helpful guides, forums, and other resources are available from Amazon We
 + ** [Contact Us](https://aws.amazon.com/contact-us/)** – A central contact point for inquiries concerning AWS billing, account, events, abuse, and other issues\. 
 + ** [AWS Site Terms](https://aws.amazon.com/terms/)** – Detailed information about our copyright and trademark; your account, license, and site access; and other topics\.
 
-## Third\-Party Tools and Libraries<a name="R53-Tools-Libraries"></a>
+## Third\-party tools and libraries<a name="R53-Tools-Libraries"></a>
 
 In addition to AWS resources, you can find a variety of third\-party tools and libraries that work with Amazon Route 53\.
 + **[AmazonRoute53AppsScript](http://code.google.com/p/webos-goodies/wiki/AmazonRoute53AppsScript) \(via webos\-goodies\)**
@@ -46,9 +46,6 @@ In addition to AWS resources, you can find a variety of third\-party tools and l
 + **[R53\.py](https://github.com/coops/r53) \(via github\)**
 
   Maintains a canonical version of your DNS configurations under source control, and calculates the minimum set of changes that are required to change a configuration\.
-+ **[RIAForge](http://route53.riaforge.org/)**
-
-  ColdFusion based components for managing DNS using Route 53\.
 + ** [RightScripts](http://www.rightscale.com/library/right_scripts/All?search[advanced_search]=&search[filter_value]=Route&x=0&y=0&search[filter_type]=title_and_description&search[price]=&search[order]=date_desc) \(via RightScale\)**
 
   Scripts to configure or update your RightScale server for use with Route 53\.
@@ -71,7 +68,7 @@ In addition to AWS resources, you can find a variety of third\-party tools and l
 
   Perl interface to Amazon Route 53 API\.
 
-## Graphical User Interfaces<a name="GUIs"></a>
+## Graphical user interfaces<a name="GUIs"></a>
 
 The following third\-party tools provide graphical user interfaces \(GUIs\) for working with Amazon Route 53:
 + [R53 Fox](https://github.com/cookpad/r53-fox)

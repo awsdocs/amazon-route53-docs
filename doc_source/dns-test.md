@@ -1,17 +1,17 @@
-# Checking DNS Responses from Route 53<a name="dns-test"></a>
+# Checking DNS responses from Route 53<a name="dns-test"></a>
 
-If you created an Amazon Route 53 hosted zone for your domain, you can use the DNS checking tool in the console to see how Route 53 will respond to DNS queries if you configure your domain to use Route 53 as your DNS service\. For geolocation and latency records, you can also simulate queries from a particular DNS resolver and/or client IP address to find out what response Route 53 would return\.
+If you created an Amazon Route 53 hosted zone for your domain, you can use the DNS checking tool in the console to see how Route 53 will respond to DNS queries if you configure your domain to use Route 53 as your DNS service\. For geolocation, geoproximity, and latency records, you can also simulate queries from a particular DNS resolver and/or client IP address to find out what response Route 53 would return\.
 
 **Important**  
-The DNS checking tool does not indicate whether Route 53 is currently the DNS service for your domain\. Responses from the tool are based only on the settings in your hosted zone, not on responses from the Domain Name System\.
+The tool doesn't submit queries to the Domain Name System, it only responds based on the settings in the records in the hosted zone\. The tool returns the same information regardless of whether the hosted zone is currently being used to route traffic for the domain\.
 
 The DNS checking tool works only for public hosted zones\.
 
 **Topics**
-+ [Using the Checking Tool to See How Amazon Route 53 Responds to DNS Queries](#dns-test-how-route-53-responds)
-+ [Using the Checking Tool to Simulate Queries from Specific IP Addresses \(Geolocation and Latency Records Only\)](#dns-test-simulate-requests)
++ [Using the checking tool to see how Amazon Route 53 responds to DNS queries](#dns-test-how-route-53-responds)
++ [Using the checking tool to simulate queries from specific IP addresses \(geolocation and latency records only\)](#dns-test-simulate-requests)
 
-## Using the Checking Tool to See How Amazon Route 53 Responds to DNS Queries<a name="dns-test-how-route-53-responds"></a>
+## Using the checking tool to see how Amazon Route 53 responds to DNS queries<a name="dns-test-how-route-53-responds"></a>
 
 You can use the tool to see what response Amazon Route 53 returns in response to a DNS query for a record\.<a name="dns-test-how-route-53-responds-procedure"></a>
 
@@ -27,7 +27,9 @@ You can use the tool to see what response Amazon Route 53 returns in response t
 
    To go to the **Check response from Route 53** page for a specific record, choose the check box for that record and choose **Test record set**\.
 
-1. If you chose **Test record set** without first choosing a record, specify the name and type of the record\.
+1. If you chose **Test record set** without first choosing a record, specify the following values:
+   + The name of the record, excluding the name of the hosted zone\. For example, to check **www\.example\.com**, enter **www**\. To check **example\.com**, leave the **Record name** field blank\.
+   + The type of the record that you want to check, such as **A** or **CNAME**\.
 
 1. Choose **Get Response**\.
 
@@ -45,7 +47,7 @@ The value that Route 53 would return to a web application\. The value is one of
    + For alias records that refer to AWS resources other than another record, the response contains an IP address or a domain name for the AWS resource, depending on the type of resource\.
    + For alias records that refer to other records, the response contains the value or values from the referenced record\.
 
-## Using the Checking Tool to Simulate Queries from Specific IP Addresses \(Geolocation and Latency Records Only\)<a name="dns-test-simulate-requests"></a>
+## Using the checking tool to simulate queries from specific IP addresses \(geolocation and latency records only\)<a name="dns-test-simulate-requests"></a>
 
 If you have created latency or geolocation records, you can use the checking tool to simulate queries from the IP address for a DNS resolver and a client\.<a name="dns-test-simulate-requests-procedure"></a>
 
@@ -61,7 +63,9 @@ If you have created latency or geolocation records, you can use the checking too
 
    To go to the **Check response from Route 53** page for a specific record, choose the check box for that record and choose **Test record set**\.
 
-1. If you chose **Test record set** without first choosing a record, specify the name and type of the record\.
+1. If you chose **Test record set** without first choosing a record, specify the following values:
+   + The name of the record, excluding the name of the hosted zone\. For example, to check **www\.example\.com**, enter **www**\. To check **example\.com**, leave the **Record name** field blank\.
+   + The type of the record that you want to check, such as **A** or **CNAME**\.
 
 1. Specify the applicable values:  
 **Resolver IP address**  

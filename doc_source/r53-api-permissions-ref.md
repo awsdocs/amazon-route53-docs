@@ -1,8 +1,8 @@
-# Amazon Route 53 API Permissions: Actions, Resources, and Conditions Reference<a name="r53-api-permissions-ref"></a>
+# Amazon Route 53 API permissions: Actions, resources, and conditions reference<a name="r53-api-permissions-ref"></a>
 
-When you set up [Access Control](auth-and-access-control.md#access-control) and write a permissions policy that you can attach to an IAM identity \(identity\-based policies\), you can use the following lists as a reference\. The lists include each Amazon Route 53 API action, the actions that you must grant permissions access to, and the AWS resource that you must grant access to\. You specify the actions in the policy's `Action` field, and you specify the resource value in the policy's `Resource` field\. 
+When you set up [Access control](auth-and-access-control.md#access-control) and write a permissions policy that you can attach to an IAM identity \(identity\-based policies\), you can use the following lists as a reference\. The lists include each Amazon Route 53 API action, the actions that you must grant permissions access to, and the AWS resource that you must grant access to\. You specify the actions in the policy's `Action` field, and you specify the resource value in the policy's `Resource` field\. 
 
-You can use AWS\-wide condition keys in your Route 53 policies to express conditions\. For a complete list of AWS\-wide keys, see [Available Keys](https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_elements.html#AvailableKeys) in the *IAM User Guide*\. 
+You can use AWS\-wide condition keys in your Route 53 policies to express conditions\. For a complete list of AWS\-wide keys, see [Available keys](https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_elements.html#AvailableKeys) in the *IAM User Guide*\. 
 
 **Note**  
 To specify an action, use the applicable prefix \(`route53`, `route53domains`, or `route53resolver`\) followed by the API operation name, for example:  
@@ -11,20 +11,20 @@ To specify an action, use the applicable prefix \(`route53`, `route53domains`, o
 `route53resolver:CreateResolverEndpoint`
 
 **Topics**
-+ [Required Permissions for Actions on Public Hosted Zones](#required-permissions-public-hosted-zones)
-+ [Required Permissions for Actions on Private Hosted Zones](#required-permissions-private-hosted-zones)
-+ [Required Permissions for Actions on Reusable Delegation Sets](#required-permissions-reusable-delegation-sets)
-+ [Required Permissions for Actions on Records](#required-permissions-resource-record-sets)
-+ [Required Permissions for Actions on Traffic Policies](#required-permissions-traffic-policies)
-+ [Required Permissions for Actions on Traffic Policy Instances](#required-permissions-traffic-policy-instances)
-+ [Required Permissions for Actions on Health Checks](#required-permissions-health-checks)
-+ [Required Permissions for Actions on Domain Registrations](#required-permissions-domain-registrations)
-+ [Required Permissions for Route 53 Resolver Actions](#required-permissions-resolver)
-+ [Required Permissions for Actions to Get Limits for Accounts, Hosted Zones, and Reusable Delegation Sets](#required-permissions-get-limits)
-+ [Required Permissions for Actions on Tags for Hosted Zones and Health Checks](#required-permissions-tags-hosted-zones)
-+ [Required Permissions for Actions on Tags for Domains](#required-permissions-tags-domains)
++ [Required permissions for actions on public hosted zones](#required-permissions-public-hosted-zones)
++ [Required permissions for actions on private hosted zones](#required-permissions-private-hosted-zones)
++ [Required permissions for actions on reusable delegation sets](#required-permissions-reusable-delegation-sets)
++ [Required permissions for actions on records](#required-permissions-resource-record-sets)
++ [Required permissions for actions on traffic policies](#required-permissions-traffic-policies)
++ [Required permissions for actions on traffic policy instances](#required-permissions-traffic-policy-instances)
++ [Required permissions for actions on health checks](#required-permissions-health-checks)
++ [Required permissions for actions on domain registrations](#required-permissions-domain-registrations)
++ [Required permissions for Route 53 Resolver actions](#required-permissions-resolver)
++ [Required permissions for actions to get limits for accounts, hosted zones, and reusable delegation sets](#required-permissions-get-limits)
++ [Required permissions for actions on tags for hosted zones and health checks](#required-permissions-tags-hosted-zones)
++ [Required permissions for actions on tags for domains](#required-permissions-tags-domains)
 
-## Required Permissions for Actions on Public Hosted Zones<a name="required-permissions-public-hosted-zones"></a><a name="public-hosted-zones-table"></a>
+## Required permissions for actions on public hosted zones<a name="required-permissions-public-hosted-zones"></a><a name="public-hosted-zones-table"></a>
 
 [CreateHostedZone](https://docs.aws.amazon.com/Route53/latest/APIReference/API_CreateHostedZone.html)  
 Required Permissions \(API Action\): `route53:CreateHostedZone`  
@@ -54,7 +54,7 @@ Resources: `*`
 Required Permissions \(API Action\): `route53:UpdateHostedZoneComment`  
 Resources: `*`
 
-## Required Permissions for Actions on Private Hosted Zones<a name="required-permissions-private-hosted-zones"></a><a name="private-hosted-zones-table"></a>
+## Required permissions for actions on private hosted zones<a name="required-permissions-private-hosted-zones"></a><a name="private-hosted-zones-table"></a>
 
 [CreateHostedZone](https://docs.aws.amazon.com/Route53/latest/APIReference/API_CreateHostedZone.html)  
 Required Permissions \(API Action\): `route53:CreateHostedZone`, `ec2:DescribeVpcs`, `ec2:DescribeRegions`  
@@ -67,6 +67,14 @@ Resources: `*`
 [AssociateVPCWithHostedZone](https://docs.aws.amazon.com/Route53/latest/APIReference/API_AssociateVPCWithHostedZone.html)  
 Required Permissions \(API Action\): `route53:AssociateVPCWithHostedZone`, `ec2:DescribeVpcs`  
 Resources: `*`, `arn:aws:ec2::optional account id:*`
+
+[CreateVPCAssociationAuthorization](https://docs.aws.amazon.com/Route53/latest/APIReference/API_CreateVPCAssociationAuthorization.html)  
+Required Permissions \(API Action\): `route53:CreateVPCAssociationAuthorization`  
+Resources: `*`
+
+[DeleteVPCAssociationAuthorization](https://docs.aws.amazon.com/Route53/latest/APIReference/API_DeleteVPCAssociationAuthorization.html)  
+Required Permissions \(API Action\): `route53:DeleteVPCAssociationAuthorization`  
+Resources: `*`
 
 [DisassociateVPCFromHostedZone](https://docs.aws.amazon.com/Route53/latest/APIReference/API_DisassociateVPCFromHostedZone.html)  
 Required Permissions \(API Action\): `route53:DisassociateVPCFromHostedZone`, `ec2:DescribeVpcs`  
@@ -92,7 +100,7 @@ Resources: `*`
 Required Permissions \(API Action\): `route53:UpdateHostedZoneComment`  
 Resources: `*`
 
-## Required Permissions for Actions on Reusable Delegation Sets<a name="required-permissions-reusable-delegation-sets"></a><a name="reusable-delegation-sets-table"></a>
+## Required permissions for actions on reusable delegation sets<a name="required-permissions-reusable-delegation-sets"></a><a name="reusable-delegation-sets-table"></a>
 
 [CreateReusableDelegationSet](https://docs.aws.amazon.com/Route53/latest/APIReference/API_CreateReusableDelegationSet.html)  
 Required Permissions \(API Action\): `route53:CreateReusableDelegationSet`  
@@ -110,7 +118,7 @@ Resources: `*`
 Required Permissions \(API Action\): `route53:ListReusableDelegationSets`  
 Resources: `*`
 
-## Required Permissions for Actions on Records<a name="required-permissions-resource-record-sets"></a><a name="resource-record-sets-table"></a>
+## Required permissions for actions on records<a name="required-permissions-resource-record-sets"></a><a name="resource-record-sets-table"></a>
 
 [ChangeResourceRecordSets](https://docs.aws.amazon.com/Route53/latest/APIReference/API_ChangeResourceRecordSets.html)  
 Required Permissions \(API Action\): `route53:ChangeResourceRecordSets`  
@@ -132,7 +140,7 @@ Resources: None
 Required Permissions \(API Action\): `route53:ListResourceRecordSets`  
 Resources: `arn:aws:route53:::hostedzone/hosted zone ID`
 
-## Required Permissions for Actions on Traffic Policies<a name="required-permissions-traffic-policies"></a><a name="traffic-policies-table"></a>
+## Required permissions for actions on traffic policies<a name="required-permissions-traffic-policies"></a><a name="traffic-policies-table"></a>
 
 [CreateTrafficPolicy](https://docs.aws.amazon.com/Route53/latest/APIReference/API_CreateTrafficPolicy.html)  
 Required Permissions \(API Action\): `route53:CreateTrafficPolicy`  
@@ -162,7 +170,7 @@ Resources: `*`
 Required Permissions \(API Action\): `route53:UpdateTrafficPolicyComment`  
 Resources: `*`
 
-## Required Permissions for Actions on Traffic Policy Instances<a name="required-permissions-traffic-policy-instances"></a><a name="traffic-policy-instances-table"></a>
+## Required permissions for actions on traffic policy instances<a name="required-permissions-traffic-policy-instances"></a><a name="traffic-policy-instances-table"></a>
 
 [CreateTrafficPolicyInstance](https://docs.aws.amazon.com/Route53/latest/APIReference/API_CreateTrafficPolicyInstance.html)  
 Required Permissions \(API Action\): `route53:CreateTrafficPolicyInstance`  
@@ -196,7 +204,7 @@ Resources: `*`
 Required Permissions \(API Action\): `route53:UpdateTrafficPolicyInstance`  
 Resources: `*`
 
-## Required Permissions for Actions on Health Checks<a name="required-permissions-health-checks"></a><a name="health-checks-table"></a>
+## Required permissions for actions on health checks<a name="required-permissions-health-checks"></a><a name="health-checks-table"></a>
 
 [CreateHealthCheck](https://docs.aws.amazon.com/Route53/latest/APIReference/API_CreateHealthCheck.html)  
 Required Permissions \(API Action\): `route53:CreateHealthCheck`  
@@ -234,7 +242,7 @@ Resources: `*`
 Required Permissions \(API Action\): `route53:UpdateHealthCheck`  
 Resources: `*`, `arn:aws:route53:::healthcheck/health check ID`
 
-## Required Permissions for Actions on Domain Registrations<a name="required-permissions-domain-registrations"></a><a name="domain-registrations-table"></a>
+## Required permissions for actions on domain registrations<a name="required-permissions-domain-registrations"></a><a name="domain-registrations-table"></a>
 
 [AddDnssec](https://docs.aws.amazon.com/Route53/latest/DeveloperGuide/domain-configure-dnssec.html) \(console only\)  
 Required Permissions \(API Action\): `route53domains:AddDnssec`  
@@ -332,10 +340,10 @@ Resources: `*`
 Required Permissions \(API Action\): `route53domains:ViewBilling`  
 Resources: `*`
 
-## Required Permissions for Route 53 Resolver Actions<a name="required-permissions-resolver"></a><a name="resolver-table"></a>
+## Required permissions for Route 53 Resolver actions<a name="required-permissions-resolver"></a><a name="resolver-table"></a>
 
 [AssociateResolverEndpointIpAddress](https://docs.aws.amazon.com/Route53/latest/APIReference/API_route53resolver_AssociateResolverEndpointIpAddress.html)  
-Required Permissions \(API Action\): `route53:route53resolver:AssociateResolverEndpointIpAddress`, `ec2:DescribeSubnets`, `ec2:DescribeNetworkInterfaces`, `ec2:CreateNetworkInterfacePermission`  
+Required Permissions \(API Action\): `route53resolver:AssociateResolverEndpointIpAddress`, `ec2:DescribeSubnets`, `ec2:DescribeNetworkInterfaces`, `ec2:CreateNetworkInterfacePermission`  
 Resources: `*`
 
 [AssociateResolverRule](https://docs.aws.amazon.com/Route53/latest/APIReference/API_route53resolver_AssociateResolverRule.html)  
@@ -344,6 +352,7 @@ Resources: `*`
 
 [CreateResolverEndpoint](https://docs.aws.amazon.com/Route53/latest/APIReference/API_route53resolver_CreateResolverEndpoint.html)  
 Required Permissions \(API Action\): `route53resolver:CreateResolverEndpoint`, `ec2:DescribeSubnets`, `ec2:CreateNetworkInterface`, `ec2:DescribeNetworkInterfaces`, `ec2:CreateNetworkInterfacePermission`, `ec2:DescribeSecurityGroups`  
+See also [Example 4: Allow creation of inbound and outbound Route 53 Resolver endpoints](access-control-managing-permissions.md#access-policy-example-create-resolver-endpoints)\.  
 Resources: `*`
 
 [CreateResolverRule](https://docs.aws.amazon.com/Route53/latest/APIReference/API_route53resolver_CreateResolverRule.html)  
@@ -422,7 +431,7 @@ Resources: `*`
 Required Permissions \(API Action\): `route53resolver:UpdateResolverRule`  
 Resources: `*`
 
-## Required Permissions for Actions to Get Limits for Accounts, Hosted Zones, and Reusable Delegation Sets<a name="required-permissions-get-limits"></a><a name="tags-hosted-zones-table"></a>
+## Required permissions for actions to get limits for accounts, hosted zones, and reusable delegation sets<a name="required-permissions-get-limits"></a><a name="tags-hosted-zones-table"></a>
 
 [GetAccountLimit](https://docs.aws.amazon.com/Route53/latest/APIReference/API_GetAccountLimit.html)  
 Required Permissions \(API Action\): `route53:GetAccountLimit`  
@@ -436,7 +445,7 @@ Resources: `*`
 Required Permissions \(API Action\): `route53:GetReusableDelegationSetLimit`  
 Resources: `*`
 
-## Required Permissions for Actions on Tags for Hosted Zones and Health Checks<a name="required-permissions-tags-hosted-zones"></a><a name="tags-hosted-zones-table"></a>
+## Required permissions for actions on tags for hosted zones and health checks<a name="required-permissions-tags-hosted-zones"></a><a name="tags-hosted-zones-table"></a>
 
 [ChangeTagsForResource](https://docs.aws.amazon.com/Route53/latest/APIReference/API_ChangeTagsForResource.html)  
 Required Permissions \(API Action\): `route53:ChangeTagsForResource`  
@@ -456,7 +465,7 @@ Resources:
 + `arn:aws:route53:::healthcheck/*`
 + `arn:aws:route53:::hostedzone/*`
 
-## Required Permissions for Actions on Tags for Domains<a name="required-permissions-tags-domains"></a><a name="tags-domains-table"></a>
+## Required permissions for actions on tags for domains<a name="required-permissions-tags-domains"></a><a name="tags-domains-table"></a>
 
 [DeleteTagsForDomain](https://docs.aws.amazon.com/Route53/latest/APIReference/API_domains_DeleteTagsForDomain.html)  
 Required Permissions \(API Action\): `route53domains:DeleteTagsForDomain`  

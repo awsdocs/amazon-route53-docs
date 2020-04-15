@@ -1,4 +1,4 @@
-# Updating Health Checks When You Change CloudWatch Alarm Settings \(Health Checks That Monitor a CloudWatch Alarm Only\)<a name="health-checks-updating-cloudwatch-alarm-settings"></a>
+# Updating health checks when you change CloudWatch alarm settings \(health checks that monitor a CloudWatch alarm only\)<a name="health-checks-updating-cloudwatch-alarm-settings"></a>
 
 If you create a Route 53 health check that monitors the data stream for a CloudWatch alarm and then you update the settings in the CloudWatch alarm, Route 53 doesn't automatically update the alarm settings in the health check\. If you want the health check to start using the new alarm settings, you need to update the health check\.
 

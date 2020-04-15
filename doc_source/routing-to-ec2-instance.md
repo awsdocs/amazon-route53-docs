@@ -1,4 +1,4 @@
-# Routing Traffic to an Amazon EC2 Instance<a name="routing-to-ec2-instance"></a>
+# Routing traffic to an Amazon EC2 instance<a name="routing-to-ec2-instance"></a>
 
 Amazon EC2 provides scalable computing capacity in the AWS cloud\. You can launch an EC2 virtual computing environment \(an instance\) using a preconfigured template \(an Amazon Machine Image, or AMI\)\. When you launch an EC2 instance, EC2 automatically installs the operating system \(Linux or Microsoft Windows\) and additional software included in the AMI, such as web server or database software\.
 
@@ -8,16 +8,16 @@ If you're hosting a website or running a web application on an EC2 instance, you
 
 Before you get started, you need the following:
 + An Amazon EC2 instance\. For information about launching an EC2 instance, see the following documentation:
-  + **Linux** – See [Getting Started with Amazon EC2 Linux Instances](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/EC2_GetStarted.html) in the *Amazon EC2 User Guide for Linux Instances*
-  + **Microsoft Windows** – See [Getting Started with Amazon EC2 Windows Instances](https://docs.aws.amazon.com/AWSEC2/latest/WindowsGuide/EC2_GetStarted.html) in the *Amazon EC2 User Guide for Windows Instances*
+  + **Linux** – See [Getting started with Amazon EC2 Linux instances](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/EC2_GetStarted.html) in the *Amazon EC2 User Guide for Linux Instances*
+  + **Microsoft Windows** – See [Getting started with Amazon EC2 Windows instances](https://docs.aws.amazon.com/AWSEC2/latest/WindowsGuide/EC2_GetStarted.html) in the *Amazon EC2 User Guide for Windows Instances*
 **Important**  
 We recommend that you also create an [Elastic IP address](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/elastic-ip-addresses-eip.html) and associate it with your EC2 instance\. An Elastic IP address ensures that the IP address of your Amazon EC2 instance will never change\.
 + A registered domain name\. You can use Amazon Route 53 as your domain registrar, or you can use a different registrar\.
 + Route 53 as the DNS service for the domain\. If you register your domain name by using Route 53, we automatically configure Route 53 as the DNS service for the domain\. 
 
-  For information about using Route 53 as the DNS service provider for your domain, see [Making Amazon Route 53 the DNS Service for an Existing DomainMaking Route 53 the DNS Service for an Existing Domain](MigratingDNS.md)\.
+  For information about using Route 53 as the DNS service provider for your domain, see [Making Amazon Route 53 the DNS service for an existing domainMaking Route 53 the DNS service for an existing domain](MigratingDNS.md)\.
 
-## Configuring Amazon Route 53 to Route Traffic to an Amazon EC2 Instance<a name="routing-to-ec2-instance-configuring"></a>
+## Configuring Amazon Route 53 to route traffic to an Amazon EC2 instance<a name="routing-to-ec2-instance-configuring"></a>
 
 To configure Amazon Route 53 to route traffic to an EC2 instance, perform the following procedure\.<a name="routing-to-ec2-instance-procedure"></a>
 
@@ -27,7 +27,7 @@ To configure Amazon Route 53 to route traffic to an EC2 instance, perform the f
 
    1. Sign in to the AWS Management Console and open the Amazon EC2 console at [https://console\.aws\.amazon\.com/ec2/](https://console.aws.amazon.com/ec2/)\.
 
-   1. In the regions list in the upper right corner of the console, choose the region that you launched the instance in\.
+   1. In the Regions list in the upper right corner of the console, choose the Region that you launched the instance in\.
 
    1. In the navigation pane, choose **Instances**\.
 
@@ -58,7 +58,7 @@ Accept the default value of **300**\.
 **Value**  
 Enter the IP address that you got in step 1\.  
 **Routing Policy**  
-Choose the applicable routing policy\. For more information, see [Choosing a Routing Policy](routing-policy.md)\.
+Choose the applicable routing policy\. For more information, see [Choosing a routing policy](routing-policy.md)\.
 
 1. Choose **Create**\.
 

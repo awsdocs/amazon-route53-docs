@@ -1,4 +1,4 @@
-# Monitoring Health Checks Using CloudWatch<a name="monitoring-health-checks"></a>
+# Monitoring health checks using CloudWatch<a name="monitoring-health-checks"></a>
 
 Route 53 health checks integrate with CloudWatch metrics so that you can do the following:
 + Verify that a health check is properly configured\.
@@ -7,7 +7,7 @@ Route 53 health checks integrate with CloudWatch metrics so that you can do the
 
 CloudWatch metrics are retained for two weeks\. 
 
-For more information, see [How Amazon Route 53 Determines Whether a Health Check Is HealthyHow Route 53 Determines Whether a Health Check Is Healthy](dns-failover-determining-health-of-endpoints.md)\.
+For more information, see [How Amazon Route 53 determines whether a health check is healthyHow Route 53 determines whether a health check is healthy](dns-failover-determining-health-of-endpoints.md)\.
 + [To view the status of a health check \(console\)](#monitoring-status-procedure)
 + [To receive an Amazon SNS notification when a health check status is unhealthy \(console\)](#monitoring-sns-notification-procedure)
 + [To view CloudWatch alarm status and edit alarms for Amazon Route 53 \(console\)](#monitoring-alarm-status-procedure)
@@ -110,7 +110,7 @@ Specify how many consecutive time periods that the specified value must meet the
 **OK**  
 CloudWatch has accumulated enough statistics from Route 53 health checks to determine that the endpoint doesn't meet the alarm threshold\.  
 **INSUFFICIENT DATA**  
-CloudWatch hasn't accumulated enough statistics to determine whether the endpoint meets the alarm threshold\. This is the initial state of a new alarm\.  
+CloudWatch hasn't accumulated enough statistics to determine whether the endpoint meets the alarm threshold\. This is the initial state of a new alarm\. The alarm state also changes to **INSUFFICIENT DATA** if CloudWatch metrics become unavailable or if you delete the health check without deleting the associated alarm\.   
 **ALARM**  
 CloudWatch has accumulated enough statistics from Route 53 health checks to determine that the endpoint meets the alarm threshold and to send notification to the specified email address\.
 

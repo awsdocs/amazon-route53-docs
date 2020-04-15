@@ -1,4 +1,4 @@
-# Enabling or Disabling Automatic Renewal for a Domain<a name="domain-enable-disable-auto-renewal"></a>
+# Enabling or disabling automatic renewal for a domain<a name="domain-enable-disable-auto-renewal"></a>
 
 When you want to change whether Amazon Route 53 automatically renews registration for a domain shortly before the expiration date, or you want to see the current setting for automatic renewal, perform the following procedure\.
 
@@ -16,4 +16,4 @@ Note that you can't use AWS credits to pay the fee for renewing registration for
 
 1. Choose **Save**\.
 
-1. If you encounter issues while enabling or disabling automatic renewal, you can contact customer support for free\. For more information, see [Contacting Customer Support About Domain Registration Issues](domain-contact-support.md)\.
+1. If you encounter issues while enabling or disabling automatic renewal, you can contact AWS Support for free\. For more information, see [Contacting AWS Support about domain registration issues](domain-contact-support.md)\.

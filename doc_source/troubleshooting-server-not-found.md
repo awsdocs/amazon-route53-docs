@@ -9,7 +9,7 @@ If your browser displays a "Server not found" error when you try to browse to a 
 
 ## You didn't create a record for the domain or subdomain name<a name="troubleshooting-server-not-found-no-resource-record-set"></a>
 
-If you don't create a record for the domain or subdomain, then DNS doesn't know where to route traffic when someone enters that name in a browser\. For more information, see [Working with Records](rrsets-working-with.md)\.
+If you don't create a record for the domain or subdomain, then DNS doesn't know where to route traffic when someone enters that name in a browser\. For more information, see [Working with records](rrsets-working-with.md)\.
 
 ## You created a record but specified the wrong value<a name="troubleshooting-server-not-found-wrong-value-in-resource-record-set"></a>
 

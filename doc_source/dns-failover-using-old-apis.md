@@ -1,4 +1,4 @@
-# Using Health Checks with Amazon Route 53 API Versions Earlier than 2012\-12\-12<a name="dns-failover-using-old-apis"></a>
+# Using health checks with Amazon Route 53 API versions earlier than 2012\-12\-12<a name="dns-failover-using-old-apis"></a>
 
 Health checks are supported starting with the 2012\-12\-12 version of the Amazon Route 53 API\. If a hosted zone contains records that health checks are configured for, we recommend that you use only the 2012\-12\-12 API or later\. Note the following restrictions on using health checks with earlier API versions\.
 + The `ChangeResourceRecordSets` action cannot create or delete records that include the `EvaluateTargetHealth`, `Failover`, or `HealthCheckId` elements\.

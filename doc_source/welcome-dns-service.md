@@ -1,4 +1,4 @@
-# How Internet Traffic Is Routed to Your Website or Web Application<a name="welcome-dns-service"></a>
+# How internet traffic is routed to your website or web application<a name="welcome-dns-service"></a>
 
 All computers on the internet, from your smart phone or laptop to the servers that serve content for massive retail websites, communicate with one another by using numbers\. These numbers, known as *IP addresses*, are in one of the following formats:
 + Internet Protocol version 4 \(IPv4\) format, such as 192\.0\.2\.44
@@ -7,16 +7,16 @@ All computers on the internet, from your smart phone or laptop to the servers th
 When you open a browser and go to a website, you don't have to remember and enter a long number like that\. Instead, you can enter a domain name like example\.com and still end up in the right place\. A DNS service such as Amazon Route 53 helps to make that connection between domain names and IP addresses\.
 
 **Topics**
-+ [Overview of How You Configure Amazon Route 53 to Route Internet Traffic for Your Domain](#welcome-dns-service-how-to-configure)
-+ [How Amazon Route 53 Routes Traffic for Your Domain](#welcome-dns-service-how-route-53-routes-traffic)
++ [Overview of how you configure Amazon Route 53 to route internet traffic for your domain](#welcome-dns-service-how-to-configure)
++ [How Amazon Route 53 routes traffic for your domain](#welcome-dns-service-how-route-53-routes-traffic)
 
-## Overview of How You Configure Amazon Route 53 to Route Internet Traffic for Your Domain<a name="welcome-dns-service-how-to-configure"></a>
+## Overview of how you configure Amazon Route 53 to route internet traffic for your domain<a name="welcome-dns-service-how-to-configure"></a>
 
 Here's an overview of how to use the Amazon Route 53 console to register a domain name and configure Route 53 to route internet traffic to your website or web application\. 
 
-1. You register the domain name that you want your users to use to access your content\. For an overview, see [How Domain Registration Works](welcome-domain-registration.md)\.
+1. You register the domain name that you want your users to use to access your content\. For an overview, see [How domain registration works](welcome-domain-registration.md)\.
 
-1. After you register your domain name, Route 53 automatically creates a public hosted zone that has the same name as the domain\. For more information, see [Working with Public Hosted Zones](AboutHZWorkingWith.md)\.
+1. After you register your domain name, Route 53 automatically creates a public hosted zone that has the same name as the domain\. For more information, see [Working with public hosted zones](AboutHZWorkingWith.md)\.
 
 1. To route traffic to your resources, you create *records*, also known as *resource record sets*, in your hosted zone\. Each record includes information about how you want to route traffic for your domain, such as the following:  
 **Name**  
@@ -27,13 +27,13 @@ The record type usually determines the type of resource that you want traffic to
 **Value**  
 Value is closely related to Type\. If you specify MX for Type, you specify the names of one or more email servers for Value\. If you specify A for Type, you specify an IP address in IPv4 format, such as 192\.0\.2\.136\.
 
-For more information about records, see [Working with Records](rrsets-working-with.md)\.
+For more information about records, see [Working with records](rrsets-working-with.md)\.
 
-You can also create special Route 53 records, called alias records, that route traffic to Amazon S3 buckets, Amazon CloudFront distributions, and other AWS resources\. For more information, see [Choosing Between Alias and Non\-Alias Records](resource-record-sets-choosing-alias-non-alias.md) and [Routing Internet Traffic to Your AWS Resources](routing-to-aws-resources.md)\.
+You can also create special Route 53 records, called alias records, that route traffic to Amazon S3 buckets, Amazon CloudFront distributions, and other AWS resources\. For more information, see [Choosing between alias and non\-alias records](resource-record-sets-choosing-alias-non-alias.md) and [Routing internet traffic to your AWS resources](routing-to-aws-resources.md)\.
 
-For more information about routing internet traffic to your resources, see [Configuring Amazon Route 53 as Your DNS Service](dns-configuring.md)\.
+For more information about routing internet traffic to your resources, see [Configuring Amazon Route 53 as your DNS service](dns-configuring.md)\.
 
-## How Amazon Route 53 Routes Traffic for Your Domain<a name="welcome-dns-service-how-route-53-routes-traffic"></a>
+## How Amazon Route 53 routes traffic for your domain<a name="welcome-dns-service-how-route-53-routes-traffic"></a>
 
 After you configure Amazon Route 53 to route your internet traffic to your resources, such as web servers or Amazon S3 buckets, here's what happens in just a few milliseconds when someone requests content for www\.example\.com:
 

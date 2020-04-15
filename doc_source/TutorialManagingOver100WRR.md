@@ -1,4 +1,4 @@
-# Managing Over 100 Weighted Records in Amazon Route 53<a name="TutorialManagingOver100WRR"></a>
+# Managing over 100 weighted records in Amazon Route 53<a name="TutorialManagingOver100WRR"></a>
 
 Amazon Route 53 lets you configure weighted records\. For a given name and type \(for example, `www.example.com`, type A\), you can configure up to 100 alternative responses, each with its own weight\. When responding to queries for `www.example.com`, Route 53 DNS servers select a weighted random response to return to DNS resolvers\. The value of a weighted record that has a weight of 2 is returned, on average, twice as often as the value of a weighted record that has a weight of 1\.
 
@@ -16,4 +16,4 @@ A simple two\-level tree might look like this:
 + `www-b.example.com`, type A, value 192\.0\.2\.3, weight 1
 + `www-b.example.com`, type A, value 192\.0\.2\.4, weight 1
 
-For more information about creating records, see [Working with Records](rrsets-working-with.md)\.
+For more information about creating records, see [Working with records](rrsets-working-with.md)\.

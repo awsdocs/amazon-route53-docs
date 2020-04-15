@@ -1,10 +1,19 @@
-# Downloading a Domain Billing Report<a name="domain-billing-report"></a>
+# Downloading a domain billing report<a name="domain-billing-report"></a>
 
-If you manage multiple domains and you want to view charges by domain for a specified time period, you can download a domain billing report\. This report includes all charges that apply to domain registration, including the following:
+If your AWS bill is charged to a credit card, you receive a separate invoice for each domain transaction\. These invoices don't include the domain name\. If you manage multiple domains and you want to view charges by domain for a specified time period, you can download a domain billing report\. This report includes all charges that apply to domain registration, including the following:
 + Registering a domain
 + Renewing registration for a domain
 + Transferring a domain to Amazon Route 53
 + Changing the owner of a domain \(for some TLDs, this operation is free\)
+
+**Note**  
+If you use invoiced payments, any Route 53 domain registration transactions appear in your monthly AWS invoice\. The invoice includes the domain name and operation that each charge applies to\.
+
+When you run the report using the console, you can choose the following options:
++ **Last 12 months**: The report includes charges from one year before you ran the report until the current day\. For example, if you run the report on June 3rd, it includes charges from June 3rd the previous year until the current day\.
++ **Individual months in the last year**: The report includes charges for the specified month\.
+
+If you run the report programmatically, you can get charges for any date range, starting with July 31, 2014\. That's the date that Route 53 started to support domain registration\. For example, see [view\-billing](https://docs.aws.amazon.com/cli/latest/reference/route53domains/view-billing.html) in the *AWS CLI Command Reference*\.
 
 The billing report, in CSV format, includes the following values:
 + The AWS invoice ID that the charge appears on\.
@@ -25,4 +34,4 @@ The billing report, in CSV format, includes the following values:
 
 1. Follow the prompts to open the report or to save it\.
 
-1. If you encounter issues while downloading a domain billing report, you can contact customer support for free\. For more information, see [Contacting Customer Support About Domain Registration Issues](domain-contact-support.md)\.
+1. If you encounter issues while downloading a domain billing report, you can contact AWS Support for free\. For more information, see [Contacting AWS Support about domain registration issues](domain-contact-support.md)\.

@@ -1,4 +1,4 @@
-# How Amazon Route 53 Checks the Health of Your Resources<a name="welcome-health-checks"></a>
+# How Amazon Route 53 checks the health of your resources<a name="welcome-health-checks"></a>
 
 Amazon Route 53 health checks monitor the health of your resources such as web servers and email servers\. You can optionally configure Amazon CloudWatch alarms for your health checks, so that you receive notification when a resource becomes unavailable\. 
 
@@ -23,7 +23,7 @@ Here's an overview of how health checking works if you want to be notified when 
 
 1. If Route 53 considers the endpoint unhealthy and if you configured notification for the health check, Route 53 notifies CloudWatch\.
 
-   If you didn't configure notification, you can still see the status of your Route 53 health checks in the Route 53 console\. For more information, see [Monitoring Health Check Status and Getting Notifications](health-checks-monitor-view-status.md)\.
+   If you didn't configure notification, you can still see the status of your Route 53 health checks in the Route 53 console\. For more information, see [Monitoring health check status and getting notifications](health-checks-monitor-view-status.md)\.
 
 1. If you configured notification for the health check, CloudWatch triggers an alarm and uses Amazon SNS to send notification to the specified recipients\.
 
@@ -31,4 +31,4 @@ In addition to checking the health of a specified endpoint, you can configure a 
 
 If you have multiple resources that perform the same function, for example, web servers or database servers, and you want Route 53 to route traffic only to the resources that are healthy, you can configure DNS failover by associating a health check with each record for that resource\. If a health check determines that the underlying resource is unhealthy, Route 53 routes traffic away from the associated record\.
 
-For more information about using Route 53 to monitor the health of your resources, see [Creating Amazon Route 53 Health Checks and Configuring DNS Failover](dns-failover.md)\.
+For more information about using Route 53 to monitor the health of your resources, see [Creating Amazon Route 53 health checks and configuring DNS failover](dns-failover.md)\.

@@ -14,7 +14,7 @@ Here are the most common reasons that your domain is not available on the intern
 
 When you register a new domain, ICANN requires that we get confirmation that the email address for the registrant contact is valid\. To get confirmation, we send an email that contains a link\. \(If you don't respond to the first email, we resend the same email up to two more times\.\) You have between 3 and 15 days to click the link, depending on the top\-level domain\. After that time, the link stops working\.
 
-If you don't click the link in the email in the allotted amount of time, ICANN requires that we suspend the domain\. For information about how to resend the confirmation email to the registrant contact, see [Resending Authorization and Confirmation Emails](domain-click-email-link.md)\.
+If you don't click the link in the email in the allotted amount of time, ICANN requires that we suspend the domain\. For information about how to resend the confirmation email to the registrant contact, see [Resending authorization and confirmation emails](domain-click-email-link.md)\.
 
 ## You transferred domain registration to Amazon Route 53, but you didn't transfer DNS service<a name="troubleshooting-domain-unavailable-transferred-domain-not-dns"></a>
 
@@ -39,11 +39,11 @@ If you can't restore DNS service using the name servers that you specified when 
 
    1. Use the zone file that you got from the previous registrar to create records\.
 
-   If you chose Route 53 as your new DNS service, you can create records by importing the zone file\. For more information, see [Creating Records By Importing a Zone File](resource-record-sets-creating-import.md)\.
+   If you chose Route 53 as your new DNS service, you can create records by importing the zone file\. For more information, see [Creating records by importing a zone file](resource-record-sets-creating-import.md)\.
 
-1. Get the name servers for the new hosted zone\. If you chose Route 53 as the DNS service, see [Getting the Name Servers for a Public Hosted Zone](GetInfoAboutHostedZone.md)\.
+1. Get the name servers for the new hosted zone\. If you chose Route 53 as the DNS service, see [Getting the name servers for a public hosted zone](GetInfoAboutHostedZone.md)\.
 
-1. Change the name servers for your domain to the name servers that you got in step 4\. For more information, see [Adding or Changing Name Servers and Glue Records for a Domain](domain-name-servers-glue-records.md)\.
+1. Change the name servers for your domain to the name servers that you got in step 4\. For more information, see [Adding or changing name servers and glue records for a domain](domain-name-servers-glue-records.md)\.
 
 ## You transferred domain registration and specified the wrong name servers in the domain settings<a name="troubleshooting-domain-unavailable-transferred-domain-wrong-name-servers"></a>
 
@@ -111,17 +111,17 @@ Restoring internet service for the domain can take up to 48 hours\.<a name="trou
 
 **To restore internet service if you delete a hosted zone that Route 53 is using to route internet traffic for a domain**
 
-1. Create another hosted zone that has the same name as the domain\. For more information, see [Creating a Public Hosted Zone](CreatingHostedZone.md)\.
+1. Create another hosted zone that has the same name as the domain\. For more information, see [Creating a public hosted zone](CreatingHostedZone.md)\.
 
-1. Recreate the records that were in the hosted zone that you deleted\. For more information, see [Working with Records](rrsets-working-with.md)\.
+1. Recreate the records that were in the hosted zone that you deleted\. For more information, see [Working with records](rrsets-working-with.md)\.
 
-1. Get the names of the name servers that Route 53 assigned to the new hosted zone\. For more information, see [Getting the Name Servers for a Public Hosted Zone](GetInfoAboutHostedZone.md)\.
+1. Get the names of the name servers that Route 53 assigned to the new hosted zone\. For more information, see [Getting the name servers for a public hosted zone](GetInfoAboutHostedZone.md)\.
 
 1. Update the domain registration to use the name servers that you got in step 3:
-   + If the domain is registered with Route 53, see [Adding or Changing Name Servers and Glue Records for a Domain](domain-name-servers-glue-records.md)\.
+   + If the domain is registered with Route 53, see [Adding or changing name servers and glue records for a domain](domain-name-servers-glue-records.md)\.
    + If the domain is registered with another domain registrar, use the method provided by the registrar to update the domain registration to use the new name servers\.
 
-1. Wait for the TTL for the name servers to pass for recursive resolvers that have cached the names of the name servers for the deleted hosted zone\. After the TTL has passed, when a browser or application submits a DNS query for the domain or one of its subdomains, a recursive resolver forwards the query to the Route 53 name servers for the new hosted zone\. For more information, see [How Amazon Route 53 Routes Traffic for Your Domain](welcome-dns-service.md#welcome-dns-service-how-route-53-routes-traffic)\.
+1. Wait for the TTL for the name servers to pass for recursive resolvers that have cached the names of the name servers for the deleted hosted zone\. After the TTL has passed, when a browser or application submits a DNS query for the domain or one of its subdomains, a recursive resolver forwards the query to the Route 53 name servers for the new hosted zone\. For more information, see [How Amazon Route 53 routes traffic for your domain](welcome-dns-service.md#welcome-dns-service-how-route-53-routes-traffic)\.
 
    The TTL for name servers can be as long as 48 hours, depending on the TLD of the domain\.
 

@@ -1,4 +1,4 @@
-# Routing Traffic to an Amazon Virtual Private Cloud Interface Endpoint by Using Your Domain Name<a name="routing-to-vpc-interface-endpoint"></a>
+# Routing traffic to an Amazon Virtual Private Cloud interface endpoint by using your domain name<a name="routing-to-vpc-interface-endpoint"></a>
 
 An Amazon Virtual Private Cloud \(Amazon VPC\) interface endpoint lets you use AWS PrivateLink to access selected services\. These services include some AWS services, services that are hosted by other AWS customers and partners in their own VPCs, and supported AWS Marketplace partner services\.
 
@@ -9,18 +9,18 @@ Route 53 doesn't charge for alias queries to interface endpoints or other AWS r
 
 **Topics**
 + [Prerequisites](#routing-to-vpc-interface-endpoint-prereqs)
-+ [Configuring Amazon Route 53 to Route Traffic to an Amazon VPC Interface Endpoint](#routing-to-vpc-interface-endpoint-config)
++ [Configuring Amazon Route 53 to route traffic to an Amazon VPC interface endpoint](#routing-to-vpc-interface-endpoint-config)
 
 ## Prerequisites<a name="routing-to-vpc-interface-endpoint-prereqs"></a>
 
 Before you get started, you need the following:
-+ An Amazon VPC interface endpoint\. For more information, see [Interface VPC Endpoints \(AWS PrivateLink\)](https://docs.aws.amazon.com/vpc/latest/userguide/vpce-interface.html) in the *Amazon VPC User Guide*\.
++ An Amazon VPC interface endpoint\. For more information, see [Interface VPC endpoints \(AWS PrivateLink\)](https://docs.aws.amazon.com/vpc/latest/userguide/vpce-interface.html) in the *Amazon VPC User Guide*\.
 + A registered domain name\. You can use Amazon Route 53 as your domain registrar, or you can use a different registrar\.
 + Route 53 as the DNS service for the domain\. If you register your domain name by using Route 53, we automatically configure Route 53 as the DNS service for the domain\. 
 
-  For information about using Route 53 as the DNS service provider for your domain, see [Making Amazon Route 53 the DNS Service for an Existing DomainMaking Route 53 the DNS Service for an Existing Domain](MigratingDNS.md)\.
+  For information about using Route 53 as the DNS service provider for your domain, see [Making Amazon Route 53 the DNS service for an existing domainMaking Route 53 the DNS service for an existing domain](MigratingDNS.md)\.
 
-## Configuring Amazon Route 53 to Route Traffic to an Amazon VPC Interface Endpoint<a name="routing-to-vpc-interface-endpoint-config"></a>
+## Configuring Amazon Route 53 to route traffic to an Amazon VPC interface endpoint<a name="routing-to-vpc-interface-endpoint-config"></a>
 
 To configure Amazon Route 53 to route traffic to an Amazon VPC interface endpoint, perform the following procedure\.<a name="routing-to-vpc-interface-endpoint-config-procedure"></a>
 
@@ -58,7 +58,7 @@ How you specify the value for **Alias Target** depends on whether you created th
    + **Same account** – Choose the list, and find the category **Amazon VPC Endpoints**\. Then choose the DNS name of the interface endpoint that you want to route internet traffic to\.
    + **Different accounts** – Enter the value that you got in step 1 of this procedure\.  
 **Routing Policy**  
-Choose the applicable routing policy\. For more information, see [Choosing a Routing Policy](routing-policy.md)\.  
+Choose the applicable routing policy\. For more information, see [Choosing a routing policy](routing-policy.md)\.  
 **Evaluate Target Health**  
 Accept the default value of **No**\.
 

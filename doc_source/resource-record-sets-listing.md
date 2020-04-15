@@ -1,4 +1,4 @@
-# Listing Records<a name="resource-record-sets-listing"></a>
+# Listing records<a name="resource-record-sets-listing"></a>
 
 The following procedure explains how to use the Amazon Route 53 console to list the records in a hosted zone\. For information about how to list records using the Route 53 API, see [ListResourceRecordSets](https://docs.aws.amazon.com/Route53/latest/APIReference/API_ListResourceRecordSets.html) in the *Amazon Route 53 API Reference*\. 
 
@@ -24,4 +24,6 @@ The following procedure explains how to use the Amazon Route 53 console to list
      + **1** – The console searches for **1\*\.example\.com** and returns no records\.
      + **example** – The console searches for **example\*\.example\.com** and returns no records\.
      + **example\.com** – In this example, the console doesn't perform a wildcard search\. It returns all the records in the hosted zone\.
+**Note**  
+If the third label from the right contains one or more hyphens \(such as `third-label.example.com`\), and if you search for the part of the third label immediately before the hyphen \(`third` in this example\), Route 53 won't return any records\. Instead, either include the hyphen \(search for `third-`\) or omit the character immediately before the hyphen \(search for `thir`\)\.
    + For records that have four or more labels, you must specify the exact name of the record\. No wildcard searches are supported\. For example, if the hosted zone includes a record named label4\.record1\.example\.com, you can find that record only if you specify **label4\.record1\.example\.com** in the search field\.

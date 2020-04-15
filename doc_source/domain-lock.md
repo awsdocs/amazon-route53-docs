@@ -1,9 +1,6 @@
-# Locking a Domain to Prevent Unauthorized Transfer to Another Registrar<a name="domain-lock"></a>
+# Locking a domain to prevent unauthorized transfer to another registrar<a name="domain-lock"></a>
 
-If you want to prevent someone from transferring your domain to another registrar without your permission, perform the following procedure\. You can also use the procedure to disable the lock if you want to transfer a domain to another registrar\.
-
-**Note**  
-To lock or unlock a \.com\.au or \.net\.au domain, contact customer support instead of performing the following procedure\. For more information, see [Contacting Customer Support About Domain Registration Issues](domain-contact-support.md)\.<a name="domain-lock-procedure"></a>
+The domain registries for all generic TLDs and many geographic TLDs let you lock a domain to prevent someone from transferring the domain to another registrar without your permission\. To determine whether the registry for your domain lets you lock the domain, see [Domains that you can register with Amazon Route 53](registrar-tld-list.md)\. If locking is supported and you want to lock your domain, perform the following procedure\. You can also use the procedure to disable the lock if you want to transfer a domain to another registrar\.<a name="domain-lock-procedure"></a>
 
 **To lock a domain to prevent unauthorized transfer to another registrar**
 
@@ -17,4 +14,4 @@ To lock or unlock a \.com\.au or \.net\.au domain, contact customer support inst
 
 1. Choose **Save**\.
 
-1. If you encounter issues while locking a domain, you can contact customer support for free\. For more information, see [Contacting Customer Support About Domain Registration Issues](domain-contact-support.md)\.
+1. If you encounter issues while locking a domain, you can contact AWS Support for free\. For more information, see [Contacting AWS Support about domain registration issues](domain-contact-support.md)\.

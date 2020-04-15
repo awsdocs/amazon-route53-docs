@@ -1,4 +1,4 @@
-# Resending Authorization and Confirmation Emails<a name="domain-click-email-link"></a>
+# Resending authorization and confirmation emails<a name="domain-click-email-link"></a>
 
 For several operations related to domain registration, ICANN requires that we get authorization from the registrant contact for the domain or confirmation that the email address for the registrant contact is valid\. To get authorization or confirmation, we send an email that contains a link\. You have between 3 and 15 days to click the link, depending on the operation and the top\-level domain\. After that time, the link stops working\.
 
@@ -22,18 +22,16 @@ If you're transferring a domain that has a [geographic TLD](https://docs.aws.ama
 Authorization isn't required for domains that have a [generic TLD](https://docs.aws.amazon.com/Route53/latest/DeveloperGuide/registrar-tld-list.html#registrar-tld-list-generic), such as \.com, \.net, or \.org\.
 
 **Topics**
-+ [Updating Your Email Address](#domain-click-email-link-update-address)
-+ [Resending Emails](#domain-click-email-link-resend-email)
++ [Updating your email address](#domain-click-email-link-update-address)
++ [Resending emails](#domain-click-email-link-resend-email)
 
-## Updating Your Email Address<a name="domain-click-email-link-update-address"></a>
+## Updating your email address<a name="domain-click-email-link-update-address"></a>
 
 We always send confirmation and authorization emails to the email address for the registrant contact for a domain\. For some TLDs, we're required to send email to the old and new email addresses for the registrant contact in the following cases:
 + You're changing the email address for a domain that is already registered with Amazon Route 53
 + You're changing the email address for a domain that you're transferring to Route 53
 
-If you don't have access to the email address that is currently associated with the registrant contact for your domain \(or to the old email address, if you're changing the email address for the registrant contact\), see [Updating the Email Address for a Domain When You Can't Access Email at the Old Address](domain-update-contacts.md#domain-update-contacts-change-email-form)\.
-
-## Resending Emails<a name="domain-click-email-link-resend-email"></a>
+## Resending emails<a name="domain-click-email-link-resend-email"></a>
 
 Use the applicable procedure to resend confirmation or authorization emails\.
 + [To resend the confirmation email for a domain registration](#domain-click-email-link-register-procedure)
@@ -42,7 +40,7 @@ Use the applicable procedure to resend confirmation or authorization emails\.
 
 **To resend the confirmation email for a domain registration**
 
-1. Check the email address for the registrant contact and, if necessary, update it\. For more information, see [Updating Contact Information and Ownership for a Domain](domain-update-contacts.md)\.
+1. Check the email address for the registrant contact and, if necessary, update it\. For more information, see [Updating contact information and ownership for a domain](domain-update-contacts.md)\.
 
 1. Check the spam folder in your email application for an email from one of the following email addresses\.
 
@@ -62,7 +60,7 @@ Use the applicable procedure to resend confirmation or authorization emails\.
 **Note**  
 If there's no warning box, you already confirmed that the email address for the registrant contact is valid\.
 
-1. If you encounter issues while resending the confirmation email, you can contact customer support for free\. For more information, see [Contacting Customer Support About Domain Registration Issues](domain-contact-support.md)\.<a name="domain-click-email-link-transfer-procedure"></a>
+1. If you encounter issues while resending the confirmation email, you can contact AWS Support for free\. For more information, see [Contacting AWS Support about domain registration issues](domain-contact-support.md)\.<a name="domain-click-email-link-transfer-procedure"></a>
 
 **To resend the authorization email for a domain transfer**
 
@@ -70,7 +68,7 @@ If there's no warning box, you already confirmed that the email address for the 
 
    We send the authorization email to the email address that the current registrar saved in the WHOIS database\. When privacy protection is enabled, that email address typically is obfuscated\. The current registrar might not forward to your actual email address the email that Amazon Route 53 sends to the email address in the WHOIS database\. 
 **Note**  
-If the current registrar for the domain won't let you turn off privacy protection, we can still transfer the domain if you specified a valid authorization code in [Step 5: Request the Transfer](domain-transfer-to-route-53.md#domain-transfer-to-route-53-request-transfer)\.
+If the current registrar for the domain won't let you turn off privacy protection, we can still transfer the domain if you specified a valid authorization code in [Step 5: Request the transfer](domain-transfer-to-route-53.md#domain-transfer-to-route-53-request-transfer)\.
 
 1. Check the email address for the registrant contact and, if necessary, update it\. Use the method provided by the current registrar for the domain\.
 
@@ -92,11 +90,11 @@ For the first 15 days after you request a transfer, you can determine the status
 
    1. In the **Status** column for that domain, choose **Resend email**\.
 
-1. If you encounter issues while resending the authorization email for a domain transfer, you can contact customer support for free\. For more information, see [Contacting Customer Support About Domain Registration Issues](domain-contact-support.md)\.<a name="domain-click-email-link-update-procedure"></a>
+1. If you encounter issues while resending the authorization email for a domain transfer, you can contact AWS Support for free\. For more information, see [Contacting AWS Support about domain registration issues](domain-contact-support.md)\.<a name="domain-click-email-link-update-procedure"></a>
 
 **To resend the authorization email to update the registrant contact or delete a domain**
 
-1. Check the email address for the registrant contact and, if necessary, update it\. For more information, see [Updating Contact Information and Ownership for a Domain](domain-update-contacts.md)\.
+1. Check the email address for the registrant contact and, if necessary, update it\. For more information, see [Updating contact information and ownership for a domain](domain-update-contacts.md)\.
 
 1. Check the spam folder in your email application for an email from one of the following email addresses\.
 
@@ -110,4 +108,4 @@ For the first 15 days after you request a transfer, you can determine the status
 
 1. After the change or deletion is canceled, you can change the contact information or delete the domain again, and we'll send you another authorization email\.
 
-1. If you encounter issues while resending the authorization email, you can contact customer support for free\. For more information, see [Contacting Customer Support About Domain Registration Issues](domain-contact-support.md)\.
+1. If you encounter issues while resending the authorization email, you can contact AWS Support for free\. For more information, see [Contacting AWS Support about domain registration issues](domain-contact-support.md)\.

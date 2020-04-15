@@ -1,4 +1,4 @@
-# Deleting Records<a name="resource-record-sets-deleting"></a>
+# Deleting records<a name="resource-record-sets-deleting"></a>
 
 The following procedure explains how to delete records using the Route 53 console\. For information about how to delete records using the Route 53 API, see [ChangeResourceRecordSets](https://docs.aws.amazon.com/Route53/latest/APIReference/API_ChangeResourceRecordSets.html) in the *Amazon Route 53 API Reference*\.
 

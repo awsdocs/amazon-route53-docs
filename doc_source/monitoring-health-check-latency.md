@@ -1,4 +1,4 @@
-# Monitoring the Latency Between Health Checkers and Your Endpoint<a name="monitoring-health-check-latency"></a>
+# Monitoring the latency between health checkers and your endpoint<a name="monitoring-health-check-latency"></a>
 
 When you create a health check, if you choose to monitor the status of an endpoint \(not the status of other health checks\) and you choose the **Latency graphs** option, you can view the following values on CloudWatch graphs on the Route 53 console:
 + The average time, in milliseconds, that it took Route 53 health checkers to establish a TCP connection with the endpoint

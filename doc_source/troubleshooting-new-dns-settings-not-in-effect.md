@@ -6,6 +6,7 @@ If you changed DNS settings, here are some common reasons that the changes haven
 + [You transferred DNS service to Amazon Route 53 in the last 48 hours, so DNS is still using your previous DNS service](#troubleshooting-new-dns-settings-not-in-effect-recent-dns-transfer)
 + [You recently transferred DNS service to Amazon Route 53, but you didn't update the name servers with the domain registrar](#troubleshooting-new-dns-settings-not-in-effect-recent-transfer-wrong-name-servers)
 + [DNS resolvers still are using the old settings for the record](#troubleshooting-new-dns-settings-not-in-effect-cached-resource-record-set)
++ [You have more than one hosted zone with the same name, and you updated the one that isn't associated with the domain](#troubleshooting-new-dns-settings-not-in-effect-updated-wrong-hosted-zone)
 
 ## You transferred DNS service to Amazon Route 53 in the last 48 hours, so DNS is still using your previous DNS service<a name="troubleshooting-new-dns-settings-not-in-effect-recent-dns-transfer"></a>
 
@@ -50,7 +51,7 @@ When you change the name servers for the domain to the name servers from your Ro
 If you changed the settings in a record but your traffic is still being routed to the old resource, such as a web server for your website, one possible cause is that DNS still has the previous settings cached\. Each record has a TTL \(time to live\) value that specifies how long, in seconds, that you want DNS resolvers to cache the information in the record, such as the IP address for a web server\. Until the amount of time that is specified by the TTL passes, DNS resolvers will continue to return the old value in response to DNS queries\. If you want to know what the TTL is for a record, perform the following procedure\.
 
 **Note**  
-For alias records, the TTL is determined by the AWS resource that the record routes traffic to\. For more information, see [Choosing Between Alias and Non\-Alias Records](resource-record-sets-choosing-alias-non-alias.md)\.<a name="troubleshooting-new-dns-settings-not-in-effect-cached-resource-record-set-procedure"></a>
+For alias records, the TTL is determined by the AWS resource that the record routes traffic to\. For more information, see [Choosing between alias and non\-alias records](resource-record-sets-choosing-alias-non-alias.md)\.<a name="troubleshooting-new-dns-settings-not-in-effect-cached-resource-record-set-procedure"></a>
 
 **To view the TTL for a record**
 
@@ -61,3 +62,31 @@ For alias records, the TTL is determined by the AWS resource that the record rou
 1. In the list of records, find the record that you want the TTL value for, and check the value of the **TTL** column\.
 **Note**  
 Changing the TTL now won't make your change take effect faster\. DNS resolvers already have the value cached, and they won't get the new setting until the amount of time that was specified by the old setting passes\.
+
+## You have more than one hosted zone with the same name, and you updated the one that isn't associated with the domain<a name="troubleshooting-new-dns-settings-not-in-effect-updated-wrong-hosted-zone"></a>
+
+You can create more than one hosted zone that has the same name, either using the same account or using multiple accounts\. To specify the hosted zone that Route 53 uses to route internet traffic for your domain, you get the four Route 53 name servers for that hosted zone, and you update the domain registration to use those name servers\. 
+
+If you add, change, or delete records in one hosted zone but your domain registration is using the name servers for another hosted zone, Route 53 responses to DNS queries won't reflect your changes\. To determine whether your domain registration is using the name servers for the hosted zone that you updated records in, perform the following tasks: 
+
+1. Determine which name servers are associated with your domain registration\. See [Adding or changing name servers or glue records](domain-name-servers-glue-records.md#domain-name-servers-glue-records-adding-changing)\.
+
+1. Compare the name servers that you got in step 1 with the name servers that Route 53 assigned to the hosted zone that you updated records in\. See [Getting the name servers for a public hosted zone](GetInfoAboutHostedZone.md)\.
+
+If the name servers for the domain registration don't match the name servers for the hosted zone that you updated records in, you have two options:
+
+**Change records in the hosted zone that's currently associated with the domain \(recommended\)**  
+Make note of the changes that you made in the hosted zone that is not currently associated with your domain registration\. Then go to the hosted zone that is associated with the domain registration, and make the same changes\. This is the preferred method because the changes take effect almost immediately\. For more information, see [Editing records](resource-record-sets-editing.md)\.
+
+**Update your domain registration to use different name servers**  
+Change your domain registration to use the name servers in the hosted zone that you updated\.  
+If you change the name servers that are associated with your domain registration, your domain will be unavailable on the internet for up to 2 days\. This is because DNS resolvers typically cache the names of name servers for 2 days\. For an overview of how DNS works, including information about resolver caching, see [How Amazon Route 53 routes traffic for your domain](welcome-dns-service.md#welcome-dns-service-how-route-53-routes-traffic)\. 
+By changing the name servers that are associated with your domain registration, you're essentially changing the DNS service for the domain\. You have two options, depending on whether the domain is currently in use:  
++ **If the domain is in use**, see [Making Route 53 the DNS service for a domain that's in use](migrate-dns-domain-in-use.md)\.
++ **If the domain is currently inactive**, perform the following tasks:
+
+  1. Get the name servers for the hosted zone that you want to use to route traffic to your domain\. See [Getting the name servers for a public hosted zone](GetInfoAboutHostedZone.md)\.
+
+  1. In the hosted zone that you got name servers for in step 1, confirm that the NS record is using the same four name servers\. If not, update the NS record\. See [Editing records](resource-record-sets-editing.md)\.
+
+  1. Update the domain registration to use the name servers that you got in step 1\. See [Adding or changing name servers or glue records](domain-name-servers-glue-records.md#domain-name-servers-glue-records-adding-changing)\. 

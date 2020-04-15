@@ -1,27 +1,29 @@
-# Supported DNS Record Types<a name="ResourceRecordTypes"></a>
+# Supported DNS record types<a name="ResourceRecordTypes"></a>
 
 Amazon Route 53 supports the DNS record types that are listed in this section\. Each record type also includes an example of how to format the `Value` element when you are accessing Route 53 using the API\.
 
 **Note**  
 For record types that include a domain name, enter a fully qualified domain name, for example, *www\.example\.com*\. The trailing dot is optional; Route 53 assumes that the domain name is fully qualified\. This means that Route 53 treats *www\.example\.com* \(without a trailing dot\) and *www\.example\.com\.* \(with a trailing dot\) as identical\.
 
+Route 53 provides an extension to DNS functionality known as alias records\. Similar to CNAME records, alias records let you route traffic to selected AWS resources, such as CloudFront distributions and Amazon S3 buckets\. For more information, including a comparison of alias and CNAME records, see [Choosing between alias and non\-alias records](resource-record-sets-choosing-alias-non-alias.md)\.
+
 **Topics**
-+ [A Record Type](#AFormat)
-+ [AAAA Record Type](#AAAAFormat)
-+ [CAA Record Type](#CAAFormat)
-+ [CNAME Record Type](#CNAMEFormat)
-+ [MX Record Type](#MXFormat)
-+ [NAPTR Record Type](#NAPTRFormat)
-+ [NS Record Type](#NSFormat)
-+ [PTR Record Type](#PTRFormat)
-+ [SOA Record Type](#SOAFormat)
-+ [SPF Record Type](#SPFFormat)
-+ [SRV Record Type](#SRVFormat)
-+ [TXT Record Type](#TXTFormat)
++ [A record type](#AFormat)
++ [AAAA record type](#AAAAFormat)
++ [CAA record type](#CAAFormat)
++ [CNAME record type](#CNAMEFormat)
++ [MX record type](#MXFormat)
++ [NAPTR record type](#NAPTRFormat)
++ [NS record type](#NSFormat)
++ [PTR record type](#PTRFormat)
++ [SOA record type](#SOAFormat)
++ [SPF record type](#SPFFormat)
++ [SRV record type](#SRVFormat)
++ [TXT record type](#TXTFormat)
 
-## A Record Type<a name="AFormat"></a>
+## A record type<a name="AFormat"></a>
 
-The value for an A record is an IPv4 address in dotted decimal notation\.
+You use an A record to route traffic to a resource, such as a web server, using an IPv4 address in dotted decimal notation\.
 
 **Example for the Amazon Route 53 console**
 
@@ -35,9 +37,9 @@ The value for an A record is an IPv4 address in dotted decimal notation\.
 1. <Value>192.0.2.1</Value>
 ```
 
-## AAAA Record Type<a name="AAAAFormat"></a>
+## AAAA record type<a name="AAAAFormat"></a>
 
-The value for a AAAA record is an IPv6 address in colon\-separated hexadecimal format\.
+You use an AAAA record to route traffic to a resource, such as a web server, using an IPv6 address in colon\-separated hexadecimal format\.
 
 **Example for the Amazon Route 53 console**
 
@@ -51,9 +53,9 @@ The value for a AAAA record is an IPv6 address in colon\-separated hexadecimal f
 1. <Value>2001:0db8:85a3:0:0:8a2e:0370:7334</Value>
 ```
 
-## CAA Record Type<a name="CAAFormat"></a>
+## CAA record type<a name="CAAFormat"></a>
 
-A CAA record lets you specify which certificate authorities \(CAs\) are allowed to issue certificates for a domain or subdomain\. Creating a CAA record helps to prevent the wrong CAs from issuing certificates for your domains\. A CAA record isn't a substitute for the security requirements that are specified by your certificate authority, such as the requirement to validate that you're the owner of a domain\.
+A CAA record specifies which certificate authorities \(CAs\) are allowed to issue certificates for a domain or subdomain\. Creating a CAA record helps to prevent the wrong CAs from issuing certificates for your domains\. A CAA record isn't a substitute for the security requirements that are specified by your certificate authority, such as the requirement to validate that you're the owner of a domain\.
 
 You can use CAA records to specify the following:
 + Which certificate authorities \(CAs\) can issue SSL/TLS certificates, if any
@@ -74,14 +76,14 @@ Note the following about the format for CAA records:
 + You can't create a CAA record and a CNAME record that have the same name because DNS doesn't allow using the same name for both a CNAME record and any other type of record\.
 
 **Topics**
-+ [Authorize a CA to Issue a Certificate for a Domain or Subdomain](#CAAFormat-issue)
-+ [Authorize a CA to Issue a Wildcard Certificate for a Domain or Subdomain](#CAAFormat-issue-wild)
-+ [Prevent any CA from Issuing a Certificate for a Domain or Subdomain](#CAAFormat-prevent-issue)
-+ [Request that any CA Contacts You if the CA Receives an Invalid Certificate Request](#CAAFormat-contact)
-+ [Use Another Setting that Is Supported by the CA](#CAAFormat-custom-setting)
++ [Authorize a CA to issue a certificate for a domain or subdomain](#CAAFormat-issue)
++ [Authorize a CA to issue a wildcard certificate for a domain or subdomain](#CAAFormat-issue-wild)
++ [Prevent any CA from issuing a certificate for a domain or subdomain](#CAAFormat-prevent-issue)
++ [Request that any CA contacts you if the CA receives an invalid certificate request](#CAAFormat-contact)
++ [Use another setting that is supported by the CA](#CAAFormat-custom-setting)
 + [Examples](#CAAFormat-examples)
 
-### Authorize a CA to Issue a Certificate for a Domain or Subdomain<a name="CAAFormat-issue"></a>
+### Authorize a CA to issue a certificate for a domain or subdomain<a name="CAAFormat-issue"></a>
 
 To authorize a CA to issue a certificate for a domain or subdomain, create a record that has the same name as the domain or subdomain, and specify the following settings:
 + **flags** – `0`
@@ -94,9 +96,9 @@ For example, suppose you want to authorize ca\.example\.net to issue a certifica
 0 issue "ca.example.net"
 ```
 
-For information about how to authorize AWS Certificate Manager to issue a certificate, see [Configure a CAA Record](https://docs.aws.amazon.com/acm/latest/userguide/setup-caa.html) in the *AWS Certificate Manager User Guide*\.
+For information about how to authorize AWS Certificate Manager to issue a certificate, see [Configure a CAA record](https://docs.aws.amazon.com/acm/latest/userguide/setup-caa.html) in the *AWS Certificate Manager User Guide*\.
 
-### Authorize a CA to Issue a Wildcard Certificate for a Domain or Subdomain<a name="CAAFormat-issue-wild"></a>
+### Authorize a CA to issue a wildcard certificate for a domain or subdomain<a name="CAAFormat-issue-wild"></a>
 
 To authorize a CA to issue a wildcard certificate for a domain or subdomain, create a record that has the same name as the domain or subdomain, and specify the following settings\. A wildcard certificate applies to the domain or subdomain and all of its subdomains\.
 + **flags** – `0`
@@ -111,7 +113,7 @@ For example, suppose you want to authorize ca\.example\.net to issue a wildcard 
 
 When you want to authorize a CA to issue a wildcard certificate for a domain or subdomain, create a record that has the same name as the domain or subdomain, and specify the following settings\. A wildcard certificate applies to the domain or subdomain and all of its subdomains\.
 
-### Prevent any CA from Issuing a Certificate for a Domain or Subdomain<a name="CAAFormat-prevent-issue"></a>
+### Prevent any CA from issuing a certificate for a domain or subdomain<a name="CAAFormat-prevent-issue"></a>
 
 To prevent any CA from issuing a certificate for a domain or subdomain, create a record that has the same name as the domain or subdomain, and specify the following settings:
 + **flags** – `0`
@@ -134,7 +136,7 @@ If you create a CAA record for example\.com and specify both of the following va
 0 issue "ca.example.net"
 ```
 
-### Request that any CA Contacts You if the CA Receives an Invalid Certificate Request<a name="CAAFormat-contact"></a>
+### Request that any CA contacts you if the CA receives an invalid certificate request<a name="CAAFormat-contact"></a>
 
 If you want any CA that receives an invalid request for a certificate to contact you, specify the following settings:
 + **flags** – `0`
@@ -153,7 +155,7 @@ For example, if you want any CA that receives an invalid request for a certifica
 0 iodef "mailto:admin@example.com"
 ```
 
-### Use Another Setting that Is Supported by the CA<a name="CAAFormat-custom-setting"></a>
+### Use another setting that is supported by the CA<a name="CAAFormat-custom-setting"></a>
 
 If your CA supports a feature that isn't defined in the RFC for CAA records, specify the following settings:
 + **flags** – 128 \(This value prevents the CA from issuing a certificate if the CA doesn't support the specified feature\.\)
@@ -184,15 +186,15 @@ For example, suppose your CA supports sending a text message if the CA receives 
 </ResourceRecord>
 ```
 
-## CNAME Record Type<a name="CNAMEFormat"></a>
+## CNAME record type<a name="CNAMEFormat"></a>
 
-A CNAME `Value` element is the same format as a domain name\.
+A CNAME record maps DNS queries for the name of the current record, such as acme\.example\.com, to another domain \(example\.com or example\.net\) or subdomain \(acme\.example\.com or zenith\.example\.org\)\. 
 
 **Important**  
 The DNS protocol does not allow you to create a CNAME record for the top node of a DNS namespace, also known as the zone apex\. For example, if you register the DNS name example\.com, the zone apex is example\.com\. You cannot create a CNAME record for example\.com, but you can create CNAME records for www\.example\.com, newproduct\.example\.com, and so on\.  
-In addition, if you create a CNAME record for a subdomain, you cannot create any other records for that subdomain\. For example, if you create a CNAME for www\.example\.com, you cannot create any other records for which the value of the Name field is www\.example\.com\.
+In addition, if you create a CNAME record for a subdomain, you cannot create any other records for that subdomain\. For example, if you create a CNAME for www\.example\.com, you cannot create any other records for which the value of the **Name** field is www\.example\.com\.
 
-Amazon Route 53 also supports alias records, which allow you to route queries to AWS resources such as CloudFront distributions and Amazon S3 buckets\. Aliases are similar in some ways to the CNAME record type; however, you can create an alias for the zone apex\. For more information, see [Choosing Between Alias and Non\-Alias Records](resource-record-sets-choosing-alias-non-alias.md)\.
+Amazon Route 53 also supports alias records, which allow you to route queries to selected AWS resources, such as CloudFront distributions and Amazon S3 buckets\. Aliases are similar in some ways to the CNAME record type; however, you can create an alias for the zone apex\. For more information, see [Choosing between alias and non\-alias records](resource-record-sets-choosing-alias-non-alias.md)\.
 
 **Example for the Route 53 console**
 
@@ -206,9 +208,9 @@ Amazon Route 53 also supports alias records, which allow you to route queries t
 1. <Value>hostname.example.com</Value>
 ```
 
-## MX Record Type<a name="MXFormat"></a>
+## MX record type<a name="MXFormat"></a>
 
-Each value for an MX record actually contains two values, priority and domain name:
+An MX record specifies the names of your mail servers and, if you have two or more mail servers, the priority order\. Each value for an MX record contains two values, priority and domain name:
 
 **Priority**  
 An integer that represents the priority for an email server\. If you specify only one server, the priority can be any integer between 0 and 65535\. If you specify multiple servers, the value that you specify for the priority indicates which email server you want email to be routed to first, second, and so on\. The server with the lowest value for the priority takes precedence\. For example, if you have two email servers and you specify values of 10 and 20 for the priority, email always goes to the server with a priority of 10 unless it's unavailable\. If you specify values of 10 and 10, email is routed to the two servers approximately equally\.
@@ -228,7 +230,7 @@ The domain name of the email server\. Specify the name \(such as mail\.example\.
 1. <Value>10 mail.example.com</Value>
 ```
 
-## NAPTR Record Type<a name="NAPTRFormat"></a>
+## NAPTR record type<a name="NAPTRFormat"></a>
 
 A Name Authority Pointer \(NAPTR\) is a type of record that is used by Dynamic Delegation Discovery System \(DDDS\) applications to convert one value to another or to replace one value with another\. For example, one common use is to convert phone numbers into SIP URIs\. 
 
@@ -291,9 +293,14 @@ For more information about DDDS applications and about NAPTR records, see the fo
 5. </ResourceRecord>
 ```
 
-## NS Record Type<a name="NSFormat"></a>
+## NS record type<a name="NSFormat"></a>
 
-An NS record identifies the name servers for the hosted zone\. The value for an NS record is the domain name of a name server\. For more information about NS records, see [NS and SOA Records that Amazon Route 53 Creates for a Public Hosted Zone](SOA-NSrecords.md)\. For information about configuring white\-label name servers, see [Configuring White\-Label Name Servers](white-label-name-servers.md)\.
+An NS record identifies the name servers for the hosted zone\. Note the following:
++ The most common use for an NS record is to control how internet traffic is routed for a domain\. To use the records in a hosted zone to route traffic for a domain, you update the domain registration settings to use the four name servers in the default NS record\. \(This is the NS record that has the same name as the hosted zone\.\)
++ You can create a separate hosted zone for a subdomain \(acme\.example\.com\) and use that hosted zone to route internet traffic for the subdomain and its subdomains \(subdomain\.acme\.example\.com\)\. You set up this configuration, known as "delegating responsibility for a subdomain to a hosted zone" by creating another NS record in the hosted zone for the root domain \(example\.com\)\. For more information, see [Routing traffic for subdomains](dns-routing-traffic-for-subdomains.md)\.
++ You also use NS records to configure white\-label name servers\. For more information, see [Configuring white\-label name servers](white-label-name-servers.md)\.
+
+For more information about NS records, see [NS and SOA records that Amazon Route 53 creates for a public hosted zone](SOA-NSrecords.md)\.
 
 **Example for the Amazon Route 53 console**
 
@@ -307,9 +314,9 @@ An NS record identifies the name servers for the hosted zone\. The value for an 
 1. <Value>ns-1.example.com</Value>
 ```
 
-## PTR Record Type<a name="PTRFormat"></a>
+## PTR record type<a name="PTRFormat"></a>
 
-A PTR record `Value` element is the same format as a domain name\.
+A PTR record maps an IP address to the corresponding domain name\.
 
 **Example for the Amazon Route 53 console**
 
@@ -323,9 +330,9 @@ A PTR record `Value` element is the same format as a domain name\.
 1. <Value>hostname.example.com</Value>
 ```
 
-## SOA Record Type<a name="SOAFormat"></a>
+## SOA record type<a name="SOAFormat"></a>
 
-A start of authority \(SOA\) record provides information about a domain and the corresponding Amazon Route 53 hosted zone\. For information about the fields in an SOA record, see [NS and SOA Records that Amazon Route 53 Creates for a Public Hosted Zone](SOA-NSrecords.md)\.
+A start of authority \(SOA\) record provides information about a domain and the corresponding Amazon Route 53 hosted zone\. For information about the fields in an SOA record, see [NS and SOA records that Amazon Route 53 creates for a public hosted zone](SOA-NSrecords.md)\.
 
 **Example for the Route 53 console**
 
@@ -339,11 +346,11 @@ A start of authority \(SOA\) record provides information about a domain and the 
 1. <Value>ns-2048.awsdns-64.net hostmaster.awsdns.com 1 1 1 1 60</Value>
 ```
 
-## SPF Record Type<a name="SPFFormat"></a>
+## SPF record type<a name="SPFFormat"></a>
 
 SPF records were formerly used to verify the identity of the sender of email messages\. However, we no longer recommend that you create records for which the record type is SPF\. RFC 7208, *Sender Policy Framework \(SPF\) for Authorizing Use of Domains in Email, Version 1*, has been updated to say, "\.\.\.\[I\]ts existence and mechanism defined in \[RFC4408\] have led to some interoperability issues\. Accordingly, its use is no longer appropriate for SPF version 1; implementations are not to use it\." In RFC 7208, see section 14\.1, [The SPF DNS Record Type](http://tools.ietf.org/html/rfc7208#section-14.1)\.
 
-Instead of an SPF record, we recommend that you create a TXT record that contains the applicable value\. For more information about valid values, see [Sender Policy Framework, SPF Record Syntax](http://www.openspf.org/SPF_Record_Syntax)\.
+Instead of an SPF record, we recommend that you create a TXT record that contains the applicable value\. For more information about valid values, see the Wikipedia article [Sender Policy Framework](https://en.wikipedia.org/wiki/Sender_Policy_Framework)\.
 
 **Example for the Amazon Route 53 console**
 
@@ -357,7 +364,7 @@ Instead of an SPF record, we recommend that you create a TXT record that contain
 1. <Value>"v=spf1 ip4:192.168.0.1/16 -all"</Value>
 ```
 
-## SRV Record Type<a name="SRVFormat"></a>
+## SRV record type<a name="SRVFormat"></a>
 
 An SRV record `Value` element consists of four space\-separated values\. The first three values are decimal numbers representing priority, weight, and port\. The fourth value is a domain name\. For information about SRV record format, refer to the applicable documentation\.
 
@@ -373,9 +380,17 @@ An SRV record `Value` element consists of four space\-separated values\. The fir
 1. <Value>10 5 80 hostname.example.com</Value>
 ```
 
-## TXT Record Type<a name="TXTFormat"></a>
+## TXT record type<a name="TXTFormat"></a>
 
 A TXT record contains one or more strings that are enclosed in double quotation marks \(`"`\)\. When you use the simple [routing policy](https://docs.aws.amazon.com/Route53/latest/DeveloperGuide/routing-policy.html), include all values for a domain \(example\.com\) or subdomain \(www\.example\.com\) in the same TXT record\.
+
+**Topics**
++ [Entering TXT record values](#TXTformat-limits)
++ [Special characters in a TXT record value](#TXTformat-special-characters)
++ [Uppercase and lowercase in a TXT record value](#TXTformat-case)
++ [Examples](#TXTformat-examples)
+
+### Entering TXT record values<a name="TXTformat-limits"></a>
 
 A single string can include up to 255 characters, including the following:
 + a\-z
@@ -385,6 +400,22 @@ A single string can include up to 255 characters, including the following:
 + \- \(hyphen\)
 + \! " \# $ % & ' \( \) \* \+ , \- / : ; < = > ? @ \[ \\ \] ^ \_ ` \{ \| \} \~ \. 
 
+If you need to enter a value longer than 255 characters, break the value into strings of 255 characters or fewer, and enclose each string in double quotation marks \(`"`\)\. In the console, list all the strings on the same line:
+
+```
+1. "String 1" "String 2" "String 3"
+```
+
+For the API, include all the strings in the same `Value` element:
+
+```
+1. <Value>"String 1" "String 2" "String 3"</Value>
+```
+
+The maximum length of a value in a TXT record is 4,000 characters\. 
+
+### Special characters in a TXT record value<a name="TXTformat-special-characters"></a>
+
 If your TXT record contains any of the following characters, you must specify the characters by using escape codes in the format `\`*three\-digit octal code*:
 + Characters 000 to 040 octal \(0 to 32 decimal, 0x00 to 0x20 hexadecimal\)
 + Characters 177 to 377 octal \(127 to 255 decimal, 0x7F to 0xFF hexadecimal\)
@@ -393,9 +424,13 @@ For example, if the value of your TXT record is `"exämple.com"`, you specify `"
 
 For a mapping between ASCII characters and octal codes, perform an internet search for "ascii octal codes\." One useful reference is [ASCII Code \- The extended ASCII table](https://www.ascii-code.com/)\. 
 
+To include a quotation mark \(`"`\) in a string, put a backslash \(`\`\) character before the quotation mark: `\"`\. 
+
+### Uppercase and lowercase in a TXT record value<a name="TXTformat-case"></a>
+
 Case is preserved, so `"Ab"` and `"aB"` are different values\.
 
-To include a quotation mark \(`"`\) in a string, put a backslash \(`\`\) character before the quotation mark: `\"`\. 
+### Examples<a name="TXTformat-examples"></a>
 
 **Example for the Amazon Route 53 console**
 
