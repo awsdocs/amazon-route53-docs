@@ -180,3 +180,17 @@ Note the following:
 1. Choose **Delete**\.
 
 1. To confirm that you want to delete the rule, enter the name of the rule and choose **Submit**\.
+
+## Adding rules for reverse lookup<a name="add-reverse-lookup"></a>
+
+If you need to control reverse lookups in your VPC, you can add rules to your outbound resolver endpoint.
+
+### To create the reverse lookup rule
+
+ + Follow the procedure under [Creating Forwarding Rules](#resolver-rules-managing-creating-rules), up to step 5.
+ + When you specify your rule, enter the PTR record for the IP address you want a reverse lookup forwarding rule for.
+    + For example, if you need to forward lookups for addresses in the 10.0.0.0/23 range, enter a rules:
+      + 0.0.10.in-addr.apra
+      + 1.0.10.in-addr.apra
+  + Specify the server to forward these lookups to
+  + Add these rules to your outbound resolver endpoint.
