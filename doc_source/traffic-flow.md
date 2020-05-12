@@ -1,20 +1,34 @@
 # Using traffic flow to route DNS traffic<a name="traffic-flow"></a>
 
-If you use multiple resources, such as web servers, in multiple locations, it can be a challenge to create records for a complex configuration that uses a combination of Amazon Route 53 routing policies—failover, geolocation, latency, multivalue answer, and weighted\. You can create records one at a time, but it's hard to keep track of the relationships among the records when you're reviewing the settings in a table in the console\.
+Managing related records in a hosted zone can be challenging in the following circumstances:
++ You have a lot of resources that perform the same operation, such as web servers that serve traffic for the same domain\.
++ You want to create a complex tree of records using [alias records](https://docs.aws.amazon.com/Route53/latest/DeveloperGuide/resource-record-sets-choosing-alias-non-alias.html) and a combination of [Route 53 routing policies](https://docs.aws.amazon.com/Route53/latest/DeveloperGuide/routing-policy.html), such as latency, failover, and weighted\. 
 
-If you're using the Route 53 console, Route 53 traffic flow provides a visual editor that helps you create complex trees in a fraction of the time with a fraction of the effort\. You can save the configuration as a *traffic policy* and then associate the traffic policy with one or more domain names \(such as example\.com\) or subdomain names \(such as www\.example\.com\), in the same hosted zone or in multiple hosted zones\. \(You can only use traffic flow to create configurations for public hosted zones\.\) You can also use the visual editor to quickly find resources that you need to update and apply the updates to one or more DNS names such as www\.example\.com\. In addition, you can roll back the updates if the new configuration isn't performing as you expected it to\.
+You can create records one at a time, but it's hard to keep track of the relationships among the records when you're reviewing the settings in the Route 53 console\. Traffic flow greatly simplifies the process of creating and maintaining records in large and complex configurations\.
 
-For example, using the traffic flow visual editor, you can easily create a configuration in which you use geolocation routing to route all users from one country to a single endpoint and then use latency routing to route all other users to AWS Regions based on the latency between your users and those regions\. You might also use failover routing to route users to a primary ELB load balancer within each region when the load balancer is functioning or to a secondary load balancer when the primary load balancer is unhealthy or is offline for maintenance\.
+**Visual editor**  
+The traffic flow visual editor lets you create complex trees of records and see the relationships among the records\. For example, you might create a configuration in which latency alias records reference weighted records, and the weighted records reference your resources in multiple AWS Regions\. Each configuration is known as a *traffic policy*\. You can create as many traffic policies as you want at no charge\.
 
-Here's an overview of how traffic flow works:
+**Versioning**  
+You can create multiple versions of a traffic policy so you don't have to start all over when your configuration changes\. Old versions continue to exist until you delete them; there's a default limit of 1000 versions per traffic policy\. You can optionally give each version a description\. 
 
-1. You use the visual editor to create a traffic policy\. A traffic policy includes information about the routing configuration that you want to create: the routing policies that you want to use and the resources that you want to route DNS traffic to, such as the IP address of each EC2 instance and the domain name of each ELB load balancer\. You can also associate health checks with your endpoints so that Route 53 routes traffic only to healthy resources\. \(Traffic flow also lets you route traffic to non\-AWS resources\.\)
+**Automatic record creation and updating**  
+A traffic policy can represent dozens or even hundreds of records\. Traffic flow lets you create all those records automatically by creating a *traffic policy record*\. You specify the hosted zone and the name of the record at the root of the tree, such as example\.com or www\.example\.com, and Route 53 automatically creates all the other records in the tree\. The root record—the traffic policy record—appears in the list of records for your hosted zone; all the other records are hidden\.   
+When you create a new version of a traffic policy, you can selectively update traffic policy records that you created using the previous traffic policy version\. When you update a traffic policy record, Route 53 automatically updates all the other records in the tree\. You can also quickly roll back changes by updating a traffic policy record again to use a previous version of a traffic policy\.  
+You can use traffic flow to create records only in public hosted zones\.
 
-1. You create a *policy record*\. This is where you specify the hosted zone \(such as example\.com\) in which you want to create the configuration that you defined in your traffic policy\. It's also where you specify the DNS name \(such as www\.example\.com\) that you want to associate the configuration with\. You can create more than one policy record in the same hosted zone or in different hosted zones by using the same traffic policy\.
+**Reuse for multiple records in different hosted zones**  
+You can use a traffic policy to automatically create records in multiple public hosted zones\. For example, if you're using the same web servers for multiple domain names, you can use the same traffic policy to create traffic policy records in the hosted zones for example\.com, example\.org, and example\.net\.
 
-   When you create a policy record, Route 53 creates a tree of records\. The root record appears in the list of records for your hosted zone\. The root record has the DNS name that you specified when you created the policy record\. Route 53 also creates records for the entire rest of the tree, but it hides them from the list of records for your hosted zone\.
+**How Route 53 responds to DNS queries**  
+When a client submits a query for the name of the root record, such as example\.com or www\.example\.com, Route 53 responds to the query based on the configuration in the traffic policy that you used to create the corresponding traffic policy record\.
 
-1. When a user browses to www\.example\.com, Route 53 responds to the query based on the configuration in the traffic policy that you used to create the policy record\.
+**Geoproximity routing policy**  
+The geoproximity routing policy is available only if you use traffic flow\. With geoproximity routing, you can route traffic based on the location of your resources and, optionally, shift traffic from resources in one location to resources in another\. For more information, see [Geoproximity routing \(traffic flow only\)](routing-policy.md#routing-policy-geoproximity)\.
+
+**Charge for traffic flow**  
+There's a monthly charge for each traffic policy record\. For more information, see the "Traffic Flow" section of [Amazon Route 53 pricing](https://aws.amazon.com/route53/pricing/)\.  
+To minimize these charges, you can create one or more alias records in a hosted zone that reference a traffic policy record in that hosted zone\. For example, you can create a traffic policy record for example\.com and then create an alias record for www\.example\.com that references the traffic policy record\.
 
 **Topics**
 + [Creating and managing traffic policies](traffic-policies.md)

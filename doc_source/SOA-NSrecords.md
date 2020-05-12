@@ -1,6 +1,6 @@
 # NS and SOA records that Amazon Route 53 creates for a public hosted zone<a name="SOA-NSrecords"></a>
 
-For each public hosted zone that you create, Amazon Route 53 automatically creates a name server \(NS\) record and a start of authority \(SOA\) record\. Don't change these records\. 
+For each public hosted zone that you create, Amazon Route 53 automatically creates a name server \(NS\) record and a start of authority \(SOA\) record\. You rarely need to change these records\. 
 
 **Topics**
 + [The name server \(NS\) record](#NSrecords)
@@ -8,7 +8,7 @@ For each public hosted zone that you create, Amazon Route 53 automatically crea
 
 ## The name server \(NS\) record<a name="NSrecords"></a>
 
-Amazon Route 53 automatically creates a name server \(NS\) record that has the same name as your hosted zone\. It lists the four name servers that are the authoritative name servers for your hosted zone\. Do not add, change, or delete name servers in this record\.
+Amazon Route 53 automatically creates a name server \(NS\) record that has the same name as your hosted zone\. It lists the four name servers that are the authoritative name servers for your hosted zone\. Except in rare circumstances, we recommend that you don't add, change, or delete name servers in this record\.
 
 The following examples show the format for the names of Route 53 name servers \(these are examples only; don't use them when you're updating your registrar's name server records\):
 + *ns\-2048\.awsdns\-64\.com*

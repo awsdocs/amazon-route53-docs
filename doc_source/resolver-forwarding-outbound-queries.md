@@ -3,7 +3,7 @@
 To forward DNS queries that originate on Amazon EC2 instances in one or more VPCs to your network, you create an outbound endpoint and one or more rules:
 
 **Outbound endpoint**  
-An outbound endpoint determines the VPC that queries pass through on the way to your network and the IP addresses in the VPC that queries originate from\. You can use the same outbound endpoint for multiple VPCs in the same Region, or you can create multiple outbound endpoints\. For each outbound endpoint, you need an AWS Direct Connect connection, a VPC connection, or a network address translation \(NAT\) gateway\.
+To forward DNS queries from your VPCs to your network, you create an outbound endpoint\. An outbound endpoint specifies the IP addresses that queries originate from\. Those IP addresses, which you choose from the range of IP addresses available to your VPC, aren't public IP addresses\. This means that, for each outbound endpoint, you need to connect your VPC to your network using AWS Direct Connect connection, a VPC connection, or a network address translation \(NAT\) gateway\. Note that you can use the same outbound endpoint for multiple VPCs in the same Region, or you can create multiple outbound endpoints\.
 
 **Rules**  
 To specify the domain names of the queries that you want to forward to DNS resolvers on your network, you create one or more rules\. Each rule specifies one domain name\. You then associate rules with the VPCs for which you want to forward queries to your network\. 

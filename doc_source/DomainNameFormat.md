@@ -65,7 +65,12 @@ DNS treats the \* character either as a wildcard or as the \* character \(ASCII 
 
 ## Formatting internationalized domain names<a name="domain-name-format-idns"></a>
 
-When you register a new domain name or create hosted zones and records, you can specify characters in other alphabets \(for example, Cyrillic or Arabic\) and characters in Chinese, Japanese, or Korean\. Amazon Route 53 stores these internationalized domain names \(IDNs\) in Punycode, which represents Unicode characters as ASCII strings\.
+When you register a new domain name or create hosted zones and records, you can specify letters other than a\-z \(for example, the ç in French\), characters in other alphabets \(for example, Cyrillic or Arabic\), and characters in Chinese, Japanese, or Korean\. Amazon Route 53 stores these internationalized domain names \(IDNs\) in Punycode, which represents Unicode characters as ASCII strings\.
+
+If you're registering a domain name, note the following:
++ You can use characters other than a\-z, 0\-9, and \- \(hyphen\) only if the top\-level domain \(TLD\) supports IDNs and supports the language that you want to use\. To determine which languages a TLD supports, see [Domains that you can register with Amazon Route 53](registrar-tld-list.md)\.
++ You can specify a name in an unsupported language if the name contains only the letters a\-z\. For example, if a TLD doesn't support French but the name that you want to use includes only the characters a\-z without diacritical marks, you can still use that name\. In this example, a name that includes a "c" is allowed; a name that contains a "ç" is not\.
++ If a TLD doesn't support IDNs or doesn't support the language that you want to use for your domain name, you also can't specify the name in Punycode even though the Punycode includes only a\-z, 0\-9, and \-\.
 
 The following example shows the Punycode representation of the internationalized domain name 中国\.asia:
 
