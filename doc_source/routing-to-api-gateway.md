@@ -34,7 +34,7 @@ To configure Route 53 to route traffic to an API Gateway API, perform the follo
 
    1. In the navigation pane, choose **Custom Domain Names**\.
 
-   1. For the custom domain name that you want to use, get the value of **Target Domain Name**\.
+   1. For the custom domain name that you want to use, get the value of **API Gateway domain name**\.
 
 1. Open the Route 53 console at [https://console\.aws\.amazon\.com/route53/](https://console.aws.amazon.com/route53/)\.
 
