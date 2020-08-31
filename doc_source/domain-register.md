@@ -66,18 +66,18 @@ If you're registering more than one domain, we use the same contact information 
 **Additional required information**  
 For some top\-level domains \(TLDs\), we're required to collect additional information\. For these TLDs, enter the applicable values after the **Postal/Zip Code** field\.  
 **Privacy protection**  
-Choose whether you want to hide your contact information from WHOIS queries\. For more information, see the following topics:  
+Choose whether you want to hide your contact information from WHOIS queries\.   
+You must specify the same privacy setting for the administrative, registrant, and technical contacts\.
+For more information, see the following topics:  
    + [Enabling or disabling privacy protection for contact information for a domain](domain-privacy-protection.md)
    + [Domains that you can register with Amazon Route 53](registrar-tld-list.md)
-To enable privacy protection for \.co\.uk, \.me\.uk, and \.org\.uk domains, you must open a support case and request privacy protection\. For more information, see [\.co\.uk \(United Kingdom\)](https://docs.aws.amazon.com/Route53/latest/DeveloperGuide/registrar-tld-list.html#registrar-tld-list-geographic) in [Domains that you can register with Amazon Route 53](registrar-tld-list.md)\.
+To enable privacy protection for \.co\.uk, \.me\.uk, and \.org\.uk domains, you must open a support case and request privacy protection\. 
 
 1. Choose **Continue**\.
 
-1. **Generic TLDs only** – If you're registering a domain that has a [generic TLD](https://docs.aws.amazon.com/Route53/latest/DeveloperGuide/registrar-tld-list.html#registrar-tld-list-generic), such as \.com, \.org, or \.net, and you specified an email address for the registrant contact that has never been used to register a domain with Route 53, you need to verify that the address is valid\.
-**Note**  
-Verification isn't required for domains that have a [geographic TLD](https://docs.aws.amazon.com/Route53/latest/DeveloperGuide/registrar-tld-list.html#registrar-tld-list-geographic), such as \.ca, \.com\.au, \.co\.uk, or \.jp\.
+1. **Some TLDs only** – If you specified an email address for the registrant contact that has never been used to register a domain with Route 53, some TLD registries require you to verify that the address is valid\.
 
-   If the registry requires verification and if you can verify the address during domain registration, the console displays a **Verify the Email Address for the Registrant Contact** section:
+   If the registry requires verification and if it's possible to verify the address during domain registration, the console displays a **Verify the Email Address for the Registrant Contact** section:
    + If the section doesn't appear, skip to step 8\.
    + If the section appears and the status is **email\-address is verified**, skip to step 8\.
    + If the section appears and the value is **Registrant email not verified**, continue with this step\.

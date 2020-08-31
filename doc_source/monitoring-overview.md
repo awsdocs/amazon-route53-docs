@@ -9,7 +9,8 @@ Monitoring is an important part of maintaining the reliability, availability, an
 + Who should be notified when something goes wrong?
 
 **Topics**
-+ [Logging DNS queries](query-logs.md)
++ [Public DNS query logging](query-logs.md)
++ [Resolver query logging](resolver-query-logs.md)
 + [Monitoring domain registrations](monitoring-domain-registrations.md)
 + [Monitoring your resources with Amazon Route 53 health checks and Amazon CloudWatch](monitoring-cloudwatch.md)
 + [Monitoring hosted zones using Amazon CloudWatch](monitoring-hosted-zones-with-cloudwatch.md)

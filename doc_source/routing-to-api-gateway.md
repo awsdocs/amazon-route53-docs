@@ -4,7 +4,7 @@ Amazon API Gateway lets you create, publish, maintain, monitor, and secure APIs\
 
 The method that you use to route domain traffic to an API Gateway API depends on whether you created a regional API Gateway endpoint or an edge\-optimized API Gateway endpoint\. 
 + **Regional API endpoint**: You create a Route 53 alias record that routes traffic to the regional API endpoint\.
-+ **Edge\-optimized API endpoint**: You create a Route 53 alias record that routes traffic to the CloudFront distribution that's associated with the edge\-optimized API\. 
++ **Edge\-optimized API endpoint**: You create a Route 53 alias record that routes traffic to the edge\-optimized API\. This causes traffic to be routed to the CloudFront distribution that's associated with the edge\-optimized API\.
 
 An alias record is a Route 53 extension to DNS that's similar to a CNAME record\. For a comparison of alias and CNAME records, see [Choosing between alias and non\-alias records](resource-record-sets-choosing-alias-non-alias.md)\.
 
@@ -39,7 +39,7 @@ To configure Route 53 to route traffic to a regional API Gateway endpoint, perf
 
    1. In the navigation pane, choose **Custom domain names**\.
 
-   1. For the custom domain name that you want to use, get the value of **Domain name**\.
+   1. For the custom domain name that you want to use, get the value of ** API Gateway domain name**, for example, **d\-gy061cuws5\.execute\-api\.*region*\.amazonaws\.com**\.
 
 1. Open the Route 53 console at [https://console\.aws\.amazon\.com/route53/](https://console.aws.amazon.com/route53/)\.
 

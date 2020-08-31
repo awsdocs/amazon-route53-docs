@@ -26,7 +26,7 @@ If you don't rigorously follow the migration process, your domain can become una
 **You want to use another DNS service**  
 If you want to use a DNS service other than Route 53 for your domain, use the following procedure to change the name servers for the domain registration to the name servers that are provided by the other DNS service\.  
 If you change name servers and Route 53 returns the following error message, the registry for the TLD doesn't recognize the name servers that you specified as valid name servers:  
-`"We're sorry to report that the operation failed after we forwarded your request to our registrar partner. This is because: One or more of the specified nameservers are not known to the domain registry."`  
+`"We're sorry to report that the operation failed after we forwarded your request to our registrar associate. This is because: One or more of the specified nameservers are not known to the domain registry."`  
 TLD registries commonly support name servers provided by public DNS services but don't support private DNS servers, such as DNS servers that you configured on Amazon EC2 instances, unless the registry has IP addresses for those name servers\. Route 53 doesn't support using name servers that aren't recognized by the TLD registry\. If you encounter this error, you must change to name servers for Route 53 or another public DNS service\.
 
 **You want to use white\-label name servers**  

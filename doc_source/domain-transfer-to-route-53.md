@@ -103,6 +103,10 @@ An authorization code from the current registrar authorizes us to request that r
 Some top\-level domains have additional requirements:    
 **\.co\.za domains**  
 You don't need to get an authorization code to transfer a \.co\.za domain to Route 53\.  
+**\.es domains**  
+If you're transferring a \.es domain to Route 53, you don't need to get an authorization code\.  
+**\.jp domains**  
+If you're transferring a \.jp domain to Route 53, you don't need to get an authorization code\.  
 **\.uk, \.co\.uk, \.me\.uk, and \.org\.uk domains**  
 If you're transferring a \.uk, \.co\.uk, \.me\.uk, or \.org\.uk domain to Route 53, you don't need to get an authorization code\. Instead, use the method provided by your current domain registrar to update the value of the IPS tag for the domain to **GANDI**, all uppercase\. \(An IPS tag is required by Nominet, the registry for \.uk domain names\.\) If your registrar doesn't provide a way to change the value of the IPS tag, [contact Nominet](http://www.nominet.org.uk/uk-domain-names/manage-your-domain/change-registrar)\.  
 Note the following about changing the IPS tag:    
@@ -111,9 +115,7 @@ If you don't request the transfer within five days after you change the IPS tag,
 **Viewing the IPS tag in WHOIS queries**  
 The change to the IPS tag doesn't appear in WHOIS queries until after the transfer to Route 53 has completed\.   
 **Email from Gandi**  
-You might receive an email from our registrar associate, Gandi, about the transfer process\. If you receive an email from Gandi \(transfer\-auth@gandi\.net\) about transferring your domain, ignore the instructions in the email because they aren't relevant to Route 53\. Follow the instructions in this topic instead\.  
-**\.jp domains**  
-If you're transferring a \.jp domain to Route 53, you don't need to get an authorization code\. Instead, use the method provided by your current domain registrar to update the value of the AGNT code to **AGNT\-1744**, all uppercase\. 
+You might receive an email from our registrar associate, Gandi, about the transfer process\. If you receive an email from Gandi \(transfer\-auth@gandi\.net\) about transferring your domain, ignore the instructions in the email because they aren't relevant to Route 53\. Follow the instructions in this topic instead\.
 
 **Renew your domain registration before you transfer the domain \(selected geographic TLDs\)**  
 For most TLDs, when you transfer a domain, the registration is automatically extended by one year\. However, for some geographic TLDs, registration is not extended when you transfer the domain\. If you're transferring a domain to Route 53 that has one of these TLDs, we recommend that you renew the domain registration before you transfer the domain, especially if the expiration date is approaching\.  
@@ -177,7 +179,7 @@ If you use the procedure to transfer more than five domains, Route 53 automatic
 1. For each domain name that you want to transfer, enter the applicable values:  
 **Authorization code**  
 Enter the authorization code that you got from your current registrar in [Step 3: Change settings with the current registrar](#domain-transfer-to-route-53-change-registrar-settings)\.  
-You don't need to enter an authorization code to transfer a \.co\.za, \.uk, \.co\.uk, \.me\.uk, \.org\.uk, or \.jp domain to Route 53\.  
+You don't need to enter an authorization code to transfer a \.co\.za, \.es, \.jp, \.uk, \.co\.uk, \.me\.uk, or \.org\.uk domain to Route 53\.  
 **Name server options**  
 Choose the applicable option:  
    + **Continue to use the name servers provided by the current registrar or DNS service** – If the current registrar for the domain is currently providing DNS service, we recommend that you transfer DNS service to another DNS service provider before you transfer the domain\. 
@@ -243,7 +245,7 @@ Domain name registrations and renewals are not refundable\. If you enable automa
    domain-name-3
    ```
 **Note**  
-You don't need to enter an authorization code to transfer a \.co\.za, \.uk, \.co\.uk, \.me\.uk, \.org\.uk, or \.jp domain to Route 53\.
+You don't need to enter an authorization code to transfer a \.co\.za, \.es, \.jp, \.uk, \.co\.uk, \.me\.uk, or \.org\.ukdomain to Route 53\.
 
 1. When you've entered all the domains that you want to transfer, choose **Continue**\.
 
@@ -315,7 +317,7 @@ For some TLDs, you need to respond to an email to authorize transfer of the doma
 **Generic TLDs such as \.com, \.net, and \.org**  
 Authorization isn't required for domains that have a [generic TLD](https://docs.aws.amazon.com/Route53/latest/DeveloperGuide/registrar-tld-list.html#registrar-tld-list-generic), such as \.com, \.net, or \.org\.  
 **Geographic TLDs such as \.co\.uk and \.jp**  
-For domains that have a [geographic TLD](https://docs.aws.amazon.com/Route53/latest/DeveloperGuide/registrar-tld-list.html#registrar-tld-list-geographic), we're required to get your authorization to transfer the domain\. If you transfer 10 domains, we have to send you 10 emails, and you have to click the authorization link in each one\. If we can't access your email address by submitting a public WHOIS query, we must cancel the transfer\.
+For domains that have a [geographic TLD](https://docs.aws.amazon.com/Route53/latest/DeveloperGuide/registrar-tld-list.html#registrar-tld-list-geographic), we're required to get your authorization to transfer the domain\. If you transfer 10 domains, we have to send you 10 emails, and you have to click the authorization link in each one\.
 
 The emails all go to the registrant contact for the domain:
 + If you're the registrant contact for the domain, follow the instructions in the email to authorize the transfer\.

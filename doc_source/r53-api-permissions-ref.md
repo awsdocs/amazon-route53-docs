@@ -359,7 +359,7 @@ Resources: `*`
 ## Required permissions for Route 53 Resolver actions<a name="required-permissions-resolver"></a><a name="resolver-table"></a>
 
 [AssociateResolverEndpointIpAddress](https://docs.aws.amazon.com/Route53/latest/APIReference/API_route53resolver_AssociateResolverEndpointIpAddress.html)  
-Required Permissions \(API Action\): `route53resolver:AssociateResolverEndpointIpAddress`, `ec2:DescribeSubnets`, `ec2:DescribeNetworkInterfaces`, `ec2:CreateNetworkInterfacePermission`  
+Required Permissions \(API Action\): `route53resolver:AssociateResolverEndpointIpAddress`, `ec2:CreateNetworkInterfacePermission`, `ec2:DescribeAvailabilityZones`, `ec2:DescribeNetworkInterfaces`, `ec2:DescribeSubnets`   
 Resources: `*`
 
 [AssociateResolverRule](https://docs.aws.amazon.com/Route53/latest/APIReference/API_route53resolver_AssociateResolverRule.html)  
@@ -376,7 +376,7 @@ Required Permissions \(API Action\): `route53resolver:CreateResolverRule`
 Resources: `*`
 
 [DeleteResolverEndpoint](https://docs.aws.amazon.com/Route53/latest/APIReference/API_route53resolver_DeleteResolverEndpoint.html)  
-Required Permissions \(API Action\): `route53resolver:DeleteResolverEndpoint`, `ec2:DeleteNetworkInterface`  
+Required Permissions \(API Action\): `route53resolver:DeleteResolverEndpoint`, `ec2:DeleteNetworkInterface`, `ec2:DescribeNetworkInterface`  
 Resources: `*`
 
 [DeleteResolverRule](https://docs.aws.amazon.com/Route53/latest/APIReference/API_route53resolver_DeleteResolverRule.html)  

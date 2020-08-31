@@ -25,7 +25,7 @@ To get more detailed information about each DNS query that Route 53 responds to
 + DNS record type \(such as A or AAAA\)
 + Route 53 edge location that responded to the DNS query
 + DNS response code, such as `NoError` or `ServFail`
-For more information, see [Logging DNS queries](query-logs.md)\.
+For more information, see [Public DNS query logging](query-logs.md)\.
 
 **How to get DNS query metrics**  
 Shortly after you create a hosted zone, Amazon Route 53 starts to send metrics and dimensions once a minute to CloudWatch\. You can use the following procedures to view the metrics on the CloudWatch console or view them by using the AWS Command Line Interface \(AWS CLI\)\.

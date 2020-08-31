@@ -41,7 +41,7 @@ For each of those options, you need to access your AWS account by providing cred
 To access the AWS Management Console for the first time, you provide an email address and a password\. This combination of your email address and password is called your *root identity* or *root account credentials*\. After you access your account for the first time, we strongly recommend that you don't use your root account credentials again for everyday use\. Instead, you should create new credentials by using [AWS Identity and Access Management](https://docs.aws.amazon.com/IAM/latest/UserGuide/introduction.html)\. To do that, you create a user account for yourself known as an *IAM user*, and then add the IAM user to an IAM group with administrative permissions or grant the IAM user administrative permissions\. You then can access AWS using a special URL and the credentials for the IAM user\. You also can add other IAM users later, and restrict their access to specified resources in the account\.
 
 **Note**  
-Some ad\-blocking plugins for web browsers interfere with Amazon Route 53 console operations, which can cause the console to behave unpredictably\. If you installed an ad\-blocking plugin for your browser, we recommend that you add the URL for the Route 53 console, [https://console\.aws\.amazon\.com/route53/home](https://console.aws.amazon.com/route53/home), to the whitelist for the plugin\.
+Some ad\-blocking plugins for web browsers interfere with Amazon Route 53 console operations, which can cause the console to behave unpredictably\. If you installed an ad\-blocking plugin for your browser, we recommend that you add the URL for the Route 53 console, [https://console\.aws\.amazon\.com/route53/home](https://console.aws.amazon.com/route53/home), to the list of allowed URLs for the plugin\.
 
 ### Access the API, AWS CLI, AWS Tools for Windows PowerShell, or the AWS SDKs<a name="setting-up-access-account-api-cli"></a>
 
@@ -55,7 +55,7 @@ Perform the following procedures to create a group for administrators, create an
 
 **To create an administrator user for yourself and add the user to an administrators group \(console\)**
 
-1. Use your AWS account email address and password to sign in as the *[AWS account root user](https://docs.aws.amazon.com/IAM/latest/UserGuide/id_root-user.html)* to the IAM console at [https://console\.aws\.amazon\.com/iam/](https://console.aws.amazon.com/iam/)\.
+1. Sign in to the [IAM console](https://console.aws.amazon.com/iam/) as the account owner by choosing **Root user** and entering your AWS account email address\. On the next page, enter your password\.
 **Note**  
 We strongly recommend that you adhere to the best practice of using the **Administrator** IAM user below and securely lock away the root user credentials\. Sign in as the root user only to perform a few [account and service management tasks](https://docs.aws.amazon.com/general/latest/gr/aws_tasks-that-require-root.html)\.
 

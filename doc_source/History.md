@@ -57,7 +57,7 @@ You can now programmatically check whether a domain can be transferred to Route�
 You can now create Route 53 alias records that route internet traffic to Elastic Load Balancing Network Load Balancers\. For more information about alias records, see [Choosing between alias and non\-alias records](resource-record-sets-choosing-alias-non-alias.md)\.
 
 **September 7, 2017**  
-If you're using Route 53 as your public, authoritative DNS service, you can now log DNS queries that Route 53 receives\. For more information, see [Logging DNS queries](query-logs.md)\.
+If you're using Route 53 as your public, authoritative DNS service, you can now log DNS queries that Route 53 receives\. For more information, see [Public DNS query logging](query-logs.md)\.
 
 **September 1, 2017**  
 If you're using Route 53 traffic flow, you can now use geoproximity routing, which lets you route traffic based on the physical distance between your users and your resources\. You can also route more or less traffic to each resource by specifying a positive or negative bias\. For more information, see [Geoproximity routing \(traffic flow only\)](routing-policy.md#routing-policy-geoproximity)\.

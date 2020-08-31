@@ -60,7 +60,7 @@ How you specify the value for **Alias Target** depends on whether you created th
 **Routing Policy**  
 Choose the applicable routing policy\. For more information, see [Choosing a routing policy](routing-policy.md)\.  
 **Evaluate Target Health**  
-Accept the default value of **No**\.
+Choose **No**\.
 
 1. Choose **Create**\.
 

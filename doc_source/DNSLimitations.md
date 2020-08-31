@@ -82,6 +82,9 @@ For information on getting current quotas \(formerly referred to as "limits"\), 
 | Rules per AWS Region | 1000 per AWS account [Request a higher quota](https://console.aws.amazon.com/servicequotas/home?region=us-east-1#!/services/route53/quotas)\.  | 
 | Associations between rules and VPCs per AWS Region | 2000 per AWS account [Request a higher quota](https://console.aws.amazon.com/servicequotas/home?region=us-east-1#!/services/route53/quotas)\.  | 
 | Queries per second per IP address in an endpoint | 10,000\* | 
+|  Query log configurations per AWS Region  |  20  | 
+|  Query log configuration VPC associations per AWS Region  |  100  | 
+|  Query log configuration VPC associations per AWS Region \(shared using RAM\)  |  100  | 
 
 **\*** The number of DNS queries per second varies by the type of query, the size of response, and the protocol in use\. For information about how to view Amazon CloudWatch metrics for IP addresses for inbound and outbound endpoints, see [Metrics for Resolver IP addresses](monitoring-resolver-with-cloudwatch.md#cloudwatch-metrics-resolver-ip-address)\.
 
