@@ -86,7 +86,7 @@ For information on getting current quotas \(formerly referred to as "limits"\), 
 |  Query log configuration VPC associations per AWS Region  |  100  | 
 |  Query log configuration VPC associations per AWS Region \(shared using RAM\)  |  100  | 
 
-**\*** The number of DNS queries per second varies by the type of query, the size of response, and the protocol in use\. For information about how to view Amazon CloudWatch metrics for IP addresses for inbound and outbound endpoints, see [Metrics for Resolver IP addresses](monitoring-resolver-with-cloudwatch.md#cloudwatch-metrics-resolver-ip-address)\.
+**\*** The number of DNS queries per second \(QPS\) varies by the type of query, the size of the response, and the protocol in use\. This limit is on a per elastic network interface \(ENI\) basis\. For example, with a limit of 10,000 QPS, 2 ENIs would allow 20,000 QPS\. From there you can scale out by adding more ENIs\. For information about how to view Amazon CloudWatch metrics for IP addresses for inbound and outbound endpoints, see [Metrics for Resolver IP addresses](monitoring-resolver-with-cloudwatch.md#cloudwatch-metrics-resolver-ip-address)\.
 
 ### Quotas on health checks<a name="limits-api-entities-health-checks"></a>
 
