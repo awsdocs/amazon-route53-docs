@@ -5,6 +5,7 @@ If you want Resolver to forward queries for specified domain names to your netwo
 **Topics**
 + [Viewing and editing forwarding rules](#resolver-rules-managing-viewing)
 + [Creating forwarding rules](#resolver-rules-managing-creating-rules)
++ [Adding rules for reverse lookup](#add-reverse-lookup)
 + [Associating forwarding rules with a VPC](#resolver-rules-managing-associating-rules)
 + [Disassociating forwarding rules from a VPC](#resolver-rules-managing-disassociating-rules)
 + [Sharing forwarding rules with other AWS accounts and using shared rules](#resolver-rules-managing-sharing)
@@ -49,6 +50,28 @@ To create one or more forwarding rules, perform the following procedure\.<a name
 1. Choose **Save**\.
 
 1. To add another rule, repeat steps 4 through 6\. 
+
+## Adding rules for reverse lookup<a name="add-reverse-lookup"></a>
+
+If you need to control reverse lookups in your VPC, you can add rules to your outbound resolver endpoint\.
+
+**To create the reverse lookup rule**
+
+1. Follow the steps in the previous procedure, up to step 5\.
+
+1. When you specify your rule, enter the PTR record for the IP address or addresses that you want a reverse lookup forwarding rule for\.
+
+   For example, if you need to forward lookups for addresses in the 10\.0\.0\.0/23 range, enter two rules:
+   + 0\.0\.10\.in\-addr\.apra
+   + 1\.0\.10\.in\-addr\.apra
+
+   Any IP address in those subnets will be referenced as a subdomain of those PTR records—for example, 10\.0\.1\.161 will have a reverse lookup address of 161\.1\.0\.10\.in\-addr\.apra, which is a subdomain of 1\.0\.10\.in\-addra\.apra\.
+
+1. Specify the server to forward these lookups to\.
+
+1. Add these rules to your outbound resolver endpoint\.
+
+Note that turning on `enableDNSHostNames` for your VPC will automatically add PTR records\. See [Resolving DNS queries between VPCs and your network](resolver.md)\. The previous procedure is only required if you want to explicitly specify a resolver for given IP ranges—for example, when forwarding queries to an Active Directory server\.
 
 ## Associating forwarding rules with a VPC<a name="resolver-rules-managing-associating-rules"></a>
 
@@ -180,20 +203,3 @@ Note the following:
 1. Choose **Delete**\.
 
 1. To confirm that you want to delete the rule, enter the name of the rule and choose **Submit**\.
-
-## Adding rules for reverse lookup<a name="add-reverse-lookup"></a>
-
-If you need to control reverse lookups in your VPC, you can add rules to your outbound resolver endpoint.
-
-### To create the reverse lookup rule
-
- + Follow the procedure under [Creating Forwarding Rules](#resolver-rules-managing-creating-rules), up to step 5.
- + When you specify your rule, enter the PTR record for the IP address or addresses you want a reverse lookup forwarding rule for.
-    + For example, if you need to forward lookups for addresses in the 10.0.0.0/23 range, enter two rules:
-      + 0.0.10.in-addr.apra
-      + 1.0.10.in-addr.apra
-    + Any IP address in those subnets will be referenced as a subdomain of those PTR records - for example, 10.0.1.161 will have a reverse lookup address of 161.1.0.10.in-addr.apra, which is a subdomain of 1.0.10.in-addra.apra.
-  + Specify the server to forward these lookups to.
-  + Add these rules to your outbound resolver endpoint.
-
-+ Note that turning on `enableDNSHostNames` for your VPC will automatically add PTR records. See [Resolving DNS queries between VPCs and your network](resolver.md). The above process is only required if you want to explicitly specify a resolver for given IP ranges - for example, when forwarding queries to an Active Directory server.
