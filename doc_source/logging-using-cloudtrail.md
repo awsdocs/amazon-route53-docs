@@ -34,9 +34,6 @@ CloudTrail lets you view recent events in **Event history**\. To view events for
 
 A trail is a configuration that enables delivery of events as log files to an Amazon S3 bucket that you specify\. CloudTrail log files contain one or more log entries\. An event represents a single request from any source and includes information about the requested action, the date and time of the action, request parameters, and so on\. CloudTrail log files are not an ordered stack trace of the public API calls, so they do not appear in any specific order\. 
 
-**Important**  
-Don't use CloudTrail log entries to reconstruct a hosted zone or to revert a hosted zone to a prior state\. Although extremely rare, it is possible that a Route 53 API request is not successfully recorded in the CloudTrail log\. If you try to reproduce a hosted zone and a log entry is missing, the record that you don't create or update could adversely affect the availability of your domain\.
-
 The `eventName` element identifies the action that occurred\. \(In CloudTrail logs, the first letter is lowercase for domain registration actions even though it's uppercase in the names of the actions\. For example, `UpdateDomainContact` appears as `updateDomainContact` in the logs\)\. CloudTrail supports all Route 53 API actions\. The following example shows a CloudTrail log entry that demonstrates the following actions:
 + List the hosted zones that are associated with an AWS account
 + Create a health check

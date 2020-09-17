@@ -52,8 +52,8 @@ For information about how to renew an expired domain, see [Renewing registration
 
 If we suspend a domain for a violation of the [AWS Acceptable Use Policy](https://aws.amazon.com/aup/), we send an email notification to the registrant contact for the domain\. \(We don't send a notification email if the AWS account is already suspended for fraud\.\) 
 
-To contest a suspension, send an email to registrar\-abuse@amazon\.com\.
+To contest a suspension, send an email to abuse@amazon\.com\.
 
 ## We suspended the domain because of a court order<a name="troubleshooting-domain-suspended-court-order"></a>
 
-If a domain is suspended as a result of a court order, we can't unsuspend the domain until the court order has been lifted\. To contest the validity of a court order, send an email to registrar\-abuse@amazon\.com and attach the applicable documents\.
+If a domain is suspended as a result of a court order, we can't unsuspend the domain until the court order has been lifted\. To contest the validity of a court order, send an email to abuse@amazon\.com and attach the applicable documents\.

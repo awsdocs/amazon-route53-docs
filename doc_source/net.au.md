@@ -3,7 +3,7 @@
 [Return to index](registrar-tld-list.md#index)
 
 **Confirmation email from the TLD registry**  
-Our registrar partner, Gandi, resells \.net\.au domains through Tucows\. When you transfer a domain name to Route 53, Tucows sends an email to the registrant contact for the domain to verify contact information or to authorize transfer requests\.
+Our registrar associate, Gandi, resells \.net\.au domains through Tucows\. When you transfer a domain name to Route 53, Tucows sends an email to the registrant contact for the domain to verify contact information or to authorize transfer requests\.
 
 **Registration and renewal period**  
 One to five years\.

@@ -186,5 +186,3 @@ For all of the hosted zones that are now using white\-label name servers, change
 ## Step 10: \(Optional\) contact recursive DNS services<a name="white-label-name-servers-contact-recursive-dns-services"></a>
 
 *Optional* If you're using Amazon Route 53 geolocation routing, contact the recursive DNS services that support the edns\-client\-subnet extension of EDNS0, and give them the names of your white\-label name servers\. This ensures that these DNS services will continue to route DNS queries to the optimal Route 53 location based on the approximate geographical location that the query came from\.
-
-For a list of the recursive DNS services that support edns\-client\-subnet, see [A Faster Internet: Participants](http://www.afasterinternet.com/participants.htm)\. For more information about how edns\-client\-subnet works, see [A Faster Internet: How It Works](http://www.afasterinternet.com/howitworks.htm)\.

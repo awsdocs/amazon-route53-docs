@@ -45,13 +45,15 @@ If you want to transfer your domain to another domain registrar but the AWS acco
 
 1. Choose **Save**\.
 
-1. *All domains except \.co\.za, \.jp, \.ru, \.uk, \.co\.uk, \.me\.uk, and \.org\.uk domains* – On the **Registered Domains >** *domain name* page, at **Authorization Code**, choose **Get code** and make note of the authorization code\. You'll provide this value to your registrar later in this procedure\.
+1. *All domains except \.co\.za, \.es, \.jp, \.ru, \.uk, \.co\.uk, \.me\.uk, and \.org\.uk domains* – On the **Registered Domains >** *domain name* page, at **Authorization Code**, choose **Get code** and make note of the authorization code\. You'll provide this value to your registrar later in this procedure\.
 
-   *\.co\.za, \.jp, \.ru, \.uk, \.co\.uk, \.me\.uk, and \.org\.uk domains* – Do the following:  
+   *\.co\.za, \.es, \.jp, \.ru, \.uk, \.co\.uk, \.me\.uk, and \.org\.uk domains* – Do the following:  
 **\.co\.za domains**  
 You don't need to get an authorization code to transfer a \.co\.za domain to another registrar\.  
+**\.es domains**  
+You don't need to get an authorization code to transfer a \.es domain to another registrar\.  
 **\.jp domains**  
-If the new registrar requires an AGNT number to transfer a \.jp domain, specify `AGNT-1744`\.  
+You don't need to get an authorization code to transfer a \.jp domain to another registrar\.  
 **\.ru domains**  
 Get the authorization code from the registry for \.ru domains at [https://www\.nic\.ru/en/auth/recovery/](https://www.nic.ru/en/auth/recovery/):  
 
@@ -92,13 +94,20 @@ Change the IPS tag to the value for the new registrar:
 
 1. Use the process that is provided by the new registrar to request a transfer of the domain\.
 
-   *All domains except \.co\.za, \.uk, \.co\.uk, \.me\.uk, and \.org\.uk domains* – You'll be prompted to enter the authorization code that you got from the Route 53 console in step 7 of this procedure\.
+   *All domains except \.co\.za, \.es, \.jp, \.uk, \.co\.uk, \.me\.uk, and \.org\.uk domains* – You'll be prompted to enter the authorization code that you got from the Route 53 console in step 7 of this procedure\.
 
-   If you still want to use Route 53 as your DNS service provider, use the process that is provided by the new registrar to specify the names of the Route 53 name servers that you got in step 8\. If you want to use another DNS service provider, specify the names of the name servers that the new provider gave you when you created a new hosted zone in step 9\.
+1. If you still want to use Route 53 as your DNS service provider, use the process that is provided by the new registrar to specify the names of the Route 53 name servers that you got in step 8\. If you want to use another DNS service provider, specify the names of the name servers that the new provider gave you when you created a new hosted zone in step 9\.
 
-   Route 53 sends a confirmation email to the email address for the registrant contact for the domain:
+1. Respond to the corfirmation email:  
+**All domains except \.jp domains**  
+Route 53 sends a confirmation email to the email address for the registrant contact for the domain:  
    + If you don't respond to the email, the transfer happens automatically on the specified date\.
+   + If you want the transfer to happen sooner or you want to cancel the transfer, choose the link in the email to go to the Route 53 website, and choose the applicable option\.  
+**\.jp domains**  
+Route 53 sends a confirmation email to the email address for the registrant contact for the domain:  
+   + If you don't respond to the email, the transfer is canceled on the specified date\.
    + If you want the transfer to happen sooner or you want to cancel the transfer, choose the link in the email to go to the Route 53 website, and choose the applicable option\.
+In addition you might receive an email from Wiki\.jp\. You can ignore this email\.
 
 1. If the registrar that you're transferring the domain to reports that the transfer failed, contact that registrar for more information\. When you transfer a domain to another registrar, all status updates go to the new registrar, so Route 53 has no information about why a transfer failed\.
 

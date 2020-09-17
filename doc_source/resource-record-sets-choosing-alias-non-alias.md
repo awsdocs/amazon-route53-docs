@@ -25,15 +25,44 @@ For information about creating records by using the Route 53 console, see [Crea
 + [Values for failover alias records](resource-record-sets-values-failover-alias.md)
 + [Values for geolocation alias records](resource-record-sets-values-geo-alias.md)
 
-Alias records are similar to CNAME records, but there are some important differences:
+## Comparison of alias and CNAME records<a name="resource-record-sets-choosing-alias-non-alias-comparison"></a>
 
+Alias records are similar to CNAME records, but there are some important differences\. The following list compares alias records and CNAME records\.
 
-****  
+**Resources that you can redirect queries to**    
+**Alias records**  
+An alias record can only redirect queries to selected AWS resources, such as the following:  
++ Amazon S3 buckets
++ CloudFront distributions
++ Another record in the same Route 53 hosted zone
+For example, you can create an alias record named acme\.example\.com that redirects queries to an Amazon S3 bucket that is also named acme\.example\.com\. You can also create an acme\.example\.com alias record that redirects queries to a record named zenith\.example\.com in the example\.com hosted zone\.  
+**CNAME records**  
+A CNAME record can redirect DNS queries to any DNS record\. For example, you can create a CNAME record that redirects queries from acme\.example\.com to zenith\.example\.com or to acme\.example\.org\. You don't need to use Route 53 as the DNS service for the domain that you're redirecting queries to\.
 
-| CNAME records | Alias records | 
-| --- | --- | 
-| A CNAME record can redirect DNS queries to any DNS record\. For example, you can create a CNAME record that redirects queries from acme\.example\.com to zenith\.example\.com or to acme\.example\.org\. You don't need to use Route 53 as the DNS service for the domain that you're redirecting queries to\. | An alias record can only redirect queries to selected AWS resources, such as the following: [\[See the AWS documentation website for more details\]](http://docs.aws.amazon.com/Route53/latest/DeveloperGuide/resource-record-sets-choosing-alias-non-alias.html) For example, you can create an alias record named acme\.example\.com that redirects queries to an Amazon S3 bucket that is also named acme\.example\.com\. You can also create an acme\.example\.com alias record that redirects queries to a record named zenith\.example\.com in the example\.com hosted zone\. | 
-| You can't create a CNAME record that has the same name as the hosted zone \(the zone apex\)\. This is true both for hosted zones for domain names \(example\.com\) and for hosted zones for subdomains \(zenith\.example\.com\)\.  | In most configurations, you can create an alias record that has the same name as the hosted zone \(the zone apex\)\. The one exception is when you want to redirect queries from the zone apex \(such as example\.com\) to a record in the same hosted zone that has a type of CNAME \(such as zenith\.example\.com\)\. The alias record must have the same type as the record you're routing traffic to, and creating a CNAME record for the zone apex isn't supported even for an alias record\.  | 
-| Route 53 charges for CNAME queries\. | Route 53 doesn't charge for alias queries to AWS resources\. For more information, see [Amazon Route 53 Pricing](https://aws.amazon.com/route53/pricing/)\. | 
-| A CNAME record redirects DNS queries for a record name regardless of record type, such as A or AAAA\. | Route 53 responds to a DNS query only when the name of the alias record \(such as acme\.example\.com\) and the type of the alias record \(such as A or AAAA\) match the name and type in the DNS query\. | 
-| A CNAME record appears as a CNAME record in response to dig or nslookup queries\. | An alias record appears as the record type that you specified when you created the record, such as A or AAAA\. The alias property is visible only in the Route 53 console or in the response to a programmatic request, such as an AWS CLI `list-resource-record-sets` command\. | 
+**Creating records that have the same name as the domain \(records at the zone apex\)**    
+**Alias records**  
+In most configurations, you can create an alias record that has the same name as the hosted zone \(the zone apex\)\. The one exception is when you want to redirect queries from the zone apex \(such as example\.com\) to a record in the same hosted zone that has a type of CNAME \(such as zenith\.example\.com\)\. The alias record must have the same type as the record you're routing traffic to, and creating a CNAME record for the zone apex isn't supported even for an alias record\.  
+**CNAME records**  
+You can't create a CNAME record that has the same name as the hosted zone \(the zone apex\)\. This is true both for hosted zones for domain names \(example\.com\) and for hosted zones for subdomains \(zenith\.example\.com\)\.
+
+**Pricing for DNS queries**    
+**Alias records**  
+Route 53 doesn't charge for alias queries to AWS resources\. For more information, see [Amazon Route 53 Pricing](https://aws.amazon.com/route53/pricing/)\.  
+**CNAME records**  
+Route 53 charges for CNAME queries\.  
+If you create a CNAME record that redirects to the name of another record in a Route 53 hosted zone \(the same hosted zone or another hosted zone\), each DNS query is charged as two queries:  
++ Route 53 responds to the first DNS query with the name of the record that you want to redirect to\.
++ Then the DNS resolver must submit another query for the record in the first response to get information about where to direct traffic, for example, the IP address of a web server\.
+If the CNAME record redirects to the name of a record that is hosted with another DNS service, Route 53 charges for one query\. The other DNS service might charge for the second query\.
+
+**Record type specified in the DNS query**    
+**Alias records**  
+Route 53 responds to a DNS query only when the name of the alias record \(such as acme\.example\.com\) and the type of the alias record \(such as A or AAAA\) match the name and type in the DNS query\.  
+**CNAME records**  
+A CNAME record redirects DNS queries for a record name regardless of the record type specified in the DNS query, such as A or AAAA\.
+
+**How records are listed in dig or nslookup queries**    
+**Alias records**  
+In the response to a dig or nslookup query, an alias record is listed as the record type that you specified when you created the record, such as A or AAAA\. \(The record type that you specify for an alias record depends on the resource that you're routing traffic to\. For example, to route traffic to an S3 bucket, you specify A for the type\.\) The alias property is visible only in the Route 53 console or in the response to a programmatic request, such as an AWS CLI `list-resource-record-sets` command\.  
+**CNAME records**  
+A CNAME record is listed as a CNAME record in response to dig or nslookup queries\.

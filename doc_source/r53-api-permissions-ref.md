@@ -244,8 +244,16 @@ Resources: `*`, `arn:aws:route53:::healthcheck/health check ID`
 
 ## Required permissions for actions on domain registrations<a name="required-permissions-domain-registrations"></a><a name="domain-registrations-table"></a>
 
+[AcceptDomainTransferFromAnotherAwsAccount](https://docs.aws.amazon.com/Route53/latest/APIReference/API_domains_AcceptDomainTransferFromAnotherAwsAccount.html)  
+Required Permissions \(API Action\): `route53domains:AcceptDomainTransferFromAnotherAwsAccount`  
+Resources: `*`
+
 [AddDnssec](https://docs.aws.amazon.com/Route53/latest/DeveloperGuide/domain-configure-dnssec.html) \(console only\)  
 Required Permissions \(API Action\): `route53domains:AddDnssec`  
+Resources: `*`
+
+[CancelDomainTransferToAnotherAwsAccount](https://docs.aws.amazon.com/Route53/latest/APIReference/API_domains_CancelDomainTransferToAnotherAwsAccount.html)  
+Required Permissions \(API Action\): `route53domains:CancelDomainTransferToAnotherAwsAccount`  
 Resources: `*`
 
 [CheckDomainAvailability](https://docs.aws.amazon.com/Route53/latest/APIReference/API_domains_CheckDomainAvailability.html)  
@@ -304,6 +312,10 @@ Resources: `*`
 Required Permissions \(API Action\): `route53domains:RegisterDomain`  
 Resources: `*`
 
+[RejectDomainTransferFromAnotherAwsAccount](https://docs.aws.amazon.com/Route53/latest/APIReference/API_domains_RejectDomainTransferFromAnotherAwsAccount.html)  
+Required Permissions \(API Action\): `route53domains:RejectDomainTransferFromAnotherAwsAccount`  
+Resources: `*`
+
 [RemoveDnssec](https://docs.aws.amazon.com/Route53/latest/DeveloperGuide/domain-configure-dnssec.html) \(console only\)  
 Required Permissions \(API Action\): `route53domains:RemoveDnssec`  
 Resources: `*`
@@ -322,6 +334,10 @@ Resources: `*`
 
 [TransferDomain](https://docs.aws.amazon.com/Route53/latest/APIReference/API_domains_TransferDomain.html)  
 Required Permissions \(API Action\): `route53domains:TransferDomain`  
+Resources: `*`
+
+[TransferDomainToAnotherAwsAccount](https://docs.aws.amazon.com/Route53/latest/APIReference/API_domains_TransferDomainToAnotherAwsAccount.html)  
+Required Permissions \(API Action\): `route53domains:TransferDomainToAnotherAwsAccount`  
 Resources: `*`
 
 [UpdateDomainContact](https://docs.aws.amazon.com/Route53/latest/APIReference/API_domains_UpdateDomainContact.html)  
@@ -343,7 +359,7 @@ Resources: `*`
 ## Required permissions for Route 53 Resolver actions<a name="required-permissions-resolver"></a><a name="resolver-table"></a>
 
 [AssociateResolverEndpointIpAddress](https://docs.aws.amazon.com/Route53/latest/APIReference/API_route53resolver_AssociateResolverEndpointIpAddress.html)  
-Required Permissions \(API Action\): `route53resolver:AssociateResolverEndpointIpAddress`, `ec2:DescribeSubnets`, `ec2:DescribeNetworkInterfaces`, `ec2:CreateNetworkInterfacePermission`  
+Required Permissions \(API Action\): `route53resolver:AssociateResolverEndpointIpAddress`, `ec2:CreateNetworkInterfacePermission`, `ec2:DescribeAvailabilityZones`, `ec2:DescribeNetworkInterfaces`, `ec2:DescribeSubnets`   
 Resources: `*`
 
 [AssociateResolverRule](https://docs.aws.amazon.com/Route53/latest/APIReference/API_route53resolver_AssociateResolverRule.html)  
@@ -360,7 +376,7 @@ Required Permissions \(API Action\): `route53resolver:CreateResolverRule`
 Resources: `*`
 
 [DeleteResolverEndpoint](https://docs.aws.amazon.com/Route53/latest/APIReference/API_route53resolver_DeleteResolverEndpoint.html)  
-Required Permissions \(API Action\): `route53resolver:DeleteResolverEndpoint`, `ec2:DeleteNetworkInterface`  
+Required Permissions \(API Action\): `route53resolver:DeleteResolverEndpoint`, `ec2:DeleteNetworkInterface`, `ec2:DescribeNetworkInterface`  
 Resources: `*`
 
 [DeleteResolverRule](https://docs.aws.amazon.com/Route53/latest/APIReference/API_route53resolver_DeleteResolverRule.html)  

@@ -4,7 +4,7 @@ Amazon Route 53 provides DNS query logging and the ability to monitor your reso
 
 **Logging DNS queries**  
 You can configure Route 53 to log information about the queries that Route 53 receives, such as the domain or subdomain that was requested, the date and time of the request, and the DNS record type, such as A or AAAA\.  
-For more information, see [Logging DNS queries](query-logs.md)\.
+For more information, see [Public DNS query logging](query-logs.md)\.
 
 **Using AWS CloudTrail to log console and programmatic actions**  
 CloudTrail provides a record of Route 53 actions taken by a user, a role, or an AWS service\. Using the information collected by CloudTrail, you can track the requests that are made, the IP addresses that requests originate from, who made the request, when it was made, and additional details\. For more information, see [Logging Amazon Route 53 API calls with AWS CloudTrail](logging-using-cloudtrail.md)\.

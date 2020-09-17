@@ -171,7 +171,7 @@ If the registry for your domain requires you to complete a Change of Domain Owne
 
    If no Change of Domain Ownership form is required, perform the procedure in the applicable topic instead\.
 
-1. Download the [Change of Domain Ownership Form](samples/ChangeOfOwnerForm.zip)\. The file is compressed into a \.zip file\.
+1. Download the [Change of Domain Ownership Form](https://docs.aws.amazon.com/Route53/latest/DeveloperGuide/samples/ChangeOfOwnerForm.zip)\. The file is compressed into a \.zip file\.
 
 1. Fill out the form\.
 

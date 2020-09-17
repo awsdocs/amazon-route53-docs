@@ -9,7 +9,7 @@ If privacy protection is enabled for the domain, contact information for the reg
 To contact one or more domain contacts when privacy protection is enabled, send an email to the corresponding email addresses\. We automatically forward your email to the applicable contact\. 
 
 **Reporting abuse**  
-To report any illegal activity or violation of the [Acceptable Use Policy](http://aws.amazon.com/route53/amazon-registrar-policies/#acceptable-use-policy), including inappropriate content, phishing, malware, or spam, send an email to registrar\-abuse@amazon\.com\.<a name="domain-whois-rdap-procedure"></a>
+To report any illegal activity or violation of the [Acceptable Use Policy](http://aws.amazon.com/route53/amazon-registrar-policies/#acceptable-use-policy), including inappropriate content, phishing, malware, or spam, send an email to abuse@amazon\.com\.<a name="domain-whois-rdap-procedure"></a>
 
 **To view information about domains that are registered with Amazon Registrar**
 

@@ -4,7 +4,7 @@ All computers on the internet, from your smart phone or laptop to the servers th
 + Internet Protocol version 4 \(IPv4\) format, such as 192\.0\.2\.44
 + Internet Protocol version 6 \(IPv6\) format, such as 2001:0db8:85a3:0000:0000:abcd:0001:2345
 
-When you open a browser and go to a website, you don't have to remember and enter a long number like that\. Instead, you can enter a domain name like example\.com and still end up in the right place\. A DNS service such as Amazon Route 53 helps to make that connection between domain names and IP addresses\.
+When you open a browser and go to a website, you don't have to remember and enter a long string of characters like that\. Instead, you can enter a domain name like example\.com and still end up in the right place\. A DNS service such as Amazon Route 53 helps to make that connection between domain names and IP addresses\.
 
 **Topics**
 + [Overview of how you configure Amazon Route 53 to route internet traffic for your domain](#welcome-dns-service-how-to-configure)

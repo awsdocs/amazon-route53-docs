@@ -35,7 +35,7 @@ Specifies whether you want to use the same contact information for the registran
 Category for this contact\. Note the following:  
 + If you choose an option other than **Person**, you must enter an organization name\.
 + For some TLDs, the privacy protection available depends on the value that you choose for **Contact Type**\. For the privacy protection settings for your TLD, see [Domains that you can register with Amazon Route 53](registrar-tld-list.md)\.
-+ For \.es domains, if you choose **Person**, you must specify **Individual** for the value of **ES Legal Type**\.
++ For \.es domains, the value of **Contact Type** must be **Person** for all three contacts\.
 
 **First Name, Last Name**  
 The first and last names of the contact\.  
@@ -104,14 +104,11 @@ For information about valid values, see [ExtraParam](https://docs.aws.amazon.com
 
 **Privacy Protection**  
 Whether you want to conceal your contact information from WHOIS queries\. If you select **Hide contact information**, WHOIS \("who is"\) queries will return contact information for the registrar or the value "Protected by policy\."  
+You must specify the same privacy setting for the administrative, registrant, and technical contacts\.
 If you select **Don't hide contact information**, you'll get more email spam at the email address that you specified\.  
 Anyone can send a WHOIS query for a domain and get back all of the contact information for that domain\. The WHOIS command is available in many operating systems, and it's also available as a web application on many websites\.   
 Although there are legitimate users for the contact information associated with your domain, the most common users are spammers, who target domain contacts with unwanted email and bogus offers\. In general, we recommend that you choose **Hide contact information** for **Privacy Protection**\.
-To enable or disable privacy protection for some domains, you must open a support case and request privacy protection\. For more information, see the applicable section in [Domains that you can register with Amazon Route 53](registrar-tld-list.md):  
-+ [\.co\.uk \(United Kingdom\)](https://docs.aws.amazon.com/Route53/latest/DeveloperGuide/registrar-tld-list.html#registrar-tld-list#co.uk)
-+ [\.me\.uk \(United Kingdom\)](https://docs.aws.amazon.com/Route53/latest/DeveloperGuide/registrar-tld-list.html#registrar-tld-list#me.uk)
-+ [\.org\.uk \(United Kingdom\)](https://docs.aws.amazon.com/Route53/latest/DeveloperGuide/registrar-tld-list.html#registrar-tld-list#org.uk)
-+ [\.link](https://docs.aws.amazon.com/Route53/latest/DeveloperGuide/registrar-tld-list.html#registrar-tld-list#link)
+To enable or disable privacy protection for some domains, you must open a support case and request privacy protection\.  
 For more information about privacy protection, see the following topics:  
 + [Enabling or disabling privacy protection for contact information for a domain](domain-privacy-protection.md)
 + [Domains that you can register with Amazon Route 53](registrar-tld-list.md)

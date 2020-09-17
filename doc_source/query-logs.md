@@ -1,6 +1,6 @@
-# Logging DNS queries<a name="query-logs"></a>
+# Public DNS query logging<a name="query-logs"></a>
 
-You can configure Amazon Route 53 to log information about the queries that Route 53 receives, such as the following:
+You can configure Amazon Route 53 to log information about the public DNS queries that Route 53 receives, such as the following:
 + Domain or subdomain that was requested
 + Date and time of the request
 + DNS record type \(such as A or AAAA\)

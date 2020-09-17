@@ -33,3 +33,6 @@ Supported for domain registration\. For more information, see [Configuring DNSSE
 
 **Registrar**  
 The registrar for this TLD is our registrar associate, Gandi\.
+
+**WHOIS Search**  
+For information about existing \.eu domains, see [https://whois\.eurid\.eu/en/](https://whois.eurid.eu/en/)\.

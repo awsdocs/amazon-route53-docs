@@ -18,7 +18,7 @@ To forward selected queries, you create Resolver rules that specify the domain n
 Like Amazon VPC, Resolver is regional\. In each region where you have VPCs, you can choose whether to forward queries from your VPCs to your network \(outbound queries\), from your network to your VPCs \(inbound queries\), or both\.
 
 **Note**  
-Resolver doesn't support [VPC dedicated instances](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/dedicated-instance.html)\.
+When you create a Resolver endpoint, you can't specify a VPC that has the instance tenancy attribute set to `dedicated`\. For more information, see [Using Resolver in VPCs that are configured for dedicated instance tenancy](#resolver-considerations-dedicated-instance-tenancy)\.
 
 To use inbound or outbound forwarding, you create a Resolver endpoint in your VPC\. As part of the definition of an endpoint, you specify the IP addresses that you want to forward inbound DNS queries to or the IP addresses that you want outbound queries to originate from\. For each IP address that you specify, Resolver automatically creates a VPC elastic network interface\.
 
