@@ -26,7 +26,7 @@ Simple routing lets you configure standard DNS records, with no special Route 5
 If you choose the simple routing policy in the Route 53 console, you can't create multiple records that have the same name and type, but you can specify multiple values in the same record, such as multiple IP addresses\. \(If you choose the simple routing policy for an alias record, you can specify only one AWS resource or one record in the current hosted zone\.\) If you specify multiple values in a record, Route 53 returns all values to the recursive resolver in random order, and the resolver returns the values to the client \(such as a web browser\) that submitted the DNS query\. The client then chooses a value and resubmits the query\.
 
 For information about values that you specify when you use the simple routing policy to create records, see the following topics:
-+ [Values for basic records](resource-record-sets-values-basic.md)
++ [Values for simple records](resource-record-sets-values-basic.md)
 + [Values for alias records](resource-record-sets-values-alias.md)
 
 ## Failover routing<a name="routing-policy-failover"></a>

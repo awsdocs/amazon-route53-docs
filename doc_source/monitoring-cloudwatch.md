@@ -14,7 +14,7 @@ When you create a health check, Amazon Route 53 starts to send metrics and dime
 
 1. In the navigation pane, choose **Metrics**\.
 
-1. On the **All Metrics** tab, choose **Route 53**\.
+1. On the **All Metrics** tab, choose **Route 53**\.
 
 1. Choose **Health Check Metrics**\.
 

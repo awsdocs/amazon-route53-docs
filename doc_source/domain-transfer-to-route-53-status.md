@@ -48,7 +48,7 @@ We're verifying that the transfer has completed successfully, and we're synchron
 **Sending updated contact information to the registry \(step 11 of 14\)**  
 If you changed the ownership of the domain when you requested the transfer, we're trying to make this change\. However, most registries don't allow a transfer of ownership as part of the domain transfer process\.
 
-**Finalizing the transfer to Route 53 \(step 12 of 14\)**  
+**Finalizing the transfer to Route 53 \(step 12 of 14\)**  
 We're confirming that the transfer process was successful\.
 
 **Finalizing transfer \(step 13 of 14\)**  

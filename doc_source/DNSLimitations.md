@@ -152,7 +152,7 @@ Five requests per second per AWS account\. If you submit more than five requests
 If your application exceeds this limit, we recommend that you implement exponential backoff for retries\. For more information, see [Error Retries and Exponential Backoff in AWS](https://docs.aws.amazon.com/general/latest/gr/api-retries.html) in the *Amazon Web Services General Reference*\.
 
 **`ChangeResourceRecordSets` requests**  
-If Route 53 can't process a request before the next request arrives, it will reject subsequent requests for the same hosted zone and return an HTTP 400 error \(`Bad request`\)\. The response header also includes a `Code` element with a value of `PriorRequestNotComplete` and a `Message` element with a value of `The request was rejected because Route 53 was still processing a prior request.`
+If Route 53 can't process a request before the next request arrives, it will reject subsequent requests for the same hosted zone and return an HTTP 400 error \(`Bad request`\)\. The response header also includes a `Code` element with a value of `PriorRequestNotComplete` and a `Message` element with a value of `The request was rejected because Route 53 was still processing a prior request.`
 
 **`CreateHealthCheck` requests**  
 You can submit a maximum of 1,000 `CreateHealthCheck` requests in a 24\-hour period\.

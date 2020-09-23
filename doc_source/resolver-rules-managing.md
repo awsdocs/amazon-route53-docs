@@ -71,7 +71,7 @@ If you need to control reverse lookups in your VPC, you can add rules to your ou
 
 1. Add these rules to your outbound resolver endpoint\.
 
-Note that turning on `enableDNSHostNames` for your VPC will automatically add PTR records\. See [Resolving DNS queries between VPCs and your network](resolver.md)\. The previous procedure is only required if you want to explicitly specify a resolver for given IP ranges—for example, when forwarding queries to an Active Directory server\.
+Note that turning on `enableDNSHostNames` for your VPC automatically adds PTR records\. See [Resolving DNS queries between VPCs and your network](resolver.md)\. The previous procedure is required only if you want to explicitly specify a resolver for given IP ranges—for example, when forwarding queries to an Active Directory server\.
 
 ## Associating forwarding rules with a VPC<a name="resolver-rules-managing-associating-rules"></a>
 

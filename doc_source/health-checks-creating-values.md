@@ -174,6 +174,11 @@ The number of consecutive health checks that an endpoint must pass or fail for R
 Whether you want Route 53 to determine the health of an endpoint by submitting an HTTP or HTTPS request to the endpoint and searching the response body for a specified string\. If the response body contains the value that you specify in **Search string**, Route 53 considers the endpoint healthy\. If not, or if the endpoint doesn't respond, Route 53 considers the endpoint unhealthy\. The search string must appear entirely within the first 5,120 bytes of the response body\.  
 After you create a health check, you can't change the value of **String matching**\.   
 If you choose **Yes** for the value of **String matching**, an additional charge applies\. For more information, see [Route 53 Pricing](https://aws.amazon.com/route53/pricing/)\.
+**How health checkers handle a compressed response **  
+If the endpoint is a web server that returns a response that is compressed, the Route 53 health checker will uncompress the response before checking for the specified search string only if the web server compressed the response using a compression algorithm that health checkers support\. Health checkers support the following compression algorithms:  
++ Gzip
++ Deflate
+If the response is compressed using another algorithm, the health checker can't decompress the response before searching for the string\. In this case, the search will almost always fail, and Route 53 will consider the endpoint unhealthy 
 
 **Search string \(Only When "String matching" Is Enabled\)**  
 The string that you want Route 53 to search for in the body of the response from your endpoint\. The maximum length is 255 characters\.  

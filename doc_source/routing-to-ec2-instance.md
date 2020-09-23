@@ -43,23 +43,21 @@ To configure Amazon Route 53 to route traffic to an EC2 instance, perform the f
 
 1. Choose the name of the hosted zone that matches the name of the domain that you want to route traffic for\.
 
-1. Choose **Create Record Set**\.
+1. Choose **Create record**\.
 
 1. Specify the following values:  
-**Name**  
+**Routing policy**  
+Choose the applicable routing policy\. For more information, see [Choosing a routing policy](routing-policy.md)\.  
+**Record name**  
 Enter the domain name that you want to use to route traffic to your EC2 instance\. The default value is the name of the hosted zone\.  
 For example, if the name of the hosted zone is example\.com and you want to use acme\.example\.com to route traffic to your EC2 instance, enter **acme**\.  
-**Type**  
+**Value/Route traffic to**  
+Choose **IP address or another value depending on the record type**\. Enter the IP address that you got in step 1\.  
+**Record type**  
 Choose **A – IPv4 address**\.  
-**Alias**  
-Accept the default value of **No**\.  
-**TTL \(Seconds\)**  
-Accept the default value of **300**\.  
-**Value**  
-Enter the IP address that you got in step 1\.  
-**Routing Policy**  
-Choose the applicable routing policy\. For more information, see [Choosing a routing policy](routing-policy.md)\.
+**TTL \(seconds\)**  
+Accept the default value of **300**\.
 
-1. Choose **Create**\.
+1. Choose **Create records**\.
 
    Changes generally propagate to all Route 53 servers within 60 seconds\. When propagation is done, you'll be able to route traffic to your EC2 instance by using the name of the record that you created in this procedure\. 

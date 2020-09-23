@@ -47,29 +47,27 @@ See the procedure [To create an Amazon Route 53 alias record to route traffic t
 
 1. Sign in to the AWS Management Console and open the Route 53 console at [https://console\.aws\.amazon\.com/route53/](https://console.aws.amazon.com/route53/)\.
 
-1. In the navigation pane, choose **Hosted Zones**\.
+1. In the navigation pane, choose **Hosted zones**\.
 
 1. Choose the name of the hosted zone that you want to use to route traffic to your Elastic Beanstalk environment\.
 
-1. Choose **Create Record Set**\.
+1. Choose **Create record**\.
 
 1. Specify the following values:  
-**Name**  
+**Routing policy**  
+Choose the applicable routing policy\. For more information, see [Choosing a routing policy](routing-policy.md)\.  
+**Record name**  
 Enter the domain name that you want to use to route traffic to your Elastic Beanstalk environment\. The default value is the name of the hosted zone\.  
 For example, if the name of the hosted zone is example\.com and you want to use acme\.example\.com to route traffic to your environment, enter **acme**\.  
 You can't create a CNAME record that has the same name as the hosted zone\.  
-**Type**  
-Choose **CNAME – Canonical name**\.  
-**Alias**  
-Choose **No**\.  
-**TTL \(Seconds\)**  
-Accept the default value of **300**\.  
-**Value**  
-Enter the domain name of the environment that you want to route traffic to\. This is the value that you get when you perform the procedure in the topic [Getting the domain name for your Elastic Beanstalk environment](#routing-to-beanstalk-environment-get-domain-name)\.  
-**Routing Policy**  
-Choose the applicable routing policy\. For more information, see [Choosing a routing policy](routing-policy.md)\.
+**Value/Route traffic to**  
+Choose **IP address or another value depending on the record type** and enter the value that you get when you perform the procedure in the topic [Getting the domain name for your Elastic Beanstalk environment](#routing-to-beanstalk-environment-get-domain-name)\. If you used different accounts to create your Route 53 hosted zone and your Elastic Beanstalk environment, enter the CNAME attributes for the Elastic Beanstalk environment\.  
+**Record type**  
+Choose **CNAME**\.  
+**TTL \(seconds\)**  
+Accept the default value of **300**\.
 
-1. Choose **Create**\.
+1. Choose **Create records**\.
 
    Changes generally propagate to all Route 53 servers within 60 seconds\. <a name="routing-to-beanstalk-environment-create-alias-procedure"></a>
 
@@ -77,30 +75,26 @@ Choose the applicable routing policy\. For more information, see [Choosing a rou
 
 1. Sign in to the AWS Management Console and open the Route 53 console at [https://console\.aws\.amazon\.com/route53/](https://console.aws.amazon.com/route53/)\.
 
-1. In the navigation pane, choose **Hosted Zones**\.
+1. In the navigation pane, choose **Hosted zones**\.
 
 1. Choose the name of the hosted zone that you want to use to route traffic to your Elastic Beanstalk environment\.
 
-1. Choose **Create Record Set**\.
+1. Choose **Create record**\.
 
 1. Specify the following values:  
-**Name**  
+**Routing policy**  
+Choose the applicable routing policy\. For more information, see [Choosing a routing policy](routing-policy.md)\.  
+**Record name**  
 Enter the domain name that you want to use to route traffic to your Elastic Beanstalk environment\. The default value is the name of the hosted zone\.  
 For example, if the name of the hosted zone is example\.com and you want to use acme\.example\.com to route traffic to your environment, enter **acme**\.  
-**Type**  
-Accept the default, **A – Ipv4 address**\.  
-**Alias**  
-Choose **Yes**\.  
-**Alias Target**  
-Click in the field, and choose the domain name of the environment that you want to route traffic to\. This is the value that you get when you perform the procedure in the topic [Getting the domain name for your Elastic Beanstalk environment](#routing-to-beanstalk-environment-get-domain-name)\.  
+**Value/Route traffic to**  
+Choose **Alias to Elastic Beanstalk environment**, then choose the Region that the endpoint is from\. Choose the domain name of the environment that you want to route traffic to\. This is the value that you get when you perform the procedure in the topic [Getting the domain name for your Elastic Beanstalk environment](#routing-to-beanstalk-environment-get-domain-name)\.  
 If you used different accounts to create your Route 53 hosted zone and your Elastic Beanstalk environment, enter the CNAME attribute for the Elastic Beanstalk environment\.   
-**Alias Hosted Zone ID**  
-This value appears automatically based on the environment that you choose for **Alias Target**\.  
-**Routing Policy**  
-Choose the applicable routing policy\. For more information, see [Choosing a routing policy](routing-policy.md)\.  
-**Evaluate Target Health**  
-Accept the default value, **No**\.
+**Record type**  
+Accept the default, **A – IPv4 address**\.  
+**Evaluate target health**  
+Accept the default value, **Yes**\.
 
-1. Choose **Create**\.
+1. Choose **Create records**\.
 
    Changes generally propagate to all Route 53 servers within 60 seconds\. When propagation is done, you'll be able to route traffic to your Elastic Beanstalk environment by using the name of the alias record that you create in this procedure\. 

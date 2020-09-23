@@ -17,6 +17,6 @@ Your changes to records take time to propagate to the Route 53 DNS servers\. Cu
 
    You can't delete the records that have a value of **NS** or **SOA** for **Type**\.
 
-1. Choose **Delete Record Set**\.
+1. Choose **Delete**\.
 
-1. Choose **OK** to confirm\.
+1. Choose **Delete** to close the dialog box\.

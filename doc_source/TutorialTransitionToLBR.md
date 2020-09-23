@@ -18,8 +18,8 @@ By updating the weights in these weighted alias records, you can gradually shift
 1. Make a copy of the record for `www.example.com`, but use a new domain name, for example, `copy-www.example.com`\. Give the new record the same **Type** \(A\) and **Value** \(`W.W.W.W`\) as the record for `www.example.com`\.
 
 1. Update the existing A record for `www.example.com` to make it a weighted alias record:
-   + For the value of **Alias Target**, specify `copy-www.example.com`\.
-   + For the value of **Weight**, specify 100\.
+   + For **Value/Route traffic to**, choose **Alias to another record in this hosted zone**, and specify `copy-www.example.com`\.
+   + For **Weight**, specify 100\.
 
    When you're finished with the update, Route 53 will continue to use this record to route all traffic to the resource that has an IP address of `W.W.W.W`\.
 
@@ -37,8 +37,8 @@ By updating the weights in these weighted alias records, you can gradually shift
 1. Let's now add the `www-lbr.example.com` latency record into the `www.example.com` weighted record and begin routing limited traffic to the corresponding Amazon EC2 instances\. This means that the Amazon EC2 instance in the US East \(Ohio\) region will be getting traffic from both weighted records\.
 
    Create another weighted alias record for `www.example.com`:
-   + For the value of **Alias Target**, specify `www-lbr.example.com.`
-   + For the value of **Weight**, specify 1\.
+   + For **Value/Route traffic to**, choose **Alias to another record in this hosted zone**, and specify `www-lbr.example.com.`
+   + For **Weight**, specify 1\.
 
    When you finish and your changes are synchronized to Route 53 servers, Route 53 will begin to route a tiny fraction of your traffic \(1/101\) to the Amazon EC2 instances for which you created latency records in Step 3\.
 

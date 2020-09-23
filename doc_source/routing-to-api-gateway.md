@@ -14,7 +14,7 @@ Route 53 doesn't charge for alias queries to API Gateway APIs or other AWS reso
 **Topics**
 + [Prerequisites](#routing-to-api-gateway-prereqs)
 + [Configuring Route 53 to route traffic to a regional API Gateway endpoint](#routing-to-api-gateway-config)
-+ [Configuring Route 53 to route traffic to an edge\-optimized API Gateway endpoint](#routing-to-api-gateway-config-edge-optimized)
++ [Configuring Route 53 to route traffic to an edge\-optimized API Gateway endpoint](#routing-to-api-gateway-config-edge-optimized)
 
 ## Prerequisites<a name="routing-to-api-gateway-prereqs"></a>
 
@@ -43,40 +43,39 @@ To configure Route 53 to route traffic to a regional API Gateway endpoint, perf
 
 1. Open the Route 53 console at [https://console\.aws\.amazon\.com/route53/](https://console.aws.amazon.com/route53/)\.
 
-1. In the navigation pane, choose **Hosted Zones**\.
+1. In the navigation pane, choose **Hosted zones**\.
 
 1. Choose the name of the hosted zone that has the domain name that you want to use to route traffic to your API\.
 
-1. Choose **Create Record Set**\.
+1. Choose **Create record**\.
 
 1. Specify the following values:  
-**Name**  
+**Routing policy**  
+Choose the applicable routing policy\. For more information, see [Choosing a routing policy](routing-policy.md)\.  
+**Record name**  
 Enter the domain name that you want to use to route traffic to your API\.   
 The API that you want to route traffic to must include a custom domain name, such as api\.example\.com, that matches the name of the Route 53 record\.  
-**Type**  
-Choose **A – IPv4 address**\.  
-**Alias**  
-Choose **Yes**\.  
-**Alias Target**  
-How you specify the value for **Alias Target** depends on whether you created the hosted zone and the API using the same AWS account or different accounts:  
-   + **Same account** – Choose the list, and find the category **API Gateway APIs**\. The list of target domain names includes only APIs that have a custom domain name that matches the value that you specified for **Name**\. Choose the applicable value\.
+**Value/Route traffic to**  
+Choose **Alias to API Gateway API**, then choose the Region that the endpoint is from\.   
+How you specify the value for **Endpoint** depends on whether you created the hosted zone and the API using the same AWS account or different accounts:  
+   + **Same account** – The list of target domain names includes only APIs that have a custom domain name that matches the value that you specified for **Record name**\. Choose the applicable value\.
    + **Different accounts** – Enter the value that you got in step 1 of this procedure\.  
-**Routing Policy**  
-Choose the applicable routing policy\. For more information, see [Choosing a routing policy](routing-policy.md)\.  
-**Evaluate Target Health**  
-Accept the default value of **No**\.
+**Record type**  
+Choose **A – IPv4 address**\.  
+**Evaluate target health**  
+Accept the default value of **Yes**\.
 
-1. Choose **Create**\.
+1. Choose **Create records**\.
 
    Changes generally propagate to all Route 53 servers within 60 seconds\. When propagation is done, you'll be able to route traffic to your API by using the name of the alias record that you created in this procedure\.
 
-## Configuring Route 53 to route traffic to an edge\-optimized API Gateway endpoint<a name="routing-to-api-gateway-config-edge-optimized"></a>
+## Configuring Route 53 to route traffic to an edge\-optimized API Gateway endpoint<a name="routing-to-api-gateway-config-edge-optimized"></a>
 
 To configure Route 53 to route traffic to an edge\-optimized API Gateway endpoint, perform the following procedure\. <a name="routing-to-api-gateway-config-edge-optimized-procedure"></a>
 
 **To route traffic to an edge\-optimized API Gateway endpoint**
 
-1. If you created the Route 53 hosted zone and the regional endpoint using the same account, skip to step 2\. 
+1. If you created the Route 53 hosted zone and the regional endpoint using the same account, skip to step 2\. 
 
    If you created the hosted zone and the regional endpoint using different accounts, get the target domain name for the custom domain name that you want to use: 
 
@@ -88,29 +87,28 @@ To configure Route 53 to route traffic to an edge\-optimized API Gateway endpoi
 
 1. Open the Route 53 console at [https://console\.aws\.amazon\.com/route53/](https://console.aws.amazon.com/route53/)\.
 
-1. In the navigation pane, choose **Hosted Zones**\.
+1. In the navigation pane, choose **Hosted zones**\.
 
 1. Choose the name of the hosted zone that has the domain name that you want to use to route traffic to your API\.
 
-1. Choose **Create Record Set**\.
+1. Choose **Create record**\.
 
 1. Specify the following values:  
-**Name**  
+**Routing policy**  
+Choose the applicable routing policy\. For more information, see [Choosing a routing policy](routing-policy.md)\.  
+**Record name**  
 Enter the domain name that you want to use to route traffic to your API\.   
 The API that you want to route traffic to must include a custom domain name, such as api\.example\.com, that matches the name of the Route 53 record\.  
-**Type**  
-Choose **A – IPv4 address**\.  
-**Alias**  
-Choose **Yes**\.  
-**Alias Target**  
-How you specify the value for **Alias Target** depends on whether you created the hosted zone and the API using the same AWS account or different accounts:  
-   + **Same account** – Choose the list, and find the category **CloudFront distributions**\. The list of target domain names includes only distributions that have a custom domain name that matches the value that you specified for **Name**\. Choose the applicable value\.
+**Value/Route traffic to**  
+Choose **Alias to API Gateway API**, then choose the Region that the endpoint is from\.   
+How you specify the value for **Endpoint** depends on whether you created the hosted zone and the API using the same AWS account or different accounts:  
+   + **Same account** – The list of target domain names includes only distributions that have a custom domain name that matches the value that you specified for **Record name**\. Choose the applicable value\.
    + **Different accounts** – Enter the value that you got in steps 1a through 1c of this procedure\.  
-**Routing Policy**  
-Choose the applicable routing policy\. For more information, see [Choosing a routing policy](routing-policy.md)\.  
-**Evaluate Target Health**  
-Accept the default value of **No**\.
+**Record type**  
+Choose **A – IPv4 address**\.  
+**Evaluate target health**  
+Accept the default value of **Yes**\.
 
-1. Choose **Create**\.
+1. Choose **Create records**\.
 
    Changes generally propagate to all Route 53 servers within 60 seconds\. When propagation is done, you can route traffic to your API by using the name of the alias record that you created in this procedure\.

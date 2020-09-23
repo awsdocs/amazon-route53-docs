@@ -2,7 +2,7 @@
 
 If you don't renew a domain before the end of the late\-renewal period or if you accidentally delete the domain, some registries for top\-level domains \(TLDs\) allow you to restore the domain before it becomes available for others to register\.
 
-When a domain is deleted or it passes the end of the late\-renewal period, it no longer appears in the Amazon Route 53 console\. 
+When a domain is deleted or it passes the end of the late\-renewal period, it no longer appears in the Amazon Route 53 console\. 
 
 **Important**  
 The price for restoring a domain is typically higher and sometimes much higher than the price for registering or renewing a domain\. For the current price for restoring a domain, see the "Restoration Price" column in [Amazon Route 53 Pricing for Domain Registration](https://d32ze2gidvkk54.cloudfront.net/Amazon_Route_53_Domain_Registration_Pricing_20140731.pdf)\.
@@ -19,7 +19,7 @@ You can't use AWS credits to pay the fee for restoring an expired domain\.<a nam
 **Important**  
 We forward restoration requests to Gandi, which processes the requests during business hours Monday through Friday\. Gandi is based in Paris, where the time is UTC/GMT \+1 hour\. As a result, depending on when you submit your request, in rare cases it can take a week or more for a request to be processed\.
 
-1. Review the price for restoring a domain, which is often higher and sometimes much higher than the price for registering or renewing a domain\. In [Amazon Route 53 Pricing for Domain Registration](https://d32ze2gidvkk54.cloudfront.net/Amazon_Route_53_Domain_Registration_Pricing_20140731.pdf), find the TLD for your domain \(such as \.com\) and check the price in the "Restoration Price" column\. If you still want to restore the domain, make note of the price; you'll need it in a later step\.
+1. Review the price for restoring a domain, which is often higher and sometimes much higher than the price for registering or renewing a domain\. In [Amazon Route 53 Pricing for Domain Registration](https://d32ze2gidvkk54.cloudfront.net/Amazon_Route_53_Domain_Registration_Pricing_20140731.pdf), find the TLD for your domain \(such as \.com\) and check the price in the "Restoration Price" column\. If you still want to restore the domain, make note of the price; you'll need it in a later step\.
 
 1. Using the AWS account that the domain was registered to, sign in to the [AWS Support Center](https://console.aws.amazon.com/support/home?region=us-east-1#/case/create?issueType=customer-service&serviceCode=billing&categoryCode=domain-name-registration-issue)\. 
 

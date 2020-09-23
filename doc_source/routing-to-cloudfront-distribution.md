@@ -50,7 +50,7 @@ Changes generally propagate to all Route 53 servers within 60 seconds\. When pr
 
    1. Choose the name of the distribution that you want to route traffic to\.
 
-   1. On the **General** tab, get the value of the **Domain Name** field\.
+   1. On the **General** tab, get the value of the **Domain name** field\.
 
    1. Check the **IPv6** field to see whether IPv6 is enabled for the distribution\. If IPv6 is enabled, you'll need to create two alias records for the distribution, one to route IPv4 traffic to the distribution, and one to route IPv6 traffic\.
 
@@ -62,28 +62,26 @@ Changes generally propagate to all Route 53 servers within 60 seconds\. When pr
 
 1. Sign in to the AWS Management Console and open the Route 53 console at [https://console\.aws\.amazon\.com/route53/](https://console.aws.amazon.com/route53/)\.
 
-1. In the navigation pane, choose **Hosted Zones**\.
+1. In the navigation pane, choose **Hosted zones**\.
 
 1. Choose the name of the hosted zone for the domain that you want to use to route traffic to your CloudFront distribution\.
 
-1. Choose **Create Record Set**\.
+1. Choose **Create record**\.
 
 1. Specify the following values:  
-**Name**  
+**Routing policy**  
+Choose the applicable routing policy\. For more information, see [Choosing a routing policy](routing-policy.md)\.  
+**Record name**  
 Enter the domain name that you want to use to route traffic to your CloudFront distribution\. The default value is the name of the hosted zone\.  
 For example, if the name of the hosted zone is example\.com and you want to use **acme\.example\.com** to route traffic to your distribution, enter **acme**\.  
-**Type**  
+**Value/Route traffic to**  
+Choose **Alias to CloudFront distributions**\. The us\-east\-1 Region is selected by default\. Choose the name that CloudFront assigned to the distribution when you created it\. This is the value that you got in step 1\.  
+**Record type**  
 Choose **A – IPv4 address**\.  
 If IPv6 is enabled for the distribution and you're creating a second record, choose **AAAA – IPv6 address**\.   
-**Alias**  
-Choose **Yes**\.  
-**Alias Target**  
-In the **CloudFront distributions** section, choose the name that CloudFront assigned to the distribution when you created it\. This is the value that you got in step 1\.  
-**Routing Policy**  
-Choose the applicable routing policy\. For more information, see [Choosing a routing policy](routing-policy.md)\.  
-**Evaluate Target Health**  
+**Evaluate target health**  
 Accept the default value of **No**\.
 
-1. Choose **Create**\.
+1. Choose **Create records**\.
 
-1. If IPv6 is enabled for the distribution, repeat steps 6 through 8\. Specify the same settings except for the **Type** field, as explained in step 7\.
+1. If IPv6 is enabled for the distribution, repeat steps 6 through 8\. Specify the same settings except for the **Record type** field, as explained in step 7\.

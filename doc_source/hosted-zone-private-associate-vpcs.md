@@ -11,12 +11,16 @@ For information about how to associate more VPCs with a private hosted zone usin
 
 1. Sign in to the AWS Management Console and open the Route 53 console at [https://console\.aws\.amazon\.com/route53/](https://console.aws.amazon.com/route53/)\.
 
-1. In the navigation pane, choose **Hosted Zones**\.
+1. In the navigation pane, choose **Hosted zones**\.
 
 1. Choose the radio button for the private hosted zone that you want to associate more VPCs with\.
 
-1. In the right pane, in **VPC ID**, choose the ID of the VPC that you want to associate with this hosted zone\.
+1. Choose **Edit**\.
 
-1. Choose **Associate New VPC**\.
+1. Choose **Add VPC**\.
 
-1. To associate more VPCs with this hosted zone, repeat steps 4 and 5\.
+1. Choose the Region and the ID of the VPC that you want to associate with this hosted zone\.
+
+1. To associate more VPCs with this hosted zone, repeat steps 5 and 6\.
+
+1. Choose **Save changes**\.

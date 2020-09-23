@@ -14,7 +14,7 @@ When you want to transfer a domain from one AWS account to another, you have two
 
 **Transfer the domain yourself**  
 You can transfer the domain yourself programmatically, using the AWS CLI, one of the AWS SDKs, or the Route 53 API\. See the following documentation:  
-+ For an overview of the transfer process and documentation about the API actions that you use to transfer a domain using the Route 53 domain registration API, see [TransferDomainToAnotherAwsAccount](https://docs.aws.amazon.com/Route53/latest/APIReference/API_domains_TransferDomainToAnotherAwsAccount.html) in the *Amazon Route 53 API Reference*\.
++ For an overview of the transfer process and documentation about the API actions that you use to transfer a domain using the Route 53 domain registration API, see [TransferDomainToAnotherAwsAccount](https://docs.aws.amazon.com/Route53/latest/APIReference/API_domains_TransferDomainToAnotherAwsAccount.html) in the *Amazon Route 53 API Reference*\.
 + For documentation about other options for transferring domains programmatically, see "SDKs & Toolkits" in the [Guides and API References](https://docs.aws.amazon.com/#user_guides) section of the "AWS documentation" page\.
 
 **Contact AWS Support**  

@@ -38,9 +38,9 @@ To use a domain name such as example\.com, you need to find a domain name that i
 
 1. Sign in to the AWS Management Console and open the Route 53 console at [https://console\.aws\.amazon\.com/route53/](https://console.aws.amazon.com/route53/)\.
 
-1. If you're new to Route 53, under **Domain Registration**, choose **Get Started Now**\.
+1. If you're new to Route 53, choose **Get started**\.
 
-   If you're already using Route 53, in the navigation pane, choose **Registered Domains**\.
+   If you're already using Route 53, in the navigation pane, choose **Registered domains**\.
 
 1. Choose **Register Domain**\.
 
@@ -224,7 +224,7 @@ Now that you have an S3 bucket to save your website in, you can create the first
    ```
    <html>
    <head>
-   <title>Amazon Route 53 Getting Started</title>	
+   <title>Amazon Route 53 Getting Started</title>	
    </head>
    
    <body>
@@ -232,7 +232,7 @@ Now that you have an S3 bucket to save your website in, you can create the first
    <h1>Routing Internet Traffic to an Amazon S3 Bucket for Your Website</h1>
    
    <p>For more information, see 
-   <a href="https://docs.aws.amazon.com/Route53/latest/DeveloperGuide/getting-started.html">Getting Started with Amazon Route 53</a> 
+   <a href="https://docs.aws.amazon.com/Route53/latest/DeveloperGuide/getting-started.html">Getting Started with Amazon Route 53</a> 
    in the <emphasis>Amazon Route 53 Developer Guide</emphasis>.</p>
    
    </body>
@@ -264,32 +264,34 @@ When you registered your domain, Amazon Route 53 automatically created a hosted
 
 1. In the list of hosted zones, choose the name of your domain\. 
 
-1. Choose **Create Record Set**\.
+1. Choose **Create record**\.
 **Note**  
 Each record contains information about how you want to route traffic for one domain \(such as example\.com\) or subdomain \(such as www\.example\.com or test\.example\.com\)\. Records are stored in the hosted zone for your domain\.
 
+1. Choose **Simple routing** and choose **Next**\.
+
+1. Choose **Define simple record**\.
+
 1. Specify the following values:  
-**Name**  
+**Record name**  
 For the first record that you create, accept the default value, which is the name of your hosted zone and your domain\. This will route internet traffic to the bucket that has the same name as your domain\.  
 If you created a second S3 bucket, for www\.*your\-domain\-name*, you repeat this step to create a second record\. For the second record, enter **www**\. This will route internet traffic to the www\.*your\-domain\-name* bucket\.  
-**Type**  
-Choose **A – IPv4 address**\.  
-**Alias**  
-Choose **Yes**\.  
-**Alias Target**  
-If you used the same account to create the Route 53 hosted zone and the Amazon S3 buckets, you can choose the name of the bucket from the **Alias Target** list:  
-   + For the first record that you create, choose the bucket that has the same name as your hosted zone and your domain\.
-   + For the second record, choose the bucket that has the name www\.*your\-domain\-name*\.
-If another account created the S3 bucket, enter the name of the region that you created your S3 bucket in\. Use the applicable value from the **Website Endpoint** column in the table [Amazon S3 website endpoints](https://docs.aws.amazon.com/general/latest/gr/s3.html#s3_website_region_endpoints) in the *Amazon Web Services General Reference*\.  
-If different accounts created the hosted zone and the S3 bucket, you specify the same value for **Alias Target** for both records\. Route 53 figures out which bucket to route traffic to based on the name of the record\.  
-**Routing Policy**  
-Accept the default value of **Simple**\.  
-**Evaluate Target Health**  
-Accept the default value of **No**\.
+**Value/Route traffic to**  
+Choose **Alias to S3 website endpoint**, then choose the AWS Region that the bucket was created in\.  
+For the first record that you create, choose the bucket that has the same name as your hosted zone and your domain\.  
+For the second record, choose the bucket that has the name **www\.*your\-domain\-name***\.  
+If another account created the S3 bucket, enter the name of the Region that you created your S3 bucket in\. Use the appropriate value from the **Website endpoint** column in the table [Amazon S3 website endpoints](https://docs.aws.amazon.com/general/latest/gr/s3.html#s3_website_region_endpoints) in the AWS General Reference\.  
+If different accounts created the hosted zone and the S3 bucket, you specify the same value for **Choose S3 bucket** for both records\. Route 53 figures out which bucket to route traffic to based on the name of the record\.  
+**Record type**  
+Accept the default value of **A – Routes traffic to an IPv4 address and some AWS resources**\.  
+**Evaluate target health**  
+Accept the default value of **Yes**\.
 
-1. Choose **Create**\.
+1. Choose **Define simple records**\.
 
-1. If you created a second S3 bucket, for www\.*your\-domain\-name*, repeat steps 4 through 6 to create a record for www\.*your\-domain\-name* in the same hosted zone\.
+1. Choose **Create records**\.
+
+1. If you created a second S3 bucket, for www\.*your\-domain\-name*, repeat steps 4 through 9 to create a record for www\.*your\-domain\-name* in the same hosted zone\.
 
 ## Step 6: Test your website<a name="getting-started-test"></a>
 

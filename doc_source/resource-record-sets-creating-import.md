@@ -7,7 +7,6 @@ A zone file uses a standard format known as BIND to represent records in a text 
 
 If you want to create records by importing a zone file, note the following:
 + The zone file must be in RFC\-compliant format\.
-+ The hosted zone must be empty except for the default NS and SOA records\.
 + The domain name of the records in the zone file must match the name of the hosted zone\.
 + Route 53 supports the `$ORIGIN` and `$TTL` keywords\. If the zone file includes `$GENERATE` or `$INCLUDE` keywords, the import fails and Route 53 returns an error\.
 + When you import the zone file, Route 53 ignores the SOA record in the zone file\. Route 53 also ignores any NS records that have the same name as the hosted zone\.
@@ -32,17 +31,17 @@ Route 53 doesn't support exporting records to a zone file\.<a name="RRSchanges_
 
 1. In the navigation pane, choose **Hosted zones**\.
 
-1. On the **Hosted Zones** page, create a new hosted zone:
+1. On the **Hosted zones** page, create a new hosted zone:
 
-   1. Choose **Create Hosted Zone**\.
+   1. Choose **Create hosted zone**\.
 
-   1. Enter the name of your domain and, optionally, a comment\. Note that the comment can't be edited later\.
+   1. Enter the name of your domain and, optionally, a comment\. 
 
    1. Choose **Create**\.
 
-1. Choose **Import Zone File**\.
+1. Choose **Import zone file**\.
 
-1. In the **Import Zone File** pane, paste the contents of your zone file into the **Zone File** text box\.
+1. In the **Import zone file** pane, paste the contents of your zone file into the **Zone file** text box\.
 
 1. Choose **Import**\.
 **Note**  

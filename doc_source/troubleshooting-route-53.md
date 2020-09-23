@@ -5,7 +5,7 @@ The topics in this chapter can help you troubleshoot problems with your domain r
 **Topics**
 + [My domain is unavailable on the internet](troubleshooting-domain-unavailable.md)
 + [My domain is suspended \(status is ClientHold\)](troubleshooting-domain-suspended.md)
-+ [Transferring my domain to Amazon Route 53 failed](troubleshooting-domain-transfer-failed.md)
++ [Transferring my domain to Amazon Route 53 failed](troubleshooting-domain-transfer-failed.md)
 + [I changed DNS settings, but they haven't taken effect](troubleshooting-new-dns-settings-not-in-effect.md)
 + [DNS resolution fails intermittently](troubleshooting-intermittent-dns-resolution-failure.md)
 + [My browser displays a "Server not found" error](troubleshooting-server-not-found.md)

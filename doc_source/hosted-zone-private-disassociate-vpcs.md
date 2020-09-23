@@ -9,10 +9,12 @@ You can't disassociate the last VPC from a private hosted zone\. If you want to 
 
 1. Sign in to the AWS Management Console and open the Route 53 console at [https://console\.aws\.amazon\.com/route53/](https://console.aws.amazon.com/route53/)\.
 
-1. In the navigation pane, choose **Hosted Zones**\.
+1. In the navigation pane, choose **Hosted zones**\.
 
-1. Choose the private hosted zone that you want to disassociate one or more VPCs from\.
+1. Choose the radio button for the private hosted zone that you want to disassociate one or more VPCs from\.
 
-1. In the right pane, choose the **x** icon next to the VPC that you want to disassociate from this hosted zone\.
+1. Choose **Edit**\.
 
-1. Choose **Disassociate** to confirm\.
+1. Choose **Remove VPC** next to the VPC that you want to disassociate from this hosted zone\.
+
+1. Choose **Save changes**\.

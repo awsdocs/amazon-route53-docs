@@ -130,6 +130,6 @@ CloudWatch has accumulated enough statistics from Route 53 health checks to det
 
 1. In the navigation pane, choose **Metrics**\.
 
-1. On the **All metrics** tab, choose **Route 53**\.
+1. On the **All metrics** tab, choose **Route 53**\.
 
 1. Choose **Health Check Metrics**\.

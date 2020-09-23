@@ -3,7 +3,7 @@
 When you create records using the Amazon Route 53 console, the values that you specify depend on the routing policy that you want to use and on whether you're creating alias records, which route traffic to AWS resources\.
 
 **Topics**
-+ [Values for basic records](resource-record-sets-values-basic.md)
++ [Values for simple records](resource-record-sets-values-basic.md)
 + [Values for alias records](resource-record-sets-values-alias.md)
 + [Values for failover records](resource-record-sets-values-failover.md)
 + [Values for failover alias records](resource-record-sets-values-failover-alias.md)

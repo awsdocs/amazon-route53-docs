@@ -9,11 +9,11 @@ You can create a hosted zone only for a domain that you have permission to admin
 
 1. Sign in to the AWS Management Console and open the Route 53 console at [https://console\.aws\.amazon\.com/route53/](https://console.aws.amazon.com/route53/)\.
 
-1. If you're new to Route 53, choose **Get Started Now** under **DNS Management**\. On the next page, choose **Create Hosted Zone**\.
+1. If you're new to Route 53, choose **Get started** under **DNS management**\. 
 
    If you're already using Route 53, choose **Hosted zones** in the navigation pane\.
 
-1. Choose **Create Hosted Zone**\.
+1. Choose **Create hosted zone**\.
 
 1. In the **Create Hosted Zone** pane, enter the name of the domain that you want to route traffic for\. You can also optionally enter a comment\.
 

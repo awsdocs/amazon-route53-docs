@@ -8,7 +8,7 @@ Here's an overview of how health checking works if you want to be notified when 
 
 1. You create a health check and specify values that define how you want the health check to work, such as the following:
    + The IP address or domain name of the endpoint, such as a web server, that you want Route 53 to monitor\. \(You can also monitor the status of other health checks, or the state of a CloudWatch alarm\.\)
-   + The protocol that you want Amazon Route 53 to use to perform the check: HTTP, HTTPS, or TCP\.
+   + The protocol that you want Amazon Route 53 to use to perform the check: HTTP, HTTPS, or TCP\.
    + How often you want Route 53 to send a request to the endpoint\. This is the *request interval*\.
    + How many consecutive times the endpoint must fail to respond to requests before Route 53 considers it unhealthy\. This is the *failure threshold*\.
    + Optionally, how you want to be notified when Route 53 detects that the endpoint is unhealthy\. When you configure notification, Route 53 automatically sets a CloudWatch alarm\. CloudWatch uses Amazon SNS to notify users that an endpoint is unhealthy\.

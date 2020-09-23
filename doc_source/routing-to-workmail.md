@@ -25,7 +25,7 @@ To route traffic to Amazon WorkMail, perform the following four procedures\.<a n
 
 1. In the Route 53 console, do the following:
 
-   1. In the navigation pane, choose **Hosted Zones**\.
+   1. In the navigation pane, choose **Hosted zones**\.
 
    1. Choose the name of the hosted zone that you want to use for your Amazon WorkMail email domain\.
 
@@ -35,17 +35,17 @@ To route traffic to Amazon WorkMail, perform the following four procedures\.<a n
 
 1. In the Route 53 console, do the following:
 
-   1. Choose **Create Record Set**\.
+   1. Choose **Create record**, and choose **Simple routing**\.
 
-   1. For **Name**, paste the value that you copied in step 5\.
+   1. For **Record name**, paste the value that you copied in step 5\.
 
-   1. For **Type**, choose **TXT – Text**\.
+   1. For **Record type**, choose **TXT – Text**\.
 
 1. In the Amazon WorkMail console, for the TXT record, copy the value of the **Value** column, including the quotation marks\.
 
 1. In the Route 53 console, do the following:
 
-   1. For **Value**, paste the value that you copied in step 7\.
+   1. For **Value/Route traffic to**, choose **IP address or another value depending on the record type**, and paste the value that you copied in step 7\.
 
       Don't change any other settings\.
 
@@ -57,15 +57,15 @@ To route traffic to Amazon WorkMail, perform the following four procedures\.<a n
 
 1. In the Route 53 console, do the following:
 
-   1. Choose **Create Record Set**\.
+   1. Choose **Create record**\.
 
-   1. For **Value**, paste the value that you copied in step 1\.
+   1. For **Value/Route traffic to**, choose **IP address or another value depending on the record type**, and paste the value that you copied in step 1\.
 
-   1. For **Type**, choose **MX – Mail Exchange**\.
+   1. For **Record type**, choose **MX – Mail Exchange**\.
 
       Don't change any other settings\.
 
-   1. Choose **Create**\.<a name="routing-to-workmail-cname-procedure"></a>
+   1. Choose **Create records**\.<a name="routing-to-workmail-cname-procedure"></a>
 
 **To create four Route 53 CNAME records for Amazon WorkMail**
 
@@ -75,20 +75,20 @@ To route traffic to Amazon WorkMail, perform the following four procedures\.<a n
 
 1. In the Route 53 console, do the following:
 
-   1. Choose **Create Record Set**\.
+   1. Choose **Create record**\.
 
-   1. For **Name**, paste the value that you copied in step 1\.
+   1. For **Record name**, paste the value that you copied in step 1\.
 
-   1. For **Type**, choose **CNAME – Canonical Name**\.
+   1. For **Record type**, choose **CNAME – Canonical Name**\.
 
 1. In the Amazon WorkMail console, in the first row that has a **Record type** of **CNAME**, copy the value of the **Value** column\.
 
 1. In the Route 53 console, do the following:
 
-   1. For **Value**, paste the value that you copied in step 3\.
+   1. For **Value/Route traffic to**, choose **IP address or another value depending on the record type**, and paste the value that you copied in step 3\.
 
       Don't change any other settings\.
 
-   1. Choose **Create**\.
+   1. Choose **Create records**\.
 
 1. Repeat steps 1 through 4 for the remaining CNAME records that are listed in the Amazon WorkMail console\.

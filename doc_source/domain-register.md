@@ -23,17 +23,17 @@ You can't use AWS credits to pay the fee for registering a new domain with Route
 TLD registries have assigned special or premium prices to some domain names\. You can't use Route 53 to register a domain that has a special or premium price\.
 
 **Charges for hosted zones**  
-When you register a domain with Route 53, we automatically create a hosted zone for the domain and charge a small monthly fee for the hosted zone in addition to the annual charge for the domain registration\. This hosted zone is where you store information about how to route traffic for your domain, for example, to an Amazon EC2 instance or a CloudFront distribution\. If you don't want to use your domain right now, you can delete the hosted zone; if you delete it within 12 hours of registering the domain, there won't be any charge for the hosted zone on your AWS bill\. We also charge a small fee for the DNS queries that we receive for your domain\. For more information, see [Amazon Route 53 Pricing](https://aws.amazon.com/route53/pricing/)\.<a name="domain-register-procedure"></a>
+When you register a domain with Route 53, we automatically create a hosted zone for the domain and charge a small monthly fee for the hosted zone in addition to the annual charge for the domain registration\. This hosted zone is where you store information about how to route traffic for your domain, for example, to an Amazon EC2 instance or a CloudFront distribution\. If you don't want to use your domain right now, you can delete the hosted zone; if you delete it within 12 hours of registering the domain, there won't be any charge for the hosted zone on your AWS bill\. We also charge a small fee for the DNS queries that we receive for your domain\. For more information, see [Amazon Route 53 Pricing](https://aws.amazon.com/route53/pricing/)\.<a name="domain-register-procedure"></a>
 
 **To register a new domain using Route 53**
 
 1. Sign in to the AWS Management Console and open the Route 53 console at [https://console\.aws\.amazon\.com/route53/](https://console.aws.amazon.com/route53/)\.
 
-1. If you're new to Route 53, under **Domain Registration**, choose **Get Started Now**\.
+1. If you're new to Route 53, choose **Get started**\.
 
-   If you're already using Route 53, in the navigation pane, choose **Registered Domains**\.
+   If you're already using Route 53, in the navigation pane, choose **Registered domains**\.
 
-1. Choose **Register Domain**, and specify the domain that you want to register:
+1. Choose **Register domain**, and specify the domain that you want to register:
 
    1. Enter the domain name that you want to register, and choose **Check** to find out whether the domain name is available\.
 

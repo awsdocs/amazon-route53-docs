@@ -80,13 +80,13 @@ If the current registrar for the domain won't let you turn off privacy protectio
 
 1. If the transfer is no longer in process \(if we already canceled it because too much time has passed\), request the transfer again, and we'll send you another authorization email\.
 **Note**  
-For the first 15 days after you request a transfer, you can determine the status of the transfer by checking the **Alerts** table on the **Dashboard** page in the Route 53 console\. After 15 days, use the AWS CLI to get the status\. For more information, see [route53domains](https://docs.aws.amazon.com/cli/latest/reference/route53domains/index.html) in the *AWS CLI Command Reference*\.
+For the first 15 days after you request a transfer, you can determine the status of the transfer by checking the **Notifications** table on the **Dashboard** page in the Route 53 console\. After 15 days, use the AWS CLI to get the status\. For more information, see [route53domains](https://docs.aws.amazon.com/cli/latest/reference/route53domains/index.html) in the *AWS CLI Command Reference*\.
 
    If the transfer is still in progress, perform the following steps to resend the authorization email\.
 
    1. Sign in to the AWS Management Console and open the Route 53 console at [https://console\.aws\.amazon\.com/route53/](https://console.aws.amazon.com/route53/)\.
 
-   1. In the **Alerts** table, find the domain that you want to transfer\.
+   1. In the **Notifications** table, find the domain that you want to transfer\.
 
    1. In the **Status** column for that domain, choose **Resend email**\.
 

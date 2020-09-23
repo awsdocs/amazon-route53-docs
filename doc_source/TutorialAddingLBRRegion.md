@@ -27,8 +27,8 @@ The weighted alias record has a weight of 100\. After you transitioned to latenc
 
 1. Create a weighted alias record for the new latency records:
    + For the domain name, specify the name for the existing weighted alias record, `www.example.com`\.
-   + For the value of **Alias Target**, specify `www-lbr-2012-04-30.example.com`\.
-   + For the value of **Weight**, specify 1\.
+   + For **Value/Route traffic to**, choose **Alias to another record in this hosted zone**, and specify `www-lbr-2012-04-30.example.com`\.
+   + For **Weight**, specify 1\.
 
    When you finish, Route 53 will begin to route a tiny fraction of your traffic \(1/101\) to the Amazon EC2 instances for which you created the `www-lbr-2012-04-30.example.com` latency records in Step 1\. The remainder of the traffic will continue to be routed to the `www-lbr.example.com` latency records, which do not include the Amazon EC2 instance in the Asia Pacific \(Tokyo\) region\. 
 

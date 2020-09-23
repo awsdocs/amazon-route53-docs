@@ -20,11 +20,11 @@ To get the list of name servers for your hosted zone:
 
 1. Sign in to the AWS Management Console and open the Route 53 console at [https://console\.aws\.amazon\.com/route53/](https://console.aws.amazon.com/route53/)\.
 
-1. In the navigation pane, click **Hosted Zones**\.
+1. In the navigation pane, click **Hosted zones**\.
 
-1. On the **Hosted Zones** page, choose the radio button \(not the name\) for the hosted zone\.
+1. On the **Hosted zones** page, choose the name for the hosted zone\.
 
-1. In the right pane, make note of the four servers listed for **Name Servers**\.
+1. Make note of the four names listed for **Name servers** in the **Hosted zone details** section\.
 
 For information about migrating DNS service from another DNS service provider to Route 53, see [Making Amazon Route 53 the DNS service for an existing domainMaking Route 53 the DNS service for an existing domain](MigratingDNS.md)\.
 
@@ -55,6 +55,6 @@ There is at least one record with the name that is specified in the DNS query, b
   + This value—the minimum TTL in the SOA record\. In the example, the value is `86400` \(one day\)\.
   + The value of the TTL for the SOA record\. The default value is 900 seconds\. For information about changing this value, see [Editing records](resource-record-sets-editing.md)\.
 
-  When Route 53 responds to DNS queries with an NXDOMAIN or NODATA response \(a negative response\), you're charged the rate for standard queries\. \(See "Queries" in [Amazon Route 53 Pricing](http://aws.amazon.com/route53/pricing/)\. If you're concerned about the cost of negative responses, one option is to change the TTL for the SOA record, the minimum TTL in the SOA record \(this value\), or both\. Note that increasing these TTLs, which apply to negative responses for the entire hosted zone, can have both positive and negative effects:
+  When Route 53 responds to DNS queries with an NXDOMAIN or NODATA response \(a negative response\), you're charged the rate for standard queries\. \(See "Queries" in [Amazon Route 53 Pricing](http://aws.amazon.com/route53/pricing/)\. If you're concerned about the cost of negative responses, one option is to change the TTL for the SOA record, the minimum TTL in the SOA record \(this value\), or both\. Note that increasing these TTLs, which apply to negative responses for the entire hosted zone, can have both positive and negative effects:
   + DNS resolvers on the internet cache the non\-existence of records for longer periods, which reduces the number of queries that are forwarded to Route 53\. This reduces the Route 53 charge for DNS queries\.
   + However, if you ever erroneously delete a valid record and later recreate it, DNS resolvers will cache the negative response \(this record doesn't exist\) for a longer period\. This lengthens the amount of time that your customers or users can't reach the corresponding resource, such as a web server for acme\.example\.com\. 

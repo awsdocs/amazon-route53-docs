@@ -52,19 +52,17 @@ Don't create additional name server \(NS\) or start of authority \(SOA\) records
 
 1. Sign in to the AWS Management Console and open the Route 53 console at [https://console\.aws\.amazon\.com/route53/](https://console.aws.amazon.com/route53/)\.
 
-1. If you're new to Route 53, choose **Get Started Now** under **DNS Management**\.
+1. If you're new to Route 53, choose **Get started** under **DNS management**, and then choose **Create hosted zones**\.
 
-   If you're already using Route 53, choose **Hosted Zones** in the navigation pane\.
+   If you're already using Route 53, choose **Hosted zones** in the navigation pane, and then choose **Create hosted zones**\.
 
-1. Choose **Create Hosted Zone**\.
-
-1. In the **Create Hosted Zone** pane, enter a domain name and, optionally, a comment\. For more information about a setting, pause the mouse pointer over its label to see a tool tip\.
+1. In the **Create hosted zone** pane, enter a domain name and, optionally, a comment\. For more information about a setting, choose to open the help panel on the right side\.
 
    For information about how to specify characters other than a\-z, 0\-9, and \- \(hyphen\) and how to specify internationalized domain names, see [DNS domain name format](DomainNameFormat.md)\.
 
-1. For **Type**, accept the default value of **Public Hosted Zone**\.
+1. For **Type**, accept the default value of **Public hosted zone**\.
 
-1. Choose **Create**\.
+1. Choose **Create hosted zone**\.
 
 ## Step 3: Create records<a name="migrate-dns-create-records"></a>
 
@@ -85,7 +83,7 @@ For more information, see the following topics:
 
 **Create records programmatically**  
 You can create records by using one of the AWS SDKs, the AWS CLI, or AWS Tools for Windows PowerShell\. For more information, see [AWS Documentation](https://docs.aws.amazon.com/)\.  
-If you're using a programming language that AWS doesn't provide an SDK for, you can also use the Route 53 API\. For more information, see the [Amazon Route 53 API Reference](https://docs.aws.amazon.com/Route53/latest/APIReference/)\.
+If you're using a programming language that AWS doesn't provide an SDK for, you can also use the Route 53 API\. For more information, see the [Amazon Route 53 API Reference](https://docs.aws.amazon.com/Route53/latest/APIReference/)\.
 
 ## Step 4: Lower TTL settings<a name="migrate-dns-lower-ttl"></a>
 
@@ -108,11 +106,11 @@ We recommend that you change the TTL on the following NS records:
 
 1. Choose the name of the hosted zone\.
 
-1. Choose the NS record\.
+1. Choose the NS record, and choose **Edit**\.
 
 1. Change the value of **TTL \(Seconds\)**\. We recommend that you specify a value between 60 seconds and 900 seconds \(15 minutes\)\.
 
-1. Choose **Save Record Set**\.
+1. Choose **Save changes**\.
 
 ## Step 5: Wait for the old TTL to expire<a name="migrate-dns-wait-for-ttl"></a>
 
@@ -136,9 +134,9 @@ In [Step 8: Update the domain registration to use Amazon Route 53 name servers]
 
    1. In the navigation pane, choose **Hosted zones**\.
 
-   1. On the **Hosted zones** page, choose the radio button \(not the name\) for the applicable hosted zone\.
+   1. On the **Hosted zones** page, choose the name for the applicable hosted zone\.
 
-   1. Make note of the four names listed for **Name Servers**\.
+   1. Make note of the four names listed for **Name servers** in the **Hosted zone details** section\.
 
 1. Use the method that is provided by the current DNS service for the domain to update the NS record for the hosted zone\. The process depends on whether the current DNS service lets you delete name servers:
 
@@ -171,9 +169,9 @@ When you're confident that migrating DNS service to Route 53 was successful, yo
 
    1. In the navigation pane, choose **Hosted zones**\.
 
-   1. On the **Hosted zones** page, choose the radio button \(not the name\) for the applicable hosted zone\.
+   1. On the **Hosted zones** page, choose the name for the applicable hosted zone\.
 
-   1. Make note of the four names listed for **Name Servers**\.
+   1. Make note of the four names listed for **Name servers** in the **Hosted zone details** section\.
 
 1. Use the method provided by the registrar for the domain to change the name servers for the domain to use the four Route 53 name servers that you got in step 1 of this procedure\.
 
@@ -193,9 +191,11 @@ In the Amazon Route 53 hosted zone for the domain, change the TTL for the NS re
 
 1. In the list of records for the hosted zone, choose the NS record\.
 
+1. Choose **Edit**\.
+
 1. Change **TTL \(Seconds\)** to the number of seconds that you want DNS resolvers to cache the names of the name servers for your domain\. We recommend a value of 172800 seconds\.
 
-1. Choose **Save Record Set**\.
+1. Choose **Save changes**\.
 
 ## Step 10: Transfer domain registration to Amazon Route 53<a name="migrate-dns-transfer-domain-registration"></a>
 

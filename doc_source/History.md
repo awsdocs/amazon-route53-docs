@@ -16,7 +16,7 @@ The following entries describe important changes in each release of the Route 5
 ## 2018 releases<a name="doc-history-2018"></a>
 
 **December 20, 2018**  
-You can create Route 53 alias records that route traffic to API Gateway APIs or to Amazon VPC interface endpoints\. For more information, see [Alias target](resource-record-sets-values-alias.md#rrsets-values-alias-alias-target)\.
+You can create Route 53 alias records that route traffic to API Gateway APIs or to Amazon VPC interface endpoints\. For more information, see [Value/route traffic to](resource-record-sets-values-alias.md#rrsets-values-alias-alias-target)\.
 
 **November 28, 2018**  
 Route 53 Auto Naming \(also known as Service Discovery\) is now a separate service, AWS Cloud Map\. For more information, see the [AWS Cloud Map Developer Guide](https://docs.aws.amazon.com/cloud-map/latest/dg/)\.
@@ -72,7 +72,7 @@ You can now transfer large numbers of domains to Route 53 using the Route 53 c
 When you register a domain, the registries for some top\-level domains \(TLDs\) require you to verify that you specified a valid email address for the registrant contact\. You can now send the verification email and get confirmation that you successfully verified the email address during the domain registration process\. For more information, see [Registering a new domain](domain-register.md)\.
 
 **June 21, 2017**  
-If you want to route traffic approximately randomly to multiple resources, such as web servers, you can now create one multivalue answer record for each resource and, optionally, associate a Route 53 health check with each record\. Route 53 responds to DNS queries with up to eight healthy records in response to each DNS query, and gives different answers to different DNS resolvers\. For more information, see [Multivalue answer routing](routing-policy.md#routing-policy-multivalue)\.
+If you want to route traffic approximately randomly to multiple resources, such as web servers, you can now create one multivalue answer record for each resource and, optionally, associate a Route 53 health check with each record\. Route 53 responds to DNS queries with up to eight healthy records in response to each DNS query, and gives different answers to different DNS resolvers\. For more information, see [Multivalue answer routing](routing-policy.md#routing-policy-multivalue)\.
 
 **April 10, 2017**  
 When you use the Route 53 console to transfer a domain registration to Route 53, you can now choose one of the following options for associating the name servers for the DNS service for the domain with the transferred domain registration:  
@@ -95,7 +95,7 @@ With this release, Route 53 adds the following new features:
 + **DNS query test tool** – You can now simulate DNS queries for a record and see the value that Route 53 returns\. For geolocation and latency records, you can also simulate requests from a particular DNS resolver and/or client IP address to find out what response Route 53 would return to a client with that resolver and/or IP address\. For more information, see [Checking DNS responses from Route 53](dns-test.md)\.
 
 **August 11, 2016**  
-With this release, you can create alias records that route traffic to ELB Application Load Balancers\. The process is the same as for Classic Load Balancers\. For more information, see [Alias target](resource-record-sets-values-alias.md#rrsets-values-alias-alias-target)\.
+With this release, you can create alias records that route traffic to ELB Application Load Balancers\. The process is the same as for Classic Load Balancers\. For more information, see [Value/route traffic to](resource-record-sets-values-alias.md#rrsets-values-alias-alias-target)\.
 
 **August 9, 2016**  
 With this release, Route 53 adds support for DNSSEC for domain registration\. DNSSEC lets you protect your domain from DNS spoofing attacks, which are also known as man\-in\-the\-middle attacks\. For more information, see [Configuring DNSSEC for a domain](domain-configure-dnssec.md)\.

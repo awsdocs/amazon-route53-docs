@@ -60,7 +60,7 @@ To migrate records from one hosted zone to another, you create a file that conta
 
    1. In the navigation pane, choose **Hosted zones**\.
 
-   1. Find the hosted zone that you want to migrate\. If you have a lot of hosted zones, you can enter part of the name in the **Search all fields** field and press **Enter** to filter the list\.
+   1. Find the hosted zone that you want to migrate\. If you have a lot of hosted zones, you can choose **Exact domain name** and enter the name of the hosted zone, and press **Enter** to filter the list\.
 
    1. Get the value of the **Hosted zone ID** column\.
 
@@ -283,12 +283,12 @@ Make sure that the value that you specify for the hosted zone ID is the ID of th
 
    1. In the navigation pane, choose **Hosted zones**\.
 
-   1. Choose the name of the old hosted zone\. If you have a lot of hosted zones, you can enter part of the name in the **Search all fields** field and press **Enter** to filter the list\.
+   1. Choose the name of the old hosted zone\. If you have a lot of hosted zones, you can choose **Exact domain name** and enter the name of the hosted zone, and press **Enter** to filter the list\.
 
-   1. If the hosted zone contains any records other than the default NS and SOA records \(such as alias records that route traffic to a traffic policy instance\), choose the corresponding check boxes and choose **Delete Record Set**\.
+   1. If the hosted zone contains any records other than the default NS and SOA records \(such as alias records that route traffic to a traffic policy instance\), choose the corresponding check boxes and choose **Delete**\.
 
-   1. Choose **Back to Hosted Zones**\.
+   1. In the navigation pane, choose **Hosted zones**\.
 
    1. In the list of hosted zones, choose the radio button for the hosted zone that you want to delete\.
 
-   1. Choose **Delete Hosted Zone**\.
+   1. Choose **Delete**\.

@@ -40,28 +40,27 @@ To configure Amazon Route 53 to route traffic to an Amazon VPC interface endpoi
 
 1. Open the Route 53 console at [https://console\.aws\.amazon\.com/route53/](https://console.aws.amazon.com/route53/)\.
 
-1. In the navigation pane, choose **Hosted Zones**\.
+1. In the navigation pane, choose **Hosted zones**\.
 
 1. Choose the name of the hosted zone that has the domain name that you want to use to route traffic to your interface endpoint\.
 
-1. Choose **Create Record Set**\.
+1. Choose **Create record**\.
 
 1. Specify the following values:  
-**Name**  
-Enter the domain name that you want to use to route traffic to your Amazon VPC interface endpoint\.   
-**Type**  
-Choose **A – IPv4 address**\.  
-**Alias**  
-Choose **Yes**\.  
-**Alias Target**  
-How you specify the value for **Alias Target** depends on whether you created the hosted zone and the interface endpoint using the same AWS account or different accounts:  
-   + **Same account** – Choose the list, and find the category **Amazon VPC Endpoints**\. Then choose the DNS name of the interface endpoint that you want to route internet traffic to\.
-   + **Different accounts** – Enter the value that you got in step 1 of this procedure\.  
-**Routing Policy**  
+**Routing policy**  
 Choose the applicable routing policy\. For more information, see [Choosing a routing policy](routing-policy.md)\.  
-**Evaluate Target Health**  
-Choose **No**\.
+**Record name**  
+Enter the domain name that you want to use to route traffic to your Amazon VPC interface endpoint\.   
+**Value/Route traffic to**  
+Choose **Alias to VPC endpoint**, then choose the Region that the endpoint is from\.   
+How you specify the value for **Endpoints** depends on whether you created the hosted zone and the interface endpoint using the same AWS account or different accounts:  
+   + **Same account** – Choose the list, and find the category **Amazon VPC endpoints**\. Then choose the DNS name of the interface endpoint that you want to route internet traffic to\.
+   + **Different accounts** – Enter the value that you got in step 1 of this procedure\.  
+**Record type**  
+Choose **A – IPv4 address**\.  
+**Evaluate target health**  
+Accept the default value of **Yes**\.
 
-1. Choose **Create**\.
+1. Choose **Create records**\.
 
    Changes generally propagate to all Route 53 servers within 60 seconds\. When propagation is done, you'll be able to route traffic to your interface endpoint by using the name of the alias record that you created in this procedure\.

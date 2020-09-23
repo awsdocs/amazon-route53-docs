@@ -37,19 +37,17 @@ To use the Route 53 console to delete a public hosted zone, perform the followi
 
    1. Choose the name of the hosted zone that you want to delete\.
 
-   1. On the Record Sets page, if the list of records includes any records for which the value of the **Type** column is something other than NS or SOA, choose the row, and choose **Delete Record Set**\.
+   1. On the Record page, if the list of records includes any records for which the value of the **Type** column is something other than NS or SOA, choose the row, and choose **Delete**\.
 
       To select multiple, consecutive records, choose the first row, press and hold the **Shift** key, and choose the last row\. To select multiple, non\-consecutive records, choose the first row, press and hold the **Ctrl** key, and choose the remaining rows\. 
 **Note**  
 If you created any NS records for subdomains in the hosted zone, delete those records, too\.
 
-   1. Choose **Back to Hosted Zones**\.
+1. On the **Hosted zones** page, choose the row for the hosted zone that you want to delete\.
 
-1. On the **Hosted Zones** page, choose the row for the hosted zone that you want to delete\.
+1. Choose **Delete**\.
 
-1. Choose **Delete Hosted Zone**\.
-
-1. Choose **Confirm**\.
+1. Type the confirmation key and choose **Delete**\.
 
 1. If you want to make the domain unavailable on the internet, we recommend that you transfer DNS service to a free DNS service and then delete the Route 53 hosted zone\. This prevents future DNS queries from possibly being misrouted\. 
 

@@ -104,25 +104,22 @@ If you're using the same white\-label name servers for two or more hosted zones,
 
 For each record, specify the following values\. Refer to the table that you filled in for the previous step:
 
-**Name**  
+**Routing policy**  
+Specify **Simple routing**\.
+
+**Record name**  
 The name that you want to assign to one of your white\-label name servers, for example, ns1\.example\.com\. For the prefix \(ns1 in this example\), you can use any value that is valid in a domain name\.
 
-**Type**  
-Specify **A** when you're creating records for the IPv4 addresses\.  
-Specify **AAAA** when you're creating records for the IPv6 addresses\.
-
-**Alias**  
-Specify **No**\.
-
-**TTL**  
-This value is the amount of time that DNS resolvers cache the information in this record before forwarding another DNS query to Route 53\. We recommend that you specify an initial value of 60 seconds or less, so that you can recover quickly if you accidentally specify incorrect values in these records\.
-
-**Value**  
+**Value/Route traffic to**  
 The IPv4 or IPv6 address of one of the Route 53 name servers in your reusable delegation set\.  
 If you specify the wrong IP addresses when you created records for your white\-label name servers, your website or web application will become unavailable on the internet when you perform subsequent steps\. Even if you correct the IP addresses immediately, your website or web application will remain unavailable for the duration of the TTL\.
 
-**Routing Policy**  
-Specify **Simple**\.
+**Record type**  
+Specify **A** when you're creating records for the IPv4 addresses\.  
+Specify **AAAA** when you're creating records for the IPv6 addresses\.
+
+**TTL \(seconds\)**  
+This value is the amount of time that DNS resolvers cache the information in this record before forwarding another DNS query to Route 53\. We recommend that you specify an initial value of 60 seconds or less, so that you can recover quickly if you accidentally specify incorrect values in these records\.
 
 ## Step 6: Update NS and SOA records<a name="white-label-name-servers-update-ns-soa-records"></a>
 

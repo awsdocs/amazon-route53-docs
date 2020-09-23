@@ -46,19 +46,19 @@ Don't create additional name server \(NS\) or start of authority \(SOA\) records
 
 1. Sign in to the AWS Management Console and open the Route 53 console at [https://console\.aws\.amazon\.com/route53/](https://console.aws.amazon.com/route53/)\.
 
-1. If you're new to Route 53, choose **Get Started Now** under **DNS Management**\.
+1. If you're new to Route 53, choose **Get started**\.
 
-   If you're already using Route 53, choose **Hosted Zones** in the navigation pane\.
+   If you're already using Route 53, choose **Hosted zones** in the navigation pane\.
 
-1. Choose **Create Hosted Zone**\.
+1. Choose **Create hosted zone**\.
 
-1. In the **Create Hosted Zone** pane, enter a domain name and, optionally, a comment\. For more information about a setting, pause the mouse pointer over its label to see a tool tip\.
+1. In the **Create hosted zone** pane, enter a domain name and, optionally, a comment\. For more information about a setting, pause the mouse pointer over its label to see a tool tip\.
 
    For information about how to specify characters other than a\-z, 0\-9, and \- \(hyphen\) and how to specify internationalized domain names, see [DNS domain name format](DomainNameFormat.md)\.
 
-1. For **Type**, accept the default value of **Public Hosted Zone**\.
+1. For **Record type**, accept the default value of **Public hosted zone**\.
 
-1. Choose **Create**\.
+1. Choose **Create hosted zone**\.
 
 ## Step 3: Create records \(inactive domains\)<a name="migrate-dns-create-records-domain-inactive"></a>
 
@@ -79,7 +79,7 @@ For more information, see the following topics:
 
 **Create records programmatically**  
 You can create records by using one of the AWS SDKs, the AWS CLI, or AWS Tools for Windows PowerShell\. For more information, see [AWS Documentation](https://docs.aws.amazon.com/)\.  
-If you're using a programming language that AWS doesn't provide an SDK for, you can also use the Route 53 API\. For more information, see the [Amazon Route 53 API Reference](https://docs.aws.amazon.com/Route53/latest/APIReference/)\.
+If you're using a programming language that AWS doesn't provide an SDK for, you can also use the Route 53 API\. For more information, see the [Amazon Route 53 API Reference](https://docs.aws.amazon.com/Route53/latest/APIReference/)\.
 
 ## Step 4: Update the domain registration to use Amazon Route 53 name servers \(inactive domains\)<a name="migrate-dns-update-domain-inactive"></a>
 
@@ -95,7 +95,7 @@ When you've finished creating records for the domain, you can change the DNS ser
 
    1. On the **Hosted zones** page, choose the radio button \(not the name\) for the applicable hosted zone\.
 
-   1. Make note of the four names listed for **Name Servers**\.
+   1. Make note of the four names listed for **Name servers**\.
 
 1. Use the method provided by the registrar for the domain to change the name servers for the domain to use the four Route 53 name servers that you got in step 1 of this procedure\.
 

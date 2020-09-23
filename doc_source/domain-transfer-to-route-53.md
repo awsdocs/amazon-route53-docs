@@ -91,7 +91,7 @@ ICANN, the governing body for domain registrations, requires that you unlock you
 For more information, see [Transfer requirements for top\-level domains](#domain-transfer-to-route-53-requirements)\.
 
 ** Disable DNSSEC for the domain **  
-Route 53 supports DNSSEC for domain registration, but not for DNS\. If you're using DNSSEC for the domain that you're transferring to Route 53, do one of the following:  
+Route 53 supports DNSSEC for domain registration, but not for DNS\. If you're using DNSSEC for the domain that you're transferring to Route 53, do one of the following:  
 + **If you're transferring DNS service to Route 53 or another provider that does not support DNSSEC** – Delete public keys for the domain\.
 **Important**  
 If you transfer a domain registration to Route 53 while DNSSEC is configured, the DNSSEC public keys are transferred, too\. If you transfer DNS service to Route 53 or another a provider that doesn't support DNSSEC, DNS resolution fails intermittently until you delete the DNSSEC keys from the domain\. For more information, see the troubleshooting topic [DNS resolution fails intermittently](troubleshooting-intermittent-dns-resolution-failure.md)\.
@@ -185,7 +185,7 @@ Choose the applicable option:
    + **Continue to use the name servers provided by the current registrar or DNS service** – If the current registrar for the domain is currently providing DNS service, we recommend that you transfer DNS service to another DNS service provider before you transfer the domain\. 
 **Important**  
 Some registrars stop providing DNS service as soon as you request a transfer to another registrar\. If the current registrar disables DNS service, your domain will become unavailable on the internet\.
-   + **Import name servers from a Route 53 hosted zone that has the same name as the domain** – When you select this option, the console displays a list of the hosted zones that have the same name as the domain\. Choose the hosted zone that you want to use for routing traffic for the domain\.
+   + **Import name servers from a Route 53 hosted zone that has the same name as the domain** – When you select this option, the console displays a list of the hosted zones that have the same name as the domain\. Choose the hosted zone that you want to use for routing traffic for the domain\.
    + **Specify new name servers to replace the current registrar's name servers \(not recommended\)** – If you're using a DNS service other than Route 53 for this domain, enter the names of the name servers that you got in [Step 4: Get the names of your name servers](#domain-transfer-to-route-53-get-name-servers)\. 
 **Important**  
 We don't recommend choosing this option because transferring DNS service from one DNS service provider to another can take up to two days\. The current registrar might stop providing DNS service as soon as you request a transfer to another registrar\. If the current registrar disables DNS service, your domain will become unavailable on the internet until the change to another DNS service provider takes effect\.  
@@ -230,7 +230,7 @@ Domain name registrations and renewals are not refundable\. If you enable automa
 
 1. Choose **Transfer Domain**\.
 
-1. On the **Transfer domain to Route 53** page, choose **Transfer multiple domains to Route 53**\.
+1. On the **Transfer domain to Route 53** page, choose **Transfer multiple domains to Route 53**\.
 
 1. For each domain that you want to transfer, enter the domain name and the authorization code in the following format\. Note the comma between the domain name and the authorization code:
 

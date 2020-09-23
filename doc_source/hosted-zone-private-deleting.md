@@ -26,14 +26,12 @@ To use the Route 53 console to delete a private hosted zone, perform the follow
 
    1. Choose the name of the hosted zone that you want to delete\.
 
-   1. On the Record Sets page, if the list of records includes any records for which the value of the **Type** column is something other than **NS** or **SOA**, choose the row, and choose **Delete Record Set**\.
+   1. On the **Record** page, if the list of records includes any records for which the value of the **Type** column is something other than **NS** or **SOA**, choose the row, and choose **Delete**\.
 
       To select multiple, consecutive records, choose the first row, press and hold the **Shift** key, and choose the last row\. To select multiple, non\-consecutive records, choose the first row, press and hold the **Ctrl** key, and choose the remaining rows\. 
 
-   1. Choose **Back to Hosted Zones**\.
-
 1. On the Hosted Zones page, choose the row for the hosted zone that you want to delete\.
 
-1. Choose **Delete Hosted Zone**\.
+1. Choose **Delete**\.
 
-1. Choose **Confirm**\.
+1. Type the confirmation key and choose **Delete**\.

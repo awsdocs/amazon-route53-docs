@@ -100,7 +100,7 @@ Change the IPS tag to the value for the new registrar:
 
 1. Respond to the corfirmation email:  
 **All domains except \.jp domains**  
-Route 53 sends a confirmation email to the email address for the registrant contact for the domain:  
+Route 53 sends a confirmation email to the email address for the registrant contact for the domain:  
    + If you don't respond to the email, the transfer happens automatically on the specified date\.
    + If you want the transfer to happen sooner or you want to cancel the transfer, choose the link in the email to go to the Route 53 website, and choose the applicable option\.  
 **\.jp domains**  

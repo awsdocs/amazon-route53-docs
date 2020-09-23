@@ -21,12 +21,12 @@ To create records for complex routing configurations, you can also use the traff
    + To route internet traffic to your resources, such as Amazon S3 buckets or Amazon EC2 instances, see [Creating a public hosted zone](CreatingHostedZone.md)\.
    + To route traffic in your VPC, see [Creating a private hosted zone](hosted-zone-private-creating.md)\.
 
-1. On the **Hosted Zones** page, choose the name of the hosted zone that you want to create records in\.
+1. On the **Hosted zones** page, choose the name of the hosted zone that you want to create records in\.
 
-1. Choose **Create Record Set**\.
+1. Choose **Create record**\.
 
-1. Enter the applicable values\. For more information, see the topic for the kind of record that you want to create:
-   + [Values for basic records](resource-record-sets-values-basic.md)
+1. Choose and define the applicable routing policy and values\. For more information, see the topic for the kind of record that you want to create:
+   + [Values for simple records](resource-record-sets-values-basic.md)
    + [Values for alias records](resource-record-sets-values-alias.md)
    + [Values for failover records](resource-record-sets-values-failover.md)
    + [Values for failover alias records](resource-record-sets-values-failover-alias.md)
@@ -38,11 +38,11 @@ To create records for complex routing configurations, you can also use the traff
    + [Values for weighted records](resource-record-sets-values-weighted.md)
    + [Values for weighted alias records](resource-record-sets-values-weighted-alias.md)
 
-1. Choose **Create**\.
+1. Choose **Create records**\.
 **Note**  
 Your new records take time to propagate to the Route 53 DNS servers\. Currently, the only way to verify that changes have propagated is to use the [GetChange](https://docs.aws.amazon.com/Route53/latest/APIReference/API_GetChange.html) API action\. Changes generally propagate to all Route 53 name servers within 60 seconds\.
 
-1. If you're creating multiple records, repeat steps 6 through 8\.<a name="resource-record-sets-elb-dns-name-procedure"></a>
+1. If you're creating multiple records, repeat steps 7 through 8\.<a name="resource-record-sets-elb-dns-name-procedure"></a>
 
 **Getting the DNS name for an ELB load balancer**
 

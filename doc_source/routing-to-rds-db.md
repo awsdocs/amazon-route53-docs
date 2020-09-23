@@ -46,28 +46,27 @@ To configure Amazon Route 53 so you can use your domain name to open connection
 
 1. Open the Route 53 console at [https://console\.aws\.amazon\.com/route53/](https://console.aws.amazon.com/route53/)\.
 
-1. In the navigation pane, choose **Hosted Zones**\.
+1. In the navigation pane, choose **Hosted zones**\.
 
 1. Choose the name of the hosted zone that has the domain name that you want to use to open connections to your DB instance\.
 
-1. Choose **Create Record Set**\.
+1. Choose **Create record**\.
 
 1. Specify the following values:  
-**Name**  
+**Routing policy**  
+Choose the applicable routing policy\. For more information, see [Choosing a routing policy](routing-policy.md)\.  
+**Record name**  
 Enter the domain name that you want to use to open connections to your DB instance\. The default value is the name of the hosted zone\.  
 For example, if the name of the hosted zone is example\.com and you want to use acme\.example\.com to open connections to your DB instance, enter **acme**\.  
 You can't create a CNAME record that has the same name as the hosted zone\.  
-**Type**  
-Choose **CNAME – Canonical name**\.  
-**Alias**  
-Choose **No**\.  
-**TTL \(Seconds\)**  
-Accept the default value of **300**\.  
-**Value**  
+**Value/Route traffic to**  
+Choose **IP address or another value depending on the record type**\.   
 Enter the domain name of the DB instance that you want to open connections to\. This is the value that you got when you performed the procedure [To get the domain name for your Amazon RDS DB instance](#routing-to-rds-db-get-instance-domain-name-procedure)\.  
-**Routing Policy**  
-Choose the applicable routing policy\. For more information, see [Choosing a routing policy](routing-policy.md)\.
+**Record type**  
+Choose **A – IPv4 address**\.  
+**TTL \(seconds\)**  
+Accept the default value of **300**\.
 
-1. Choose **Create**\.
+1. Choose **Create records**\.
 
    Changes generally propagate to all Route 53 servers within 60 seconds\. When propagation is complete, you'll be able to open connections to your DB instance by using the name of the CNAME record that you created in this procedure\.

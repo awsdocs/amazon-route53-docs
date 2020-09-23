@@ -6,6 +6,6 @@ You can use the Amazon Route 53 console to list all of the hosted zones that yo
 
 1. Sign in to the AWS Management Console and open the Route 53 console at [https://console\.aws\.amazon\.com/route53/](https://console.aws.amazon.com/route53/)\.
 
-1. In the navigation pane, choose **Hosted Zones**\.
+1. In the navigation pane, choose **Hosted zones**\.
 
    The **Hosted Zones** page automatically displays a list of all of the hosted zones that were created using the current AWS account\. The **Type** column indicates whether a hosted zone is private or public\. Choose the column heading to group all private hosted zones and all public hosted zones\.

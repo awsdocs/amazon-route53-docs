@@ -16,7 +16,7 @@ When you configure Resolver to forward DNS queries to your network or vice versa
 
 1. In the navigation pane, choose **Metrics**\.
 
-1. On the **All metrics** tab, choose **Route 53 Resolver**\.
+1. On the **All metrics** tab, choose **Route 53 Resolver**\.
 
 1. Choose **By Endpoint** to view query counts for a specified endpoint\. Then choose the endpoints that you want to view the number of queries for\. 
 

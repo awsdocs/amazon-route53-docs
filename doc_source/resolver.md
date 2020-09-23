@@ -22,13 +22,13 @@ When you create a Resolver endpoint, you can't specify a VPC that has the instan
 
 To use inbound or outbound forwarding, you create a Resolver endpoint in your VPC\. As part of the definition of an endpoint, you specify the IP addresses that you want to forward inbound DNS queries to or the IP addresses that you want outbound queries to originate from\. For each IP address that you specify, Resolver automatically creates a VPC elastic network interface\.
 
-The following diagram shows the path of a DNS query from a DNS resolver on your network to Route 53 Resolver\.
+The following diagram shows the path of a DNS query from a DNS resolver on your network to Route 53 Resolver\.
 
-![\[Conceptual graphic that shows the path of a DNS query from a DNS resolver on your network to Route 53 Resolver.\]](http://docs.aws.amazon.com/Route53/latest/DeveloperGuide/images/Resolver-inbound-endpoint.png)
+![\[Conceptual graphic that shows the path of a DNS query from a DNS resolver on your network to Route 53 Resolver.\]](http://docs.aws.amazon.com/Route53/latest/DeveloperGuide/images/Resolver-inbound-endpoint.png)
 
 The following diagram shows the path of a DNS query from an EC2 instance in one of your VPCs to a DNS resolver on your network\.
 
-![\[Conceptual graphic that shows the path of a DNS query from your network to Route 53 Resolver.\]](http://docs.aws.amazon.com/Route53/latest/DeveloperGuide/images/Resolver-outbound-endpoint.png)
+![\[Conceptual graphic that shows the path of a DNS query from your network to Route 53 Resolver.\]](http://docs.aws.amazon.com/Route53/latest/DeveloperGuide/images/Resolver-outbound-endpoint.png)
 
 For an overview of VPC network interfaces, see [Elastic network interfaces](https://docs.aws.amazon.com/vpc/latest/userguide/VPC_ElasticNetworkInterfaces.html) in the *Amazon VPC User Guide*\.
 
@@ -230,7 +230,7 @@ Before you create inbound and outbound Resolver endpoints in an AWS Region, cons
 **Number of inbound and outbound endpoints in each AWS Region**  
 When you want to integrate DNS for the VPCs in an AWS Region with DNS for your network, you typically need one Resolver inbound endpoint \(for DNS queries that you're forwarding to your VPCs\) and one outbound endpoint \(for queries that you're forwarding from your VPCs to your network\)\. You can create multiple inbound endpoints and multiple outbound endpoints, but one endpoint is sufficient to handle the DNS queries in either direction\. Note the following:  
 + For each Resolver endpoint, you specify two or more IP addresses in different Availability Zones\. Each IP address in an endpoint can handle a large number of DNS queries per second\. \(For the current maximum number of queries per second per IP address in an endpoint, see [Quotas on Route 53 Resolver](DNSLimitations.md#limits-api-entities-resolver)\.\) If you need Resolver to handle more queries, you can add more IP addresses to your existing endpoint instead of adding another endpoint\.
-+ Resolver pricing is based on the number of IP addresses in your endpoints and on the number of DNS queries that the endpoint processes\. Each endpoint includes a minimum of two IP addresses\. For more information about Resolver pricing, see [Amazon Route 53 Pricing](https://aws.amazon.com/route53/pricing/)\.
++ Resolver pricing is based on the number of IP addresses in your endpoints and on the number of DNS queries that the endpoint processes\. Each endpoint includes a minimum of two IP addresses\. For more information about Resolver pricing, see [Amazon Route 53 Pricing](https://aws.amazon.com/route53/pricing/)\.
 + Each rule specifies the outbound endpoint that DNS queries are forwarded from\. If you create multiple outbound endpoints in an AWS Region and you want to associate some or all Resolver rules with every VPC, you need to create multiple copies of those rules\.
 
 **Using the same VPC for inbound and outbound endpoints**  

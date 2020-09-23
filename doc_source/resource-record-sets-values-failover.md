@@ -6,27 +6,30 @@ When you create failover records, you specify the following values\.
 For information about creating failover records in a private hosted zone, see [Configuring failover in a private hosted zone](dns-failover-private-hosted-zones.md)\.
 
 **Topics**
-+ [Name](#rrsets-values-failover-name)
-+ [Type](#rrsets-values-failover-type)
-+ [Alias](#rrsets-values-failover-alias)
-+ [TTL \(time to live\)](#rrsets-values-failover-ttl)
-+ [Value](#rrsets-values-failover-value)
 + [Routing policy](#rrsets-values-failover-routing-policy)
++ [Record name](#rrsets-values-failover-name)
++ [Record type](#rrsets-values-failover-type)
++ [TTL \(seconds\)](#rrsets-values-failover-ttl)
++ [Value/Route traffic to](#rrsets-values-failover-value)
 + [Failover record type](#rrsets-values-failover-record-type)
-+ [Set ID](#rrsets-values-failover-set-id)
-+ [Associate with health check/Health check to associate](#rrsets-values-failover-associate-with-health-check)
++ [Health check](#rrsets-values-failover-associate-with-health-check)
++ [Record ID](#rrsets-values-failover-set-id)
 
-## Name<a name="rrsets-values-failover-name"></a>
+## Routing policy<a name="rrsets-values-failover-routing-policy"></a>
+
+Choose **Failover**\. 
+
+## Record name<a name="rrsets-values-failover-name"></a>
 
 Enter the name of the domain or subdomain that you want to route traffic for\. The default value is the name of the hosted zone\. 
 
 **Note**  
-If you're creating a record that has the same name as the hosted zone, don't enter a value \(for example, an @ symbol\) in the **Name** field\. 
+If you're creating a record that has the same name as the hosted zone, don't enter a value \(for example, an @ symbol\) in the **Record name** field\. 
 
 Enter the same name for both of the records in the group of failover records\. 
 
 **CNAME records**  
-If you're creating a record that has a value of **CNAME** for **Type**, the name of the record can't be the same as the name of the hosted zone\.
+If you're creating a record that has a value of **CNAME** for **Record type**, the name of the record can't be the same as the name of the hosted zone\.
 
 **Special characters**  
 For information about how to specify characters other than a\-z, 0\-9, and \- \(hyphen\) and how to specify internationalized domain names, see [DNS domain name format](DomainNameFormat.md)\.
@@ -34,17 +37,13 @@ For information about how to specify characters other than a\-z, 0\-9, and \- \(
 **Wildcard characters**  
 You can use an asterisk \(\*\) character in the name\. DNS treats the \* character either as a wildcard or as the \* character \(ASCII 42\), depending on where it appears in the name\. For more information, see [Using an asterisk \(\*\) in the names of hosted zones and records](DomainNameFormat.md#domain-name-format-asterisk)\.
 
-## Type<a name="rrsets-values-failover-type"></a>
+## Record type<a name="rrsets-values-failover-type"></a>
 
 The DNS record type\. For more information, see [Supported DNS record types](ResourceRecordTypes.md)\.
 
 Select the same value for both the primary and secondary failover records\.
 
-## Alias<a name="rrsets-values-failover-alias"></a>
-
-Select **No**\. 
-
-## TTL \(time to live\)<a name="rrsets-values-failover-ttl"></a>
+## TTL \(seconds\)<a name="rrsets-values-failover-ttl"></a>
 
 The amount of time, in seconds, that you want DNS recursive resolvers to cache information about this record\. If you specify a longer value \(for example, 172800 seconds, or two days\), you reduce the number of calls that DNS recursive resolvers must make to Route 53 to get the latest information in this record\. This has the effect of reducing latency and reducing your bill for Route 53 service\. For more information, see [How Amazon Route 53 routes traffic for your domain](welcome-dns-service.md#welcome-dns-service-how-route-53-routes-traffic)\.
 
@@ -52,9 +51,11 @@ However, if you specify a longer value for TTL, it takes longer for changes to t
 
 If you're associating this record with a health check, we recommend that you specify a TTL of 60 seconds or less so clients respond quickly to changes in health status\.
 
-## Value<a name="rrsets-values-failover-value"></a>
+## Value/Route traffic to<a name="rrsets-values-failover-value"></a>
 
-Enter a value that is appropriate for the value of **Type**\. For all types except **CNAME**, you can enter more than one value\. Enter each value on a separate line\.
+Choose **IP address or another value depending on the record type**\.
+
+Enter a value that is appropriate for the value of **Record type**\. For all types except **CNAME**, you can enter more than one value\. Enter each value on a separate line\.
 
 **A — IPv4 address**  
 An IP address in IPv4 format, for example, **192\.0\.2\.235**\.
@@ -91,23 +92,15 @@ For example:
 **TXT — Text**  
 A text record\. Enclose text in quotation marks, for example, **"Sample Text Entry"**\. 
 
-## Routing policy<a name="rrsets-values-failover-routing-policy"></a>
-
-Select **Failover**\. 
-
 ## Failover record type<a name="rrsets-values-failover-record-type"></a>
 
 Choose the applicable value for this record\. For failover to function correctly, you must create one primary and one secondary failover record\.
 
-You can't create non\-failover records that have the same values for **Name** and **Type** as failover records\.
+You can't create non\-failover records that have the same values for **Record name** and **Record type** as failover records\.
 
-## Set ID<a name="rrsets-values-failover-set-id"></a>
+## Health check<a name="rrsets-values-failover-associate-with-health-check"></a>
 
-Enter a value that uniquely identifies the primary and secondary records\. 
-
-## Associate with health check/Health check to associate<a name="rrsets-values-failover-associate-with-health-check"></a>
-
-Select **Yes** if you want Route 53 to check the health of a specified endpoint and to respond to DNS queries using this record only when the endpoint is healthy\. Then select the health check that you want Route 53 to perform for this record\. 
+Select a health check if you want Route 53 to check the health of a specified endpoint and to respond to DNS queries using this record only when the endpoint is healthy\. 
 
 Route 53 doesn't check the health of the endpoint specified in the record, for example, the endpoint specified by the IP address in the **Value** field\. When you select a health check for a record, Route 53 checks the health of the endpoint that you specified in the health check\. For information about how Route 53 determines whether an endpoint is healthy, see [How Amazon Route 53 determines whether a health check is healthyHow Route 53 determines whether a health check is healthy](dns-failover-determining-health-of-endpoints.md)\.
 
@@ -119,3 +112,7 @@ If your health checks specify the endpoint only by domain name, we recommend tha
 
 **Important**  
 In this configuration, if you create a health check for which the value of **Domain Name** matches the name of the records and then associate the health check with those records, health check results will be unpredictable\.
+
+## Record ID<a name="rrsets-values-failover-set-id"></a>
+
+Enter a value that uniquely identifies the primary and secondary records\. 

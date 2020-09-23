@@ -1,4 +1,4 @@
-# Transferring my domain to Amazon Route 53 failed<a name="troubleshooting-domain-transfer-failed"></a>
+# Transferring my domain to Amazon Route 53 failed<a name="troubleshooting-domain-transfer-failed"></a>
 
 Here are some common reasons that transferring a domain to Amazon Route 53 fails\.
 

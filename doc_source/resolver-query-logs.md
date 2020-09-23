@@ -14,7 +14,7 @@ You can log the DNS queries that originate in Amazon Virtual Private Cloud VPCs 
 For a detailed list of all of the values logged and an example, see [Values that appear in Resolver query logs](resolver-query-logs-format.md)\.
 
 **Note**  
-As is standard for DNS resolvers, resolvers cache DNS queries for a length of time determined by the time\-to\-live \(TTL\) for the resolver\. The Route 53 Resolver caches queries that originate in your VPCs, and responds from the cache whenever possible to speed up responses\. Resolver query logging logs only unique queries, not queries that Resolver is able to respond to from the cache\.  
+As is standard for DNS resolvers, resolvers cache DNS queries for a length of time determined by the time\-to\-live \(TTL\) for the resolver\. The Route 53 Resolver caches queries that originate in your VPCs, and responds from the cache whenever possible to speed up responses\. Resolver query logging logs only unique queries, not queries that Resolver is able to respond to from the cache\.  
 For example, suppose that an EC2 instance in one of the VPCs that a query logging configuration is logging queries for, submits a request for accounting\.example\.com\. Resolver caches the response to that query, and logs the query\. If the same instance’s ENI makes a query for accounting\.example\.com within the TTL of the Resolver’s cache, Resolver responds to the query from the cache\. The second query is not logged\.
 
 You can send the logs to one of the following AWS resources: 
