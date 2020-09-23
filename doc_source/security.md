@@ -9,6 +9,7 @@ Security is a shared responsibility between AWS and you\. The [shared responsibi
 This documentation helps you understand how to apply the shared responsibility model when using Route 53\. The following topics show you how to configure Route 53 to meet your security and compliance objectives\. You also learn how to use other AWS services that help you to monitor and secure your Route 53 resources\. 
 
 **Topics**
++ [Data protection in Route 53](data-protection.md)
 + [Identity and access management in Amazon Route 53](auth-and-access-control.md)
 + [Logging and monitoring in Amazon Route 53](logging-monitoring.md)
 + [Compliance validation for Amazon Route 53](route-53-compliance.md)
