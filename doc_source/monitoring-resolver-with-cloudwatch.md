@@ -55,7 +55,7 @@ For outbound endpoints, the number of DNS queries forwarded from your VPCs to yo
 Valid statistics: Sum  
 Units: Count
 
-**OutboundQueryAggregatedVolume**  
+**OutboundQueryAggregateVolume**  
 For outbound endpoints, the total number of DNS queries forwarded from Amazon VPCs to your network, including the following:  
 + The number of DNS queries forwarded from your VPCs to your network through the endpoint that is specified by `EndpointId`\.
 + When the current account shares Resolver rules with other accounts, queries from VPCs that are created by other accounts that are forwarded to your network through the endpoint that is specified by `EndpointId`\. 
@@ -71,7 +71,7 @@ For each IP address for your inbound endpoints, the number of DNS queries forwar
 Valid statistics: Sum  
 Units: Count
 
-**OutboundQueryAggregatedVolume**  
+**OutboundQueryAggregateVolume**  
 For each IP address for your outbound endpoints, the total number of DNS queries forwarded from Amazon VPCs to your network, including the following:  
 + The number of DNS queries forwarded from your VPCs to your network using the specified IP address\.
 + When the current account shares Resolver rules with other accounts, queries from VPCs that are created by other accounts that are forwarded to your network through using the specified IP address\. 

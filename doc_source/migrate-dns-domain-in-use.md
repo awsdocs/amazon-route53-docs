@@ -154,7 +154,7 @@ When you're finished, the only name servers in the NS record will be the four Ro
 ## Step 7: Monitor traffic for the domain<a name="migrate-dns-monitor-traffic"></a>
 
 Monitor traffic for the domain, including website or application traffic, and email:
-+ **If the traffic slows or stops** – Use the method provided by the previous DNS service to change the name servers for the domain back to the previous name servers\. These are the name servers that you made note of in step 2 of [To update the NS record with your current DNS service provider to use Route 53 name servers](#migrate-dns-change-name-servers-with-provider-procedure)\. Then determine what went wrong\.
++ **If the traffic slows or stops** – Use the method provided by the previous DNS service to change the name servers for the domain back to the previous name servers\. These are the name servers that you made note of in step 6 of [To update the NS record with your current DNS service provider to use Route 53 name servers](#migrate-dns-change-name-servers-with-provider-procedure)\. Then determine what went wrong\.
 + **If the traffic is unaffected** – Continue to [Step 8: Update the domain registration to use Amazon Route 53 name servers](#migrate-dns-update-domain)\.
 
 ## Step 8: Update the domain registration to use Amazon Route 53 name servers<a name="migrate-dns-update-domain"></a>

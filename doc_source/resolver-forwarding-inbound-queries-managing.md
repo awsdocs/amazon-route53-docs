@@ -35,7 +35,7 @@ To view the status for an inbound endpoint, perform the following procedure\.<a 
 
 1. Sign in to the AWS Management Console and open the Route 53 console at [https://console\.aws\.amazon\.com/route53/](https://console.aws.amazon.com/route53/)\.
 
-1. In the navigation pane, choose **Outbound endpoints**\.
+1. In the navigation pane, choose **Inbound endpoints**\.
 
 1. On the navigation bar, choose the Region where you created the inbound endpoint\. The **Status** column contains one of the following values:  
 **Creating**  
