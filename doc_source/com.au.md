@@ -11,7 +11,7 @@ One to five years\.
 **Restrictions**  
 Only second\-level domains are available\. Route 53 supports the second\-level domains \.com\.au and net\.au\.   
 Open to the public, with some restrictions:  
-+ The \.com\.au and \.net\.au domains are open to legal persons, partnerships, or sole traders registered in Australia; to foreign companies licensed to trade in Australia; and to owners or applicants of an Australian\-registered trademark\. 
++ The \.com\.au and \.net\.au domains are open to partnerships or sole traders registered in Australia; to foreign companies licensed to trade in Australia; and to owners or applicants of an Australian\-registered trademark\. Individuals cannot register \.com\.au/\.net\.au domains\. The registrant contact must be a company\.
 + Your domain name must be identical to your name \(as registered with the relevant Australian authorities\) or to your trademark \(or to the abbreviation or acronym for your trademark\)\. 
 + The domain name should indicate your activity\. For example, it should indicate a product that you sell or a service that you provide\.
 + During the registration process, you must provide the following information:

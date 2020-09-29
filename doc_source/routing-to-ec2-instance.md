@@ -11,7 +11,7 @@ Before you get started, you need the following:
   + **Linux** – See [Getting started with Amazon EC2 Linux instances](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/EC2_GetStarted.html) in the *Amazon EC2 User Guide for Linux Instances*
   + **Microsoft Windows** – See [Getting started with Amazon EC2 Windows instances](https://docs.aws.amazon.com/AWSEC2/latest/WindowsGuide/EC2_GetStarted.html) in the *Amazon EC2 User Guide for Windows Instances*
 **Important**  
-We recommend that you also create an [Elastic IP address](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/elastic-ip-addresses-eip.html) and associate it with your EC2 instance\. An Elastic IP address ensures that the IP address of your Amazon EC2 instance will never change\.
+We recommend that you also create an [Elastic IP address](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/elastic-ip-addresses-eip.html) and associate it with your EC2 instance\. An Elastic IP address ensures that the IP address of your Amazon EC2 instance will never change\. For information related to pricing, see [Pricing for Elastic IP addresses](https://aws.amazon.com/ec2/pricing/on-demand/#Elastic_IP_Addresses)\.
 + A registered domain name\. You can use Amazon Route 53 as your domain registrar, or you can use a different registrar\.
 + Route 53 as the DNS service for the domain\. If you register your domain name by using Route 53, we automatically configure Route 53 as the DNS service for the domain\. 
 

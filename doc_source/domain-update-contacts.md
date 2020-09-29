@@ -65,7 +65,7 @@ You must complete and submit a form to AWS Support\. See [Changing the owner of 
 You must complete and submit a form to AWS Support\. See [Changing the owner of a domain when the registry requires a Change of Domain Ownership form](#domain-update-contacts-domain-ownership-form)\.
 
 **\.fi**  
-You must complete and submit a form to AWS Support\. We arrange for Ficora, the registry for \.fi domains, to send you a code that allows a change of ownership for the domain\. You forward the code to us, and we complete the process\. See [Changing the owner of a domain when the registry requires a Change of Domain Ownership form](#domain-update-contacts-domain-ownership-form)\.
+You must open a case with AWS Support\. See [Contacting AWS Support about domain registration issues](domain-contact-support.md)\.
 
 **\.im**  
 You must open a case with AWS Support\. See [Contacting AWS Support about domain registration issues](domain-contact-support.md)\.
@@ -119,9 +119,9 @@ To update contact information for a domain, perform the following procedure\. <a
 
    1. Change *only* the email address for the registrant contact\. Don't change any other values for any of the contacts for the domain\. If you also want to change other values, you change them later in the process\.
 
-   1. Choose **Save**\.
+      Choose **Save**\.
 
-      When the change is complete, we send email to the new email address confirming that the change is complete\. You don't need to authorize the change\.
+      If the new email address is an address that you have never verified is reachable, we send email to the new email address\. You must choose the link in the email to verify that the new email address is valid\. If you don't verify the new email address, Route 53 suspends the domain as required by ICANN\. 
 
    1. If you want to change other values for the registrant, administrative, or technical contacts for the domain, return to step 1 and repeat the procedure\.
 

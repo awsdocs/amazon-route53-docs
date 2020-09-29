@@ -9,6 +9,7 @@ One year\.
 Open to the public, with some restrictions:  
 + You must reside in Germany or have an administrative contact \(physical person\) who resides in Germany and has an address other than a P\.O\. box\.
 + During registration, the DNS \(A, MX, and CNAME\) of the domain name must be correctly configured so that it can pass the registry's zone check\. Three servers of two different C classes are required\.
++ If you're using a DNS service other than Route 53, the name servers for the domain must pass a check to ensure that they're correctly configured\. To determine whether the name servers for your domain will pass the check, see [https://www\.denic\.de/en/service/tools/nast/](https://www.denic.de/en/service/tools/nast/)\.
 
 **Privacy protection**  
 Not supported\.
