@@ -58,7 +58,7 @@ Changes generally propagate to all Route 53 servers within 60 seconds\. When pr
 
 1. If you haven't already, add one or more alternate domain names to your CloudFront distribution\. These are the domain names \(such as example\.com\) and subdomain names \(such as acme\.example\.com\) that you want to use for your URLs instead of the domain name that CloudFront assigned to your distribution\.
 
-   For more information, see [Using alternate domain names \(CNAMEs\)](https://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/CNAMEs.html) in the *Amazon CloudFront Developer Guide*\.
+   For more information, see [Using custom URLs for files by adding alternate domain names \(CNAMEs\)](https://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/CNAMEs.html) in the *Amazon CloudFront Developer Guide*\.
 
 1. Sign in to the AWS Management Console and open the Route 53 console at [https://console\.aws\.amazon\.com/route53/](https://console.aws.amazon.com/route53/)\.
 

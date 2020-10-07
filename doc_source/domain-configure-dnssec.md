@@ -43,7 +43,7 @@ After you configure DNSSEC, here's how it protects your domain from DNS spoofing
    + The record for the domain, such as example\.com\. Typically this contains the IP address of a host\.
    + The signature for the record, which you created when you configured DNSSEC\.
 
-1. The DNS resolver uses the public key that you provided to the domain registrar \(and the registrar forwarded to the TLD registry\) to do to things:
+1. The DNS resolver uses the public key that you provided to the domain registrar \(and the registrar forwarded to the TLD registry\) to do two things:
    + Establish a chain of trust\.
    + Verify that the signed response from the DNS service provider is legitimate and hasn't been replaced with a bad response from an attacker\.
 

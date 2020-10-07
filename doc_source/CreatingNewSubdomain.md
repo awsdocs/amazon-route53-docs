@@ -56,11 +56,11 @@ Perform the following procedure\.
 
    1. Sign in to the AWS Management Console and open the Route 53 console at [https://console\.aws\.amazon\.com/route53/](https://console.aws.amazon.com/route53/)\.
 
-   1. In the navigation pane, click **Hosted zones**\.
+   1. In the navigation pane, click **Hosted Zones**\.
 
-   1. On the **Hosted zones** page, choose the name for the hosted zone\.
+   1. On the **Hosted Zones** page, choose the radio button \(not the name\) for the hosted zone\.
 
-   1. Make note of the four names listed for **Name servers** in the **Hosted zone details** section\.
+   1. In the right pane, make note of the four servers listed for **Name Servers**\.
 
    Alternatively, you can use the `GetHostedZone` action\. For more information, see [GetHostedZone](https://docs.aws.amazon.com/Route53/latest/APIReference/API_GetHostedZone.html) in the *Amazon Route 53 API Reference*\.
 

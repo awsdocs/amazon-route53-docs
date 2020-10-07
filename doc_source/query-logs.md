@@ -10,7 +10,7 @@ You can configure Amazon Route 53 to log information about the public DNS queri
 Once you configure query logging, Route 53 will send logs to CloudWatch Logs\. You use CloudWatch Logs tools to access the query logs\.
 
 **Note**  
-Query logging is available only for public hosted zones\.
+Query logging is also available for private hosted zones\. For more information, see [Resolver query logging](resolver-query-logs.md)\.
 
 Query logs contain only the queries that DNS resolvers forward to Route 53\. If a DNS resolver has already cached the response to a query \(such as the IP address for a load balancer for example\.com\), the resolver will continue to return the cached response without forwarding the query to Route 53 until the TTL for the corresponding record expires\. 
 

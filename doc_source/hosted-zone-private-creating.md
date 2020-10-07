@@ -32,7 +32,8 @@ For information about creating a private hosted zone by using the Route 53 API,
 
 1. In the **VPC ID** list, choose the VPC that you want to associate with the hosted zone\.
 **Note**  
-If the console displays the following message, you're trying to associate a VPC with this hosted zone that has already been associated with another hosted zone that has an overlapping name space, such as example\.com and retail\.example\.com:  
-"A conflicting domain is already associated with the given VPC or Delegation Set\."
+If the console displays the following message, you're trying to associate a hosted zone that uses the same name space as that of another hosted zone within the same VPC:  
+"A conflicting domain is already associated with the given VPC or Delegation Set\."  
+For example, if hosted zone A and hosted zone B both use the name space `example.com`, you can't associate both hosted zones with the same VPC\.
 
 1. Choose **Create**\.

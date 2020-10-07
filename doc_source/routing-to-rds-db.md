@@ -63,7 +63,7 @@ You can't create a CNAME record that has the same name as the hosted zone\.
 Choose **IP address or another value depending on the record type**\.   
 Enter the domain name of the DB instance that you want to open connections to\. This is the value that you got when you performed the procedure [To get the domain name for your Amazon RDS DB instance](#routing-to-rds-db-get-instance-domain-name-procedure)\.  
 **Record type**  
-Choose **A – IPv4 address**\.  
+Choose **CNAME**\.  
 **TTL \(seconds\)**  
 Accept the default value of **300**\.
 

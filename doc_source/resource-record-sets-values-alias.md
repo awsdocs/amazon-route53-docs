@@ -2,6 +2,9 @@
 
 When you create alias records, you specify the following values\. For more information, see [Choosing between alias and non\-alias records](resource-record-sets-choosing-alias-non-alias.md)\.
 
+**Note**  
+If you are using Route 53 in the AWS GovCloud \(US\) Region, this feature has some restrictions\. For more information, see the [Amazon Route 53 page](https://docs.aws.amazon.com/govcloud-us/latest/UserGuide/govcloud-r53.html) in the *AWS GovCloud \(US\) User Guide*\.
+
 **Topics**
 + [Routing policy](#rrsets-values-alias-routing-policy)
 + [Record name](#rrsets-values-alias-name)
