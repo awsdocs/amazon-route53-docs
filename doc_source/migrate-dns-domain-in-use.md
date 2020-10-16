@@ -76,7 +76,7 @@ For more information, see [Creating records by importing a zone file](resource-r
 
 Before importing your zone file, do not forget to :
 - clean the **; SOA Record** section in it
-- clean the NS record lines starting with @ (host = root), let other ones starting with someone else (otherwise you will lose the delegation of those subdomains)
+- clean the NS record lines starting with @ (host = root), let other ones starting with something else (otherwise you will lose the delegation of those subdomains)
 
 **Create records individually in the console**  
 If you didn't get a zone file and you just want to create a few records with a routing policy of Simple to get started, you can create the records in the Route 53 console\. You can create both alias and non\-alias records\.  
