@@ -74,6 +74,10 @@ You can create records in a variety of ways:
 This is the easiest method if you got a zone file from your current DNS service in [Step 1: Get your current DNS configuration from the current DNS service provider \(optional but recommended\)](#migrate-dns-get-zone-file)\. Amazon Route 53 can't predict when to create alias records or to use special routing types such as weighted or failover\. As a result, if you import a zone file, Route 53 creates standard DNS records using the simple routing policy\.  
 For more information, see [Creating records by importing a zone file](resource-record-sets-creating-import.md)\.
 
+Before importing your zone file, do not forget to :
+- clean the **; SOA Record** section in it
+- clean the NS record lines starting with @ (host = root), let other ones starting with someone else (otherwise you will lose the delegation of those subdomains)
+
 **Create records individually in the console**  
 If you didn't get a zone file and you just want to create a few records with a routing policy of Simple to get started, you can create the records in the Route 53 console\. You can create both alias and non\-alias records\.  
 For more information, see the following topics:  
