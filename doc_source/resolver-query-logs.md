@@ -1,6 +1,8 @@
 # Resolver query logging<a name="resolver-query-logs"></a>
 
-You can log the DNS queries that originate in Amazon Virtual Private Cloud VPCs that you specify, as well as the responses to those DNS queries\. Resolver query logs include values such as the following:
+You can log the DNS queries that originate in Amazon Virtual Private Cloud VPCs that you specify, as well as the responses to those DNS queries\. You can also log DNS queries from on\-premises resources that use an inbound Resolver endpoint, and DNS queries that use an outbound Resolver endpoint for recursive DNS resolution\.
+
+Resolver query logs include values such as the following:
 + The AWS Region where the VPC was created
 + The ID of the VPC that the query originated from
 + The IP address of the instance that the query originated from

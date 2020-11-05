@@ -9,8 +9,10 @@ Some registrars only allow you to specify name servers using IP addresses; they 
 
 1. Sign in to the AWS Management Console and open the Route 53 console at [https://console\.aws\.amazon\.com/route53/](https://console.aws.amazon.com/route53/)\.
 
-1. In the navigation pane, click **Hosted Zones**\.
+1. In the navigation pane, click **Hosted zones**\.
 
-1. On the **Hosted Zones** page, choose the radio button \(not the name\) for the hosted zone\.
+1. On the **Hosted zones** page, choose the radio button \(not the name\) for the hosted zone, then choose **View details**\.
 
-1. In the right pane, make note of the four servers listed for **Name Servers**\.
+1. On the details page for the hosted zone, choose **Hosted zone details**\.
+
+1. Make note of the four servers listed for **Name servers**\.

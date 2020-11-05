@@ -20,11 +20,13 @@ To get the list of name servers for your hosted zone:
 
 1. Sign in to the AWS Management Console and open the Route 53 console at [https://console\.aws\.amazon\.com/route53/](https://console.aws.amazon.com/route53/)\.
 
-1. In the navigation pane, click **Hosted Zones**\.
+1. In the navigation pane, click **Hosted zones**\.
 
-1. On the **Hosted Zones** page, choose the radio button \(not the name\) for the hosted zone\.
+1. On the **Hosted zones** page, choose the radio button \(not the name\) for the hosted zone, then choose **View details**\.
 
-1. In the right pane, make note of the four servers listed for **Name Servers**\.
+1. On the details page for the hosted zone, choose **Hosted zone details**\.
+
+1. Make note of the four servers listed for **Name servers**\.
 
 For information about migrating DNS service from another DNS service provider to Route 53, see [Making Amazon Route 53 the DNS service for an existing domainMaking Route 53 the DNS service for an existing domain](MigratingDNS.md)\.
 

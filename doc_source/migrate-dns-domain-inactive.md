@@ -93,9 +93,11 @@ When you've finished creating records for the domain, you can change the DNS ser
 
    1. In the navigation pane, choose **Hosted zones**\.
 
-   1. On the **Hosted zones** page, choose the radio button \(not the name\) for the applicable hosted zone\.
+   1. On the **Hosted zones** page, choose the radio button \(not the name\) for the hosted zone, then choose **View details**\.
 
-   1. Make note of the four names listed for **Name servers**\.
+   1. On the details page for the hosted zone, choose **Hosted zone details**\.
+
+   1. Make note of the four servers listed for **Name servers**\.
 
 1. Use the method provided by the registrar for the domain to change the name servers for the domain to use the four Route 53 name servers that you got in step 1 of this procedure\.
 
