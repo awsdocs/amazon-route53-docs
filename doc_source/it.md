@@ -10,7 +10,7 @@ Open to the public, with some restrictions:
 + Individuals or organizations must have a registered address in the European Union\.
 + If your country of origin is Italy, you must enter a fiscal code\. If your country of origin is within the European Union, you must enter an identity document number \(ID number\)\.
 + If you specify **Company**, **Association**, or **Public body** for the contact type, a VAT number \(a value\-added tax identification number\) is required\.
-+ Name servers for your domain must pass a DNS check\. If your domain name does not comply with the technical requirements, and you do not correct it within 30 days, your domain name will be deleted by the registry\. We don't issue refunds for domains that are deleted because they don't meet technical requirements\.
++ Name servers for your domain must pass a DNS check\. We suggest that you check the name servers at [https://dns\-check\.nic\.it/](https://dns-check.nic.it/) before you submit the change request\. If your domain name does not comply with the technical requirements \(for example, it isn’t associated with an operational name server\), and you do not correct it within 30 days, your domain name will be deleted by the registry\. We don't issue refunds for domains that are deleted because they don't meet technical requirements\.
 
 **Privacy protection**  
 Not supported\.
