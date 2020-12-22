@@ -24,7 +24,7 @@ TLD registries have assigned special or premium prices to some domain names\. Yo
 **Topics**
 + [Transfer requirements for top\-level domains](#domain-transfer-to-route-53-requirements)
 + [Step 1: Confirm that Amazon Route 53 supports the top\-level domain](#domain-transfer-to-route-53-confirm-tld)
-+ [Step 2: Transfer your DNS service to Amazon Route 53 or another DNS service provider](#domain-transfer-to-route-53-transfer-dns)
++ [Step 2 \(optional\): Transfer your DNS service to Amazon Route 53 or another DNS service provider](#domain-transfer-to-route-53-transfer-dns)
 + [Step 3: Change settings with the current registrar](#domain-transfer-to-route-53-change-registrar-settings)
 + [Step 4: Get the names of your name servers](#domain-transfer-to-route-53-get-name-servers)
 + [Step 5: Request the transfer](#domain-transfer-to-route-53-request-transfer)
@@ -56,24 +56,15 @@ See [Domains that you can register with Amazon Route 53](registrar-tld-list.md)
 
 If a TLD is not on the list, you can't currently transfer the domain registration to Route 53\. We occasionally add support more TLDs to the list, so check back to see if we've added support for your domain\. You can also submit a request for support for your TLD on the [Route 53 Domain Registration](https://forums.aws.amazon.com/forum.jspa?forumID=214) forum\.
 
-## Step 2: Transfer your DNS service to Amazon Route 53 or another DNS service provider<a name="domain-transfer-to-route-53-transfer-dns"></a>
-
-If the registrar for your domain is also the DNS service provider for the domain, transfer your DNS service to Amazon Route 53 or another DNS service provider *before* you continue with the process to transfer the domain registration\.
+## Step 2 \(optional\): Transfer your DNS service to Amazon Route 53 or another DNS service provider<a name="domain-transfer-to-route-53-transfer-dns"></a>
 
 **Why transfer DNS first?**
 
-Some registrars provide free DNS service when you purchase a domain registration\. When you transfer the registration, the previous registrar will not renew your domain registration and might disable DNS service for the domain as soon as they receive a request from Route 53 to transfer the domain\. For more information, see [Making Amazon Route 53 the DNS service for an existing domainMaking Route 53 the DNS service for an existing domain](MigratingDNS.md)\.
-
-**Important**  
-If the registrar for your domain is also the DNS service provider for the domain and you don't transfer DNS service to another provider, your website, email, and the web applications associated with the domain might become unavailable\. 
-
-**Transferring DNS service when you're using DNSSEC**
-
-Route 53 supports DNSSEC for domain registration but does not support DNSSEC for DNS service\. If you want to continue using DNSSEC for the domain that you're transferring, you need to either choose a DNS service provider that does support DNSSEC or set up your own DNS server\. You can't transfer a domain registration while DNSSEC is configured, so don't configure DNSSEC with the new DNS service provider until after the transfer is complete\.
+Some registrars provide free DNS service that might be disabled as soon as they receive a request from Route 53 to transfer the domain's registration\. If you'd like Route 53 to provide DNS service for your domain, see [Making Amazon Route 53 the DNS service for an existing domainMaking Route 53 the DNS service for an existing domain](MigratingDNS.md)\.
 
 ## Step 3: Change settings with the current registrar<a name="domain-transfer-to-route-53-change-registrar-settings"></a>
 
-Using the method provided by your current registrar, perform the following tasks for each domain that you want to transfer\.
+Using the method provided by your current registrar, do each of the following for each domain that you want to transfer\.
 + [Confirm that the email for the registrant contact for your domain is up to date](#domain-transfer-to-route-53-change-registrar-settings-email)
 + [Unlock the domain so it can be transferred](#domain-transfer-to-route-53-change-registrar-settings-unlock)
 + [Confirm that the domain status allows you to transfer the domain](#domain-transfer-to-route-53-change-registrar-settings-status)
@@ -91,12 +82,8 @@ ICANN, the governing body for domain registrations, requires that you unlock you
 For more information, see [Transfer requirements for top\-level domains](#domain-transfer-to-route-53-requirements)\.
 
 ** Disable DNSSEC for the domain **  
-Route 53 supports DNSSEC for domain registration, but not for DNS\. If you're using DNSSEC for the domain that you're transferring to Route 53, do one of the following:  
-+ **If you're transferring DNS service to Route 53 or another provider that does not support DNSSEC** – Delete public keys for the domain\.
-**Important**  
-If you transfer a domain registration to Route 53 while DNSSEC is configured, the DNSSEC public keys are transferred, too\. If you transfer DNS service to Route 53 or another a provider that doesn't support DNSSEC, DNS resolution fails intermittently until you delete the DNSSEC keys from the domain\. For more information, see the troubleshooting topic [DNS resolution fails intermittently](troubleshooting-intermittent-dns-resolution-failure.md)\.
-+ **If you're transferring DNS service to a provider that supports DNSSEC** – Configure DNSSEC with the new DNS service provider\. You don't need to delete public keys for the domain\.
-+ **If you aren't transferring DNS service** – You don't need to delete public keys for the domain\.
+If you use DNSSEC with a domain and you transfer the domain registration to Route 53, you must disable DNSSEC at the former registrar first\. Then, after you transfer the domain registration, take steps to set up DNSSEC for the domain in Route 53\. Route 53 supports DNSSEC for domain registration and for DNSSEC signing\. For more information, see [Configuring DNSSEC signing in Amazon Route 53](dns-configuring-dnssec.md)\.  
+If you transfer a domain registration to Route 53 while DNSSEC is configured, the DNSSEC public keys are transferred, too\. If you transfer DNS service to a provider that doesn't support DNSSEC, DNS resolution fails intermittently until you delete the DNSSEC keys from the domain\. For more information, see [Deleting public keys for a domain](domain-configure-dnssec.md#domain-configure-dnssec-deleting-keys)\.
 
 **Get an authorization code**  
 An authorization code from the current registrar authorizes us to request that registration for the domain be transferred to Route 53\. You'll enter this code in the Route 53 console later in the process\.  
@@ -145,7 +132,7 @@ If you want to change the DNS service to a provider other than Route 53 at the 
 
 **Important**  
 If the registrar for your domain is also the DNS service provider for the domain, transfer your DNS service to Route 53 or another DNS service provider *before* you continue with the process to transfer the domain registration\.   
-If you transfer DNS service at the same time that you transfer domain registration, your website, email, and the web applications associated with the domain might become unavailable\. For more information, see [Step 2: Transfer your DNS service to Amazon Route 53 or another DNS service provider](#domain-transfer-to-route-53-transfer-dns)\.
+If you transfer DNS service at the same time that you transfer domain registration, your website, email, and the web applications associated with the domain might become unavailable\. For more information, see [Step 2 \(optional\): Transfer your DNS service to Amazon Route 53 or another DNS service provider](#domain-transfer-to-route-53-transfer-dns)\.
 
 ## Step 5: Request the transfer<a name="domain-transfer-to-route-53-request-transfer"></a>
 
@@ -156,7 +143,7 @@ The procedure that you use depends on whether you want to transfer up to five do
 + [To transfer domain registration to Route 53 for more than five domains](#domain-transfer-to-route-53-more-than-five-procedure)
 
 **Important**  
-If you use the procedure to transfer more than five domains, Route 53 automatically configures the transferred domains to use the current DNS service for all the domains that you're transferring\. If the registrar for your domain is also the DNS service provider for the domain and you don't transfer DNS service to another provider, your website, email, and the web applications associated with the domain might become unavailable\. For more information, see [Step 2: Transfer your DNS service to Amazon Route 53 or another DNS service provider](#domain-transfer-to-route-53-transfer-dns)\.<a name="domain-transfer-to-route-53-up-to-five-procedure"></a>
+If you use the procedure to transfer more than five domains, Route 53 automatically configures the transferred domains to use the current DNS service for all the domains that you're transferring\. If the registrar for your domain is also the DNS service provider for the domain and you don't transfer DNS service to another provider, your website, email, and the web applications associated with the domain might become unavailable\. For more information, see [Step 2 \(optional\): Transfer your DNS service to Amazon Route 53 or another DNS service provider](#domain-transfer-to-route-53-transfer-dns)\.<a name="domain-transfer-to-route-53-up-to-five-procedure"></a>
 
 **To transfer domain registration to Route 53 for up to five domains**
 

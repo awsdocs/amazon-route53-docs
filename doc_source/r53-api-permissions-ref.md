@@ -23,6 +23,7 @@ To specify an action, use the applicable prefix \(`route53`, `route53domains`, o
 + [Required permissions for actions to get limits for accounts, hosted zones, and reusable delegation sets](#required-permissions-get-limits)
 + [Required permissions for actions on tags for hosted zones and health checks](#required-permissions-tags-hosted-zones)
 + [Required permissions for actions on tags for domains](#required-permissions-tags-domains)
++ [Required permissions for DNSSEC actions](#required-permissions-dnssec-signing)
 
 ## Required permissions for actions on public hosted zones<a name="required-permissions-public-hosted-zones"></a><a name="public-hosted-zones-table"></a>
 
@@ -130,11 +131,13 @@ Resources: `*`
 
 [GetGeoLocation](https://docs.aws.amazon.com/Route53/latest/APIReference/API_GetGeoLocation.html)  
 Required Permissions \(API Action\): None  
-Resources: None
+Resources: None  
+Route 53 does not perform authorization for this API because it retrieves information that is already available to the public\.
 
 [ListGeoLocations](https://docs.aws.amazon.com/Route53/latest/APIReference/API_ListGeoLocations.html)  
 Required Permissions \(API Action\): None  
-Resources: None
+Resources: None  
+Route 53 does not perform authorization for this API because it retrieves information that is already available to the public\.
 
 [ListResourceRecordSets](https://docs.aws.amazon.com/Route53/latest/APIReference/API_ListResourceRecordSets.html)  
 Required Permissions \(API Action\): `route53:ListResourceRecordSets`  
@@ -215,8 +218,9 @@ Required Permissions \(API Action\): `route53:DeleteHealthCheck`
 Resources: `*`, `arn:aws:route53:::healthcheck/health check ID`
 
 [GetCheckerIpRanges](https://docs.aws.amazon.com/Route53/latest/APIReference/API_GetCheckerIpRanges.html)  
-Required Permissions \(API Action\): `route53:GetCheckerIpRanges`  
-Resources: `*`
+Required Permissions \(API Action\): None  
+Resources: `*`  
+Route 53 does not perform authorization for this API because it retrieves information that is already available to the public\.
 
 [GetHealthCheck](https://docs.aws.amazon.com/Route53/latest/APIReference/API_GetHealthCheck.html)  
 Required Permissions \(API Action\): `route53:GetHealthCheck`  
@@ -493,4 +497,34 @@ Resources: `*`
 
 [UpdateTagsForDomain](https://docs.aws.amazon.com/Route53/latest/APIReference/API_domains_UpdateTagsForDomain.html)  
 Required Permissions \(API Action\): `route53domains:UpdateTagsForDomain`  
+Resources: `*`
+
+## Required permissions for DNSSEC actions<a name="required-permissions-dnssec-signing"></a><a name="tags-domains-table"></a>
+
+[GetDNSSEC](https://docs.aws.amazon.com/Route53/latest/APIReference/API_GetDNSSEC.html)  
+Required Permissions \(API Action\): `route53domains:DeleteTagsForDomain`  
+Resources: `*`
+
+[CreateKeySigningKey](https://docs.aws.amazon.com/Route53/latest/APIReference/API_CreateKeySigningKey.html)  
+Required Permissions \(API Action\): `route53:CreateKeySigningKey`, `kms:DescribeKey`, `kms:GetPublicKey`, `kms:Sign`  
+Resources: `*`
+
+[DeleteKeySigningKey](https://docs.aws.amazon.com/Route53/latest/APIReference/API_DeleteKeySigningKey.html)  
+Required Permissions \(API Action\): `route53:DeleteKeySigningKey`, `kms:DescribeKey`, `kms:GetPublicKey`, `kms:Sign`  
+Resources: `*`
+
+[ActivateKeySigningKey](https://docs.aws.amazon.com/Route53/latest/APIReference/API_ActivateKeySigningKey.html)  
+Required Permissions \(API Action\): `route53:ActivateKeySigningKey`, `kms:DescribeKey`, `kms:GetPublicKey`, `kms:Sign`  
+Resources: `*`
+
+[DeactivateKeySigningKey](https://docs.aws.amazon.com/Route53/latest/APIReference/API_DeactivateKeySigningKey.html)  
+Required Permissions \(API Action\): `route53:DeactivateKeySigningKey`, `kms:DescribeKey`, `kms:GetPublicKey`, `kms:Sign`  
+Resources: `*`
+
+[EnableHostedZoneDNSSEC](https://docs.aws.amazon.com/Route53/latest/APIReference/API_EnableHostedZoneDNSSEC.html)  
+Required Permissions \(API Action\): `route53:EnableHostedZoneDNSSEC`, `kms:DescribeKey`, `kms:GetPublicKey`, `kms:Sign`  
+Resources: `*`
+
+[DisableHostedZoneDNSSEC](https://docs.aws.amazon.com/Route53/latest/APIReference/API_DisableHostedZoneDNSSEC.html)  
+Required Permissions \(API Action\): `route53:DisableHostedZoneDNSSEC`, `kms:DescribeKey`, `kms:GetPublicKey`, `kms:Sign`  
 Resources: `*`

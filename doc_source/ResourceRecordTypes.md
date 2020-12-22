@@ -12,6 +12,7 @@ Route 53 provides an extension to DNS functionality known as alias records\. Si
 + [AAAA record type](#AAAAFormat)
 + [CAA record type](#CAAFormat)
 + [CNAME record type](#CNAMEFormat)
++ [DS record type](#DSFormat)
 + [MX record type](#MXFormat)
 + [NAPTR record type](#NAPTRFormat)
 + [NS record type](#NSFormat)
@@ -208,9 +209,27 @@ Amazon Route 53 also supports alias records, which allow you to route queries t
 1. <Value>hostname.example.com</Value>
 ```
 
+## DS record type<a name="DSFormat"></a>
+
+A delegation signer \(DS\) record refers a zone key for a delegated subdomain zone\. You might create a DS record when you establish a chain of trust when you configure DNSSEC signing\. For more information about configuring DNSSEC in Route 53, see [Configuring DNSSEC signing in Amazon Route 53](dns-configuring-dnssec.md)\.
+
+The first three values are decimal numbers representing the key tag, algorithm, and digest type\. The fourth value is the digest of the zone key\. For more information about the DS record format, see [RFC 4034](https://www.ietf.org/rfc/rfc4034.txt)\.
+
+**Example for the Route 53 console**
+
+```
+1. 123 4 5 1234567890abcdef1234567890absdef
+```
+
+**Example for the Route 53 API**
+
+```
+1. <Value>123 4 5 1234567890abcdef1234567890absdef</Value>
+```
+
 ## MX record type<a name="MXFormat"></a>
 
-An MX record specifies the names of your mail servers and, if you have two or more mail servers, the priority order\. Each value for an MX record contains two values, priority and domain name:
+An MX record specifies the names of your mail servers and, if you have two or more mail servers, the priority order\. Each value for an MX record contains two values, priority and domain name\.
 
 **Priority**  
 An integer that represents the priority for an email server\. If you specify only one server, the priority can be any integer between 0 and 65535\. If you specify multiple servers, the value that you specify for the priority indicates which email server you want email to be routed to first, second, and so on\. The server with the lowest value for the priority takes precedence\. For example, if you have two email servers and you specify values of 10 and 20 for the priority, email always goes to the server with a priority of 10 unless it's unavailable\. If you specify values of 10 and 10, email is routed to the two servers approximately equally\.

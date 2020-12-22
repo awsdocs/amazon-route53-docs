@@ -51,7 +51,7 @@ For information on getting current quotas \(formerly referred to as "limits"\), 
 | --- | --- | 
 | Hosted zones | 500 per AWS account [Request a higher quota](https://console.aws.amazon.com/servicequotas/home?region=us-east-1#!/services/route53/quotas)\.  | 
 | Hosted zones that can use the same reusable delegation set  | 100 [Request a higher quota](https://console.aws.amazon.com/servicequotas/home?region=us-east-1#!/services/route53/quotas)\.  | 
-| Amazon VPCs that you can associate with a private hosted zone | 100 [Request a higher quota](https://console.aws.amazon.com/servicequotas/home?region=us-east-1#!/services/route53/quotas)\.  | 
+| Amazon VPCs that you can associate with a private hosted zone | 300 [Request a higher quota](https://console.aws.amazon.com/servicequotas/home?region=us-east-1#!/services/route53/quotas)\.  | 
 | Private hosted zones that you can associate a VPC with | No quota **\*** | 
 | Authorizations that you can create so you can associate VPCs that were created by one account with a hosted zone that was created by another account | 100 | 
 

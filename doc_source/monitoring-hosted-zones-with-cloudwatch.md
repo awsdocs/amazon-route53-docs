@@ -22,6 +22,34 @@ Valid statistics: Sum, SampleCount
 Units: Count  
 Region: Route 53 is a global service\. To get hosted zone metrics, you must specify US East \(N\. Virginia\) for the Region\. 
 
+**DNSSECInternalFailure**  
+Value is 1 if any object in the hosted zone is in an INTERNAL\_FAILURE state\. Otherwise, value is 0\.  
+Valid statistics: N/A  
+Units: Count  
+Volume: 1 per hosted zone per day  
+Region: Route 53 is a global service\. To get hosted zone metrics, you must specify US East \(N\. Virginia\) for the Region\.
+
+**DNSSECKeySigningKeysNeedingAction**  
+Number of key signing keys \(KSKs\) that have an ACTION\_NEEDED state \(due to KMS failure\)\.  
+Valid statistics: Sum, SampleCount  
+Units: Count  
+Volume: 1 per hosted zone per day  
+Region: Route 53 is a global service\. To get hosted zone metrics, you must specify US East \(N\. Virginia\) for the Region\. 
+
+**DNSSECKeySigningKeyMaxNeedingActionAge**  
+Time elapsed since the key signing key \(KSK\) was set to the ACTION\_NEEDED state\.  
+Valid statistics: N/A  
+Units: Seconds  
+Volume: Up to 1 per hosted zone, per day  
+Region: Route 53 is a global service\. To get hosted zone metrics, you must specify US East \(N\. Virginia\) for the Region\. 
+
+**DNSSECKeySigningKeyAge**  
+The time elapsed since the key signing key \(KSK\) was created \(not since it was activated\)\.  
+Valid statistics: N/A  
+Units: Seconds  
+Volume: 1 per hosted zone, per day  
+Region: Route 53 is a global service\. To get hosted zone metrics, you must specify US East \(N\. Virginia\) for the Region\. 
+
 ## CloudWatch dimension for Route 53 public hosted zone metrics<a name="cloudwatch-dimensions-route-53-hosted-zones"></a>
 
 Route 53 metrics for hosted zones use the `AWS/Route53` namespace and provide metrics for `HostedZoneId`\. To get the number of DNS queries, you must specify the ID of the hosted zone in the `HostedZoneId` dimension\.

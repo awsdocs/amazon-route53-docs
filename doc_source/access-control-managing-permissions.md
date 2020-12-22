@@ -7,6 +7,8 @@ We recommend that you first review the introductory topics that explain the basi
 
 **Topics**
 + [Permissions required to use the Amazon Route 53 console](#console-required-permissions)
++ [Example permissions for a domain record owner](#example-permissions-record-owner)
++ [Route 53 CMK permissions required for DNSSEC signing](#KMS-key-policy-for-DNSSEC)
 + [AWS managed \(predefined\) policies for Route 53](#access-policy-examples-aws-managed)
 + [Customer managed policy examples](#access-policy-examples-for-sdk-cli)
 
@@ -90,6 +92,10 @@ To grant full access to the Amazon Route 53 console, you grant the permissions 
                 "sns:ListTopics",
                 "sns:ListSubscriptionsByTopic",
                 "sns:CreateTopic",
+                "kms:ListAliases",
+                "kms:DescribeKey",
+                "kms:CreateKey",
+                "kms:CreateAlias",
                 "cloudwatch:DescribeAlarms",
                 "cloudwatch:PutMetricAlarm",
                 "cloudwatch:DeleteAlarms",
@@ -156,6 +162,74 @@ These permissions aren't required if you aren't using the Route 53 console\. Ro
 **`apigateway:GET`**  
 Lets you create and update alias records for which the value of **Alias Target** is an Amazon API Gateway API\.  
 This permission isn't required if you aren't using the Route 53 console\. Route 53 uses it only to get a list of APIs to display in the console\.
+
+**`kms:*`**  
+Lets you work with AWS KMS to enable DNSSEC signing\.
+
+## Example permissions for a domain record owner<a name="example-permissions-record-owner"></a>
+
+In some scenarios, a hosted zone owner might be responsible for the overall management of the hosted zone, while another person in the organization is responsible for a subset of those tasks\. A hosted zone owner who has enabled DNSSEC signing, for example, might want to create an IAM policy that includes the permission for someone else to add and delete Resource Set Records \(RRs\) in the hosted zone, among other tasks\. The specific permissions that a hosted zone owner chooses to enable for a record owner or other people will depend on their organization's policy\.
+
+The following is an example IAM policy that allows a record owner to make modifications to RRs, traffic policies, and health checks\. A record owner with this policy is not allowed to do zone\-level operations, such as creating or deleting a zone, enabling or disabling query logging, creating or deleting a reusable delegation set, or changing DNSSEC settings\.
+
+```
+{
+            "Sid": "Do not allow zone-level modification ",
+            "Effect": "Allow",
+            "Action": [
+                "route53:ChangeResourceRecordSets",
+                "route53:CreateTrafficPolicy",
+                "route53:DeleteTrafficPolicy",
+                "route53:CreateTrafficPolicyInstance",
+                "route53:CreateTrafficPolicyVersion",
+                "route53:UpdateTrafficPolicyInstance",
+                "route53:UpdateTrafficPolicyComment",
+                "route53:DeleteTrafficPolicyInstance"
+                "route53:CreateHealthCheck",
+                "route53:UpdateHealthCheck",
+                "route53:DeleteHealthCheck",
+                "route53:List*",
+                "route53:Get*",
+            ],
+            "Resource": [
+                "*"
+            ]
+        }
+```
+
+## Route 53 CMK permissions required for DNSSEC signing<a name="KMS-key-policy-for-DNSSEC"></a>
+
+When you enable DNSSEC signing for Route 53, Route 53 creates a key\-signing key \(KSK\) based on a customer managed customer master key \(CMK\) in AWS Key Management Service \(AWS KMS\)\. You can use an existing customer managed CMK that supports DNSSEC signing or create a new one\. Route 53 must have permission to access your CMK so that it can create the KSK for you\. 
+
+To enable Route 53 to access your CMK, make sure that your CMK policy contains the following statements:
+
+```
+{
+            "Sid": "Allow Route 53 DNSSEC Service",
+            "Effect": "Allow",
+            "Principal": {
+                "Service": "dnssec-route53.amazonaws.com"
+            },
+            "Action": ["kms:DescribeKey",
+                       "kms:GetPublicKey",
+                       "kms:Sign"],
+            "Resource": "*"
+        },
+        {
+            "Sid": "Allow Route 53 DNSSEC to CreateGrant",
+            "Effect": "Allow",
+            "Principal": {
+                "Service": "dnssec-route53.amazonaws.com"
+            },
+            "Action": ["kms:CreateGrant"],
+            "Resource": "*",
+            "Condition": {
+                "Bool": {
+                    "kms:GrantIsForAWSResource": true
+                }
+            }
+        }
+```
 
 ## AWS managed \(predefined\) policies for Route 53<a name="access-policy-examples-aws-managed"></a>
 

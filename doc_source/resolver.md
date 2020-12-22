@@ -116,6 +116,7 @@ The domain name amazonaws\.com is the public domain name for AWS resources such 
 Resolver doesn't automatically forward DNS queries for some amazonaws\.com subdomains even if you create a forwarding rule for amazonaws\.com\. For more information, see [Domain names that Resolver creates autodefined system rules for](#resolver-overview-forward-vpc-to-network-autodefined-rules)\. For information about how to override this behavior, see "Forwarding All Queries to Your Network," immediately following\.
 
 **Forwarding all queries to your network**  
+  
 If you want to forward all queries to your network, you create a rule, specify "\." \(dot\) for the domain name, and associate the rule with the VPCs for which you want to forward all DNS queries to your network\. Resolver still doesn't forward all DNS queries to your network because using a DNS resolver outside of AWS would break some functionality\. For example, some internal AWS domain names have internal IP address ranges that aren't accessible from outside of AWS\. For a list of the domain names for which queries aren't forwarded to your network when you create a rule for "\.", see [Domain names that Resolver creates autodefined system rules for](#resolver-overview-forward-vpc-to-network-autodefined-rules)\.  
 If you want to try forwarding DNS queries for all domain names to your network, including the domain names that are excluded from forwarding by default, you can create a "\." rule and do one of the following:  
 + Set the `enableDnsHostnames` flag for the VPC to `false`

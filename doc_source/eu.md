@@ -7,7 +7,7 @@ One to ten years\.
 
 **Restrictions**  
 Open to the public, with one restriction:  
-+ You must provide a valid postal address in one of the 27 member\-states of the European Union\. A local presence is required\.
++ You must provide a valid postal address from one of the 30 states of the European Economic Area \(EEA\) or if you’re a citizen of one of the 27 member\-states of the European Union \(EU\), you must specify your EU country of citizenship\.
 
 **Privacy protection**  
 Not supported\.

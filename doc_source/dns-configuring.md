@@ -11,5 +11,6 @@ In this chapter, we explain how to configure Route 53 to route your internet tr
 + [Working with hosted zones](hosted-zones-working-with.md)
 + [Working with records](rrsets-working-with.md)
 + [Using traffic flow to route DNS traffic](traffic-flow.md)
++ [Configuring DNSSEC signing in Amazon Route 53](dns-configuring-dnssec.md)
 + [Using AWS Cloud Map to create records and health checks](autonaming.md)
 + [DNS constraints and behaviors](DNSBehavior.md)

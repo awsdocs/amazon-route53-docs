@@ -27,6 +27,9 @@ There's a small performance impact to this configuration for the first DNS query
 
 One way to route traffic for a subdomain is to create a hosted zone for the subdomain, and then create records for the subdomain in the new hosted zone\. \(The more common option is to create records for the subdomain in the hosted zone for the domain\.\)
 
+**Note**  
+While we describe here the process for creating and delegating to a subdomain hosted zone on Route 53, you can also create a DNS zone on other name servers and similarly create name server \(NS\) records that delegate responsibility to those name servers\.
+
 Here's an overview of the process:
 
 1. Create a hosted zone for the subdomain\. For more information, see [Creating a new hosted zone for a subdomain](#dns-routing-traffic-for-subdomains-creating-hosted-zone)\. 
