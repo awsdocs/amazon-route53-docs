@@ -7,4 +7,4 @@ However, if you specify a longer value for TTL, it takes longer for changes to t
 If you're associating this record with a health check, we recommend that you specify a TTL of 60 seconds or less so clients respond quickly to changes in health status\. 
 
 ## Learn more<a name="record-ttl-learn-more"></a>
-+ [Working with Records](https://docs.aws.amazon.com/Route53/latest/DeveloperGuide/rrsets-working-with.html)
++ [Working with records](https://docs.aws.amazon.com/Route53/latest/DeveloperGuide/rrsets-working-with.html)

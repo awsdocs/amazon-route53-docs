@@ -6,4 +6,4 @@ When you configure Route 53 to respond to DNS queries based on the location that
 We recommend that you create one geolocation record that has a value of **Default** for **Location**\. This record covers geographic locations that you haven't created records for and DNS queries that Route 53 can't identify a location for\.
 
 ## Learn more<a name="record-geolocation-location-learn-more"></a>
-+ [Working with Records](https://docs.aws.amazon.com/Route53/latest/DeveloperGuide/rrsets-working-with.html)
++ [Working with records](https://docs.aws.amazon.com/Route53/latest/DeveloperGuide/rrsets-working-with.html)

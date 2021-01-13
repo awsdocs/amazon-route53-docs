@@ -26,6 +26,7 @@
 + [Multivalue records to add to *domain\-name*](routing-multivalue-answer.md)
 + [Record name](record-name.md)
 + [Value/route traffic to](record-route-traffic-to.md)
++ [Alias](record-alias.md)
 + [Record type](record-type.md)
 + [TTL \(time to live\)](record-ttl.md)
 + [Weight](record-weighted-weight.md)

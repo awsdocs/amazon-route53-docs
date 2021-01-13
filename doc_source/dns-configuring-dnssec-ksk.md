@@ -5,6 +5,7 @@ When you enable DNSSEC signing, Route 53 creates a key\-signing key \(KSK\) for
 Note the following when you work with your KSKs:
 + Before you can delete a KSK, you must edit the KSK to set its status to **Inactive**\. 
 + When DNSSEC signing is enabled for a hosted zone, Route 53 limits the TTL to one week\. If you set a TTL for records in the hosted zone to more than one week, you don't get an error, but Route 53 enforces a TTL of one week\.
++ To help prevent a zone outage and avoid problems with your domain becoming unavailable, you must quickly address and resolve DNSSEC errors\. We strongly recommend that you set up a CloudWatch alarm that alerts you whenever a `DNSSECInternalFailure` or `DNSSECKeySigningKeysNeedingAction` error is detected\. For more information, see [Monitoring hosted zones using Amazon CloudWatch](monitoring-hosted-zones-with-cloudwatch.md)\.
 
 To work with KSKs in the AWS Management Console, follow the guidance in the following sections\.
 
@@ -24,7 +25,7 @@ Follow these steps to add a KSK in the AWS Management Console\.<a name="dns-conf
 
 1. On the **DNSSEC signing** tab, under **Key\-signing keys \(KSKs\)** under **Actions**, choose **Add KSK**\.
 
-1. Under **KSK**, enter a name for the KSK that Route 53 will create for you\. The name can include numbers, letters, periods \(\.\), hyphens \(\-\), or underscores \(\_\)\.
+1. Under **KSK**, enter an alphanumeric name for the KSK that Route 53 will create for you\.
 
 1. Enter the alias for a customer managed CMK that applies to DNSSEC signing, or enter an alias for a new customer managed CMK that Route 53 will create for you\.
 **Note**  

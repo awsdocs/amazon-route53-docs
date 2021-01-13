@@ -7,4 +7,4 @@ To disable routing to a resource, set Weight to 0\. If you set Weight to 0 for a
 The effect of setting Weight to 0 is different when you associate health checks with weighted records\. For more information, see [How Amazon Route 53 chooses records when health checking is configured](https://docs.aws.amazon.com/Route53/latest/DeveloperGuide/health-checks-how-route-53-chooses-records.html)\.
 
 ## Learn more<a name="record-weighted-weight-learn-more"></a>
-+ [Working with Records](https://docs.aws.amazon.com/Route53/latest/DeveloperGuide/rrsets-working-with.html)
++ [Working with records](https://docs.aws.amazon.com/Route53/latest/DeveloperGuide/rrsets-working-with.html)

@@ -11,5 +11,5 @@ The KSK is a cryptographic public\-private key pair that signs the DNSKEY\. The 
 You must follow these steps in order\. If you don't, your domain might become unavailable on the internet\.
 
 ## Learn more<a name="dnssec-signing-enable-steps-learn-more"></a>
-+ [DNSSEC signing](https://docs.aws.amazon.com/Route53/latest/DeveloperGuide/dnssec-signing.html)
++ [DNSSEC signing](https://docs.aws.amazon.com/Route53/latest/DeveloperGuide/dns-configuring-dnssec.html)
 + [ Enabling DNSSEC signing](https://docs.aws.amazon.com/Route53/latest/DeveloperGuide/dns-configuring-dnssec-enable-signing.html)

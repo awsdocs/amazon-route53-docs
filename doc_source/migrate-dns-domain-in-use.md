@@ -11,9 +11,8 @@ If you want to migrate DNS service to Amazon Route 53 for a domain that is curr
 + [Step 6: Wait for the old TTL to expire](#migrate-dns-wait-for-ttl)
 + [Step 7: Update the NS record with your current DNS service provider to use Route 53 name servers](#migrate-dns-change-name-servers-with-provider)
 + [Step 8: Monitor traffic for the domain](#migrate-dns-monitor-traffic)
-+ [Step 9: Update the domain registration to use Amazon Route 53 name servers](#migrate-dns-update-domain)
-+ [Step 10: Change the TTL for the NS record back to a higher value](#migrate-dns-change-ttl-back)
-+ [Step 11: Transfer domain registration to Amazon Route 53](#migrate-dns-transfer-domain-registration)
++ [Step 9: Change the TTL for the NS record back to a higher value](#migrate-dns-change-ttl-back)
++ [Step 10: Transfer domain registration to Amazon Route 53](#migrate-dns-transfer-domain-registration)
 
 ## Step 1: Get your current DNS configuration from the current DNS service provider \(optional but recommended\)<a name="migrate-dns-get-zone-file"></a>
 
@@ -128,8 +127,7 @@ To ensure that migrating DNS service to Route 53 happens all at one time, wait 
 To begin using Amazon Route 53 as the DNS service for a domain, use the method provided by the current DNS service provider to replace the current name servers in the NS record with Route 53 name servers\.
 
 **Note**  
-When you update the NS record with the current DNS service provider to use Route 53 name servers, you're updating the DNS configuration for the domain\. \(This is comparable to updating the NS record in the Route 53 hosted zone for a domain except that you're updating the setting with the DNS service that you're migrating away from\.\)   
-In [Step 9: Update the domain registration to use Amazon Route 53 name servers](#migrate-dns-update-domain), you update the domain registration to use the same four name servers\. The domain can be registered with Route 53 or with another domain registrar\.<a name="migrate-dns-change-name-servers-with-provider-procedure"></a>
+When you update the NS record with the current DNS service provider to use Route 53 name servers, you're updating the DNS configuration for the domain\. \(This is comparable to updating the NS record in the Route 53 hosted zone for a domain except that you're updating the setting with the DNS service that you're migrating away from\.\) <a name="migrate-dns-change-name-servers-with-provider-procedure"></a>
 
 **To update the NS record with your current DNS service provider to use Route 53 name servers**
 
@@ -143,7 +141,7 @@ In [Step 9: Update the domain registration to use Amazon Route 53 name servers]
 
    1. Make note of the four names listed for **Name servers** in the **Hosted zone details** section\.
 
-1. Use the method that is provided by the current DNS service for the domain to update the NS record for the hosted zone\. The process depends on whether the current DNS service lets you delete name servers:
+1. Use the method that is provided by the current DNS service for the domain to update the NS record for the hosted zone\. If the domain is registered with Route 53, see [Adding or changing name servers and glue records for a domain](domain-name-servers-glue-records.md)\.The process depends on whether the current DNS service lets you delete name servers:
 
    **If you can delete name servers**
    + Make note of the names of the current name servers in the NS record for the hosted zone\. If you need to revert to the current DNS configuration, these are the servers that you'll specify\.
@@ -160,29 +158,9 @@ When you're finished, the only name servers in the NS record will be the four Ro
 
 Monitor traffic for the domain, including website or application traffic, and email:
 + **If the traffic slows or stops** – Use the method provided by the previous DNS service to change the name servers for the domain back to the previous name servers\. These are the name servers that you made note of in step 7 of [To update the NS record with your current DNS service provider to use Route 53 name servers](#migrate-dns-change-name-servers-with-provider-procedure)\. Then determine what went wrong\.
-+ **If the traffic is unaffected** – Continue to [Step 9: Update the domain registration to use Amazon Route 53 name servers](#migrate-dns-update-domain)\.
++ **If the traffic is unaffected** – Continue to [Step 9: Change the TTL for the NS record back to a higher value](#migrate-dns-change-ttl-back)\.
 
-## Step 9: Update the domain registration to use Amazon Route 53 name servers<a name="migrate-dns-update-domain"></a>
-
-When you're confident that migrating DNS service to Route 53 was successful, you can change the DNS service for your domain to Amazon Route 53\. Perform the following procedure to update settings with the domain registrar\.<a name="migrate-dns-update-domain-procedure"></a>
-
-**To update the name servers for the domain**
-
-1. In the Route 53 console, get the name servers for your Route 53 hosted zone:
-
-   1. Open the Route 53 console at [https://console\.aws\.amazon\.com/route53/](https://console.aws.amazon.com/route53/)\.
-
-   1. In the navigation pane, choose **Hosted zones**\.
-
-   1. On the **Hosted zones** page, choose the name for the applicable hosted zone\.
-
-   1. Make note of the four names listed for **Name servers** in the **Hosted zone details** section\.
-
-1. Use the method provided by the registrar for the domain to change the name servers for the domain to use the four Route 53 name servers that you got in step 1 of this procedure\.
-
-   If the domain is registered with Route 53, see [Adding or changing name servers and glue records for a domain](domain-name-servers-glue-records.md)\.
-
-## Step 10: Change the TTL for the NS record back to a higher value<a name="migrate-dns-change-ttl-back"></a>
+## Step 9: Change the TTL for the NS record back to a higher value<a name="migrate-dns-change-ttl-back"></a>
 
 In the Amazon Route 53 hosted zone for the domain, change the TTL for the NS record to a more typical value, for example, 172800 seconds \(two days\)\. This improves latency for your users because they don't have to wait as often for DNS resolvers to send a query for the name servers for your domain\.<a name="migrate-dns-change-ttl-back-procedure"></a>
 
@@ -202,6 +180,6 @@ In the Amazon Route 53 hosted zone for the domain, change the TTL for the NS re
 
 1. Choose **Save changes**\.
 
-## Step 11: Transfer domain registration to Amazon Route 53<a name="migrate-dns-transfer-domain-registration"></a>
+## Step 10: Transfer domain registration to Amazon Route 53<a name="migrate-dns-transfer-domain-registration"></a>
 
 Now that you've transferred DNS service for a domain to Amazon Route 53, you can optionally transfer registration for the domain to Route 53\. For more information, see [Transferring registration for a domain to Amazon Route 53](domain-transfer-to-route-53.md)\.

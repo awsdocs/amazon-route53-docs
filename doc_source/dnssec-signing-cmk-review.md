@@ -8,5 +8,5 @@ Alternatively, you can create and use another customer managed CMK for DNSSEC si
 
 ## Learn more<a name="dnssec-signing-cmk-review-learn-more"></a>
 + [ Working with customer managed CMKs](https://docs.aws.amazon.com/Route53/latest/DeveloperGuide/dns-configuring-dnssec-cmk-requirements.html)
-+ [DNSSEC signing](https://docs.aws.amazon.com/Route53/latest/DeveloperGuide/dnssec-signing.html)
++ [DNSSEC signing](https://docs.aws.amazon.com/Route53/latest/DeveloperGuide/dns-configuring-dnssec.html)
 + [ KMS key policy for DNSSEC signing](https://docs.aws.amazon.com/Route53/latest/DeveloperGuide/access-control-managing-permissions.html#KMS-key-policy-for-DNSSEC)

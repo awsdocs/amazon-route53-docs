@@ -11,4 +11,4 @@ The list of simple routing records that you have defined but not yet created in 
   If you're associating this record with a health check, we recommend that you specify a TTL of 60 seconds or less so clients respond quickly to changes in health status\. 
 
 ## Learn more<a name="routing-simple-learn-more"></a>
-+ [Working with Records](https://docs.aws.amazon.com/Route53/latest/DeveloperGuide/rrsets-working-with.html)
++ [Working with records](https://docs.aws.amazon.com/Route53/latest/DeveloperGuide/rrsets-working-with.html)

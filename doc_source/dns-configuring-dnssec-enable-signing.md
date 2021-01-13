@@ -1,4 +1,4 @@
-# Enabling DNSSEC signing<a name="dns-configuring-dnssec-enable-signing"></a>
+# Enabling DNSSEC signing and establishing a chain of trust<a name="dns-configuring-dnssec-enable-signing"></a>
 
 This section provides step\-by\-step information for enabling and disabling DNSSEC signing in the Amazon Route 53 console\. There are two steps to enabling DNSSEC signing: enabling signing and having Route 53 create a key\-signing key \(KSK\), and establishing a chain of trust\.
 
@@ -25,7 +25,7 @@ When you provide or create a customer managed CMK, there are several requirement
 **Note**  
 If the option in this section is **Disable DNSSEC signing**, you have already completed the first step in enabling DNSSEC signing\. Be sure that you establish, or that there already exists, a chain of trust for the hosted zone for DNSSEC, and then you're done\. For more information, see [Establishing a chain of trust](#dns-configuring-dnssec-chain-of-trust)\.
 
-1. Under **KSK**, enter a name for the KSK that Route 53 will create for you\. The name can include numbers, letters, periods \(\.\), hyphens \(\-\), or underscores \(\_\)\.
+1. Under **KSK**, enter an alphanumeric name for the KSK that Route 53 will create for you\.
 
 1. Under **Customer managed CMK**, choose the customer managed CMK for Route 53 to use when it creates the KSK for you\. You can use an existing customer managed CMK that applies to DNSSEC signing, or create a new customer managed CMK\.
 
@@ -39,7 +39,7 @@ If you choose to have Route 53 create a customer managed CMK, be aware that sep
 
 ## Establishing a chain of trust<a name="dns-configuring-dnssec-chain-of-trust"></a>
 
-After you enable DNSSEC signing for a hosted zone in Route 53, establish a chain of trust for the hosted zone to complete your DNSSEC signing setup\. You do this by creating a Delegation Signer \(DS\) record in the parent hosted zone, using the information that Route 53 provides\. Depending on where your domain is registered, you add the record in Route 53 or at another domain registrar\.<a name="dns-configuring-dnssec-chain-of-trust-procedure"></a>
+After you enable DNSSEC signing for a hosted zone in Route 53, establish a chain of trust for the hosted zone to complete your DNSSEC signing setup\. You do this by creating a Delegation Signer \(DS\) record in the *parent* hosted zone, for your hosted zone, using the information that Route 53 provides\. Depending on where your domain is registered, you add the record to the parent hosted zone in Route 53 or at another domain registrar\.<a name="dns-configuring-dnssec-chain-of-trust-procedure"></a>
 
 **To establish a chain of trust for DNSSEC signing**
 
@@ -53,7 +53,9 @@ If you don't see **View information to create DS record** in this section, then 
 
 1. Under **Establish a chain of trust**, choose either **Route 53 registrar** or **Another domain registrar**, depending on where your domain is registered\.
 
-1. Use the provided values to create a DS record for the parent hosted zone in Route 53 or, if your domain is not hosted at Route 53, at your domain registrar website\.
+1. Use the provided values to create a DS record for the parent hosted zone in Route 53 or, if your domain is not hosted at Route 53, at your domain registrar website\. For more information about making the changes in Route 53, see the following:
+   + DS record type format: [DS record type](ResourceRecordTypes.md#DSFormat)\.
+   + Adding the DS key in Route 53: [Adding public keys for a domain](domain-configure-dnssec.md#domain-configure-dnssec-adding-keys)\.
 
 1. Wait for the updates to propagate, based on the TTL for your domain records\.
 
