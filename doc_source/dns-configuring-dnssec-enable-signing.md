@@ -25,7 +25,7 @@ When you provide or create a customer managed CMK, there are several requirement
 **Note**  
 If the option in this section is **Disable DNSSEC signing**, you have already completed the first step in enabling DNSSEC signing\. Be sure that you establish, or that there already exists, a chain of trust for the hosted zone for DNSSEC, and then you're done\. For more information, see [Establishing a chain of trust](#dns-configuring-dnssec-chain-of-trust)\.
 
-1. Under **KSK**, enter an alphanumeric name for the KSK that Route 53 will create for you\.
+1. Under **KSK**, enter a name for the KSK that Route 53 will create for you\. The name can include numbers, letters, and underscores \(\_\)\. It must be unique\.
 
 1. Under **Customer managed CMK**, choose the customer managed CMK for Route 53 to use when it creates the KSK for you\. You can use an existing customer managed CMK that applies to DNSSEC signing, or create a new customer managed CMK\.
 
