@@ -42,6 +42,8 @@ Choose the applicable routing policy\. For more information, see [Choosing a rou
 **Record name**  
 Enter the domain or subdomain name that you want to use to route traffic to your ELB load balancer\. The default value is the name of the hosted zone\.  
 For example, if the name of the hosted zone is example\.com and you want to use acme\.example\.com to route traffic to your load balancer, enter **acme**\.  
+**Alias**  
+If you are using the **Quick create** record creation method, turn on **Alias**\.  
 **Value/Route traffic to**  
 Choose **Alias to Application and Classic Load Balancer **or **Alias to Network Load Balancer**, then choose the Region that the endpoint is from\.   
 **If you created the hosted zone and the ELB load balancer using the same AWS account** – Choose the name that you assigned to the load balancer when you created it\.  

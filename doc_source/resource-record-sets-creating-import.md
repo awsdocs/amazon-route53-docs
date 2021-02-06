@@ -11,6 +11,7 @@ If you want to create records by importing a zone file, note the following:
 + Route 53 supports the `$ORIGIN` and `$TTL` keywords\. If the zone file includes `$GENERATE` or `$INCLUDE` keywords, the import fails and Route 53 returns an error\.
 + When you import the zone file, Route 53 ignores the SOA record in the zone file\. Route 53 also ignores any NS records that have the same name as the hosted zone\.
 + You can import a maximum of 1000 records\. If you need to import more than 1000 records, you might be able to use the [BIND to Amazon Route 53 Conversion Tool](https://aws.amazon.com/code/4495891528591897)\.
++ If the hosted zone already contains records that appear in the zone file, the import process fails, and no records are created\.
 + We recommend that you review the contents of the zone file to confirm that record names include or exclude a trailing dot as appropriate:
   + When the name of a record in the zone file includes a trailing dot \(`example.com.`\), the import process interprets the name as a fully qualified domain name and creates a Route 53 record with that name\.
   + When the name of a record in the zone file does not include a trailing dot \(`www`\), the import process concatenates that name with the domain name in the zone file \(`example.com`\) and creates a Route 53 record with the concatenated name \(`www.example.com`\)\.

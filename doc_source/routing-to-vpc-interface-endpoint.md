@@ -51,6 +51,8 @@ To configure Amazon Route 53 to route traffic to an Amazon VPC interface endpoi
 Choose the applicable routing policy\. For more information, see [Choosing a routing policy](routing-policy.md)\.  
 **Record name**  
 Enter the domain name that you want to use to route traffic to your Amazon VPC interface endpoint\.   
+**Alias**  
+If you are using the **Quick create** record creation method, turn on **Alias**\.  
 **Value/Route traffic to**  
 Choose **Alias to VPC endpoint**, then choose the Region that the endpoint is from\.   
 How you specify the value for **Endpoints** depends on whether you created the hosted zone and the interface endpoint using the same AWS account or different accounts:  

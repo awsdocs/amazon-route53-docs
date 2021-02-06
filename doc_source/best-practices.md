@@ -1,0 +1,9 @@
+# Best practices for Amazon Route 53<a name="best-practices"></a>
+
+Follow best practices when you configure Route 53\.
+
+## Resolver endpoints<a name="best-practices-resolver-endpoints"></a>
+
+Don't associate the same VPC to a Resolver rule and its inbound endpoint \(whether it’s a direct target of the endpoint, or via an on\-premises DNS server\)\. When the outbound endpoint in a Resolver rule points to an inbound endpoint that shares a VPC with the rule, it can cause a loop where the query is continually passed between the inbound and outbound endpoints\.
+
+The forwarding rule can still be associated with other VPCs that are shared with other accounts by using AWS Resource Access Manager \(AWS RAM\)\. Private hosted zones associated with the hub, or a central VPC, will still resolve from queries to inbound endpoints because a forwarding resolver rule does not change this resolution\.

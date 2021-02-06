@@ -107,7 +107,7 @@ Route 53 sends a confirmation email to the email address for the registrant con
 Route 53 sends a confirmation email to the email address for the registrant contact for the domain:  
    + If you don't respond to the email, the transfer is canceled on the specified date\.
    + If you want the transfer to happen sooner or you want to cancel the transfer, choose the link in the email to go to the Route 53 website, and choose the applicable option\.
-In addition you might receive an email from Wiki\.jp\. You can ignore this email\.
+In addition you might receive an email from WIXI\.jp\. You can ignore this email\.
 
 1. If the registrar that you're transferring the domain to reports that the transfer failed, contact that registrar for more information\. When you transfer a domain to another registrar, all status updates go to the new registrar, so Route 53 has no information about why a transfer failed\.
 

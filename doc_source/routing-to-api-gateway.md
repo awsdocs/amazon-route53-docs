@@ -54,6 +54,8 @@ Choose the applicable routing policy\. For more information, see [Choosing a rou
 **Record name**  
 Enter the domain name that you want to use to route traffic to your API\.   
 The API that you want to route traffic to must include a custom domain name, such as api\.example\.com, that matches the name of the Route 53 record\.  
+**Alias**  
+If you are using the **Quick create** record creation method, turn on **Alias**\.  
 **Value/Route traffic to**  
 Choose **Alias to API Gateway API**, then choose the Region that the endpoint is from\.   
 How you specify the value for **Endpoint** depends on whether you created the hosted zone and the API using the same AWS account or different accounts:  

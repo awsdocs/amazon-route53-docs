@@ -42,6 +42,8 @@ Choose the applicable routing policy\. For more information, see [Choosing a rou
 **Record name**  
 Enter the domain name that you want to use to route traffic to your S3 bucket\. The default value is the name of the hosted zone\.  
 For example, if the name of the hosted zone is example\.com and you want to use acme\.example\.com to route traffic to your bucket, enter **acme**\.  
+**Alias**  
+If you are using the **Quick create** record creation method, turn on **Alias**\.  
 **Value/Route traffic to**  
 Choose **Alias to S3 website endpoint**, then choose the Region that the endpoint is from\.   
 Choose the bucket that has the same name that you specified for **Record name**\.  

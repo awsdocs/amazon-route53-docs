@@ -60,6 +60,8 @@ Choose the applicable routing policy\. For more information, see [Choosing a rou
 Enter the domain name that you want to use to route traffic to your Elastic Beanstalk environment\. The default value is the name of the hosted zone\.  
 For example, if the name of the hosted zone is example\.com and you want to use acme\.example\.com to route traffic to your environment, enter **acme**\.  
 You can't create a CNAME record that has the same name as the hosted zone\.  
+**Alias**  
+If you are using the **Quick create** record creation method, turn on **Alias**\.  
 **Value/Route traffic to**  
 Choose **IP address or another value depending on the record type** and enter the value that you get when you perform the procedure in the topic [Getting the domain name for your Elastic Beanstalk environment](#routing-to-beanstalk-environment-get-domain-name)\. If you used different accounts to create your Route 53 hosted zone and your Elastic Beanstalk environment, enter the CNAME attributes for the Elastic Beanstalk environment\.  
 **Record type**  

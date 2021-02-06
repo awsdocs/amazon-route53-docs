@@ -235,7 +235,8 @@ When you want to integrate DNS for the VPCs in an AWS Region with DNS for your n
 + Each rule specifies the outbound endpoint that DNS queries are forwarded from\. If you create multiple outbound endpoints in an AWS Region and you want to associate some or all Resolver rules with every VPC, you need to create multiple copies of those rules\.
 
 **Using the same VPC for inbound and outbound endpoints**  
-You can create inbound and outbound endpoints in the same VPC or in different VPCs in the same Region\.
+You can create inbound and outbound endpoints in the same VPC or in different VPCs in the same Region\.  
+For more information, see [Best practices for Amazon Route 53](best-practices.md)\. 
 
 **Inbound endpoints and private hosted zones**  
 If you want Resolver to resolve inbound DNS queries using records in a private hosted zone, associate the private hosted zone with the VPC that you created the inbound endpoint in\. For information about associating private hosted zones with VPCs, see [Working with private hosted zones](hosted-zones-private.md)\.
