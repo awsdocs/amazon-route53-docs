@@ -14,6 +14,4 @@ Note that you can't use AWS credits to pay the fee for renewing registration for
 
 1. Choose **Enable** \(to turn on automatic renewal\) or **Disable** \(to turn off automatic renewal\)\.
 
-1. Choose **Save**\.
-
 1. If you encounter issues while enabling or disabling automatic renewal, you can contact AWS Support for free\. For more information, see [Contacting AWS Support about domain registration issues](domain-contact-support.md)\.

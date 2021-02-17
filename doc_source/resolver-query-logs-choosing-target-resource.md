@@ -11,6 +11,25 @@ For more information, see the [Amazon CloudWatch Logs User Guide](https://docs.a
 
 **Amazon S3 \(S3\) bucket**  
 An S3 bucket is economical for long\-term log archiving\. Latency is typically higher\.  
+If you want to send logs to an S3 bucket in an account that you don't own, the owner of the S3 bucket must add permissions for your account in their bucket policy\. For example:  
+
+```
+{
+    "Version": "2012-10-17",
+    "Id": "CrossAccountAccess",
+    "Statement": [
+        {
+            "Effect": "Allow",
+            "Principal": {
+                "Service": "delivery.logs.amazonaws.com"
+            },
+            "Action": "s3:PutObject",
+            "Resource": "arn:aws:s3:::your_bucket_name/AWSLogs/your_caller_account/*"
+        }
+    ]
+}
+```
+ If you want to store logs in a central S3 bucket for your organization, we recommend that you set up your query logging configuration from a centralized account \(with the necessary permissions to write to a central bucket\) and use [RAM](query-logging-configurations-managing-sharing.md) to share the configuration across accounts\.
 For more information, see the [Amazon Simple Storage Service Console User Guide](https://docs.aws.amazon.com/AmazonS3/latest/user-guide/)\.
 
 **Kinesis Data Firehose delivery stream**  

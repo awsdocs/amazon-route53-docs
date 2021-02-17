@@ -66,7 +66,7 @@ A friendly name that lets you easily find an outbound endpoint on the dashboard\
 All outbound DNS queries will flow through this VPC on the way to your network\.
 
 **Security group for this endpoint**  
-The ID of one or more security groups that you want to use to control access to this VPC\. The security group that you specify must include one or more outbound rules\. Outbound rules must allow TCP and UDP access on the port that you're using for DNS queries on your network\.  
+The ID of one or more security groups that you want to use to control access to this VPC\. The security group that you specify must include one or more outbound rules\. Outbound rules must allow TCP and UDP access on the port that you're using for DNS queries on your network\. You can't change this value after you create an endpoint\.   
 For more information, see [Security groups for your VPC](https://docs.aws.amazon.com/vpc/latest/userguide/VPC_SecurityGroups.html) in the *Amazon VPC User Guide*\.
 
 **IP addresses**  

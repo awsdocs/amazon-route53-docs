@@ -76,17 +76,27 @@ For information on getting current quotas \(formerly referred to as "limits"\), 
 
 | Entity | Quota | 
 | --- | --- | 
-| Endpoints per AWS Region | 4 per AWS account [Request a higher quota](https://console.aws.amazon.com/servicequotas/home?region=us-east-1#!/services/route53/quotas)\.  | 
-| IP addresses per endpoint | 6 | 
-| IP addresses per rule | 6 | 
-| Rules per AWS Region | 1000 per AWS account [Request a higher quota](https://console.aws.amazon.com/servicequotas/home?region=us-east-1#!/services/route53/quotas)\.  | 
-| Associations between rules and VPCs per AWS Region | 2000 per AWS account [Request a higher quota](https://console.aws.amazon.com/servicequotas/home?region=us-east-1#!/services/route53/quotas)\.  | 
-| Queries per second per IP address in an endpoint | 10,000\* | 
+|  Endpoints per AWS Region  |  4 per AWS account  You can request a higher quota\.    | 
+|  IP addresses per endpoint  |  6  | 
+|  IP addresses per rule  |  6  | 
+|  Rules per AWS Region  |  1000 per AWS account You can request a higher quota\.  | 
+|  Associations between rules and VPCs per AWS Region  |  2000 per AWS account You can request a higher quota\.   | 
+|  Queries per second per IP address in an endpoint  |  10,000\*  | 
 |  Query log configurations per AWS Region  |  20  | 
 |  Query log configuration VPC associations per AWS Region  |  100  | 
 |  Query log configuration VPC associations per AWS Region \(shared using RAM\)  |  100  | 
 
-**\*** The number of DNS queries per second \(QPS\) varies by the type of query, the size of the response, and the protocol in use\. This limit is on a per elastic network interface \(ENI\) basis\. For example, with a limit of 10,000 QPS, 2 ENIs would allow 20,000 QPS\. From there you can scale out by adding more ENIs\. For information about how to view Amazon CloudWatch metrics for IP addresses for inbound and outbound endpoints, see [Metrics for Resolver IP addresses](monitoring-resolver-with-cloudwatch.md#cloudwatch-metrics-resolver-ip-address)\.
+**\*** The number of DNS queries per second \(QPS\) varies by the type of query, the size of the response, and the protocol in use\. This limit is on a per elastic network interface \(ENI\) basis\. For example, with a limit of 10,000 QPS, 2 ENIs would allow 20,000 QPS\. From there you can scale out by adding more ENIs\. For information about how to view Amazon CloudWatch metrics for IP addresses for inbound and outbound endpoints, see [Metrics for Resolver IP addresses](monitoring-resolver-with-cloudwatch.md#cloudwatch-metrics-resolver-ip-address)\.<a name="increase-quota-procedure"></a>
+
+**To increase Resolver quotas**
+
+1.  Open the Service Quotas console at [https://console.aws.amazon.com/servicequotas/](https://console.aws.amazon.com/servicequotas/)\.
+
+1. Go to the region where you want to increase the limit\.
+
+1. In the navigation pane of the console, choose **AWS services**\.
+
+1. Search for Route 53 Resolver, and choose it to view the list of quotas\.
 
 ### Quotas on health checks<a name="limits-api-entities-health-checks"></a>
 
