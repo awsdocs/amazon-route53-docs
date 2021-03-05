@@ -5,4 +5,5 @@ When Route 53 checks the health of an endpoint, it sends an HTTP, HTTPS, or TCP
 For the current list of IP addresses for Route 53 health checkers, for Route 53 name servers, and for other AWS services, see [IP address ranges of Amazon Route 53 servers](route-53-ip-addresses.md)\. 
 
 **Important**  
-When you add IP addresses to a list of allowed IP addresses, add all the IP addresses in the CIDR range for each AWS Region that you specified when you created health checks\. You might see that health check requests come from just one IP address in a Region\. However, that IP address can change at any time to another of the IP addresses for that Region\.
+When you add IP addresses to a list of allowed IP addresses, add all the IP addresses in the CIDR range for each AWS Region that you specified when you created health checks\. You might see that health check requests come from just one IP address in a Region\. However, that IP address can change at any time to another of the IP addresses for that Region\.  
+ If you want to make sure that you include both the current and older health checker IP addresses, add ALL /26 and /18 IP address ranges to the allow list\. For a complete list, see [AWS IP address ranges](https://docs.aws.amazon.com/general/latest/gr/aws-ip-ranges.html) in the *AWS General Reference*\.

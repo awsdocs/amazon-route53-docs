@@ -40,7 +40,11 @@ For information on getting current quotas \(formerly referred to as "limits"\), 
 
 | Entity | Quota | 
 | --- | --- | 
-| Domains | 50 per AWS account [Request a higher quota](https://console.aws.amazon.com/servicequotas/home?region=us-east-1#!/services/route53/quotas)\.  | 
+|  Domains  |  20\* per AWS account [Request a higher quota](https://console.aws.amazon.com/support/home#/case/create?issueType=service-limit-increase&limitType=service-code-route53)\.  | 
+
+**\***The limit is 20 for new customers as of March 2021\.
+
+If you have an existing account and your default limit is 50 now, it will remain at 50\.
 
 ### Quotas on hosted zones<a name="limits-api-entities-hosted-zones"></a>
 
@@ -49,11 +53,12 @@ For information on getting current quotas \(formerly referred to as "limits"\), 
 
 | Entity | Quota | 
 | --- | --- | 
-| Hosted zones | 500 per AWS account [Request a higher quota](https://console.aws.amazon.com/servicequotas/home?region=us-east-1#!/services/route53/quotas)\.  | 
-| Hosted zones that can use the same reusable delegation set  | 100 [Request a higher quota](https://console.aws.amazon.com/servicequotas/home?region=us-east-1#!/services/route53/quotas)\.  | 
-| Amazon VPCs that you can associate with a private hosted zone | 300 [Request a higher quota](https://console.aws.amazon.com/servicequotas/home?region=us-east-1#!/services/route53/quotas)\.  | 
-| Private hosted zones that you can associate a VPC with | No quota **\*** | 
-| Authorizations that you can create so you can associate VPCs that were created by one account with a hosted zone that was created by another account | 100 | 
+|  Hosted zones  |  500 per AWS account [Request a higher quota](https://console.aws.amazon.com/servicequotas/home?region=us-east-1#!/services/route53/quotas)\.  | 
+|  Hosted zones that can use the same reusable delegation set   |  100 [Request a higher quota](https://console.aws.amazon.com/servicequotas/home?region=us-east-1#!/services/route53/quotas)\.  | 
+|  Amazon VPCs that you can associate with a private hosted zone  |  300 [Request a higher quota](https://console.aws.amazon.com/servicequotas/home?region=us-east-1#!/services/route53/quotas)\.  | 
+|  Private hosted zones that you can associate a VPC with  |  No quota **\***  | 
+|  Authorizations that you can create so you can associate VPCs that were created by one account with a hosted zone that was created by another account  |  100  | 
+|  The number of key signing keys \(KSK\) that you can create per hosted zone  |  2  | 
 
 **\*** You can associate a VPC with any or all of the private hosted zones that you control through your AWS accounts\. For example, suppose you have three AWS accounts and all three have the default quota of 500 hosted zones\. If you create 500 private hosted zones for all three accounts, you can associate a VPC with all 1,500 private hosted zones\.
 
@@ -64,10 +69,10 @@ For information on getting current quotas \(formerly referred to as "limits"\), 
 
 | Entity | Quota | 
 | --- | --- | 
-| Records | 10,000 per hosted zone [Request a higher quota](https://console.aws.amazon.com/servicequotas/home?region=us-east-1#!/services/route53/quotas)\. For a quota greater than 10,000 records in a hosted zone, an additional charge applies\.  | 
-| Values in a record | 400 per record | 
-| Geolocation, latency, multivalue answer, and weighted records | 100 records that have the same name and type | 
-| Geoproximity records | 30 records that have the same name and type | 
+|  Records  |  10,000 per hosted zone [Request a higher quota](https://console.aws.amazon.com/servicequotas/home?region=us-east-1#!/services/route53/quotas)\. For a quota greater than 10,000 records in a hosted zone, an additional charge applies\.  | 
+|  Values in a record  |  400 per record  | 
+|  Geolocation, latency, multivalue answer, and weighted records  |  100 records that have the same name and type  | 
+|  Geoproximity records  |  30 records that have the same name and type  | 
 
 ### Quotas on Route 53 Resolver<a name="limits-api-entities-resolver"></a>
 
@@ -76,7 +81,7 @@ For information on getting current quotas \(formerly referred to as "limits"\), 
 
 | Entity | Quota | 
 | --- | --- | 
-|  Endpoints per AWS Region  |  4 per AWS account  You can request a higher quota\.    | 
+|  Endpoints per AWS Region  |  4 per AWS account You can request a higher quota\.  | 
 |  IP addresses per endpoint  |  6  | 
 |  IP addresses per rule  |  6  | 
 |  Rules per AWS Region  |  1000 per AWS account You can request a higher quota\.  | 
@@ -105,9 +110,9 @@ For information on getting current quotas \(formerly referred to as "limits"\), 
 
 | Entity | Quota | 
 | --- | --- | 
-| Health checks | 200 active health checks per AWS account [Request a higher quota](https://console.aws.amazon.com/servicequotas/home?region=us-east-1#!/services/route53/quotas)\.  | 
-| Child health checks that a calculated health check can monitor | 255 | 
-| Maximum total length of headers in the response to a health check request | 16,384 bytes \(16K\) | 
+|  Health checks  |  200 active health checks per AWS account [Request a higher quota](https://console.aws.amazon.com/servicequotas/home?region=us-east-1#!/services/route53/quotas)\.  | 
+|  Child health checks that a calculated health check can monitor  |  255  | 
+|  Maximum total length of headers in the response to a health check request  |  16,384 bytes \(16K\)  | 
 
 ### Quotas on query log configurations<a name="limits-api-entities-query-log-configs"></a>
 
@@ -116,7 +121,7 @@ For information on getting current quotas \(formerly referred to as "limits"\), 
 
 | Entity | Quota | 
 | --- | --- | 
-| Query log configurations | 1 per hosted zone | 
+|  Query log configurations  |  1 per hosted zone  | 
 
 ### Quotas on traffic flow policies and policy records<a name="limits-api-entities-traffic-flow"></a>
 
@@ -125,9 +130,9 @@ For information on getting current quotas \(formerly referred to as "limits"\), 
 
 | Entity | Quota | 
 | --- | --- | 
-| Traffic policies For more information about Route 53 traffic flow, see [Using traffic flow to route DNS traffic](traffic-flow.md)\. | 50 per AWS account [Request a higher quota](https://console.aws.amazon.com/servicequotas/home?region=us-east-1#!/services/route53/quotas)\.  | 
-| Traffic policy versions | 1,000 per traffic policy | 
-| Traffic policy records \(referred to as "policy instances" in the Route 53 API, AWS SDKs, AWS Command Line Interface, and AWS Tools for Windows PowerShell\) | 5 per AWS account [Request a higher quota](https://console.aws.amazon.com/servicequotas/home?region=us-east-1#!/services/route53/quotas)\.  | 
+|  Traffic policies For more information about Route 53 traffic flow, see [Using traffic flow to route DNS traffic](traffic-flow.md)\.  |  50 per AWS account [Request a higher quota](https://console.aws.amazon.com/servicequotas/home?region=us-east-1#!/services/route53/quotas)\.  | 
+|  Traffic policy versions  |  1,000 per traffic policy  | 
+|  Traffic policy records \(referred to as "policy instances" in the Route 53 API, AWS SDKs, AWS Command Line Interface, and AWS Tools for Windows PowerShell\)  |  5 per AWS account [Request a higher quota](https://console.aws.amazon.com/servicequotas/home?region=us-east-1#!/services/route53/quotas)\.  | 
 
 ### Quotas on reusable delegation sets<a name="limits-api-entities-reusable-delegation-sets"></a>
 
@@ -136,7 +141,7 @@ For information on getting current quotas \(formerly referred to as "limits"\), 
 
 | Entity | Quota | 
 | --- | --- | 
-| Reusable delegation sets | 100 per AWS account [Request a higher quota](https://console.aws.amazon.com/servicequotas/home?region=us-east-1#!/services/route53/quotas)\.  | 
+|  Reusable delegation sets  |  100 per AWS account [Request a higher quota](https://console.aws.amazon.com/servicequotas/home?region=us-east-1#!/services/route53/quotas)\.  | 
 
 ## Maximums on API requests<a name="limits-api-requests"></a>
 

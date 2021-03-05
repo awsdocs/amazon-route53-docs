@@ -28,11 +28,11 @@ Before you get started, you need the following:
 
 To configure Route 53 to route traffic to an API Gateway endpoint, perform the following procedure\.<a name="routing-to-api-gateway-config-procedure"></a>
 
-**To route traffic to a regional API Gateway endpoint**
+**To route traffic to an API Gateway endpoint**
 
-1. If you created the Route 53 hosted zone and the regional endpoint using the same account, skip to step 2\.
+1. If you created the Route 53 hosted zone and the endpoint using the same account, skip to step 2\.
 
-   If you created the hosted zone and the regional endpoint using different accounts, get the target domain name for the custom domain name that you want to use:
+   If you created the hosted zone and the endpoint using different accounts, get the target domain name for the custom domain name that you want to use:
 
    1. Sign in to the AWS Management Console and open the API Gateway console at [https://console\.aws\.amazon\.com/apigateway/](https://console.aws.amazon.com/apigateway/)\. 
 

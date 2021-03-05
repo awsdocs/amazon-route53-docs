@@ -3,7 +3,10 @@
 Each log file contains one log entry for each DNS query that Amazon Route 53 received from DNS resolvers in the corresponding edge location\. Each log entry includes the following values:
 
 **version**  
-The version number of the query log format\. If we add fields to the log or change the format of existing fields, we'll increment this value\.
+The version number of the query log format\. The current version is `1.1` \.  
+The version value is a major and minor version in the form **major\_version\.minor\_version**\. For example, you can have a `version` value of `1.7`, where `1 `is the major version, and `7` is the minor version\.  
+Route 53 increments the major version if a change is made to the log structure that is not backward\-compatible\. This includes removing a JSON field that already exists, or changing how the contents of a field are represented \(for example, a date format\)\.  
+ Route 53 increments the minor version if a change adds new fields to the log file\. This can occur if new information is available for some or all existing DNS queries within a VPC\. 
 
 **account\_id**  
 The ID of the AWS account that created the VPC\.
