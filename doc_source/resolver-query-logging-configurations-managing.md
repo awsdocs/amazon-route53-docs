@@ -12,7 +12,7 @@ To start logging DNS queries that originate in your VPCs, you perform the follow
 
 1. Within the Resolver menu, choose **Query logging**\.
 
-1. In the Region selector, choose the AWS Region where you want to create the query logging configuration\. This must be the same Region where you created the VPCs that you want to log DNS queries for\. If you have VPCs in multiple regions, you must create at least one query logging configuration for each region\.
+1. In the Region selector, choose the AWS Region where you want to create the query logging configuration\. This must be the same Region where you created the VPCs that you want to log DNS queries for\. If you have VPCs in multiple Regions, you must create at least one query logging configuration for each Region\.
 
 1. Choose **Configure query logging**\.
 

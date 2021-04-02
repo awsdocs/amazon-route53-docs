@@ -53,9 +53,19 @@ If you don't see **View information to create DS record** in this section, then 
 
 1. Under **Establish a chain of trust**, choose either **Route 53 registrar** or **Another domain registrar**, depending on where your domain is registered\.
 
-1. Use the provided values to create a DS record for the parent hosted zone in Route 53 or, if your domain is not hosted at Route 53, at your domain registrar website\. For more information about making the changes in Route 53, see the following:
-   + DS record type format: [DS record type](ResourceRecordTypes.md#DSFormat)\.
-   + Adding the DS key in Route 53: [Adding public keys for a domain](domain-configure-dnssec.md#domain-configure-dnssec-adding-keys)\.
+1. Use the provided values to create a DS record for the parent hosted zone in Route 53 or, if your domain is not hosted at Route 53, use the provided values to create a DS record at your domain registrar website\. 
+
+   If Route 53 is your registrar:
+
+   1. Note the **Key type**, **Signing algorithm**, and **Public key** values\. In the navigation pane, choose **Registered domains**\.
+
+   1. Select a domain, and then, next to **DNSSEC status**, choose **Manage keys**\.
+
+   1. In the **Manage DNSSEC keys** dialog, choose the appropriate **Key type** and **Algorithm** for the **Route 53 registrar** from the dropdown menus\.
+
+   1. Copy the **Public key** for the Route 53 registrar\. In the **Manage DNSSEC keys** dialog, paste the value into the **Public key** box\.
+
+   1. Choose **Add**\.
 
 1. Wait for the updates to propagate, based on the TTL for your domain records\.
 

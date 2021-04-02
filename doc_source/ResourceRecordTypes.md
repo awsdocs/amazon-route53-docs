@@ -385,7 +385,7 @@ Instead of an SPF record, we recommend that you create a TXT record that contain
 
 ## SRV record type<a name="SRVFormat"></a>
 
-An SRV record `Value` element consists of four space\-separated values\. The first three values are decimal numbers representing priority, weight, and port\. The fourth value is a domain name\. For information about SRV record format, refer to the applicable documentation\.
+An SRV record `Value` element consists of four space\-separated values\. The first three values are decimal numbers representing priority, weight, and port\. The fourth value is a domain name\. SRV records are used for accessing services, such as a service for email or communications\. For information about SRV record format, refer to the documentation for the service that you want to connect to\.
 
 **Example for the Amazon Route 53 console**
 

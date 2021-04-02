@@ -201,7 +201,7 @@ The following autodefined rules, for localhost\-related domains, also are create
 + 127\.in\-addr\.arpa
 + 1\.0\.0\.0\.0\.0\.0\.0\.0\.0\.0\.0\.0\.0\.0\.0\.0\.0\.0\.0\.0\.0\.0\.0\.0\.0\.0\.0\.0\.0\.0\.0\.ip6\.arpa
 + 0\.0\.0\.0\.0\.0\.0\.0\.0\.0\.0\.0\.0\.0\.0\.0\.0\.0\.0\.0\.0\.0\.0\.0\.0\.0\.0\.0\.0\.0\.0\.0\.ip6\.arpa
-Resolver creates the following autodefined rules and associates them with your VPC when you peer the VPC with another VPC:  
+Resolver creates the following autodefined rules and associates them with your VPC when you connect the VPC with another VPC through transit gateway or VPC peering, and with DNS support enabled:  
 + The reverse DNS lookup for the peer VPC's IP address ranges, for example, 0\.192\.in\-addr\.arpa
 
   If you add an IPv4 CIDR block to a VPC, Resolver adds an autodefined rule for the new IP address range\.

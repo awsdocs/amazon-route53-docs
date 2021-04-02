@@ -32,4 +32,4 @@ aws --region us-east-1 route53 enable-hosted-zone-dnssec \
 			--hosted-zone-id $hostedzone_id
 ```
 
-After you complete these steps, establish the chain of trust for the hosted zone\. For more information, see [Establishing a chain of trust](dns-configuring-dnssec-enable-signing.md#dns-configuring-dnssec-chain-of-trust)\.
+Step 3: After you complete these steps, establish the chain of trust for the hosted zone\. For more information, see [Establishing a chain of trust](dns-configuring-dnssec-enable-signing.md#dns-configuring-dnssec-chain-of-trust)\.

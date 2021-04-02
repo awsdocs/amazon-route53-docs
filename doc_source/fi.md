@@ -41,4 +41,4 @@ Supported for domain registration\. For more information, see [Configuring DNSSE
 The registrar for this TLD is our registrar associate, Gandi\.
 
 **Deletion of domain registration**  
-The registry for \.fi domains doesn't allow you to delete domain registrations\. Instead, you must disable automatic renewal and wait for the domain to expire\. For more information, see [Deleting a domain name registration](domain-delete.md)\.
+For information about deleting domains, see [Deleting a domain name registration](domain-delete.md)\.

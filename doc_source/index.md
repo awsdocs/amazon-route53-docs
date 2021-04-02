@@ -1,7 +1,7 @@
-# Amazon Route 53 Developer Guide
+# Amazon Route 53 Developer Guide
 
 -----
-*****Copyright &copy; 2021 Amazon Web Services, Inc. and/or its affiliates. All rights reserved.*****
+*****Copyright &copy;  Amazon Web Services, Inc. and/or its affiliates. All rights reserved.*****
 
 -----
 Amazon's trademarks and trade dress may not be used in 
@@ -486,6 +486,21 @@ Amazon's trademarks and trade dress may not be used in
       + [How Amazon Route 53 averts failover problems](dns-failover-problems.md)
    + [Naming and tagging health checks](health-checks-tagging.md)
    + [Using health checks with Amazon Route 53 API versions earlier than 2012-12-12](dns-failover-using-old-apis.md)
++ [Route 53 Resolver DNS Firewall](resolver-dns-firewall.md)
+   + [How Route 53 Resolver DNS Firewall works](resolver-dns-firewall-overview.md)
+   + [Getting started with Route 53 Resolver DNS Firewall](resolver-dns-firewall-getting-started.md)
+   + [DNS Firewall rule groups and rules](resolver-dns-firewall-rule-groups.md)
+      + [Rule group settings in DNS Firewall](resolver-dns-firewall-rule-group-settings.md)
+      + [Rule settings in DNS Firewall](resolver-dns-firewall-rule-settings.md)
+      + [Rule actions in DNS Firewall](resolver-dns-firewall-rule-actions.md)
+      + [Managing rule groups and rules in DNS Firewall](resolver-dns-firewall-rule-group-managing.md)
+   + [Route 53 Resolver DNS Firewall domain lists](resolver-dns-firewall-domain-lists.md)
+      + [Managed domain lists](resolver-dns-firewall-managed-domain-lists.md)
+      + [Managing your own domain lists](resolver-dns-firewall-user-managed-domain-lists.md)
+   + [Sharing Route 53 Resolver DNS Firewall rule groups between AWS accounts](resolver-dns-firewall-rule-group-sharing.md)
+   + [Enabling Route 53 Resolver DNS Firewall protections for your VPC](resolver-dns-firewall-vpc-protections.md)
+      + [Managing associations between your VPC and Route 53 Resolver DNS Firewall rule group](resolver-dns-firewall-vpc-associating-rule-group.md)
+      + [DNS Firewall VPC configuration](resolver-dns-firewall-vpc-configuration.md)
 + [Security in Amazon Route 53](security.md)
    + [Data protection in Route 53](data-protection.md)
    + [Identity and access management in Amazon Route 53](auth-and-access-control.md)
@@ -502,12 +517,13 @@ Amazon's trademarks and trade dress may not be used in
       + [AWS resources that you can send Resolver query logs to](resolver-query-logs-choosing-target-resource.md)
       + [Managing Resolver query logging configurations](resolver-query-logging-configurations-managing.md)
          + [Values that appear in Resolver query logs](resolver-query-logs-format.md)
-         + [Resolver query log example](resolver-query-logs-example-json.md)
-         + [Sharing Resolver query logging configurations with other AWS accounts](query-logging-configurations-managing-sharing.md)
+         + [Route 53 Resolver query log example](resolver-query-logs-example-json.md)
+            + [Sharing Resolver query logging configurations with other AWS accounts](query-logging-configurations-managing-sharing.md)
    + [Monitoring domain registrations](monitoring-domain-registrations.md)
    + [Monitoring your resources with Amazon Route 53 health checks and Amazon CloudWatch](monitoring-cloudwatch.md)
    + [Monitoring hosted zones using Amazon CloudWatch](monitoring-hosted-zones-with-cloudwatch.md)
    + [Monitoring Route 53 Resolver endpoints with Amazon CloudWatch](monitoring-resolver-with-cloudwatch.md)
+   + [Monitoring Route 53 Resolver DNS Firewall rule groups with Amazon CloudWatch](monitoring-resolver-dns-firewall-with-cloudwatch.md)
    + [Logging Amazon Route 53 API calls with AWS CloudTrail](logging-using-cloudtrail.md)
 + [Troubleshooting Amazon Route 53](troubleshooting-route-53.md)
    + [My domain is unavailable on the internet](troubleshooting-domain-unavailable.md)

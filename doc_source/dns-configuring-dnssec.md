@@ -8,7 +8,7 @@ Enabling DNSSEC signing has two steps:
 + Step 1: Enable DNSSEC signing for Route 53, and request that Route 53 create a key signing key \(KSK\) based on a customer managed customer master key \(CMK\) in AWS Key Management Service \(AWS KMS\)\.
 + Step 2: Create a chain of trust for the hosted zone by adding a Delegation Signer \(DS\) record to the parent zone, so DNS responses can be authenticated with trusted cryptographic signatures\.
 
-Instructions for completing each of these steps are included in this chapter, in the section [Enabling DNSSEC signing and establishing a chain of trust](dns-configuring-dnssec-enable-signing.md)\.
+  Instructions for completing each of these steps are included in this chapter, in the section [Enabling DNSSEC signing and establishing a chain of trust](dns-configuring-dnssec-enable-signing.md)\.
 
 Before you enable DNSSEC signing, note the following:
 + To help prevent a zone outage and avoid problems with your domain becoming unavailable, you must quickly address and resolve DNSSEC errors\. We strongly recommend that you set up a CloudWatch alarm that alerts you whenever a `DNSSECInternalFailure` or `DNSSECKeySigningKeysNeedingAction` error is detected\. For more information, see [Monitoring hosted zones using Amazon CloudWatch](monitoring-hosted-zones-with-cloudwatch.md)\.

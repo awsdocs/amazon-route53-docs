@@ -64,7 +64,8 @@ The domain name that you want Route 53 to return\.
 An SPF record enclosed in quotation marks, for example, **"v=spf1 ip4:192\.168\.0\.1/16\-all"**\. SPF records are not recommended\. For more information, see [Supported DNS record types](ResourceRecordTypes.md)\.
 
 **SRV — Service locator**  
-An SRV record\. For information about SRV record format, refer to the applicable documentation\. The format of an SRV record is:  
+An SRV record\. SRV records are used for accessing services, such as a service for email or communications\. For information about SRV record format, refer to the documentation for the service that you want to connect to\.   
+The format of an SRV record is:  
 **\[priority\] \[weight\] \[port\] \[server host name\]**  
 For example:  
 **1 10 5269 xmpp\-server\.example\.com\.**

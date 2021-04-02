@@ -76,7 +76,7 @@ To grant full access to the Amazon Route 53 console, you grant the permissions 
                 "cloudfront:ListDistributions",
                 "elasticloadbalancing:DescribeLoadBalancers",
                 "elasticbeanstalk:DescribeEnvironments",
-                "s3:ListBucket",
+                "s3:ListAllMyBuckets",
                 "s3:GetBucketLocation",
                 "s3:GetBucketWebsite",
                 "ec2:DescribeRegions",
@@ -142,7 +142,7 @@ These permissions aren't required if you aren't using the Route 53 console\. Ro
 Lets you create and update alias records for which the value of **Alias Target** is an Elastic Beanstalk environment\.  
 These permissions aren't required if you aren't using the Route 53 console\. Route 53 uses it only to get a list of environments to display in the console\.
 
-**`s3:ListBucket`, `s3:GetBucketLocation`, and `s3:GetBucketWebsite`**  
+**`s3:ListAllMyBuckets`, `s3:GetBucketLocation`, and `s3:GetBucketWebsite`**  
 Let you create and update alias records for which the value of **Alias Target** is an Amazon S3 bucket\. \(You can create an alias to an Amazon S3 bucket only if the bucket is configured as a website endpoint; `s3:GetBucketWebsite` gets the required configuration information\.\)  
 These permissions aren't required if you aren't using the Route 53 console\. Route 53 uses it only to get a list of buckets to display in the console\.
 

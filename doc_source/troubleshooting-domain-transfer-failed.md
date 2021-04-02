@@ -25,22 +25,4 @@ If you request the transfer of a domain to Amazon Route 53 and you don't receiv
 
 ## "Parameters in request are not valid" error when trying to transfer a \.es domain to Amazon Route 53<a name="troubleshooting-domain-transfer-failed-parameters-in-request-are-not-valid"></a>
 
-Amazon Route 53 returns a "Parameters in request are not valid" error when you try to transfer a \.es domain to Route 53 and the contact type of the registrant contact is **Company**\. To complete the transfer, open a case with AWS Support:
-
-1. Sign in to the [AWS Support Center](https://console.aws.amazon.com/support/home?region=us-east-1#/case/create?issueType=customer-service&serviceCode=billing&categoryCode=domain-name-registration-issue)\.
-
-1. Specify the following values:  
-**Regarding**  
-Accept the default value of **Account and Billing Support**\.  
-**Service**  
-Accept the default value of **Billing**\.  
-**Category**  
-Accept the default value of **Domain name registration issue**\.  
-**Subject**  
-Specify **Parameters in request are not valid error**\.  
-**Description**  
-Specify the name of the domain that you want to transfer\.  
-**Contact method**  
-Specify a contact method and enter the applicable values\.
-
-1. Choose **Submit**\.
+Amazon Route 53 returns a "Parameters in request are not valid" error when you try to transfer a \.es domain to Route 53 and the contact type of the registrant contact is **Company**\. To complete the transfer, change the contact type of the registrant to **Person**, and re\-submit\. 

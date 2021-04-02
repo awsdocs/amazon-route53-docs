@@ -1,6 +1,10 @@
 # Resolver query logging<a name="resolver-query-logs"></a>
 
-You can log the DNS queries that originate in Amazon Virtual Private Cloud VPCs that you specify, as well as the responses to those DNS queries\. You can also log DNS queries from on\-premises resources that use an inbound Resolver endpoint, and DNS queries that use an outbound Resolver endpoint for recursive DNS resolution\.
+You can log the following DNS queries: 
++ Queries that originate in Amazon Virtual Private Cloud VPCs that you specify, as well as the responses to those DNS queries\.
++ Queries from on\-premises resources that use an inbound Resolver endpoint\.
++ Queries that use an outbound Resolver endpoint for recursive DNS resolution\.
++ Queries that use Route 53 Resolver DNS Firewall rules to block, allow, or monitor domain lists\.
 
 Resolver query logs include values such as the following:
 + The AWS Region where the VPC was created
@@ -12,12 +16,13 @@ Resolver query logs include values such as the following:
 + The DNS record type \(such as A or AAAA\)
 + The DNS response code, such as `NoError` or `ServFail`
 + The DNS response data, such as the IP address that is returned in response to the DNS query
++ A response to a DNS Firewall rule action
 
 For a detailed list of all of the values logged and an example, see [Values that appear in Resolver query logs](resolver-query-logs-format.md)\.
 
 **Note**  
 As is standard for DNS resolvers, resolvers cache DNS queries for a length of time determined by the time\-to\-live \(TTL\) for the resolver\. The Route 53 Resolver caches queries that originate in your VPCs, and responds from the cache whenever possible to speed up responses\. Resolver query logging logs only unique queries, not queries that Resolver is able to respond to from the cache\.  
-For example, suppose that an EC2 instance in one of the VPCs that a query logging configuration is logging queries for, submits a request for accounting\.example\.com\. Resolver caches the response to that query, and logs the query\. If the same instance’s ENI makes a query for accounting\.example\.com within the TTL of the Resolver’s cache, Resolver responds to the query from the cache\. The second query is not logged\.
+For example, suppose that an EC2 instance in one of the VPCs that a query logging configuration is logging queries for, submits a request for accounting\.example\.com\. Resolver caches the response to that query, and logs the query\. If the same instance’s elastic network interface makes a query for accounting\.example\.com within the TTL of the Resolver’s cache, Resolver responds to the query from the cache\. The second query is not logged\.
 
 You can send the logs to one of the following AWS resources: 
 + Amazon CloudWatch Logs \(CloudWatch Logs\) log group

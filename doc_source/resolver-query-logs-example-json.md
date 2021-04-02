@@ -1,46 +1,34 @@
-# Resolver query log example<a name="resolver-query-logs-example-json"></a>
+# Route 53 Resolver query log example<a name="resolver-query-logs-example-json"></a>
 
-Here's an example query log:
+Here's a resolver query log example:
 
 ```
-{
-  "version": "1.000000",
-  "account_id": "111122223333",
-  "region": "us-west-2",
-  "vpc_id": "vpc-7example",
-  "query_timestamp": "2020-07-27T16:32:20Z",
-  "query_name": "api.example.com.",
-  "query_type": "A",
-  "query_class": "IN",
-  "rcode": "NOERROR",
-  "answers": [
-    {
-      "Rdata": "192.0.2e.44",
-      "Type": "A",
-      "Class": "IN",
-    },
-    {
-      "Rdata": "198.51.100.6",
-      "Type": "A",
-      "Class": "IN",
-    },
-    {
-      "Rdata": "203.0.113.8",
-      "Type": "A",
-      "Class": "IN",
-    },
-    {
-      "Rdata": "203.0.113.9",
-      "Type": "A",
-      "Class": "IN",
-    },
-  ],
-  "srcaddr": "192.0.2.15",
-  "srcport": "50637",
-  "transport": "UDP",
-  "srcids": {
-    "instance": "i-0d15cd0d3example",
-    "resolver-endpoint": "rslvr-out-2345678dfghexample",
-  },
-}
+{            
+                {
+        "srcaddr": "4.5.64.102",
+        "vpc_id": "vpc-7example",
+        "answers": [
+            {
+                "Rdata": "203.0.113.9",
+                "Type": "PTR",
+                "Class": "IN"
+            }
+        ],
+        "firewall_rule_group_id": "rslvr-frg-01234567890abcdef",
+        "firewall_rule_action": "BLOCK",
+        "query_name": "15.3.4.32.in-addr.arpa.",
+        "firewall_domain_list_id": "rslvr-fdl-01234567890abcdef",
+        "query_class": "IN",
+        "srcids": {
+            "instance": "i-0d15cd0d3example"
+        },
+        "rcode": "NOERROR",
+        "query_type": "PTR",
+        "transport": "UDP",
+        "version": "1.100000",
+        "account_id": "111122223333",
+        "srcport": "56067",
+        "query_timestamp": "2021-02-04T17:51:55Z",
+        "region": "us-east-1"
+    }
 ```

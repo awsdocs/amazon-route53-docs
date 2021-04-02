@@ -76,22 +76,11 @@ If you have an existing account and your default limit is 50 now, it will remain
 
 ### Quotas on Route 53 Resolver<a name="limits-api-entities-resolver"></a>
 
+This section includes all the Route 53 Resolver quotas
 
-****  
+#### Quotas on Route 53 Resolver<a name="increase-resolver-quotas"></a>
 
-| Entity | Quota | 
-| --- | --- | 
-|  Endpoints per AWS Region  |  4 per AWS account You can request a higher quota\.  | 
-|  IP addresses per endpoint  |  6  | 
-|  IP addresses per rule  |  6  | 
-|  Rules per AWS Region  |  1000 per AWS account You can request a higher quota\.  | 
-|  Associations between rules and VPCs per AWS Region  |  2000 per AWS account You can request a higher quota\.   | 
-|  Queries per second per IP address in an endpoint  |  10,000\*  | 
-|  Query log configurations per AWS Region  |  20  | 
-|  Query log configuration VPC associations per AWS Region  |  100  | 
-|  Query log configuration VPC associations per AWS Region \(shared using RAM\)  |  100  | 
-
-**\*** The number of DNS queries per second \(QPS\) varies by the type of query, the size of the response, and the protocol in use\. This limit is on a per elastic network interface \(ENI\) basis\. For example, with a limit of 10,000 QPS, 2 ENIs would allow 20,000 QPS\. From there you can scale out by adding more ENIs\. For information about how to view Amazon CloudWatch metrics for IP addresses for inbound and outbound endpoints, see [Metrics for Resolver IP addresses](monitoring-resolver-with-cloudwatch.md#cloudwatch-metrics-resolver-ip-address)\.<a name="increase-quota-procedure"></a>
+Use the following procedure to increase quotas for Route 53 Resolver\.<a name="increase-quota-procedure"></a>
 
 **To increase Resolver quotas**
 
@@ -102,6 +91,44 @@ If you have an existing account and your default limit is 50 now, it will remain
 1. In the navigation pane of the console, choose **AWS services**\.
 
 1. Search for Route 53 Resolver, and choose it to view the list of quotas\.
+
+#### Quotas on Route 53 Resolver endpoints<a name="limits-api-entities-resolver-endpoints"></a>
+
+
+****  
+
+| Entity | Quota | 
+| --- | --- | 
+|  Endpoints per AWS Region  |  4 per AWS account [Request a higher quota](#increase-quota-procedure)\.   | 
+|  IP addresses per endpoint  |  6  | 
+|  IP addresses per rule  |  6  | 
+|  Rules per AWS Region  |  1000 per AWS account [Request a higher quota](#increase-quota-procedure)\.  | 
+|  Associations between rules and VPCs per AWS Region  |  2000 per AWS account [Request a higher quota](#increase-quota-procedure)\.   | 
+|  Queries per second per IP address in an endpoint  |  10,000\*  | 
+
+**\*** Each elastic network interface endpoint can process up to 10,000 DNS queries per second \(QPS\)\. The number of DNS QPS varies by the type of query, size of the response, health of the target name servers, query response times, and the protocol in use\. For example, queries to a target name server that is slow to respond can significantly reduce the capacity of the network interface\. Additionally, to ensure high availability, Route 53 Resolver generates redundant outbound queries for each DNS request that it receives\. As a result, the QPS for each outbound network interface will not match the QPS sent to Route 53 Resolver\. Use CloudWatch metrics to measure how many queries are being sent to each network interface\. For more information, see [Metrics for Resolver IP addresses](monitoring-resolver-with-cloudwatch.md#cloudwatch-metrics-resolver-ip-address)\. If your maximum query rate exceeds 50% of the capacity for any network interface in the endpoint, you can add more network interfaces to increase the endpoint capacity\.
+
+#### Quotas on Route 53 Resolver query logs<a name="limits-api-entities-resolver-query-logs"></a>
+
+
+****  
+
+| Entity | Quota | 
+| --- | --- | 
+|  Query log configurations per AWS Region  |  20  | 
+|  Query log configuration VPC associations per AWS Region  |  100  | 
+|  Query log configuration VPC associations per AWS Region \(shared using RAM\)  |  100  | 
+
+#### Quotas on Route 53 Resolver DNS Firewall<a name="limits-api-entities-resolver-dns-firewall"></a>
+
+
+****  
+
+| Entity | Quota | 
+| --- | --- | 
+|  Number of rule groups associated to a VPC  |   5 [Request a higher quota](#increase-quota-procedure)\.  | 
+|  Number of rules within a rule group per AWS Region  |  100 [Request a higher quota](#increase-quota-procedure)\.  | 
+|  Number of domain specifications across all domain lists for a single account per AWS Region  |  100,000 [Request a higher quota](#increase-quota-procedure)\.  | 
 
 ### Quotas on health checks<a name="limits-api-entities-health-checks"></a>
 

@@ -10,7 +10,7 @@ To view the status code for your domains, perform the following procedure\. <a n
 
 1. In the navigation pane, choose **Registered Domains**\.
 
-1. Choose the name of your domain\.
+1. Select the linked name of your domain\.
 
 1. For the current status of your domain, see the value of the **Domain name status** field\. 
 

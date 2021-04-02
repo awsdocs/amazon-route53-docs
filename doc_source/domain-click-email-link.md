@@ -64,6 +64,8 @@ If there's no warning box, you already confirmed that the email address for the 
 
 **To resend the authorization email for a domain transfer**
 
+This method doesn't work for \.jp domain transfer out requests\. 
+
 1. Use the method provided by the current domain registrar to confirm that privacy protection for the domain is disabled\. If not, disable it\.
 
    We send the authorization email to the email address that the current registrar saved in the WHOIS database\. When privacy protection is enabled, that email address typically is obfuscated\. The current registrar might not forward to your actual email address the email that Amazon Route 53 sends to the email address in the WHOIS database\. 

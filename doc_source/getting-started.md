@@ -96,7 +96,7 @@ By default, you register a domain for one year\. If you won't want to keep the d
 
 1. In the navigation pane, choose **Registered domains**\.
 
-1. In the list of domains, choose the name of your domain\.
+1. In the list of domains, select the linked name of your domain\.
 
 1. If the value of the **Auto renew** field is **Enabled \(disable\)**, choose **disable** to turn automatic renewal off\. The change takes effect immediately\.
 

@@ -15,4 +15,5 @@ Monitoring is an important part of maintaining the reliability, availability, an
 + [Monitoring your resources with Amazon Route 53 health checks and Amazon CloudWatch](monitoring-cloudwatch.md)
 + [Monitoring hosted zones using Amazon CloudWatch](monitoring-hosted-zones-with-cloudwatch.md)
 + [Monitoring Route 53 Resolver endpoints with Amazon CloudWatch](monitoring-resolver-with-cloudwatch.md)
++ [Monitoring Route 53 Resolver DNS Firewall rule groups with Amazon CloudWatch](monitoring-resolver-dns-firewall-with-cloudwatch.md)
 + [Logging Amazon Route 53 API calls with AWS CloudTrail](logging-using-cloudtrail.md)

@@ -3,7 +3,7 @@
 Each log file contains one log entry for each DNS query that Amazon Route 53 received from DNS resolvers in the corresponding edge location\. Each log entry includes the following values:
 
 **version**  
-The version number of the query log format\. The current version is `1.1` \.  
+The version number of the query log format\. The current version is `1.1`\.  
 The version value is a major and minor version in the form **major\_version\.minor\_version**\. For example, you can have a `version` value of `1.7`, where `1 `is the major version, and `7` is the minor version\.  
 Route 53 increments the major version if a change is made to the log structure that is not backward\-compatible\. This includes removing a JSON field that already exists, or changing how the contents of a field are represented \(for example, a date format\)\.  
  Route 53 increments the minor version if a change adds new fields to the log file\. This can occur if new information is available for some or all existing DNS queries within a VPC\. 
@@ -63,3 +63,13 @@ The ID of the resolver endpoint that passes the DNS query to on\-premises DNS se
 **EDNS client subnet**  
 A partial IP address for the client that the request originated from, if available from the DNS resolver\.  
 For more information, see the IETF draft [Client Subnet in DNS Requests](https://tools.ietf.org/html/draft-ietf-dnsop-edns-client-subnet-08)\.
+
+**firewall\_rule\_group\_id**  
+The ID of the DNS Firewall rule group that matched the domain name in the query\. This is populated only if DNS Firewall found a match for a rule with action set to alert or block\.  
+For more information about the firewall rule groups, see [DNS Firewall rule groups and rules](resolver-dns-firewall-rule-groups.md)\.
+
+**firewall\_rule\_action**  
+The action specified by the rule that matched the domain name in the query\. This is populated only if DNS Firewall found a match for a rule with action set to alert or block\.
+
+**firewall\_domain\_list\_id**  
+The domain list used by the rule that matched the domain name in the query\. This is populated only if DNS Firewall found a match for a rule with action set to alert or block\.

@@ -20,6 +20,7 @@ To specify an action, use the applicable prefix \(`route53`, `route53domains`, o
 + [Required permissions for actions on health checks](#required-permissions-health-checks)
 + [Required permissions for actions on domain registrations](#required-permissions-domain-registrations)
 + [Required permissions for Route 53 Resolver actions](#required-permissions-resolver)
++ [Required permissions for Route 53 Resolver DNS Firewall actions](#required-permissions-resolver-dns-firewall)
 + [Required permissions for actions to get limits for accounts, hosted zones, and reusable delegation sets](#required-permissions-get-limits)
 + [Required permissions for actions on tags for hosted zones and health checks](#required-permissions-tags-hosted-zones)
 + [Required permissions for actions on tags for domains](#required-permissions-tags-domains)
@@ -366,6 +367,10 @@ Resources: `*`
 Required Permissions \(API Action\): `route53resolver:AssociateResolverEndpointIpAddress`, `ec2:CreateNetworkInterfacePermission`, `ec2:DescribeAvailabilityZones`, `ec2:DescribeNetworkInterfaces`, `ec2:DescribeSubnets`   
 Resources: `*`
 
+[AssociateResolverQueryLogConfig](https://docs.aws.amazon.com/Route53/latest/APIReference/API_route53resolver_AssociateResolverQueryLogConfig.html)  
+Required Permissions \(API Action\): `route53resolver:AssociateResolverQueryLogConfig`, `logs:DescribeResourcePolicies`, `logs:DescribeLogGroups`, `logs:GetLogDelivery`, `logs:ListLogDeliveries`, `logs:PutResourcePolicy`, `logs:UpdateLogDelivery`   
+Resources: `*`
+
 [AssociateResolverRule](https://docs.aws.amazon.com/Route53/latest/APIReference/API_route53resolver_AssociateResolverRule.html)  
 Required Permissions \(API Action\): `route53resolver:AssociateResolverRule`, `ec2:DescribeVpcs`  
 Resources: `*`
@@ -373,6 +378,10 @@ Resources: `*`
 [CreateResolverEndpoint](https://docs.aws.amazon.com/Route53/latest/APIReference/API_route53resolver_CreateResolverEndpoint.html)  
 Required Permissions \(API Action\): `route53resolver:CreateResolverEndpoint`, `ec2:DescribeSubnets`, `ec2:CreateNetworkInterface`, `ec2:DescribeNetworkInterfaces`, `ec2:CreateNetworkInterfacePermission`, `ec2:DescribeSecurityGroups`  
 See also [Example 4: Allow creation of inbound and outbound Route 53 Resolver endpoints](access-control-managing-permissions.md#access-policy-example-create-resolver-endpoints)\.  
+Resources: `*`
+
+[CreateResolverQueryLogConfig](https://docs.aws.amazon.com/Route53/latest/APIReference/API_route53resolver_CreateResolverQueryLogConfig.html)  
+Required Permissions \(API Action\): `route53resolver:CreateResolverQueryLogConfig`, `ec2:DescribeVpcs`, `logs:DescribeResourcePolicies`, `logs:DescribeLogGroups`, `logs:CreateLogDelivery`, `logs:DeleteLogDelivery` `logs:GetLogDelivery`, `logs:ListLogDeliveries`, `logs:UpdateLogDelivery`   
 Resources: `*`
 
 [CreateResolverRule](https://docs.aws.amazon.com/Route53/latest/APIReference/API_route53resolver_CreateResolverRule.html)  
@@ -383,6 +392,10 @@ Resources: `*`
 Required Permissions \(API Action\): `route53resolver:DeleteResolverEndpoint`, `ec2:DeleteNetworkInterface`, `ec2:DescribeNetworkInterface`  
 Resources: `*`
 
+[DeleteResolverQueryLogConfig](https://docs.aws.amazon.com/Route53/latest/APIReference/API_route53resolver_DeleteResolverQueryLogConfig.html)  
+Required Permissions \(API Action\): `route53resolver:DeleteResolverQueryLogConfig`, `logs:DescribeResourcePolicies`, `logs:DescribeLogGroups`, `logs:DeleteLogDelivery` `logs:GetLogDelivery`, `logs:ListLogDeliveries`, `logs:UpdateLogDelivery`   
+Resources: `*`
+
 [DeleteResolverRule](https://docs.aws.amazon.com/Route53/latest/APIReference/API_route53resolver_DeleteResolverRule.html)  
 Required Permissions \(API Action\): `route53resolver:DeleteResolverRule`  
 Resources: `*`
@@ -391,12 +404,28 @@ Resources: `*`
 Required Permissions \(API Action\): `route53resolver:DisassociateResolverEndpointIpAddress`, `ec2:DeleteNetworkInterface`  
 Resources: `*`
 
+[DisassociateResolverQueryLogConfig](https://docs.aws.amazon.com/Route53/latest/APIReference/API_route53resolver_DisassociateResolverQueryLogConfig.html)  
+Required Permissions \(API Action\): `route53resolver:DisassociateResolverQueryLogConfig`, `logs:DescribeResourcePolicies`, `logs:DescribeLogGroups`, `logs:GetLogDelivery`, `logs:ListLogDeliveries`, `logs:PutResourcePolicy`, `logs:UpdateLogDelivery`   
+Resources: `*`
+
 [DisassociateResolverRule](https://docs.aws.amazon.com/Route53/latest/APIReference/API_route53resolver_DisassociateResolverRule.html)  
 Required Permissions \(API Action\): `route53resolver:DisassociateResolverRule`  
 Resources: `*`
 
 [GetResolverEndpoint](https://docs.aws.amazon.com/Route53/latest/APIReference/API_route53resolver_GetResolverEndpoint.html)  
 Required Permissions \(API Action\): `route53resolver:GetResolverEndpoint`  
+Resources: `*`
+
+[GetResolverQueryLogConfig](https://docs.aws.amazon.com/Route53/latest/APIReference/API_route53resolver_GetResolverQueryLogConfig.html)  
+Required Permissions \(API Action\): `route53resolver:GetResolverQueryLogConfig`, `logs:DescribeResourcePolicies`, `logs:DescribeLogGroups`, `logs:GetLogDelivery`, `logs:ListLogDeliveries`   
+Resources: `*`
+
+[GetResolverQueryLogConfigAssociation](https://docs.aws.amazon.com/Route53/latest/APIReference/API_route53resolver_GetResolverQueryLogConfigAssociation.html)  
+Required Permissions \(API Action\): `route53resolver:GetResolverQueryLogConfigAssociation`, `logs:DescribeResourcePolicies`, `logs:DescribeLogGroups`, `logs:GetLogDelivery`, `logs:ListLogDeliveries`   
+Resources: `*`
+
+[GetResolverQueryLogConfigPolicy](https://docs.aws.amazon.com/Route53/latest/APIReference/API_route53resolver_GetResolverQueryLogConfigPolicy.html)  
+Required Permissions \(API Action\): `route53resolver:GetResolverQueryLogConfigPolicy`, `logs:DescribeResourcePolicies`, `logs:DescribeLogGroups`, `logs:GetLogDelivery`, `logs:ListLogDeliveries`   
 Resources: `*`
 
 [GetResolverRule](https://docs.aws.amazon.com/Route53/latest/APIReference/API_route53resolver_GetResolverRule.html)  
@@ -419,6 +448,14 @@ Resources: `*`
 Required Permissions \(API Action\): `route53resolver:ListResolverEndpoints`  
 Resources: `*`
 
+[ListResolverQueryLogConfigAssociations](https://docs.aws.amazon.com/Route53/latest/APIReference/API_route53resolver_ListResolverQueryLogConfigAssociations.html)  
+Required Permissions \(API Action\): `route53resolver:ListResolverQueryLogConfigAssociations`, `logs:DescribeResourcePolicies`, `logs:DescribeLogGroups`, `logs:GetLogDelivery`, `logs:ListLogDeliveries`   
+Resources: `*`
+
+[ListResolverQueryLogConfigs](https://docs.aws.amazon.com/Route53/latest/APIReference/API_route53resolver_ListResolverQueryLogConfigs.html)  
+Required Permissions \(API Action\): `route53resolver:ListResolverQueryLogConfigs`, `logs:DescribeResourcePolicies`, `logs:DescribeLogGroups`, `logs:GetLogDelivery`, `logs:ListLogDeliveries`   
+Resources: `*`
+
 [ListResolverRuleAssociations](https://docs.aws.amazon.com/Route53/latest/APIReference/API_route53resolver_ListResolverRuleAssociations.html)  
 Required Permissions \(API Action\): `route53resolver:ListResolverRuleAssociations`, `ec2:DescribeVpcs`  
 Resources: `*`
@@ -430,6 +467,10 @@ Resources: `*`
 [ListTagsForResource](https://docs.aws.amazon.com/Route53/latest/APIReference/API_route53resolver_ListTagsForResource.html)  
 Required Permissions \(API Action\): `route53resolver:ListTagsForResource`  
 Resources: `arn:aws:route53resolver:::resolver-endpoint/*`, `arn:aws:route53resolver:::resolver-rule/`
+
+[PutResolverQueryLogConfigPolicy](https://docs.aws.amazon.com/Route53/latest/APIReference/API_route53resolver_PutResolverQueryLogConfigPolicy.html)  
+Required Permissions \(API Action\): `route53resolver:PutResolverQueryLogConfigPolicy`, `logs:DescribeResourcePolicies`, `logs:DescribeLogGroups`, `logs:GetLogDelivery`, `logs:ListLogDeliveries`, `logs:PutResourcePolicy`, `logs:UpdateLogDelivery`   
+Resources: `*`
 
 [PutResolverRulePolicy](https://docs.aws.amazon.com/Route53/latest/APIReference/API_route53resolver_PutResolverRulePolicy.html)  
 Required Permissions \(API Action\): `route53resolver:PutResolverRulePolicy`  
@@ -449,6 +490,111 @@ Resources: `*`
 
 [UpdateResolverRule](https://docs.aws.amazon.com/Route53/latest/APIReference/API_route53resolver_UpdateResolverRule.html)  
 Required Permissions \(API Action\): `route53resolver:UpdateResolverRule`  
+Resources: `*`
+
+## Required permissions for Route 53 Resolver DNS Firewall actions<a name="required-permissions-resolver-dns-firewall"></a><a name="resolver-dns-firewall-table"></a>
+
+[AssociateFirewallRuleGroup](https://docs.aws.amazon.com/Route53/latest/APIReference/API_route53resolver_AssociateFirewallRuleGroup.html)  
+Required Permissions \(API Action\): `route53resolver:AssociateFirewallRuleGroup`, `ec2:DescribeVpcs`  
+Optional Permissions: `route53resolver:TagResource` \(Required if you provide a tagging parameter\)   
+Resources: `*`
+
+[CreateFirewallDomainList](https://docs.aws.amazon.com/Route53/latest/APIReference/API_route53resolver_CreateFirewallDomainList.html)  
+Required Permissions \(API Action\): `route53resolver:CreateFirewallDomainList`  
+Optional Permissions: `route53resolver:TagResource` \(Required if you provide a tagging parameter\)   
+Resources: `*`
+
+[CreateFirewallRule](https://docs.aws.amazon.com/Route53/latest/APIReference/API_route53resolver_CreateFirewallRule.html)  
+Required Permissions \(API Action\): `route53resolver:CreateFirewallRule`  
+Resources: `*`
+
+[CreateFirewallRuleGroup](https://docs.aws.amazon.com/Route53/latest/APIReference/API_route53resolver_CreateFirewallRuleGroup.html)  
+Required Permissions \(API Action\): `route53resolver:CreateFirewallRuleGroup`  
+Optional Permissions: `route53resolver:TagResource` \(Required if you provide a tagging parameter\)   
+Resources: `*`
+
+[DeleteFirewallDomainList](https://docs.aws.amazon.com/Route53/latest/APIReference/API_route53resolver_DeleteFirewallDomainList.html)  
+Required Permissions \(API Action\): `route53resolver:DeleteFirewallDomainList`  
+Resources: `*`
+
+[DeleteFirewallRule](https://docs.aws.amazon.com/Route53/latest/APIReference/API_route53resolver_DeleteFirewallRule.html)  
+Required Permissions \(API Action\): `route53resolver:DeleteFirewallRule`  
+Resources: `*`
+
+[DeleteFirewallRuleGroup](https://docs.aws.amazon.com/Route53/latest/APIReference/API_route53resolver_DeleteFirewallRuleGroup.html)  
+Required Permissions \(API Action\): `route53resolver:DeleteFirewallRuleGroup`  
+Resources: `*`
+
+[DisassociateFirewallRuleGroup](https://docs.aws.amazon.com/Route53/latest/APIReference/API_route53resolver_DisassociateFirewallRuleGroup.html)  
+Required Permissions \(API Action\): `route53resolver:DisassociateFirewallRuleGroup`  
+Resources: `*`
+
+[GetFirewallConfig](https://docs.aws.amazon.com/Route53/latest/APIReference/API_route53resolver_GetFirewallConfig.html)  
+Required Permissions \(API Action\): `route53resolver:GetFirewallConfig` `ec2:DescribeVpcs`  
+Resources: `*`
+
+[GetFirewallDomainList](https://docs.aws.amazon.com/Route53/latest/APIReference/API_route53resolver_GetFirewallDomainList.html)  
+Required Permissions \(API Action\): `route53resolver:GetFirewallDomainList`  
+Resources: `*`
+
+[GetFirewallRuleGroup](https://docs.aws.amazon.com/Route53/latest/APIReference/API_route53resolver_GetFirewallRuleGroup.html)  
+Required Permissions \(API Action\): `route53resolver:GetFirewallRuleGroup`  
+Resources: `*`
+
+[GetFirewallRuleGroupAssociation](https://docs.aws.amazon.com/Route53/latest/APIReference/API_route53resolver_GetFirewallRuleGroupAssociation.html)  
+Required Permissions \(API Action\): `route53resolver:GetFirewallRuleGroupAssociation`  
+Resources: `*`
+
+[GetFirewallRuleGroupPolicy](https://docs.aws.amazon.com/Route53/latest/APIReference/API_route53resolver_GetFirewallRuleGroupPolicy.html)  
+Required Permissions \(API Action\): `route53resolver:GetFirewallRuleGroupPolicy`  
+Resources: `*`
+
+[ImportFirewallDomains](https://docs.aws.amazon.com/Route53/latest/APIReference/API_route53resolver_ImportFirewallDomains.html)  
+Required Permissions \(API Action\): `route53resolver:ImportFirewallRuleDomains`  
+Resources: `*`
+
+[ListFirewallConfigs](https://docs.aws.amazon.com/Route53/latest/APIReference/API_route53resolver_ListFirewallConfigs.html)  
+Required Permissions \(API Action\): `route53resolver:ListFirewallConfigs` `ec2:DescribeVpcs`  
+Resources: `*`
+
+[ListFirewallDomainLists](https://docs.aws.amazon.com/Route53/latest/APIReference/API_route53resolver_ListFirewallDomainLists.html)  
+Required Permissions \(API Action\): `route53resolver:ListFirewallDomainLists`  
+Resources: `*`
+
+[ListFirewallDomains](https://docs.aws.amazon.com/Route53/latest/APIReference/API_route53resolver_ListFirewallDomains.html)  
+Required Permissions \(API Action\): `route53resolver:ListFirewallDomains`  
+Resources: `*`
+
+[ListFirewallRuleGroupAssociations](https://docs.aws.amazon.com/Route53/latest/APIReference/API_route53resolver_ListFirewallRuleGroupAssociations.html)  
+Required Permissions \(API Action\): `route53resolver:ListFirewallRuleGroupAssociations`  
+Resources: `*`
+
+[ListFirewallRuleGroups](https://docs.aws.amazon.com/Route53/latest/APIReference/API_route53resolver_ListFirewallRuleGroups.html)  
+Required Permissions \(API Action\): `route53resolver:ListFirewallRuleGroups`  
+Resources: `*`
+
+[ListFirewallRules](https://docs.aws.amazon.com/Route53/latest/APIReference/API_route53resolver_ListFirewallRules.html)  
+Required Permissions \(API Action\): `route53resolver:ListFirewallRules`  
+Resources: `*`
+
+[PutFirewallRuleGroupPolicy](https://docs.aws.amazon.com/Route53/latest/APIReference/API_route53resolver_PutFirewallRuleGroupPolicy.html)  
+Required Permissions \(API Action\): `route53resolver:PutFirewallRuleGroupPolicy`  
+Resources: `*`
+
+[UpdateFirewallConfig](https://docs.aws.amazon.com/Route53/latest/APIReference/API_route53resolver_UpdateFirewallConfig.html)  
+Required Permissions \(API Action\): `route53resolver:UpdateFirewallConfig` `ec2:DescribeVpcs`  
+Resources: `*`
+
+[UpdateFirewallDomains](https://docs.aws.amazon.com/Route53/latest/APIReference/API_route53resolver_UpdateFirewallDomains.html)  
+Required Permissions \(API Action\): `route53resolver:UpdateFirewallDomains`  
+Resources: `*`
+
+[UpdateFirewallRule](https://docs.aws.amazon.com/Route53/latest/APIReference/API_route53resolver_UpdateFirewallRule.html)  
+Required Permissions \(API Action\): `route53resolver:UpdateFirewallRule`  
+Resources: `*`
+
+[UpdateFirewallRuleGroupAssociation](https://docs.aws.amazon.com/Route53/latest/APIReference/API_route53resolver_UpdateFirewallRuleGroupAssociation.html)  
+Required Permissions \(API Action\): `route53resolver:UpdateFirewallRuleGroupAssociation`  
 Resources: `*`
 
 ## Required permissions for actions to get limits for accounts, hosted zones, and reusable delegation sets<a name="required-permissions-get-limits"></a><a name="tags-hosted-zones-table"></a>
