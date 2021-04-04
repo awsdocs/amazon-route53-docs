@@ -23,7 +23,7 @@ AWS provides the following managed domain lists, in the Regions they are availab
 + `AWSManagedDomainsMalwareDomainList` – – Domains associated with sending malware, hosting malware, or distributing malware\.
 + `AWSManagedDomainsBotnetCommandandControl` – Domains associated with controlling networks of computers that are infected with spamming malware\. 
 
-Managed domain lists cannot be downloaded or browsed\. To protect intellectual property, you can't view or edit the individual domain specifications within a domain list\. This restriction also helps to keep prevents malicious users from designing threats that specifically to circumvent published lists\. 
+Managed domain lists cannot be downloaded or browsed\. To protect intellectual property, you can't view or edit the individual domain specifications within a domain list\. This restriction also helps to prevent malicious users from designing threats that specifically try to circumvent published lists\. 
 
 For more information about managed domain lists, contact the [AWS Support Center](https://console.aws.amazon.com/support/home#/)\. 
 
