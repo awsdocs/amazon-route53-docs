@@ -2,9 +2,13 @@
 
 **To view a rule group's VPC associations**
 
-1. Sign in to the AWS Management Console and open the Amazon VPC console under [https://console\.aws\.amazon\.com/vpc/](https://console.aws.amazon.com/vpc/)\. 
+1. Sign in to the AWS Management Console and open the Route 53 console at [https://console\.aws\.amazon\.com/route53/](https://console.aws.amazon.com/route53/)\.
 
-1. In the navigation pane, locate the **DNS Firewall** section\.
+   \- OR \- 
+
+   Sign in to the AWS Management Console and open the 
+
+   the Amazon VPC console under [https://console\.aws\.amazon\.com/vpc/](https://console.aws.amazon.com/vpc/)\. 
 
 1. In the navigation pane, choose **Rule groups**\.
 

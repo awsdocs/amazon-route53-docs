@@ -8,9 +8,13 @@ When you make changes to DNS Firewall entities, like rules and domain lists, DNS
 
 **To create a rule group and its rules**
 
-1. Sign in to the AWS Management Console and open the Amazon VPC console under [https://console\.aws\.amazon\.com/vpc/](https://console.aws.amazon.com/vpc/)\. 
+1. Sign in to the AWS Management Console and open the Route 53 console at [https://console\.aws\.amazon\.com/route53/](https://console.aws.amazon.com/route53/)\.
 
-1. In the navigation pane, locate the **DNS Firewall** section\.
+   \- OR \- 
+
+   Sign in to the AWS Management Console and open the 
+
+   the Amazon VPC console under [https://console\.aws\.amazon\.com/vpc/](https://console.aws.amazon.com/vpc/)\. 
 
 1. In the navigation pane, choose **Rule groups**\.
 
@@ -26,9 +30,13 @@ When you make changes to DNS Firewall entities, like rules and domain lists, DNS
 
 **To view and update a rule group**
 
-1. Sign in to the AWS Management Console and open the Amazon VPC console under [https://console\.aws\.amazon\.com/vpc/](https://console.aws.amazon.com/vpc/)\. 
+1. Sign in to the AWS Management Console and open the Route 53 console at [https://console\.aws\.amazon\.com/route53/](https://console.aws.amazon.com/route53/)\.
 
-1. In the navigation pane, locate the **DNS Firewall** section\.
+   \- OR \- 
+
+   Sign in to the AWS Management Console and open the 
+
+   the Amazon VPC console under [https://console\.aws\.amazon\.com/vpc/](https://console.aws.amazon.com/vpc/)\. 
 
 1. In the navigation pane, choose **Rule groups**\.
 
@@ -54,9 +62,13 @@ When you delete an entity that you can use in DNS Firewall, like a domain list t
 
 **To delete a rule group**
 
-1. Sign in to the AWS Management Console and open the Amazon VPC console under [https://console\.aws\.amazon\.com/vpc/](https://console.aws.amazon.com/vpc/)\. 
+1. Sign in to the AWS Management Console and open the Route 53 console at [https://console\.aws\.amazon\.com/route53/](https://console.aws.amazon.com/route53/)\.
 
-1. In the navigation pane, locate the **DNS Firewall** section\.
+   \- OR \- 
+
+   Sign in to the AWS Management Console and open the 
+
+   the Amazon VPC console under [https://console\.aws\.amazon\.com/vpc/](https://console.aws.amazon.com/vpc/)\. 
 
 1. In the navigation pane, choose **Rule groups**\.
 

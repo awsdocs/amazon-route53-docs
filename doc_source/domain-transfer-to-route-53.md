@@ -21,6 +21,9 @@ Route 53 charges the fee for transferring your domain before we start the trans
 **Special and premium domain names**  
 TLD registries have assigned special or premium prices to some domain names\. You can't transfer a domain to Route 53 if the domain has a special or premium price\.
 
+**Domain quotas**  
+The default number of domains per AWS account is 20\. You can [request a higher quota](https://console.aws.amazon.com/support/home#/case/create?issueType=service-limit-increase&limitType=service-code-route53)\. For more information, see [Quotas on domains](DNSLimitations.md#limits-api-entities-domains)\.
+
 **Topics**
 + [Transfer requirements for top\-level domains](#domain-transfer-to-route-53-requirements)
 + [Step 1: Confirm that Amazon Route 53 supports the top\-level domain](#domain-transfer-to-route-53-confirm-tld)

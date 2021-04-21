@@ -24,7 +24,8 @@ Choose the type of AWS resource that you want Resolver to send query logs to\. F
 After you choose the type of resource, you can either create another resource of that type or choose an existing resource that was created by the current AWS account\.  
 You can choose only resources that were created in the AWS Region that you chose in step 4, the Region where you're creating the query logging configuration\. If you choose to create a new resource, that resource will be created in the same Region\.  
 **VPCs to log queries for**  
-This query logging configuration will log DNS queries that originate in the VPCs that you choose\. Check the check box for each VPC in the current Region that you want Resolver to log queries for, then choose **Choose**\.
+This query logging configuration will log DNS queries that originate in the VPCs that you choose\. Check the check box for each VPC in the current Region that you want Resolver to log queries for, then choose **Choose**\.  
+VPC log delivery can be enabled only once for a specific destination type\. The logs can't be delivered to multiple destinations of the same type, for example, VPC logs can't be delivered to 2 Amazon S3 destinations\.
 
 1. Choose **Configure query logging**\.
 

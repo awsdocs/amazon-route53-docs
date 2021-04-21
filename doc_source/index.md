@@ -547,6 +547,8 @@ Amazon's trademarks and trade dress may not be used in
    + [Managing over 100 weighted records in Amazon Route 53](TutorialManagingOver100WRR.md)
    + [Weighting fault-tolerant multi-record answers in Amazon Route 53](TutorialWeightedFTMR.md)
 + [Best practices for Amazon Route 53](best-practices.md)
+   + [Resolver endpoints](best-practices-resolver-endpoints.md)
+   + [Resolver endpoint scaling](best-practices-resolver-endpoint-scaling.md)
 + [Quotas](DNSLimitations.md)
 + [Related information](Resources.md)
 + [Document history](History.md)

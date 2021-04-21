@@ -55,6 +55,8 @@ If you don't see **View information to create DS record** in this section, then 
 
 1. Use the provided values to create a DS record for the parent hosted zone in Route 53 or, if your domain is not hosted at Route 53, use the provided values to create a DS record at your domain registrar website\. 
 
+   Make sure you that configure the correct signing algorithm \(ECDSAP256SHA256 and type 13\) and digest algorithm \(SHA\-265 and type 2\)\. 
+
    If Route 53 is your registrar:
 
    1. Note the **Key type**, **Signing algorithm**, and **Public key** values\. In the navigation pane, choose **Registered domains**\.

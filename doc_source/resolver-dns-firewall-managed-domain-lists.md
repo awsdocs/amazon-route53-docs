@@ -1,6 +1,6 @@
 # Managed domain lists<a name="resolver-dns-firewall-managed-domain-lists"></a>
 
-Managed domain lists contain domain names that are associated with malicious activity or other potential threats\. AWS maintains these lists to enable Route 53 Resolver customers to check outbound DNS queries against them for for free when using DNS Firewall\. 
+Managed domain lists contain domain names that are associated with malicious activity or other potential threats\. AWS maintains these lists to enable Route 53 Resolver customers to check outbound DNS queries against them for free when using DNS Firewall\. 
 
 Keeping up to date on the constantly changing threat landscape can be time consuming and expensive\. Managed domain lists can save you time when you implement and use DNS Firewall\. AWS automatically updates managed domain lists when as new vulnerabilities and threats emerge\. AWS is often notified of new vulnerabilities before public disclosure, so DNS Firewall can deploy mitigations for you even, often before a new threats is become widely known\. 
 
@@ -12,9 +12,26 @@ AWS Managed Domain Lists are not currently available in all Regions\. The follow
 | Region | Managed domain lists available? | 
 | --- | --- | 
 |  Asia Pacific \(Mumbai\)  |  Yes  | 
+|  Asia Pacific \(Seoul\)  |  Yes  | 
+| Asia Pacific \(Singapore\) |  Yes  | 
+|  Asia Pacific \(Sydney\)  |  Yes  | 
+|  Asia Pacific \(Tokyo\)  |  Yes  | 
+|  Canada \(Central\) Region  |  Yes  | 
+|  Europe \(Frankfurt\) Region  |  Yes  | 
 |  Europe \(Ireland\) Region  |  Yes  | 
+|  Europe \(London\) Region  |  Yes  | 
+|  Europe \(Paris\) Region  |  Yes  | 
+|  Europe \(Stockholm\)  |  Yes  | 
+|  South America \(São Paulo\)  |  Yes  | 
 |  US East \(N\. Virginia\)  |  Yes  | 
+|  US East \(Ohio\)  |  Yes  | 
+|  US West \(N\. California\)  |  Yes  | 
 |  US West \(Oregon\)  |  Yes  | 
+|  AWS GovCloud \(US\)  |  No  | 
+|  Asia Pacific \(Hong Kong\)  |  No  | 
+|  Middle East \(Bahrain\)  |  No  | 
+|  Africa \(Cape Town\)   |  No  | 
+|  Europe \(Milan\)   |  No  | 
 
 **Available AWS Managed Domain Lists**  
 This section describes the AWS Managed Domain Lists that are currently available\. When you're in a Region where these domain lists are supported, you see them on the console when you manage domain lists and when you specify the domain list for a rule\. In the logs, the domain list is logged within the `firewall_domain_list_id field`\.
@@ -23,7 +40,7 @@ AWS provides the following managed domain lists, in the Regions they are availab
 + `AWSManagedDomainsMalwareDomainList` – – Domains associated with sending malware, hosting malware, or distributing malware\.
 + `AWSManagedDomainsBotnetCommandandControl` – Domains associated with controlling networks of computers that are infected with spamming malware\. 
 
-Managed domain lists cannot be downloaded or browsed\. To protect intellectual property, you can't view or edit the individual domain specifications within a domain list\. This restriction also helps to prevent malicious users from designing threats that specifically try to circumvent published lists\. 
+Managed domain lists cannot be downloaded or browsed\. To protect intellectual property, you can't view or edit the individual domain specifications within a domain list\. This restriction also helps to prevent malicious users from designing threats that specifically to circumvent published lists\. 
 
 For more information about managed domain lists, contact the [AWS Support Center](https://console.aws.amazon.com/support/home#/)\. 
 

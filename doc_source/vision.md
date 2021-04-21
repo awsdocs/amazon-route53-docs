@@ -8,7 +8,7 @@ Used as a general extension, but ideal for vision specialists such as optometris
 One to ten years\.
 
 **Privacy protection**  
-Not supported\.
+All information is hidden except organization name\.
 
 **Domain locking to prevent unauthorized transfers**  
 Supported\.

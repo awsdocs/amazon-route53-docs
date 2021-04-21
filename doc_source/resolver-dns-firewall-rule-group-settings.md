@@ -9,7 +9,7 @@ A unique name that lets you easily find a rule group on the dashboard\.
 A short description that provides more context for the rule group\. 
 
 **Region**  
-The AWS Region that you chosen when you create the rule group\. A rule group that you create in one Region is available only in that Region\. To use the same rule group in more than one Region, you must create it in each Region\.
+The AWS Region that you choose when you create the rule group\. A rule group that you create in one Region is available only in that Region\. To use the same rule group in more than one Region, you must create it in each Region\.
 
 **Rules**  
 The rule group filtering behavior is contained in its rules\. For information, see the following section\.

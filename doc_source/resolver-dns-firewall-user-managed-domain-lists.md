@@ -16,15 +16,21 @@ As a best practice, before using a domain list in production, test it in a non\-
 
 **To add a domain list**
 
-1. Sign in to the AWS Management Console and open the Amazon VPC console under [https://console\.aws\.amazon\.com/vpc/](https://console.aws.amazon.com/vpc/)\. 
+1. Sign in to the AWS Management Console and open the Route 53 console at [https://console\.aws\.amazon\.com/route53/](https://console.aws.amazon.com/route53/)\.
 
-1. In the navigation pane, locate the **DNS Firewall** section\.
+   \- OR \- 
+
+   Sign in to the AWS Management Console and open the 
+
+   the Amazon VPC console under [https://console\.aws\.amazon\.com/vpc/](https://console.aws.amazon.com/vpc/)\. 
 
 1. Choose **Domain lists**\. In the **Domain lists** page, you can select and edit existing domain lists and you can add your own\.
 
 1. To add a domain list, choose **Add domain list**\. 
 
 1. Provide a name for your domain list, and then enter your domain specifications in the text box, one per line\. 
+
+   If you slide the **Switch to bulk upload** to **on**, then enter the URI of the Amazon S3 bucket where you created a domain list\. This domain list should have one domain name per line\.
 
 1. Choose **Add domain list**\. The **Domain lists** page lists your new domain list\. 
 
@@ -34,10 +40,6 @@ After you create the domain list, you can reference it by name from your DNS Fir
 When you delete an entity that you can use in DNS Firewall, like a domain list that might be in use in a rule group, or a rule group that might be associated with a VPC, DNS Firewall checks to see if the entity is currently being used\. If it finds that it is in use, DNS Firewall warns you\. DNS Firewall is almost always able to determine if an entity is in use\. However, in rare cases it might not be able to do so\. If you need to be sure that nothing is currently using the entity, check for it in your DNS Firewall configurations before deleting it\. If the entity is a referenced domain list, check that no rule groups are using it\. If the entity is a rule group, check that it is not associated with any VPCs\.
 
 **To delete a domain list**
-
-1. Sign in to the AWS Management Console and open the Amazon VPC console under [https://console\.aws\.amazon\.com/vpc/](https://console.aws.amazon.com/vpc/)\. 
-
-1. In the navigation pane, locate the **DNS Firewall** section\.
 
 1. In the navigation pane, choose **Domain lists**\.
 
