@@ -1,7 +1,7 @@
 # Amazon Route 53 Developer Guide
 
 -----
-*****Copyright &copy;  Amazon Web Services, Inc. and/or its affiliates. All rights reserved.*****
+*****Copyright &copy; Amazon Web Services, Inc. and/or its affiliates. All rights reserved.*****
 
 -----
 Amazon's trademarks and trade dress may not be used in 
@@ -497,6 +497,7 @@ Amazon's trademarks and trade dress may not be used in
    + [Route 53 Resolver DNS Firewall domain lists](resolver-dns-firewall-domain-lists.md)
       + [Managed domain lists](resolver-dns-firewall-managed-domain-lists.md)
       + [Managing your own domain lists](resolver-dns-firewall-user-managed-domain-lists.md)
+      + [Configuring logging for DNS Firewall](firewall-resolver-query-logs-configuring.md)
    + [Sharing Route 53 Resolver DNS Firewall rule groups between AWS accounts](resolver-dns-firewall-rule-group-sharing.md)
    + [Enabling Route 53 Resolver DNS Firewall protections for your VPC](resolver-dns-firewall-vpc-protections.md)
       + [Managing associations between your VPC and Route 53 Resolver DNS Firewall rule group](resolver-dns-firewall-vpc-associating-rule-group.md)

@@ -3,8 +3,8 @@
 Here's a resolver query log example:
 
 ```
-{            
-                {
+          
+      {
         "srcaddr": "4.5.64.102",
         "vpc_id": "vpc-7example",
         "answers": [

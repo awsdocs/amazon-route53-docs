@@ -48,7 +48,7 @@ Changes generally propagate to all Route 53 servers within 60 seconds\. When pr
 
    1. Sign in to the AWS Management Console and open the CloudFront console at [https://console\.aws\.amazon\.com/cloudfront/](https://console.aws.amazon.com/cloudfront/)\.
 
-   1. Choose the name of the distribution that you want to route traffic to\.
+   1. in the **ID** column, select the linked name of the distribution that you want to route traffic to\.
 
    1. On the **General** tab, get the value of the **Domain name** field\.
 
@@ -64,9 +64,11 @@ Changes generally propagate to all Route 53 servers within 60 seconds\. When pr
 
 1. In the navigation pane, choose **Hosted zones**\.
 
-1. Choose the name of the hosted zone for the domain that you want to use to route traffic to your CloudFront distribution\.
+1. Choose the linked name of the hosted zone for the domain that you want to use to route traffic to your CloudFront distribution\.
 
 1. Choose **Create record**\.
+
+   You can use the wizard to create the records, or choose **Switch to quick create**\.
 
 1. Specify the following values:  
 **Routing policy**  
@@ -76,6 +78,7 @@ Enter the domain name that you want to use to route traffic to your CloudFront d
 For example, if the name of the hosted zone is example\.com and you want to use **acme\.example\.com** to route traffic to your distribution, enter **acme**\.  
 **Alias**  
 If you are using the **Quick create** record creation method, turn on **Alias**\.  
+You must create an Alias record for the CloudFront distribution to work\.  
 **Value/Route traffic to**  
 Choose **Alias to CloudFront distributions**\. The us\-east\-1 Region is selected by default\. Choose the name that CloudFront assigned to the distribution when you created it\. This is the value that you got in step 1\.  
 **Record type**  

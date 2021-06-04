@@ -98,7 +98,7 @@ Change the IPS tag to the value for the new registrar:
 
 1. If you still want to use Route 53 as your DNS service provider, use the process that is provided by the new registrar to specify the names of the Route 53 name servers that you got in step 8\. If you want to use another DNS service provider, specify the names of the name servers that the new provider gave you when you created a new hosted zone in step 9\.
 
-1. Respond to the corfirmation email:  
+1. Respond to the confirmation email:  
 **All domains except \.jp domains**  
 Route 53 sends a confirmation email to the email address for the registrant contact for the domain:  
    + If you don't respond to the email, the transfer happens automatically on the specified date\.

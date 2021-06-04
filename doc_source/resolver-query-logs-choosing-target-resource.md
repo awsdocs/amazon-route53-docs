@@ -25,6 +25,22 @@ If you want to send logs to an S3 bucket in an account that you don't own, the o
             },
             "Action": "s3:PutObject",
             "Resource": "arn:aws:s3:::your_bucket_name/AWSLogs/your_caller_account/*"
+        },
+        {
+            "Effect": "Allow",
+            "Principal": {
+                "Service": "delivery.logs.amazonaws.com"
+            },
+            "Action": "s3:GetBucketAcl",
+            "Resource": "arn:aws:s3:::your_bucket_name"
+        },
+         {
+            "Effect": "Allow",
+            "Principal": {
+                "AWS": "aim_user_arn_or_just_account_number_for_root"
+            },
+            "Action": "s3:ListBucket",
+            "Resource": "arn:aws:s3:::your_bucket_name"
         }
     ]
 }
@@ -37,3 +53,5 @@ You can stream logs in real time to Elasticsearch, Amazon Redshift, or other app
 For more information, see the [Amazon Kinesis Data Firehose Developer Guide](https://docs.aws.amazon.com/firehose/latest/dev/)\.
 
 For information about the pricing for Resolver query logging, see [Amazon CloudWatch pricing](http://aws.amazon.com/cloudwatch/pricing/)\.
+
+CloudWatch Logs charges apply when using flow logs, even when logs are published directly to Amazon S3\. For more information, see [*Deliver Logs to S3* at Amazon CloudWatch pricing](http://aws.amazon.com/cloudwatch/pricing/)\.

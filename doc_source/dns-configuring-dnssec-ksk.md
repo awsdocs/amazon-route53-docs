@@ -24,7 +24,7 @@ Follow these steps to add a KSK in the AWS Management Console\.<a name="dns-conf
 
 1. In the navigation pane, choose **Hosted zones**, and then choose a hosted zone\.
 
-1. On the **DNSSEC signing** tab, under **Key\-signing keys \(KSKs\)** under **Actions**, choose **Add KSK**\.
+1. On the **DNSSEC signing** tab, under **Key\-signing keys \(KSKs\)**, choose **Switch to advanced view**, and then, under **Actions**, choose **Add KSK**\.
 
 1. Under **KSK**, enter a name for the KSK that Route 53 will create for you\. The name can include numbers, letters, and underscores \(\_\)\. It must be unique\.
 
@@ -46,7 +46,7 @@ Follow these steps to edit a KSK in the AWS Management Console\.<a name="dns-con
 
 1. In the navigation pane, choose **Hosted zones**, and then choose a hosted zone\.
 
-1. On the **DNSSEC signing** tab, under **Key\-signing keys \(KSKs\)** under **Actions**, choose **Edit KSK**\.
+1. On the **DNSSEC signing** tab, under **Key\-signing keys \(KSKs\)**, choose **Switch to advanced view**, and then, under **Actions**, choose **Edit KSK**\.
 
 1. Make the desired updates to the KSK, and then choose **Save**\.
 
@@ -64,6 +64,6 @@ Follow these steps to delete a KSK in the AWS Management Console\.<a name="dns-c
 
 1. In the navigation pane, choose **Hosted zones**, and then choose a hosted zone\.
 
-1. On the **DNSSEC signing** tab, under **Key\-signing keys \(KSKs\)** under **Actions**, choose **Delete KSK**\.
+1. On the **DNSSEC signing** tab, under **Key\-signing keys \(KSKs\)**, choose **Switch to advanced view**, and then under **Actions**, choose **Delete KSK**\.
 
 1. Follow the guidance to confirm deleting the KSK\.

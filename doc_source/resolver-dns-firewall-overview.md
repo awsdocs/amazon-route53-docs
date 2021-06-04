@@ -35,9 +35,9 @@ For more information, see [DNS Firewall VPC configuration](resolver-dns-firewall
 
 ## How Route 53 Resolver DNS Firewall filters DNS queries<a name="resolver-dns-firewall-behavior"></a>
 
-When a DNS Firewall rule group is associated with your VPC, Route 53 Resolver sends the following traffic to it for filtering the following queries:
-+ Outbound DNS queries from the VPC\.
-+ DNS queries that pass through Resolver endpoints between cloud resources and on\-premises resources, in either direction\.
+When a DNS Firewall rule group is associated with your VPC's Route 53 Resolver, the following traffic is filtered by the firewall:
++ DNS queries originating within that VPC\.
++ DNS queries that pass through Resolver endpoints from on\-premises resources into that same VPC that has DNS Firewall associated to its resolver\.
 
 When DNS Firewall receives a DNS query, it filters the query using the rule groups, rules, and other settings that you've configured and sends the results back to Resolver: 
 + DNS Firewall evaluates the DNS query using the rule groups that are associated with the VPC until it finds a match or exhausts all of the rule groups\. DNS Firewall evaluates the rule groups in order of the priority that you set in the association, starting with the lowest numeric setting\. For more information, see [DNS Firewall rule groups and rules](resolver-dns-firewall-rule-groups.md) and [Enabling Route 53 Resolver DNS Firewall protections for your VPC](resolver-dns-firewall-vpc-protections.md)\.

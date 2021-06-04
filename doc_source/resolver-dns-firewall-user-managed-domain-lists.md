@@ -12,7 +12,7 @@ Each domain specification in your domain list must satisfy the following require
 When you make changes to DNS Firewall entities, like rules and domain lists, DNS Firewall propagates the changes everywhere that the entities are stored and used\. Your changes are applied within seconds, but there might be a brief period of inconsistency when the changes have arrived in some places and not in others\. So, for example, if you add a domain to a domain list that's referenced by a blocking rule, the new domain might briefly be blocked in one area of your VPC while still allowed in another\. This temporary inconsistency can occur when you first configure your rule group and VPC associations and when you change existing settings\. Generally, any inconsistencies of this type last only a few seconds\.
 
 **Test your domain list before using it in production**  
-As a best practice, before using a domain list in production, test it in a non\-production environment, with the rule action set to `Alert`\. Evaluate the rule using Amazon CloudWatch metrics and the Resolver logs\. The logs provide the domain list name for all alerts and blocking actions\. When you're satisfied that the domain list is matching your DNS queries the way you want it to, change the rule action setting as needed\. For information about CloudWatch metrics and the query logs, see [Monitoring Route 53 Resolver DNS Firewall rule groups with Amazon CloudWatch](monitoring-resolver-dns-firewall-with-cloudwatch.md)and [Values that appear in Resolver query logs](resolver-query-logs-format.md)\. 
+As a best practice, before using a domain list in production, test it in a non\-production environment, with the rule action set to `Alert`\. Evaluate the rule using Amazon CloudWatch metrics and the Resolver logs\. The logs provide the domain list name for all alerts and blocking actions\. When you're satisfied that the domain list is matching your DNS queries the way you want it to, change the rule action setting as needed\. For information about CloudWatch metrics and the query logs, see [Monitoring Route 53 Resolver DNS Firewall rule groups with Amazon CloudWatch](monitoring-resolver-dns-firewall-with-cloudwatch.md), [Values that appear in Resolver query logs](resolver-query-logs-format.md), and [Managing Resolver query logging configurations](resolver-query-logging-configurations-managing.md)\. 
 
 **To add a domain list**
 
@@ -30,7 +30,7 @@ As a best practice, before using a domain list in production, test it in a non\-
 
 1. Provide a name for your domain list, and then enter your domain specifications in the text box, one per line\. 
 
-   If you slide the **Switch to bulk upload** to **on**, then enter the URI of the Amazon S3 bucket where you created a domain list\. This domain list should have one domain name per line\.
+   If you slide **Switch to bulk upload** to **on**, enter the URI of the Amazon Simple Storage Service bucket where you created a domain list\. This domain list should have one domain name per line\.
 
 1. Choose **Add domain list**\. The **Domain lists** page lists your new domain list\. 
 

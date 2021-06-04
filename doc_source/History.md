@@ -3,6 +3,8 @@
 The following entries describe important changes in each release of the Route 53 documentation\. For notification about updates to this documentation, you can subscribe to an RSS feed\. 
 
 **Topics**
++ [2021 releases](#doc-history-2021)
++ [2020 releases](#doc-history-2020)
 + [2018 releases](#doc-history-2018)
 + [2017 releases](#doc-history-2017)
 + [2016 releases](#doc-history-2016)
@@ -12,6 +14,23 @@ The following entries describe important changes in each release of the Route 5
 + [2012 release](#doc-history-2012)
 + [2011 releases](#doc-history-2011)
 + [2010 release](#doc-history-2010)
+
+## 2021 releases<a name="doc-history-2021"></a>
+
+**March 31, 2021**  
+Added Route 53 Resolver DNS Firewall\. With DNS Firewall you can provide protection for outbound DNS requests from your VPCs\. For more information, see [Route 53 Resolver DNS Firewall](resolver-dns-firewall.md)\.
+
+## 2020 releases<a name="doc-history-2020"></a>
+
+**December 17, 2020**  
+Added support for DNSSEC signing for Route 53\. For more information, see [Configuring DNSSEC signing in Amazon Route 53](dns-configuring-dnssec.md)\.  
+Added support for DNSSEC validation for Route 53 Resolver\. For more information, see [Enabling DNSSEC validation in Amazon Route 53](resolver-dnssec-validation.md)\.
+
+**September 23, 2020**  
+Updated the entire Route 53 guide with the new console experience\. For more information, see [What is Amazon Route 53?](Welcome.md)\.
+
+**September 1, 2020**  
+Added support for Resolver query logs\. For more information, see [Resolver query logging](resolver-query-logs.md)\.
 
 ## 2018 releases<a name="doc-history-2018"></a>
 

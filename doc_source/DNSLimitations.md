@@ -55,7 +55,7 @@ If you have an existing account and your default limit is 50 now, it will remain
 | --- | --- | 
 |  Hosted zones  |  500 per AWS account [Request a higher quota](https://console.aws.amazon.com/servicequotas/home?region=us-east-1#!/services/route53/quotas)\.  | 
 |  Hosted zones that can use the same reusable delegation set   |  100 [Request a higher quota](https://console.aws.amazon.com/servicequotas/home?region=us-east-1#!/services/route53/quotas)\.  | 
-|  Amazon VPCs that you can associate with a private hosted zone  |  300 [Request a higher quota](https://console.aws.amazon.com/servicequotas/home?region=us-east-1#!/services/route53/quotas)\.  | 
+|  Amazon VPCs that you can associate with a private hosted zone per hosted zone  |  300 [Request a higher quota](https://console.aws.amazon.com/servicequotas/home?region=us-east-1#!/services/route53/quotas)\.  | 
 |  Private hosted zones that you can associate a VPC with  |  No quota **\***  | 
 |  Authorizations that you can create so you can associate VPCs that were created by one account with a hosted zone that was created by another account  |  100  | 
 |  The number of key signing keys \(KSK\) that you can create per hosted zone  |  2  | 
@@ -127,7 +127,7 @@ Use the following procedure to increase quotas for Route 53 Resolver\.<a name="i
 | Entity | Quota | 
 | --- | --- | 
 |  Number of rule groups associated to a VPC for a single account per AWS Region  |   5  | 
-| Number of DNS Firewall domains in a single Amazon S3 file for a single account per AWS Region | 30,000 [Request a higher quota](#increase-quota-procedure)\. | 
+| Number of DNS Firewall domains in a single Amazon S3 file for a single account per AWS Region | 100,000 [Request a higher quota](#increase-quota-procedure)\. | 
 | Number of DNS Firewall rule groups for a single account per AWS Region | 1,000 [Request a higher quota](#increase-quota-procedure)\. | 
 |  Number of rules within a rule group for a single account account per AWS Region  |  100 [Request a higher quota](#increase-quota-procedure)\.  | 
 |  Number of domain specifications across all DNS Firewall domain lists for a single account per AWS Region  |  100,000 [Request a higher quota](#increase-quota-procedure)\.  | 

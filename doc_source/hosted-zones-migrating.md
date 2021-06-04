@@ -117,6 +117,8 @@ Open a copy of the file that you created in [Step 3: Create a file that contains
 You can use a JSON validator to verify that you have all the braces and brackets in the correct places\. To find an online JSON validator, do an internet search on "`json validator`"\.
 + If the hosted zone contains any aliases that refer to other records in the same hosted zone, make the following changes:
   + Change the hosted zone ID to the ID of the new hosted zone\.
+**Important**  
+If the alias record is pointing to another resource, for example, a load balancer, update the hosted zone ID to the hosted zone id of the resource itself, not the hosted zone ID of the domain\. That hosted zone ID can be found from the AWS console where the resource was created\.
   + Move the alias records to the bottom of the file\. Route 53 must create the record that an alias record refers to before it can create the alias record\.
 **Important**  
 If one or more alias records refer to other alias records, the records that are the alias target must appear in the file before the referencing alias records\. For example, if `alias.example.com` is the alias target for `alias.alias.example.com`, `alias.example.com` must appear first in the file\.

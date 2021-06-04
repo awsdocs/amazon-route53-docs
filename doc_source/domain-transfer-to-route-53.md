@@ -53,6 +53,8 @@ For a current list of domain name status codes and an explanation of what each c
 **Note**  
 ICANN is the organization that establishes policies governing registration and transfer of domain names\.
 
+You can also search for your domain name in [website for Whois](https://www.whois.com/whois/) to see status codes and other information for your domain\.
+
 ## Step 1: Confirm that Amazon Route 53 supports the top\-level domain<a name="domain-transfer-to-route-53-confirm-tld"></a>
 
 See [Domains that you can register with Amazon Route 53](registrar-tld-list.md)\. If the top\-level domain for the domain that you want to transfer is on the list, you can transfer the domain to Amazon Route 53\. 

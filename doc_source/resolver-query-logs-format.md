@@ -60,10 +60,6 @@ The ID of the instance that the query originated from\.
 **resolver\-endpoint**  
 The ID of the resolver endpoint that passes the DNS query to on\-premises DNS servers\.
 
-**EDNS client subnet**  
-A partial IP address for the client that the request originated from, if available from the DNS resolver\.  
-For more information, see the IETF draft [Client Subnet in DNS Requests](https://tools.ietf.org/html/draft-ietf-dnsop-edns-client-subnet-08)\.
-
 **firewall\_rule\_group\_id**  
 The ID of the DNS Firewall rule group that matched the domain name in the query\. This is populated only if DNS Firewall found a match for a rule with action set to alert or block\.  
 For more information about the firewall rule groups, see [DNS Firewall rule groups and rules](resolver-dns-firewall-rule-groups.md)\.

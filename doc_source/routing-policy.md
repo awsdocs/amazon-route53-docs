@@ -5,7 +5,7 @@ When you create a record, you choose a routing policy, which determines how Amaz
 + **Failover routing policy** – Use when you want to configure active\-passive failover\. 
 + **Geolocation routing policy** – Use when you want to route traffic based on the location of your users\.
 + **Geoproximity routing policy** – Use when you want to route traffic based on the location of your resources and, optionally, shift traffic from resources in one location to resources in another\.
-+ **Latency routing policy** – Use when you have resources in multiple AWS Regions and you want to route traffic to the region that provides the best latency\.
++ **Latency routing policy** – Use when you have resources in multiple AWS Regions and you want to route traffic to the Region that provides the best latency with less round\-trip time\.
 + **Multivalue answer routing policy** – Use when you want Route 53 to respond to DNS queries with up to eight healthy records selected at random\.
 + **Weighted routing policy** – Use to route traffic to multiple resources in proportions that you specify\.
 

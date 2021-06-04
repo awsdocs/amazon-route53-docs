@@ -151,7 +151,7 @@ Choose the same region that you created the first bucket in\.
 
 Now that you have an S3 bucket, you can configure it for website hosting<a name="getting-started-configure-s3-website-bucket-procedure"></a>
 
-**To enable yout S3 bucket for website hosting**
+**To enable your S3 bucket for website hosting**
 
 1. Open the Amazon S3 console at [https://console\.aws\.amazon\.com/s3/](https://console.aws.amazon.com/s3/)\.
 
@@ -234,7 +234,7 @@ When you enable static website hosting for your bucket, you enter the name of th
 
 1. In the **Buckets list**, choose the name of the bucket that you want to enable static website hosting for\.
 
-1. In the Amazon S3 console, choose the name of the bucket that you created in the procedure [To enable yout S3 bucket for website hosting](#getting-started-configure-s3-website-bucket-procedure)\.
+1. In the Amazon S3 console, choose the name of the bucket that you created in the procedure [To enable your S3 bucket for website hosting](#getting-started-configure-s3-website-bucket-procedure)\.
 
 1. Under **Static website hosting**, choose **Edit**\.
 

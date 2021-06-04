@@ -45,6 +45,17 @@ When you configure Resolver to forward DNS queries to your network or vice versa
 
 The `AWS/Route53Resolver` namespace includes the following metrics for Route 53 Resolver endpoints\.
 
+**EndpointHealthyENICount**  
+ The number of elastic network interfaces in the `OPERATIONAL` status\. This means that the Amazon VPC network interfaces for the endpoint \(specified by `EndpointId`\) are correctly configured and able to pass inbound or outbound DNS queries between your network and resolver\.  
+Valid statistics: Minimum, Maximum, Average  
+Units: Count
+
+**EndpointUnHealthyENICount**  
+ The number of elastic network interfaces in the `AUTO_RECOVERING` status\.  
+This means that the resolver is trying to recover one or more of the Amazon VPC network interfaces that are associated with the endpoint \(specified by `EndpointId`\)\. During the recovery process, the endpoint functions with limited capacity and is unable to process DNS queries until it's fully recovered\.  
+Valid statistics: Minimum, Maximum, Average  
+Units: Count
+
 **InboundQueryVolume**  
 For inbound endpoints, the number of DNS queries forwarded from your network to your VPCs through the endpoint specified by `EndpointId`\.  
 Valid statistics: Sum  

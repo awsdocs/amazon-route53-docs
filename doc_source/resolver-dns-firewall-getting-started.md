@@ -52,6 +52,8 @@ In this tutorial, you'll create a rule group that blocks all but a select group 
    1. Enter a domain list name **ExampleDomains**\.
 
    1. In the text box, on the first line, enter **example\.com** and on the second line, enter **example\.org**\. 
+**Note**  
+If you want the rule to apply to subdomains as well, you need to add those domains to the list also\. For example, to add all of the example\.com's subdomains, add **\*\.example\.com** to the list\.
 
    1. For the action, select **ALLOW**\. 
 

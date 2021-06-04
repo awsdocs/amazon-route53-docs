@@ -6,7 +6,7 @@ If you want to associate a VPC that you created with one AWS account with a priv
 
 1. Using the account that created the hosted zone, authorize the association of the VPC with the private hosted zone by using one of the following methods:
    + **AWS CLI** – See [create\-vpc\-association\-authorization](https://docs.aws.amazon.com/cli/latest/reference/route53/create-vpc-association-authorization.html) in the *AWS CLI Command Reference*
-   + **AWS SDK** or **AWS Tools for Windows PowerShell** – See the applicable documentation on the [AWS Documentation](https://docs.aws.amazon.com/) page 
+   + ** AWSSDK** or **AWS Tools for Windows PowerShell** – See the applicable documentation on the [ AWSDocumentation](https://docs.aws.amazon.com/) page 
    + **Amazon Route 53 API** – See [CreateVPCAssociationAuthorization](https://docs.aws.amazon.com/Route53/latest/APIReference/API_CreateVPCAssociationAuthorization.html) in the *Amazon Route 53 API Reference*
 
    Note the following:
@@ -16,6 +16,8 @@ If you want to associate a VPC that you created with one AWS account with a priv
 
 1. Using the account that created the VPC, associate the VPC with the hosted zone\. As with authorizing the association, you can use the AWS SDK, Tools for Windows PowerShell, the AWS CLI, or the Route 53 API\. If you're using the API, use the [AssociateVPCWithHostedZone](https://docs.aws.amazon.com/Route53/latest/APIReference/API_AssociateVPCWithHostedZone.html) action\. 
 
-1. *Optional but recommended* – Delete the authorization to associate the VPC with the hosted zone\. Deleting the authorization does not affect the association, it just prevents you from reassociating the VPC with the hosted zone in the future\. If you want to reassociate the VPC with the hosted zone, you'll need to repeat steps 1 and 2 of this procedure\.
+1. *Recommended* – Delete the authorization to associate the VPC with the hosted zone\. Deleting the authorization does not affect the association, it just prevents you from reassociating the VPC with the hosted zone in the future\. If you want to reassociate the VPC with the hosted zone, you'll need to repeat steps 1 and 2 of this procedure\.
+
+   If you don't delete the authorization, the other account can re\-associate the VPC at any time because the authorization is still in place\. For more information, see [delete\-vpc\-association\-authorization](https://docs.aws.amazon.com/cli/latest/reference/route53/delete-vpc-association-authorization.html)\.
 **Note**  
 For the maximum number of authorizations that you can create, see [Quotas on entities](DNSLimitations.md#limits-api-entities)\.

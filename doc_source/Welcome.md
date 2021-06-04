@@ -14,6 +14,7 @@ Your website needs a name, such as example\.com\. Route 53 lets you register a 
 When a user opens a web browser and enters your domain name \(example\.com\) or subdomain name \(acme\.example\.com\) in the address bar, Route 53 helps connect the browser with your website or web application\.  
 + For an overview, see [How internet traffic is routed to your website or web application](welcome-dns-service.md)\.
 + For procedures, see [Configuring Amazon Route 53 as your DNS service](dns-configuring.md)\.
++ For a procedure on how to route email to Amazon WorkMail, see [Routing traffic to Amazon WorkMail](routing-to-workmail.md)\. 
 
 **3\. Check the health of your resources**  
 Route 53 sends automated requests over the internet to a resource, such as a web server, to verify that it's reachable, available, and functional\. You also can choose to receive notifications when a resource becomes unavailable and choose to route internet traffic away from unhealthy resources\.   
