@@ -1,8 +1,8 @@
 # Migrating a hosted zone to a different AWS account<a name="hosted-zones-migrating"></a>
 
 If you want to migrate a hosted zone from one AWS account to a different account, you can programmatically list the records in the old hosted zone, edit the output, and then programmatically create records in a new hosted zone using the edited output\. Note the following:
-+ If you have only a few records, you can also use the Route 53 console to create records in the new hosted zone\. For more information, see [Creating records by using the Amazon Route 53 console](resource-record-sets-creating.md)\.
-+ Some procedures use the AWS Command Line Interface \(AWS CLI\)\. You can also perform those procedures by using one of the AWS SDKs, the Amazon Route 53 API, or AWS Tools for Windows PowerShell\. For this topic, we use the AWS CLI because it's easier for small numbers of hosted zones\.
++ If you have only a few records, you can also use the Route 53 console to create records in the new hosted zone\. For more information, see [Creating records by using the Amazon Route 53 console](resource-record-sets-creating.md)\.
++ Some procedures use the AWS Command Line Interface \(AWS CLI\)\. You can also perform those procedures by using one of the AWS SDKs, the Amazon Route 53 API, or AWS Tools for Windows PowerShell\. For this topic, we use the AWS CLI because it's easier for small numbers of hosted zones\.
 + You can also use this process to create records in a new hosted zone that has a different name than an existing hosted zone but that has the same records\.
 + You can't migrate alias records that route traffic to traffic policy instances\.
 
@@ -25,18 +25,18 @@ For information about downloading, installing, and configuring the AWS CLI, see 
 **Note**  
 Configure the CLI so that you can use it when you're using both the account that created the hosted zone and the account that you're migrating the hosted zone to\. For more information, see [Configure](https://docs.aws.amazon.com/cli/latest/userguide/cli-chap-getting-started.html) in the *AWS Command Line Interface User Guide*
 
-If you're already using the AWS CLI, we recommend that you upgrade to the latest version of the CLI so that the CLI commands support the latest Route 53 features\.
+If you're already using the AWS CLI, we recommend that you upgrade to the latest version of the CLI so that the CLI commands support the latest Route 53 features\.
 
 ## Step 2: Create the new hosted zone<a name="hosted-zones-migrating-create-hosted-zone"></a>
 
-The following procedure explains how to use the Route 53 console to create the hosted zone that you want to migrate to\.
+The following procedure explains how to use the Route 53 console to create the hosted zone that you want to migrate to\.
 
 **Note**  
-Route 53 assigns a new set of four name servers to the new hosted zone\. After you migrate a hosted zone to another AWS account, you need to update the domain registration to use the name servers for the new hosted zone\. We remind you about this step later in the process\.<a name="hosted-zones-migrating-create-hosted-zone-procedure"></a>
+Route 53 assigns a new set of four name servers to the new hosted zone\. After you migrate a hosted zone to another AWS account, you need to update the domain registration to use the name servers for the new hosted zone\. We remind you about this step later in the process\.<a name="hosted-zones-migrating-create-hosted-zone-procedure"></a>
 
 **To create the new hosted zone using a different account**
 
-1. Sign in to the AWS Management Console and open the Route 53 console at [https://console\.aws\.amazon\.com/route53/](https://console.aws.amazon.com/route53/)\.
+1. Sign in to the AWS Management Console and open the Route 53 console at [https://console\.aws\.amazon\.com/route53/](https://console.aws.amazon.com/route53/)\.
 
    Sign in with the account credentials for the account that you want to migrate the hosted zone to\.
 
@@ -44,7 +44,7 @@ Route 53 assigns a new set of four name servers to the new hosted zone\. After 
 
 1. Make note of the hosted zone ID\. In some cases, you'll need this information later in the process\.
 
-1. Log out of the Route 53 console\.
+1. Log out of the Route 53 console\.
 
 ## Step 3: Create a file that contains the records that you want to migrate<a name="hosted-zones-migrating-create-file"></a>
 
@@ -52,7 +52,7 @@ To migrate records from one hosted zone to another, you create a file that conta
 
 **To create a file that contains records that you want to migrate**
 
-1. Sign in to the AWS Management Console and open the Route 53 console at [https://console\.aws\.amazon\.com/route53/](https://console.aws.amazon.com/route53/)\.
+1. Sign in to the AWS Management Console and open the Route 53 console at [https://console\.aws\.amazon\.com/route53/](https://console.aws.amazon.com/route53/)\.
 
    Sign in with the account credentials for the account that created the hosted zone that you want to migrate\.
 
@@ -119,7 +119,7 @@ You can use a JSON validator to verify that you have all the braces and brackets
   + Change the hosted zone ID to the ID of the new hosted zone\.
 **Important**  
 If the alias record is pointing to another resource, for example, a load balancer, update the hosted zone ID to the hosted zone id of the resource itself, not the hosted zone ID of the domain\. That hosted zone ID can be found from the AWS console where the resource was created\.
-  + Move the alias records to the bottom of the file\. Route 53 must create the record that an alias record refers to before it can create the alias record\.
+  + Move the alias records to the bottom of the file\. Route 53 must create the record that an alias record refers to before it can create the alias record\.
 **Important**  
 If one or more alias records refer to other alias records, the records that are the alias target must appear in the file before the referencing alias records\. For example, if `alias.example.com` is the alias target for `alias.alias.example.com`, `alias.example.com` must appear first in the file\.
   + Delete any alias records that route traffic to a traffic policy instance\. Make note of the records so you can recreate them later\.
@@ -194,7 +194,7 @@ For example:
 aws route53 change-resource-record-sets --hosted-zone-id ZNEWZONE1245 --change-batch file://c:/temp/change-records-ZNEWZONE1245.txt
 ```
 
-If you deleted any alias records that route traffic to a traffic policy instance, recreate them using the Route 53 console\. For more information, see [Creating records by using the Amazon Route 53 console](resource-record-sets-creating.md)\.
+If you deleted any alias records that route traffic to a traffic policy instance, recreate them using the Route 53 console\. For more information, see [Creating records by using the Amazon Route 53 console](resource-record-sets-creating.md)\.
 
 ## Step 7: Compare records in the old and new hosted zones<a name="hosted-zones-migrating-compare"></a>
 
@@ -224,7 +224,7 @@ To confirm that you successfully created all of your records in the new hosted z
    Other than the values of the NS and SOA records and any changes that you made in [Step 4: Edit the records that you want to migrate](#hosted-zones-migrating-edit-records) \(such as different hosted zone IDs or domain names\), the two outputs should be identical\.
 
 1. If the records in the new hosted zone don't match the records in the old hosted zone, you can do one of the following:
-   + Make minor corrections using the Route 53 console\. For more information, see [Editing records](resource-record-sets-editing.md)\.
+   + Make minor corrections using the Route 53 console\. For more information, see [Editing records](resource-record-sets-editing.md)\.
    + If a large number of records are missing, create a new text file that contains the missing records and then repeat [Step 6: Create records in the new hosted zone](#hosted-zones-migrating-create-records)\.
    + Delete all the records except the NS and SOA records in the new hosted zone, and repeat the following steps:
      + [Step 4: Edit the records that you want to migrate](#hosted-zones-migrating-edit-records)
@@ -237,9 +237,9 @@ To confirm that you successfully created all of your records in the new hosted z
 When you finish creating records in the new hosted zone, change the name servers for the domain registration to use the name servers for the new hosted zone\.
 
 **Important**  
-If you don't update the domain registration to use the name servers for the new hosted zone, Route 53 will continue to use the old hosted zone to route traffic for the domain\. If you delete the old hosted zone without updating name servers for the domain registration, the domain will become unavailable on the internet\. If you add, update, or delete records in the new hosted zone without updating name servers for the domain registration, then traffic won't be routed based on those changes\.
+If you don't update the domain registration to use the name servers for the new hosted zone, Route 53 will continue to use the old hosted zone to route traffic for the domain\. If you delete the old hosted zone without updating name servers for the domain registration, the domain will become unavailable on the internet\. If you add, update, or delete records in the new hosted zone without updating name servers for the domain registration, then traffic won't be routed based on those changes\.
 
-For more information, see [Making Amazon Route 53 the DNS service for an existing domainMaking Route 53 the DNS service for an existing domain](MigratingDNS.md)\.
+For more information, see [Making Amazon Route 53 the DNS service for an existing domainMaking Route 53 the DNS service for an existing domain](MigratingDNS.md)\.
 
 **Note**  
 Whether you use the process to migrate DNS service for a domain that's in use or the process for an inactive domain, you can skip the following steps because you've already created a new hosted zone and the records in that hosted zone:  
@@ -279,7 +279,7 @@ Make sure that the value that you specify for the hosted zone ID is the ID of th
 
 1. Delete any remaining records and the hosted zone:
 
-   1. Sign in to the AWS Management Console and open the Route 53 console at [https://console\.aws\.amazon\.com/route53/](https://console.aws.amazon.com/route53/)\.
+   1. Sign in to the AWS Management Console and open the Route 53 console at [https://console\.aws\.amazon\.com/route53/](https://console.aws.amazon.com/route53/)\.
 
       Sign in with the account credentials for the account that created the old hosted zone\.
 

@@ -1,6 +1,6 @@
 # Routing traffic to your resources<a name="dns-routing-traffic-to-resources"></a>
 
-When users request your website or web application, for example, by entering the name of your domain in a web browser, Amazon Route 53 helps to route users to your resources, such as an Amazon S3 bucket or a web server in your data center\. To configure Route 53 to route traffic to your resources, you do the following:
+When users request your website or web application, for example, by entering the name of your domain in a web browser, Amazon Route 53 helps to route users to your resources, such as an Amazon S3 bucket or a web server in your data center\. To configure Route 53 to route traffic to your resources, you do the following:
 
 1. Create a hosted zone\. You can create either a public hosted zone or a private hosted zone:  
 **Public hosted zone**  

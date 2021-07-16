@@ -9,7 +9,7 @@ In this tutorial, you'll create a rule group that blocks all but a select group 
 
 **To configure a DNS Firewall rule group using the console wizard**
 
-1. Sign in to the AWS Management Console and open the Route 53 console at [https://console\.aws\.amazon\.com/route53/](https://console.aws.amazon.com/route53/)\.
+1. Sign in to the AWS Management Console and open the Route 53 console at [https://console\.aws\.amazon\.com/route53/](https://console.aws.amazon.com/route53/)\.
 
    \- OR \- 
 
@@ -67,7 +67,7 @@ If you want the rule to apply to subdomains as well, you need to add those domai
 
 1. Choose **Next**\.
 
-1. In the **Add tags** page, choose **Next**\. Tags help you organize and manage your AWS resources\. For more information, see [Tagging Amazon Route 53 resources](tagging-resources.md)\. 
+1. In the **Add tags** page, choose **Next**\. Tags help you organize and manage your AWS resources\. For more information, see [Tagging Amazon Route 53 resources](tagging-resources.md)\. 
 
 1. On the **Review and create** page, confirm that the settings that you specified on the previous pages are correct\. If necessary, choose **Edit** for the applicable section, and update settings\. When you're satisfied with the settings, choose **Create rule group**\. The wizard takes you back to the **Rule groups** page where your new rule group is listed\.
 

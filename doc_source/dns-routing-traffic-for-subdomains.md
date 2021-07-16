@@ -12,12 +12,12 @@ You can also create a hosted zone for the subdomain\. Using a separate hosted zo
 
 1. You create records in the new hosted zone that define how you want to route traffic for the subdomain \(acme\.example\.com\) and its subdomains, such as backend\.acme\.example\.com\. 
 
-1. You get the name servers that Route 53 assigned to the new hosted zone when you created it\.
+1. You get the name servers that Route 53 assigned to the new hosted zone when you created it\.
 
 1. You create a new NS record in the hosted zone for the domain \(example\.com\), and you specify the four name servers that you got in step 3\.
 When you use a separate hosted zone to route traffic for a subdomain, you can use IAM permissions to restrict access to the hosted zone for the subdomain\. \(You can't use IAM to control access to individual records\.\) If you have multiple subdomains that are managed by different groups, creating a hosted zone for each subdomain can significantly reduce the number of people who must have access to records in the hosted zone for the domain\.  
-Using a separate hosted zone for a subdomain also allows you to use different DNS services for the domain and the subdomain\. For more information, see [Using Amazon Route 53 as the DNS service for subdomains without migrating the parent domain](creating-migrating.md)\.  
-There's a small performance impact to this configuration for the first DNS query from each DNS resolver\. The resolver must get information from the hosted zone for the root domain and then get information from the hosted zone for the subdomain\. After the first DNS query for a subdomain, the resolver caches the information and doesn't need to get it again until the TTL expires and another client requests the subdomain from that resolver\. For more information, see [TTL \(seconds\)](resource-record-sets-values-basic.md#rrsets-values-basic-ttl) in the section [Values that you specify when you create or edit Amazon Route 53 records](resource-record-sets-values.md)\.
+Using a separate hosted zone for a subdomain also allows you to use different DNS services for the domain and the subdomain\. For more information, see [Using Amazon Route 53 as the DNS service for subdomains without migrating the parent domain](creating-migrating.md)\.  
+There's a small performance impact to this configuration for the first DNS query from each DNS resolver\. The resolver must get information from the hosted zone for the root domain and then get information from the hosted zone for the subdomain\. After the first DNS query for a subdomain, the resolver caches the information and doesn't need to get it again until the TTL expires and another client requests the subdomain from that resolver\. For more information, see [TTL \(seconds\)](resource-record-sets-values-basic.md#rrsets-values-basic-ttl) in the section [Values that you specify when you create or edit Amazon Route 53 records](resource-record-sets-values.md)\.
 
 **Topics**
 + [Creating another hosted zone to route traffic for a subdomain](#dns-routing-traffic-for-subdomains-new-hosted-zone)
@@ -28,7 +28,7 @@ There's a small performance impact to this configuration for the first DNS query
 One way to route traffic for a subdomain is to create a hosted zone for the subdomain, and then create records for the subdomain in the new hosted zone\. \(The more common option is to create records for the subdomain in the hosted zone for the domain\.\)
 
 **Note**  
-While we describe here the process for creating and delegating to a subdomain hosted zone on Route 53, you can also create a DNS zone on other name servers and similarly create name server \(NS\) records that delegate responsibility to those name servers\.
+While we describe here the process for creating and delegating to a subdomain hosted zone on Route 53, you can also create a DNS zone on other name servers and similarly create name server \(NS\) records that delegate responsibility to those name servers\.
 
 Here's an overview of the process:
 
@@ -40,15 +40,15 @@ Here's an overview of the process:
 
 ### Creating a new hosted zone for a subdomain<a name="dns-routing-traffic-for-subdomains-creating-hosted-zone"></a>
 
-To create a hosted zone for a subdomain using the Route 53 console, perform the following procedure\.
+To create a hosted zone for a subdomain using the Route 53 console, perform the following procedure\.
 
 **To create a hosted zone for a subdomain \(console\)**
 
-1. Sign in to the AWS Management Console and open the Route 53 console at [https://console\.aws\.amazon\.com/route53/](https://console.aws.amazon.com/route53/)\.
+1. Sign in to the AWS Management Console and open the Route 53 console at [https://console\.aws\.amazon\.com/route53/](https://console.aws.amazon.com/route53/)\.
 
-1. If you're new to Route 53, choose **Get started**\. 
+1. If you're new to Route 53, choose **Get started**\. 
 
-   If you're already using Route 53, choose **Hosted zones** in the navigation pane\. 
+   If you're already using Route 53, choose **Hosted zones** in the navigation pane\. 
 
 1. Choose **Create hosted zone**\.
 
@@ -62,36 +62,36 @@ To create a hosted zone for a subdomain using the Route 53 console, perform the
 
 ### Creating records in the hosted zone for the subdomain<a name="dns-routing-traffic-for-subdomains-creating-records"></a>
 
-To define how you want Route 53 to route traffic for the subdomain \(acme\.example\.com\) and its subdomains \(backend\.acme\.example\.com\), you create records in the hosted zone for the subdomain\.
+To define how you want Route 53 to route traffic for the subdomain \(acme\.example\.com\) and its subdomains \(backend\.acme\.example\.com\), you create records in the hosted zone for the subdomain\.
 
 Note the following about creating records in the hosted zone for the subdomain:
 + Don't create additional name server \(NS\) or start of authority \(SOA\) records in the hosted zone for the subdomain, and don't delete the existing NS and SOA records\.
 + Create all records for the subdomain in the hosted zone for the subdomain\. For example, if you have hosted zones for example\.com and for acme\.example\.com domain, create all records for the acme\.example\.com subdomain in the acme\.example\.com hosted zone\. This includes records such as backend\.acme\.example\.com and beta\.backend\.acme\.example\.com\.
 + If the hosted zone for the domain \(example\.com\) already contains records that belong in the hosted zone for the subdomain \(acme\.example\.com\), duplicate those records in the hosted zone for the subdomain\. In the last step of the process, you delete the duplicate records from the hosted zone for the domain later\.
 **Important**  
-If you have some records for the subdomain in both the hosted zone for the domain and the hosted zone for the subdomain, DNS behavior will be inconsistent\. Behavior will depend on which name servers a DNS resolver has cached, the name servers for the domain hosted zone \(example\.com\) or the name servers for the subdomain hosted zone \(acme\.example\.com\)\. In some cases, Route 53 will return NXDOMAIN \(non\-existent domain\) when the record exists, but not in the hosted zone that DNS resolvers are submitting the query to\.
+If you have some records for the subdomain in both the hosted zone for the domain and the hosted zone for the subdomain, DNS behavior will be inconsistent\. Behavior will depend on which name servers a DNS resolver has cached, the name servers for the domain hosted zone \(example\.com\) or the name servers for the subdomain hosted zone \(acme\.example\.com\)\. In some cases, Route 53 will return NXDOMAIN \(non\-existent domain\) when the record exists, but not in the hosted zone that DNS resolvers are submitting the query to\.
 
 For more information, see [Working with records](rrsets-working-with.md)\.
 
 ### Updating the hosted zone for the domain<a name="dns-routing-traffic-for-subdomains-delegating-responsibility"></a>
 
-When you create a hosted zone, Route 53 automatically assigns four name servers to the zone\. The NS record for a hosted zone identifies the name servers that respond to DNS queries for the domain or subdomain\. To start using the records in the hosted zone for the subdomain to route internet traffic, you create a new NS record in the hosted zone for the domain \(example\.com\), and give it the name of the subdomain \(acme\.example\.com\)\. For the value of the NS record, you specify the names of the name servers from the hosted zone for the subdomain\. 
+When you create a hosted zone, Route 53 automatically assigns four name servers to the zone\. The NS record for a hosted zone identifies the name servers that respond to DNS queries for the domain or subdomain\. To start using the records in the hosted zone for the subdomain to route internet traffic, you create a new NS record in the hosted zone for the domain \(example\.com\), and give it the name of the subdomain \(acme\.example\.com\)\. For the value of the NS record, you specify the names of the name servers from the hosted zone for the subdomain\. 
 
-Here's what happens when Route 53 receives a DNS query from a DNS resolver for the subdomain acme\.example\.com or one of its subdomains:
+Here's what happens when Route 53 receives a DNS query from a DNS resolver for the subdomain acme\.example\.com or one of its subdomains:
 
-1. Route 53 looks in the hosted zone for the domain \(example\.com\) and finds the NS record for the subdomain \(acme\.example\.com\)\.
+1. Route 53 looks in the hosted zone for the domain \(example\.com\) and finds the NS record for the subdomain \(acme\.example\.com\)\.
 
-1. Route 53 gets the name servers from the acme\.example\.com NS record in the hosted zone for the domain, example\.com, and returns those name servers to the DNS resolver\. 
+1. Route 53 gets the name servers from the acme\.example\.com NS record in the hosted zone for the domain, example\.com, and returns those name servers to the DNS resolver\. 
 
 1. The resolver resubmits the query for acme\.example\.com to the name servers for the acme\.example\.com hosted zone\.
 
-1. Route 53 responds to the query using a record in the acme\.example\.com hosted zone\.
+1. Route 53 responds to the query using a record in the acme\.example\.com hosted zone\.
 
-To configure Route 53 to route traffic for the subdomain using the hosted zone for the subdomain and to delete any duplicate records from the hosted zone for the domain, perform the following procedure:
+To configure Route 53 to route traffic for the subdomain using the hosted zone for the subdomain and to delete any duplicate records from the hosted zone for the domain, perform the following procedure:
 
-**To configure Route 53 to use the hosted zone for the subdomain \(console\)**
+**To configure Route 53 to use the hosted zone for the subdomain \(console\)**
 
-1. In the Route 53 console, get the name servers for the hosted zone for the subdomain:
+1. In the Route 53 console, get the name servers for the hosted zone for the subdomain:
 
    1. In the navigation pane, choose **Hosted zones**\. 
 
@@ -143,4 +143,4 @@ To use another hosted zone to route traffic for subdomain2\.subdomain1\.example\
 
    In addition, delete any duplicate records from the subdomain1\.example\.com\. For more information, see [Updating the hosted zone for the domain](#dns-routing-traffic-for-subdomains-delegating-responsibility)\. 
 
-   After you create this NS record, Route 53 starts to use the subdomain2\.subdomain1\.example\.com hosted zone to route traffic for the subdomain2\.subdomain1\.example\.com subdomain\.
+   After you create this NS record, Route 53 starts to use the subdomain2\.subdomain1\.example\.com hosted zone to route traffic for the subdomain2\.subdomain1\.example\.com subdomain\.

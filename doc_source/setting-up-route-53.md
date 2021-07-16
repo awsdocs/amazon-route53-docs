@@ -1,4 +1,4 @@
-# Setting up Amazon Route 53<a name="setting-up-route-53"></a>
+# Setting up Amazon Route 53<a name="setting-up-route-53"></a>
 
 The overview and procedures in this section help you get started with AWS\.
 
@@ -11,7 +11,7 @@ The overview and procedures in this section help you get started with AWS\.
 
 ## Sign up for AWS<a name="setting-up-sign-up-for-aws"></a>
 
-When you sign up for AWS, your AWS account is automatically signed up for all services in AWS, including Amazon Route 53\. You are charged only for the services that you use\.
+When you sign up for AWS, your AWS account is automatically signed up for all services in AWS, including Amazon Route 53\. You are charged only for the services that you use\.
 
 If you have an AWS account already, skip to [Access your account](#setting-up-access-account)\. If you don't have an AWS account, use the following procedure to create one\.<a name="setting-up-sign-up-for-aws-procedure"></a>
 
@@ -39,9 +39,6 @@ For each of those options, you need to access your AWS account by providing cred
 ### Access the console<a name="setting-up-access-account-console"></a>
 
 To access the AWS Management Console for the first time, you provide an email address and a password\. This combination of your email address and password is called your *root identity* or *root account credentials*\. After you access your account for the first time, we strongly recommend that you don't use your root account credentials again for everyday use\. Instead, you should create new credentials by using [AWS Identity and Access Management](https://docs.aws.amazon.com/IAM/latest/UserGuide/introduction.html)\. To do that, you create a user account for yourself known as an *IAM user*, and then add the IAM user to an IAM group with administrative permissions or grant the IAM user administrative permissions\. You then can access AWS using a special URL and the credentials for the IAM user\. You also can add other IAM users later, and restrict their access to specified resources in the account\.
-
-**Note**  
-Some ad\-blocking plugins for web browsers interfere with Amazon Route 53 console operations, which can cause the console to behave unpredictably\. If you installed an ad\-blocking plugin for your browser, we recommend that you add the URL for the Route 53 console, [https://console\.aws\.amazon\.com/route53/home](https://console.aws.amazon.com/route53/home) and [https://console\.aws\.amazon\.com/route53/v2/home](https://console.aws.amazon.com/route53/v2/home), to the list of allowed URLs for the plugin\.
 
 ### Access the API, AWS CLI, AWS Tools for Windows PowerShell, or the AWS SDKs<a name="setting-up-access-account-api-cli"></a>
 
@@ -121,7 +118,7 @@ If you don't want the URL for your sign\-in page to contain your AWS account ID,
 
 To verify the sign\-in link for IAM users for your account, open the IAM console and check under **IAM users sign\-in link** on the dashboard\.
 
-For more information about using IAM, see [Identity and access management in Amazon Route 53](auth-and-access-control.md)\.
+For more information about using IAM, see [Identity and access management in Amazon Route 53](auth-and-access-control.md)\.
 
 ## Set up the AWS Command Line Interface or AWS Tools for Windows PowerShell<a name="setting-up-aws-cli"></a>
 
@@ -131,4 +128,4 @@ If you have experience with Windows PowerShell, you might prefer to use AWS Tool
 
 ## Download an AWS SDK<a name="setting-up-sdk"></a>
 
-If you're using a programming language that AWS provides an SDK for, we recommend that you use an SDK instead of the Amazon Route 53 API\. The SDKs make authentication simpler, integrate easily with your development environment, and provide easy access to Route 53 commands\. For more information, see [Tools for Amazon Web Services](https://aws.amazon.com/tools/)\.
+If you're using a programming language that AWS provides an SDK for, we recommend that you use an SDK instead of the Amazon Route 53 API\. The SDKs make authentication simpler, integrate easily with your development environment, and provide easy access to Route 53 commands\. For more information, see [Tools for Amazon Web Services](https://aws.amazon.com/tools/)\.

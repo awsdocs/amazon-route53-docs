@@ -1,4 +1,4 @@
-# Resolver endpoints<a name="best-practices-resolver-endpoints"></a>
+# Avoid loop configurations with Resolver endpoints<a name="best-practices-resolver-endpoints"></a>
 
 Don't associate the same VPC to a Resolver rule and its inbound endpoint \(whether it’s a direct target of the endpoint, or via an on\-premises DNS server\)\. When the outbound endpoint in a Resolver rule points to an inbound endpoint that shares a VPC with the rule, it can cause a loop where the query is continually passed between the inbound and outbound endpoints\.
 

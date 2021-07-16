@@ -4,13 +4,13 @@
 
 When you enable DNS Firewall, associate it to a VPC, and you have logging enabled, `firewall_rule_group_id`, `firewall_rule_action`, and `firewall_domain_list_id` are the DNS Firewall specific fields provided within your logs\.
 
-To start logging the DNS queries that are filtered by DNS Firewall rules that originate in your VPCs, you perform the following tasks in the Amazon Route 53 console:<a name="firewall-resolver-query-logs-configuring-procedure"></a>
+To start logging the DNS queries that are filtered by DNS Firewall rules that originate in your VPCs, you perform the following tasks in the Amazon Route 53 console:<a name="firewall-resolver-query-logs-configuring-procedure"></a>
 
 **To configure Resolver query logging for DNS Firewall**
 
-1. Sign in to the AWS Management Console and open the Route 53 console at [https://console\.aws\.amazon\.com/route53/](https://console.aws.amazon.com/route53/)\.
+1. Sign in to the AWS Management Console and open the Route 53 console at [https://console\.aws\.amazon\.com/route53/](https://console.aws.amazon.com/route53/)\.
 
-1. Expand the Route 53 console menu\. In the upper left corner of the console, choose the three horizontal bars \(![\[Menu icon\]](http://docs.aws.amazon.com/Route53/latest/DeveloperGuide/images/menu-icon.png)\) icon\.
+1. Expand the Route 53 console menu\. In the upper left corner of the console, choose the three horizontal bars \(![\[Menu icon\]](http://docs.aws.amazon.com/Route53/latest/DeveloperGuide/images/menu-icon.png)\) icon\.
 
 1. Within the Resolver menu, choose **Query logging**\.
 

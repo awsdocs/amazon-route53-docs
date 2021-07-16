@@ -27,7 +27,7 @@ To view the current sharing status of a rule group \(including the account that 
 
 **To view sharing status and share rule groups with another AWS account**
 
-1. Sign in to the AWS Management Console and open the Route 53 console at [https://console\.aws\.amazon\.com/route53/](https://console.aws.amazon.com/route53/)\.
+1. Sign in to the AWS Management Console and open the Route 53 console at [https://console\.aws\.amazon\.com/route53/](https://console.aws.amazon.com/route53/)\.
 
 1. In the navigation pane, choose **Rule groups**\.
 

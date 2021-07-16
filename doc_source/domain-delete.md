@@ -8,20 +8,20 @@ Note the following:
 If you delete a domain name registration before the registration is scheduled to expire, AWS does not refund the registration fee\. 
 
 **TLDs that allow you to delete a domain registration**  
-To determine whether you can delete the registration for your domain, see [Domains that you can register with Amazon Route 53](registrar-tld-list.md)\. If the section for your TLD doesn't include a "Deletion of domain registration" subsection, you can delete the domain\.
+To determine whether you can delete the registration for your domain, see [Domains that you can register with Amazon Route 53](registrar-tld-list.md)\. If the section for your TLD doesn't include a "Deletion of domain registration" subsection, you can delete the domain\.
 
 **What if you can't delete a domain registration?**  
-If the registry for your domain doesn't allow you to delete a domain name registration, you must wait for the domain to expire\. To ensure that the domain isn't automatically renewed, disable automatic renewal for the domain\. When the **Expires on** date passes, Route 53 automatically deletes the registration for the domain\. For information about how to change the automatic renewal setting, see [Enabling or disabling automatic renewal for a domain](domain-enable-disable-auto-renewal.md)\.
+If the registry for your domain doesn't allow you to delete a domain name registration, you must wait for the domain to expire\. To ensure that the domain isn't automatically renewed, disable automatic renewal for the domain\. When the **Expires on** date passes, Route 53 automatically deletes the registration for the domain\. For information about how to change the automatic renewal setting, see [Enabling or disabling automatic renewal for a domain](domain-enable-disable-auto-renewal.md)\.
 
 **Delay before a domain is deleted and available to register again**  
-Almost all registries prevent anyone from immediately registering a domain that has just expired\. The typical delay is one to three months, depending on the TLD\. For more information, see the "Deadlines for renewing and restoring domains" section for your TLD in [Domains that you can register with Amazon Route 53](registrar-tld-list.md)\.   
+Almost all registries prevent anyone from immediately registering a domain that has just expired\. The typical delay is one to three months, depending on the TLD\. For more information, see the "Deadlines for renewing and restoring domains" section for your TLD in [Domains that you can register with Amazon Route 53](registrar-tld-list.md)\.   
 Don't delete a domain and expect to reregister it if you just want to transfer the domain between AWS accounts or transfer the domain to another registrar\. See the applicable documentation instead:  
 + [Transferring a domain to a different AWS account](domain-transfer-between-aws-accounts.md)
-+ [Transferring a domain from Amazon Route 53 to another registrar](domain-transfer-from-route-53.md)<a name="domain-delete-procedure"></a>
++ [Transferring a domain from Amazon Route 53 to another registrar](domain-transfer-from-route-53.md)<a name="domain-delete-procedure"></a>
 
 **To delete a domain name registration**
 
-1. Sign in to the AWS Management Console and open the Route 53 console at [https://console\.aws\.amazon\.com/route53/](https://console.aws.amazon.com/route53/)\.
+1. Sign in to the AWS Management Console and open the Route 53 console at [https://console\.aws\.amazon\.com/route53/](https://console.aws.amazon.com/route53/)\.
 
 1. In the navigation pane, choose **Registered Domains**\.
 
@@ -37,7 +37,7 @@ Don't delete a domain and expect to reregister it if you just want to transfer t
    + noreply@registrar\.amazon\.com – for TLDs registered by Amazon Registrar\.
    + noreply@domainnameverification\.net – for TLDs registered by our registrar associate, Gandi\.
 
-   To determine who the registrar is for your TLD, see [Domains that you can register with Amazon Route 53](registrar-tld-list.md)\.
+   To determine who the registrar is for your TLD, see [Domains that you can register with Amazon Route 53](registrar-tld-list.md)\.
 
 1. When you receive the verification email, choose the link in the email, and either approve or reject the request to delete the domain\. 
 **Important**  
@@ -45,10 +45,10 @@ The registrant contact must follow the instructions in the email, or we must can
 
    You'll receive another email when your domain has been deleted\. To determine the current status of your request, see [Viewing the status of a domain registration](domain-view-status.md)\.
 
-1. Delete the records in the hosted zone for the deleted domain, and then delete the hosted zone\. After you delete the hosted zone, Route 53 stops billing you the monthly charge for a hosted zone\. For more information, see the following documentation:
+1. Delete the records in the hosted zone for the deleted domain, and then delete the hosted zone\. After you delete the hosted zone, Route 53 stops billing you the monthly charge for a hosted zone\. For more information, see the following documentation:
    + [Deleting records](resource-record-sets-deleting.md)
    + [Deleting a public hosted zone](DeleteHostedZone.md)
-   + [Route 53 Pricing](https://aws.amazon.com/route53/pricing)
+   + [Route 53 Pricing](https://aws.amazon.com/route53/pricing)
 
 1. If you encounter issues while deleting a domain name registration, you can contact AWS Support for free\. For more information, see [Contacting AWS Support about domain registration issues](domain-contact-support.md)\.<a name="domain-delete-uk-procedure"></a>
 

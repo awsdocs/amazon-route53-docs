@@ -1,6 +1,6 @@
 # Disabling DNSSEC signing<a name="dns-configuring-dnssec-disable"></a>
 
-The steps for disabling DNSSEC signing in Route 53 vary, depending on the chain of trust that your hosted zone is part of\. 
+The steps for disabling DNSSEC signing in Route 53 vary, depending on the chain of trust that your hosted zone is part of\. 
 
 For example, your hosted zone might have a parent zone that has a Delegation Signer \(DS\) record, as part of a chain of trust\. Your hosted zone might also be itself a parent zone for child zones that have enabled DNSSEC signing, which is another part of the chain of trust\. Investigate and determine the full chain of trust for your hosted zone before you take the steps to disable DNSSEC signing\.
 
@@ -21,7 +21,7 @@ When you've determined where the relevant chain of trust DS records are for your
 
 **To disable DNSSEC signing**
 
-1. Sign in to the AWS Management Console and open the Route 53 console at [https://console\.aws\.amazon\.com/route53/](https://console.aws.amazon.com/route53/)\.
+1. Sign in to the AWS Management Console and open the Route 53 console at [https://console\.aws\.amazon\.com/route53/](https://console.aws.amazon.com/route53/)\.
 
 1. In the navigation pane, choose **Hosted zones**, and then choose a hosted zone that you want to disable DNSSEC signing for\.
 

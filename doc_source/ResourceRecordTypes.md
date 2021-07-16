@@ -1,11 +1,11 @@
 # Supported DNS record types<a name="ResourceRecordTypes"></a>
 
-Amazon Route 53 supports the DNS record types that are listed in this section\. Each record type also includes an example of how to format the `Value` element when you are accessing Route 53 using the API\.
+Amazon Route 53 supports the DNS record types that are listed in this section\. Each record type also includes an example of how to format the `Value` element when you are accessing Route 53 using the API\.
 
 **Note**  
-For record types that include a domain name, enter a fully qualified domain name, for example, *www\.example\.com*\. The trailing dot is optional; Route 53 assumes that the domain name is fully qualified\. This means that Route 53 treats *www\.example\.com* \(without a trailing dot\) and *www\.example\.com\.* \(with a trailing dot\) as identical\.
+For record types that include a domain name, enter a fully qualified domain name, for example, *www\.example\.com*\. The trailing dot is optional; Route 53 assumes that the domain name is fully qualified\. This means that Route 53 treats *www\.example\.com* \(without a trailing dot\) and *www\.example\.com\.* \(with a trailing dot\) as identical\.
 
-Route 53 provides an extension to DNS functionality known as alias records\. Similar to CNAME records, alias records let you route traffic to selected AWS resources, such as CloudFront distributions and Amazon S3 buckets\. For more information, including a comparison of alias and CNAME records, see [Choosing between alias and non\-alias records](resource-record-sets-choosing-alias-non-alias.md)\.
+Route 53 provides an extension to DNS functionality known as alias records\. Similar to CNAME records, alias records let you route traffic to selected AWS resources, such as CloudFront distributions and Amazon S3 buckets\. For more information, including a comparison of alias and CNAME records, see [Choosing between alias and non\-alias records](resource-record-sets-choosing-alias-non-alias.md)\.
 
 **Topics**
 + [A record type](#AFormat)
@@ -26,13 +26,13 @@ Route 53 provides an extension to DNS functionality known as alias records\. Si
 
 You use an A record to route traffic to a resource, such as a web server, using an IPv4 address in dotted decimal notation\.
 
-**Example for the Amazon Route 53 console**
+**Example for the Amazon Route 53 console**
 
 ```
 1. 192.0.2.1
 ```
 
-**Example for the Route 53 API**
+**Example for the Route 53 API**
 
 ```
 1. <Value>192.0.2.1</Value>
@@ -42,13 +42,13 @@ You use an A record to route traffic to a resource, such as a web server, using 
 
 You use an AAAA record to route traffic to a resource, such as a web server, using an IPv6 address in colon\-separated hexadecimal format\.
 
-**Example for the Amazon Route 53 console**
+**Example for the Amazon Route 53 console**
 
 ```
 1. 2001:0db8:85a3:0:0:8a2e:0370:7334
 ```
 
-**Example for the Route 53 API**
+**Example for the Route 53 API**
 
 ```
 1. <Value>2001:0db8:85a3:0:0:8a2e:0370:7334</Value>
@@ -171,14 +171,14 @@ For example, suppose your CA supports sending a text message if the CA receives 
 
 ### Examples<a name="CAAFormat-examples"></a>
 
-**Example for the Route 53 console**
+**Example for the Route 53 console**
 
 ```
 0 issue "ca.example.net"
 0 iodef "mailto:admin@example.com"
 ```
 
-**Example for the Route 53 API**
+**Example for the Route 53 API**
 
 ```
 <ResourceRecord>
@@ -195,15 +195,15 @@ A CNAME record maps DNS queries for the name of the current record, such as acme
 The DNS protocol does not allow you to create a CNAME record for the top node of a DNS namespace, also known as the zone apex\. For example, if you register the DNS name example\.com, the zone apex is example\.com\. You cannot create a CNAME record for example\.com, but you can create CNAME records for www\.example\.com, newproduct\.example\.com, and so on\.  
 In addition, if you create a CNAME record for a subdomain, you cannot create any other records for that subdomain\. For example, if you create a CNAME for www\.example\.com, you cannot create any other records for which the value of the **Name** field is www\.example\.com\.
 
-Amazon Route 53 also supports alias records, which allow you to route queries to selected AWS resources, such as CloudFront distributions and Amazon S3 buckets\. Aliases are similar in some ways to the CNAME record type; however, you can create an alias for the zone apex\. For more information, see [Choosing between alias and non\-alias records](resource-record-sets-choosing-alias-non-alias.md)\.
+Amazon Route 53 also supports alias records, which allow you to route queries to selected AWS resources, such as CloudFront distributions and Amazon S3 buckets\. Aliases are similar in some ways to the CNAME record type; however, you can create an alias for the zone apex\. For more information, see [Choosing between alias and non\-alias records](resource-record-sets-choosing-alias-non-alias.md)\.
 
-**Example for the Route 53 console**
+**Example for the Route 53 console**
 
 ```
 1. hostname.example.com
 ```
 
-**Example for the Route 53 API**
+**Example for the Route 53 API**
 
 ```
 1. <Value>hostname.example.com</Value>
@@ -211,17 +211,17 @@ Amazon Route 53 also supports alias records, which allow you to route queries t
 
 ## DS record type<a name="DSFormat"></a>
 
-A delegation signer \(DS\) record refers a zone key for a delegated subdomain zone\. You might create a DS record when you establish a chain of trust when you configure DNSSEC signing\. For more information about configuring DNSSEC in Route 53, see [Configuring DNSSEC signing in Amazon Route 53](dns-configuring-dnssec.md)\.
+A delegation signer \(DS\) record refers a zone key for a delegated subdomain zone\. You might create a DS record when you establish a chain of trust when you configure DNSSEC signing\. For more information about configuring DNSSEC in Route 53, see [Configuring DNSSEC signing in Amazon Route 53](dns-configuring-dnssec.md)\.
 
 The first three values are decimal numbers representing the key tag, algorithm, and digest type\. The fourth value is the digest of the zone key\. For more information about the DS record format, see [RFC 4034](https://www.ietf.org/rfc/rfc4034.txt)\.
 
-**Example for the Route 53 console**
+**Example for the Route 53 console**
 
 ```
 1. 123 4 5 1234567890abcdef1234567890absdef
 ```
 
-**Example for the Route 53 API**
+**Example for the Route 53 API**
 
 ```
 1. <Value>123 4 5 1234567890abcdef1234567890absdef</Value>
@@ -235,15 +235,15 @@ An MX record specifies the names of your mail servers and, if you have two or mo
 An integer that represents the priority for an email server\. If you specify only one server, the priority can be any integer between 0 and 65535\. If you specify multiple servers, the value that you specify for the priority indicates which email server you want email to be routed to first, second, and so on\. The server with the lowest value for the priority takes precedence\. For example, if you have two email servers and you specify values of 10 and 20 for the priority, email always goes to the server with a priority of 10 unless it's unavailable\. If you specify values of 10 and 10, email is routed to the two servers approximately equally\.
 
 **Domain name**  
-The domain name of the email server\. Specify the name \(such as mail\.example\.com\) of an A or AAAA record\. In [RFC 2181, Clarifications to the DNS Specification](https://tools.ietf.org/html/rfc2181), section 10\.3 forbids specifying the name of a CNAME record for the domain name value\. \(When the RFC mentions "alias," it means a CNAME record, not a Route 53 alias record\.\)
+The domain name of the email server\. Specify the name \(such as mail\.example\.com\) of an A or AAAA record\. In [RFC 2181, Clarifications to the DNS Specification](https://tools.ietf.org/html/rfc2181), section 10\.3 forbids specifying the name of a CNAME record for the domain name value\. \(When the RFC mentions "alias," it means a CNAME record, not a Route 53 alias record\.\)
 
-**Example for the Amazon Route 53 console**
+**Example for the Amazon Route 53 console**
 
 ```
 1. 10 mail.example.com
 ```
 
-**Example for the Route 53 API**
+**Example for the Route 53 API**
 
 ```
 1. <Value>10 mail.example.com</Value>
@@ -294,7 +294,7 @@ For more information about DDDS applications and about NAPTR records, see the fo
 + [RFC 3403](https://www.ietf.org/rfc/rfc3403.txt)
 + [RFC 3404](https://www.ietf.org/rfc/rfc3404.txt)
 
-**Example for the Amazon Route 53 console**
+**Example for the Amazon Route 53 console**
 
 ```
 1. 100 50 "u" "E2U+sip" "!^(\\+441632960083)$!sip:\\1@example.com!" .
@@ -302,7 +302,7 @@ For more information about DDDS applications and about NAPTR records, see the fo
 3. 100 52 "u" "E2U+email:mailto" "!^.*$!mailto:info@example.com!" .
 ```
 
-**Example for the Route 53 API**
+**Example for the Route 53 API**
 
 ```
 1. <ResourceRecord>
@@ -319,15 +319,15 @@ An NS record identifies the name servers for the hosted zone\. Note the followin
 + You can create a separate hosted zone for a subdomain \(acme\.example\.com\) and use that hosted zone to route internet traffic for the subdomain and its subdomains \(subdomain\.acme\.example\.com\)\. You set up this configuration, known as "delegating responsibility for a subdomain to a hosted zone" by creating another NS record in the hosted zone for the root domain \(example\.com\)\. For more information, see [Routing traffic for subdomains](dns-routing-traffic-for-subdomains.md)\.
 + You also use NS records to configure white\-label name servers\. For more information, see [Configuring white\-label name servers](white-label-name-servers.md)\.
 
-For more information about NS records, see [NS and SOA records that Amazon Route 53 creates for a public hosted zone](SOA-NSrecords.md)\.
+For more information about NS records, see [NS and SOA records that Amazon Route 53 creates for a public hosted zone](SOA-NSrecords.md)\.
 
-**Example for the Amazon Route 53 console**
+**Example for the Amazon Route 53 console**
 
 ```
 1. ns-1.example.com
 ```
 
-**Example for the Route 53 API**
+**Example for the Route 53 API**
 
 ```
 1. <Value>ns-1.example.com</Value>
@@ -337,13 +337,13 @@ For more information about NS records, see [NS and SOA records that Amazon Route
 
 A PTR record maps an IP address to the corresponding domain name\.
 
-**Example for the Amazon Route 53 console**
+**Example for the Amazon Route 53 console**
 
 ```
 1. hostname.example.com
 ```
 
-**Example for the Route 53 API**
+**Example for the Route 53 API**
 
 ```
 1. <Value>hostname.example.com</Value>
@@ -351,15 +351,15 @@ A PTR record maps an IP address to the corresponding domain name\.
 
 ## SOA record type<a name="SOAFormat"></a>
 
-A start of authority \(SOA\) record provides information about a domain and the corresponding Amazon Route 53 hosted zone\. For information about the fields in an SOA record, see [NS and SOA records that Amazon Route 53 creates for a public hosted zone](SOA-NSrecords.md)\.
+A start of authority \(SOA\) record provides information about a domain and the corresponding Amazon Route 53 hosted zone\. For information about the fields in an SOA record, see [NS and SOA records that Amazon Route 53 creates for a public hosted zone](SOA-NSrecords.md)\.
 
-**Example for the Route 53 console**
+**Example for the Route 53 console**
 
 ```
 1. ns-2048.awsdns-64.net hostmaster.awsdns.com 1 1 1 1 60
 ```
 
-**Example for the Route 53 API**
+**Example for the Route 53 API**
 
 ```
 1. <Value>ns-2048.awsdns-64.net hostmaster.awsdns.com 1 1 1 1 60</Value>
@@ -371,13 +371,13 @@ SPF records were formerly used to verify the identity of the sender of email mes
 
 Instead of an SPF record, we recommend that you create a TXT record that contains the applicable value\. For more information about valid values, see the Wikipedia article [Sender Policy Framework](https://en.wikipedia.org/wiki/Sender_Policy_Framework)\.
 
-**Example for the Amazon Route 53 console**
+**Example for the Amazon Route 53 console**
 
 ```
 1. "v=spf1 ip4:192.168.0.1/16 -all"
 ```
 
-**Example for the Route 53 API**
+**Example for the Route 53 API**
 
 ```
 1. <Value>"v=spf1 ip4:192.168.0.1/16 -all"</Value>
@@ -387,13 +387,13 @@ Instead of an SPF record, we recommend that you create a TXT record that contain
 
 An SRV record `Value` element consists of four space\-separated values\. The first three values are decimal numbers representing priority, weight, and port\. The fourth value is a domain name\. SRV records are used for accessing services, such as a service for email or communications\. For information about SRV record format, refer to the documentation for the service that you want to connect to\.
 
-**Example for the Amazon Route 53 console**
+**Example for the Amazon Route 53 console**
 
 ```
 1. 10 5 80 hostname.example.com
 ```
 
-**Example for the Route 53 API**
+**Example for the Route 53 API**
 
 ```
 1. <Value>10 5 80 hostname.example.com</Value>
@@ -451,7 +451,7 @@ Case is preserved, so `"Ab"` and `"aB"` are different values\.
 
 ### Examples<a name="TXTformat-examples"></a>
 
-**Example for the Amazon Route 53 console**
+**Example for the Amazon Route 53 console**
 
 Put each value on a separate line:
 
@@ -461,7 +461,7 @@ Put each value on a separate line:
 3. "v=spf1 ip4:192.168.0.1/16 -all"
 ```
 
-**Example for the Route 53 API**
+**Example for the Route 53 API**
 
 Put each value in a separate `Value` element:
 

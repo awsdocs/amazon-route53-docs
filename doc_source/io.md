@@ -19,7 +19,7 @@ Supported\.
 **Internationalized domain names**  
 Supported\.
 
-**Authorization code required for transfer to Route 53**  
+**Authorization code required for transfer to Route 53**  
 Yes  
 The registry for \.io domains also uses the authorization code as a single\-use password for some operations, such as enabling or disabling privacy protection\. If you want to perform more than one operation that requires a password, you must generate another authorization code for each operation\.
 
@@ -28,8 +28,8 @@ Supported for domain registration\. For more information, see [Configuring DNSSE
 
 **Deadlines for renewing and restoring domains**  
 + Renewal is possible: Until the expiration date
-+ Late renewal with Route 53 is possible: Until 44 days after expiration
-+ Domain is deleted from Route 53: 45 days after expiration
++ Late renewal with Route 53 is possible: Until 44 days after expiration
++ Domain is deleted from Route 53: 45 days after expiration
 + Restoration with the registry is possible: Between 45 days and 75 days after expiration
 + Domain is deleted from the registry: 80 days after expiration
 

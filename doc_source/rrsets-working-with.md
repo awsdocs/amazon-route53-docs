@@ -14,14 +14,14 @@ The name of each record in a hosted zone must end with the name of the hosted zo
 **Note**  
 To create records for complex routing configurations, you can also use the traffic flow visual editor and save the configuration as a traffic policy\. You can then associate the traffic policy with one or more domain names \(such as example\.com\) or subdomain names \(such as www\.example\.com\), in the same hosted zone or in multiple hosted zones\. In addition, you can roll back the updates if the new configuration isn't performing as you expected it to\. For more information, see [Using traffic flow to route DNS traffic](traffic-flow.md)\.
 
-Amazon Route 53 doesn't charge for the records that you add to a hosted zone\. For information about the maximum number of records that you can create in a hosted zone, see [Quotas](DNSLimitations.md)\. 
+Amazon Route 53 doesn't charge for the records that you add to a hosted zone\. For information about the maximum number of records that you can create in a hosted zone, see [Quotas](DNSLimitations.md)\. 
 
 **Topics**
 + [Choosing a routing policy](routing-policy.md)
 + [Choosing between alias and non\-alias records](resource-record-sets-choosing-alias-non-alias.md)
 + [Supported DNS record types](ResourceRecordTypes.md)
-+ [Creating records by using the Amazon Route 53 console](resource-record-sets-creating.md)
-+ [Values that you specify when you create or edit Amazon Route 53 records](resource-record-sets-values.md)
++ [Creating records by using the Amazon Route 53 console](resource-record-sets-creating.md)
++ [Values that you specify when you create or edit Amazon Route 53 records](resource-record-sets-values.md)
 + [Creating records by importing a zone file](resource-record-sets-creating-import.md)
 + [Editing records](resource-record-sets-editing.md)
 + [Deleting records](resource-record-sets-deleting.md)

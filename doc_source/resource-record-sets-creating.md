@@ -1,19 +1,19 @@
-# Creating records by using the Amazon Route 53 console<a name="resource-record-sets-creating"></a>
+# Creating records by using the Amazon Route 53 console<a name="resource-record-sets-creating"></a>
 
-The following procedure explains how to create records using the Amazon Route 53 console\. For information about how to create records using the Route 53 API, see [ChangeResourceRecordSets](https://docs.aws.amazon.com/Route53/latest/APIReference/API_ChangeResourceRecordSets.html) in the *Amazon Route 53 API Reference*\.
+The following procedure explains how to create records using the Amazon Route 53 console\. For information about how to create records using the Route 53 API, see [ChangeResourceRecordSets](https://docs.aws.amazon.com/Route53/latest/APIReference/API_ChangeResourceRecordSets.html) in the *Amazon Route 53 API Reference*\.
 
 **Note**  
 To create records for complex routing configurations, you can also use the traffic flow visual editor and save the configuration as a traffic policy\. You can then associate the traffic policy with one or more domain names \(such as example\.com\) or subdomain names \(such as www\.example\.com\), in the same hosted zone or in multiple hosted zones\. In addition, you can roll back the updates if the new configuration isn't performing as you expected it to\. For more information, see [Using traffic flow to route DNS traffic](traffic-flow.md)\.<a name="resource-record-sets-creating-procedure"></a>
 
-**To create a record using the Route 53 console**
+**To create a record using the Route 53 console**
 
 1. If you're not creating an alias record, go to step 2\. 
 
-   Also go to step 2 if you're creating an alias record that routes DNS traffic to an AWS resource other than an Elastic Load Balancing load balancer or another Route 53 record\.
+   Also go to step 2 if you're creating an alias record that routes DNS traffic to an AWS resource other than an Elastic Load Balancing load balancer or another Route 53 record\.
 
    If you're creating an alias record that routes traffic to an ELB load balancer, and if you created your hosted zone and your load balancer using different accounts, perform the procedure [Getting the DNS name for an ELB load balancer](#resource-record-sets-elb-dns-name-procedure) to get the DNS name for the load balancer\. 
 
-1. Sign in to the AWS Management Console and open the Route 53 console at [https://console\.aws\.amazon\.com/route53/](https://console.aws.amazon.com/route53/)\.
+1. Sign in to the AWS Management Console and open the Route 53 console at [https://console\.aws\.amazon\.com/route53/](https://console.aws.amazon.com/route53/)\.
 
 1. In the navigation pane, choose **Hosted zones**\.
 
@@ -40,7 +40,7 @@ To create records for complex routing configurations, you can also use the traff
 
 1. Choose **Create records**\.
 **Note**  
-Your new records take time to propagate to the Route 53 DNS servers\. Currently, the only way to verify that changes have propagated is to use the [GetChange](https://docs.aws.amazon.com/Route53/latest/APIReference/API_GetChange.html) API action\. Changes generally propagate to all Route 53 name servers within 60 seconds\.
+Your new records take time to propagate to the Route 53 DNS servers\. Currently, the only way to verify that changes have propagated is to use the [GetChange](https://docs.aws.amazon.com/Route53/latest/APIReference/API_GetChange.html) API action\. Changes generally propagate to all Route 53 name servers within 60 seconds\.
 
 1. If you're creating multiple records, repeat steps 7 through 8\.<a name="resource-record-sets-elb-dns-name-procedure"></a>
 
@@ -60,6 +60,6 @@ Your new records take time to propagate to the Route 53 DNS servers\. Currently
 
 1. Sign out of the AWS Management Console\.
 
-1. Sign in to the AWS Management Console again using the AWS account that you used to create the Route 53 hosted zone\.
+1. Sign in to the AWS Management Console again using the AWS account that you used to create the Route 53 hosted zone\.
 
-1. Return to step 3 of the procedure [Creating records by using the Amazon Route 53 console](#resource-record-sets-creating)\.
+1. Return to step 3 of the procedure [Creating records by using the Amazon Route 53 console](#resource-record-sets-creating)\.

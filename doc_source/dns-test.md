@@ -1,6 +1,6 @@
-# Checking DNS responses from Route 53<a name="dns-test"></a>
+# Checking DNS responses from Route 53<a name="dns-test"></a>
 
-If you created an Amazon Route 53 hosted zone for your domain, you can use the DNS checking tool in the console to see how Route 53 will respond to DNS queries if you configure your domain to use Route 53 as your DNS service\. For geolocation, geoproximity, and latency records, you can also simulate queries from a particular DNS resolver and/or client IP address to find out what response Route 53 would return\.
+If you created an Amazon Route 53 hosted zone for your domain, you can use the DNS checking tool in the console to see how Route 53 will respond to DNS queries if you configure your domain to use Route 53 as your DNS service\. For geolocation, geoproximity, and latency records, you can also simulate queries from a particular DNS resolver and/or client IP address to find out what response Route 53 would return\.
 
 **Important**  
 The tool doesn't submit queries to the Domain Name System, it only responds based on the settings in the records in the hosted zone\. The tool returns the same information regardless of whether the hosted zone is currently being used to route traffic for the domain\.
@@ -8,22 +8,22 @@ The tool doesn't submit queries to the Domain Name System, it only responds base
 The DNS checking tool works only for public hosted zones\.
 
 **Topics**
-+ [Using the checking tool to see how Amazon Route 53 responds to DNS queries](#dns-test-how-route-53-responds)
++ [Using the checking tool to see how Amazon Route 53 responds to DNS queries](#dns-test-how-route-53-responds)
 + [Using the checking tool to simulate queries from specific IP addresses \(geolocation and latency records only\)](#dns-test-simulate-requests)
 
-## Using the checking tool to see how Amazon Route 53 responds to DNS queries<a name="dns-test-how-route-53-responds"></a>
+## Using the checking tool to see how Amazon Route 53 responds to DNS queries<a name="dns-test-how-route-53-responds"></a>
 
-You can use the tool to see what response Amazon Route 53 returns in response to a DNS query for a record\.<a name="dns-test-how-route-53-responds-procedure"></a>
+You can use the tool to see what response Amazon Route 53 returns in response to a DNS query for a record\.<a name="dns-test-how-route-53-responds-procedure"></a>
 
-**To use the checking tool to see how Route 53 responds to DNS queries**
+**To use the checking tool to see how Route 53 responds to DNS queries**
 
-1. Sign in to the AWS Management Console and open the Route 53 console at [https://console\.aws\.amazon\.com/route53/](https://console.aws.amazon.com/route53/)\.
+1. Sign in to the AWS Management Console and open the Route 53 console at [https://console\.aws\.amazon\.com/route53/](https://console.aws.amazon.com/route53/)\.
 
 1. In the navigation pane, choose **Hosted Zones**\.
 
 1. On the **Hosted Zones** page, choose the name of a hosted zone\. The console displays the list of records for that hosted zone\.
 
-1. To go directly to the **Check response from Route 53** page, choose **Test record**\.
+1. To go directly to the **Check response from Route 53** page, choose **Test record**\.
 
 1. Specify the following values:
    + The name of the record, excluding the name of the hosted zone\. For example, to check **www\.example\.com**, enter **www**\. To check **example\.com**, leave the **Record name** field blank\.
@@ -31,13 +31,13 @@ You can use the tool to see what response Amazon Route 53 returns in response t
 
 1. Choose **Get Response**\.
 
-1. The **Response returned by Route 53** section includes the following values:  
+1. The **Response returned by Route 53** section includes the following values:  
 **DNS response code**  
-A code that indicates whether the query was valid or not\. The most common response code is **NOERROR**, meaning that the query was valid\. If the response is not valid, Route 53 returns a response code that explains why not\. For a list of possible response codes, see [DNS RCODES](http://www.iana.org/assignments/dns-parameters/dns-parameters.xhtml#dns-parameters-6) on the IANA website\.  
+A code that indicates whether the query was valid or not\. The most common response code is **NOERROR**, meaning that the query was valid\. If the response is not valid, Route 53 returns a response code that explains why not\. For a list of possible response codes, see [DNS RCODES](http://www.iana.org/assignments/dns-parameters/dns-parameters.xhtml#dns-parameters-6) on the IANA website\.  
 **Protocol**  
-The protocol that Amazon Route 53 used to respond to the query, either **UDP** or **TCP**\.  
-**Response returned by Route 53**  
-The value that Route 53 would return to a web application\. The value is one of the following:  
+The protocol that Amazon Route 53 used to respond to the query, either **UDP** or **TCP**\.  
+**Response returned by Route 53**  
+The value that Route 53 would return to a web application\. The value is one of the following:  
    + For non\-alias records, the response contains the value or values in the record\.
    + For multiple records that have the same name and type, which includes weighted, latency, geolocation, and failover, the response contains the value from the appropriate record, based on the request\. 
    + For alias records that refer to AWS resources other than another record, the response contains an IP address or a domain name for the AWS resource, depending on the type of resource\.
@@ -49,15 +49,15 @@ If you have created latency or geolocation records, you can use the checking too
 
 **To use the checking tool to simulate queries from specified IP addresses**
 
-1. Sign in to the AWS Management Console and open the Route 53 console at [https://console\.aws\.amazon\.com/route53/](https://console.aws.amazon.com/route53/)\.
+1. Sign in to the AWS Management Console and open the Route 53 console at [https://console\.aws\.amazon\.com/route53/](https://console.aws.amazon.com/route53/)\.
 
 1. In the navigation pane, choose **Hosted Zones**\.
 
 1. On the **Hosted Zones** page, choose the name of a hosted zone\. The console displays the list of records for that hosted zone\.
 
-1. To go directly to the **Check response from Route 53** page, choose **Test record set**\.
+1. To go directly to the **Check response from Route 53** page, choose **Test record set**\.
 
-   To go to the **Check response from Route 53** page for a specific record, choose the check box for that record and choose **Test record set**\.
+   To go to the **Check response from Route 53** page for a specific record, choose the check box for that record and choose **Test record set**\.
 
 1. If you chose **Test record set** without first choosing a record, specify the following values:
    + The name of the record, excluding the name of the hosted zone\. For example, to check **www\.example\.com**, enter **www**\. To check **example\.com**, leave the **Record name** field blank\.
@@ -73,15 +73,15 @@ If you specify an IP address for **EDNS0 client subnet IP**, you can optionally 
 
 1. Choose **Get Response**\.
 
-1. The **Response returned by Route 53** section includes the following values:  
-**DNS query sent to Route 53**  
-The query, in [BIND format](https://en.wikipedia.org/wiki/Zone_file), that the checking tool sent to Route 53\. This is the same format that a web application would use to send a query\. The three values are typically the name of the record, **IN** \(for internet\), and the type of the record\.  
+1. The **Response returned by Route 53** section includes the following values:  
+**DNS query sent to Route 53**  
+The query, in [BIND format](https://en.wikipedia.org/wiki/Zone_file), that the checking tool sent to Route 53\. This is the same format that a web application would use to send a query\. The three values are typically the name of the record, **IN** \(for internet\), and the type of the record\.  
 **DNS response code**  
-A code that indicates whether the query was valid or not\. The most common response code is **NOERROR**, meaning that the query was valid\. If the response is not valid, Route 53 returns a response code that explains why not\. For a list of possible response codes, see [DNS RCODES](http://www.iana.org/assignments/dns-parameters/dns-parameters.xhtml#dns-parameters-6) on the IANA website\.  
+A code that indicates whether the query was valid or not\. The most common response code is **NOERROR**, meaning that the query was valid\. If the response is not valid, Route 53 returns a response code that explains why not\. For a list of possible response codes, see [DNS RCODES](http://www.iana.org/assignments/dns-parameters/dns-parameters.xhtml#dns-parameters-6) on the IANA website\.  
 **Protocol**  
-The protocol that Amazon Route 53 used to respond to the query, either **UDP** or **TCP**\.  
-**Response returned by Route 53**  
-The value that Route 53 would return to a web application\. The value is one of the following:  
+The protocol that Amazon Route 53 used to respond to the query, either **UDP** or **TCP**\.  
+**Response returned by Route 53**  
+The value that Route 53 would return to a web application\. The value is one of the following:  
    + For non\-alias records, the response contains the value or values in the record\.
    + For multiple records that have the same name and type, which includes weighted, latency, geolocation, and failover, the response contains the value from the appropriate record, based on the request\. 
    + For alias records that refer to AWS resources other than another record, the response contains an IP address or a domain name for the AWS resource, depending on the type of resource\.

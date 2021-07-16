@@ -1,6 +1,6 @@
-# Amazon Route 53 concepts<a name="route-53-concepts"></a>
+# Amazon Route 53 concepts<a name="route-53-concepts"></a>
 
-Here's an overview of the concepts that are discussed throughout the *Amazon Route 53 Developer Guide*\.
+Here's an overview of the concepts that are discussed throughout the *Amazon Route 53 Developer Guide*\.
 
 **Topics**
 + [Domain registration concepts](#route-53-concepts-domain-registration)
@@ -20,13 +20,13 @@ Here's an overview of the concepts that are related to domain registration\.
 The name, such as example\.com, that a user types in the address bar of a web browser to access a website or a web application\. To make your website or web application available on the internet, you start by registering a domain name\. For more information, see [How domain registration works](welcome-domain-registration.md)\.
 
 **domain registrar**  
-A company that is accredited by ICANN \(Internet Corporation for Assigned Names and Numbers\) to process domain registrations for specific top\-level domains \(TLDs\)\. For example, Amazon Registrar, Inc\. is a domain registrar for \.com, \.net, and \.org domains\. Our registrar associate, Gandi, is a domain registrar for hundreds of TLDs, such as \.apartments, \.boutique, and \.camera\. For more information, see [Domains that you can register with Amazon Route 53](registrar-tld-list.md)\.
+A company that is accredited by ICANN \(Internet Corporation for Assigned Names and Numbers\) to process domain registrations for specific top\-level domains \(TLDs\)\. For example, Amazon Registrar, Inc\. is a domain registrar for \.com, \.net, and \.org domains\. Our registrar associate, Gandi, is a domain registrar for hundreds of TLDs, such as \.apartments, \.boutique, and \.camera\. For more information, see [Domains that you can register with Amazon Route 53](registrar-tld-list.md)\.
 
 **domain registry**  
 A company that owns the right to sell domains that have a specific top\-level domain\. For example, [VeriSign](http://www.verisign.com/) is the registry that owns the right to sell domains that have a \.com TLD\. A domain registry defines the rules for registering a domain, such as residency requirements for a geographic TLD\. A domain registry also maintains the authoritative database for all of the domain names that have the same TLD\. The registry's database contains information such as contact information and the name servers for each domain\. 
 
 **domain reseller**  
-A company that sells domain names for registrars such as Amazon Registrar\. Amazon Route 53 is a domain reseller for Amazon Registrar and for our registrar associate, Gandi\.
+A company that sells domain names for registrars such as Amazon Registrar\. Amazon Route 53 is a domain reseller for Amazon Registrar and for our registrar associate, Gandi\.
 
 **top\-level domain \(TLD\)**  
 The last part of a domain name, such as \.com, \.org, or \.ninja\. There are two types of top\-level domains:     
@@ -34,7 +34,7 @@ The last part of a domain name, such as \.com, \.org, or \.ninja\. There are two
 These TLDs typically give users an idea of what they'll find on the website\. For example, domain names that have a TLD of *\.bike* often are associated with websites for motorcycle or bicycle businesses or organizations\. With a few exceptions, you can use any generic TLD you want, so a bicycle club could use the \.hockey TLD for their domain name\.  
 **Geographic top\-level domains**  
 These TLDs are associated with geographic areas such as countries or cities\. Some registries for geographic TLDs have residency requirements, while others, such as [\.io \(British Indian Ocean Territory\)](io.md), allow or even encourage use as a generic TLD\. 
-For a list of the TLDs that you can use when you register a domain name with Route 53, see [Domains that you can register with Amazon Route 53](registrar-tld-list.md)\.
+For a list of the TLDs that you can use when you register a domain name with Route 53, see [Domains that you can register with Amazon Route 53](registrar-tld-list.md)\.
 
 ## Domain Name System \(DNS\) concepts<a name="route-53-concepts-domain-name-system-dns"></a>
 
@@ -56,12 +56,12 @@ Here's an overview of the concepts that are related to the Domain Name System \(
 + [time to live (TTL)](#route-53-concepts-time-to-live)
 
 **alias record**  
-A type of record that you can create with Amazon Route 53 to route traffic to AWS resources such as Amazon CloudFront distributions and Amazon S3 buckets\. For more information, see [Choosing between alias and non\-alias records](resource-record-sets-choosing-alias-non-alias.md)\.
+A type of record that you can create with Amazon Route 53 to route traffic to AWS resources such as Amazon CloudFront distributions and Amazon S3 buckets\. For more information, see [Choosing between alias and non\-alias records](resource-record-sets-choosing-alias-non-alias.md)\.
 
 **authoritative name server**  
 A name server that has definitive information about one part of the Domain Name System \(DNS\) and that responds to requests from a DNS resolver by returning the applicable information\. For example, an authoritative name server for the \.com top\-level domain \(TLD\) knows the names of the name servers for every registered \.com domain\. When a \.com authoritative name server receives a request from a DNS resolver for example\.com, it responds with the names of the name servers for the DNS service for the example\.com domain\.  
-Route 53 name servers are the authoritative name servers for every domain that uses Route 53 as the DNS service\. The name servers know how you want to route traffic for your domain and subdomains based on the records that you created in the hosted zone for the domain\. \(Route 53 name servers store the hosted zones for the domains that use Route 53 as the DNS service\.\)  
-For example, if a Route 53 name server receives a request for www\.example\.com, it finds that record and returns the IP address, such as 192\.0\.2\.33, that is specified in the record\.
+Route 53 name servers are the authoritative name servers for every domain that uses Route 53 as the DNS service\. The name servers know how you want to route traffic for your domain and subdomains based on the records that you created in the hosted zone for the domain\. \(Route 53 name servers store the hosted zones for the domains that use Route 53 as the DNS service\.\)  
+For example, if a Route 53 name server receives a request for www\.example\.com, it finds that record and returns the IP address, such as 192\.0\.2\.33, that is specified in the record\.
 
 **DNS query**  
 Usually a request that is submitted by a device, such as a computer or a smart phone, to the Domain Name System \(DNS\) for a resource that is associated with a domain name\. The most common example of a DNS query is when a user opens a browser and types the domain name in the address bar\. The response to a DNS query typically is the IP address that is associated with a resource such as a web server\. The device that initiated the request uses the IP address to communicate with the resource\. For example, a browser can use the IP address to get a web page from a web server\. 
@@ -82,37 +82,37 @@ See also [record (DNS record)](#route-53-concepts-resource-record-set)\.
 A number that is assigned to a device on the internet—such as a laptop, a smart phone, or a web server—that allows the device to communicate with other devices on the internet\. IP addresses are in one of the following formats:  
 + Internet Protocol version 4 \(IPv4\) format, such as 192\.0\.2\.44
 + Internet Protocol version 6 \(IPv6\) format, such as 2001:0db8:85a3:0000:0000:abcd:0001:2345
-Route 53 supports both IPv4 and IPv6 addresses for the following purposes:  
+Route 53 supports both IPv4 and IPv6 addresses for the following purposes:  
 + You can create records that have a type of A, for IPv4 addresses, or a type of AAAA, for IPv6 addresses\.
 + You can create health checks that send requests either to IPv4 or to IPv6 addresses\.
-+ If a DNS resolver is on an IPv6 network, it can use either IPv4 or IPv6 to submit requests to Route 53\.
++ If a DNS resolver is on an IPv6 network, it can use either IPv4 or IPv6 to submit requests to Route 53\.
 
 **name servers**  
 Servers in the Domain Name System \(DNS\) that help to translate domain names into the IP addresses that computers use to communicate with one another\. Name servers are either recursive name servers \(also known as [DNS resolver](#route-53-concepts-dns-resolver)\) or [authoritative name server](#route-53-concepts-authoritative-name-server)s\.  
-For an overview of how DNS routes traffic to your resources, including the role of Route 53 in the process, see [How Amazon Route 53 routes traffic for your domain](welcome-dns-service.md#welcome-dns-service-how-route-53-routes-traffic)\.
+For an overview of how DNS routes traffic to your resources, including the role of Route 53 in the process, see [How Amazon Route 53 routes traffic for your domain](welcome-dns-service.md#welcome-dns-service-how-route-53-routes-traffic)\.
 
 **private DNS**  
 A local version of the Domain Name System \(DNS\) that lets you route traffic for a domain and its subdomains to Amazon EC2 instances within one or more Amazon virtual private clouds \(VPCs\)\. For more information, see [Working with private hosted zones](hosted-zones-private.md)\.
 
 **record \(DNS record\)**  
 An object in a hosted zone that you use to define how you want to route traffic for the domain or a subdomain\. For example, you might create records for example\.com and www\.example\.com that route traffic to a web server that has an IP address of 192\.0\.2\.234\.  
-For more information about records, including information about functionality that is provided by Route 53–specific records, see [Configuring Amazon Route 53 as your DNS service](dns-configuring.md)\.
+For more information about records, including information about functionality that is provided by Route 53–specific records, see [Configuring Amazon Route 53 as your DNS service](dns-configuring.md)\.
 
 **recursive name server**  
 See [DNS resolver](#route-53-concepts-dns-resolver)\.
 
 **reusable delegation set**  
-A set of four authoritative name servers that you can use with more than one hosted zone\. By default, Route 53 assigns a random selection of name servers to each new hosted zone\. To make it easier to migrate DNS service to Route 53 for a large number of domains, you can create a reusable delegation set and then associate the reusable delegation set with new hosted zones\. \(You can't change the name servers that are associated with an existing hosted zone\.\)  
-You create a reusable delegation set and associate it with a hosted zone programmatically; using the Route 53 console isn't supported\. For more information, see [CreateHostedZone](https://docs.aws.amazon.com/Route53/latest/APIReference/API_CreateHostedZone.html) and [CreateReusableDelegationSet](https://docs.aws.amazon.com/Route53/latest/APIReference/API_CreateReusableDelegationSet.html) in the *Amazon Route 53 API Reference*\. The same feature is also available in the [AWS SDKs](https://docs.aws.amazon.com/), the [AWS Command Line Interface](https://docs.aws.amazon.com/cli/latest/reference/route53/index.html), and [AWS Tools for Windows PowerShell](https://docs.aws.amazon.com/powershell/latest/reference/)\.
+A set of four authoritative name servers that you can use with more than one hosted zone\. By default, Route 53 assigns a random selection of name servers to each new hosted zone\. To make it easier to migrate DNS service to Route 53 for a large number of domains, you can create a reusable delegation set and then associate the reusable delegation set with new hosted zones\. \(You can't change the name servers that are associated with an existing hosted zone\.\)  
+You create a reusable delegation set and associate it with a hosted zone programmatically; using the Route 53 console isn't supported\. For more information, see [CreateHostedZone](https://docs.aws.amazon.com/Route53/latest/APIReference/API_CreateHostedZone.html) and [CreateReusableDelegationSet](https://docs.aws.amazon.com/Route53/latest/APIReference/API_CreateReusableDelegationSet.html) in the *Amazon Route 53 API Reference*\. The same feature is also available in the [AWS SDKs](https://docs.aws.amazon.com/), the [AWS Command Line Interface](https://docs.aws.amazon.com/cli/latest/reference/route53/index.html), and [AWS Tools for Windows PowerShell](https://docs.aws.amazon.com/powershell/latest/reference/)\.
 
 **routing policy**  
-A setting for records that determines how Route 53 responds to DNS queries\. Route 53 supports the following routing policies:  
+A setting for records that determines how Route 53 responds to DNS queries\. Route 53 supports the following routing policies:  
 + **Simple routing policy** – Use to route internet traffic to a single resource that performs a given function for your domain, for example, a web server that serves content for the example\.com website\.
 + **Failover routing policy** – Use when you want to configure active\-passive failover\. 
 + **Geolocation routing policy** – Use when you want to route internet traffic to your resources based on the location of your users\.
 + **Geoproximity routing policy** – Use when you want to route traffic based on the location of your resources and, optionally, shift traffic from resources in one location to resources in another\.
 + **Latency routing policy** – Use when you have resources in multiple locations and you want to route traffic to the resource that provides the best latency\.
-+ **Multivalue answer routing policy** – Use when you want Route 53 to respond to DNS queries with up to eight healthy records selected at random\.
++ **Multivalue answer routing policy** – Use when you want Route 53 to respond to DNS queries with up to eight healthy records selected at random\.
 + **Weighted routing policy** – Use to route traffic to multiple resources in proportions that you specify\.
 For more information, see [Choosing a routing policy](routing-policy.md)\.
 
@@ -121,18 +121,18 @@ A domain name that has one or more labels prepended to the registered domain nam
 To route traffic for a subdomain, create a record that has the name that you want, such as www\.example\.com, and specify the applicable values, such as the IP address of a web server\. 
 
 **time to live \(TTL\)**  
-The amount of time, in seconds, that you want a DNS resolver to cache \(store\) the values for a record before submitting another request to Route 53 to get the current values for that record\. If the DNS resolver receives another request for the same domain before the TTL expires, the resolver returns the cached value\.  
-A longer TTL reduces your Route 53 charges, which are based in part on the number of DNS queries that Route 53 responds to\. A shorter TTL reduces the amount of time that DNS resolvers route traffic to older resources after you change the values in a record, for example, by changing the IP address for the web server for www\.example\.com\.
+The amount of time, in seconds, that you want a DNS resolver to cache \(store\) the values for a record before submitting another request to Route 53 to get the current values for that record\. If the DNS resolver receives another request for the same domain before the TTL expires, the resolver returns the cached value\.  
+A longer TTL reduces your Route 53 charges, which are based in part on the number of DNS queries that Route 53 responds to\. A shorter TTL reduces the amount of time that DNS resolvers route traffic to older resources after you change the values in a record, for example, by changing the IP address for the web server for www\.example\.com\.
 
 ## Health checking concepts<a name="route-53-concepts-health-checking"></a>
 
-Here's an overview of the concepts that are related to Amazon Route 53 health checking\.
+Here's an overview of the concepts that are related to Amazon Route 53 health checking\.
 + [DNS failover](#route-53-concepts-dns-failover)
 + [endpoint](#route-53-concepts-endpoint)
 + [health check](#route-53-concepts-health-check)
 
 **DNS failover**  
-A method for routing traffic away from unhealthy resources and to healthy resources\. When you have more than one resource performing the same function—for example, more than one web server or mail server—you can configure Route 53 health checks to check the health of your resources and configure records in your hosted zone to route traffic only to healthy resources\.   
+A method for routing traffic away from unhealthy resources and to healthy resources\. When you have more than one resource performing the same function—for example, more than one web server or mail server—you can configure Route 53 health checks to check the health of your resources and configure records in your hosted zone to route traffic only to healthy resources\.   
 For more information, see [Configuring DNS failover](dns-failover-configuring.md)\.
 
 **endpoint**  
@@ -140,8 +140,8 @@ The resource, such as a web server or an email server, that you configure a heal
 You can also create health checks that monitor the status of other health checks or that monitor the alarm state of a CloudWatch alarm\. 
 
 **health check**  
-A Route 53 component that lets you do the following:  
+A Route 53 component that lets you do the following:  
 + Monitor whether a specified endpoint, such as a web server, is healthy
 + Optionally, get notified when an endpoint becomes unhealthy
 + Optionally, configure DNS failover, which allows you to reroute internet traffic from an unhealthy resource to a healthy resource
-For more information about how to create and use health checks, see [Creating Amazon Route 53 health checks and configuring DNS failover](dns-failover.md)\.
+For more information about how to create and use health checks, see [Creating Amazon Route 53 health checks and configuring DNS failover](dns-failover.md)\.

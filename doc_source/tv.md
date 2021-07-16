@@ -8,7 +8,7 @@ Used for information about television and media\.
 One to ten years\.
 
 **Restrictions**  
-Domain names that are at least three letters long \(such as aaa\.tv\) are generally open to the public\. Www\.tv, the registry for \.tv domains, reserves two\-letter domain names\. You can't register two\-letter domains with or transfer them to Route 53\. For more information about \.tv domain names, see the [\.tv page](https://www.verisign.com/en_US/domain-names/tv-domain-names/index.xhtml?dmn=www.tv) on the Verisign website\.
+Domain names that are at least three letters long \(such as aaa\.tv\) are generally open to the public\. Www\.tv, the registry for \.tv domains, reserves two\-letter domain names\. You can't register two\-letter domains with or transfer them to Route 53\. For more information about \.tv domain names, see the [\.tv page](https://www.verisign.com/en_US/domain-names/tv-domain-names/index.xhtml?dmn=www.tv) on the Verisign website\.
 
 **Privacy protection \(applies to all contact types: person, company, association, and public body\)**  
 All information is hidden except organization name\.
@@ -19,7 +19,7 @@ Supported\.
 **Internationalized domain names**  
 Not supported\.
 
-**Authorization code required for transfer to Route 53**  
+**Authorization code required for transfer to Route 53**  
 Yes
 
 **DNSSEC**  
@@ -27,8 +27,8 @@ Supported for domain registration\. For more information, see [Configuring DNSSE
 
 **Deadlines for renewing and restoring domains**  
 + Renewal is possible: Until the expiration date
-+ Late renewal with Route 53 is possible: Until 44 days after expiration
-+ Domain is deleted from Route 53: 45 days after expiration
++ Late renewal with Route 53 is possible: Until 44 days after expiration
++ Domain is deleted from Route 53: 45 days after expiration
 + Restoration with the registry is possible: Between 45 days and 75 days after expiration
 + Domain is deleted from the registry: 75 days after expiration
 

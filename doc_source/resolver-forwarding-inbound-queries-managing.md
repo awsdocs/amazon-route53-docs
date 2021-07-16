@@ -13,7 +13,7 @@ To view and edit settings for an inbound endpoint, perform the following procedu
 
 **To view and edit settings for an inbound endpoint**
 
-1. Sign in to the AWS Management Console and open the Route 53 console at [https://console\.aws\.amazon\.com/route53/](https://console.aws.amazon.com/route53/)\.
+1. Sign in to the AWS Management Console and open the Route 53 console at [https://console\.aws\.amazon\.com/route53/](https://console.aws.amazon.com/route53/)\.
 
 1. In the navigation pane, choose **Inbound endpoints**\.
 
@@ -33,7 +33,7 @@ To view the status for an inbound endpoint, perform the following procedure\.<a 
 
 **To view the status for an inbound endpoint**
 
-1. Sign in to the AWS Management Console and open the Route 53 console at [https://console\.aws\.amazon\.com/route53/](https://console.aws.amazon.com/route53/)\.
+1. Sign in to the AWS Management Console and open the Route 53 console at [https://console\.aws\.amazon\.com/route53/](https://console.aws.amazon.com/route53/)\.
 
 1. In the navigation pane, choose **Inbound endpoints**\.
 
@@ -62,7 +62,7 @@ If you delete an inbound endpoint, DNS queries from your network are no longer f
 
 **To delete an inbound endpoint**
 
-1. Sign in to the AWS Management Console and open the Route 53 console at [https://console\.aws\.amazon\.com/route53/](https://console.aws.amazon.com/route53/)\.
+1. Sign in to the AWS Management Console and open the Route 53 console at [https://console\.aws\.amazon\.com/route53/](https://console.aws.amazon.com/route53/)\.
 
 1. In the navigation pane, choose **Inbound endpoints**\.
 

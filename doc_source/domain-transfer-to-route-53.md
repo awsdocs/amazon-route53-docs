@@ -1,6 +1,6 @@
-# Transferring registration for a domain to Amazon Route 53<a name="domain-transfer-to-route-53"></a>
+# Transferring registration for a domain to Amazon Route 53<a name="domain-transfer-to-route-53"></a>
 
-To transfer the registration for a domain to Amazon Route 53, carefully follow the procedures in this topic\. 
+To transfer the registration for a domain to Amazon Route 53, carefully follow the procedures in this topic\. 
 
 **Important**  
 If you skip a step, your domain might become unavailable on the internet\.
@@ -11,23 +11,23 @@ Note the following:
 If you encounter issues while transferring a domain, you can contact AWS Support for free\. For more information, see [Contacting AWS Support about domain registration issues](domain-contact-support.md)\.
 
 **Expiration date**  
-For information about how transferring your domain affects the current expiration date, see [How transferring a domain to Amazon Route 53 affects the expiration date for your domain registration](domain-transfer-to-route-53-expiration.md)\.
+For information about how transferring your domain affects the current expiration date, see [How transferring a domain to Amazon Route 53 affects the expiration date for your domain registration](domain-transfer-to-route-53-expiration.md)\.
 
 **Transfer fee**  
-When you transfer a domain to Route 53, the transfer fee that we apply to your AWS account depends on the top\-level domain, such as \.com or \.org\. For more information, see [Route 53 Pricing](https://aws.amazon.com/route53/pricing/)\.   
-You can't use AWS credits to pay the fee, if any, for transferring a domain to Route 53\.  
-Route 53 charges the fee for transferring your domain before we start the transfer process\. If a transfer fails for some reason, we immediately credit your account for the cost of the transfer\.
+When you transfer a domain to Route 53, the transfer fee that we apply to your AWS account depends on the top\-level domain, such as \.com or \.org\. For more information, see [Route 53 Pricing](https://aws.amazon.com/route53/pricing/)\.   
+You can't use AWS credits to pay the fee, if any, for transferring a domain to Route 53\.  
+Route 53 charges the fee for transferring your domain before we start the transfer process\. If a transfer fails for some reason, we immediately credit your account for the cost of the transfer\.
 
 **Special and premium domain names**  
-TLD registries have assigned special or premium prices to some domain names\. You can't transfer a domain to Route 53 if the domain has a special or premium price\.
+TLD registries have assigned special or premium prices to some domain names\. You can't transfer a domain to Route 53 if the domain has a special or premium price\.
 
 **Domain quotas**  
 The default number of domains per AWS account is 20\. You can [request a higher quota](https://console.aws.amazon.com/support/home#/case/create?issueType=service-limit-increase&limitType=service-code-route53)\. For more information, see [Quotas on domains](DNSLimitations.md#limits-api-entities-domains)\.
 
 **Topics**
 + [Transfer requirements for top\-level domains](#domain-transfer-to-route-53-requirements)
-+ [Step 1: Confirm that Amazon Route 53 supports the top\-level domain](#domain-transfer-to-route-53-confirm-tld)
-+ [Step 2 \(optional\): Transfer your DNS service to Amazon Route 53 or another DNS service provider](#domain-transfer-to-route-53-transfer-dns)
++ [Step 1: Confirm that Amazon Route 53 supports the top\-level domain](#domain-transfer-to-route-53-confirm-tld)
++ [Step 2 \(optional\): Transfer your DNS service to Amazon Route 53 or another DNS service provider](#domain-transfer-to-route-53-transfer-dns)
 + [Step 3: Change settings with the current registrar](#domain-transfer-to-route-53-change-registrar-settings)
 + [Step 4: Get the names of your name servers](#domain-transfer-to-route-53-get-name-servers)
 + [Step 5: Request the transfer](#domain-transfer-to-route-53-request-transfer)
@@ -55,17 +55,17 @@ ICANN is the organization that establishes policies governing registration and t
 
 You can also search for your domain name in [website for Whois](https://www.whois.com/whois/) to see status codes and other information for your domain\.
 
-## Step 1: Confirm that Amazon Route 53 supports the top\-level domain<a name="domain-transfer-to-route-53-confirm-tld"></a>
+## Step 1: Confirm that Amazon Route 53 supports the top\-level domain<a name="domain-transfer-to-route-53-confirm-tld"></a>
 
-See [Domains that you can register with Amazon Route 53](registrar-tld-list.md)\. If the top\-level domain for the domain that you want to transfer is on the list, you can transfer the domain to Amazon Route 53\. 
+See [Domains that you can register with Amazon Route 53](registrar-tld-list.md)\. If the top\-level domain for the domain that you want to transfer is on the list, you can transfer the domain to Amazon Route 53\. 
 
-If a TLD is not on the list, you can't currently transfer the domain registration to Route 53\. We occasionally add support more TLDs to the list, so check back to see if we've added support for your domain\. You can also submit a request for support for your TLD on the [Route 53 Domain Registration](https://forums.aws.amazon.com/forum.jspa?forumID=214) forum\.
+If a TLD is not on the list, you can't currently transfer the domain registration to Route 53\. We occasionally add support more TLDs to the list, so check back to see if we've added support for your domain\. You can also submit a request for support for your TLD on the [Route 53 Domain Registration](https://forums.aws.amazon.com/forum.jspa?forumID=214) forum\.
 
-## Step 2 \(optional\): Transfer your DNS service to Amazon Route 53 or another DNS service provider<a name="domain-transfer-to-route-53-transfer-dns"></a>
+## Step 2 \(optional\): Transfer your DNS service to Amazon Route 53 or another DNS service provider<a name="domain-transfer-to-route-53-transfer-dns"></a>
 
 **Why transfer DNS first?**
 
-Some registrars provide free DNS service that might be disabled as soon as they receive a request from Route 53 to transfer the domain's registration\. If you'd like Route 53 to provide DNS service for your domain, see [Making Amazon Route 53 the DNS service for an existing domainMaking Route 53 the DNS service for an existing domain](MigratingDNS.md)\.
+Some registrars provide free DNS service that might be disabled as soon as they receive a request from Route 53 to transfer the domain's registration\. If you'd like Route 53 to provide DNS service for your domain, see [Making Amazon Route 53 the DNS service for an existing domainMaking Route 53 the DNS service for an existing domain](MigratingDNS.md)\.
 
 ## Step 3: Change settings with the current registrar<a name="domain-transfer-to-route-53-change-registrar-settings"></a>
 
@@ -87,30 +87,30 @@ ICANN, the governing body for domain registrations, requires that you unlock you
 For more information, see [Transfer requirements for top\-level domains](#domain-transfer-to-route-53-requirements)\.
 
 ** Disable DNSSEC for the domain **  
-If you use DNSSEC with a domain and you transfer the domain registration to Route 53, you must disable DNSSEC at the former registrar first\. Then, after you transfer the domain registration, take steps to set up DNSSEC for the domain in Route 53\. Route 53 supports DNSSEC for domain registration and for DNSSEC signing\. For more information, see [Configuring DNSSEC signing in Amazon Route 53](dns-configuring-dnssec.md)\.  
-If you transfer a domain registration to Route 53 while DNSSEC is configured, the DNSSEC public keys are transferred, too\. If you transfer DNS service to a provider that doesn't support DNSSEC, DNS resolution fails intermittently until you delete the DNSSEC keys from the domain\. For more information, see [Deleting public keys for a domain](domain-configure-dnssec.md#domain-configure-dnssec-deleting-keys)\.
+If you use DNSSEC with a domain and you transfer the domain registration to Route 53, you must disable DNSSEC at the former registrar first\. Then, after you transfer the domain registration, take steps to set up DNSSEC for the domain in Route 53\. Route 53 supports DNSSEC for domain registration and for DNSSEC signing\. For more information, see [Configuring DNSSEC signing in Amazon Route 53](dns-configuring-dnssec.md)\.  
+If you transfer a domain registration to Route 53 while DNSSEC is configured, the DNSSEC public keys are transferred, too\. If you transfer DNS service to a provider that doesn't support DNSSEC, DNS resolution fails intermittently until you delete the DNSSEC keys from the domain\. For more information, see [Deleting public keys for a domain](domain-configure-dnssec.md#domain-configure-dnssec-deleting-keys)\.
 
 **Get an authorization code**  
-An authorization code from the current registrar authorizes us to request that registration for the domain be transferred to Route 53\. You'll enter this code in the Route 53 console later in the process\.  
+An authorization code from the current registrar authorizes us to request that registration for the domain be transferred to Route 53\. You'll enter this code in the Route 53 console later in the process\.  
 Some top\-level domains have additional requirements:    
 **\.co\.za domains**  
-You don't need to get an authorization code to transfer a \.co\.za domain to Route 53\.  
+You don't need to get an authorization code to transfer a \.co\.za domain to Route 53\.  
 **\.es domains**  
-If you're transferring a \.es domain to Route 53, you don't need to get an authorization code\.  
+If you're transferring a \.es domain to Route 53, you don't need to get an authorization code\.  
 **\.jp domains**  
-If you're transferring a \.jp domain to Route 53, you don't need to get an authorization code\.  
+If you're transferring a \.jp domain to Route 53, you don't need to get an authorization code\.  
 **\.uk, \.co\.uk, \.me\.uk, and \.org\.uk domains**  
-If you're transferring a \.uk, \.co\.uk, \.me\.uk, or \.org\.uk domain to Route 53, you don't need to get an authorization code\. Instead, use the method provided by your current domain registrar to update the value of the IPS tag for the domain to **GANDI**, all uppercase\. \(An IPS tag is required by Nominet, the registry for \.uk domain names\.\) If your registrar doesn't provide a way to change the value of the IPS tag, [contact Nominet](http://www.nominet.org.uk/uk-domain-names/manage-your-domain/change-registrar)\.  
+If you're transferring a \.uk, \.co\.uk, \.me\.uk, or \.org\.uk domain to Route 53, you don't need to get an authorization code\. Instead, use the method provided by your current domain registrar to update the value of the IPS tag for the domain to **GANDI**, all uppercase\. \(An IPS tag is required by Nominet, the registry for \.uk domain names\.\) If your registrar doesn't provide a way to change the value of the IPS tag, [contact Nominet](http://www.nominet.org.uk/uk-domain-names/manage-your-domain/change-registrar)\.  
 Note the following about changing the IPS tag:    
 **You must request the transfer within five days**  
 If you don't request the transfer within five days after you change the IPS tag, the tag changes back to the previous value\. You must change the value of the IPS tag again, or the transfer request will fail\.   
 **Viewing the IPS tag in WHOIS queries**  
-The change to the IPS tag doesn't appear in WHOIS queries until after the transfer to Route 53 has completed\.   
+The change to the IPS tag doesn't appear in WHOIS queries until after the transfer to Route 53 has completed\.   
 **Email from Gandi**  
-You might receive an email from our registrar associate, Gandi, about the transfer process\. If you receive an email from Gandi \(transfer\-auth@gandi\.net\) about transferring your domain, ignore the instructions in the email because they aren't relevant to Route 53\. Follow the instructions in this topic instead\.
+You might receive an email from our registrar associate, Gandi, about the transfer process\. If you receive an email from Gandi \(transfer\-auth@gandi\.net\) about transferring your domain, ignore the instructions in the email because they aren't relevant to Route 53\. Follow the instructions in this topic instead\.
 
 **Renew your domain registration before you transfer the domain \(selected geographic TLDs\)**  
-For most TLDs, when you transfer a domain, the registration is automatically extended by one year\. However, for some geographic TLDs, registration is not extended when you transfer the domain\. If you're transferring a domain to Route 53 that has one of these TLDs, we recommend that you renew the domain registration before you transfer the domain, especially if the expiration date is approaching\.  
+For most TLDs, when you transfer a domain, the registration is automatically extended by one year\. However, for some geographic TLDs, registration is not extended when you transfer the domain\. If you're transferring a domain to Route 53 that has one of these TLDs, we recommend that you renew the domain registration before you transfer the domain, especially if the expiration date is approaching\.  
 If you don't renew the domain before you transfer it, the registration could expire before the transfer is complete\. If this happens, the domain becomes unavailable on the internet, and the domain name could become available for others to purchase\.
 Registration is not automatically extended when you transfer the following domains to another registrar:  
 + \.ac \(Ascension Island\)
@@ -131,38 +131,38 @@ Registration is not automatically extended when you transfer the following domai
 
 ## Step 4: Get the names of your name servers<a name="domain-transfer-to-route-53-get-name-servers"></a>
 
-If you're using Amazon Route 53 as your DNS service or you're continuing to use the existing DNS service, we'll get the names of the name servers for you automatically later in the process\. Skip to [Step 5: Request the transfer](#domain-transfer-to-route-53-request-transfer)\.
+If you're using Amazon Route 53 as your DNS service or you're continuing to use the existing DNS service, we'll get the names of the name servers for you automatically later in the process\. Skip to [Step 5: Request the transfer](#domain-transfer-to-route-53-request-transfer)\.
 
-If you want to change the DNS service to a provider other than Route 53 at the same time that you're transferring the domain to Route 53, use the procedure provided by the DNS service provider to get the names of the name servers for each domain that you want to transfer\.
+If you want to change the DNS service to a provider other than Route 53 at the same time that you're transferring the domain to Route 53, use the procedure provided by the DNS service provider to get the names of the name servers for each domain that you want to transfer\.
 
 **Important**  
-If the registrar for your domain is also the DNS service provider for the domain, transfer your DNS service to Route 53 or another DNS service provider *before* you continue with the process to transfer the domain registration\.   
-If you transfer DNS service at the same time that you transfer domain registration, your website, email, and the web applications associated with the domain might become unavailable\. For more information, see [Step 2 \(optional\): Transfer your DNS service to Amazon Route 53 or another DNS service provider](#domain-transfer-to-route-53-transfer-dns)\.
+If the registrar for your domain is also the DNS service provider for the domain, transfer your DNS service to Route 53 or another DNS service provider *before* you continue with the process to transfer the domain registration\.   
+If you transfer DNS service at the same time that you transfer domain registration, your website, email, and the web applications associated with the domain might become unavailable\. For more information, see [Step 2 \(optional\): Transfer your DNS service to Amazon Route 53 or another DNS service provider](#domain-transfer-to-route-53-transfer-dns)\.
 
 ## Step 5: Request the transfer<a name="domain-transfer-to-route-53-request-transfer"></a>
 
-To transfer domain registration from the current registrar to Amazon Route 53, use the Route 53 console to request the transfer\. Route 53 handles the communication with the current registrar for the domain\.
+To transfer domain registration from the current registrar to Amazon Route 53, use the Route 53 console to request the transfer\. Route 53 handles the communication with the current registrar for the domain\.
 
 The procedure that you use depends on whether you want to transfer up to five domains or more than five domains:
-+ [To transfer domain registration to Route 53 for up to five domains](#domain-transfer-to-route-53-up-to-five-procedure)
-+ [To transfer domain registration to Route 53 for more than five domains](#domain-transfer-to-route-53-more-than-five-procedure)
++ [To transfer domain registration to Route 53 for up to five domains](#domain-transfer-to-route-53-up-to-five-procedure)
++ [To transfer domain registration to Route 53 for more than five domains](#domain-transfer-to-route-53-more-than-five-procedure)
 
 **Important**  
-If you use the procedure to transfer more than five domains, Route 53 automatically configures the transferred domains to use the current DNS service for all the domains that you're transferring\. If the registrar for your domain is also the DNS service provider for the domain and you don't transfer DNS service to another provider, your website, email, and the web applications associated with the domain might become unavailable\. For more information, see [Step 2 \(optional\): Transfer your DNS service to Amazon Route 53 or another DNS service provider](#domain-transfer-to-route-53-transfer-dns)\.<a name="domain-transfer-to-route-53-up-to-five-procedure"></a>
+If you use the procedure to transfer more than five domains, Route 53 automatically configures the transferred domains to use the current DNS service for all the domains that you're transferring\. If the registrar for your domain is also the DNS service provider for the domain and you don't transfer DNS service to another provider, your website, email, and the web applications associated with the domain might become unavailable\. For more information, see [Step 2 \(optional\): Transfer your DNS service to Amazon Route 53 or another DNS service provider](#domain-transfer-to-route-53-transfer-dns)\.<a name="domain-transfer-to-route-53-up-to-five-procedure"></a>
 
-**To transfer domain registration to Route 53 for up to five domains**
+**To transfer domain registration to Route 53 for up to five domains**
 
-1. Open the Route 53 console at [https://console\.aws\.amazon\.com/route53/](https://console.aws.amazon.com/route53/)\.
+1. Open the Route 53 console at [https://console\.aws\.amazon\.com/route53/](https://console.aws.amazon.com/route53/)\.
 
 1. In the navigation pane, choose **Registered Domains**\.
 
 1. Choose **Transfer Domain**\.
 
-1. Enter the name of the domain for which you want to transfer registration to Route 53, and choose **Check**\.
+1. Enter the name of the domain for which you want to transfer registration to Route 53, and choose **Check**\.
 
 1. If the domain registration is available for transfer, choose **Add to cart**\.
 
-   If the domain registration is not available for transfer, the Route 53 console lists the reasons\. Contact your registrar for information about how to resolve the issues that prevent you from transferring the registration\.
+   If the domain registration is not available for transfer, the Route 53 console lists the reasons\. Contact your registrar for information about how to resolve the issues that prevent you from transferring the registration\.
 
 1. If you want to transfer other domain registrations, repeat steps 4 and 5\. 
 
@@ -171,14 +171,14 @@ If you use the procedure to transfer more than five domains, Route 53 automatic
 1. For each domain name that you want to transfer, enter the applicable values:  
 **Authorization code**  
 Enter the authorization code that you got from your current registrar in [Step 3: Change settings with the current registrar](#domain-transfer-to-route-53-change-registrar-settings)\.  
-You don't need to enter an authorization code to transfer a \.co\.za, \.es, \.jp, \.uk, \.co\.uk, \.me\.uk, or \.org\.uk domain to Route 53\.  
+You don't need to enter an authorization code to transfer a \.co\.za, \.es, \.jp, \.uk, \.co\.uk, \.me\.uk, or \.org\.uk domain to Route 53\.  
 **Name server options**  
 Choose the applicable option:  
    + **Continue to use the name servers provided by the current registrar or DNS service** – If the current registrar for the domain is currently providing DNS service, we recommend that you transfer DNS service to another DNS service provider before you transfer the domain\. 
 **Important**  
 Some registrars stop providing DNS service as soon as you request a transfer to another registrar\. If the current registrar disables DNS service, your domain will become unavailable on the internet\.
-   + **Import name servers from a Route 53 hosted zone that has the same name as the domain** – When you select this option, the console displays a list of the hosted zones that have the same name as the domain\. Choose the hosted zone that you want to use for routing traffic for the domain\.
-   + **Specify new name servers to replace the current registrar's name servers \(not recommended\)** – If you're using a DNS service other than Route 53 for this domain, enter the names of the name servers that you got in [Step 4: Get the names of your name servers](#domain-transfer-to-route-53-get-name-servers)\. 
+   + **Import name servers from a Route 53 hosted zone that has the same name as the domain** – When you select this option, the console displays a list of the hosted zones that have the same name as the domain\. Choose the hosted zone that you want to use for routing traffic for the domain\.
+   + **Specify new name servers to replace the current registrar's name servers \(not recommended\)** – If you're using a DNS service other than Route 53 for this domain, enter the names of the name servers that you got in [Step 4: Get the names of your name servers](#domain-transfer-to-route-53-get-name-servers)\. 
 **Important**  
 We don't recommend choosing this option because transferring DNS service from one DNS service provider to another can take up to two days\. The current registrar might stop providing DNS service as soon as you request a transfer to another registrar\. If the current registrar disables DNS service, your domain will become unavailable on the internet until the change to another DNS service provider takes effect\.  
 **Name servers**  
@@ -214,15 +214,15 @@ Domain name registrations and renewals are not refundable\. If you enable automa
 
    We confirm that the domain is eligible for transfer, and we send an email to the registrant contact for the domain to request authorization to transfer the domain\. <a name="domain-transfer-to-route-53-more-than-five-procedure"></a>
 
-**To transfer domain registration to Route 53 for more than five domains**
+**To transfer domain registration to Route 53 for more than five domains**
 
-1. Open the Route 53 console at [https://console\.aws\.amazon\.com/route53/](https://console.aws.amazon.com/route53/)\.
+1. Open the Route 53 console at [https://console\.aws\.amazon\.com/route53/](https://console.aws.amazon.com/route53/)\.
 
 1. In the navigation pane, choose **Registered Domains**\.
 
 1. Choose **Transfer Domain**\.
 
-1. On the **Transfer domain to Route 53** page, choose **Transfer multiple domains to Route 53**\.
+1. On the **Transfer domain to Route 53** page, choose **Transfer multiple domains to Route 53**\.
 
 1. For each domain that you want to transfer, enter the domain name and the authorization code in the following format\. Note the comma between the domain name and the authorization code:
 
@@ -237,7 +237,7 @@ Domain name registrations and renewals are not refundable\. If you enable automa
    domain-name-3
    ```
 **Note**  
-You don't need to enter an authorization code to transfer a \.co\.za, \.es, \.jp, \.uk, \.co\.uk, \.me\.uk, or \.org\.ukdomain to Route 53\.
+You don't need to enter an authorization code to transfer a \.co\.za, \.es, \.jp, \.uk, \.co\.uk, \.me\.uk, or \.org\.ukdomain to Route 53\.
 
 1. When you've entered all the domains that you want to transfer, choose **Continue**\.
 
@@ -245,8 +245,8 @@ You don't need to enter an authorization code to transfer a \.co\.za, \.es, \.jp
 **If all domains are transferable**  
 Choose **Add transferable domains to cart**\.  
 **If one or more domains are untransferable and you want to transfer them**  
-Review [Transfer requirements for top\-level domains](#domain-transfer-to-route-53-requirements) to confirm that each untransferable domain meets the transfer requirements\. If you don't find any obvious problems, contact the current registrar to determine why the domain can't be transferred to Route 53\.  
-After you make any changes so that domains are transferable \(for example, disabling the transfer lock\), choose **Check transferability**, and Route 53 will repeat the transferability check\.  
+Review [Transfer requirements for top\-level domains](#domain-transfer-to-route-53-requirements) to confirm that each untransferable domain meets the transfer requirements\. If you don't find any obvious problems, contact the current registrar to determine why the domain can't be transferred to Route 53\.  
+After you make any changes so that domains are transferable \(for example, disabling the transfer lock\), choose **Check transferability**, and Route 53 will repeat the transferability check\.  
 **If one or more domains are untransferable and you don't want to transfer them**  
 Choose **Add transferable domains to cart**\.
 
@@ -280,7 +280,7 @@ Domain name registrations and renewals are not refundable\. If you enable automa
 
 ## Step 6: AISPL \(India\) customers only: Pay the transfer fee<a name="domain-transfer-to-route-53-aispl"></a>
 
-If your contact address is in India, your user agreement is with Amazon Internet Services Pvt\. Ltd \(AISPL\), a local AWS seller in India\. To transfer a domain to Route 53, perform the following procedure to pay the fee for transferring your domain\. <a name="domain-transfer-to-route-53-aispl-procedure"></a>
+If your contact address is in India, your user agreement is with Amazon Internet Services Pvt\. Ltd \(AISPL\), a local AWS seller in India\. To transfer a domain to Route 53, perform the following procedure to pay the fee for transferring your domain\. <a name="domain-transfer-to-route-53-aispl-procedure"></a>
 
 **To pay the transfer fee**
 
@@ -302,7 +302,7 @@ For more information, see [Managing your payments in India](https://docs.aws.ama
 Soon after you request the transfer, we might send one or more emails to the registrant contact for the domain:
 
 **Email to confirm that the registrant contact is reachable**  
-If you've never registered a domain with Route 53 or transferred a domain to Route 53, we send you an email that asks you to confirm that the email address is valid\. We retain this information so we don't have to send this confirmation email again\.
+If you've never registered a domain with Route 53 or transferred a domain to Route 53, we send you an email that asks you to confirm that the email address is valid\. We retain this information so we don't have to send this confirmation email again\.
 
 **Email to get authorization to transfer the domain**  
 For some TLDs, you need to respond to an email to authorize transfer of the domain\.    
@@ -349,7 +349,7 @@ All email comes from one of the following email addresses\.
 | \.fr |  nic@nic\.fr, if you're changing the registrant contact for a \.fr domain name at the same time that you're transferring the domain\. \(The email is sent both to the current registrant contact and the new registrant contact\.\)  | 
 | All others |  One of the following email addresses: [\[See the AWS documentation website for more details\]](http://docs.aws.amazon.com/Route53/latest/DeveloperGuide/domain-transfer-to-route-53.html)  | 
 
-To determine who the registrar is for your TLD, see [Domains that you can register with Amazon Route 53](registrar-tld-list.md)\.
+To determine who the registrar is for your TLD, see [Domains that you can register with Amazon Route 53](registrar-tld-list.md)\.
 
 ### Approval from the current registrar<a name="domain-transfer-to-route-53-authorize-transfer-registrar-approval"></a>
 
@@ -363,7 +363,7 @@ If your current registrar doesn't reply to our transfer request, which is common
 
 When your domain transfer has been approved, we send another email to the registrant contact\. For more information about the process, see [Viewing the status of a domain transfer](domain-transfer-to-route-53-status.md)\.
 
-We charge your AWS account for the domain transfer as soon as the transfer is complete\. For a list of charges by TLD, see [Amazon Route 53 Pricing for Domain Registration](https://d32ze2gidvkk54.cloudfront.net/Amazon_Route_53_Domain_Registration_Pricing_20140731.pdf)\.
+We charge your AWS account for the domain transfer as soon as the transfer is complete\. For a list of charges by TLD, see [Amazon Route 53 Pricing for Domain Registration](https://d32ze2gidvkk54.cloudfront.net/Amazon_Route_53_Domain_Registration_Pricing_20140731.pdf)\.
 
 **Note**  
 This is a one\-time charge, so the charge doesn't appear in your CloudWatch billing metrics\. For more information about CloudWatch metrics, see [Using Amazon CloudWatch metrics](https://docs.aws.amazon.com/AmazonCloudWatch/latest/monitoring/working_with_metrics.html) in the *Amazon CloudWatch User Guide*\.
@@ -373,13 +373,13 @@ This is a one\-time charge, so the charge doesn't appear in your CloudWatch bill
 After the transfer is complete, you can optionally change the following settings:
 
 **Transfer lock**  
-To transfer the domain to Route 53, you had to disable the transfer lock\. If you want to re\-enable the lock to prevent unauthorized transfers, see [Locking a domain to prevent unauthorized transfer to another registrar](domain-lock.md)\.
+To transfer the domain to Route 53, you had to disable the transfer lock\. If you want to re\-enable the lock to prevent unauthorized transfers, see [Locking a domain to prevent unauthorized transfer to another registrar](domain-lock.md)\.
 
 **Automatic renewal**  
 We configure the transferred domain to automatically renew as the expiration date approaches\. For information about how to change this setting, see [Enabling or disabling automatic renewal for a domain](domain-enable-disable-auto-renewal.md)\.
 
 **Extended registration period**  
-By default, Route 53 renews the domain annually\. If you want to register the domain for a longer period, see [Extending the registration period for a domain](domain-extend.md)\.
+By default, Route 53 renews the domain annually\. If you want to register the domain for a longer period, see [Extending the registration period for a domain](domain-extend.md)\.
 
 **DNSSEC**  
 For information about configuring DNSSEC for the domain, see [Configuring DNSSEC for a domain](domain-configure-dnssec.md)\.

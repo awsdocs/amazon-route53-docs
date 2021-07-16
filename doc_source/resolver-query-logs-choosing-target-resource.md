@@ -37,7 +37,7 @@ If you want to send logs to an S3 bucket in an account that you don't own, the o
          {
             "Effect": "Allow",
             "Principal": {
-                "AWS": "aim_user_arn_or_just_account_number_for_root"
+                "AWS": "iam_user_arn_or_account_number_for_root"
             },
             "Action": "s3:ListBucket",
             "Resource": "arn:aws:s3:::your_bucket_name"

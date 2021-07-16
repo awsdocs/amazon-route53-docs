@@ -2,33 +2,33 @@
 
 If you host a website on multiple Amazon EC2 instances, you can distribute traffic to your website across the instances by using an Elastic Load Balancing \(ELB\) load balancer\. The ELB service automatically scales the load balancer as traffic to your website changes over time\. The load balancer also can monitor the health of its registered instances and route domain traffic only to healthy instances\. 
 
-To route domain traffic to an ELB load balancer, use Amazon Route 53 to create an [alias record](https://docs.aws.amazon.com/Route53/latest/DeveloperGuide/resource-record-sets-choosing-alias-non-alias.html) that points to your load balancer\. An alias record is a Route 53 extension to DNS\. It's similar to a CNAME record, but you can create an alias record both for the root domain, such as example\.com, and for subdomains, such as www\.example\.com\. \(You can create CNAME records only for subdomains\.\) 
+To route domain traffic to an ELB load balancer, use Amazon Route 53 to create an [alias record](https://docs.aws.amazon.com/Route53/latest/DeveloperGuide/resource-record-sets-choosing-alias-non-alias.html) that points to your load balancer\. An alias record is a Route 53 extension to DNS\. It's similar to a CNAME record, but you can create an alias record both for the root domain, such as example\.com, and for subdomains, such as www\.example\.com\. \(You can create CNAME records only for subdomains\.\) 
 
 **Note**  
-Route 53 doesn't charge for alias queries to ELB load balancers or other AWS resources\.
+Route 53 doesn't charge for alias queries to ELB load balancers or other AWS resources\.
 
 ## Prerequisites<a name="routing-to-elb-load-balancer-prereqs"></a>
 
 Before you get started, you need the following:
 + An ELB load balancer\. You can use an ELB Classic, Application, or Network Load Balancer\. For information about creating a load balancer, see [Getting started with Elastic Load Balancing](https://docs.aws.amazon.com/elasticloadbalancing/latest/userguide/load-balancer-getting-started.html) in the *Elastic Load Balancing User Guide*\.
 
-  Give the load balancer a name that will help you remember what it's for later\. The name that you specify when you create a load balancer is the name that you'll choose when you create an alias record in the Route 53 console\.
-+ A registered domain name\. You can use Route 53 as your domain registrar, or you can use a different registrar\.
-+ Route 53 as the DNS service for the domain\. If you register your domain name by using Route 53, we automatically configure Route 53 as the DNS service for the domain\. 
+  Give the load balancer a name that will help you remember what it's for later\. The name that you specify when you create a load balancer is the name that you'll choose when you create an alias record in the Route 53 console\.
++ A registered domain name\. You can use Route 53 as your domain registrar, or you can use a different registrar\.
++ Route 53 as the DNS service for the domain\. If you register your domain name by using Route 53, we automatically configure Route 53 as the DNS service for the domain\. 
 
-  For information about using Route 53 as the DNS service provider for your domain, see [Making Amazon Route 53 the DNS service for an existing domainMaking Route 53 the DNS service for an existing domain](MigratingDNS.md)\.
+  For information about using Route 53 as the DNS service provider for your domain, see [Making Amazon Route 53 the DNS service for an existing domainMaking Route 53 the DNS service for an existing domain](MigratingDNS.md)\.
 
-## Configuring Amazon Route 53 to route traffic to an ELB load balancer<a name="routing-to-elb-load-balancer-configuring"></a>
+## Configuring Amazon Route 53 to route traffic to an ELB load balancer<a name="routing-to-elb-load-balancer-configuring"></a>
 
-To configure Amazon Route 53 to route traffic to an ELB load balancer, perform the following procedure\.<a name="routing-to-elb-load-balancer-procedure"></a>
+To configure Amazon Route 53 to route traffic to an ELB load balancer, perform the following procedure\.<a name="routing-to-elb-load-balancer-procedure"></a>
 
 **To route traffic to an ELB load balancer**
 
-1. If you created the Route 53 hosted zone and ELB load balancer using the same account, skip to step 2\.
+1. If you created the Route 53 hosted zone and ELB load balancer using the same account, skip to step 2\.
 
    If you created the hosted zone and the ELB load balancer using different accounts, perform the procedure [Getting the DNS name for an ELB load balancer](resource-record-sets-creating.md#resource-record-sets-elb-dns-name-procedure) to get the DNS name for the load balancer\. 
 
-1. Sign in to the AWS Management Console and open the Route 53 console at [https://console\.aws\.amazon\.com/route53/](https://console.aws.amazon.com/route53/)\.
+1. Sign in to the AWS Management Console and open the Route 53 console at [https://console\.aws\.amazon\.com/route53/](https://console.aws.amazon.com/route53/)\.
 
 1. In the navigation pane, choose **Hosted zones**\.
 
@@ -52,8 +52,8 @@ The console prepends **dualstack\.** to the DNS name of the Application and Clas
 **Record type**  
 Choose **A – IPv4 address**\.  
 **Evaluate target health**  
-If you want Route 53 to route traffic based on the health of your resources, choose **Yes**\. For more information about checking the health of your resources, see [Creating Amazon Route 53 health checks and configuring DNS failover](dns-failover.md)\.
+If you want Route 53 to route traffic based on the health of your resources, choose **Yes**\. For more information about checking the health of your resources, see [Creating Amazon Route 53 health checks and configuring DNS failover](dns-failover.md)\.
 
 1. Choose **Create records**\.
 
-   Changes generally propagate to all Route 53 servers within 60 seconds\. When propagation is done, you'll be able to route traffic to your load balancer by using the name of the alias record that you created in this procedure\. 
+   Changes generally propagate to all Route 53 servers within 60 seconds\. When propagation is done, you'll be able to route traffic to your load balancer by using the name of the alias record that you created in this procedure\. 

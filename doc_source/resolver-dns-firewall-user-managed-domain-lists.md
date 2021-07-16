@@ -16,7 +16,7 @@ As a best practice, before using a domain list in production, test it in a non\-
 
 **To add a domain list**
 
-1. Sign in to the AWS Management Console and open the Route 53 console at [https://console\.aws\.amazon\.com/route53/](https://console.aws.amazon.com/route53/)\.
+1. Sign in to the AWS Management Console and open the Route 53 console at [https://console\.aws\.amazon\.com/route53/](https://console.aws.amazon.com/route53/)\.
 
    \- OR \- 
 
@@ -30,7 +30,7 @@ As a best practice, before using a domain list in production, test it in a non\-
 
 1. Provide a name for your domain list, and then enter your domain specifications in the text box, one per line\. 
 
-   If you slide **Switch to bulk upload** to **on**, enter the URI of the Amazon Simple Storage Service bucket where you created a domain list\. This domain list should have one domain name per line\.
+   If you slide **Switch to bulk upload** to **on**, enter the URI of the Amazon S3 bucket where you created a domain list\. This domain list should have one domain name per line\.
 
 1. Choose **Add domain list**\. The **Domain lists** page lists your new domain list\. 
 

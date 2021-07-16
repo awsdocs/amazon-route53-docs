@@ -1,6 +1,6 @@
 # Viewing information about domains that are registered with Amazon Registrar<a name="domain-whois-rdap"></a>
 
-You can view information about \.com, \.net, and \.org domains that were registered using Route 53 and for which Amazon Registrar is the registrar\. This information includes details such as when the domain was originally registered and contact information for the domain owner and for the technical and administrative contacts\.
+You can view information about \.com, \.net, and \.org domains that were registered using Route 53 and for which Amazon Registrar is the registrar\. This information includes details such as when the domain was originally registered and contact information for the domain owner and for the technical and administrative contacts\.
 
 Note the following:
 

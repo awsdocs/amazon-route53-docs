@@ -4,6 +4,8 @@ With Route 53 Resolver DNS Firewall, you can filter and regulate outbound DNS tr
 
 DNS Firewall provides protection for outbound DNS requests from your VPCs\. These requests route through Resolver for domain name resolution\. A primary use of DNS Firewall protections is to help prevent DNS exfiltration of your data\. DNS exfiltration can happen when a bad actor compromises an application instance in your VPC and then uses DNS lookup to send data out of the VPC to a domain that they control\. With DNS Firewall, you can monitor and control the domains that your applications can query\. You can deny access to the domains that you know to be bad and allow all other queries to pass through\. Alternately, you can deny access to all domains except for the ones that you explicitly trust\. 
 
+You can also use DNS Firewall to block resolution requests to resources in private hosted zones \(shared or local\) including VPC endpoint names\. It can also block requests for public or private Amazon EC2 instance names\.
+
 DNS Firewall is a feature of Route 53 Resolver and doesn't require any additional Resolver setup to use\. 
 
 **AWS Firewall Manager supports DNS Firewall**  

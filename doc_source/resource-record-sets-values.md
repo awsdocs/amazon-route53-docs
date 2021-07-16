@@ -1,6 +1,6 @@
-# Values that you specify when you create or edit Amazon Route 53 records<a name="resource-record-sets-values"></a>
+# Values that you specify when you create or edit Amazon Route 53 records<a name="resource-record-sets-values"></a>
 
-When you create records using the Amazon Route 53 console, the values that you specify depend on the routing policy that you want to use and on whether you're creating alias records, which route traffic to AWS resources\.
+When you create records using the Amazon Route 53 console, the values that you specify depend on the routing policy that you want to use and on whether you're creating alias records, which route traffic to AWS resources\.
 
 **Topics**
 + [Values for simple records](resource-record-sets-values-basic.md)

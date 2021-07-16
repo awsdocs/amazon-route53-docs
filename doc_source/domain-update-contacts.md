@@ -17,15 +17,15 @@ When the contact type is **Person** and you change the **First Name** or **Last 
 When the contact type is any value except **Person** and you change **Organization**, you change the owner of the domain\.
 
 Note the following about changing the owner of a domain:
-+ For some TLDs, there's a fee to change the owner of a domain\. To determine whether there's a fee for the TLD for your domain, see the "Change Ownership Price" column in [Amazon Route 53 Pricing for Domain Registration](https://d32ze2gidvkk54.cloudfront.net/Amazon_Route_53_Domain_Registration_Pricing_20140731.pdf)\.
++ For some TLDs, there's a fee to change the owner of a domain\. To determine whether there's a fee for the TLD for your domain, see the "Change Ownership Price" column in [Amazon Route 53 Pricing for Domain Registration](https://d32ze2gidvkk54.cloudfront.net/Amazon_Route_53_Domain_Registration_Pricing_20140731.pdf)\.
 **Note**  
 You can't use AWS credits to pay the fee, if any, to change the owner of a domain\.
 + For some TLDs, when you change the owner of a domain, we send an authorization email to the email address for the registrant contact\. The registrant contact must follow the instructions in the email to authorize the change\.
-+ For some TLDs, you need to fill out a Change of Domain Ownership Form and provide proof of identity so that an Amazon Route 53 support engineer can update the values for you\. If the TLD for your domain requires a Change of Domain Ownership form, the console displays a message that links to a form for opening a support case\. For more information, see [Changing the owner of a domain when the registry requires a Change of Domain Ownership form](#domain-update-contacts-domain-ownership-form)\.
++ For some TLDs, you need to fill out a Change of Domain Ownership Form and provide proof of identity so that an Amazon Route 53 support engineer can update the values for you\. If the TLD for your domain requires a Change of Domain Ownership form, the console displays a message that links to a form for opening a support case\. For more information, see [Changing the owner of a domain when the registry requires a Change of Domain Ownership form](#domain-update-contacts-domain-ownership-form)\.
 
 ## TLDs that require special processing to change the owner<a name="domain-update-contacts-tlds"></a>
 
-When you change the owner of a domain, the registries for some TLDs require special processing\. If you're changing the owner for any of the following domains, perform the applicable procedure\. If you're changing the owner for any other domain, you can change the owner yourself, either programmatically or using the Route 53 console\. See [Updating contact information for a domain](#domain-update-contacts-basic)\.
+When you change the owner of a domain, the registries for some TLDs require special processing\. If you're changing the owner for any of the following domains, perform the applicable procedure\. If you're changing the owner for any other domain, you can change the owner yourself, either programmatically or using the Route 53 console\. See [Updating contact information for a domain](#domain-update-contacts-basic)\.
 
 The following TLDs require special processing to change the owner of the domain:
 
@@ -45,11 +45,11 @@ You must complete and submit a form to AWS Support\. See [Changing the owner of 
 **\.com\.au**  
 Perform the following steps\. You must complete the process within 14 days, or you have to start again:  
 
-1. Change the owner, either programmatically or using the Route 53 console\. See [Updating contact information for a domain](#domain-update-contacts-basic)\.
+1. Change the owner, either programmatically or using the Route 53 console\. See [Updating contact information for a domain](#domain-update-contacts-basic)\. Due to manual processes required to validate ownership changes, operations submitted within 20 days of expiration date might not be completed before the domain expires\. 
 
 1. Go to [https://domainform\.net/form/au/search?view=ownerchange](https://domainform.net/form/au/search?view=ownerchange), enter the name of your domain, and follow the prompts to get a form in PDF format\.
 
-1. Print the form, and fill it out\.
+1. Print the form, and fill it out\. Partially completed forms or forms missing required signatures may result in delays or failures\.
 
 1. Do one of the following:
    + Scan the form, save the scan in a common format, and email the scan to au\_trades@ispapi\.net\.
@@ -76,11 +76,11 @@ You must open a case with AWS Support\. See [Contacting AWS Support about domain
 **\.net\.au**  
 Perform the following steps\. You must complete the process within 14 days, or you have to start again:  
 
-1. Change the owner, either programmatically or using the Route 53 console\. See [Updating contact information for a domain](#domain-update-contacts-basic)\.
+1. Change the owner, either programmatically or using the Route 53 console\. See [Updating contact information for a domain](#domain-update-contacts-basic)\. Due to manual processes required to validate ownership changes, operations submitted within 20 days of expiration date might not be completed before the domain expires\. 
 
 1. Go to [https://domainform\.net/form/au/search?view=ownerchange](https://domainform.net/form/au/search?view=ownerchange), enter the name of your domain, and follow the prompts to get a form in PDF format\.
 
-1. Print the form, and fill it out\.
+1. Print the form, and fill it out\. Partially completed forms or forms missing required signatures may result in delays or failures\.
 
 1. Do one of the following:
    + Scan the form, save the scan in a common format, and email the scan to au\_trades@ispapi\.net\.
@@ -107,7 +107,7 @@ To update contact information for a domain, perform the following procedure\. <a
 
 **To update contact information for a domain**
 
-1. Sign in to the AWS Management Console and open the Route 53 console at [https://console\.aws\.amazon\.com/route53/](https://console.aws.amazon.com/route53/)\.
+1. Sign in to the AWS Management Console and open the Route 53 console at [https://console\.aws\.amazon\.com/route53/](https://console.aws.amazon.com/route53/)\.
 
 1. In the navigation pane, choose **Registered Domains**\.
 
@@ -121,7 +121,7 @@ To update contact information for a domain, perform the following procedure\. <a
 
       Choose **Save**\.
 
-      If the new email address is an address that you have never verified is reachable, we send email to the new email address\. You must choose the link in the email to verify that the new email address is valid\. If you don't verify the new email address, Route 53 suspends the domain as required by ICANN\. 
+      If the new email address is an address that you have never verified is reachable, we send email to the new email address\. You must choose the link in the email to verify that the new email address is valid\. If you don't verify the new email address, Route 53 suspends the domain as required by ICANN\. 
 
    1. If you want to change other values for the registrant, administrative, or technical contacts for the domain, return to step 1 and repeat the procedure\.
 

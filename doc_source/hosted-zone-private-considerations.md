@@ -2,7 +2,7 @@
 
 When using private hosted zones, note the following considerations\.
 + [Amazon VPC settings](#hosted-zone-private-considerations-vpc-settings)
-+ [Route 53 health checks](#hosted-zone-private-considerations-health-checks)
++ [Route 53 health checks](#hosted-zone-private-considerations-health-checks)
 + [Supported routing policies for records in a private hosted zone](#hosted-zone-private-considerations-routing-policies)
 + [Split-view DNS](#hosted-zone-private-considerations-split-view-dns)
 + [Public and private hosted zones that have overlapping namespaces](#hosted-zone-private-considerations-public-private-overlapping)
@@ -18,8 +18,8 @@ To use private hosted zones, you must set the following Amazon VPC settings to `
 + `enableDnsSupport`
 For more information, see [Updating DNS support for your VPC](https://docs.aws.amazon.com/vpc/latest/userguide/vpc-dns.html#vpc-dns-updating) in the *Amazon VPC User Guide*\.
 
-**Route 53 health checks**  
-In a private hosted zone, you can associate Route 53 health checks only with failover, multivalue answer, and weighted records\. For information about associating health checks with failover records, see [Configuring failover in a private hosted zone](dns-failover-private-hosted-zones.md)\.
+**Route 53 health checks**  
+In a private hosted zone, you can associate Route 53 health checks only with failover, multivalue answer, and weighted records\. For information about associating health checks with failover records, see [Configuring failover in a private hosted zone](dns-failover-private-hosted-zones.md)\.
 
 **Supported routing policies for records in a private hosted zone**  
 You can use the following routing policies when you create records in a private hosted zone:  
@@ -30,7 +30,7 @@ You can use the following routing policies when you create records in a private 
 Creating records in a private hosted zone using other routing policies is not supported\.
 
 **Split\-view DNS**  
-You can use Route 53 to configure split\-view DNS, also known as split\-horizon DNS\. In split\-view DNS, you use the same domain name \(example\.com\) for internal uses \(accounting\.example\.com\) and external uses, such as your public website \(www\.example\.com\)\. You might also want to use the same subdomain name internally and externally, but serve different content or require different authentication for internal and external users\.  
+You can use Route 53 to configure split\-view DNS, also known as split\-horizon DNS\. In split\-view DNS, you use the same domain name \(example\.com\) for internal uses \(accounting\.example\.com\) and external uses, such as your public website \(www\.example\.com\)\. You might also want to use the same subdomain name internally and externally, but serve different content or require different authentication for internal and external users\.  
 To configure split\-view DNS, you perform the following steps:  
 
 1. Create public and private hosted zones that have the same name\. \(Split\-view DNS still works if you're using another DNS service for the public hosted zone\.\)
@@ -95,4 +95,4 @@ If you have configured custom DNS servers on Amazon EC2 instances in your VPC, y
 If you want to route DNS queries between VPCs and your network, you can use Resolver\. For more information, see [Resolving DNS queries between VPCs and your network](resolver.md)\.
 
 **Required IAM permissions**  
-To create private hosted zones, you need to grant IAM permissions for Amazon EC2 actions in addition to permissions for Route 53 actions\. For more information, see [Required permissions for actions on private hosted zones](r53-api-permissions-ref.md#required-permissions-private-hosted-zones)\.
+To create private hosted zones, you need to grant IAM permissions for Amazon EC2 actions in addition to permissions for Route 53 actions\. For more information, see [Required permissions for actions on private hosted zones](r53-api-permissions-ref.md#required-permissions-private-hosted-zones)\.
