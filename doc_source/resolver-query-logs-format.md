@@ -57,7 +57,7 @@ The list of IDs of the sources the DNS query originated from or passed through\.
 **instance**  
 The ID of the instance that the query originated from\.
 
-**resolver\-endpoint**  
+**resolver\_endpoint**  
 The ID of the resolver endpoint that passes the DNS query to on\-premises DNS servers\.
 
 **firewall\_rule\_group\_id**  
