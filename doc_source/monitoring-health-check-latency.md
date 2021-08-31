@@ -6,7 +6,10 @@ When you create a health check, if you choose to monitor the status of an endpoi
 + The average time, in milliseconds, that it took Route 53 health checkers to complete the SSL/TLS handshake
 
 **Note**  
-You can't enable latency monitoring for existing health checks\.<a name="monitoring-latency-procedure"></a>
+You can't enable latency monitoring for existing health checks\.
+
+**Important**  
+The health checkers are run on 16 redundant availability zones\. Occasionally an availability zone can be unavailable because of deployments, updates, maintenance, and so on\. The health check system is designed to account for this without any customer impact\.<a name="monitoring-latency-procedure"></a>
 
 **To view the latency between Route 53 health checkers and your endpoint \(console\)**
 

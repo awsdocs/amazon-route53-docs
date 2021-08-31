@@ -83,7 +83,7 @@ If you're using a programming language that AWS doesn't provide an SDK for, you 
 
 ## Step 4: Update the domain registration to use Amazon Route 53 name servers \(inactive domains\)<a name="migrate-dns-update-domain-inactive"></a>
 
-When you've finished creating records for the domain, you can change the DNS service for your domain to Amazon Route 53\. Perform the following procedure to update settings with the domain registrar\.<a name="migrate-dns-update-domain-inactive-procedure"></a>
+When you've finished creating records for the domain, you can change the DNS service for your domain to Amazon Route 53 \. Perform the following procedure to update settings with the domain registrar\.<a name="migrate-dns-update-domain-inactive-procedure"></a>
 
 **To update the name servers for the domain**
 

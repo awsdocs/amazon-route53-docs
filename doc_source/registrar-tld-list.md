@@ -1,6 +1,6 @@
 # Domains that you can register with Amazon Route 53<a name="registrar-tld-list"></a>
 
-The following lists of generic and geographic top\-level domains show the top\-level domains \(TLDs\) that you can use to register domains with Amazon Route 53\. We continue to add support for more TLDs, and we decide which TLDs to add based in part on customer feedback\. To suggest a TLD that you'd like us to add, enter a comment on the [Amazon Route 53 Domain Registration forum](https://forums.aws.amazon.com/forum.jspa?forumID=214)\.
+The following lists of generic and geographic top\-level domains show the top\-level domains \(TLDs\) that you can use to register domains with Amazon Route 53 \. We continue to add support for more TLDs, and we decide which TLDs to add based in part on customer feedback\. To suggest a TLD that you'd like us to add, enter a comment on the [Amazon Route 53 Domain Registration forum](https://forums.aws.amazon.com/forum.jspa?forumID=214)\.
 
 **Registering domains with Route 53**  
 You can register a domain with Route 53 if the TLD is included on the following lists\. If the TLD isn't included, you can't register the domain with Route 53\. 

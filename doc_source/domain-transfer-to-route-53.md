@@ -1,6 +1,6 @@
 # Transferring registration for a domain to Amazon Route 53<a name="domain-transfer-to-route-53"></a>
 
-To transfer the registration for a domain to Amazon Route 53, carefully follow the procedures in this topic\. 
+To transfer the registration for a domain to Amazon Route 53 , carefully follow the procedures in this topic\. 
 
 **Important**  
 If you skip a step, your domain might become unavailable on the internet\.
@@ -23,6 +23,9 @@ TLD registries have assigned special or premium prices to some domain names\. Yo
 
 **Domain quotas**  
 The default number of domains per AWS account is 20\. You can [request a higher quota](https://console.aws.amazon.com/support/home#/case/create?issueType=service-limit-increase&limitType=service-code-route53)\. For more information, see [Quotas on domains](DNSLimitations.md#limits-api-entities-domains)\.
+
+**Nameservers limit**  
+The maximum number of nameservers per domain is 6\.
 
 **Topics**
 + [Transfer requirements for top\-level domains](#domain-transfer-to-route-53-requirements)
@@ -57,7 +60,7 @@ You can also search for your domain name in [website for Whois](https://www.whoi
 
 ## Step 1: Confirm that Amazon Route 53 supports the top\-level domain<a name="domain-transfer-to-route-53-confirm-tld"></a>
 
-See [Domains that you can register with Amazon Route 53](registrar-tld-list.md)\. If the top\-level domain for the domain that you want to transfer is on the list, you can transfer the domain to Amazon Route 53\. 
+See [Domains that you can register with Amazon Route 53 ](registrar-tld-list.md)\. If the top\-level domain for the domain that you want to transfer is on the list, you can transfer the domain to Amazon Route 53 \. 
 
 If a TLD is not on the list, you can't currently transfer the domain registration to Route 53\. We occasionally add support more TLDs to the list, so check back to see if we've added support for your domain\. You can also submit a request for support for your TLD on the [Route 53 Domain Registration](https://forums.aws.amazon.com/forum.jspa?forumID=214) forum\.
 
@@ -87,7 +90,7 @@ ICANN, the governing body for domain registrations, requires that you unlock you
 For more information, see [Transfer requirements for top\-level domains](#domain-transfer-to-route-53-requirements)\.
 
 ** Disable DNSSEC for the domain **  
-If you use DNSSEC with a domain and you transfer the domain registration to Route 53, you must disable DNSSEC at the former registrar first\. Then, after you transfer the domain registration, take steps to set up DNSSEC for the domain in Route 53\. Route 53 supports DNSSEC for domain registration and for DNSSEC signing\. For more information, see [Configuring DNSSEC signing in Amazon Route 53](dns-configuring-dnssec.md)\.  
+If you use DNSSEC with a domain and you transfer the domain registration to Route 53, you must disable DNSSEC at the former registrar first\. Then, after you transfer the domain registration, take steps to set up DNSSEC for the domain in Route 53\. Route 53 supports DNSSEC for domain registration and for DNSSEC signing\. For more information, see [Configuring DNSSEC signing in Amazon Route 53 ](dns-configuring-dnssec.md)\.  
 If you transfer a domain registration to Route 53 while DNSSEC is configured, the DNSSEC public keys are transferred, too\. If you transfer DNS service to a provider that doesn't support DNSSEC, DNS resolution fails intermittently until you delete the DNSSEC keys from the domain\. For more information, see [Deleting public keys for a domain](domain-configure-dnssec.md#domain-configure-dnssec-deleting-keys)\.
 
 **Get an authorization code**  
@@ -141,7 +144,7 @@ If you transfer DNS service at the same time that you transfer domain registrati
 
 ## Step 5: Request the transfer<a name="domain-transfer-to-route-53-request-transfer"></a>
 
-To transfer domain registration from the current registrar to Amazon Route 53, use the Route 53 console to request the transfer\. Route 53 handles the communication with the current registrar for the domain\.
+To transfer domain registration from the current registrar to Amazon Route 53 , use the Route 53 console to request the transfer\. Route 53 handles the communication with the current registrar for the domain\.
 
 The procedure that you use depends on whether you want to transfer up to five domains or more than five domains:
 + [To transfer domain registration to Route 53 for up to five domains](#domain-transfer-to-route-53-up-to-five-procedure)
@@ -349,7 +352,7 @@ All email comes from one of the following email addresses\.
 | \.fr |  nic@nic\.fr, if you're changing the registrant contact for a \.fr domain name at the same time that you're transferring the domain\. \(The email is sent both to the current registrant contact and the new registrant contact\.\)  | 
 | All others |  One of the following email addresses: [\[See the AWS documentation website for more details\]](http://docs.aws.amazon.com/Route53/latest/DeveloperGuide/domain-transfer-to-route-53.html)  | 
 
-To determine who the registrar is for your TLD, see [Domains that you can register with Amazon Route 53](registrar-tld-list.md)\.
+To determine who the registrar is for your TLD, see [Domains that you can register with Amazon Route 53 ](registrar-tld-list.md)\.
 
 ### Approval from the current registrar<a name="domain-transfer-to-route-53-authorize-transfer-registrar-approval"></a>
 

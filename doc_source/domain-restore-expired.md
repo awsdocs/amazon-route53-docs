@@ -13,7 +13,7 @@ You can't use AWS credits to pay the fee for restoring an expired domain\.<a nam
 
 1. Determine whether the TLD registry for the domain supports restoring domains and, if so, the period during which restoration is allowed\.
 
-   1. Go to [Domains that you can register with Amazon Route 53](registrar-tld-list.md)\.
+   1. Go to [Domains that you can register with Amazon Route 53 ](registrar-tld-list.md)\.
 
    1. Find the TLD for your domain, and review the values in the "Deadlines for renewing and restoring domains" section\. 
 **Important**  

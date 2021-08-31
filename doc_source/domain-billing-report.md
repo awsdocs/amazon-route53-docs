@@ -3,7 +3,7 @@
 If your AWS bill is charged to a credit card, you receive a separate invoice for each domain transaction\. These invoices don't include the domain name\. If you manage multiple domains and you want to view charges by domain for a specified time period, you can download a domain billing report\. This report includes all charges that apply to domain registration, including the following:
 + Registering a domain
 + Renewing registration for a domain
-+ Transferring a domain to Amazon Route 53
++ Transferring a domain to Amazon Route 53 
 + Changing the owner of a domain \(for some TLDs, this operation is free\)
 
 **Note**  

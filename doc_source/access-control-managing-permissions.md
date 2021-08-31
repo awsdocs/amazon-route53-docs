@@ -8,7 +8,7 @@ We recommend that you first review the introductory topics that explain the basi
 **Topics**
 + [Permissions required to use the Amazon Route 53 console](#console-required-permissions)
 + [Example permissions for a domain record owner](#example-permissions-record-owner)
-+ [Route 53 CMK permissions required for DNSSEC signing](#KMS-key-policy-for-DNSSEC)
++ [Route 53 customer managed key permissions required for DNSSEC signing](#KMS-key-policy-for-DNSSEC)
 + [Customer managed policy examples](#access-policy-examples-for-sdk-cli)
 
 The following example shows a permissions policy\. The `Sid`, or statement ID, is optional:
@@ -196,11 +196,11 @@ The following is an example IAM policy that allows a record owner to make modifi
 }
 ```
 
-## Route 53 CMK permissions required for DNSSEC signing<a name="KMS-key-policy-for-DNSSEC"></a>
+## Route 53 customer managed key permissions required for DNSSEC signing<a name="KMS-key-policy-for-DNSSEC"></a>
 
-When you enable DNSSEC signing for Route 53, Route 53 creates a key\-signing key \(KSK\) based on a customer managed customer master key \(CMK\) in AWS Key Management Service \(AWS KMS\)\. You can use an existing customer managed CMK that supports DNSSEC signing or create a new one\. Route 53 must have permission to access your CMK so that it can create the KSK for you\. 
+When you enable DNSSEC signing for Route 53, Route 53 creates a key\-signing key \(KSK\) based on a customer managed key in AWS Key Management Service \(AWS KMS\)\. You can use an existing customer managed key that supports DNSSEC signing or create a new one\. Route 53 must have permission to access your customer managed key so that it can create the KSK for you\. 
 
-To enable Route 53 to access your CMK, make sure that your CMK policy contains the following statements:
+To enable Route 53 to access your customer managed key, make sure that your customer managed key policy contains the following statements:
 
 ```
 {

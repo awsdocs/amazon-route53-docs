@@ -11,7 +11,7 @@ The overview and procedures in this section help you get started with AWS\.
 
 ## Sign up for AWS<a name="setting-up-sign-up-for-aws"></a>
 
-When you sign up for AWS, your AWS account is automatically signed up for all services in AWS, including Amazon Route 53\. You are charged only for the services that you use\.
+When you sign up for AWS, your AWS account is automatically signed up for all services in AWS, including Amazon Route 53 \. You are charged only for the services that you use\.
 
 If you have an AWS account already, skip to [Access your account](#setting-up-access-account)\. If you don't have an AWS account, use the following procedure to create one\.<a name="setting-up-sign-up-for-aws-procedure"></a>
 
@@ -118,7 +118,7 @@ If you don't want the URL for your sign\-in page to contain your AWS account ID,
 
 To verify the sign\-in link for IAM users for your account, open the IAM console and check under **IAM users sign\-in link** on the dashboard\.
 
-For more information about using IAM, see [Identity and access management in Amazon Route 53](auth-and-access-control.md)\.
+For more information about using IAM, see [Identity and access management in Amazon Route 53 ](auth-and-access-control.md)\.
 
 ## Set up the AWS Command Line Interface or AWS Tools for Windows PowerShell<a name="setting-up-aws-cli"></a>
 

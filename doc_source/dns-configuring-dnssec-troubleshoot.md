@@ -3,8 +3,8 @@
 The information in this section can help you address issues with DNSSEC signing, including with your key\-signing keys \(KSKs\)\.
 
 KSK status is **Action needed**  
-If the status for a KSK is **Action needed**, you must fix the customer managed customer master key \(CMK\) that the KSK is based on\. For example, the permissions might have been changed for the customer managed CMK, or the customer managed CMK might have been removed\.  
-To correct the problem, make sure that the customer managed CMK that your KSK is based on has the correct permissions\. For more information, see [Route 53 CMK permissions required for DNSSEC signing](access-control-managing-permissions.md#KMS-key-policy-for-DNSSEC)\.
+If the status for a KSK is **Action needed**, you must fix the customer managed key that the KSK is based on\. For example, the permissions might have been changed for the customer managed key, or the customer managed key might have been removed\.  
+To correct the problem, make sure that the customer managed key that your KSK is based on has the correct permissions\. For more information, see [Route 53 customer managed key permissions required for DNSSEC signing](access-control-managing-permissions.md#KMS-key-policy-for-DNSSEC)\.
 
 KSK status is **Internal failure**  
 When a KSK has a status of **Internal failure**, you can't work with any other DNSSEC entities until the problem is resolved\. You must take action before you can work with DNSSEC signing, including working with this KSK or your other KSK\.  

@@ -49,7 +49,7 @@ Three space\-separated values that control which certificate authorities are all
 The fully qualified domain name \(for example, *www\.example\.com*\) that you want Route 53 to return in response to DNS queries for this record\. A trailing dot is optional; Route 53 assumes that the domain name is fully qualified\. This means that Route 53 treats *www\.example\.com* \(without a trailing dot\) and *www\.example\.com\.* \(with a trailing dot\) as identical\.
 
 **MX — Mail exchange**  
-A priority and a domain name that specifies a mail server, for example, **10 mailserver\.example\.com**\.
+A priority and a domain name that specifies a mail server, for example, **10 mailserver\.example\.com**\. The trailing dot is treated as optional\.
 
 **NAPTR — Name Authority Pointer**  
 Six space\-separated settings that are used by Dynamic Delegation Discovery System \(DDDS\) applications to convert one value to another or to replace one value with another\. For more information, see [NAPTR record type](ResourceRecordTypes.md#NAPTRFormat)\.
@@ -64,7 +64,7 @@ The domain name that you want Route 53 to return\.
 An SPF record enclosed in quotation marks, for example, **"v=spf1 ip4:192\.168\.0\.1/16\-all"**\. SPF records are not recommended\. For more information, see [Supported DNS record types](ResourceRecordTypes.md)\.
 
 **SRV — Service locator**  
-An SRV record\. SRV records are used for accessing services, such as a service for email or communications\. For information about SRV record format, refer to the documentation for the service that you want to connect to\.   
+An SRV record\. SRV records are used for accessing services, such as a service for email or communications\. For information about SRV record format, refer to the documentation for the service that you want to connect to\. Trailisng dot is treated as optional\.  
 The format of an SRV record is:  
 **\[priority\] \[weight\] \[port\] \[server host name\]**  
 For example:  

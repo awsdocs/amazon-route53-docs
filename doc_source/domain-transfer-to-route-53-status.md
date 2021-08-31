@@ -1,6 +1,6 @@
 # Viewing the status of a domain transfer<a name="domain-transfer-to-route-53-status"></a>
 
-After you initiate the transfer of a domain from another domain registrar to Amazon Route 53, you can track the status on the **Pending requests** page of the Route 53 console\. The **Status** column includes a brief description of the current step\. The following list includes the text in the console and a more detailed description of each step\.
+After you initiate the transfer of a domain from another domain registrar to Amazon Route 53 , you can track the status on the **Pending requests** page of the Route 53 console\. The **Status** column includes a brief description of the current step\. The following list includes the text in the console and a more detailed description of each step\.
 
 **Note**  
 When you submit a transfer request, the initial status is **Domain transfer request submitted**, which indicates that we've received your request\.

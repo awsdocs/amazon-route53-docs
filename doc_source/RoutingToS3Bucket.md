@@ -9,14 +9,17 @@ Route 53 doesn't charge for alias queries to S3 buckets or other AWS resources\.
 
 ## Prerequisites<a name="routing-to-s3-bucket-prereqs"></a>
 
-Before you get started, you need the following\. If you're new to Amazon Route 53 or S3, see [Getting started with Amazon Route 53](getting-started.md), which guides you through the entire process, including registering a domain name, and creating and configuring an S3 bucket\.
-+ An S3 bucket and, if you want to use SSL/TLS, a CloudFront distribution:  
-**If you don't want to use SSL/TLS to encrypt traffic**  
-An S3 bucket that's configured to host a static website\. For more information, see [Configure a bucket for website hosting](https://docs.aws.amazon.com/AmazonS3/latest/dev/HowDoIWebsiteConfiguration.html) in the *Amazon Simple Storage Service Developer Guide*\.  
+Before you get started, you need the following\. If you're new to Amazon Route 53 or S3, see [Getting started with Amazon Route 53 ](getting-started.md), which guides you through the entire process, including registering a domain name, and creating and configuring an S3 bucket\.
++ An S3 bucket that's configured to host a static website\.
+
+   For more information, see [Configure a bucket for website hosting](https://docs.aws.amazon.com/AmazonS3/latest/dev/HowDoIWebsiteConfiguration.html) in the *Amazon Simple Storage Service Developer Guide*\.
+**Important**  
 The bucket must have the same name as your domain or subdomain\. For example, if you want to use the subdomain acme\.example\.com, the name of the bucket must be acme\.example\.com\.
-You can route traffic for a domain and its subdomains, such as example\.com and www\.example\.com, to a single bucket\. Create a bucket for the domain and each subdomain, and configure all but one of the buckets to redirect traffic to the remaining bucket\. For more information, see [Getting started with Amazon Route 53](getting-started.md)\.  
-**If you do want to use SSL/TLS to encrypt traffic**  
-An S3 bucket that's *not* configured to host a static website, and a CloudFront distribution that's configured to use your S3 bucket as the origin\. An S3 bucket that's configured as a website endpoint doesn't support SSL/TLS, so you need to route traffic to the CloudFront distribution and use the S3 bucket as the origin for the distribution\. For more information, see [Requiring HTTPS for communication between viewers and CloudFront](https://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/using-https-viewers-to-cloudfront.html) in the *Amazon CloudFront Developer Guide*\.
+
+  You can route traffic for a domain and its subdomains, such as example\.com and www\.example\.com, to a single bucket\. Create a bucket for the domain and each subdomain, and configure all but one of the buckets to redirect traffic to the remaining bucket\. For more information, see [Getting started with Amazon Route 53 ](getting-started.md)\.
+**Note**  
+An S3 bucket that's configured as a website endpoint doesn't support SSL/TLS, so you need to route traffic to the CloudFront distribution and use the S3 bucket as the origin for the distribution\.  
+For instructions on how to create a CloudFront distribution, see [Create a CloudFront distribution](https://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/GettingStarted.SimpleDistribution.html#GettingStartedCreateDistribution) and [Configuring alternate domain names and HTTPS](https://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/cnames-and-https-procedures.html) in the *CloudFront User Guide*, as well as [Routing traffic to an Amazon CloudFront distribution by using your domain name](routing-to-cloudfront-distribution.md)\.
 + A registered domain name\. You can use Route 53 as your domain registrar, or you can use a different registrar\.
 + Route 53 as the DNS service for the domain\. If you register your domain name by using Route 53, we automatically configure Route 53 as the DNS service for the domain\. 
 

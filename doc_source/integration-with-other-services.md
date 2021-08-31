@@ -29,7 +29,7 @@ Amazon API Gateway lets you create, publish, maintain, monitor, and secure APIs 
 You can use Route 53 to route traffic to an API Gateway API\. For more information, see [Routing traffic to an Amazon API Gateway API by using your domain name](routing-to-api-gateway.md)\.
 
 **Amazon CloudFront**  
-To speed up delivery of your web content, you can use Amazon CloudFront, the AWS content delivery network \(CDN\)\. CloudFront can deliver your entire website—including dynamic, static, streaming, and interactive content—by using a global network of edge locations\. CloudFront routes requests for your content to the edge location that gives your users the lowest latency\. You can use Route 53 to route traffic for your domain to your CloudFront distribution\. For more information, see [Routing traffic to an Amazon CloudFront web distribution by using your domain name](routing-to-cloudfront-distribution.md)\.
+To speed up delivery of your web content, you can use Amazon CloudFront, the AWS content delivery network \(CDN\)\. CloudFront can deliver your entire website—including dynamic, static, streaming, and interactive content—by using a global network of edge locations\. CloudFront routes requests for your content to the edge location that gives your users the lowest latency\. You can use Route 53 to route traffic for your domain to your CloudFront distribution\. For more information, see [Routing traffic to an Amazon CloudFront distribution by using your domain name](routing-to-cloudfront-distribution.md)\.
 
 **Amazon EC2**  
 Amazon EC2 provides scalable computing capacity in the AWS Cloud\. You can launch an EC2 virtual computing environment \(an instance\) using a preconfigured template \(an Amazon Machine Image, or AMI\)\. When you launch an EC2 instance, EC2 automatically installs the operating system \(Linux or Microsoft Windows\) and additional software included in the AMI, such as web server or database software\.  
@@ -52,7 +52,7 @@ If you use an Amazon RDS database instance for data storage for your web applica
 **Amazon S3**  
 Amazon Simple Storage Service \(Amazon S3\) provides secure, durable, highly scalable cloud storage\. You can configure an S3 bucket to host a static website that can include web pages and client\-side scripts\. \(S3 doesn't support server\-side scripting\.\) You can use Route 53 to route traffic to an Amazon S3 bucket\. For more information, see the following topics:  
 + For information about routing traffic to a bucket, see [Routing traffic to a website that is hosted in an Amazon S3 bucket](RoutingToS3Bucket.md)\.
-+ For a more detailed explanation of how to host a static website in an S3 bucket, see [Getting started with Amazon Route 53](getting-started.md)\.
++ For a more detailed explanation of how to host a static website in an S3 bucket, see [Getting started with Amazon Route 53 ](getting-started.md)\.
 
 **Amazon Virtual Private Cloud \(Amazon VPC\)**  
 An interface endpoint lets you connect to services that are powered by AWS PrivateLink\. These services include some AWS services, services hosted by other AWS customers and partners in their own VPCs \(referred to as *endpoint services*\), and supported AWS Marketplace partner services\.  

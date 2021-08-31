@@ -4,24 +4,24 @@ If you changed DNS settings, here are some common reasons that the changes haven
 
 **Topics**
 + [You transferred DNS service to Amazon Route 53 in the last 48 hours, so DNS is still using your previous DNS service](#troubleshooting-new-dns-settings-not-in-effect-recent-dns-transfer)
-+ [You recently transferred DNS service to Amazon Route 53, but you didn't update the name servers with the domain registrar](#troubleshooting-new-dns-settings-not-in-effect-recent-transfer-wrong-name-servers)
++ [You recently transferred DNS service to Amazon Route 53 , but you didn't update the name servers with the domain registrar](#troubleshooting-new-dns-settings-not-in-effect-recent-transfer-wrong-name-servers)
 + [DNS resolvers still are using the old settings for the record](#troubleshooting-new-dns-settings-not-in-effect-cached-resource-record-set)
 + [You have more than one hosted zone with the same name, and you updated the one that isn't associated with the domain](#troubleshooting-new-dns-settings-not-in-effect-updated-wrong-hosted-zone)
 
 ## You transferred DNS service to Amazon Route 53 in the last 48 hours, so DNS is still using your previous DNS service<a name="troubleshooting-new-dns-settings-not-in-effect-recent-dns-transfer"></a>
 
-When you transferred DNS service to Amazon Route 53, you used the method provided by the registrar for your domain to replace the name servers for the previous DNS service with the four name servers for Route 53\.
+When you transferred DNS service to Amazon Route 53 , you used the method provided by the registrar for your domain to replace the name servers for the previous DNS service with the four name servers for Route 53\.
 
 **Note**  
-If you aren't sure you did this part, see [You recently transferred DNS service to Amazon Route 53, but you didn't update the name servers with the domain registrar](#troubleshooting-new-dns-settings-not-in-effect-recent-transfer-wrong-name-servers)\.
+If you aren't sure you did this part, see [You recently transferred DNS service to Amazon Route 53 , but you didn't update the name servers with the domain registrar](#troubleshooting-new-dns-settings-not-in-effect-recent-transfer-wrong-name-servers)\.
 
 Domain registrars typically use a TTL \(time to live\) of 24 to 48 hours for name servers\. This means that when a DNS resolver gets the name servers for your domain, it uses that information for up to 48 hours before it submits another request for the current name servers for the domain\. If you transferred DNS service to Route 53 in the last 48 hours and then changed DNS settings, some DNS resolvers are still using your old DNS service to route traffic for the domain\.
 
-## You recently transferred DNS service to Amazon Route 53, but you didn't update the name servers with the domain registrar<a name="troubleshooting-new-dns-settings-not-in-effect-recent-transfer-wrong-name-servers"></a>
+## You recently transferred DNS service to Amazon Route 53 , but you didn't update the name servers with the domain registrar<a name="troubleshooting-new-dns-settings-not-in-effect-recent-transfer-wrong-name-servers"></a>
 
 The registrar for your domain has a variety of information about the domain, including the name servers for the DNS service for the domain\. Typically, the domain registrar is also your DNS service, so the name servers that are associated with your domain belong to the registrar\. These name servers tell DNS where to get information about how you want traffic for your domain to be routed, for example, to the IP address of a web server for your domain\.
 
-When you transfer DNS service to Amazon Route 53, you need to use the method that is provided by your domain registrar to change the name servers that are associated with your domain\. You're usually replacing the name servers that are provided by the registrar with the four Route 53 name servers that are associated with the hosted zone that you created for the domain\.
+When you transfer DNS service to Amazon Route 53 , you need to use the method that is provided by your domain registrar to change the name servers that are associated with your domain\. You're usually replacing the name servers that are provided by the registrar with the four Route 53 name servers that are associated with the hosted zone that you created for the domain\.
 
 If you created a new hosted zone and records for your domain and specified different settings than you used for the previous DNS service, and if DNS is still routing traffic to the old resources, it's possible that you didn't update the name servers with the domain registrar\. To determine whether the registrar is using the name servers for your Route 53 hosted zone and, if necessary, to update the name servers for the domain, perform the following procedure:<a name="troubleshooting-new-dns-settings-not-in-effect-recent-transfer-wrong-name-servers-procedure"></a>
 

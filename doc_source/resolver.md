@@ -1,6 +1,10 @@
 # Resolving DNS queries between VPCs and your network<a name="resolver"></a>
 
-When you create a VPC using Amazon VPC, Route 53 Resolver automatically answers DNS queries for local VPC domain names for EC2 instances \(ec2\-192\-0\-2\-44\.compute\-1\.amazonaws\.com\) and records in private hosted zones \(acme\.example\.com\)\. For all other domain names, Resolver performs recursive lookups against public name servers\.
+When you create a VPC using Amazon VPC, Route 53 Resolver automatically uses a Resolver on the VPC to answer DNS queries for local Amazon VPC domain names for EC2 instances \(ec2\-192\-0\-2\-44\.compute\-1\.amazonaws\.com\) and records in private hosted zones \(acme\.example\.com\)\. For all other domain names, Resolver performs recursive lookups against public name servers\.
+
+When you create a VPC, the Route 53 Resolver that is created by default, maps to a DNS server that runs on a reserved IP address for the VPC network range, plus 2\. For example, the DNS Server on a 10\.0\.0\.0/16 network is located at 10\.0\.0\.2\. For VPCs with multiple IPv4 CIDR blocks, the DNS server IP address is located in the primary CIDR block\. The DNS server does not reside within a specific subnet or Availability Zone in a VPC\. For more information, see [DNS support for your VPC](https://docs.aws.amazon.com/vpc/latest/userguide/vpc-dns.html) and [Amazon DNS server](https://docs.aws.amazon.com/vpc/latest/userguide/VPC_DHCP_Options.html#AmazonDNS) in the *Amazon Virtual Private Cloud User Guide\.*
+
+The Resolver additionally contains endpoints that you configure to answer DNS queries to and from your on\-premises environment\.
 
 You also can integrate DNS resolution between Resolver and DNS resolvers on your network by configuring forwarding rules\. *Your network* can include any network that is reachable from your VPC, such as the following:
 + The VPC itself
@@ -10,10 +14,10 @@ You also can integrate DNS resolution between Resolver and DNS resolvers on your
 Before you start to forward queries, you create Resolver inbound and/or outbound endpoints in the connected VPC\. These endpoints provide a path for inbound or outbound queries:
 
 **Inbound endpoint: DNS resolvers on your network can forward DNS queries to Route 53 Resolver via this endpoint**  
-This allows your DNS resolvers to easily resolve domain names for AWS resources such as EC2 instances or records in a Route 53 private hosted zone\. For more information, see [How DNS resolvers on your network forward DNS queries to Route 53 Resolver](#resolver-overview-forward-network-to-vpc)\.
+This allows your DNS resolvers to easily resolve domain names for AWS resources such as EC2 instances or records in a Route 53 private hosted zone\. For more information, see [How DNS resolvers on your network forward DNS queries to Route 53 Resolver endpoints](#resolver-overview-forward-network-to-vpc)\.
 
 **Outbound endpoint: Resolver conditionally forwards queries to resolvers on your network via this endpoint**  
-To forward selected queries, you create Resolver rules that specify the domain names for the DNS queries that you want to forward \(such as example\.com\), and the IP addresses of the DNS resolvers on your network that you want to forward the queries to\. If a query matches multiple rules \(example\.com, acme\.example\.com\), Resolver chooses the rule with the most specific match \(acme\.example\.com\) and forwards the query to the IP addresses that you specified in that rule\. For more information, see [How Route 53 Resolver forwards DNS queries from your VPCs to your network](#resolver-overview-forward-vpc-to-network)\. 
+To forward selected queries, you create Resolver rules that specify the domain names for the DNS queries that you want to forward \(such as example\.com\), and the IP addresses of the DNS resolvers on your network that you want to forward the queries to\. If a query matches multiple rules \(example\.com, acme\.example\.com\), Resolver chooses the rule with the most specific match \(acme\.example\.com\) and forwards the query to the IP addresses that you specified in that rule\. For more information, see [How Route 53 Resolver endpoint forwards DNS queries from your VPCs to your network](#resolver-overview-forward-vpc-to-network)\. 
 
 Like Amazon VPC, Resolver is regional\. In each region where you have VPCs, you can choose whether to forward queries from your VPCs to your network \(outbound queries\), from your network to your VPCs \(inbound queries\), or both\.
 
@@ -22,9 +26,9 @@ When you create a Resolver endpoint, you can't specify a VPC that has the instan
 
 To use inbound or outbound forwarding, you create a Resolver endpoint in your VPC\. As part of the definition of an endpoint, you specify the IP addresses that you want to forward inbound DNS queries to or the IP addresses that you want outbound queries to originate from\. For each IP address that you specify, Resolver automatically creates a VPC elastic network interface\.
 
-The following diagram shows the path of a DNS query from a DNS resolver on your network to Route 53 Resolver\.
+The following diagram shows the path of a DNS query from a DNS resolver on your network to Route 53 Resolver endpoints\.
 
-![\[Conceptual graphic that shows the path of a DNS query from a DNS resolver on your network to Route 53 Resolver.\]](http://docs.aws.amazon.com/Route53/latest/DeveloperGuide/images/Resolver-inbound-endpoint.png)
+![\[Conceptual graphic that shows the path of a DNS query from a DNS resolver on your network to Route 53 Resolver endpoints.\]](http://docs.aws.amazon.com/Route53/latest/DeveloperGuide/images/Resolver-inbound-endpoint.png)
 
 The following diagram shows the path of a DNS query from an EC2 instance in one of your VPCs to a DNS resolver on your network\.
 
@@ -33,13 +37,13 @@ The following diagram shows the path of a DNS query from an EC2 instance in one 
 For an overview of VPC network interfaces, see [Elastic network interfaces](https://docs.aws.amazon.com/vpc/latest/userguide/VPC_ElasticNetworkInterfaces.html) in the *Amazon VPC User Guide*\.
 
 **Topics**
-+ [How DNS resolvers on your network forward DNS queries to Route 53 Resolver](#resolver-overview-forward-network-to-vpc)
-+ [How Route 53 Resolver forwards DNS queries from your VPCs to your network](#resolver-overview-forward-vpc-to-network)
++ [How DNS resolvers on your network forward DNS queries to Route 53 Resolver endpoints](#resolver-overview-forward-network-to-vpc)
++ [How Route 53 Resolver endpoint forwards DNS queries from your VPCs to your network](#resolver-overview-forward-vpc-to-network)
 + [Considerations when creating inbound and outbound endpoints](#resolver-choose-vpc)
 
-## How DNS resolvers on your network forward DNS queries to Route 53 Resolver<a name="resolver-overview-forward-network-to-vpc"></a>
+## How DNS resolvers on your network forward DNS queries to Route 53 Resolver endpoints<a name="resolver-overview-forward-network-to-vpc"></a>
 
-When you want to forward DNS queries from your network to Route 53 Resolver in an AWS Region, you perform the following steps:
+When you want to forward DNS queries from your network to Route 53 Resolver endpoints in an AWS Region, you perform the following steps:
 
 1. You create a Route 53 Resolver inbound endpoint in a VPC and specify the IP addresses that the resolvers on your network forward DNS queries to\.
 
@@ -67,7 +71,7 @@ Here's how Resolver resolves DNS queries that originate on your network:
 
 Creating an inbound endpoint doesn't change the behavior of Resolver, it just provides a path from a location outside the AWS network to Resolver\.
 
-## How Route 53 Resolver forwards DNS queries from your VPCs to your network<a name="resolver-overview-forward-vpc-to-network"></a>
+## How Route 53 Resolver endpoint forwards DNS queries from your VPCs to your network<a name="resolver-overview-forward-vpc-to-network"></a>
 
 When you want to forward DNS queries from the EC2 instances in one or more VPCs in an AWS Region to your network, you perform the following steps\.
 
@@ -91,7 +95,7 @@ When you want to forward DNS queries from the EC2 instances in one or more VPCs 
 
 ### Using rules to control which queries are forwarded to your network<a name="resolver-overview-forward-vpc-to-network-using-rules"></a>
 
-Rules control which DNS queries Route 53 Resolver forwards to DNS resolvers on your network and which queries Resolver answers itself\. 
+Rules control which DNS queries Route 53 Resolver endpoint forwards to DNS resolvers on your network and which queries Resolver answers itself\. 
 
 You can categorize rules in a couple of ways\. One way is by who creates the rules:
 + **Autodefined rules** – Resolver automatically creates autodefined rules and associates the rules with your VPCs\. Most of these rules apply to the AWS\-specific domain names that Resolver answers queries for\. For more information, see [Domain names that Resolver creates autodefined system rules for](#resolver-overview-forward-vpc-to-network-autodefined-rules)\.
@@ -149,7 +153,7 @@ When an application that runs on an EC2 instance in a VPC submits a DNS query, R
 
    For more information, see [How Resolver determines whether the domain name in a query matches any rules](#resolver-overview-forward-vpc-to-network-domain-name-matches)\. 
 
-1. Resolver forwards DNS queries based on the settings in the "\." rule\.
+1. Resolver endpoint forwards DNS queries based on the settings in the "\." rule\.
 
    If the domain name in a query doesn't match the domain name in any other rules, Resolver forwards the query based on the settings in the autodefined "\." \(dot\) rule\. The dot rule applies to all domain names except some AWS internal domain names and record names in private hosted zones\. This rule causes Resolver to forward DNS queries to public name servers if the domain names in queries don't match any names in your custom forwarding rules\. If you want to forward all queries to the DNS resolvers on your network, you can create a custom forwarding rule, specify "\." for the domain name, specify **Forwarding** for **Type**, and specify the IP addresses of those resolvers\. 
 
@@ -236,7 +240,7 @@ When you want to integrate DNS for the VPCs in an AWS Region with DNS for your n
 
 **Using the same VPC for inbound and outbound endpoints**  
 You can create inbound and outbound endpoints in the same VPC or in different VPCs in the same Region\.  
-For more information, see [Best practices for Amazon Route 53](best-practices.md)\. 
+For more information, see [Best practices for Amazon Route 53 ](best-practices.md)\. 
 
 **Inbound endpoints and private hosted zones**  
 If you want Resolver to resolve inbound DNS queries using records in a private hosted zone, associate the private hosted zone with the VPC that you created the inbound endpoint in\. For information about associating private hosted zones with VPCs, see [Working with private hosted zones](hosted-zones-private.md)\.

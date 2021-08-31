@@ -2,6 +2,8 @@
 
 When you register a domain with Route 53, we automatically create a hosted zone for the domain, assign four name servers to the hosted zone, and then update the domain registration to use those name servers\. You typically don't need to change those settings unless you want to use another DNS service or you want to use white\-label name servers\.
 
+The maximum number of nameservers per domain in Route 53 is 6\.
+
 **Warning**  
 If you change name servers to the wrong values, specify the wrong IP addresses in glue records, or delete one or more name servers without specifying new ones, your website or application might become unavailable on the internet for up to two days\.
 

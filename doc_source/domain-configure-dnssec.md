@@ -5,7 +5,7 @@ Attackers sometimes hijack traffic to internet endpoints such as web servers by 
 You can protect your domain from this type of attack, known as DNS spoofing or a man\-in\-the\-middle attack, by configuring Domain Name System Security Extensions \(DNSSEC\), a protocol for securing DNS traffic\. 
 
 **Important**  
-Amazon Route 53 supports DNSSEC signing as well as DNSSEC for domain registration\. If you want to configure DNSSEC signing for a domain that's registered with Route 53, see [Configuring DNSSEC signing in Amazon Route 53](dns-configuring-dnssec.md)\.
+Amazon Route 53 supports DNSSEC signing as well as DNSSEC for domain registration\. If you want to configure DNSSEC signing for a domain that's registered with Route 53, see [Configuring DNSSEC signing in Amazon Route 53 ](dns-configuring-dnssec.md)\.
 
 **Topics**
 + [Overview of how DNSSEC protects your domain](#domain-configure-dnssec-how-it-works)
@@ -21,7 +21,7 @@ Here's how you configure DNSSEC for domains registered with Amazon Route 53 to p
 
 1. Use the method provided by your DNS service provider to *sign* the records in your hosted zone with the *private key* in an asymmetric key pair\.
 **Important**  
-Route 53 supports DNSSEC signing as well as DNSSEC for domain registration\. To learn more, see [Configuring DNSSEC signing in Amazon Route 53](dns-configuring-dnssec.md)\.
+Route 53 supports DNSSEC signing as well as DNSSEC for domain registration\. To learn more, see [Configuring DNSSEC signing in Amazon Route 53 ](dns-configuring-dnssec.md)\.
 
 1. Provide the *public key* from the key pair to your domain registrar, and specify the algorithm that was used to generate the key pair\. The domain registrar forwards the public key and the algorithm to the registry for the top\-level domain \(TLD\)\.
 
@@ -56,10 +56,10 @@ After you configure DNSSEC, here's how it protects your domain from DNS spoofing
 ## Prerequisites and maximums for configuring DNSSEC for a domain<a name="domain-configure-dnssec-prerequisites"></a>
 
 To configure DNSSEC for a domain, your domain and DNS service provider must meet the following prerequisites:
-+ The registry for the TLD must support DNSSEC\. To determine whether the registry for your TLD supports DNSSEC, see [Domains that you can register with Amazon Route 53](registrar-tld-list.md)\.
++ The registry for the TLD must support DNSSEC\. To determine whether the registry for your TLD supports DNSSEC, see [Domains that you can register with Amazon Route 53 ](registrar-tld-list.md)\.
 + The DNS service provider for the domain must support DNSSEC\.
 **Important**  
-Route 53 supports DNSSEC signing as well as DNSSEC for domain registration\. To learn more, see [Configuring DNSSEC signing in Amazon Route 53](dns-configuring-dnssec.md)\.
+Route 53 supports DNSSEC signing as well as DNSSEC for domain registration\. To learn more, see [Configuring DNSSEC signing in Amazon Route 53 ](dns-configuring-dnssec.md)\.
 + You must configure DNSSEC with the DNS service provider for your domain before you add public keys for the domain to Route 53\.
 + The number of public keys that you can add to a domain depends on the TLD for the domain:
   + **\.com and \.net domains** – up to thirteen keys
@@ -119,6 +119,6 @@ If DNSSEC is enabled for the domain and you disable DNSSEC with the DNS service,
 
 1. Find the key that you want to delete, and choose **Delete**\.
 **Note**  
-You can only delete one public key at a time\. If you need to delete more keys, wait until you receive a confirmation email from Amazon Route 53\.
+You can only delete one public key at a time\. If you need to delete more keys, wait until you receive a confirmation email from Amazon Route 53 \.
 
 1. When Route 53 receives a response from the registry, we send an email to the registrant contact for the domain\. The email either confirms that the public key has been deleted from the domain at the registry or explains why the key couldn't be deleted\.

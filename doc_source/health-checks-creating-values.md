@@ -55,6 +55,7 @@ Route 53 cannot check the health of endpoints for which the IP address is in loc
 + [RFC 6598, IANA\-Reserved IPv4 Prefix for Shared Address Space](http://tools.ietf.org/html/rfc6598)\.
 + [RFC 5156, Special\-Use IPv6 Addresses](https://tools.ietf.org/html/rfc5156)
 If the endpoint is an Amazon EC2 instance, we recommend that you create an Elastic IP address, associate it with your EC2 instance, and specify the Elastic IP address\. This ensures that the IP address of your instance will never change\. For more information, see [Elastic IP addresses \(EIP\)](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/elastic-ip-addresses-eip.html) in the *Amazon EC2 User Guide for Linux Instances*\.  
+If you delete the Amazon EC2 instance, make sure you also delete the health check associated to the EIP\. For more information, see [Best practices for Elastic IP addresses for health checks](best-practices-healthcheck-monitoring-endpoints.md)\.   
 If you specify a non\-AWS endpoint, an additional charge applies\. For more information, including a definition of AWS endpoints, see "Health Checks" on the [Route 53 Pricing](https://aws.amazon.com/route53/pricing/) page\.
 
 **Host name \("Specify endpoint by IP address" Only, HTTP and HTTPS Protocols Only\)**  

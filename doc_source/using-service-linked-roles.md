@@ -17,7 +17,7 @@ For information about other services that support service\-linked roles, see [AW
 
 ## Service\-Linked Role Permissions for Resolver<a name="slr-permissions"></a>
 
-Resolver uses the **AWSServiceRoleForRoute53Resolver** service\-linked role to deliver query logs on your behalf\.
+Resolver uses the **`AWSServiceRoleForRoute53Resolver`** service\-linked role to deliver query logs on your behalf\.
 
 The role permissions policy allows Resolver to complete the following actions on your resources:
 
@@ -50,13 +50,13 @@ You must configure permissions to allow an IAM entity \(such as a user, group, o
 You don't need to manually create a service\-linked role\. When you create a resolver query log configuration association in the Amazon Route 53 console, the AWS CLI, or the AWS API, Resolver creates the service\-linked role for you\. 
 
 **Important**  
-This service\-linked role can appear in your account if you completed an action in another service that uses the features supported by this role\. Also, if you were using the Resolver service before August 12, 2020, when it began supporting service\-linked roles, then Resolver created the AWSServiceRoleForRoute53Resolver role in your account\. To learn more, see [A New Role Appeared in My IAM Account](https://docs.aws.amazon.com/IAM/latest/UserGuide/troubleshoot_roles.html#troubleshoot_roles_new-role-appeared)\.
+This service\-linked role can appear in your account if you completed an action in another service that uses the features supported by this role\. Also, if you were using the Resolver service before August 12, 2020, when it began supporting service\-linked roles, then Resolver created the `AWSServiceRoleForRoute53Resolver` role in your account\. To learn more, see [A New Role Appeared in My IAM Account](https://docs.aws.amazon.com/IAM/latest/UserGuide/troubleshoot_roles.html#troubleshoot_roles_new-role-appeared)\.
 
-If you delete this service\-linked role, and then need to create it again, you can use the same process to recreate the role in your account\. When you create a new Resolver query log configuration association, the AWSServiceRoleForRoute53Resolver service\-linked role is created for you again\. 
+If you delete this service\-linked role, and then need to create it again, you can use the same process to recreate the role in your account\. When you create a new Resolver query log configuration association, the `AWSServiceRoleForRoute53Resolver` service\-linked role is created for you again\. 
 
 ## Editing a Service\-Linked Role for Resolver<a name="edit-slr"></a>
 
-Resolver does not allow you to edit the AWSServiceRoleForRoute53Resolver service\-linked role\. After you create a service\-linked role, you cannot change the name of the role because various entities might reference the role\. However, you can edit the description of the role using IAM\. For more information, see [Editing a Service\-Linked Role](https://docs.aws.amazon.com/IAM/latest/UserGuide/using-service-linked-roles.html#edit-service-linked-role) in the *IAM User Guide*\.
+Resolver does not allow you to edit the `AWSServiceRoleForRoute53Resolver` service\-linked role\. After you create a service\-linked role, you cannot change the name of the role because various entities might reference the role\. However, you can edit the description of the role using IAM\. For more information, see [Editing a Service\-Linked Role](https://docs.aws.amazon.com/IAM/latest/UserGuide/using-service-linked-roles.html#edit-service-linked-role) in the *IAM User Guide*\.
 
 ## Deleting a Service\-Linked Role for Resolver<a name="delete-slr"></a>
 
@@ -65,7 +65,7 @@ If you no longer need to use a feature or service that requires a service\-linke
 **Note**  
 If the Resolver service is using the role when you try to delete the resources, then the deletion might fail\. If that happens, wait for a few minutes and try the operation again\.
 
-**To delete Resolver resources used by the AWSServiceRoleForRoute53Resolver**
+**To delete Resolver resources used by the `AWSServiceRoleForRoute53Resolver`**
 
 1. Sign in to the AWS Management Console and open the Route 53 console at [https://console\.aws\.amazon\.com/route53/](https://console.aws.amazon.com/route53/)\.
 
@@ -79,15 +79,15 @@ If the Resolver service is using the role when you try to delete the resources, 
 
    This will disassociate the configuration from the VPC\. You can also disassociate the query logging configuration programmatically\. For more information, see [disassociate\-resolver\-query\-log\-config](https://docs.aws.amazon.com/cli/latest/reference/route53resolver/disassociate-resolver-query-log-config.html)\.
 
-1. After logging queries has stopped, you can optionally type **delete** in the field and choose **Delete** to delete the query logging configuration\. However, this is not necessary for deleting the resources used by AWSServiceRoleForRoute53Resolver\.
+1. After logging queries has stopped, you can optionally type **delete** in the field and choose **Delete** to delete the query logging configuration\. However, this is not necessary for deleting the resources used by `AWSServiceRoleForRoute53Resolver`\.
 
 **To manually delete the service\-linked role using IAM**
 
-Use the IAM console, the AWS CLI, or the AWS API to delete the AWSServiceRoleForRoute53Resolver service\-linked role\. For more information, see [Deleting a Service\-Linked Role](https://docs.aws.amazon.com/IAM/latest/UserGuide/using-service-linked-roles.html#delete-service-linked-role) in the *IAM User Guide*\.
+Use the IAM console, the AWS CLI, or the AWS API to delete the `AWSServiceRoleForRoute53Resolver` service\-linked role\. For more information, see [Deleting a Service\-Linked Role](https://docs.aws.amazon.com/IAM/latest/UserGuide/using-service-linked-roles.html#delete-service-linked-role) in the *IAM User Guide*\.
 
 ## Supported Regions for Resolver Service\-Linked Roles<a name="slr-regions"></a>
 
-Resolver does not support using service\-linked roles in every Region where the service is available\. You can use the AWSServiceRoleForRoute53Resolver role in the following Regions\.
+Resolver does not support using service\-linked roles in every Region where the service is available\. You can use the `AWSServiceRoleForRoute53Resolver` role in the following Regions\.
 
 
 ****  

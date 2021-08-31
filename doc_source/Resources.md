@@ -17,7 +17,7 @@ Several helpful guides, forums, and other resources are available from Amazon We
 + [AWS Premium Support Information](https://aws.amazon.com/premiumsupport/) – The primary web page for information about AWS Premium Support, a one\-on\-one, fast\-response support channel to help you build and run applications on AWS Infrastructure Services\.
 + [Contact Us](http://aws.amazon.com/contact-us/) – Links for inquiring about your billing or account\. For technical questions, use the discussion forums or support links above\.
 + **[Route 53 product information](https://aws.amazon.com/route53)** – The primary web page for information about Route 53, including features, pricing, and more\.
-+ ** [Classes & Workshops](https://aws.amazon.com/training/course-descriptions/)** – Links to role\-based and specialty courses as well as self\-paced labs to help sharpen your AWS skills and gain practical experience\.
++ ** [Classes & Workshops](https://aws.amazon.com/training/course-descriptions/)** – Links to role\-based and specialty courses, in addition to self\-paced labs to help sharpen your AWS skills and gain practical experience\.
 + ** [AWS Developer Tools](https://aws.amazon.com/tools/)** – Links to developer tools, SDKs, IDE toolkits, and command line tools for developing and managing AWS applications\.
 + ** [AWS Whitepapers](https://aws.amazon.com/whitepapers/)** – Links to a comprehensive list of technical AWS whitepapers, covering topics such as architecture, security, and economics and authored by AWS Solutions Architects or other technical experts\.
 + ** [AWS Support Center](https://console.aws.amazon.com/support/home#/)** – The hub for creating and managing your AWS Support cases\. Also includes links to other helpful resources, such as forums, technical FAQs, service health status, and AWS Trusted Advisor\.
@@ -27,10 +27,10 @@ Several helpful guides, forums, and other resources are available from Amazon We
 
 ## Third\-party tools and libraries<a name="R53-Tools-Libraries"></a>
 
-In addition to AWS resources, you can find a variety of third\-party tools and libraries that work with Amazon Route 53\.
+In addition to AWS resources, you can find a variety of third\-party tools and libraries that work with Amazon Route 53 \.
 + **[AmazonRoute53AppsScript](http://code.google.com/p/webos-goodies/wiki/AmazonRoute53AppsScript) \(via webos\-goodies\)**
 
-  Google spreadsheet management of Amazon Route 53\.
+  Google spreadsheet management of Amazon Route 53 \.
 + **[AWS Component for \.NET](http://sprightlysoft.com/AWSComponent/) \(via SprightlySoft\)**
 
   SprightlySoft \.NET Component for Amazon Web Services with support for REST operations and Route 53\.
@@ -70,6 +70,6 @@ In addition to AWS resources, you can find a variety of third\-party tools and l
 
 ## Graphical user interfaces<a name="GUIs"></a>
 
-The following third\-party tools provide graphical user interfaces \(GUIs\) for working with Amazon Route 53:
+The following third\-party tools provide graphical user interfaces \(GUIs\) for working with Amazon Route 53 :
 + [R53 Fox](https://github.com/cookpad/r53-fox)
 + [Ylastic](http://ylastic.com/)

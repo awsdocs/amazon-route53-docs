@@ -90,7 +90,7 @@ If you're using a programming language that AWS doesn't provide an SDK for, you 
 
 The TTL \(time to live\) setting for a record specifies how long you want DNS resolvers to cache the record and use the cached information\. When the TTL expires, a resolver sends another query to the DNS service provider for a domain to get the latest information\.
 
-The typical TTL setting for the NS record is 172800 seconds, or two days\. The NS record lists the name servers that the Domain Name System \(DNS\) can use to get information about how to route traffic for your domain\. Lowering the TTL for the NS record, both with your current DNS service provider and with Amazon Route 53, reduces downtime for your domain if you discover a problem while you're migrating DNS to Route 53\. If you don't lower the TTL, your domain could be unavailable on the internet for up to two days if something goes wrong\.
+The typical TTL setting for the NS record is 172800 seconds, or two days\. The NS record lists the name servers that the Domain Name System \(DNS\) can use to get information about how to route traffic for your domain\. Lowering the TTL for the NS record, both with your current DNS service provider and with Amazon Route 53 , reduces downtime for your domain if you discover a problem while you're migrating DNS to Route 53\. If you don't lower the TTL, your domain could be unavailable on the internet for up to two days if something goes wrong\.
 
 We recommend that you change the TTL on the following NS records:
 + On the NS record in the hosted zone for the current DNS service provider\. \(Your current provider might use different terminology\.\)
@@ -187,14 +187,14 @@ In the Amazon Route 53 hosted zone for the domain, change the TTL for the NS rec
 
 ## Step 10: Transfer domain registration to Amazon Route 53<a name="migrate-dns-transfer-domain-registration"></a>
 
-Now that you've transferred DNS service for a domain to Amazon Route 53, you can optionally transfer registration for the domain to Route 53\. For more information, see [Transferring registration for a domain to Amazon Route 53](domain-transfer-to-route-53.md)\.
+Now that you've transferred DNS service for a domain to Amazon Route 53 , you can optionally transfer registration for the domain to Route 53\. For more information, see [Transferring registration for a domain to Amazon Route 53 ](domain-transfer-to-route-53.md)\.
 
 ## Step 11: Re\-enable DNSSEC signing \(if required\)<a name="migrate-dns-re-enable-dnssec"></a>
 
-Now that you've transferred DNS service for a domain to Amazon Route 53, you can re\-enable DNSSEC signing\.
+Now that you've transferred DNS service for a domain to Amazon Route 53 , you can re\-enable DNSSEC signing\.
 
 Enabling DNSSEC signing has two steps: 
-+ Step 1: Enable DNSSEC signing for Route 53, and request that Route 53 create a key signing key \(KSK\) based on a customer managed customer master key \(CMK\) in AWS Key Management Service \(AWS KMS\)\.
++ Step 1: Enable DNSSEC signing for Route 53, and request that Route 53 create a key signing key \(KSK\) based on a customer managed key in AWS Key Management Service \(AWS KMS\)\.
 + Step 2: Create a chain of trust for the hosted zone by adding a Delegation Signer \(DS\) record to the parent zone, so DNS responses can be authenticated with trusted cryptographic signatures\.
 
   For instructions, see [Enabling DNSSEC signing and establishing a chain of trust](dns-configuring-dnssec-enable-signing.md)\.

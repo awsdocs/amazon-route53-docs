@@ -211,7 +211,7 @@ Amazon Route 53 also supports alias records, which allow you to route queries to
 
 ## DS record type<a name="DSFormat"></a>
 
-A delegation signer \(DS\) record refers a zone key for a delegated subdomain zone\. You might create a DS record when you establish a chain of trust when you configure DNSSEC signing\. For more information about configuring DNSSEC in Route 53, see [Configuring DNSSEC signing in Amazon Route 53](dns-configuring-dnssec.md)\.
+A delegation signer \(DS\) record refers a zone key for a delegated subdomain zone\. You might create a DS record when you establish a chain of trust when you configure DNSSEC signing\. For more information about configuring DNSSEC in Route 53, see [Configuring DNSSEC signing in Amazon Route 53 ](dns-configuring-dnssec.md)\.
 
 The first three values are decimal numbers representing the key tag, algorithm, and digest type\. The fourth value is the digest of the zone key\. For more information about the DS record format, see [RFC 4034](https://www.ietf.org/rfc/rfc4034.txt)\.
 

@@ -4,7 +4,7 @@ Here are the most common reasons that your domain is not available on the intern
 
 **Topics**
 + [You registered a new domain, but you didn't click the link in the confirmation email](#troubleshooting-domain-unavailable-didnt-click-link)
-+ [You transferred domain registration to Amazon Route 53, but you didn't transfer DNS service](#troubleshooting-domain-unavailable-transferred-domain-not-dns)
++ [You transferred domain registration to Amazon Route 53 , but you didn't transfer DNS service](#troubleshooting-domain-unavailable-transferred-domain-not-dns)
 + [You transferred domain registration and specified the wrong name servers in the domain settings](#troubleshooting-domain-unavailable-transferred-domain-wrong-name-servers)
 + [You transferred DNS service first, but you didn't wait long enough before transferring domain registration](#troubleshooting-domain-unavailable-transferred-domain-too-soon-after-dns-transfer)
 + [You deleted the hosted zone that Route 53 is using to route internet traffic for the domain](#troubleshooting-domain-unavailable-deleted-hosted-zone)
@@ -16,7 +16,7 @@ When you register a new domain, ICANN requires that we get confirmation that the
 
 If you don't click the link in the email in the allotted amount of time, ICANN requires that we suspend the domain\. For information about how to resend the confirmation email to the registrant contact, see [Resending authorization and confirmation emails](domain-click-email-link.md)\.
 
-## You transferred domain registration to Amazon Route 53, but you didn't transfer DNS service<a name="troubleshooting-domain-unavailable-transferred-domain-not-dns"></a>
+## You transferred domain registration to Amazon Route 53 , but you didn't transfer DNS service<a name="troubleshooting-domain-unavailable-transferred-domain-not-dns"></a>
 
 If your previous registrar offered free DNS service with domain registration, the registrar might have stopped providing DNS service when you transferred domain registration to Route 53\. Perform the following procedure to determine whether this is the problem and, if so, to resolve it\.<a name="troubleshooting-domain-unavailable-transferred-domain-not-dns-procedure"></a>
 
@@ -47,7 +47,7 @@ If you can't restore DNS service using the name servers that you specified when 
 
 ## You transferred domain registration and specified the wrong name servers in the domain settings<a name="troubleshooting-domain-unavailable-transferred-domain-wrong-name-servers"></a>
 
-When you transfer domain registration to Amazon Route 53, one of the settings that you specify for the domain is the set of name servers that will respond to DNS queries for the domain\. These name servers come from the hosted zone that has the same name as the domain\. The hosted zone contains information about how you want to route traffic for the domain, such as the IP address of a web server for www\.example\.com\.
+When you transfer domain registration to Amazon Route 53 , one of the settings that you specify for the domain is the set of name servers that will respond to DNS queries for the domain\. These name servers come from the hosted zone that has the same name as the domain\. The hosted zone contains information about how you want to route traffic for the domain, such as the IP address of a web server for www\.example\.com\.
 
 You might have accidentally specified the name servers for the wrong hosted zone, which is especially easy if you have more than one hosted zone that has the same name as the domain\. To confirm that the domain is using the name servers for the correct hosted zone and, if necessary, update the name servers for the domain, perform the following procedures\.
 

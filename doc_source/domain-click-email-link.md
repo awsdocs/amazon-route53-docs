@@ -7,7 +7,7 @@ If you don't click the link in the email in the allotted amount of time, ICANN g
 **Register a domain**  
 We suspend the domain, so that it's not accessible on the internet\. To resend the confirmation email, see [To resend the confirmation email for a domain registration](#domain-click-email-link-register-procedure)\.
 
-**Geographic TLDs only – Transfer a domain to Amazon Route 53**  
+**Geographic TLDs only – Transfer a domain to Amazon Route 53 **  
 If you're transferring a domain that has a [geographic TLD](https://docs.aws.amazon.com/Route53/latest/DeveloperGuide/registrar-tld-list.html#registrar-tld-list-geographic), we cancel the transfer\. To resend the authorization email, see [To resend the authorization email for a domain transfer](#domain-click-email-link-transfer-procedure)\.  
 Authorization isn't required for domains that have a [generic TLD](https://docs.aws.amazon.com/Route53/latest/DeveloperGuide/registrar-tld-list.html#registrar-tld-list-generic), such as \.com, \.net, or \.org\.
 
@@ -28,7 +28,7 @@ Authorization isn't required for domains that have a [generic TLD](https://docs.
 ## Updating your email address<a name="domain-click-email-link-update-address"></a>
 
 We always send confirmation and authorization emails to the email address for the registrant contact for a domain\. For some TLDs, we're required to send email to the old and new email addresses for the registrant contact in the following cases:
-+ You're changing the email address for a domain that is already registered with Amazon Route 53
++ You're changing the email address for a domain that is already registered with Amazon Route 53 
 + You're changing the email address for a domain that you're transferring to Route 53
 
 ## Resending emails<a name="domain-click-email-link-resend-email"></a>

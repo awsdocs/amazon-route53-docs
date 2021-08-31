@@ -44,7 +44,7 @@ The following examples illustrate how this works:
 
 ## Managing access to resources<a name="access-control-manage-access-intro"></a>
 
-A *permissions policy* specifies who has access to what\. This section explains the options for creating permissions policies for Amazon Route 53\. For general information about IAM policy syntax and descriptions, see the [AWS IAM Policy Reference](https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies.html) in the *IAM User Guide*\.
+A *permissions policy* specifies who has access to what\. This section explains the options for creating permissions policies for Amazon Route 53 \. For general information about IAM policy syntax and descriptions, see the [AWS IAM Policy Reference](https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies.html) in the *IAM User Guide*\.
 
 Policies attached to an IAM identity are referred to as *identity\-based* policies \(IAM policies\), and policies attached to a resource are referred to as *resource\-based* policies\. Route 53 supports only identity\-based policies \(IAM policies\)\.
 
@@ -109,7 +109,7 @@ If you want the policy to also apply to private hosted zones, you need to grant 
 }
 ```
 
-For more information about attaching policies to identities for Route 53, see [Using identity\-based policies \(IAM policies\) for Amazon Route 53](access-control-managing-permissions.md)\. For more information about users, groups, roles, and permissions, see [Identities \(users, groups, and roles\)](https://docs.aws.amazon.com/IAM/latest/UserGuide/id.html) in the *IAM User Guide*\.
+For more information about attaching policies to identities for Route 53, see [Using identity\-based policies \(IAM policies\) for Amazon Route 53 ](access-control-managing-permissions.md)\. For more information about users, groups, roles, and permissions, see [Identities \(users, groups, and roles\)](https://docs.aws.amazon.com/IAM/latest/UserGuide/id.html) in the *IAM User Guide*\.
 
 ### Resource\-based policies<a name="access-control-manage-access-intro-resource-policies"></a>
 

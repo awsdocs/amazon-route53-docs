@@ -5,7 +5,7 @@ When you register a domain with Amazon Route 53 or you transfer domain registrat
 Note the following:
 
 **Maximum renewal period**  
-All generic TLDs and many country\-code TLDs let you extend domain registration for longer periods, typically up to ten years in one\-year increments\. To determine whether you can extend the registration period for your domain, see [Domains that you can register with Amazon Route 53](registrar-tld-list.md)\. If longer registration periods are allowed, perform the following procedure\.
+All generic TLDs and many country\-code TLDs let you extend domain registration for longer periods, typically up to ten years in one\-year increments\. To determine whether you can extend the registration period for your domain, see [Domains that you can register with Amazon Route 53 ](registrar-tld-list.md)\. If longer registration periods are allowed, perform the following procedure\.
 
 **Restrictions on when you can renew or extend a domain registration**  
 Some TLD registries have restrictions on when you can renew or extend a domain registration, for example, the last two months before the domain expires\. Even if the registry allows extending the registration period for a domain, they might not allow it at the current number of days before the domain expires\.

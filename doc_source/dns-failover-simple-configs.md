@@ -18,7 +18,7 @@ If you're using any resources that you can create alias records for, such as ELB
 
    A common configuration is to create one health check for each resource and to use the same IP address for the health check endpoint as for the resource\. The health check sends requests to the specified IP address\.
 **Note**  
-Route 53 can't check the health of resources that have an IP address in local, private, nonroutable, or multicast ranges\. For more information about IP addresses that you can't create health checks for, see [RFC 5735, Special Use IPv4 Addresses](http://tools.ietf.org/html/rfc5735) and [RFC 6598, IANA\-Reserved IPv4 Prefix for Shared Address Space](http://tools.ietf.org/html/rfc6598)\.
+Route 53 can't check the health of resources that have an IP address in local, private, nonroutable, or multicast ranges\. For more information about IP addresses that you can't create health checks for, see [RFC 5735, Special Use IPv4 Addresses](https://datatracker.ietf.org/doc/html/rfc5735) and [RFC 6598, IANA\-Reserved IPv4 Prefix for Shared Address Space](https://datatracker.ietf.org/doc/html/rfc6598)\.
 
    For more information about creating health checks, see [Creating, updating, and deleting health checks](health-checks-creating-deleting.md)\.
 

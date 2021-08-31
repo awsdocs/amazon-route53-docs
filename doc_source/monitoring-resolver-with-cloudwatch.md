@@ -1,6 +1,6 @@
 # Monitoring Route 53 Resolver endpoints with Amazon CloudWatch<a name="monitoring-resolver-with-cloudwatch"></a>
 
-You can use Amazon CloudWatch to monitor the number of DNS queries that are forwarded by Route 53 Resolver endpoints\. Amazon CloudWatch collects and processes raw data into readable, near real\-time metrics\. These statistics are recorded for a period of two weeks, so that you can access historical information and gain a better perspective on how your resources are performing\. By default, metric data for Resolver endpoints is automatically sent to CloudWatch at five\-minute intervals\.
+You can use Amazon CloudWatch to monitor the number of DNS queries that are forwarded by Route 53 Resolver endpoints\. Amazon CloudWatch collects and processes raw data into readable, near real\-time metrics\. These statistics are recorded for a period of two weeks, so that you can access historical information and gain a better perspective on how your resources are performing\. By default, metric data for Resolver endpoints is automatically sent to CloudWatch at five\-minute intervals\. The five\-minute interval is also the smallest interval at which the metric data can be sent\.
 
 For more information about Resolver, see [Resolving DNS queries between VPCs and your network](resolver.md)\. For more information about CloudWatch, see [What is Amazon CloudWatch?](https://docs.aws.amazon.com/AmazonCloudWatch/latest/DeveloperGuide/WhatIsCloudWatch.html) in the *Amazon CloudWatch User Guide*\.
 
@@ -46,7 +46,7 @@ When you configure Resolver to forward DNS queries to your network or vice versa
 The `AWS/Route53Resolver` namespace includes the following metrics for Route 53 Resolver endpoints\.
 
 **EndpointHealthyENICount**  
- The number of elastic network interfaces in the `OPERATIONAL` status\. This means that the Amazon VPC network interfaces for the endpoint \(specified by `EndpointId`\) are correctly configured and able to pass inbound or outbound DNS queries between your network and resolver\.  
+ The number of elastic network interfaces in the `OPERATIONAL` status\. This means that the Amazon VPC network interfaces for the endpoint \(specified by `EndpointId`\) are correctly configured and able to pass inbound or outbound DNS queries between your network and Resolver\.  
 Valid statistics: Minimum, Maximum, Average  
 Units: Count
 

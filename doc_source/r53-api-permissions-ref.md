@@ -212,7 +212,7 @@ Resources: `*`
 
 [CreateHealthCheck](https://docs.aws.amazon.com/Route53/latest/APIReference/API_CreateHealthCheck.html)  
 Required Permissions \(API Action\): `route53:CreateHealthCheck`  
-Resources: `*`, `arn:aws:route53:::healthcheck/`
+Resources: `*`
 
 [DeleteHealthCheck](https://docs.aws.amazon.com/Route53/latest/APIReference/API_DeleteHealthCheck.html)  
 Required Permissions \(API Action\): `route53:DeleteHealthCheck`  

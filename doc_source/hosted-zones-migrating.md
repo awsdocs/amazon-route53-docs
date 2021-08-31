@@ -205,7 +205,7 @@ To confirm that you successfully created all of your records in the new hosted z
 1. Run the following command:
 
    ```
-   aws route53 list-resource-record-sets --hosted-zone-id hosted-zone-id > path-to-output-file
+   aws route53 list-resource-record-sets --hosted-zone-id hosted-zone-id --output json > path-to-output-file
    ```
 
    Specify the following values:
@@ -216,7 +216,7 @@ To confirm that you successfully created all of your records in the new hosted z
    For example, if you're using a Windows computer, you might run the following command:
 
    ```
-   aws route53 list-resource-record-sets --hosted-zone-id ZNEWZONE67890 > c:\temp\list-records-ZNEWZONE67890.txt
+   aws route53 list-resource-record-sets --hosted-zone-id ZNEWZONE67890 --output json > c:\temp\list-records-ZNEWZONE67890.txt
    ```
 
 1. Compare the output with the output from [Step 3: Create a file that contains the records that you want to migrate](#hosted-zones-migrating-create-file)\.

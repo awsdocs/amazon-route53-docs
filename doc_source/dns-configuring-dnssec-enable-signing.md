@@ -11,9 +11,9 @@ To enable DNSSEC signing programmatically, see [Using the AWS CLI to enable DNSS
 
 ## Enabling DNSSEC signing and creating a KSK<a name="dns-configuring-dnssec-enable"></a>
 
-To get started using DNSSEC signing in Route 53, you enable DNSSEC signing, and then Route 53 creates a key\-signing key \(KSK\) for you, based on a customer managed customer master key \(CMK\) that you choose\. 
+To get started using DNSSEC signing in Route 53, you enable DNSSEC signing, and then Route 53 creates a key\-signing key \(KSK\) for you, based on a customer managed key that you choose\. 
 
-When you provide or create a customer managed CMK, there are several requirements\. For more information, see [Working with customer managed CMKs for DNSSEC](dns-configuring-dnssec-cmk-requirements.md)\.<a name="dns-configuring-dnssec-enable-procedure"></a>
+When you provide or create a customer managed KMS key, there are several requirements\. For more information, see [Working with customer managed keys for DNSSEC](dns-configuring-dnssec-cmk-requirements.md)\.<a name="dns-configuring-dnssec-enable-procedure"></a>
 
 **To enable DNSSEC signing and create a KSK**
 
@@ -27,13 +27,13 @@ If the option in this section is **Disable DNSSEC signing**, you have already co
 
 1. Under **KSK**, enter a name for the KSK that Route 53 will create for you\. The name can include numbers, letters, and underscores \(\_\)\. It must be unique\.
 
-1. Under **Customer managed CMK**, choose the customer managed CMK for Route 53 to use when it creates the KSK for you\. You can use an existing customer managed CMK that applies to DNSSEC signing, or create a new customer managed CMK\.
+1. Under **Customer managed CMK**, choose the customer managed key for Route 53 to use when it creates the KSK for you\. You can use an existing customer managed key that applies to DNSSEC signing, or create a new customer managed key\.
 
-   When you provide or create a customer managed CMK, there are several requirements\. For more information, see [Working with customer managed CMKs for DNSSEC](dns-configuring-dnssec-cmk-requirements.md)\.
+   When you provide or create a customer managed key, there are several requirements\. For more information, see [Working with customer managed keys for DNSSEC](dns-configuring-dnssec-cmk-requirements.md)\.
 
-1. Enter the alias for an existing customer managed CMK\. If you want to use a new customer managed CMK, enter an alias for a customer managed CMK, and Route 53 will create one for you\.
+1. Enter the alias for an existing customer managed key\. If you want to use a new customer managed key, enter an alias for a customer managed key, and Route 53 will create one for you\.
 **Note**  
-If you choose to have Route 53 create a customer managed CMK, be aware that separate charges apply for each customer managed CMK\. For more information, see [AWS Key Management Service pricing](https://aws.amazon.com/kms/pricing/)\.
+If you choose to have Route 53 create a customer managed key, be aware that separate charges apply for each customer managed key\. For more information, see [AWS Key Management Service pricing](https://aws.amazon.com/kms/pricing/)\.
 
 1. Choose **Enable DNSSEC signing**\.
 
@@ -90,8 +90,8 @@ If the option in this section is **Disable DNSSEC signing**, you have already co
 
 1. Under **KSK**, choose **Use the active KSK** or **Create a new KSK**\.
 
-1. If you choose to create a new KSK, enter the alias for a customer managed CMK that applies to DNSSEC signing, or enter an alias for a new customer managed CMK\.
+1. If you choose to create a new KSK, enter the alias for a customer managed key that applies to DNSSEC signing, or enter an alias for a new customer managed key\.
 **Note**  
-If you choose to have Route 53 create a customer managed CMK, be aware that separate charges apply for each customer managed CMK\. For more information, see [AWS Key Management Service pricing](https://aws.amazon.com/kms/pricing/)\.
+If you choose to have Route 53 create a customer managed key, be aware that separate charges apply for each customer managed key\. For more information, see [AWS Key Management Service pricing](https://aws.amazon.com/kms/pricing/)\.
 
 1. Choose **Enable DNSSEC signing**\.

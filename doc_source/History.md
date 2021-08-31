@@ -18,7 +18,7 @@ The following entries describe important changes in each release of the Route 53
 ## 2021 releases<a name="doc-history-2021"></a>
 
 **July 14, 2021**  
-Started tracking AWS managed policies for Amazon Route 53\. For more information, see [AWS managed policies for Amazon Route 53](security-iam-awsmanpol-route53.md)\.
+Started tracking AWS managed policies for Amazon Route 53 \. For more information, see [AWS managed policies for Amazon Route 53 ](security-iam-awsmanpol-route53.md)\.
 
 **March 31, 2021**  
 Added Route 53 Resolver DNS Firewall\. With DNS Firewall you can provide protection for outbound DNS requests from your VPCs\. For more information, see [Route 53 Resolver DNS Firewall](resolver-dns-firewall.md)\.
@@ -26,11 +26,11 @@ Added Route 53 Resolver DNS Firewall\. With DNS Firewall you can provide protect
 ## 2020 releases<a name="doc-history-2020"></a>
 
 **December 17, 2020**  
-Added support for DNSSEC signing for Route 53 Resolver\. For more information, see [Configuring DNSSEC signing in Amazon Route 53](dns-configuring-dnssec.md)\.  
-Added support for DNSSEC validation for Route 53 Resolver\. For more information, see [Enabling DNSSEC validation in Amazon Route 53](resolver-dnssec-validation.md)\.
+Added support for DNSSEC signing for Route 53 Resolver\. For more information, see [Configuring DNSSEC signing in Amazon Route 53 ](dns-configuring-dnssec.md)\.  
+Added support for DNSSEC validation for Route 53 Resolver\. For more information, see [Enabling DNSSEC validation in Amazon Route 53 ](resolver-dnssec-validation.md)\.
 
 **September 23, 2020**  
-Updated the entire Route 53 guide with the new console experience\. For more information, see [What is Amazon Route 53?](Welcome.md)\.
+Updated the entire Route 53 guide with the new console experience\. For more information, see [What is Amazon Route 53 ?](Welcome.md)\.
 
 **September 1, 2020**  
 Added support for Resolver query logs\. For more information, see [Resolver query logging](resolver-query-logs.md)\.
@@ -56,7 +56,7 @@ You can use the Route 53 console and API to temporarily disable a Route 53 healt
 If you're using auto naming, you can now use a third\-party health checker to evaluate the health of your resources\. This is useful when a resource isn't available over the internet, for example, because the instance is in an Amazon VPC\. For more information, see [HealthCheckCustomConfig](https://docs.aws.amazon.com/cloud-map/latest/api/API_HealthCheckCustomConfig.html) in the *Amazon Route 53 API Reference*\.
 
 **March 9, 2018**  
-IAM now includes managed policies for auto naming\. For more information, see [AWS managed policies for Amazon Route 53](security-iam-awsmanpol-route53.md)\.
+IAM now includes managed policies for auto naming\. For more information, see [AWS managed policies for Amazon Route 53 ](security-iam-awsmanpol-route53.md)\.
 
 **February 6, 2018**  
 You can now configure auto naming to create alias records that route traffic to ELB load balancers or to create CNAME records\. For more information, see [Attributes](https://docs.aws.amazon.com/cloud-map/latest/api/API_RegisterInstance.html#cloudmap-RegisterInstance-request-Attributes) in the documentation for the [RegisterInstance](https://docs.aws.amazon.com/Route53/latest/APIReference/API_autonaming_RegisterInstance.html) API in the *Amazon Route 53 API Reference*\.
@@ -70,7 +70,7 @@ You can now use the Route 53 autonaming API to provision instances for microserv
 You can now programmatically get both the current quotas on Route 53 resources such as hosted zones and health checks, and the number of each resource that you're currently using\. For more information, see [GetAccountLimit](https://docs.aws.amazon.com/Route53/latest/APIReference/API_GetAccountLimit.html), [GetHostedZoneLimit](https://docs.aws.amazon.com/Route53/latest/APIReference/API_GetHostedZoneLimit.html), and [GetReusableDelegationSetLimit](https://docs.aws.amazon.com/Route53/latest/APIReference/API_GetReusableDelegationSetLimit.html) in the *Amazon Route 53 API Reference*\.
 
 **October 3, 2017**  
-Route 53 is now a HIPAA eligible service\. For more information, see [Compliance validation for Amazon Route 53](route-53-compliance.md)\.
+Route 53 is now a HIPAA eligible service\. For more information, see [Compliance validation for Amazon Route 53 ](route-53-compliance.md)\.
 
 **September 29, 2017**  
 You can now programmatically check whether a domain can be transferred to Route 53\. For more information, see [CheckDomainTransferability](https://docs.aws.amazon.com/Route53/latest/APIReference/API_domains_CheckDomainTransferability.html) in the *Amazon Route 53 API Reference*\. 
@@ -88,7 +88,7 @@ If you're using Route 53 traffic flow, you can now use geoproximity routing, whi
 You can now use Route 53 to create Certification Authority Authorization \(CAA\) records, which let you specify the certificate authorities that can issue certificates for your domains and subdomains\. For more information, see [CAA record type](ResourceRecordTypes.md#CAAFormat)\.
 
 **August 18, 2017**  
-You can now transfer large numbers of domains to Route 53 using the Route 53 console\. For more information, see [Transferring registration for a domain to Amazon Route 53](domain-transfer-to-route-53.md)\.
+You can now transfer large numbers of domains to Route 53 using the Route 53 console\. For more information, see [Transferring registration for a domain to Amazon Route 53 ](domain-transfer-to-route-53.md)\.
 
 **August 4, 2017**  
 When you register a domain, the registries for some top\-level domains \(TLDs\) require you to verify that you specified a valid email address for the registrant contact\. You can now send the verification email and get confirmation that you successfully verified the email address during the domain registration process\. For more information, see [Registering a new domain](domain-register.md)\.
@@ -133,7 +133,7 @@ With this release, Route 53 adds the following new features:
 + **Domain billing report** – You can now download a report that lists all domain registration charges, by domain, for a specified time period\. The report includes all domain registration operations for which there is a fee, including registering domains, transferring domains to Route 53, renewing domain registration, and \(for some TLDs\), changing the owner of a domain\. For more information, see the following documentation:
   + **Route 53 console** – See [Downloading a domain billing report](domain-billing-report.md)
   + **Route 53 API** – See [ViewBilling](https://docs.aws.amazon.com/Route53/latest/APIReference/API_ViewBilling.html) in the *Amazon Route 53 API Reference*\.
-+ **New TLDs** – You can now register domains that have the following TLDs: \.college, \.consulting, \.host, \.name, \.online, \.republican, \.rocks, \.sucks, \.trade, \.website, and \.uk\. For more information, see [Domains that you can register with Amazon Route 53](registrar-tld-list.md)\.
++ **New TLDs** – You can now register domains that have the following TLDs: \.college, \.consulting, \.host, \.name, \.online, \.republican, \.rocks, \.sucks, \.trade, \.website, and \.uk\. For more information, see [Domains that you can register with Amazon Route 53 ](registrar-tld-list.md)\.
 + **New APIs for domain registration** – For operations that require confirmation that the email address for the registrant contact is valid, such as registering a new domain, you can now programmatically determine whether the registrant contact has clicked the link in the confirmation email and, if not, whether the link is still valid\. You can also programmatically request that we send another confirmation email\. For more information, see the following documentation in the *Amazon Route 53 API Reference*:
   + [GetContactReachabilityStatus](https://docs.aws.amazon.com/Route53/latest/APIReference/API_GetContactReachabilityStatus.html)
   + [ResendContactReachabilityEmail](https://docs.aws.amazon.com/Route53/latest/APIReference/API_ResendContactReachabilityEmail.html)
@@ -157,7 +157,7 @@ With this release, Route 53 adds the following new features:
 When you create or update HTTPS health checks, you can now configure Route 53 to send the host name to the endpoint during TLS negotiation\. This allows the endpoint to respond to the HTTPS request with the applicable SSL/TLS certificate\. For more information, see the description for the [Enable SNI](health-checks-creating-values.md#health-checks-creating-values-enable-sni) field in the "Values that You Specify When You Create or Update Health Checks" topic\. For information about how to enable SNI when you use the API to create or update a health check, see [CreateHealthCheck](https://docs.aws.amazon.com/Route53/latest/APIReference/API_CreateHealthCheck.html) and [UpdateHealthCheck](https://docs.aws.amazon.com/Route53/latest/APIReference/API_UpdateHealthCheck.html) in the *Amazon Route 53 API Reference*\.
 
 **January 27, 2016**  
-You can now register domains for over 100 additional top\-level domains \(TLDs\) such as \.accountants, \.band, and \.city\. For a complete list of supported TLDs, see [Domains that you can register with Amazon Route 53](registrar-tld-list.md)\.
+You can now register domains for over 100 additional top\-level domains \(TLDs\) such as \.accountants, \.band, and \.city\. For a complete list of supported TLDs, see [Domains that you can register with Amazon Route 53 ](registrar-tld-list.md)\.
 
 **January 19, 2016**  
 You can now create alias records that route traffic to Elastic Beanstalk environments\. For information about creating records by using the Route 53 console, see [Creating records by using the Amazon Route 53 console](resource-record-sets-creating.md)\. For information about using the API to create records, see [ChangeResourceRecordSets](https://docs.aws.amazon.com/Route53/latest/APIReference/API_ChangeResourceRecordSets.html) in the *Amazon Route 53 API Reference*\.
@@ -169,7 +169,7 @@ The Route 53 console now includes a visual editor that lets you quickly create c
 
 **October 19, 2015**  
 With this release, Route 53 adds the following new features:  
-+ **Domain registration for \.com and \.net domains by Amazon Registrar, Inc\.** – Amazon is now an ICANN\-accredited registrar for the \.com and \.net top\-level domains \(TLDs\) through Amazon Registrar, Inc\. When you use Route 53 to register a \.com or \.net domain, Amazon Registrar will be the registrar of record and will be listed as the "Sponsoring Registrar" in your Whois query results\. For information about using Route 53 to register domains, see [Registering domain names using Amazon Route 53](registrar.md)\.
++ **Domain registration for \.com and \.net domains by Amazon Registrar, Inc\.** – Amazon is now an ICANN\-accredited registrar for the \.com and \.net top\-level domains \(TLDs\) through Amazon Registrar, Inc\. When you use Route 53 to register a \.com or \.net domain, Amazon Registrar will be the registrar of record and will be listed as the "Sponsoring Registrar" in your Whois query results\. For information about using Route 53 to register domains, see [Registering domain names using Amazon Route 53 ](registrar.md)\.
 + **Privacy protection for \.com and \.net domains** – When you register a \.com or \.net domain with Route 53, all of your personal information, including first and last name, is now hidden\. First and last name are not hidden for other domains that you register with Route 53\. For more information about privacy protection, see [Enabling or disabling privacy protection for contact information for a domain](domain-privacy-protection.md)\.
 
 **September 15, 2015**  
@@ -212,7 +212,7 @@ With this release, Route 53 adds the following new features:
 
 **July 31, 2014**  
 With this release, you can now do the following:  
-+ Register domain names using Route 53\. For more information, see [Registering domain names using Amazon Route 53](registrar.md)\.
++ Register domain names using Route 53\. For more information, see [Registering domain names using Amazon Route 53 ](registrar.md)\.
 + Configure Route 53 to respond to DNS queries based on the geographic location that the queries originate from\. For more information, see [Geolocation routing](routing-policy.md#routing-policy-geo)\.
 
 **July 2, 2014**  
@@ -263,7 +263,7 @@ With this release, Route 53 adds support for integrating health checks with Clou
 For more information, see [Monitoring health checks using CloudWatch](monitoring-health-checks.md)\.
 
 **June 11, 2013**  
-With this release, Route 53 adds support for creating alias records that route DNS queries to alternate domain names for Amazon CloudFront distributions\. You can use this feature both for alternate domain names at the zone apex \(example\.com\) and alternate domain names for subdomains \(www\.example\.com\)\. For more information, see [Routing traffic to an Amazon CloudFront web distribution by using your domain name](routing-to-cloudfront-distribution.md)\.
+With this release, Route 53 adds support for creating alias records that route DNS queries to alternate domain names for Amazon CloudFront distributions\. You can use this feature both for alternate domain names at the zone apex \(example\.com\) and alternate domain names for subdomains \(www\.example\.com\)\. For more information, see [Routing traffic to an Amazon CloudFront distribution by using your domain name](routing-to-cloudfront-distribution.md)\.
 
 **May 30, 2013**  
 With this release, Route 53 adds support for evaluating the health of ELB load balancers and the associated Amazon EC2 instances\. For more information, see [Creating Amazon Route 53 health checks and configuring DNS failover](dns-failover.md)\.

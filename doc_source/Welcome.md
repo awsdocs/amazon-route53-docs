@@ -1,4 +1,4 @@
-# What is Amazon Route 53?<a name="Welcome"></a>
+# What is Amazon Route 53 ?<a name="Welcome"></a>
 
 Amazon Route 53 is a highly available and scalable Domain Name System \(DNS\) web service\. You can use Route 53 to perform three main functions in any combination: domain registration, DNS routing, and health checking\. 
 
@@ -8,7 +8,7 @@ If you choose to use Route 53 for all three functions, be sure to follow the ord
 Your website needs a name, such as example\.com\. Route 53 lets you register a name for your website or web application, known as a *domain name*\.  
 + For an overview, see [How domain registration works](welcome-domain-registration.md)\.
 + For a procedure, see [Registering a new domain](domain-register.md)\.
-+ For a tutorial that takes you through registering a domain and creating a simple website in an Amazon S3 bucket, see [Getting started with Amazon Route 53](getting-started.md)\.
++ For a tutorial that takes you through registering a domain and creating a simple website in an Amazon S3 bucket, see [Getting started with Amazon Route 53 ](getting-started.md)\.
 
 **2\. Route internet traffic to the resources for your domain**  
 When a user opens a web browser and enters your domain name \(example\.com\) or subdomain name \(acme\.example\.com\) in the address bar, Route 53 helps connect the browser with your website or web application\.  

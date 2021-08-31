@@ -44,7 +44,7 @@ For more information about creating hosted zones and specifying a reusable deleg
 ## Step 3: Recreate records for your hosted zones<a name="white-label-name-servers-create-resource-record-sets"></a>
 
 Create records in the hosted zones that you created in Step 2:
-+ **If you're migrating DNS service for your domains to Amazon Route 53** – You might be able to create records by importing information about your existing records\. For more information, see [Creating records by importing a zone file](resource-record-sets-creating-import.md)\.
++ **If you're migrating DNS service for your domains to Amazon Route 53 ** – You might be able to create records by importing information about your existing records\. For more information, see [Creating records by importing a zone file](resource-record-sets-creating-import.md)\.
 + **If you're replacing existing hosted zones so that you can use white\-label name servers** – In the new hosted zones, recreate the records that appear in your current hosted zones\. Route 53 doesn't provide a method of exporting records from a hosted zone, but some third\-party vendors do\. You can then use the Route 53 import feature to import non\-alias records for which the routing policy is simple\. There is no way to export and re\-import alias records or records for which the routing policy is anything other than simple\.
 
   For information about creating records by using the Route 53 API, see [CreateHostedZone](https://docs.aws.amazon.com/Route53/latest/APIReference/API_CreateHostedZone.html) in the *Amazon Route 53 API Reference*\. For information about creating records by using the Route 53 console, see [Working with records](rrsets-working-with.md)\.
@@ -56,12 +56,12 @@ Get the IPv4 and IPv6 addresses of the name servers in the reusable delegation s
 
 ****  
 
-| Name of a name server in your reusable delegation set \(example: Ns\-2048\.awsdns\-64\.com\) | IPv4 and IPv6 addresses  | Name that you want to assign to the white\-label name server \(example: ns1\.example\.com\) | 
+| Name of a name server in your reusable delegation set \(example: Ns\-2048\.awsdns\-64\.com\) | IPv4 and IPv6 addresses                                             | Name that you want to assign to the white\-label name server \(example: ns1\.example\.com\) | 
 | --- | --- | --- | 
-|   | IPv4: IPv6:   |   | 
-|   | IPv4: IPv6:   |   | 
-|   | IPv4: IPv6:   |   | 
-|   | IPv4: IPv6:   |   | 
+|   | IPv4: IPv6:   |   | 
+|   | IPv4: IPv6:   |   | 
+|   | IPv4: IPv6:   |   | 
+|   | IPv4: IPv6:   |   | 
 
 For example, suppose the four name servers for your reusable delegation set are:
 + ns\-2048\.awsdns\-64\.com

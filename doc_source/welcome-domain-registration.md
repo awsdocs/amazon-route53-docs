@@ -2,11 +2,11 @@
 
 If you want to create a website or a web application, you start by registering the name of your website, known as a [domain name](route-53-concepts.md#route-53-concepts-domain-name)\. Your domain name is the name, such as example\.com, that your users enter in a browser to display your website\. 
 
-Here's an overview of how you register a domain name with Amazon Route 53:
+Here's an overview of how you register a domain name with Amazon Route 53 :
 
 1. You choose a domain name and confirm that it's available, meaning that no one else has registered the domain name that you want\.
 
-   If the domain name you want is already in use, you can try other names or try changing only the *top\-level domain*, such as \.com, to another top\-level domain, such as \.ninja or \.hockey\. For a list of the top\-level domains that Route 53 supports, see [Domains that you can register with Amazon Route 53](registrar-tld-list.md)\.
+   If the domain name you want is already in use, you can try other names or try changing only the *top\-level domain*, such as \.com, to another top\-level domain, such as \.ninja or \.hockey\. For a list of the top\-level domains that Route 53 supports, see [Domains that you can register with Amazon Route 53 ](registrar-tld-list.md)\.
 
 1. You register the domain name with Route 53\. When you register a domain, you provide names and contact information for the domain owner and other contacts\.
 
@@ -17,7 +17,7 @@ Here's an overview of how you register a domain name with Amazon Route 53:
 
    For more information, see [How internet traffic is routed to your website or web application](welcome-dns-service.md)\.
 
-1. At the end of the registration process, we send your information to the registrar for the domain\. The [domain registrar](route-53-concepts.md#route-53-concepts-domain-registrar) is either Amazon Registrar, Inc\. or our registrar associate, Gandi\. To find out who the registrar is for your domain, see [Domains that you can register with Amazon Route 53](registrar-tld-list.md)\.
+1. At the end of the registration process, we send your information to the registrar for the domain\. The [domain registrar](route-53-concepts.md#route-53-concepts-domain-registrar) is either Amazon Registrar, Inc\. or our registrar associate, Gandi\. To find out who the registrar is for your domain, see [Domains that you can register with Amazon Route 53 ](registrar-tld-list.md)\.
 
 1. The registrar sends your information to the *registry* for the domain\. A registry is a company that sells domain registrations for one or more top\-level domains, such as \.com\.
 
@@ -25,4 +25,4 @@ Here's an overview of how you register a domain name with Amazon Route 53:
 
 For more information about how to register a domain name, see [Registering a new domain](domain-register.md)\.
 
-If you already registered a domain name with another registrar, you can choose to transfer the domain registration to Route 53\. This isn't required to use other Route 53 features\. For more information, see [Transferring registration for a domain to Amazon Route 53](domain-transfer-to-route-53.md)\.
+If you already registered a domain name with another registrar, you can choose to transfer the domain registration to Route 53\. This isn't required to use other Route 53 features\. For more information, see [Transferring registration for a domain to Amazon Route 53 ](domain-transfer-to-route-53.md)\.

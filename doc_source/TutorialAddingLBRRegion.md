@@ -1,6 +1,6 @@
 # Adding another Region to your latency\-based routing in Amazon Route 53<a name="TutorialAddingLBRRegion"></a>
 
-If you're using latency based routing and you want to add an instance in a new region, you can gradually shift traffic to the new region in the same way that you gradually shifted traffic to latency\-based routing in [Transitioning to latency\-based routing in Amazon Route 53](TutorialTransitionToLBR.md)\. 
+If you're using latency based routing and you want to add an instance in a new region, you can gradually shift traffic to the new region in the same way that you gradually shifted traffic to latency\-based routing in [Transitioning to latency\-based routing in Amazon Route 53 ](TutorialTransitionToLBR.md)\. 
 
 For example, suppose you're using latency\-based routing to route traffic for `www.example.com`, and you want to add an Amazon EC2 instance in Asia Pacific \(Tokyo\) to your instances in US East \(Ohio\), US West \(N\. California\), and Europe \(Ireland\)\. The following example procedure explains one way that you could add an instance in another region\.
 

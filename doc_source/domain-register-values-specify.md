@@ -1,6 +1,6 @@
 # Values that you specify when you register or transfer a domain<a name="domain-register-values-specify"></a>
 
-When you register a domain or transfer domain registration to Amazon Route 53, you specify the values that are described in this topic\.
+When you register a domain or transfer domain registration to Amazon Route 53 , you specify the values that are described in this topic\.
 
 **Note**  
 If you're registering more than one domain, Route 53 uses the values that you specify for all of the domains that are in your shopping cart\.
@@ -34,7 +34,7 @@ Specifies whether you want to use the same contact information for the registran
 **Contact Type**  
 Category for this contact\. Note the following:  
 + If you choose an option other than **Person**, you must enter an organization name\.
-+ For some TLDs, the privacy protection available depends on the value that you choose for **Contact Type**\. For the privacy protection settings for your TLD, see [Domains that you can register with Amazon Route 53](registrar-tld-list.md)\.
++ For some TLDs, the privacy protection available depends on the value that you choose for **Contact Type**\. For the privacy protection settings for your TLD, see [Domains that you can register with Amazon Route 53 ](registrar-tld-list.md)\.
 + For \.es domains, the value of **Contact Type** must be **Person** for all three contacts\.
 
 **First Name, Last Name**  
@@ -46,7 +46,7 @@ If you're transferring a domain to Route 53 and the following are true, then you
 In that case, ICANN requires that we email the registrant contact to get approval\. The email comes from one of the following email addresses:    
 ****    
 [\[See the AWS documentation website for more details\]](http://docs.aws.amazon.com/Route53/latest/DeveloperGuide/domain-register-values-specify.html)
-To determine who the registrar is for your TLD, see [Domains that you can register with Amazon Route 53](registrar-tld-list.md)\.  
+To determine who the registrar is for your TLD, see [Domains that you can register with Amazon Route 53 ](registrar-tld-list.md)\.  
 The registrant contact must follow the instructions in the email to confirm that the email was received, or we must suspend the domain as required by ICANN\. When a domain is suspended, it's not accessible on the internet\. 
 If you change the email address of the registrant contact, this email is sent to the former email address and the new email address for the registrant contact\.  
 Some TLD registrars charge a fee for changing the domain owner\. When you change one of these values, the Route 53 console displays a message that tells you whether there is a fee\.
@@ -56,7 +56,7 @@ The organization that is associated with the contact, if any\. For the registran
 When the contact type is any value except **Person** and you change the **Organization** field for the registrant contact, you change the owner of the domain\. ICANN requires that we email the registrant contact to get approval\. The email comes from one of the following email addresses:    
 ****    
 [\[See the AWS documentation website for more details\]](http://docs.aws.amazon.com/Route53/latest/DeveloperGuide/domain-register-values-specify.html)
-To determine who the registrar is for your TLD, see [Domains that you can register with Amazon Route 53](registrar-tld-list.md)\.  
+To determine who the registrar is for your TLD, see [Domains that you can register with Amazon Route 53 ](registrar-tld-list.md)\.  
 If you change the email address of the registrant contact, this email is sent to the former email address and the new email address for the registrant contact\.  
 Some TLD registrars charge a fee for changing the domain owner\. When you change the value of **Organization**, the Route 53 console displays a message that tells you whether there is a fee\.
 
@@ -111,7 +111,7 @@ Although there are legitimate users for the contact information associated with 
 To enable or disable privacy protection for some domains, you must open a support case and request privacy protection\.  
 For more information about privacy protection, see the following topics:  
 + [Enabling or disabling privacy protection for contact information for a domain](domain-privacy-protection.md)
-+ [Domains that you can register with Amazon Route 53](registrar-tld-list.md)
++ [Domains that you can register with Amazon Route 53 ](registrar-tld-list.md)
 
 **Auto Renew \(Only available when editing domain settings\)**  
 Whether you want Route 53 to automatically renew the domain before it expires\. The registration fee is charged to your AWS account\. For more information, see [Renewing registration for a domain](domain-renew.md)\.  

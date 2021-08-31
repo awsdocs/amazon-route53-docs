@@ -3,7 +3,7 @@
 When you transfer a domain between registrars, some TLD registries let you keep the same expiration date for your domain, some registries add a year to the expiration date, and some registries change the expiration date to one year after the transfer date\.
 
 **Note**  
-For most TLDs, you can extend the registration period for a domain by up to ten years after you transfer it to Amazon Route 53\. For more information, see [Extending the registration period for a domain](domain-extend.md)\.
+For most TLDs, you can extend the registration period for a domain by up to ten years after you transfer it to Amazon Route 53 \. For more information, see [Extending the registration period for a domain](domain-extend.md)\.
 
 ## Generic TLDs<a name="domain-transfer-to-route-53-expiration-generic"></a>
 

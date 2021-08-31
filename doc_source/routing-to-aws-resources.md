@@ -2,7 +2,7 @@
 
 You can use Amazon Route 53 to route traffic to a variety of AWS resources\. 
 + [Routing traffic to an Amazon API Gateway API by using your domain name](routing-to-api-gateway.md)
-+ [Routing traffic to an Amazon CloudFront web distribution by using your domain name](routing-to-cloudfront-distribution.md)
++ [Routing traffic to an Amazon CloudFront distribution by using your domain name](routing-to-cloudfront-distribution.md)
 + [Routing traffic to an Amazon EC2 instance](routing-to-ec2-instance.md)
 + [Routing traffic to an AWS Elastic Beanstalk environment](routing-to-beanstalk-environment.md)
 + [Routing traffic to an ELB load balancer](routing-to-elb-load-balancer.md)

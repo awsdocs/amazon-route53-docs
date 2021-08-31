@@ -1,13 +1,13 @@
 # Values that Amazon Route 53 returns when you register a domain<a name="domain-register-values-returned"></a>
 
-When you register your domain with Amazon Route 53, Route 53 returns the following values in addition to the values that you specified\. 
+When you register your domain with Amazon Route 53 , Route 53 returns the following values in addition to the values that you specified\. 
 
 **Registered on**  
 The date on which the domain was originally registered with Route 53\.
 
 **Expires on**  
 The date and time on which the current registration period expires, in Greenwich Mean Time \(GMT\)\.  
-The registration period is typically one year, although the registries for some top\-level domains \(TLDs\) have longer registration periods\. For the registration and renewal period for your TLD, see [Domains that you can register with Amazon Route 53](registrar-tld-list.md)\.  
+The registration period is typically one year, although the registries for some top\-level domains \(TLDs\) have longer registration periods\. For the registration and renewal period for your TLD, see [Domains that you can register with Amazon Route 53 ](registrar-tld-list.md)\.  
 For most TLDs, you can extend the registration period by up to ten years\. For more information, see [Extending the registration period for a domain](domain-extend.md)\.
 
 **Domain name status code**  

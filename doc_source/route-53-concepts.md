@@ -20,7 +20,7 @@ Here's an overview of the concepts that are related to domain registration\.
 The name, such as example\.com, that a user types in the address bar of a web browser to access a website or a web application\. To make your website or web application available on the internet, you start by registering a domain name\. For more information, see [How domain registration works](welcome-domain-registration.md)\.
 
 **domain registrar**  
-A company that is accredited by ICANN \(Internet Corporation for Assigned Names and Numbers\) to process domain registrations for specific top\-level domains \(TLDs\)\. For example, Amazon Registrar, Inc\. is a domain registrar for \.com, \.net, and \.org domains\. Our registrar associate, Gandi, is a domain registrar for hundreds of TLDs, such as \.apartments, \.boutique, and \.camera\. For more information, see [Domains that you can register with Amazon Route 53](registrar-tld-list.md)\.
+A company that is accredited by ICANN \(Internet Corporation for Assigned Names and Numbers\) to process domain registrations for specific top\-level domains \(TLDs\)\. For example, Amazon Registrar, Inc\. is a domain registrar for \.com, \.net, and \.org domains\. Our registrar associate, Gandi, is a domain registrar for hundreds of TLDs, such as \.apartments, \.boutique, and \.camera\. For more information, see [Domains that you can register with Amazon Route 53 ](registrar-tld-list.md)\.
 
 **domain registry**  
 A company that owns the right to sell domains that have a specific top\-level domain\. For example, [VeriSign](http://www.verisign.com/) is the registry that owns the right to sell domains that have a \.com TLD\. A domain registry defines the rules for registering a domain, such as residency requirements for a geographic TLD\. A domain registry also maintains the authoritative database for all of the domain names that have the same TLD\. The registry's database contains information such as contact information and the name servers for each domain\. 
@@ -34,7 +34,7 @@ The last part of a domain name, such as \.com, \.org, or \.ninja\. There are two
 These TLDs typically give users an idea of what they'll find on the website\. For example, domain names that have a TLD of *\.bike* often are associated with websites for motorcycle or bicycle businesses or organizations\. With a few exceptions, you can use any generic TLD you want, so a bicycle club could use the \.hockey TLD for their domain name\.  
 **Geographic top\-level domains**  
 These TLDs are associated with geographic areas such as countries or cities\. Some registries for geographic TLDs have residency requirements, while others, such as [\.io \(British Indian Ocean Territory\)](io.md), allow or even encourage use as a generic TLD\. 
-For a list of the TLDs that you can use when you register a domain name with Route 53, see [Domains that you can register with Amazon Route 53](registrar-tld-list.md)\.
+For a list of the TLDs that you can use when you register a domain name with Route 53, see [Domains that you can register with Amazon Route 53 ](registrar-tld-list.md)\.
 
 ## Domain Name System \(DNS\) concepts<a name="route-53-concepts-domain-name-system-dns"></a>
 
