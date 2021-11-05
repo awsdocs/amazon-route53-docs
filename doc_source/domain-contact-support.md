@@ -1,15 +1,15 @@
 # Contacting AWS Support about domain registration issues<a name="domain-contact-support"></a>
 
 AWS provides a Basic support plan, free of charge, for all AWS customers\. The plan includes assistance for the following issues related to domain registration:
-+ Transferring domains to or from Amazon Route 53 
++ Transferring domains to or from Amazon Route 53
 + Transferring domains between AWS accounts
-+ Increasing quotas on Route 53 entities, such as the number of domains that you can register \(See [Quotas](DNSLimitations.md)\.\)
++ Increasing quotas on Route 53 entities, such as the number of domains that you can register \(See [Quotas](DNSLimitations.md)\.\)
 + Changing the owner of a domain
 + Changing contact information for the owner of a domain
 + Resending confirmation and authorization emails
 + Renewing domains
 + Restoring expired domains
-+ Getting information about Route 53 billing
++ Getting information about Route 53 billing
 + Providing proof of identity for \.uk domains
 + Deleting domains or disabling automatic renewal after you close your AWS account
 

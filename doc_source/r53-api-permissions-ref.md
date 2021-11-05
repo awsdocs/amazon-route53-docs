@@ -1,8 +1,8 @@
-# Amazon Route 53 API permissions: Actions, resources, and conditions reference<a name="r53-api-permissions-ref"></a>
+# Amazon Route 53 API permissions: Actions, resources, and conditions reference<a name="r53-api-permissions-ref"></a>
 
-When you set up [Access control](auth-and-access-control.md#access-control) and write a permissions policy that you can attach to an IAM identity \(identity\-based policies\), you can use the following lists as a reference\. The lists include each Amazon Route 53 API action, the actions that you must grant permissions access to, and the AWS resource that you must grant access to\. You specify the actions in the policy's `Action` field, and you specify the resource value in the policy's `Resource` field\. 
+When you set up [Access control](auth-and-access-control.md#access-control) and write a permissions policy that you can attach to an IAM identity \(identity\-based policies\), you can use the following lists as a reference\. The lists include each Amazon Route 53 API action, the actions that you must grant permissions access to, and the AWS resource that you must grant access to\. You specify the actions in the policy's `Action` field, and you specify the resource value in the policy's `Resource` field\. 
 
-You can use AWS\-wide condition keys in your Route 53 policies to express conditions\. For a complete list of AWS\-wide keys, see [Available keys](https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_elements.html#AvailableKeys) in the *IAM User Guide*\. 
+You can use AWS\-wide condition keys in your Route 53 policies to express conditions\. For a complete list of AWS\-wide keys, see [Available keys](https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_elements.html#AvailableKeys) in the *IAM User Guide*\. 
 
 **Note**  
 To specify an action, use the applicable prefix \(`route53`, `route53domains`, or `route53resolver`\) followed by the API operation name, for example:  
@@ -133,12 +133,12 @@ Resources: `*`
 [GetGeoLocation](https://docs.aws.amazon.com/Route53/latest/APIReference/API_GetGeoLocation.html)  
 Required Permissions \(API Action\): None  
 Resources: None  
-Route 53 does not perform authorization for this API because it retrieves information that is already available to the public\.
+Route 53 does not perform authorization for this API because it retrieves information that is already available to the public\.
 
 [ListGeoLocations](https://docs.aws.amazon.com/Route53/latest/APIReference/API_ListGeoLocations.html)  
 Required Permissions \(API Action\): None  
 Resources: None  
-Route 53 does not perform authorization for this API because it retrieves information that is already available to the public\.
+Route 53 does not perform authorization for this API because it retrieves information that is already available to the public\.
 
 [ListResourceRecordSets](https://docs.aws.amazon.com/Route53/latest/APIReference/API_ListResourceRecordSets.html)  
 Required Permissions \(API Action\): `route53:ListResourceRecordSets`  
@@ -221,7 +221,7 @@ Resources: `*`, `arn:aws:route53:::healthcheck/health check ID`
 [GetCheckerIpRanges](https://docs.aws.amazon.com/Route53/latest/APIReference/API_GetCheckerIpRanges.html)  
 Required Permissions \(API Action\): None  
 Resources: `*`  
-Route 53 does not perform authorization for this API because it retrieves information that is already available to the public\.
+Route 53 does not perform authorization for this API because it retrieves information that is already available to the public\.
 
 [GetHealthCheck](https://docs.aws.amazon.com/Route53/latest/APIReference/API_GetHealthCheck.html)  
 Required Permissions \(API Action\): `route53:GetHealthCheck`  

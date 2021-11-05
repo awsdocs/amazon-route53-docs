@@ -16,6 +16,7 @@ AWS Managed Domain Lists are not currently available in all Regions\. The follow
 | Asia Pacific \(Singapore\) |  Yes  | 
 |  Asia Pacific \(Sydney\)  |  Yes  | 
 |  Asia Pacific \(Tokyo\)  |  Yes  | 
+| Asia Pacific \(Osaka\) Region  |  Yes  | 
 |  Canada \(Central\) Region  |  Yes  | 
 |  Europe \(Frankfurt\) Region  |  Yes  | 
 |  Europe \(Ireland\) Region  |  Yes  | 

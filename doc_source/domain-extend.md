@@ -1,11 +1,11 @@
 # Extending the registration period for a domain<a name="domain-extend"></a>
 
-When you register a domain with Amazon Route 53 or you transfer domain registration to Route 53, we configure the domain to renew automatically\. The automatic renewal period is typically one year, although the registries for some top\-level domains \(TLDs\) have longer renewal periods\. 
+When you register a domain with Amazon Route 53 or you transfer domain registration to Route 53, we configure the domain to renew automatically\. The automatic renewal period is typically one year, although the registries for some top\-level domains \(TLDs\) have longer renewal periods\. 
 
 Note the following:
 
 **Maximum renewal period**  
-All generic TLDs and many country\-code TLDs let you extend domain registration for longer periods, typically up to ten years in one\-year increments\. To determine whether you can extend the registration period for your domain, see [Domains that you can register with Amazon Route 53 ](registrar-tld-list.md)\. If longer registration periods are allowed, perform the following procedure\.
+All generic TLDs and many country\-code TLDs let you extend domain registration for longer periods, typically up to ten years in one\-year increments\. To determine whether you can extend the registration period for your domain, see [Domains that you can register with Amazon Route 53](registrar-tld-list.md)\. If longer registration periods are allowed, perform the following procedure\.
 
 **Restrictions on when you can renew or extend a domain registration**  
 Some TLD registries have restrictions on when you can renew or extend a domain registration, for example, the last two months before the domain expires\. Even if the registry allows extending the registration period for a domain, they might not allow it at the current number of days before the domain expires\.
@@ -15,7 +15,7 @@ You can't use AWS credits to pay the fee for extending the registration period f
 
 **To extend the registration period for your domain**
 
-1. Open the Route 53 console at [https://console\.aws\.amazon\.com/route53/](https://console.aws.amazon.com/route53/)\.
+1. Open the Route 53 console at [https://console\.aws\.amazon\.com/route53/](https://console.aws.amazon.com/route53/)\.
 
 1. In the navigation pane, choose **Registered Domains**\.
 

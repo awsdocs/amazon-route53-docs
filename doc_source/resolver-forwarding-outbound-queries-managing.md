@@ -13,7 +13,7 @@ To view and edit settings for an outbound endpoint, perform the following proced
 
 **To view and edit settings for an outbound endpoint**
 
-1. Sign in to the AWS Management Console and open the Route 53 console at [https://console\.aws\.amazon\.com/route53/](https://console.aws.amazon.com/route53/)\.
+1. Sign in to the AWS Management Console and open the Route 53 console at [https://console\.aws\.amazon\.com/route53/](https://console.aws.amazon.com/route53/)\.
 
 1. In the navigation pane, choose **Outbound endpoints**\.
 
@@ -33,7 +33,7 @@ To view the status for an outbound endpoint, perform the following procedure\.<a
 
 **To view the status for an outbound endpoint**
 
-1. Sign in to the AWS Management Console and open the Route 53 console at [https://console\.aws\.amazon\.com/route53/](https://console.aws.amazon.com/route53/)\.
+1. Sign in to the AWS Management Console and open the Route 53 console at [https://console\.aws\.amazon\.com/route53/](https://console.aws.amazon.com/route53/)\.
 
 1. In the navigation pane, choose **Outbound endpoints**\.
 
@@ -62,7 +62,7 @@ If you delete an outbound endpoint, Resolver stops forwarding DNS queries from y
 
 **To delete an outbound endpoint**
 
-1. Sign in to the AWS Management Console and open the Route 53 console at [https://console\.aws\.amazon\.com/route53/](https://console.aws.amazon.com/route53/)\.
+1. Sign in to the AWS Management Console and open the Route 53 console at [https://console\.aws\.amazon\.com/route53/](https://console.aws.amazon.com/route53/)\.
 
 1. In the navigation pane, choose **Outbound endpoints**\.
 

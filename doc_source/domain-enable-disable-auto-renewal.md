@@ -1,12 +1,12 @@
 # Enabling or disabling automatic renewal for a domain<a name="domain-enable-disable-auto-renewal"></a>
 
-When you want to change whether Amazon Route 53 automatically renews registration for a domain shortly before the expiration date, or you want to see the current setting for automatic renewal, perform the following procedure\.
+When you want to change whether Amazon Route 53 automatically renews registration for a domain shortly before the expiration date, or you want to see the current setting for automatic renewal, perform the following procedure\.
 
 Note that you can't use AWS credits to pay the fee for renewing registration for a domain\.<a name="domain-enable-disable-auto-renewal-procedure"></a>
 
 **To enable or disable automatic renewal for a domain**
 
-1. Sign in to the AWS Management Console and open the Route 53 console at [https://console\.aws\.amazon\.com/route53/](https://console.aws.amazon.com/route53/)\.
+1. Sign in to the AWS Management Console and open the Route 53 console at [https://console\.aws\.amazon\.com/route53/](https://console.aws.amazon.com/route53/)\.
 
 1. In the navigation pane, choose **Registered Domains**\.
 

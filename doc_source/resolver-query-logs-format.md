@@ -1,12 +1,12 @@
 # Values that appear in Resolver query logs<a name="resolver-query-logs-format"></a>
 
-Each log file contains one log entry for each DNS query that Amazon Route 53 received from DNS resolvers in the corresponding edge location\. Each log entry includes the following values:
+Each log file contains one log entry for each DNS query that Amazon Route 53 received from DNS resolvers in the corresponding edge location\. Each log entry includes the following values:
 
 **version**  
 The version number of the query log format\. The current version is `1.1`\.  
 The version value is a major and minor version in the form **major\_version\.minor\_version**\. For example, you can have a `version` value of `1.7`, where `1 `is the major version, and `7` is the minor version\.  
-Route 53 increments the major version if a change is made to the log structure that is not backward\-compatible\. This includes removing a JSON field that already exists, or changing how the contents of a field are represented \(for example, a date format\)\.  
- Route 53 increments the minor version if a change adds new fields to the log file\. This can occur if new information is available for some or all existing DNS queries within a VPC\. 
+Route 53 increments the major version if a change is made to the log structure that is not backward\-compatible\. This includes removing a JSON field that already exists, or changing how the contents of a field are represented \(for example, a date format\)\.  
+ Route 53 increments the minor version if a change adds new fields to the log file\. This can occur if new information is available for some or all existing DNS queries within a VPC\. 
 
 **account\_id**  
 The ID of the AWS account that created the VPC\.
@@ -25,7 +25,7 @@ For information about ISO 8601 format, see the Wikipedia article [ISO 8601](http
 The domain name \(example\.com\) or subdomain name \(www\.example\.com\) that was specified in the query\.
 
 **query\_type**  
-Either the DNS record type that was specified in the request, or `ANY`\. For information about the types that Route 53 supports, see [Supported DNS record types](ResourceRecordTypes.md)\.
+Either the DNS record type that was specified in the request, or `ANY`\. For information about the types that Route 53 supports, see [Supported DNS record types](ResourceRecordTypes.md)\.
 
 **query\_class**  
 The class of the query\.
@@ -34,7 +34,7 @@ The class of the query\.
 The DNS response code that Resolver returned in response to the DNS query\. The response code indicates whether the query was valid or not\. The most common response code is `NOERROR`, meaning that the query was valid\. If the response is not valid, Resolver returns a response code that explains why not\. For a list of possible response codes, see [DNS RCODEs](https://www.iana.org/assignments/dns-parameters/dns-parameters.xhtml#dns-parameters-6) on the IANA website\.
 
 **answer\_type**  
-The DNS record type \(such as A, MX, or CNAME\) of the value that Resolver is returning in response to the query\. For information about the types that Route 53 supports, see [Supported DNS record types](ResourceRecordTypes.md)\.
+The DNS record type \(such as A, MX, or CNAME\) of the value that Resolver is returning in response to the query\. For information about the types that Route 53 supports, see [Supported DNS record types](ResourceRecordTypes.md)\.
 
 **rdata**  
 The value that Resolver returned in response to the query\. For example, for an A record, this is an IP address in IPv4 format\. For a CNAME record, this is the domain name in the CNAME record\. 

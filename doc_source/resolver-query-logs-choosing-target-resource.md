@@ -46,10 +46,10 @@ If you want to send logs to an S3 bucket in an account that you don't own, the o
 }
 ```
  If you want to store logs in a central S3 bucket for your organization, we recommend that you set up your query logging configuration from a centralized account \(with the necessary permissions to write to a central bucket\) and use [RAM](query-logging-configurations-managing-sharing.md) to share the configuration across accounts\.
-For more information, see the [Amazon Simple Storage Service Console User Guide](https://docs.aws.amazon.com/AmazonS3/latest/user-guide/)\.
+For more information, see the [Amazon Simple Storage Service User Guide](https://docs.aws.amazon.com/AmazonS3/latest/user-guide/)\.
 
 **Kinesis Data Firehose delivery stream**  
-You can stream logs in real time to Elasticsearch, Amazon Redshift, or other applications\.  
+You can stream logs in real time to Amazon OpenSearch Service, Amazon Redshift, or other applications\.  
 For more information, see the [Amazon Kinesis Data Firehose Developer Guide](https://docs.aws.amazon.com/firehose/latest/dev/)\.
 
 For information about the pricing for Resolver query logging, see [Amazon CloudWatch pricing](http://aws.amazon.com/cloudwatch/pricing/)\.

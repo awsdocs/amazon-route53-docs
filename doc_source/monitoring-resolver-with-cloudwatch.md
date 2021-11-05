@@ -16,7 +16,7 @@ When you configure Resolver to forward DNS queries to your network or vice versa
 
 1. In the navigation pane, choose **Metrics**\.
 
-1. On the **All metrics** tab, choose **Route 53 Resolver**\.
+1. On the **All metrics** tab, choose **Route 53 Resolver**\.
 
 1. Choose **By Endpoint** to view query counts for a specified endpoint\. Then choose the endpoints that you want to view the number of queries for\. 
 
@@ -78,7 +78,7 @@ Units: Count
 The `AWS/Route53Resolver` namespace includes the following metrics for each IP address that's associated with a Resolver inbound or outbound endpoint\. \(When you specify an endpoint, Resolver creates an Amazon VPC [elastic network interface](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/using-eni.html)\.\)
 
 **InboundQueryVolume**  
-For each IP address for your inbound endpoints, the number of DNS queries forwarded from your network to the specified IP address\. Each IP address is identified by the IP address ID\. You can get this value using the Route 53 console\. On the page for the applicable endpoint, in the IP addresses section, see the **IP address ID** column\. You can also get the value programmatically using [ListResolverEndpointIpAddresses](https://docs.aws.amazon.com/Route53/latest/APIReference/API_route53resolver_ListResolverEndpointIpAddresses.html)\.   
+For each IP address for your inbound endpoints, the number of DNS queries forwarded from your network to the specified IP address\. Each IP address is identified by the IP address ID\. You can get this value using the Route 53 console\. On the page for the applicable endpoint, in the IP addresses section, see the **IP address ID** column\. You can also get the value programmatically using [ListResolverEndpointIpAddresses](https://docs.aws.amazon.com/Route53/latest/APIReference/API_route53resolver_ListResolverEndpointIpAddresses.html)\.   
 Valid statistics: Sum  
 Units: Count
 
@@ -86,7 +86,7 @@ Units: Count
 For each IP address for your outbound endpoints, the total number of DNS queries forwarded from Amazon VPCs to your network, including the following:  
 + The number of DNS queries forwarded from your VPCs to your network using the specified IP address\.
 + When the current account shares Resolver rules with other accounts, queries from VPCs that are created by other accounts that are forwarded to your network through using the specified IP address\. 
-Each IP address is identified by the IP address ID\. You can get this value using the Route 53 console\. On the page for the applicable endpoint, in the IP addresses section, see the **IP address ID** column\. You can also get the value programmatically using [ListResolverEndpointIpAddresses](https://docs.aws.amazon.com/Route53/latest/APIReference/API_route53resolver_ListResolverEndpointIpAddresses.html)\.   
+Each IP address is identified by the IP address ID\. You can get this value using the Route 53 console\. On the page for the applicable endpoint, in the IP addresses section, see the **IP address ID** column\. You can also get the value programmatically using [ListResolverEndpointIpAddresses](https://docs.aws.amazon.com/Route53/latest/APIReference/API_route53resolver_ListResolverEndpointIpAddresses.html)\.   
 Valid statistics: Sum  
 Units: Count
 

@@ -12,7 +12,7 @@ To create an inbound endpoint, perform the following procedure\.<a name="resolve
 
 **To create an inbound endpoint**
 
-1. Sign in to the AWS Management Console and open the Route 53 console at [https://console\.aws\.amazon\.com/route53/](https://console.aws.amazon.com/route53/)\.
+1. Sign in to the AWS Management Console and open the Route 53 console at [https://console\.aws\.amazon\.com/route53/](https://console.aws.amazon.com/route53/)\.
 
 1. In the navigation pane, choose **Inbound endpoints**\.
 
@@ -45,7 +45,7 @@ The IP addresses that you want DNS resolvers on your network to forward DNS quer
 **Multiple Availability Zones**  
 We recommend that you specify IP addresses in at least two Availability Zones\. You can optionally specify additional IP addresses in those or other Availability Zones\.  
 **IP addresses and Amazon VPC elastic network interfaces**  
-For each combination of Availability Zone, Subnet, and IP address that you specify, Resolver creates an Amazon VPC elastic network interface\. For the current maximum number of DNS queries per second per IP address in an endpoint, see [Quotas on Route 53 Resolver](DNSLimitations.md#limits-api-entities-resolver)\. For information about pricing for each elastic network interface, see "Amazon Route 53 " on the [Amazon Route 53 pricing page](https://aws.amazon.com/route53/pricing/)\.
+For each combination of Availability Zone, Subnet, and IP address that you specify, Resolver creates an Amazon VPC elastic network interface\. For the current maximum number of DNS queries per second per IP address in an endpoint, see [Quotas on Route 53 Resolver](DNSLimitations.md#limits-api-entities-resolver)\. For information about pricing for each elastic network interface, see "Amazon Route 53" on the [Amazon Route 53 pricing page](https://aws.amazon.com/route53/pricing/)\.
 For each IP address, specify the following values\. Each IP address must be in an Availability Zone in the VPC that you specified in **VPC in the *region\-name* Region**\.    
 **Availability Zone**  
 The Availability Zone that you want DNS queries to pass through on the way to your VPC\. The Availability Zone that you specify must be configured with a subnet\.  

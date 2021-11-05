@@ -17,11 +17,11 @@ To create a traffic policy, perform the following procedure\.<a name="traffic-po
 
 **To create a traffic policy**
 
-1. Design your configuration\. For information about how complex DNS routing configurations work, see [Configuring DNS failover](dns-failover-configuring.md) in [Creating Amazon Route 53 health checks and configuring DNS failover](dns-failover.md)\.
+1. Design your configuration\. For information about how complex DNS routing configurations work, see [Configuring DNS failover](dns-failover-configuring.md) in [Creating Amazon Route 53 health checks and configuring DNS failover](dns-failover.md)\.
 
 1. Based on the design for your configuration, create the health checks that you want to use for your endpoints\.
 
-1. Sign in to the AWS Management Console and open the Route 53 console at [https://console\.aws\.amazon\.com/route53/](https://console.aws.amazon.com/route53/)\.
+1. Sign in to the AWS Management Console and open the Route 53 console at [https://console\.aws\.amazon\.com/route53/](https://console.aws.amazon.com/route53/)\.
 
 1. In the navigation pane, choose **Traffic policies**\.
 
@@ -36,7 +36,7 @@ To create a traffic policy, perform the following procedure\.<a name="traffic-po
    You can delete rules, endpoints, and branches of a traffic policy in the following ways:
    + To delete a rule or an endpoint, click the **x** in the upper\-right corner of the box\.
 **Important**  
-If you delete a rule that has child rules and endpoints, Amazon Route 53 also deletes all of the children\. 
+If you delete a rule that has child rules and endpoints, Amazon Route 53 also deletes all of the children\. 
    + If you connect two rules to the same child rule or endpoint and you want to delete one of the connections, pause your cursor on the connection that you want to delete, and click the **x** for that connection\.
 
 1. Choose **Create traffic policy**\.
@@ -64,7 +64,7 @@ Enter a name that describes the traffic policy\. This value appears in the list 
 
 ### Version<a name="traffic-policies-creating-values-version"></a>
 
-This value is assigned automatically by Amazon Route 53 when you create a traffic policy or a new version of an existing policy\.
+This value is assigned automatically by Amazon Route 53 when you create a traffic policy or a new version of an existing policy\.
 
 ### Version description<a name="traffic-policies-creating-values-version-description"></a>
 
@@ -72,7 +72,7 @@ Enter a description that applies to this version of the traffic policy\. This va
 
 ### DNS type<a name="traffic-policies-creating-values-dns-type"></a>
 
-Choose the DNS type that you want Amazon Route 53 to assign to all of the records when you create a policy record by using this traffic policy version\. For a list of supported types, see [Supported DNS record types](ResourceRecordTypes.md)\.
+Choose the DNS type that you want Amazon Route 53 to assign to all of the records when you create a policy record by using this traffic policy version\. For a list of supported types, see [Supported DNS record types](ResourceRecordTypes.md)\.
 
 **Important**  
 If you're creating a new version of an existing traffic policy, you can change the DNS type\. However, you can't edit a policy record and choose a traffic policy version that has a DNS type that is different from the traffic policy version that you used to create the policy record\. For example, if you created a policy record by using a traffic policy version that has a **DNS type** of A, you can't edit the policy record and choose a traffic policy version that has any other value for **DNS type**\. 
@@ -91,17 +91,17 @@ Choose this option when you want to configure active\-passive failover, in which
 For more information, see [Active\-passive failover](dns-failover-types.md#dns-failover-types-active-passive)\.
 
 **Geolocation rule**  
-Choose this option when you want Amazon Route 53 to respond to DNS queries based on the location of your users\.  
+Choose this option when you want Amazon Route 53 to respond to DNS queries based on the location of your users\.  
 For more information, see [Geolocation routing](routing-policy.md#routing-policy-geo)\.  
 When you choose **Geolocation rule**, you also choose the country or the state in the United States that requests originate from\.
 
 **Latency rule**  
-Choose this option when you have resources in multiple Amazon EC2 data centers that perform the same function, and you want Route 53 to respond to DNS queries with the resources that provide the best latency\.  
+Choose this option when you have resources in multiple Amazon EC2 data centers that perform the same function, and you want Route 53 to respond to DNS queries with the resources that provide the best latency\.  
 When you choose **Latency rule**, you also choose an AWS Region\.  
 For more information, see [Latency\-based routing](routing-policy.md#routing-policy-latency)\.
 
 **Geoproximity rule**  
-Choose this option when you want Route 53 to respond to DNS queries based on the location of your resources and optionally on a bias that you specify\. The bias allows you to send more traffic to a resource or more traffic away from a resource\.  
+Choose this option when you want Route 53 to respond to DNS queries based on the location of your resources and optionally on a bias that you specify\. The bias allows you to send more traffic to a resource or more traffic away from a resource\.  
 When you choose **Geoproximity rule**, enter the following values:    
 **Endpoint location**  
 Choose the applicable value:  
@@ -114,20 +114,20 @@ If you chose **Custom \(enter coordinates\)** for **Endpoint location**, enter t
 + You can get latitude and longitude from some online mapping applications\. For example, in Google Maps, the URL for a location specifies the latitude and longitude:
 
   https://www\.google\.com/maps/@**47\.6086111**,\-**122\.3409953**,20z
-+ You can enter up to two decimals of precision, for example, **47\.63**\. If you specify a value with greater precision, Route 53 truncates the value to two places after the decimal\. For latitude and for longitude at the equator, 0\.01 degree is approximately 0\.69 miles\.  
++ You can enter up to two decimals of precision, for example, **47\.63**\. If you specify a value with greater precision, Route 53 truncates the value to two places after the decimal\. For latitude and for longitude at the equator, 0\.01 degree is approximately 0\.69 miles\.  
 **Bias**  
-To optionally change the size of the geographic region from which Route 53 routes traffic to a resource, specify the applicable value for **Bias**:  
-+ To expand the size of the geographic region from which Route 53 routes traffic to a resource, specify a positive integer from 1 to 99 for the bias\. Route 53 shrinks the size of adjacent regions\.
-+ To shrink the size of the geographic region from which Route 53 routes traffic to a resource, specify a negative bias of \-1 to \-99\. Route 53 expands the size of adjacent regions\.
+To optionally change the size of the geographic region from which Route 53 routes traffic to a resource, specify the applicable value for **Bias**:  
++ To expand the size of the geographic region from which Route 53 routes traffic to a resource, specify a positive integer from 1 to 99 for the bias\. Route 53 shrinks the size of adjacent regions\.
++ To shrink the size of the geographic region from which Route 53 routes traffic to a resource, specify a negative bias of \-1 to \-99\. Route 53 expands the size of adjacent regions\.
 The effect of changing the value of **Bias** is relative, based on the location of other resources, rather than absolute, based on distance\. As a result, the effect of a change is difficult to predict\. For example, depending on where your resources are, changing the bias from 10 to 15 can mean the difference between adding or subtracting a significant amount of traffic from the New York City metropolitan area\. We recommend that you change the bias in small increments and evaluate the results, and then make additional changes if appropriate\.
 For more information, see [Geoproximity routing \(traffic flow only\)](routing-policy.md#routing-policy-geoproximity)\.
 
 **Multivalue answer rule**  
-Choose this option when you want Route 53 to respond to DNS queries with up to eight healthy answers selected approximately at random\.   
+Choose this option when you want Route 53 to respond to DNS queries with up to eight healthy answers selected approximately at random\.   
 For more information, see [Multivalue answer routing](routing-policy.md#routing-policy-multivalue)\.
 
 **Weighted rule**  
-Choose this option when you have multiple resources that perform the same function \(for example, web servers that serve the same website\) and you want Route 53 to route traffic to those resources in proportions that you specify \(for example, 1/3rd to one server and 2/3rds to the other\)\.  
+Choose this option when you have multiple resources that perform the same function \(for example, web servers that serve the same website\) and you want Route 53 to route traffic to those resources in proportions that you specify \(for example, 1/3rd to one server and 2/3rds to the other\)\.  
 When you choose **Weighted rule**, enter the weight that you want to apply to this rule\.  
 For more information, see [Weighted routing](routing-policy.md#routing-policy-weighted)\.
 
@@ -156,7 +156,7 @@ Choose this option if you want to route traffic to an ELB load balancer\. The op
 Choose this option if you want to route traffic to an Amazon S3 bucket that is configured as a website endpoint\. The option is available only if you chose **A: IP address in IPv4 format** for **DNS type**\. 
 
 **Type *DNS type* value**  
-Choose this option if you want Route 53 to respond to DNS queries using the value in the **Value** field\. For example, if you chose **A** for the value of **DNS type** when you created this traffic policy, this option in the **Value type** list will be **Type A value**\. This requires that you enter an IP address in IPv4 format in the **Value** field\. Route 53 will respond to DNS queries that are routed to this endpoint with the IP address in the **Value** field\.
+Choose this option if you want Route 53 to respond to DNS queries using the value in the **Value** field\. For example, if you chose **A** for the value of **DNS type** when you created this traffic policy, this option in the **Value type** list will be **Type A value**\. This requires that you enter an IP address in IPv4 format in the **Value** field\. Route 53 will respond to DNS queries that are routed to this endpoint with the IP address in the **Value** field\.
 
 ### Value<a name="traffic-policies-creating-values-value"></a>
 
@@ -178,7 +178,7 @@ For more information about supported DNS types, see [Supported DNS record types]
 
 ## Viewing a map that shows the effect of geoproximity settings<a name="traffic-flow-geoproximity-map"></a>
 
-A *geoproximity rule* lets you specify the locations of your resources, both in AWS Regions and, using latitude and longitude, in non\-AWS locations\. When you create a geoproximity rule, Route 53 routes internet traffic to the resource that is closest to your users by default\. You can also choose to route more or less traffic to a resource by specifying a bias that expands or shrinks the geographic area from which traffic is routed to a resource\. For more information about geoproximity routing, see [Geoproximity routing \(traffic flow only\)](routing-policy.md#routing-policy-geoproximity)\.
+A *geoproximity rule* lets you specify the locations of your resources, both in AWS Regions and, using latitude and longitude, in non\-AWS locations\. When you create a geoproximity rule, Route 53 routes internet traffic to the resource that is closest to your users by default\. You can also choose to route more or less traffic to a resource by specifying a bias that expands or shrinks the geographic area from which traffic is routed to a resource\. For more information about geoproximity routing, see [Geoproximity routing \(traffic flow only\)](routing-policy.md#routing-policy-geoproximity)\.
 
 You can display a map that shows the effect of your current geoproximity settings\. For example, if you have resources in the US West \(Oregon\), EU \(Frankfurt\), and Asia Pacific \(Tokyo\) Regions, and if you don't specify a bias, the map looks like this\.
 
@@ -196,15 +196,15 @@ Note the following:
 
 ## Creating additional versions of a traffic policy<a name="traffic-policies-creating-versions"></a>
 
-When you edit a traffic policy, Amazon Route 53 automatically creates another version of the traffic policy and retains the previous versions unless you choose to delete them\. The new version has the same name as the traffic policy that you're editing; it's distinguished from the original version by a version number that Route 53 increments automatically\. You can base the new version of a traffic policy on any existing version of a traffic policy that has the same name\.
+When you edit a traffic policy, Amazon Route 53 automatically creates another version of the traffic policy and retains the previous versions unless you choose to delete them\. The new version has the same name as the traffic policy that you're editing; it's distinguished from the original version by a version number that Route 53 increments automatically\. You can base the new version of a traffic policy on any existing version of a traffic policy that has the same name\.
 
-Route 53 doesn't reuse version numbers for new versions of a given traffic policy\. For example, if you create three versions of **MyTrafficPolicy**, delete the last two versions, and then create another version, the new version is version 4\. By retaining the previous versions, Route 53 ensures that you can roll back to a previous configuration if a new configuration doesn't route traffic as you wanted it to\. 
+Route 53 doesn't reuse version numbers for new versions of a given traffic policy\. For example, if you create three versions of **MyTrafficPolicy**, delete the last two versions, and then create another version, the new version is version 4\. By retaining the previous versions, Route 53 ensures that you can roll back to a previous configuration if a new configuration doesn't route traffic as you wanted it to\. 
 
 To create a new traffic policy version, perform the following procedure\.<a name="traffic-policies-creating-versions-procedure"></a>
 
 **To create another version of a traffic policy**
 
-1. Sign in to the AWS Management Console and open the Route 53 console at [https://console\.aws\.amazon\.com/route53/](https://console.aws.amazon.com/route53/)\.
+1. Sign in to the AWS Management Console and open the Route 53 console at [https://console\.aws\.amazon\.com/route53/](https://console.aws.amazon.com/route53/)\.
 
 1. In the navigation pane, choose **Traffic policies**\.
 
@@ -223,7 +223,7 @@ To create a new traffic policy version, perform the following procedure\.<a name
    You can delete rules, endpoints, and branches of a traffic policy in the following ways:
    + To delete a rule or an endpoint, click the **x** in the upper\-right corner of the box\.
 **Important**  
-If you delete a rule that has child rules and endpoints, Route 53 also deletes all of the children\. 
+If you delete a rule that has child rules and endpoints, Route 53 also deletes all of the children\. 
    + If you connect two rules to the same child rule or endpoint and you want to delete one of the connections, pause your cursor on the connection that you want to delete, and click the **x** for that connection\.
 
 1. When you're finished editing, choose **Save as new version**\.
@@ -236,13 +236,13 @@ If you delete a rule that has child rules and endpoints, Route 53 also deletes a
 
 ## Creating a traffic policy by importing a JSON document<a name="traffic-policy-import"></a>
 
-You can create a new traffic policy or a new version of an existing traffic policy by importing a document in JSON format that describes all of the endpoints and rules that you want to include in the traffic policy\. For information about the format of the JSON document and several examples that you can copy and revise, see [Traffic policy document format](https://docs.aws.amazon.com/Route53/latest/APIReference/api-policies-traffic-policy-document-format.html) in the *Amazon Route 53 API Reference*\.
+You can create a new traffic policy or a new version of an existing traffic policy by importing a document in JSON format that describes all of the endpoints and rules that you want to include in the traffic policy\. For information about the format of the JSON document and several examples that you can copy and revise, see [Traffic policy document format](https://docs.aws.amazon.com/Route53/latest/APIReference/api-policies-traffic-policy-document-format.html) in the *Amazon Route 53 API Reference*\.
 
 The easiest way to get the JSON\-formatted document for an existing traffic policy version is to use the `get-traffic-policy` command in the AWS CLI\. For more information, see [get\-traffic\-policy](https://docs.aws.amazon.com/cli/latest/reference/route53/get-traffic-policy.html) in the *AWS CLI Command Reference*\. <a name="traffic-policy-import-procedure"></a>
 
 **To create a traffic policy by importing a JSON document**
 
-1. Sign in to the AWS Management Console and open the Route 53 console at [https://console\.aws\.amazon\.com/route53/](https://console.aws.amazon.com/route53/)\.
+1. Sign in to the AWS Management Console and open the Route 53 console at [https://console\.aws\.amazon\.com/route53/](https://console.aws.amazon.com/route53/)\.
 
 1. To create a new traffic policy by importing a JSON document, perform the following steps:
 
@@ -282,7 +282,7 @@ You can view all of the versions that you've created for a traffic policy as wel
 
 **To view traffic policy versions and the associated policy records**
 
-1. Sign in to the AWS Management Console and open the Route 53 console at [https://console\.aws\.amazon\.com/route53/](https://console.aws.amazon.com/route53/)\.
+1. Sign in to the AWS Management Console and open the Route 53 console at [https://console\.aws\.amazon\.com/route53/](https://console.aws.amazon.com/route53/)\.
 
 1. In the navigation pane, choose **Traffic policies**\.
 
@@ -304,34 +304,34 @@ The DNS names that you've associated the traffic policy with\.
 **Status**  
 Possible values include the following:    
 **Applied**  
-Route 53 has finished creating or updating a policy record and the corresponding records\.  
+Route 53 has finished creating or updating a policy record and the corresponding records\.  
 **Creating**  
-Route 53 is creating the records for a new policy record\.  
+Route 53 is creating the records for a new policy record\.  
 **Updating**  
-You have updated a policy record and Route 53 is in the process of creating a new group of records that will replace the existing group of records for the specified DNS name\.  
+You have updated a policy record and Route 53 is in the process of creating a new group of records that will replace the existing group of records for the specified DNS name\.  
 **Deleting**  
-Route 53 is in the process of deleting a policy record and the associated records\.  
+Route 53 is in the process of deleting a policy record and the associated records\.  
 **Failed**  
-Route 53 wasn't able to create or update the policy record and the associated records\.   
+Route 53 wasn't able to create or update the policy record and the associated records\.   
 **Version used**  
 Indicates the version of the traffic policy that you used to create the policy record\.  
 **DNS type**  
-The DNS type of all of the records that Route 53 created for this policy record\. When you edit a policy record, you must specify a traffic policy version that has the same DNS type as the DNS type for the policy record that you're editing\.  
+The DNS type of all of the records that Route 53 created for this policy record\. When you edit a policy record, you must specify a traffic policy version that has the same DNS type as the DNS type for the policy record that you're editing\.  
 **TTL \(in seconds\)**  
-The amount of time, in seconds, that you want DNS recursive resolvers to cache information about this record\. If you specify a longer value \(for example, 172800 seconds, or two days\), you pay less for Route 53 service because recursive resolvers send requests to Route 53 less often\. However, it takes longer for changes to the records \(for example, a new IP address\) to take effect because recursive resolvers use the values in their cache for longer periods instead of asking Route 53 for the latest information\.
+The amount of time, in seconds, that you want DNS recursive resolvers to cache information about this record\. If you specify a longer value \(for example, 172800 seconds, or two days\), you pay less for Route 53 service because recursive resolvers send requests to Route 53 less often\. However, it takes longer for changes to the records \(for example, a new IP address\) to take effect because recursive resolvers use the values in their cache for longer periods instead of asking Route 53 for the latest information\.
 
 ## Deleting traffic policy versions and traffic policies<a name="traffic-policies-deleting"></a>
 
 To delete a traffic policy, you must delete all of the versions \(including the original\) that you've created for the traffic policy\. In addition, to delete a traffic policy version, you must delete all of the policy records that you created by using the traffic policy version\.
 
 **Important**  
-If you delete policy records that Amazon Route 53 is using to respond to DNS queries, Route 53 will stop responding to queries for the corresponding DNS names\. For example, if Route 53 is using the policy record for www\.example\.com to respond to DNS queries for www\.example\.com and you delete the policy record, your users will not be able to access your website or web application by using the domain name www\.example\.com\. 
+If you delete policy records that Amazon Route 53 is using to respond to DNS queries, Route 53 will stop responding to queries for the corresponding DNS names\. For example, if Route 53 is using the policy record for www\.example\.com to respond to DNS queries for www\.example\.com and you delete the policy record, your users will not be able to access your website or web application by using the domain name www\.example\.com\. 
 
 To delete traffic policy versions and, optionally, a traffic policy, perform the following procedure:<a name="traffic-policies-deleting-procedure"></a>
 
 **To delete traffic policy versions and a traffic policy**
 
-1. Sign in to the AWS Management Console and open the Route 53 console at [https://console\.aws\.amazon\.com/route53/](https://console.aws.amazon.com/route53/)\.
+1. Sign in to the AWS Management Console and open the Route 53 console at [https://console\.aws\.amazon\.com/route53/](https://console.aws.amazon.com/route53/)\.
 
 1. In the navigation pane, choose **Traffic policies**\.
 

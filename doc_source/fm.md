@@ -19,7 +19,7 @@ Supported\.
 **Internationalized domain names**  
 Not supported\.
 
-**Authorization code required for transfer to Route 53**  
+**Authorization code required for transfer to Route 53**  
 Yes
 
 **DNSSEC**  
@@ -27,8 +27,8 @@ Not supported\.
 
 **Deadlines for renewing and restoring domains**  
 + Renewal is possible: Until the expiration date
-+ Late renewal with Route 53 is possible: Until 44 days after expiration
-+ Domain is deleted from Route 53: 44 days after expiration
++ Late renewal with Route 53 is possible: Until 44 days after expiration
++ Domain is deleted from Route 53: 44 days after expiration
 + Restoration with the registry is possible: Between 44 days and 79 days after expiration
 + Domain is deleted from the registry: 84 days after expiration
 

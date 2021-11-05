@@ -16,7 +16,7 @@ As a best practice, before using a domain list in production, test it in a non\-
 
 **To add a domain list**
 
-1. Sign in to the AWS Management Console and open the Route 53 console at [https://console\.aws\.amazon\.com/route53/](https://console.aws.amazon.com/route53/)\.
+1. Sign in to the AWS Management Console and open the Route 53 console at [https://console\.aws\.amazon\.com/route53/](https://console.aws.amazon.com/route53/)\.
 
    \- OR \- 
 

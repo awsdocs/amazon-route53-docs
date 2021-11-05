@@ -1,4 +1,4 @@
-# Using Service\-Linked Roles for Amazon Route 53 Resolver<a name="using-service-linked-roles"></a>
+# Using Service\-Linked Roles for Amazon Route 53 Resolver<a name="using-service-linked-roles"></a>
 
 Route 53 Resolver uses AWS Identity and Access Management \(IAM\)[ service\-linked roles](https://docs.aws.amazon.com/IAM/latest/UserGuide/id_roles_terms-and-concepts.html#iam-term-service-linked-role)\. A service\-linked role is a unique type of IAM role that is linked directly to Resolver\. Service\-linked roles are predefined by Resolver and include all the permissions that the service requires to call other AWS services on your behalf\. 
 
@@ -67,9 +67,9 @@ If the Resolver service is using the role when you try to delete the resources, 
 
 **To delete Resolver resources used by the `AWSServiceRoleForRoute53Resolver`**
 
-1. Sign in to the AWS Management Console and open the Route 53 console at [https://console\.aws\.amazon\.com/route53/](https://console.aws.amazon.com/route53/)\.
+1. Sign in to the AWS Management Console and open the Route 53 console at [https://console\.aws\.amazon\.com/route53/](https://console.aws.amazon.com/route53/)\.
 
-1. Expand the Route 53 console menu\. In the upper left corner of the console, choose the three horizontal bars \(![\[Menu icon\]](http://docs.aws.amazon.com/Route53/latest/DeveloperGuide/images/menu-icon.png)\) icon\.
+1. Expand the Route 53 console menu\. In the upper left corner of the console, choose the three horizontal bars \(![\[Menu icon\]](http://docs.aws.amazon.com/Route53/latest/DeveloperGuide/images/menu-icon.png)\) icon\.
 
 1. Within the **Resolver **menu, choose **Query logging**\.
 

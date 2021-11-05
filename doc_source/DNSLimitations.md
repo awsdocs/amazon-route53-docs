@@ -1,6 +1,6 @@
 # Quotas<a name="DNSLimitations"></a>
 
-Amazon Route 53 API requests and entities are subject to the following quotas \(formerly referred to as "limits"\)\.
+Amazon Route 53 API requests and entities are subject to the following quotas \(formerly referred to as "limits"\)\.
 
 **Topics**
 + [Using Service Quotas to view and manage quotas](#limits-service-quotas)
@@ -9,16 +9,16 @@ Amazon Route 53 API requests and entities are subject to the following quotas \(
 
 ## Using Service Quotas to view and manage quotas<a name="limits-service-quotas"></a>
 
-You can use the Service Quotas service to view quotas and to request quota increases for many AWS services\. For more information, see the [Service Quotas User Guide](https://docs.aws.amazon.com/servicequotas/latest/userguide/)\. \(You can currently use Service Quotas to view and manage only Route 53 and Route 53 Resolver quotas\. Domain registration quotas aren't available\.\) 
+You can use the Service Quotas service to view quotas and to request quota increases for many AWS services\. For more information, see the [Service Quotas User Guide](https://docs.aws.amazon.com/servicequotas/latest/userguide/)\. \(You can currently use Service Quotas to view and manage only Route 53 and Route 53 Resolver quotas\. Domain registration quotas aren't available\.\) 
 
 **Note**  
-To view quotas and request higher quotas for Route 53, you must change the Region to US East \(N\. Virginia\)\. To view quotas and request higher quotas for Resolver, change to the applicable Region\.
+To view quotas and request higher quotas for Route 53, you must change the Region to US East \(N\. Virginia\)\. To view quotas and request higher quotas for Resolver, change to the applicable Region\.
 
 ## Quotas on entities<a name="limits-api-entities"></a>
 
-Amazon Route 53 entities are subject to the following quotas\.
+Amazon Route 53 entities are subject to the following quotas\.
 
-For information on getting current quotas \(formerly referred to as "limits"\), see the following Route 53 actions:
+For information on getting current quotas \(formerly referred to as "limits"\), see the following Route 53 actions:
 + [GetAccountLimit](https://docs.aws.amazon.com/Route53/latest/APIReference/API_GetAccountLimit.html) – Gets quotas on health checks, hosted zones, reusable delegation sets, traffic flow policies, and traffic flow policy records
 + [GetHostedZoneLimit](https://docs.aws.amazon.com/Route53/latest/APIReference/API_GetHostedZoneLimit.html) – Gets quotas on records in a hosted zone and on Amazon VPCs that you can associate with a private hosted zone
 + [GetReusableDelegationSetLimit](https://docs.aws.amazon.com/Route53/latest/APIReference/API_GetReusableDelegationSetLimit.html) – Gets the quota on the number of hosted zones that you can associate with a reusable delegation set
@@ -100,7 +100,7 @@ Use the following procedure to increase quotas for Route 53 Resolver\.<a name="i
 | Entity | Quota | 
 | --- | --- | 
 |  Endpoints per AWS Region  |  4 per AWS account [Request a higher quota](#increase-quota-procedure)\.   | 
-|  IP addresses per endpoint  |  6  | 
+|  IP addresses per endpoint  |  6 [Request a higher quota](#increase-quota-procedure)\.  | 
 |  IP addresses per rule  |  6  | 
 |  Rules per AWS Region  |  1000 per AWS account [Request a higher quota](#increase-quota-procedure)\.  | 
 |  Associations between rules and VPCs per AWS Region  |  2000 per AWS account [Request a higher quota](#increase-quota-procedure)\.   | 
@@ -159,9 +159,9 @@ Use the following procedure to increase quotas for Route 53 Resolver\.<a name="i
 
 | Entity | Quota | 
 | --- | --- | 
-|  Traffic policies For more information about Route 53 traffic flow, see [Using traffic flow to route DNS traffic](traffic-flow.md)\.  |  50 per AWS account [Request a higher quota](https://console.aws.amazon.com/servicequotas/home?region=us-east-1#!/services/route53/quotas)\.  | 
+|  Traffic policies For more information about Route 53 traffic flow, see [Using traffic flow to route DNS traffic](traffic-flow.md)\.  |  50 per AWS account [Request a higher quota](https://console.aws.amazon.com/servicequotas/home?region=us-east-1#!/services/route53/quotas)\.  | 
 |  Traffic policy versions  |  1,000 per traffic policy  | 
-|  Traffic policy records \(referred to as "policy instances" in the Route 53 API, AWS SDKs, AWS Command Line Interface, and AWS Tools for Windows PowerShell\)  |  5 per AWS account [Request a higher quota](https://console.aws.amazon.com/servicequotas/home?region=us-east-1#!/services/route53/quotas)\.  | 
+|  Traffic policy records \(referred to as "policy instances" in the Route 53 API, AWS SDKs, AWS Command Line Interface, and AWS Tools for Windows PowerShell\)  |  5 per AWS account [Request a higher quota](https://console.aws.amazon.com/servicequotas/home?region=us-east-1#!/services/route53/quotas)\.  | 
 
 ### Quotas on reusable delegation sets<a name="limits-api-entities-reusable-delegation-sets"></a>
 
@@ -174,11 +174,11 @@ Use the following procedure to increase quotas for Route 53 Resolver\.<a name="i
 
 ## Maximums on API requests<a name="limits-api-requests"></a>
 
-Amazon Route 53 API requests are subject to the following maximums\.
+Amazon Route 53 API requests are subject to the following maximums\.
 
 **Topics**
 + [Number of elements and characters in `ChangeResourceRecordSets` requests](#limits-api-requests-changeresourcerecordsets)
-+ [Frequency of Amazon Route 53 API requests](#limits-api-requests-route-53)
++ [Frequency of Amazon Route 53 API requests](#limits-api-requests-route-53)
 + [Frequency of Route 53 Resolver API requests](#limits-api-requests-route-53-resolver)
 
 ### Number of elements and characters in `ChangeResourceRecordSets` requests<a name="limits-api-requests-changeresourcerecordsets"></a>
@@ -189,14 +189,14 @@ A request cannot contain more than 1,000 `ResourceRecord` elements\. When the va
 **Maximum number of characters**  
 The sum of the number of characters \(including spaces\) in all `Value` elements in a request cannot exceed 32,000 characters\. When the value of the `Action` element is `UPSERT`, each character in a `Value` element is counted twice\.
 
-### Frequency of Amazon Route 53 API requests<a name="limits-api-requests-route-53"></a>
+### Frequency of Amazon Route 53 API requests<a name="limits-api-requests-route-53"></a>
 
-**All requests**  
-Five requests per second per AWS account\. If you submit more than five requests per second, Amazon Route 53 returns an HTTP 400 error \(`Bad request`\)\. The response header also includes a `Code` element with a value of `Throttling` and a `Message` element with a value of `Rate exceeded`\.  
+**All Amazon Route 53 API requests**  
+For the [Amazon Route 53 APIs](https://docs.aws.amazon.com/Route53/latest/APIReference/API_Operations_Amazon_Route_53.html) five requests per second per AWS account\. If you submit more than five requests per second, Amazon Route 53 returns an HTTP 400 error \(`Bad request`\)\. The response header also includes a `Code` element with a value of `Throttling` and a `Message` element with a value of `Rate exceeded`\.  
 If your application exceeds this limit, we recommend that you implement exponential backoff for retries\. For more information, see [Error Retries and Exponential Backoff in AWS](https://docs.aws.amazon.com/general/latest/gr/api-retries.html) in the *Amazon Web Services General Reference*\.
 
 **`ChangeResourceRecordSets` requests**  
-If Route 53 can't process a request before the next request arrives, it will reject subsequent requests for the same hosted zone and return an HTTP 400 error \(`Bad request`\)\. The response header also includes a `Code` element with a value of `PriorRequestNotComplete` and a `Message` element with a value of `The request was rejected because Route 53 was still processing a prior request.`
+If Route 53 can't process a request before the next request arrives, it will reject subsequent requests for the same hosted zone and return an HTTP 400 error \(`Bad request`\)\. The response header also includes a `Code` element with a value of `PriorRequestNotComplete` and a `Message` element with a value of `The request was rejected because Route 53 was still processing a prior request.`
 
 **`CreateHealthCheck` requests**  
 You can submit a maximum of 1,000 `CreateHealthCheck` requests in a 24\-hour period\.

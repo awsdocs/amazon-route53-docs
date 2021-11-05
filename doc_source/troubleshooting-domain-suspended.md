@@ -1,7 +1,7 @@
 # My domain is suspended \(status is ClientHold\)<a name="troubleshooting-domain-suspended"></a>
 
-If Amazon Route 53 suspends your domain, the domain becomes unavailable on the internet\. You can use either of the following methods to determine whether a domain has been suspended:
-+ On the **Registered domains** page of the Route 53 console, find the domain name in the **Alerts** table at the bottom of the page\. If the value of the **Status** column is **clientHold**, the domain has been suspended\.
+If Amazon Route 53 suspends your domain, the domain becomes unavailable on the internet\. You can use either of the following methods to determine whether a domain has been suspended:
++ On the **Registered domains** page of the Route 53 console, find the domain name in the **Alerts** table at the bottom of the page\. If the value of the **Status** column is **clientHold**, the domain has been suspended\.
 + Send a WHOIS query for the domain\. If the value of **Domain Status** is **clientHold**, the domain has been suspended\. The WHOIS command is available in many operating systems, and it's also available as a web application on many websites\.
 
 In addition, when we suspend a domain, we generally send an email to the email address for the registrant contact for the domain\. However, if the domain was suspended based on a court order, the court might not let us notify the registrant contact\.
@@ -24,7 +24,7 @@ If you need help getting your domain unsuspended, you can contact AWS Support fr
 When you register a domain with AWS for the first time, ICANN requires that we get confirmation that the email address for the registrant contact is valid\. To get confirmation, we send an email that contains a link\. You have between 3 and 15 days to click the link, depending on the top\-level domain\. After that time, the link stops working\.
 
 **Note**  
-If you don't respond to the first email, we resend the email up to two more times\. If you have already registered one or more domains with Amazon Route 53 and used the same email address for the registrant contact, we don't send a confirmation email\. 
+If you don't respond to the first email, we resend the email up to two more times\. If you have already registered one or more domains with Amazon Route 53 and used the same email address for the registrant contact, we don't send a confirmation email\. 
 
 If you don't click the link in the email in the allotted amount of time, ICANN requires that we suspend the domain\. For information about how to resend the confirmation email to the registrant contact, see [Resending authorization and confirmation emails](domain-click-email-link.md)\. When you confirm that the email address is valid, we automatically unsuspend the domain\.
 

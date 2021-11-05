@@ -4,12 +4,12 @@ This getting started tutorial shows you how to perform the following tasks:
 + Register a domain name, such as example\.com
 + Create an Amazon S3 bucket and configure it to host a website
 + Create a sample website and save the file in your S3 bucket
-+ Configure Amazon Route 53 to route traffic to your new website
++ Configure Amazon Route 53 to route traffic to your new website
 
 When you're finished, you'll be able to open a browser, enter the name of your domain, and view your website\.
 
 **Note**  
-You can also transfer an existing domain to Route 53, but the process is more complex and time\-consuming than registering a new domain\. For more information, see [Transferring registration for a domain to Amazon Route 53 ](domain-transfer-to-route-53.md)\. 
+You can also transfer an existing domain to Route 53, but the process is more complex and time\-consuming than registering a new domain\. For more information, see [Transferring registration for a domain to Amazon Route 53](domain-transfer-to-route-53.md)\. 
 
 **Topics**
 + [Prerequisites](#getting-started-prerequisites)
@@ -28,19 +28,19 @@ You can also transfer an existing domain to Route 53, but the process is more co
 
 ## Prerequisites<a name="getting-started-prerequisites"></a>
 
-Before you begin, be sure that you've completed the steps in [Setting up Amazon Route 53 ](setting-up-route-53.md)\.
+Before you begin, be sure that you've completed the steps in [Setting up Amazon Route 53](setting-up-route-53.md)\.
 
 ## Step 1: Register a domain<a name="getting-started-find-domain-name"></a>
 
 To use a domain name \(such as example\.com\), you must find a domain name that isn't already in use and register it\. When you register a domain name, you reserve it for your exclusive use everywhere on the internet, typically for one year\. By default, we automatically renew your domain name at the end of each year, but you can turn off automatic renewal\.<a name="getting-started-domain-register-procedure"></a>
 
-**To register a new domain using Amazon Route 53**
+**To register a new domain using Amazon Route 53**
 
-1. Sign in to the AWS Management Console and open the Route 53 console at [https://console\.aws\.amazon\.com/route53/](https://console.aws.amazon.com/route53/)\.
+1. Sign in to the AWS Management Console and open the Route 53 console at [https://console\.aws\.amazon\.com/route53/](https://console.aws.amazon.com/route53/)\.
 
-1. If you're new to Route 53, choose **Get started**\.
+1. If you're new to Route 53, choose **Get started**\.
 
-   If you're already using Route 53, in the navigation pane, choose **Registered domains**\.
+   If you're already using Route 53, in the navigation pane, choose **Registered domains**\.
 
 1. Choose **Register Domain**\.
 
@@ -74,7 +74,7 @@ If you also want your users to be able to use www\.*your\-domain\-name*, such as
 
 1. Choose whether you want to hide your contact information from WHOIS queries\. For more information, see the following topics:
    + [Enabling or disabling privacy protection for contact information for a domain](domain-privacy-protection.md)
-   + [Domains that you can register with Amazon Route 53 ](registrar-tld-list.md)
+   + [Domains that you can register with Amazon Route 53](registrar-tld-list.md)
 
 1. Choose **Continue**\.
 
@@ -84,7 +84,7 @@ If you also want your users to be able to use www\.*your\-domain\-name*, such as
 
    We send an email to the registrant for the domain to verify that the registrant contact can be reached at the email address that you specified\. \(This is an ICANN requirement\.\) The email comes from one of the following email addresses:
    + **noreply@registrar\.amazon\.com ** – for TLDs registered by Amazon Registrar\.
-   + **noreply@domainnameverification\.net** – for TLDs registered by our registrar associate, Gandi\. To determine who the registrar is for your TLD, see [Domains that you can register with Amazon Route 53 ](registrar-tld-list.md)\.
+   + **noreply@domainnameverification\.net** – for TLDs registered by our registrar associate, Gandi\. To determine who the registrar is for your TLD, see [Domains that you can register with Amazon Route 53](registrar-tld-list.md)\.
 **Important**  
 The registrant contact must follow the instructions in the email to confirm that the email was received, or we must suspend the domain as required by ICANN\. When a domain is suspended, it's not accessible on the internet\.
 
@@ -167,7 +167,7 @@ Now that you have an S3 bucket, you can configure it for website hosting\.<a nam
 
 1. \(Optional\) If you want to specify advanced redirection rules, in **Redirection** **rules**, enter XML to describe the rules\.
 
-   For more information, see [Configuring advanced conditional redirects](https://docs.aws.amazon.com/AmazonS3/latest/userguide/how-to-page-redirect.html#advanced-conditional-redirects) in the *Amazon Simple Storage Service Console User Guide*\.
+   For more information, see [Configuring advanced conditional redirects](https://docs.aws.amazon.com/AmazonS3/latest/userguide/how-to-page-redirect.html#advanced-conditional-redirects) in the *Amazon Simple Storage Service User Guide*\.
 
 1. Choose **Save changes**\.
 
@@ -208,8 +208,7 @@ When you allow static website hosting on your bucket, you enter the name of the 
    ```
    <html>
    <head>
-   <title>Amazon Route 53
-                Getting Started</title>	
+   <title>Amazon Route 53 Getting Started</title>	
    </head>
    
    <body>
@@ -217,10 +216,8 @@ When you allow static website hosting on your bucket, you enter the name of the 
    <h1>Routing Internet Traffic to an Amazon S3 Bucket for Your Website</h1>
    
    <p>For more information, see 
-   <a href="https://docs.aws.amazon.com/Route53/latest/DeveloperGuide/getting-started.html">Getting Started with Amazon Route 53
-               </a> 
-   in the <emphasis>Amazon Route 53
-                Developer Guide</emphasis>.</p>
+   <a href="https://docs.aws.amazon.com/Route53/latest/DeveloperGuide/getting-started.html">Getting Started with Amazon Route 53</a> 
+   in the <emphasis>Amazon Route 53 Developer Guide</emphasis>.</p>
    
    </body>
    
@@ -320,11 +317,11 @@ You now have a one\-page website in your S3 bucket\. To start routing internet t
 
 **To route traffic to your website**
 
-1. Open the Route 53 console at [https://console\.aws\.amazon\.com/route53/](https://console.aws.amazon.com/route53/)\.
+1. Open the Route 53 console at [https://console\.aws\.amazon\.com/route53/](https://console.aws.amazon.com/route53/)\.
 
 1. In the navigation pane, choose **Hosted zones**\.
 **Note**  
-When you registered your domain, Amazon Route 53 automatically created a hosted zone with the same name\. A hosted zone contains information about how you want Route 53 to route traffic for the domain\.
+When you registered your domain, Amazon Route 53 automatically created a hosted zone with the same name\. A hosted zone contains information about how you want Route 53 to route traffic for the domain\.
 
 1. In the list of hosted zones, choose the name of your domain\. 
 
@@ -353,7 +350,7 @@ Each record contains information about how you want to route traffic for one dom
    + The bucket name is the same as the name of the record that you're creating\.
    + The current AWS account created the bucket\.
 
-   If your bucket does not appear in the **Choose S3 bucket** list, enter the Amazon S3 website endpoint for the Region where the bucket was created, for example, **s3\-website\-us\-west\-2\.amazonaws\.com**\. For a complete list of Amazon S3 website endpoints, see [Amazon S3 Website endpoints](https://docs.aws.amazon.com/general/latest/gr/s3.html#s3_website_region_endpoints)\. For more information about the alias target, see "values/route traffic to" section in [Values for alias records](resource-record-sets-values-alias.md)\.
+   If your bucket does not appear in the **Choose S3 bucket** list, enter the Amazon S3 website endpoint for the Region where the bucket was created, for example, **s3\-website\-us\-west\-2\.amazonaws\.com**\. For a complete list of Amazon S3 website endpoints, see [Amazon S3 Website endpoints](https://docs.aws.amazon.com/general/latest/gr/s3.html#s3_website_region_endpoints)\. For more information about the alias target, see "values/route traffic to" section in [Values specific for simple alias records](resource-record-sets-values-alias.md)\.
 
 1. In **Record type**, choose **A ‐ Routes traffic to an IPv4 address and some AWS resources**\.
 
@@ -393,7 +390,7 @@ To verify that the website is working correctly, open a web browser and browse t
 
 In some cases, you might need to clear the cache to see the expected behavior\.
 
-For more advanced information about routing your internet traffic, see [Configuring Amazon Route 53 as your DNS service](dns-configuring.md)\. For information about routing your internet traffic to AWS resources, see [Routing internet traffic to your AWS resources](routing-to-aws-resources.md)\.
+For more advanced information about routing your internet traffic, see [Configuring Amazon Route 53 as your DNS service](dns-configuring.md)\. For information about routing your internet traffic to AWS resources, see [Routing internet traffic to your AWS resources](routing-to-aws-resources.md)\.
 
 ## Step 12 \(optional\): Use Amazon CloudFront to speed up distribution of your content<a name="getting-started-cloudfront"></a>
 

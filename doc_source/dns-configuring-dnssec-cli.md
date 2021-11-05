@@ -1,12 +1,12 @@
 # Using the AWS CLI to enable DNSSEC signing<a name="dns-configuring-dnssec-cli"></a>
 
-You can use the AWS command line interface \(CLI\) to work with DNSSEC signing in Route 53\. For example, you can use the CLI to enable DNSSEC signing instead of enabling signing in the AWS Management Console\. This section provides an example of enabling DNSSEC signing by using the CLI\. For more information about using the CLI or SDKs to work with Route 53, see [Setting up Amazon Route 53 ](setting-up-route-53.md)\.
+You can use the AWS command line interface \(CLI\) to work with DNSSEC signing in Route 53\. For example, you can use the CLI to enable DNSSEC signing instead of enabling signing in the AWS Management Console\. This section provides an example of enabling DNSSEC signing by using the CLI\. For more information about using the CLI or SDKs to work with Route 53, see [Setting up Amazon Route 53](setting-up-route-53.md)\.
 
-To use the Route 53 console to enable DNSSEC signing, see [Enabling DNSSEC signing and creating a KSK](dns-configuring-dnssec-enable-signing.md#dns-configuring-dnssec-enable)\.
+To use the Route 53 console to enable DNSSEC signing, see [Enabling DNSSEC signing and creating a KSK](dns-configuring-dnssec-enable-signing.md#dns-configuring-dnssec-enable)\.
 
-Before you run the commands to enable DNSSEC signing, you must have a hosted zone in Route 53 and have access to the hosted zone ID\. You also must have access to a customer managed key in AWS Key Management Service \(AWS KMS\) that applies to DNSSEC\. 
+Before you run the commands to enable DNSSEC signing, you must have a hosted zone in Route 53 and have access to the hosted zone ID\. You also must have access to a customer managed key in AWS Key Management Service \(AWS KMS\) that applies to DNSSEC\. 
 
-Be aware that the customer managed key must be in the US East \(N\. Virginia\) Region\. In addition, Route 53 must have permission to access your customer managed key so that it can create a KSK for you\. To see the permissions that must be in place and to learn more about working with customer managed keys for DNSSEC, see [Working with customer managed keys for DNSSEC](dns-configuring-dnssec-cmk-requirements.md)\.\.
+Be aware that the customer managed key must be in the US East \(N\. Virginia\) Region\. In addition, Route 53 must have permission to access your customer managed key so that it can create a KSK for you\. To see the permissions that must be in place and to learn more about working with customer managed keys for DNSSEC, see [Working with customer managed keys for DNSSEC](dns-configuring-dnssec-cmk-requirements.md)\.\.
 
 There are three steps to take to enable DNSSEC signing: 
 + Step 1: Create a key\-signing key \(KSK\)

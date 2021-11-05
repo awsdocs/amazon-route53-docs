@@ -1,19 +1,19 @@
-# Domains that you can register with Amazon Route 53<a name="registrar-tld-list"></a>
+# Domains that you can register with Amazon Route 53<a name="registrar-tld-list"></a>
 
-The following lists of generic and geographic top\-level domains show the top\-level domains \(TLDs\) that you can use to register domains with Amazon Route 53 \. We continue to add support for more TLDs, and we decide which TLDs to add based in part on customer feedback\. To suggest a TLD that you'd like us to add, enter a comment on the [Amazon Route 53 Domain Registration forum](https://forums.aws.amazon.com/forum.jspa?forumID=214)\.
+The following lists of generic and geographic top\-level domains show the top\-level domains \(TLDs\) that you can use to register domains with Amazon Route 53\. We continue to add support for more TLDs, and we decide which TLDs to add based in part on customer feedback\. To suggest a TLD that you'd like us to add, enter a comment on the [Amazon Route 53 Domain Registration forum](https://forums.aws.amazon.com/forum.jspa?forumID=214)\.
 
-**Registering domains with Route 53**  
-You can register a domain with Route 53 if the TLD is included on the following lists\. If the TLD isn't included, you can't register the domain with Route 53\. 
+**Registering domains with Route 53**  
+You can register a domain with Route 53 if the TLD is included on the following lists\. If the TLD isn't included, you can't register the domain with Route 53\. 
 
-**Transferring domains to Route 53**  
-You can transfer a domain to Route 53 if the TLD is included on the following lists\. If the TLD isn't included, you can't transfer the domain to Route 53\.  
-For most TLDs, you need to get an authorization code from the current registrar to transfer a domain\. To determine whether you need an authorization code, see the "Authorization code required for transfer to Route 53" section for your TLD\.
+**Transferring domains to Route 53**  
+You can transfer a domain to Route 53 if the TLD is included on the following lists\. If the TLD isn't included, you can't transfer the domain to Route 53\.  
+For most TLDs, you need to get an authorization code from the current registrar to transfer a domain\. To determine whether you need an authorization code, see the "Authorization code required for transfer to Route 53" section for your TLD\.
 
 **Pricing for domain registration and transfers**  
-For information about the cost to register domains or transfer them to Route 53, see [Amazon Route 53 Pricing for Domain Registration](https://d32ze2gidvkk54.cloudfront.net/Amazon_Route_53_Domain_Registration_Pricing_20140731.pdf)\.
+For information about the cost to register domains or transfer them to Route 53, see [Amazon Route 53 Pricing for Domain Registration](https://d32ze2gidvkk54.cloudfront.net/Amazon_Route_53_Domain_Registration_Pricing_20140731.pdf)\.
 
-**Using Route 53 as your DNS service**  
-You can use Route 53 as the DNS service for any domain, even if the TLD for the domain isn't included on the following lists\. For more information about Route 53 as a DNS service, see [How internet traffic is routed to your website or web application](welcome-dns-service.md)\. For information about how to transfer DNS service for your domain to Route 53, see [Making Amazon Route 53 the DNS service for an existing domainMaking Route 53 the DNS service for an existing domain](MigratingDNS.md)\.
+**Using Route 53 as your DNS service**  
+You can use Route 53 as the DNS service for any domain, even if the TLD for the domain isn't included on the following lists\. For more information about Route 53 as a DNS service, see [How internet traffic is routed to your website or web application](welcome-dns-service.md)\. For information about how to transfer DNS service for your domain to Route 53, see [Making Amazon Route 53 the DNS service for an existing domainMaking Route 53 the DNS service for an existing domain](MigratingDNS.md)\.
 
 **Internationalized domain names**  
 Not all TLDs support internationalized domain names \(IDNs\), meaning domain names that include characters other than ASCII characters a\-z, 0\-9, and \- \(hyphen\)\. The listing for each TLD indicates whether that TLD supports IDNs\. For more information about internationalized domain names, see [DNS domain name format](DomainNameFormat.md)\.

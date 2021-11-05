@@ -1,10 +1,10 @@
-# Identity and access management in Amazon Route 53<a name="auth-and-access-control"></a>
+# Identity and access management in Amazon Route 53<a name="auth-and-access-control"></a>
 
-To perform any operation on Amazon Route 53 resources, such as registering a domain or updating a record, AWS Identity and Access Management \(IAM\) requires you to authenticate that you're an approved AWS user\. If you're using the Route 53 console, you authenticate your identity by providing your AWS user name and a password\. If you're accessing Route 53 programmatically, your application authenticates your identity for you by using access keys or by signing requests\.
+To perform any operation on Amazon Route 53 resources, such as registering a domain or updating a record, AWS Identity and Access Management \(IAM\) requires you to authenticate that you're an approved AWS user\. If you're using the Route 53 console, you authenticate your identity by providing your AWS user name and a password\. If you're accessing Route 53 programmatically, your application authenticates your identity for you by using access keys or by signing requests\.
 
 After you authenticate your identity, IAM controls your access to AWS by verifying that you have permissions to perform operations and to access resources\. If you are an account administrator, you can use IAM to control the access of other users to the resources that are associated with your account\.
 
-This chapter explains how to use [IAM](https://docs.aws.amazon.com/IAM/latest/UserGuide/introduction.html) and Route 53 to help secure your resources\.
+This chapter explains how to use [IAM](https://docs.aws.amazon.com/IAM/latest/UserGuide/introduction.html) and Route 53 to help secure your resources\.
 
 **Topics**
 + [Authentication](#authentication)
@@ -14,11 +14,11 @@ This chapter explains how to use [IAM](https://docs.aws.amazon.com/IAM/latest/Us
 
 You can access AWS as any of the following types of identities:
 + **AWS account root user** –  When you first create an AWS account, you begin with a single sign\-in identity that has complete access to all AWS services and resources in the account\. This identity is called the AWS account *root user* and is accessed by signing in with the email address and password that you used to create the account\. We strongly recommend that you do not use the root user for your everyday tasks, even the administrative ones\. Instead, adhere to the [best practice of using the root user only to create your first IAM user](https://docs.aws.amazon.com/IAM/latest/UserGuide/best-practices.html#create-iam-users)\. Then securely lock away the root user credentials and use them to perform only a few account and service management tasks\. 
-+ **IAM user** – An [IAM user](https://docs.aws.amazon.com/IAM/latest/UserGuide/id_users.html) is an identity within your AWS account that has specific custom permissions \(for example, permissions to create a hosted zone in Route 53\)\. You can use an IAM user name and password to sign in to secure AWS webpages like the [AWS Management Console](https://console.aws.amazon.com/), [AWS Discussion Forums](https://forums.aws.amazon.com/), or the [AWS Support Center](https://console.aws.amazon.com/support/home#/)\.
++ **IAM user** – An [IAM user](https://docs.aws.amazon.com/IAM/latest/UserGuide/id_users.html) is an identity within your AWS account that has specific custom permissions \(for example, permissions to create a hosted zone in Route 53\)\. You can use an IAM user name and password to sign in to secure AWS webpages like the [AWS Management Console](https://console.aws.amazon.com/), [AWS Discussion Forums](https://forums.aws.amazon.com/), or the [AWS Support Center](https://console.aws.amazon.com/support/home#/)\.
 
    
 
-  In addition to a user name and password, you can also generate [access keys](https://docs.aws.amazon.com/IAM/latest/UserGuide/id_credentials_access-keys.html) for each user\. You can use these keys when you access AWS services programmatically, either through [one of the several SDKs](https://aws.amazon.com/tools/#sdk) or by using the [AWS Command Line Interface \(CLI\)](https://aws.amazon.com/cli/)\. The SDK and CLI tools use the access keys to cryptographically sign your request\. If you don’t use AWS tools, you must sign the request yourself\. Route 53 supports *Signature Version 4*, a protocol for authenticating inbound API requests\. For more information about authenticating requests, see [Signature Version 4 signing process](https://docs.aws.amazon.com/general/latest/gr/signature-version-4.html) in the *AWS General Reference*\.
+  In addition to a user name and password, you can also generate [access keys](https://docs.aws.amazon.com/IAM/latest/UserGuide/id_credentials_access-keys.html) for each user\. You can use these keys when you access AWS services programmatically, either through [one of the several SDKs](https://aws.amazon.com/tools/#sdk) or by using the [AWS Command Line Interface \(CLI\)](https://aws.amazon.com/cli/)\. The SDK and CLI tools use the access keys to cryptographically sign your request\. If you don’t use AWS tools, you must sign the request yourself\. Route 53 supports *Signature Version 4*, a protocol for authenticating inbound API requests\. For more information about authenticating requests, see [Signature Version 4 signing process](https://docs.aws.amazon.com/general/latest/gr/signature-version-4.html) in the *AWS General Reference*\.
 
    
 + **IAM role** –  An [IAM role](https://docs.aws.amazon.com/IAM/latest/UserGuide/id_roles.html) is an IAM identity that you can create in your account that has specific permissions\. An IAM role is similar to an IAM user in that it is an AWS identity with permissions policies that determine what the identity can and cannot do in AWS\. However, instead of being uniquely associated with one person, a role is intended to be assumable by anyone who needs it\. Also, a role does not have standard long\-term credentials such as a password or access keys associated with it\. Instead, when you assume a role, it provides you with temporary security credentials for your role session\. IAM roles with temporary credentials are useful in the following situations:
@@ -36,9 +36,9 @@ You can access AWS as any of the following types of identities:
 
 ## Access control<a name="access-control"></a>
 
-To create, update, delete, or list Amazon Route 53 resources, you need permissions to perform the operation, and you need permission to access the corresponding resources\. In addition, to perform the operation programmatically, you need valid access keys\. 
+To create, update, delete, or list Amazon Route 53 resources, you need permissions to perform the operation, and you need permission to access the corresponding resources\. In addition, to perform the operation programmatically, you need valid access keys\. 
 
-The following sections describe how to manage permissions for Route 53\. We recommend that you read the overview first\.
-+ [Overview of managing access permissions to your Amazon Route 53 resources](access-control-overview.md)
-+ [Using identity\-based policies \(IAM policies\) for Amazon Route 53 ](access-control-managing-permissions.md)
-+ [Amazon Route 53 API permissions: Actions, resources, and conditions reference](r53-api-permissions-ref.md)
+The following sections describe how to manage permissions for Route 53\. We recommend that you read the overview first\.
++ [Overview of managing access permissions to your Amazon Route 53 resources](access-control-overview.md)
++ [Using identity\-based policies \(IAM policies\) for Amazon Route 53](access-control-managing-permissions.md)
++ [Amazon Route 53 API permissions: Actions, resources, and conditions reference](r53-api-permissions-ref.md)
