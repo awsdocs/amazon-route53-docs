@@ -244,7 +244,7 @@ In this step you create a CloudFront distribution for your subdomain, such as ww
 
    For **Bucket policy**, select **Yes, update the bucket policy**\.
 
-1. For the settings under **Default Cache Behavior Settings**, under **Viewer**, set **Viewer protocol policy**to **Redirect HTTP to HTTPS** and accept the default values for the rest\.
+1. For the settings under **Default Cache Behavior Settings**, under **Viewer**, set **Viewer protocol policy** to **Redirect HTTP to HTTPS** and accept the default values for the rest\.
 
    For more information about cache behavior options, see [Cache behavior settings](https://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/distribution-web-values-specify.html#DownloadDistValuesCacheBehavior) in the *Amazon CloudFront developer guide*\.
 
