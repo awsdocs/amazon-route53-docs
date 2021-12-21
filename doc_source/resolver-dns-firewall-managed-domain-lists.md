@@ -4,6 +4,8 @@ Managed domain lists contain domain names that are associated with malicious act
 
 Keeping up to date on the constantly changing threat landscape can be time consuming and expensive\. Managed domain lists can save you time when you implement and use DNS Firewall\. AWS automatically updates managed domain lists when as new vulnerabilities and threats emerge\. AWS is often notified of new vulnerabilities before public disclosure, so DNS Firewall can deploy mitigations for you even, often before a new threats is become widely known\. 
 
+AWS Managed Domain Lists are designed to help protect you from common web threats and they add another layer of security for your applications\. However, AWS Managed Domain Lists aren't intended as a replacement for other security controls, such as Amazon GuardDuty, which are determined by the AWS resources that you select\.
+
 AWS Managed Domain Lists are not currently available in all Regions\. The following table lists the Region availability\.
 
 

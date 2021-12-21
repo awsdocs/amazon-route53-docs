@@ -3,12 +3,11 @@
 To forward DNS queries that originate on Amazon EC2 instances in one or more VPCs to your network, you create an outbound endpoint and one or more rules:
 
 **Outbound endpoint**  
-To forward DNS queries from your VPCs to your network, you create an outbound endpoint\. An outbound endpoint specifies the IP addresses that queries originate from\. Those IP addresses, which you choose from the range of IP addresses available to your VPC, aren't public IP addresses\. This means that, for each outbound endpoint, you need to connect your VPC to your network using AWS Direct Connect connection, a VPN connection, or a network address translation \(NAT\) gateway\. Note that you can use the same outbound endpoint for multiple VPCs in the same Region, or you can create multiple outbound endpoints\.
+To forward DNS queries from your VPCs to your network, you create an outbound endpoint\. An outbound endpoint specifies the IP addresses that queries originate from\. Those IP addresses, which you choose from the range of IP addresses available to your VPC, aren't public IP addresses\. This means that, for each outbound endpoint, you need to connect your VPC to your network using AWS Direct Connect connection, a VPN connection, or a network address translation \(NAT\) gateway\. Note that you can use the same outbound endpoint for multiple VPCs in the same Region, or you can create multiple outbound endpoints\. If you want your outbound endpoint to use DNS64, you can enable DNS64 using Amazon Virtual Private Cloud\. For more information, see [DNS64 and NAT64](https://docs.aws.amazon.com/vpc/latest/userguide/vpc-nat-gateway.html#nat-gateway-nat64-dns64) in the *Amazon VPC User Guide*\.
 
 **Rules**  
-To specify the domain names of the queries that you want to forward to DNS resolvers on your network, you create one or more rules\. Each rule specifies one domain name\. You then associate rules with the VPCs for which you want to forward queries to your network\. 
-
-For more information, see the following topics:
+To specify the domain names of the queries that you want to forward to DNS resolvers on your network, you create one or more rules\. Each rule specifies one domain name\. You then associate rules with the VPCs for which you want to forward queries to your network\.   
+For more information, see the following topics:  
 + [Private hosted zones that have overlapping namespaces](hosted-zone-private-considerations.md#hosted-zone-private-considerations-private-overlapping)
 + [Private hosted zones and Route 53 Resolver rules](hosted-zone-private-considerations.md#hosted-zone-private-considerations-resolver-rules)
 
@@ -66,7 +65,7 @@ A friendly name that lets you easily find an outbound endpoint on the dashboard\
 All outbound DNS queries will flow through this VPC on the way to your network\.
 
 **Security group for this endpoint**  
-The ID of one or more security groups that you want to use to control access to this VPC\. The security group that you specify must include one or more outbound rules\. Outbound rules must allow TCP and UDP access on the port that you're using for DNS queries on your network\. You can't change this value after you create an endpoint\.   
+The ID of one or more security groups that you want to use to control access to this VPC\. The security group that you specify must include an inbound rule for DNS \(UDP\) and DNS \(TCP\) from the Amazon Provided DNS for that VPC \(VPC CIDR \+ 2\)\. Outbound rules must allow TCP and UDP access on the port that you're using for DNS queries on your network\. You can't change this value after you create an endpoint\.  
 For more information, see [Security groups for your VPC](https://docs.aws.amazon.com/vpc/latest/userguide/VPC_SecurityGroups.html) in the *Amazon VPC User Guide*\.
 
 **IP addresses**  

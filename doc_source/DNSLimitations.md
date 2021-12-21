@@ -130,6 +130,7 @@ Use the following procedure to increase quotas for Route 53 Resolver\.<a name="i
 | Number of DNS Firewall domains in a single Amazon S3 file for a single account per AWS Region | 100,000 [Request a higher quota](#increase-quota-procedure)\. | 
 | Number of DNS Firewall rule groups for a single account per AWS Region | 1,000 [Request a higher quota](#increase-quota-procedure)\. | 
 |  Number of rules within a rule group for a single account account per AWS Region  |  100 [Request a higher quota](#increase-quota-procedure)\.  | 
+|  Number of domain lists for a single account account per AWS Region  |  1000 [Request a higher quota](#increase-quota-procedure)\.  | 
 |  Number of domain specifications across all DNS Firewall domain lists for a single account per AWS Region  |  100,000 [Request a higher quota](#increase-quota-procedure)\.  | 
 
 ### Quotas on health checks<a name="limits-api-entities-health-checks"></a>

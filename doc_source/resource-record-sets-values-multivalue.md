@@ -46,7 +46,7 @@ However, if you specify a longer value for TTL, it takes longer for changes to t
 If you're associating this record with a health check, we recommend that you specify a TTL of 60 seconds or less so clients respond quickly to changes in health status\.
 
 **Note**  
-If you create two or more multivalue answer records that have the same name and type, and you specify different values for **TTL**, Route 53 changes the value of **TTL** for all of the records to the last value that you specified\.
+If you create two or more multivalue answer records that have the same name and type, you are using the console, and you specify different values for **TTL**, Route 53 changes the value of **TTL** for all of the records to the last value that you specified\.
 
 ## Value/Route traffic to<a name="rrsets-values-multivalue-value"></a>
 

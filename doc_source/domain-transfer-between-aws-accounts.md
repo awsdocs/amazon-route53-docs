@@ -55,6 +55,8 @@ Choose a contact method, **Web** or **Phone**\. If you choose **Web**, we'll con
 
 1. Choose **Submit**\.
 
+Account B has three days to accept the transfer from account A by using the [transfer\-domain\-to\-another\-aws\-account](https://docs.aws.amazon.com/cli/latest/reference/route53domains/transfer-domain-to-another-aws-account.html) API\. If the transfer isn't accepted in 3 days, the transfer request is cancelled\.
+
 ## Step 2 \(Optional\): Migrate a hosted zone to a different AWS account<a name="domain-transfer-between-aws-accounts-hosted-zone"></a>
 
 If you're using Route 53 as the DNS service for the domain, Route 53 doesn't transfer the hosted zone when you transfer a domain to a different AWS account\. If domain registration is associated with one account and the corresponding hosted zone is associated with another account, neither domain registration nor DNS functionality is affected\. The only effect is that you'll need to sign into the Route 53 console using one account to see the domain, and sign in using the other account to see the hosted zone\. 

@@ -126,11 +126,7 @@ This value is the amount of time that DNS resolvers cache the information in thi
 Update SOA and NS records in the hosted zones that you want to use white\-label name servers for\. Perform Step 6 through Step 8 for one hosted zone and the corresponding domain at a time, then repeat for another hosted zone and domain\.
 
 **Important**  
-Start with the Amazon Route 53 hosted zone that has the same domain name \(such as example\.com\) as the white\-label name servers \(such as ns1\.example\.com\)\.  
-If you want to do either of the following, open a technical support case with AWS Support for help with the configuration:  
-You want to use white\-label name servers \(ns1\.example\.com\) only for other domain names \(example\.net\), not for the domain name that you use for white\-label name servers \(example\.com\)\. If you don't contact AWS Support, you'll encounter the following error when you configure glue records in the next section: "One or more of the specified nameservers are not known to the domain registry\."
-You currently use white\-label name servers \(ns1\.example\.com\) both for the domain name that you use for white\-label name servers \(example\.com\) and for other domains \(example\.net\)\. You want to stop using white\-label name servers for the example\.com domain, but continue to use them for other domains \(example\.net\)\. If you don't contact AWS Support, the other domains might become unavailable on the internet\.
-To create a technical support case, see [AWS Support Center](https://console.aws.amazon.com/support/home)\.
+Start with the Amazon Route 53 hosted zone that has the same domain name \(such as example\.com\) as the white\-label name servers \(such as ns1\.example\.com\)\.
 
 1. Update the SOA record by replacing the name of the Route 53 name server with the name of one of your white\-label name servers
 
@@ -162,7 +158,7 @@ Use the method provided by the registrar to create glue records and change the r
      **ns1\.example\.com** – IP addresses = 192\.0\.2\.117 and 2001:db8:85a3::8a2e:370:7334
 
      Registrars use a variety of terminology for glue records\. You might also see this referred to as registering new name servers or something similar\.
-   + **If you're updating another domain** – Skip to step 2 in this procedure\.
+   + **If you're updating another domain** – If Route 53 is your DNS service, you must first complete the step in the previous bullet and create the glue records that match the domain name\. Then skip to step 2 in this procedure\.
 
 1. Change the name servers for the domain to the names of your white\-label name servers\.
 

@@ -46,9 +46,6 @@ You can use Route 53 to route traffic for your domain to your Classic, Applicat
 Amazon Lightsail provides compute, storage, and networking capacity and capabilities to deploy and manage websites, web applications, and databases in the cloud for a low, predictable monthly price\.  
 If you use Lightsail, you can use Route 53 to route traffic to your Lightsail instance\. For more information, see [Using Route 53 to point a domain to an Amazon Lightsail instance](https://lightsail.aws.amazon.com/ls/docs/en_us/articles/amazon-lightsail-using-route-53-to-point-a-domain-to-an-instance)\.
 
-**Amazon RDS**  
-If you use an Amazon RDS database instance for data storage for your web application, the domain name that is assigned to your DB instance is a long, partially random, alphanumeric string, such as `myexampledb.a1b2c3d4wxyz.us-west-2.rds.amazonaws.com`\. If you want to use a domain name that's easier to remember, you can use Route 53 to associate your domain name, such as `productdata.example.com`, with the domain name of your DB instance\. For more information, see [Opening connections to an Amazon RDS database instance using your domain name](routing-to-rds-db.md)\.
-
 **Amazon S3**  
 Amazon Simple Storage Service \(Amazon S3\) provides secure, durable, highly scalable cloud storage\. You can configure an S3 bucket to host a static website that can include web pages and client\-side scripts\. \(S3 doesn't support server\-side scripting\.\) You can use Route 53 to route traffic to an Amazon S3 bucket\. For more information, see the following topics:  
 + For information about routing traffic to a bucket, see [Routing traffic to a website that is hosted in an Amazon S3 bucket](RoutingToS3Bucket.md)\.

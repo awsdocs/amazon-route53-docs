@@ -49,7 +49,7 @@ Our registrar associate, Gandi, uses Tucows as the registrar for this TLD\.
 The registry for \.com\.au domains doesn't allow you to delete domain registrations\. Instead, you must disable automatic renewal and wait for the domain to expire\. For more information, see [Deleting a domain name registration](domain-delete.md)\.
 
 **Changing ownership**  
-+ Due to manual processes required to validate ownership changes, operations submitted within 20 days of expiration date might not be completed before the domain expires\. 
++ Due to manual processes required to validate ownership changes, operations submitted within 45 days of expiration date might not be completed before the domain expires\. 
 + A change of ownership form is required to be completed within 14 days\. For more information, see [.net.au](domain-update-contacts.md#net.au-special)\.
 
   Partially completed forms or forms missing required signatures may result in delays or failures

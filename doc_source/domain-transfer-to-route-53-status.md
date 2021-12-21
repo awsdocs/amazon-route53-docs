@@ -33,6 +33,8 @@ We're working with the current registrar for the domain to finalize the transfer
 Your current registrar is confirming that your domain meets the requirements for being transferred\. This step might take up to ten days, depending on the TLD for your domain:  
 + [Generic top\-level domains](registrar-tld-list-generic.md) – take up to seven days
 + [Geographic top\-level domains](registrar-tld-list-geographic.md) \(also known as country code top\-level domains\) – take up to ten days
+**Note**  
+If you have approved the confirmation email sent from Route 53 when transferring a \.JP domain, but it has stopped for several days in STEP 7, contact [AWS Support Center](https://console.aws.amazon.com/support/home?region=us-east-1#/case/create?issueType=customer-service&serviceCode=billing&categoryCode=domain-name-registration-issue) for assistance\.
 For most registrars, the process is entirely automated and can't be accelerated\. Some registrars send you an email that asks you to approve the transfer; if your registrar sends this confirmation email, the transfer process might be much faster than seven to ten days\.  
 For information about reasons that a registrar might reject the transfer, see [Transfer requirements for top\-level domains](domain-transfer-to-route-53.md#domain-transfer-to-route-53-requirements)\.
 
