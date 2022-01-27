@@ -9,4 +9,5 @@ You can use Amazon Route 53 to route traffic to a variety of AWS resources\.
 + [Routing traffic to a website that is hosted in an Amazon S3 bucket](RoutingToS3Bucket.md)
 + [Routing traffic to an Amazon Virtual Private Cloud interface endpoint by using your domain name](routing-to-vpc-interface-endpoint.md)
 + [Routing traffic to Amazon WorkMail](routing-to-workmail.md)
++ [Routing traffic to other AWS resources](routing-to-additional-aws-resources.md)
 + [Creating Amazon Route 53 and Amazon Route 53 Resolver resources with AWS CloudFormation](creating-resources-with-cloudformation.md)

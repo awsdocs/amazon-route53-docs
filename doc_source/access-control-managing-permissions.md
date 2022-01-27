@@ -230,6 +230,46 @@ To enable Route 53 to access your customer managed key, make sure that your cus
         }
 ```
 
+The confused deputy problem is a security issue where an entity without a permission for an action can coerce a more\-privileged entity to perform it\. To protect your AWS KMS from it, you can optionally limit the permissions that a service has to a resource in a resource\-based policy by supplying a combination of `aws:SourceAccount` and `aws:SourceArn` conditions \(both or one\)\. `aws:SourceAccount` is an AWS account ID of an owner of a hosted zone\. `aws:SourceArn` is an ARN of a hosted zone\.
+
+The following are two examples of permissions you can add:
+
+```
+{
+    "Sid": "Allow Route 53 DNSSEC Service",
+    …
+    "Resource": "*",
+    "Condition": {
+        "StringEquals": {
+            "aws:SourceAccount": "111122223333"
+        },
+        "ArnEquals": {
+            "aws:SourceArn": "arn:aws:route53:::hostedzone/HOSTED_ZONE_ID"
+        }
+    }
+},
+```
+
+ \- Or \- 
+
+```
+{
+    "Sid": "Allow Route 53 DNSSEC Service",
+    …
+    "Resource": "*",
+    "Condition": {
+        "StringEquals": {
+            "aws:SourceAccount": ["1111-2222-3333","4444-5555-6666"]
+        },
+        "ArnLike": {
+            "aws:SourceArn": "arn:aws:route53:::hostedzone/*"
+        }
+    }
+},
+```
+
+For more information, see [The confused deputy problem](https://docs.aws.amazon.com/IAM/latest/UserGuide/confused-deputy.html) in the *IAM User Guide*\.
+
 ## Customer managed policy examples<a name="access-policy-examples-for-sdk-cli"></a>
 
 You can create your own custom IAM policies to allow permissions for Route 53 actions\. You can attach these custom policies to the IAM users or groups that require the specified permissions\. These policies work when you are using the Route 53 API, the AWS SDKs, or the AWS CLI\. The following examples show permissions for several common use cases\. For the policy that grants a user full access to Route 53, see [Permissions required to use the Amazon Route 53 console](#console-required-permissions)\.

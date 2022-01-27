@@ -6,7 +6,7 @@ If you want to associate a VPC that you created with one AWS account with a priv
 
 1. Using the account that created the hosted zone, authorize the association of the VPC with the private hosted zone by using one of the following methods:
    + **AWS CLI** – See [create\-vpc\-association\-authorization](https://docs.aws.amazon.com/cli/latest/reference/route53/create-vpc-association-authorization.html) in the *AWS CLI Command Reference*
-   + ** AWSSDK** or **AWS Tools for Windows PowerShell** – See the applicable documentation on the [ AWSDocumentation](https://docs.aws.amazon.com/) page 
+   + ** AWSSDK** or **AWS Tools for Windows PowerShell** – See the applicable documentation on the [AWSDocumentation](https://docs.aws.amazon.com/) page 
    + **Amazon Route 53 API** – See [CreateVPCAssociationAuthorization](https://docs.aws.amazon.com/Route53/latest/APIReference/API_CreateVPCAssociationAuthorization.html) in the *Amazon Route 53 API Reference*
 
    Note the following:

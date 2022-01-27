@@ -3,7 +3,7 @@
 If you're migrating from another DNS service provider, and if your current DNS service provider lets you export your current DNS settings to a zone file, you can quickly create all of the records for an Amazon Route 53 hosted zone by importing a zone file\.
 
 **Note**  
-A zone file uses a standard format known as BIND to represent records in a text format\. For information about the format of a zone file, see the Wikipedia entry [Zone file](https://en.wikipedia.org/wiki/Zone_file)\. Additional information is available in [RFC 1034, Domain Names—Concepts and Facilities](http://tools.ietf.org/html/rfc1034) section 3\.6\.1, and [RFC 1035, Domain Names—Implementation and Specification](http://tools.ietf.org/html/rfc1035) section 5\. 
+A zone file uses a standard format known as BIND to represent records in a text format\. For information about the format of a zone file, see the Wikipedia entry [Zone file](https://en.wikipedia.org/wiki/Zone_file)\. Additional information is available in [RFC 1034, Domain Names—Concepts and Facilities](https://datatracker.ietf.org/doc/html/rfc1034) section 3\.6\.1, and [RFC 1035, Domain Names—Implementation and Specification](https://datatracker.ietf.org/doc/html/rfc1035) section 5\. 
 
 If you want to create records by importing a zone file, note the following:
 + The zone file must be in RFC\-compliant format\.

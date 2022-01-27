@@ -3,6 +3,7 @@
 The following entries describe important changes in each release of the Route 53 documentation\. For notification about updates to this documentation, you can subscribe to an RSS feed\. 
 
 **Topics**
++ [2022 releases](#doc-history-2022)
 + [2021 releases](#doc-history-2021)
 + [2020 releases](#doc-history-2020)
 + [2018 releases](#doc-history-2018)
@@ -14,6 +15,11 @@ The following entries describe important changes in each release of the Route 5
 + [2012 release](#doc-history-2012)
 + [2011 releases](#doc-history-2011)
 + [2010 release](#doc-history-2010)
+
+## 2022 releases<a name="doc-history-2022"></a>
+
+**January 25, 2022**  
+The process for changing ownership for \.com\.au and \.net\.au TLDs has been simplified to include responding to two emails \(by both old and new registrants\) and doesn't include filling in forms\. For more information, see [\.com\.au \(Australia\)](com.au.md) and [\.net\.au \(Australia\)](net.au.md)\.
 
 ## 2021 releases<a name="doc-history-2021"></a>
 

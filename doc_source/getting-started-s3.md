@@ -226,9 +226,7 @@ When you allow static website hosting on your bucket, you enter the name of the 
 
 1. In the **Buckets list**, choose the name of the bucket that you want to enable static website hosting for\.
 
-1. In the Amazon S3 console, choose the name of the bucket that you created in the procedure [To allow website hosting on your S3 bucket](#getting-started-configure-s3-website-bucket-procedure)\.
-
-1. Under **Static website hosting**, choose **Edit**\.
+1. In the Amazon S3 console, choose the name of the bucket that you created in the procedure [To allow website hosting on your S3 bucket](#getting-started-configure-s3-website-bucket-procedure) \(click the linked bucket name\)\.
 
 1. Choose **Upload**, **Add Files**, select index\.html from where you saved it, and then **Upload**\.
 
@@ -337,6 +335,8 @@ Each record contains information about how you want to route traffic for one dom
 
 1. In **Record name**, accept the default value, which is the name of your hosted zone and your domain\.
 
+1. In **Record type**, choose **A ‐ Routes traffic to an IPv4 address and some AWS resources**\.
+
 1. In **Value/Route traffic to**, choose **Alias to S3 website endpoint**\.
 
 1. Choose the Region\.
@@ -352,8 +352,6 @@ Each record contains information about how you want to route traffic for one dom
 
    If your bucket does not appear in the **Choose S3 bucket** list, enter the Amazon S3 website endpoint for the Region where the bucket was created, for example, **s3\-website\-us\-west\-2\.amazonaws\.com**\. For a complete list of Amazon S3 website endpoints, see [Amazon S3 Website endpoints](https://docs.aws.amazon.com/general/latest/gr/s3.html#s3_website_region_endpoints)\. For more information about the alias target, see "values/route traffic to" section in [Values specific for simple alias records](resource-record-sets-values-alias.md)\.
 
-1. In **Record type**, choose **A ‐ Routes traffic to an IPv4 address and some AWS resources**\.
-
 1. For **Evaluate target health**, choose **No**\.
 
 1. Choose **Define simple record**\.
@@ -366,6 +364,8 @@ If you created a bucket for your subdomain, add an alias record for it also\.
 
 1. In **Record name** for your subdomain, type `www`\.
 
+1. In **Record type**, choose **A ‐ Routes traffic to an IPv4 address and some AWS resources**\.
+
 1. In **Value/Route traffic to**, choose **Alias to S3 website endpoint**\.
 
 1. Choose the Region\.
@@ -373,8 +373,6 @@ If you created a bucket for your subdomain, add an alias record for it also\.
 1. Choose the S3 bucket, for example, `s3-website-us-west-2.amazonaws.com (example.com)`\.
 
    If your bucket does not appear in the **Choose S3 bucket** list, enter the Amazon S3 website endpoint for the Region where the bucket was created, for example, **s3\-website\-us\-west\-2\.amazonaws\.com**\. 
-
-1. In **Record type**, choose **A ‐ Routes traffic to an IPv4 address and some AWS resources**\.
 
 1. For **Evaluate target health**, choose **No**\.
 

@@ -3,7 +3,7 @@
 [Return to index](registrar-tld-list.md#index)
 
 **Confirmation email from the TLD registry**  
-Our registrar associate, Gandi, resells \.com\.au domains through Tucows\. When you transfer a domain name to Route 53, Tucows sends an email to the registrant contact for the domain to verify contact information or to authorize transfer requests\. 
+Our registrar associate, Gandi, resells \.com\.au domains through DomainDirectors\. When you transfer a domain name to Route 53, DomainDirectors sends an email to the registrant contact for the domain to verify contact information or to authorize transfer requests\. 
 
 **Registration and renewal period**  
 One to five years\.
@@ -43,13 +43,22 @@ Not supported\.
 + Domain is deleted from the registry: 30 days after expiration
 
 **Registrar**  
-Our registrar associate, Gandi, uses Tucows as the registrar for this TLD\.
+Our registrar associate, Gandi, uses DomainDirectors as the registrar for this TLD\.
 
 **Deletion of domain registration**  
 The registry for \.com\.au domains doesn't allow you to delete domain registrations\. Instead, you must disable automatic renewal and wait for the domain to expire\. For more information, see [Deleting a domain name registration](domain-delete.md)\.
 
 **Changing ownership**  
-+ Due to manual processes required to validate ownership changes, operations submitted within 45 days of expiration date might not be completed before the domain expires\. 
-+ A change of ownership form is required to be completed within 14 days\. For more information, see [.net.au](domain-update-contacts.md#net.au-special)\.
+Change the owner, either programmatically or by using the Route 53 console\. See [Updating contact information for a domain](domain-update-contacts.md#domain-update-contacts-basic)\. Then complete the following process to complete the ownership change:  
 
-  Partially completed forms or forms missing required signatures may result in delays or failures
+1. Both the old and new registrants must click the link they receive in an email from *noreply@domainnameverification\.net* to their listed email addresses\.
+
+    If this isn't completed within 14 days, you have to start the process again\.
+
+1. After the registrants have completed the verification, the ownership change process is initiated\.
+
+1. Both the old and new registrants must click the link they receive in an additional email from *noreply@emailverification\.info* to their listed email addresses\. If this isn't completed within 14 days, you have to start the process again\.
+
+   
+
+1. After the responses are confirmed, the owner change in the registry will be processed in a short time without any further confirmation\.

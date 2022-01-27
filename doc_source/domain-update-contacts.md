@@ -43,17 +43,19 @@ You must complete and submit a form to AWS Support\. See [Changing the owner of 
 You must complete and submit a form to AWS Support\. See [Changing the owner of a domain when the registry requires a Change of Domain Ownership form](#domain-update-contacts-domain-ownership-form)\.
 
 **\.com\.au**  
-Perform the following steps\. You must complete the process within 14 days, or you have to start again:  
+Change the owner, either programmatically or by using the Route 53 console\. See [Updating contact information for a domain](#domain-update-contacts-basic)\. Then complete the following process to complete the ownership change:  
 
-1. Change the owner, either programmatically or using the Route 53 console\. See [Updating contact information for a domain](#domain-update-contacts-basic)\. Due to manual processes required to validate ownership changes, operations submitted within 20 days of expiration date might not be completed before the domain expires\. 
+1. Both the old and new registrants must click the link in the email they receive from *noreply@domainnameverification\.net* to their listed email addresses\. If this isn't completed within 14 days, you have to start the process again\.
 
-1. Go to [https://domainform\.net/form/au/search?view=ownerchange](https://domainform.net/form/au/search?view=ownerchange), enter the name of your domain, and follow the prompts to get a form in PDF format\.
+   
 
-1. Print the form, and fill it out\. Partially completed forms or forms missing required signatures may result in delays or failures\.
+1. After the registrants have completed the verification, the ownership change process is initiated\.
 
-1. Do one of the following:
-   + Scan the form, save the scan in a common format, and email the scan to au\_trades@ispapi\.net\.
-   + Fax the form to \+49 6841 6984 299\.
+1. Both the old and new registrants must click the link in an additional email they receive from *noreply@emailverification\.info* to their listed email addresses\. If this isn't completed within 14 days, you have to start the process again\.
+
+   
+
+1. After the responses are confirmed, the owner change in the registry will be processed in a short time without any further confirmation\.
 
 **\.com\.br**  
 You must complete and submit a form to AWS Support\. See [Changing the owner of a domain when the registry requires a Change of Domain Ownership form](#domain-update-contacts-domain-ownership-form)\.
@@ -74,17 +76,19 @@ You must open a case with AWS Support\. See [Contacting AWS Support about domain
 You must open a case with AWS Support\. See [Contacting AWS Support about domain registration issues](domain-contact-support.md)\.
 
 **\.net\.au**  
-Perform the following steps\. You must complete the process within 14 days, or you have to start again:  
+Change the owner, either programmatically or by using the Route 53 console\. See [Updating contact information for a domain](#domain-update-contacts-basic)\. Then complete the following process to complete the ownership change:  
 
-1. Change the owner, either programmatically or using the Route 53 console\. See [Updating contact information for a domain](#domain-update-contacts-basic)\. Due to manual processes required to validate ownership changes, operations submitted within 20 days of expiration date might not be completed before the domain expires\. 
+1. Both the old and new registrants must click the link in the email they receive from *noreply@domainnameverification\.net* to their listed email addresses\. If this isn't completed within 14 days, you have to start the process again\.
 
-1. Go to [https://domainform\.net/form/au/search?view=ownerchange](https://domainform.net/form/au/search?view=ownerchange), enter the name of your domain, and follow the prompts to get a form in PDF format\.
+   
 
-1. Print the form, and fill it out\. Partially completed forms or forms missing required signatures may result in delays or failures\.
+1. After the registrants have completed the verification, the ownership change process is initiated\.
 
-1. Do one of the following:
-   + Scan the form, save the scan in a common format, and email the scan to au\_trades@ispapi\.net\.
-   + Fax the form to \+49 6841 6984 299\.
+1. Both the old and new registrants must click the link in an additional email they receive from *noreply@emailverification\.info* to their listed email addresses\. If this isn't completed within 14 days, you have to start the process again\.
+
+   
+
+1. After the responses are confirmed, the owner change in the registry will be processed in a short time without any further confirmation\.
 
 **\.qa**  
 You must complete and submit a form to AWS Support\. See [Changing the owner of a domain when the registry requires a Change of Domain Ownership form](#domain-update-contacts-domain-ownership-form)\.
