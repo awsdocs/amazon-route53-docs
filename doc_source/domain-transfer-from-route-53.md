@@ -11,7 +11,6 @@ Health checks that are associated with records\. For more information, see [Conf
 Most domain registrars enforce requirements on transferring a domain to another registrar\. The primary purpose of these requirements is to prevent the owners of fraudulent domains from repeatedly transferring the domains to different registrars\. Requirements vary, but the following requirements are typical: 
 + You must have registered the domain with the current registrar or transferred registration for the domain to the current registrar at least 60 days ago\.
 + If the registration for a domain name expired and had to be restored, it must have been restored at least 60 days ago\.
-+ \.jp domains are internally locked\. Contact [AWS Support Center](https://console.aws.amazon.com/support/home#/) to unlock your \.jp domain before you begin your transfer request\.
 + The domain cannot have any of the following domain name status codes:
   + pendingDelete
   + pendingTransfer
@@ -54,7 +53,7 @@ You don't need to get an authorization code to transfer a \.co\.za domain to ano
 **\.es domains**  
 You don't need to get an authorization code to transfer a \.es domain to another registrar\.  
 **\.jp domains**  
-You don't need to get an authorization code to transfer a \.jp domain to another registrar\.  
+You don't need to get an authorization code to initiate the transfer at your new registrar, but you'll need one to confirm the transfer\.  
 **\.ru domains**  
 Get the authorization code from the registry for \.ru domains at [https://www\.nic\.ru/en/auth/recovery/](https://www.nic.ru/en/auth/recovery/):  
 
@@ -105,9 +104,9 @@ Route 53 sends a confirmation email to the email address for the registrant con
    + If you don't respond to the email, the transfer happens automatically on the specified date\.
    + If you want the transfer to happen sooner or you want to cancel the transfer, choose the link in the email to go to the Route 53 website, and choose the applicable option\.  
 **\.jp domains**  
-Route 53 sends a confirmation email to the email address for the registrant contact for the domain:  
+Route 53 sends a confirmation email to the email address for the registrant contact for the domain from address *noreply@gandi\.net* with a link to confirm the transfer:  
    + If you don't respond to the email, the transfer is canceled on the specified date\.
-   + If you want the transfer to happen sooner or you want to cancel the transfer, choose the link in the email to go to the Route 53 website, and choose the applicable option\.
+   + If you want the transfer to happen sooner or you want to cancel the transfer, choose the link in the email to go to the Route 53 website, and choose the applicable option\. You will be required to provide the domain authorization code that you obtained in step 7\.
 In addition you might receive an email from WIXI\.jp\. You can ignore this email\.
 
 1. If the registrar that you're transferring the domain to reports that the transfer failed, contact that registrar for more information\. When you transfer a domain to another registrar, all status updates go to the new registrar, so Route 53 has no information about why a transfer failed\.

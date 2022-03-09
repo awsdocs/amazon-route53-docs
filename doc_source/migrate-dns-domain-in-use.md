@@ -117,7 +117,7 @@ We recommend that you change the TTL on the following NS records:
 
 If you've configured DNSSEC for your domain, remove the Delegation Signer \(DS\) record from the parent zone before you migrate your domain to Route 53\. 
 
- Because it isn't currently possible to have DNSSEC signing enabled across two providers, you must remove the DS record from the current registrar\. This temporarily signals to DNS resolvers to disable DNSSEC validation\. In [step 11](#migrate-dns-re-enable-dnssec), you can re\-enable DNSSEC validation if desired, after the transition to Route 53 is completed\.
+ Because it isn't currently possible to have DNSSEC signing enabled across two providers, you must remove any DS or DNSKEYs to deactivate DNSSEC\. This temporarily signals to DNS resolvers to disable DNSSEC validation\. In [step 11](#migrate-dns-re-enable-dnssec), you can re\-enable DNSSEC validation if desired, after the transition to Route 53 is completed\.
 
 For more information, see [Deleting public keys for a domain](domain-configure-dnssec.md#domain-configure-dnssec-deleting-keys)\.
 

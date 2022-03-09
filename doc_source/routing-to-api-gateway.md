@@ -19,6 +19,11 @@ Route 53 doesn't charge for alias queries to API Gateway APIs or other AWS reso
 
 Before you get started, you need the following:
 + An API Gateway API that has a custom domain name, such as api\.example\.com, that matches the name of the Route 53 record that you want to create\.
+
+  For more information see:
+  + [Setting up custom domain names for HTTP APIs](https://docs.aws.amazon.com/apigateway/latest/developerguide/http-api-custom-domain-names.html) in the *Amazon API Gateway Developer Guide*\.
+  + [Setting up custom domain names for REST APIs](https://docs.aws.amazon.com/apigateway/latest/developerguide/how-to-custom-domains.html) in the *Amazon API Gateway Developer Guide*\.
+  + [Setting up custom domain names for WebSocket APIs](https://docs.aws.amazon.com/apigateway/latest/developerguide/websocket-api-custom-domain-names.html) in the *Amazon API Gateway Developer Guide*\.
 + A registered domain name\. You can use Amazon Route 53 as your domain registrar, or you can use a different registrar\.
 + Route 53 as the DNS service for the domain\. If you register your domain name by using Route 53, we automatically configure Route 53 as the DNS service for the domain\. 
 

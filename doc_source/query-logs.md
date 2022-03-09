@@ -35,7 +35,7 @@ The log group must be in the US East \(N\. Virginia\) Region\.
 + Choose **Create** to finish\.
 
 **Note**  
-If users are submitting DNS queries for your domain, you should start to see queries in the logs within a few minutes after you create the query logging configuration\. <a name="query-logs-configuring-procedure"></a>
+If users are submitting DNS queries for your domain, you should start to see queries in the logs within several minutes after you create the query logging configuration\. <a name="query-logs-configuring-procedure"></a>
 
 **To configure logging for DNS queries**
 

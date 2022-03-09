@@ -116,11 +116,12 @@ You might receive an email from our registrar associate, Gandi, about the transf
 For most TLDs, when you transfer a domain, the registration is automatically extended by one year\. However, for some geographic TLDs, registration is not extended when you transfer the domain\. If you're transferring a domain to Route 53 that has one of these TLDs, we recommend that you renew the domain registration before you transfer the domain, especially if the expiration date is approaching\.  
 If you don't renew the domain before you transfer it, the registration could expire before the transfer is complete\. If this happens, the domain becomes unavailable on the internet, and the domain name could become available for others to purchase\.
 Registration is not automatically extended when you transfer the following domains to another registrar:  
-+ \.ac \(Ascension Island\)
 + \.ch \(Switzerland\)
++ \.cl \(Chile\)
 + \.co\.uk \(United Kingdom\)
 + \.co\.za \(South Africa\)
 + \.com\.au \(Australia\)
++ \.cz \(Czech Republic\)
 + \.es \(Spain\)
 + \.fi \(Finland\)
 + \.im \(Isle of Man\)
@@ -129,7 +130,6 @@ Registration is not automatically extended when you transfer the following domai
 + \.net\.au \(Australia\)
 + \.org\.uk \(United Kingdom\)
 + \.se \(Sweden\)
-+ \.sh \(Saint Helena\)
 + \.uk \(United Kingdom\)
 
 ## Step 4: Get the names of your name servers<a name="domain-transfer-to-route-53-get-name-servers"></a>

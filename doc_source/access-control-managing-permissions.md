@@ -5,6 +5,14 @@ This topic provides examples of identity\-based policies that demonstrate how an
 **Important**  
 We recommend that you first review the introductory topics that explain the basic concepts and options to manage access to your Route 53 resources\. For more information, see [Overview of managing access permissions to your Amazon Route 53 resources](access-control-overview.md)\. 
 
+**Note**  
+When granting access, the hosted zone and the Amazon VPC must belong to the same partition\. A partition is a group of AWS Regions\. Each AWS account is scoped to one partition\.  
+The following are the supported partitions:  
+`aws` \- AWS Regions
+`aws-cn` \- China Regions
+`aws-us-gov` \- AWS GovCloud \(US\) Region
+For more information, see [Access Management](https://docs.aws.amazon.com/general/latest/gr/aws-arns-and-namespaces.html) in the *AWS General Reference*\.
+
 **Topics**
 + [Permissions required to use the Amazon Route 53 console](#console-required-permissions)
 + [Example permissions for a domain record owner](#example-permissions-record-owner)
@@ -95,6 +103,7 @@ To grant full access to the Amazon Route 53 console, you grant the permissions 
                 "kms:DescribeKey",
                 "kms:CreateKey",
                 "kms:CreateAlias",
+                "kms:Sign",
                 "cloudwatch:DescribeAlarms",
                 "cloudwatch:PutMetricAlarm",
                 "cloudwatch:DeleteAlarms",

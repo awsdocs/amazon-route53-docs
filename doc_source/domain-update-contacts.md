@@ -29,7 +29,7 @@ When you change the owner of a domain, the registries for some TLDs require spec
 
 The following TLDs require special processing to change the owner of the domain:
 
-[.be](#be-special), [.cl](#cl-special), [.com.ar](#com.ar-special), [.com.au](#com.au-special), [.com.br](#com.br-special), [.com.sg](#com.sg-special), [.es](#es-special), [.fi](#fi-special), [.im](#im-special), [.it](#it-special), [.net.au](#net.au-special), [.qa](#qa-special), [.ru](#ru-special), [.se](#se-special), [.sg](#sg-special), [.sh](#sh-special) 
+[.be](#be-special), [.cl](#cl-special), [.com.br](#com.br-special), [.com.sg](#com.sg-special), [.es](#es-special), [.fi](#fi-special), [.im](#im-special), [.it](#it-special), [.ru](#ru-special), [.se](#se-special), [.sg](#sg-special), [.sh](#sh-special) 
 
 **\.be**  
 You must get a transfer code from the registry for \.be domains, and then open a case with AWS Support\.  
@@ -41,21 +41,6 @@ You must complete and submit a form to AWS Support\. See [Changing the owner of 
 
 **\.com\.ar**  
 You must complete and submit a form to AWS Support\. See [Changing the owner of a domain when the registry requires a Change of Domain Ownership form](#domain-update-contacts-domain-ownership-form)\.
-
-**\.com\.au**  
-Change the owner, either programmatically or by using the Route 53 console\. See [Updating contact information for a domain](#domain-update-contacts-basic)\. Then complete the following process to complete the ownership change:  
-
-1. Both the old and new registrants must click the link in the email they receive from *noreply@domainnameverification\.net* to their listed email addresses\. If this isn't completed within 14 days, you have to start the process again\.
-
-   
-
-1. After the registrants have completed the verification, the ownership change process is initiated\.
-
-1. Both the old and new registrants must click the link in an additional email they receive from *noreply@emailverification\.info* to their listed email addresses\. If this isn't completed within 14 days, you have to start the process again\.
-
-   
-
-1. After the responses are confirmed, the owner change in the registry will be processed in a short time without any further confirmation\.
 
 **\.com\.br**  
 You must complete and submit a form to AWS Support\. See [Changing the owner of a domain when the registry requires a Change of Domain Ownership form](#domain-update-contacts-domain-ownership-form)\.
@@ -74,21 +59,6 @@ You must open a case with AWS Support\. See [Contacting AWS Support about domain
 
 **\.it**  
 You must open a case with AWS Support\. See [Contacting AWS Support about domain registration issues](domain-contact-support.md)\.
-
-**\.net\.au**  
-Change the owner, either programmatically or by using the Route 53 console\. See [Updating contact information for a domain](#domain-update-contacts-basic)\. Then complete the following process to complete the ownership change:  
-
-1. Both the old and new registrants must click the link in the email they receive from *noreply@domainnameverification\.net* to their listed email addresses\. If this isn't completed within 14 days, you have to start the process again\.
-
-   
-
-1. After the registrants have completed the verification, the ownership change process is initiated\.
-
-1. Both the old and new registrants must click the link in an additional email they receive from *noreply@emailverification\.info* to their listed email addresses\. If this isn't completed within 14 days, you have to start the process again\.
-
-   
-
-1. After the responses are confirmed, the owner change in the registry will be processed in a short time without any further confirmation\.
 
 **\.qa**  
 You must complete and submit a form to AWS Support\. See [Changing the owner of a domain when the registry requires a Change of Domain Ownership form](#domain-update-contacts-domain-ownership-form)\.
@@ -162,6 +132,8 @@ If you don't pay the invoice within five days, the invoice is canceled\. To chan
 [\[See the AWS documentation website for more details\]](http://docs.aws.amazon.com/Route53/latest/DeveloperGuide/domain-update-contacts.html)
 
 1. If you encounter issues while updating contact information, you can contact AWS Support for free\. For more information, see [Contacting AWS Support about domain registration issues](domain-contact-support.md)\.
+
+For information about the API you can use also, see [UpdateDomainContact](https://docs.aws.amazon.com/Route53/latest/APIReference/API_domains_UpdateDomainContact.html)\.
 
 ## Changing the owner of a domain when the registry requires a Change of Domain Ownership form<a name="domain-update-contacts-domain-ownership-form"></a>
 

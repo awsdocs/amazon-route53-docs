@@ -5,6 +5,14 @@ When you set up [Access control](auth-and-access-control.md#access-control) and 
 You can use AWS\-wide condition keys in your Route 53 policies to express conditions\. For a complete list of AWS\-wide keys, see [Available keys](https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_elements.html#AvailableKeys) in the *IAM User Guide*\. 
 
 **Note**  
+When granting access, the hosted zone and the Amazon VPC must belong to the same partition\. A partition is a group of AWS Regions\. Each AWS account is scoped to one partition\.  
+The following are the supported partitions:  
+`aws` \- AWS Regions
+`aws-cn` \- China Regions
+`aws-us-gov` \- AWS GovCloud \(US\) Region
+For more information, see [Access Management](https://docs.aws.amazon.com/general/latest/gr/aws-arns-and-namespaces.html) in the *AWS General Reference*\.
+
+**Note**  
 To specify an action, use the applicable prefix \(`route53`, `route53domains`, or `route53resolver`\) followed by the API operation name, for example:  
 `route53:CreateHostedZone`
 `route53domains:RegisterDomain`
@@ -263,6 +271,10 @@ Resources: `*`
 
 [CheckDomainAvailability](https://docs.aws.amazon.com/Route53/latest/APIReference/API_domains_CheckDomainAvailability.html)  
 Required Permissions \(API Action\): `route53domains:CheckDomainAvailability`  
+Resources: `*`
+
+[CheckDomainTransferability](https://docs.aws.amazon.com/Route53/latest/APIReference/API_domains_CheckDomainTransferability.html)  
+Required Permissions \(API Action\): `route53domains:CheckDomainTransferability`  
 Resources: `*`
 
 [DeleteDomain](https://docs.aws.amazon.com/Route53/latest/DeveloperGuide/domain-delete.html) \(console only\)  

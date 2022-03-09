@@ -50,7 +50,7 @@ Changes generally propagate to all Route 53 servers within 60 seconds\. When pr
 
    1. in the **ID** column, select the linked name of the distribution that you want to route traffic to \(not the check box\)\.
 
-   1. On the **General** tab, get the value of the **Domain name** field\.
+   1. On the **General** tab, get the value of the **Distribution domain name** field\.
 
    1. Check the **IPv6** field to see whether IPv6 is enabled for the distribution\. If IPv6 is enabled, you'll need to create two alias records for the distribution, one to route IPv4 traffic to the distribution, and one to route IPv6 traffic\.
 

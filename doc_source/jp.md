@@ -18,8 +18,11 @@ Not supported\. We recommend that you prevent unauthorized transfers by restrict
 **Internationalized domain names**  
 Supported for Japanese\.
 
-**Authorization code required for transfer to Route 53**  
-If you're transferring a \.jp domain to Route 53, you don't need to get an authorization code\. Instead, use the method provided by your current domain registrar to update the value of the AGNT code to **AGNT\-1744**, all uppercase\. 
+**Authorization code not required for transfer to Route 53**  
+If you're transferring a \.jp domain to Route 53, you don't need to get an authorization code\. Instead, initiate the transfer either programmatically or by using the Route 53 console \(see [Transferring registration for a domain to Amazon Route 53](domain-transfer-to-route-53.md)\), and then follow the procedure set by your current domain registrar\. If they ask you for value of the AGNT code for your new registrar, provide them **AGNT\-1744**, all uppercase\.
+
+**Authorization code required for transfer from Route 53**  
+If you're transferring a \.jp domain from Route 53 to another registrar, initiate the transfer at your new registrar\. There is no need for an auth code at this point\. You will receive a confirmation email from address *noreply@gandi\.net* that will ask you to choose a link to confirm or reject the transfer\. To confirm the transfer, retrieve an auth code for your domain by using Route 53 console or API, then choose the link in the email, and provide the code\. For more information, see [Transferring a domain from Amazon Route 53 to another registrar](domain-transfer-from-route-53.md)\.
 
 **DNSSEC**  
 Not supported\.
@@ -33,3 +36,6 @@ Not supported\.
 
 **Registrar**  
 The registrar for this TLD is our registrar associate, Gandi\.
+
+**Note**  
+Registering non\-general\-purpose JP domains such as \.co\.jp and \.or\.jp is currently not possible\.

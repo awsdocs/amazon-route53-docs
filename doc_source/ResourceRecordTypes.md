@@ -433,6 +433,8 @@ For the API, include all the strings in the same `Value` element:
 
 The maximum length of a value in a TXT record is 4,000 characters\. 
 
+To enter more than one TXT value, enter one value per row\.
+
 ### Special characters in a TXT record value<a name="TXTformat-special-characters"></a>
 
 If your TXT record contains any of the following characters, you must specify the characters by using escape codes in the format `\`*three\-digit octal code*:

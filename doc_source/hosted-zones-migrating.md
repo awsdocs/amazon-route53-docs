@@ -254,7 +254,7 @@ If your domain is in use—for example, if your users are using the domain name 
 **Note**  
 If you created any records in the new hosted zone that don't appear in the old hosted zone, your users can't use the new records to access your resources until resolvers start using the name servers for the new hosted zone\. For example, suppose you create a record, test\.example\.com, in the new hosted zone that should route internet traffic to your website\. If the record doesn't appear in the old hosted zone, you can't enter test\.example\.com in a web browser until resolvers start using the new hosted zone\.
 
-To ensure that migrating a hosted zone to another AWS account has completed before you delete the old hosted zone, wait for two days after you update the domain registration to use name servers for the new hosted zone\. After the two\-day TTL expires and resolvers request the name servers for your domain, the resolvers will get the current name servers\.
+To ensure that migrating a hosted zone to another AWS account has completed before you delete the old hosted zone, wait for two days after you update the domain registration to use name servers for the new hosted zone\. After the two\-day TTL expires and resolvers request the name servers for your domain, the resolvers will get the current name servers\. You can also enable [Resolver query logging](resolver-query-logs.md) to monitor the queries in the new hosted zones\. For information about the pricing for Resolver query logging, see [CloudWatch pricing](http://aws.amazon.com/cloudwatch/pricing/)\.
 
 ## Step 10: \(Optional\) delete the old hosted zone<a name="hosted-zones-migrating-delete-old-hosted-zone"></a>
 

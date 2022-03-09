@@ -27,9 +27,9 @@ If you already know the domain name for your Elastic Beanstalk environment, skip
 
 1. Sign in to the AWS Management Console and open the Elastic Beanstalk console at [https://console\.aws\.amazon\.com/elasticbeanstalk/](https://console.aws.amazon.com/elasticbeanstalk/)\.
 
-1. In the list of applications, find the application that you want to route traffic to, and get the value of **URL**\.
+1. In the list of applications, find the application that you want to route traffic to, and get the value of **URL**\. If you don't see the list of applications, choose **Applications** in the navigation pane\.
 
-   For more information about the URL, see [Elastic Beanstalk environment's domain name](https://docs.aws.amazon.com/elasticbeanstalk/latest/dg/customdomains.html) in the *Elastic Beanstalk developer guide*\.
+   For more information about the URL, see [Elastic Beanstalk environment's domain name](https://docs.aws.amazon.com/elasticbeanstalk/latest/dg/customdomains.html) in the *Elastic Beanstalk developer guide*\. 
 
 ## Creating an Amazon Route 53 record that routes traffic to your Elastic Beanstalk environment<a name="routing-to-beanstalk-environment-create-resource-record-set"></a>
 

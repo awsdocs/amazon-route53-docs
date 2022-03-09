@@ -69,7 +69,7 @@ If you have an existing account and your default limit is 50 now, it will remain
 
 | Entity | Quota | 
 | --- | --- | 
-|  Records  |  10,000 per hosted zone [Request a higher quota](https://console.aws.amazon.com/servicequotas/home?region=us-east-1#!/services/route53/quotas)\. For a quota greater than 10,000 records in a hosted zone, an additional charge applies\.  | 
+|  Records  |  10,000 per hosted zone [Request a higher quota](https://console.aws.amazon.com/servicequotas/home?region=us-east-1#!/services/route53/quotas)\. For a quota greater than 10,000 records in a hosted zone, an additional charge applies\.For more information, see [Amazon Route 53 Pricing](https://aws.amazon.com/route53/pricing/)\.  | 
 |  Values in a record  |  400 per record  | 
 |  Geolocation, latency, multivalue answer, and weighted records  |  100 records that have the same name and type  | 
 |  Geoproximity records  |  30 records that have the same name and type  | 
@@ -185,7 +185,7 @@ Amazon Route 53 API requests are subject to the following maximums\.
 ### Number of elements and characters in `ChangeResourceRecordSets` requests<a name="limits-api-requests-changeresourcerecordsets"></a>
 
 **`ResourceRecord` elements**  
-A request cannot contain more than 1,000 `ResourceRecord` elements\. When the value of the `Action` element is `UPSERT`, each `ResourceRecord` element is counted twice\.
+A request cannot contain more than 1,000 `ResourceRecord` elements \(including alias records\)\. When the value of the `Action` element is `UPSERT`, each `ResourceRecord` element is counted twice\.
 
 **Maximum number of characters**  
 The sum of the number of characters \(including spaces\) in all `Value` elements in a request cannot exceed 32,000 characters\. When the value of the `Action` element is `UPSERT`, each character in a `Value` element is counted twice\.
