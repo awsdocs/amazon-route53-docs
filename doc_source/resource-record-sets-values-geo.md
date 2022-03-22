@@ -68,7 +68,7 @@ For more information about the above values, see [Value/Route traffic to](resour
 When you configure Route 53 to respond to DNS queries based on the location that the queries originated from, select the continent or country for which you want Route 53 to respond with the settings in this record\. If you want Route 53 to respond to DNS queries for individual states in the United States, select **United States** from the **Location** list, and then select the state under the **Sublocation** group\.
 
 **Important**  
-We recommend that you create one geolocation record that has a value of **Default** for **Location**\. This covers geographic locations that you haven't created records for and IP addresses that Route 53 can't identify a location for\.
+We recommend that you create one geolocation record that has a value of **Default** for **Location**\. This covers geographic locations that you haven't created records for and IP addresses that Route 53 can't identify a location for\. To configure the record in this way, the country code needs to be configured with an asterisc "*"\.
 
 You can't create non\-geolocation records that have the same values for **Record name** and **Record type** as geolocation records\.
 
