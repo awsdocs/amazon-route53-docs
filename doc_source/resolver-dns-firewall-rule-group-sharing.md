@@ -58,4 +58,4 @@ Choose the check box for the rule group that you want to share\.
 Enter the AWS account number, OU name, or organization name\.  
 **Tags**  
 Specify one or more keys and the corresponding values\. For example, you might specify **Cost center** for **Key** and specify **456** for **Value**\.  
-These are the tags that AWS Billing and Cost Management provides for organizing your AWS bill; you can use also tags for other purposes\. For more information about using tags for cost allocation, see [Using cost allocation tags](https://docs.aws.amazon.com/awsaccountbilling/latest/aboutv2/cost-alloc-tags.html) in the *AWS Billing and Cost Management User Guide*\.
+These are the tags that AWS Billing and Cost Management provides for organizing your AWS bill; you can use also tags for other purposes\. For more information about using tags for cost allocation, see [Using cost allocation tags](https://docs.aws.amazon.com/awsaccountbilling/latest/aboutv2/cost-alloc-tags.html) in the *AWS Billing User Guide*\.

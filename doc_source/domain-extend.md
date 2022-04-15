@@ -45,6 +45,6 @@ You can't use AWS credits to pay the fee for extending the registration period f
 **Important**  
 If you don't pay the invoice within five days, the invoice is canceled\. To extend the domain registration after an invoice is canceled, resubmit the request\.
 
-   For more information, see [Managing your payments in India](https://docs.aws.amazon.com/awsaccountbilling/latest/aboutv2/edit-aispl-payment-method.html) in the *AWS Billing and Cost Management User Guide*\.
+   For more information, see [Managing your payments in India](https://docs.aws.amazon.com/awsaccountbilling/latest/aboutv2/edit-aispl-payment-method.html) in the *AWS Billing User Guide*\.
 
 1. If you encounter issues while extending the registration period for a domain, you can contact AWS Support for free\. For more information, see [Contacting AWS Support about domain registration issues](domain-contact-support.md)\.

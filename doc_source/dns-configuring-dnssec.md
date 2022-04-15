@@ -16,4 +16,6 @@ Before you enable DNSSEC signing, note the following:
 + [Disabling DNSSEC signing](dns-configuring-dnssec-disable.md)
 + [Working with customer managed keys for DNSSEC](dns-configuring-dnssec-cmk-requirements.md)
 + [Working with key\-signing keys \(KSKs\)](dns-configuring-dnssec-ksk.md)
++ [KMS key and ZSK management in Route 53](dns-configuring-dnssec-zsk-management.md)
++ [DNSSEC proofs of nonexistence in Route 53](dns-configuring-dnssec-proof-of-nonexistence.md)
 + [Troubleshooting DNSSEC signing](dns-configuring-dnssec-troubleshoot.md)

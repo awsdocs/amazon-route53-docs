@@ -2,9 +2,6 @@
 
 When you create latency records, you specify the following values\.
 
-**Note**  
-Although creating latency records in a private hosted zone is allowed, it's not supported\.
-
 **Topics**
 + [Routing policy](#rrsets-values-latency-routing-policy)
 + [Record name](#rrsets-values-latency-name)

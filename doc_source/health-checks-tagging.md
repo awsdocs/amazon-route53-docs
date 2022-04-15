@@ -1,6 +1,6 @@
 # Naming and tagging health checks<a name="health-checks-tagging"></a>
 
-You can add tags to Amazon Route 53 health checks, which lets you give each health check a name that is more comprehensible than the health check ID\. These are the same tags that AWS Billing and Cost Management provides for organizing your AWS bill\. For more information about using tags for cost allocation, see [Use cost allocation tags for custom billing reports](https://docs.aws.amazon.com/awsaccountbilling/latest/aboutv2/allocation.html) in the *AWS Billing and Cost Management User Guide*\. 
+You can add tags to Amazon Route 53 health checks, which lets you give each health check a name that is more comprehensible than the health check ID\. These are the same tags that AWS Billing and Cost Management provides for organizing your AWS bill\. For more information about using tags for cost allocation, see [Use cost allocation tags for custom billing reports](https://docs.aws.amazon.com/awsaccountbilling/latest/aboutv2/allocation.html) in the *AWS Billing User Guide*\. 
 
 Each tag consists of a key \(the name of the tag\) and a value, both of which you define\. When you add tags to a health check, we recommend that you add one tag that has the following values for the key and value:
 + **key** – **Name**

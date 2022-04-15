@@ -2,9 +2,6 @@
 
 When you create geolocation alias records, you specify the following values\.
 
-**Note**  
-Although creating geolocation alias records in a private hosted zone is allowed, it's not supported\.
-
 For more information, see [Choosing between alias and non\-alias records](resource-record-sets-choosing-alias-non-alias.md)\.
 
 **Topics**
@@ -21,9 +18,6 @@ For more information, see [Choosing between alias and non\-alias records](resour
 ## Routing policy<a name="rrsets-values-geo-alias-routing-policy"></a>
 
 Choose **Geolocation**\. 
-
-**Note**  
-Although creating geolocation alias records in a private hosted zone is allowed, it's not supported\.
 
 ## Record name<a name="rrsets-values-geo-alias-name"></a>
 
@@ -78,7 +72,7 @@ For more information about how to configure Route 53 to route traffic to specif
 When you configure Route 53 to respond to DNS queries based on the location that the queries originated from, select the continent or country for which you want Route 53 to respond with the settings in this record\. If you want Route 53 to respond to DNS queries for individual states in the United States, select **United States** from the **Location** list, and then select the state from the **U\.S\. states** list\.
 
 **Important**  
-We recommend that you create one geolocation record that has a value of **Default** for **Location**\. This covers geographic locations that you haven't created records for and IP addresses that Route 53 can't identify a location for\.
+We recommend that you create one geolocation record that has a value of **Default** for **Location**\. This covers geographic locations that you haven't created records for and IP addresses that Route 53 can't identify a location for\. When you configure the default location, set the country code to an asterisk "\*"\.
 
 You can't create non\-geolocation records that have the same values for **Record name** and **Record type** as geolocation records\.
 

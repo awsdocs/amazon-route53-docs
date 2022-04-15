@@ -1,7 +1,7 @@
 # \.property<a name="property"></a>
 
 **Important**  
-You can no longer use Route 53 to register new \.property domains or transfer \.property domains to Route 53\. We'll continue to support \.property domains that are already registered with Route 53\.
+You can use Route 53 to register new \.property domains, but you can't transfer existing \.property domains to Route 53\. 
 
 Used for information about any type of property, including real estate or intellectual property\. Also used by those who have houses, buildings, or land to sell, lease, or rent\.
 

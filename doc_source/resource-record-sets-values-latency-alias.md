@@ -2,9 +2,6 @@
 
 When you create latency alias records, you specify the following values\.
 
-**Note**  
-Although creating latency alias records in a private hosted zone is allowed, it's not supported\.
-
 For more information, see [Choosing between alias and non\-alias records](resource-record-sets-choosing-alias-non-alias.md)\.
 
 **Topics**
@@ -20,9 +17,6 @@ For more information, see [Choosing between alias and non\-alias records](resour
 ## Routing policy<a name="rrsets-values-latency-alias-routing-policy"></a>
 
 Choose **Latency**\. 
-
-**Note**  
-Although creating latency alias records in a private hosted zone is allowed, it's not supported\.
 
 ## Record name<a name="rrsets-values-latency-alias-name"></a>
 

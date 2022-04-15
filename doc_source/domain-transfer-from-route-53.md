@@ -104,7 +104,7 @@ Route 53 sends a confirmation email to the email address for the registrant con
    + If you don't respond to the email, the transfer happens automatically on the specified date\.
    + If you want the transfer to happen sooner or you want to cancel the transfer, choose the link in the email to go to the Route 53 website, and choose the applicable option\.  
 **\.jp domains**  
-Route 53 sends a confirmation email to the email address for the registrant contact for the domain from address *noreply@gandi\.net* with a link to confirm the transfer:  
+Route 53 sends a confirmation email to the email address for the registrant contact for the domain from address *noreply@domainnameverification\.net* with a link to confirm the transfer:  
    + If you don't respond to the email, the transfer is canceled on the specified date\.
    + If you want the transfer to happen sooner or you want to cancel the transfer, choose the link in the email to go to the Route 53 website, and choose the applicable option\. You will be required to provide the domain authorization code that you obtained in step 7\.
 In addition you might receive an email from WIXI\.jp\. You can ignore this email\.

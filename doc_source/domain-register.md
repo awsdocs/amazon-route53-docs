@@ -122,7 +122,7 @@ Domain name registrations and renewals are not refundable\. If you enable automa
 **Important**  
 If you don't pay the invoice within five days, the invoice is canceled\. To register a domain after an invoice is canceled, resubmit the request\.
 
-   For more information, see [Managing your payments in India](https://docs.aws.amazon.com/awsaccountbilling/latest/aboutv2/edit-aispl-payment-method.html) in the *AWS Billing and Cost Management User Guide*\.
+   For more information, see [Managing your payments in India](https://docs.aws.amazon.com/awsaccountbilling/latest/aboutv2/edit-aispl-payment-method.html) in the *AWS Billing User Guide*\.
 
 1. **Generic TLDs only** – Verify that the email address for the registrant contact is valid\.
 **Note**  

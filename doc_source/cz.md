@@ -18,7 +18,8 @@ Supported\.
 Not supported\.
 
 **Authorization code required for transfer to Route 53**  
-Yes
+Yes  
+If your current registrar doesn't provide an authorization code, go to `https://www.nic.cz/whois/send-password/` to request it to be sent to the registrant email address by the CZ domain registry\. 
 
 **DNSSEC**  
 Not supported\.

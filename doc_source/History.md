@@ -18,6 +18,9 @@ The following entries describe important changes in each release of the Route 5
 
 ## 2022 releases<a name="doc-history-2022"></a>
 
+**March 16, 2022**  
+Geolocation and latency\-based routing options are now supported for private hosted zones in Amazon Route 53\. For more information, see [](hosted-zone-private-considerations.md#hosted-zone-private-considerations-routing-policies)\.
+
 **January 25, 2022**  
 The process for changing ownership for \.com\.au and \.net\.au TLDs has been simplified to include responding to two emails \(by both old and new registrants\) and doesn't include filling in forms\. For more information, see [\.com\.au \(Australia\)](com.au.md) and [\.net\.au \(Australia\)](net.au.md)\.
 

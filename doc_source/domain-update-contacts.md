@@ -121,7 +121,7 @@ To update contact information for a domain, perform the following procedure\. <a
 **Important**  
 If you don't pay the invoice within five days, the invoice is canceled\. To change settings for the registrant contact after an invoice is canceled, resubmit the request\.
 
-   For more information, see [Managing your payments in India](https://docs.aws.amazon.com/awsaccountbilling/latest/aboutv2/edit-aispl-payment-method.html) in the *AWS Billing and Cost Management User Guide*\.
+   For more information, see [Managing your payments in India](https://docs.aws.amazon.com/awsaccountbilling/latest/aboutv2/edit-aispl-payment-method.html) in the *AWS Billing User Guide*\.
 
 1. If you changed the domain owner, as described in [Who is the owner of a domain?](#domain-update-contacts-who-is-domain-owner), we send email to the registrant contact for the domain\. The email asks for authorization for the change of owner\. 
 

@@ -5,6 +5,7 @@ Here's an overview of the concepts that are discussed throughout the *Amazon Rou
 **Topics**
 + [Domain registration concepts](#route-53-concepts-domain-registration)
 + [Domain Name System \(DNS\) concepts](#route-53-concepts-domain-name-system-dns)
++ [Control and data plane concepts](#route-53-concepts-control-and-data-plane)
 + [Health checking concepts](#route-53-concepts-health-checking)
 
 ## Domain registration concepts<a name="route-53-concepts-domain-registration"></a>
@@ -123,6 +124,18 @@ To route traffic for a subdomain, create a record that has the name that you wan
 **time to live \(TTL\)**  
 The amount of time, in seconds, that you want a DNS resolver to cache \(store\) the values for a record before submitting another request to Route 53 to get the current values for that record\. If the DNS resolver receives another request for the same domain before the TTL expires, the resolver returns the cached value\.  
 A longer TTL reduces your Route 53 charges, which are based in part on the number of DNS queries that Route 53 responds to\. A shorter TTL reduces the amount of time that DNS resolvers route traffic to older resources after you change the values in a record, for example, by changing the IP address for the web server for www\.example\.com\.
+
+## Control and data plane concepts<a name="route-53-concepts-control-and-data-plane"></a>
+
+Here's an overview of the concepts that are related to how Amazon Route 53 divides its functionality into a control and a data plane\. Route 53 service, like most AWS services, includes a control plane that enables you to perform management operations such as creating, updating, and deleting resources, and a data plane that provides the service's core functionality\. While both functionalities are built to be reliable, the control planes are optimized for data consistency, whereas the data planes are optimized for availability\. The data plane's resilient design allows it to maintain availability even during rare disruptive events, during which the control plane might become unavailable\. For this reason, we recommend use of data plane functions where availability is important\. The Route 53 control plane is located in the us\-east\-1 AWS Region and the data planes are globally distributed\.
+
+Amazon Route 53 is divided into control and data planes as follows:
++ For Route 53 public and private DNS, the control plane is the Route 53 console and APIs which allow you to manage DNS entries, including both the Route 53 and traffic flow APIs\. The data plane is the authoritative DNS service, which runs across over 200 Points of Presence \(PoP\) locations, answering DNS queries based on your hosted zones and health check data\. 
++ For Route 53 health checks, the control plane is the Route 53 console and Route 53 APIs that you can use to create, update, and delete health checks\. The data plane is the globally distributed service, which performs health checks, aggregates the results and delivers them to the data planes of Route 53 public and private DNS and [AWS Global Accelerator](http://aws.amazon.com/global-accelerator/)\. 
++ For Amazon Route 53 Resolver, the control plane consists of the Resolver console and APIs that allow you to manage Amazon VPC settings, Resolver rules, query logging policies, and DNS Firewall policies\. The data plane is the DNS resolver service, which answers DNS queries in your VPC, endpoints that forward queries to other resolvers, and the DNS Firewall data plane which applies policies to filter DNS queries\. 
++ Route 53 domain registrations are managed only on the control plane in the us\-east\-1 AWS Region\.
+
+For more information about data planes, control planes, and how AWS builds services to meet high availability targets, see the [Static stability using Availability Zones paper](http://aws.amazon.com/builders-library/static-stability-using-availability-zones/) in the Amazon Builders’ Library\.
 
 ## Health checking concepts<a name="route-53-concepts-health-checking"></a>
 

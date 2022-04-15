@@ -52,7 +52,7 @@ The port on the instance that the query originated from\.
 The protocol used to submit the DNS query\.
 
 **srcids**  
-The list of IDs of the sources the DNS query originated from or passed through\.
+IDs of the `instance`, `resolver_endpoint`, and the `resolver_network_interface` that the DNS query originated from or passed through\.
 
 **instance**  
 The ID of the instance that the query originated from\.

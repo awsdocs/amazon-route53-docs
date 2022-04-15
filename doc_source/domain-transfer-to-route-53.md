@@ -298,7 +298,7 @@ If your contact address is in India, your user agreement is with Amazon Internet
 **Important**  
 If you don't pay the invoice within five days, the invoice is canceled\. To transfer a domain after an invoice is canceled, resubmit the request\.
 
-For more information, see [Managing your payments in India](https://docs.aws.amazon.com/awsaccountbilling/latest/aboutv2/edit-aispl-payment-method.html) in the *AWS Billing and Cost Management User Guide*\.
+For more information, see [Managing your payments in India](https://docs.aws.amazon.com/awsaccountbilling/latest/aboutv2/edit-aispl-payment-method.html) in the *AWS Billing User Guide*\.
 
 ## Step 7: Click the link in the confirmation and authorization emails<a name="domain-transfer-to-route-53-authorize-transfer"></a>
 

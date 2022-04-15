@@ -393,7 +393,7 @@ See also [Example 4: Allow creation of inbound and outbound Route 53 Resolver en
 Resources: `*`
 
 [CreateResolverQueryLogConfig](https://docs.aws.amazon.com/Route53/latest/APIReference/API_route53resolver_CreateResolverQueryLogConfig.html)  
-Required Permissions \(API Action\): `route53resolver:CreateResolverQueryLogConfig`, `ec2:DescribeVpcs`, `logs:DescribeResourcePolicies`, `logs:DescribeLogGroups`, `logs:CreateLogDelivery`, `logs:DeleteLogDelivery` `logs:GetLogDelivery`, `logs:ListLogDeliveries`, `logs:UpdateLogDelivery`, `iam:CreateServiceLinkedRole`   
+Required Permissions \(API Action\): `route53resolver:CreateResolverQueryLogConfig`, `ec2:DescribeVpcs`, `logs:DescribeResourcePolicies`, `logs:DescribeLogGroups`, `logs:CreateLogDelivery`, `logs:DeleteLogDelivery`, `logs:GetLogDelivery`, `logs:ListLogDeliveries`, `logs:UpdateLogDelivery`, `logs:PutResourcePolicy`, `iam:CreateServiceLinkedRole`   
 Resources: `*`
 
 [CreateResolverRule](https://docs.aws.amazon.com/Route53/latest/APIReference/API_route53resolver_CreateResolverRule.html)  

@@ -15,7 +15,7 @@ Open to the public, with some restrictions:
 Not supported\.
 
 **Domain locking to prevent unauthorized transfers**  
-Not supported\. We recommend that you prevent unauthorized transfers by restricting access to the [RetrieveDomainAuthCode](https://docs.aws.amazon.com/Route53/latest/APIReference/API_domains_RetrieveDomainAuthCode.html) API action\. \(When you restrict access to this Route 53 API, you also restrict who can generate an authorization code using the Route 53 console, AWS SDKs, and other programmatic methods\.\) For more information, see [Identity and access management in Amazon Route 53](auth-and-access-control.md)\.
+Not supported\. To prevent unauthorized transfers, restrict access to the registrant email address and to the Route 53 APIs that could allow ownership change, for example, [UpdateDomainContact](https://docs.aws.amazon.com/Route53/latest/APIReference/API_domains_UpdateDomainContact.html)\. For more information, see [Required permissions for actions on domain registrations](r53-api-permissions-ref.md#required-permissions-domain-registrations) and [Example permissions for a domain record owner](access-control-managing-permissions.md#example-permissions-record-owner)\.
 
 **Internationalized domain names**  
 Not supported\.

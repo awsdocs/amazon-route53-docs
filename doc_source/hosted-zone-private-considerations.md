@@ -19,7 +19,7 @@ To use private hosted zones, you must set the following Amazon VPC settings to `
 For more information, see [Updating DNS support for your VPC](https://docs.aws.amazon.com/vpc/latest/userguide/vpc-dns.html#vpc-dns-updating) in the *Amazon VPC User Guide*\.
 
 **Route 53 health checks**  
-In a private hosted zone, you can associate Route 53 health checks only with failover, multivalue answer, and weighted records\. For information about associating health checks with failover records, see [Configuring failover in a private hosted zone](dns-failover-private-hosted-zones.md)\.
+In a private hosted zone, you can associate Route 53 health checks only with failover, multivalue answer, weighted, latency and, geolocation records\. For information about associating health checks with failover records, see [Configuring failover in a private hosted zone](dns-failover-private-hosted-zones.md)\.
 
 **Supported routing policies for records in a private hosted zone**  
 You can use the following routing policies when you create records in a private hosted zone:  
@@ -27,6 +27,8 @@ You can use the following routing policies when you create records in a private 
 + [Failover routing](routing-policy.md#routing-policy-failover)
 + [Multivalue answer routing](routing-policy.md#routing-policy-multivalue)
 + [Weighted routing](routing-policy.md#routing-policy-weighted)
++ [Latency\-based routing](routing-policy.md#routing-policy-latency)
++ [Geolocation routing](routing-policy.md#routing-policy-geo)
 Creating records in a private hosted zone using other routing policies is not supported\.
 
 **Split\-view DNS**  

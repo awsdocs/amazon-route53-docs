@@ -4,6 +4,9 @@ Used for sexual content\. Also used for describing the most popular and exciting
 
 [Return to index](registrar-tld-list.md#index)
 
+**Important**  
+You can no longer use Route 53 to register new \.sexy domains or transfer \.sexy domains to Route 53\. We'll continue to support \.sexy domains that are already registered with Route 53\.
+
 **Registration and renewal period**  
 One to ten years\.
 
@@ -17,7 +20,7 @@ Supported\.
 Supported for Cyrillic \(primarily Russian\), French, German, Italian, Portuguese, and Spanish\.
 
 **Authorization code required for transfer to Route 53**  
-Yes
+Not supported\. You can no longer transfer \.sexy domains to Route 53\.
 
 **DNSSEC**  
 Supported for domain registration\. For more information, see [Configuring DNSSEC for a domain](domain-configure-dnssec.md)\.

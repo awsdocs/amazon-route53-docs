@@ -14,7 +14,7 @@ The following procedure explains how to use the Amazon Route 53 console to list
 **Up to 2,000 records**  
    + To display the records that have specific values, enter a value in the search bar and press **Enter**\. For example, to display the records that have an IP address beginning with **192\.0**, enter that value in the **Search** field and press **Enter**\.
    + To display only the records that have the same DNS record type, select **Record type **in the dropdown list, and enter the record type\. 
-   + To display only alias records, select **Aliase** in the dropdown list, and enter **Yes**\.
+   + To display only alias records, select **Alias** in the dropdown list, and enter **Yes**\.
    + To display only weighted records, select **Routing policy** in the dropdown list, and enter **WEIGHTED**\.  
 **More than 2,000 records**  
    + You can search only on record names, not on record values\. You also can't filter based on the record type, or on alias or weighted records\.
