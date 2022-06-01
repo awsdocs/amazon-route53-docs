@@ -8,7 +8,7 @@ Used for information about the creation of online shortcut links\.
 One to ten years\.
 
 **Privacy protection**  
-Supported, but you must open a case with AWS Support and request that they enable or disable privacy protection for your domains\. When you open the case, specify the domain names in the **Description** field\. For more information, see [Contacting AWS Support about domain registration issues](domain-contact-support.md)\.
+Uniregistry is the registry for \.LINK domains\. Due to Uniregistry policy, the registry\-level [WHOIS](https://whois.uniregistry.net/whois/) shows "REDACTED FOR PRIVACY"\. Removing our privacy protection feature will only affect the information displayed at the registrar\-level [Amazon Registrar WHOIS](https://registrar.amazon.com/whois)\.
 
 **Domain locking to prevent unauthorized transfers**  
 Supported\.

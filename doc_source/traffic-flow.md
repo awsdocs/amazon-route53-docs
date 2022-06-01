@@ -24,7 +24,7 @@ You can use a traffic policy to automatically create records in multiple public 
 When a client submits a query for the name of the root record, such as example\.com or www\.example\.com, Route 53 responds to the query based on the configuration in the traffic policy that you used to create the corresponding traffic policy record\.
 
 **Geoproximity routing policy**  
-The geoproximity routing policy is available only if you use traffic flow\. With geoproximity routing, you can route traffic based on the location of your resources and, optionally, shift traffic from resources in one location to resources in another\. For more information, see [Geoproximity routing \(traffic flow only\)](routing-policy.md#routing-policy-geoproximity)\.
+The geoproximity routing policy is available only if you use traffic flow\. With geoproximity routing, you can route traffic based on the location of your resources and, optionally, shift traffic from resources in one location to resources in another\. For more information, see [Geoproximity routing \(traffic flow only\)](routing-policy-geoproximity.md)\.
 
 **Charge for traffic flow**  
 There's a monthly charge for each traffic policy record\. For more information, see the "Traffic Flow" section of [Amazon Route 53 pricing](https://aws.amazon.com/route53/pricing/)\.  

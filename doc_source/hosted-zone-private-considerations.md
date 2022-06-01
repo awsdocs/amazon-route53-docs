@@ -23,12 +23,12 @@ In a private hosted zone, you can associate Route 53 health checks only with fa
 
 **Supported routing policies for records in a private hosted zone**  
 You can use the following routing policies when you create records in a private hosted zone:  
-+ [Simple routing](routing-policy.md#routing-policy-simple)
-+ [Failover routing](routing-policy.md#routing-policy-failover)
-+ [Multivalue answer routing](routing-policy.md#routing-policy-multivalue)
-+ [Weighted routing](routing-policy.md#routing-policy-weighted)
-+ [Latency\-based routing](routing-policy.md#routing-policy-latency)
-+ [Geolocation routing](routing-policy.md#routing-policy-geo)
++ [Simple routing](routing-policy-simple.md)
++ [Failover routing](routing-policy-failover.md)
++ [Multivalue answer routing](routing-policy-multivalue.md)
++ [Weighted routing](routing-policy-weighted.md)
++ [Latency\-based routing](routing-policy-latency.md)
++ [Geolocation routing](routing-policy-geo.md)
 Creating records in a private hosted zone using other routing policies is not supported\.
 
 **Split\-view DNS**  

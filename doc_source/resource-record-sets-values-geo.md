@@ -58,18 +58,20 @@ You can route traffic to, or specify the following values:
 + **SRV — Service locator**
 + **TXT — Text**
 
-For more information about the above values, see [Value/Route traffic to](resource-record-sets-values-shared.md#rrsets-values-common-value)\.
+For more information about the above values, see [common values for Value/Route traffic to](resource-record-sets-values-shared.md#rrsets-values-common-value)\.
 
 ## Location<a name="rrsets-values-geo-location"></a>
 
 When you configure Route 53 to respond to DNS queries based on the location that the queries originated from, select the continent or country for which you want Route 53 to respond with the settings in this record\. If you want Route 53 to respond to DNS queries for individual states in the United States, select **United States** from the **Location** list, and then select the state under the **Sublocation** group\.
+
+For a private hosted zone, select the continent, country, or sub\-division closest to the AWS Region that your resource is in\. For example, if your resource is in us\-east\-1, you can specify North America, United States, or Virginia\.
 
 **Important**  
 We recommend that you create one geolocation record that has a value of **Default** for **Location**\. This covers geographic locations that you haven't created records for and IP addresses that Route 53 can't identify a location for\. When you configure the default location, set the country code to an asterisk "\*"\.
 
 You can't create non\-geolocation records that have the same values for **Record name** and **Record type** as geolocation records\.
 
-For more information, see [Geolocation routing](routing-policy.md#routing-policy-geo)\.
+For more information, see [Geolocation routing](routing-policy-geo.md)\.
 
 Here are the countries that Amazon Route 53 associates with each continent\. The country codes are from ISO 3166\. For more information, see the Wikipedia article [ISO 3166\-1 alpha\-2](http://en.wikipedia.org/wiki/ISO_3166-1_alpha-2):
 
@@ -112,7 +114,7 @@ Route 53 doesn't check the health of the endpoint specified in the record, for 
 
 Associating a health check with a record is useful only when Route 53 is choosing between two or more records to respond to a DNS query, and you want Route 53 to base the choice in part on the status of a health check\. Use health checks only in the following configurations:
 + You're checking the health of all of the records in a group of records that have the same name, type, and routing policy \(such as failover or weighted records\), and you specify health check IDs for all the records\. If the health check for a record specifies an endpoint that is not healthy, Route 53 stops responding to queries using the value for that record\.
-+ You select **Yes** for **Evaluate Target Health** for an alias record or the records in a group of failover alias, geolocation alias, latency alias, or weighted alias record\. If the alias records reference non\-alias records in the same hosted zone, you must also specify health checks for the referenced records\. 
++ You select **Yes** for **Evaluate Target Health** for an alias record or the records in a group of failover alias, geolocation alias, latency alias, or weighted alias record\. If the alias records reference non\-alias records in the same hosted zone, you must also specify health checks for the referenced records\. If you associate a health check with an alias record and also select **Yes** for **Evaluate Target Health**, both must evaluate to true\. For more information, see [What happens when you associate a health check with an alias record?](dns-failover-complex-configs.md#dns-failover-complex-configs-hc-alias)\.
 
 If your health checks specify the endpoint only by domain name, we recommend that you create a separate health check for each endpoint\. For example, create a health check for each HTTP server that is serving content for www\.example\.com\. For the value of **Domain Name**, specify the domain name of the server \(such as us\-east\-2\-www\.example\.com\), not the name of the records \(example\.com\)\.
 

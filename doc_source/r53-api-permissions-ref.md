@@ -23,6 +23,7 @@ To specify an action, use the applicable prefix \(`route53`, `route53domains`, o
 + [Required permissions for actions on private hosted zones](#required-permissions-private-hosted-zones)
 + [Required permissions for actions on reusable delegation sets](#required-permissions-reusable-delegation-sets)
 + [Required permissions for actions on records](#required-permissions-resource-record-sets)
++ [Required permissions for actions on IP\-based records](#required-permissions-ip-based-routing)
 + [Required permissions for actions on traffic policies](#required-permissions-traffic-policies)
 + [Required permissions for actions on traffic policy instances](#required-permissions-traffic-policy-instances)
 + [Required permissions for actions on health checks](#required-permissions-health-checks)
@@ -151,6 +152,32 @@ Route 53 does not perform authorization for this API because it retrieves infor
 [ListResourceRecordSets](https://docs.aws.amazon.com/Route53/latest/APIReference/API_ListResourceRecordSets.html)  
 Required Permissions \(API Action\): `route53:ListResourceRecordSets`  
 Resources: `arn:aws:route53:::hostedzone/hosted zone ID`
+
+## Required permissions for actions on IP\-based records<a name="required-permissions-ip-based-routing"></a><a name="resource-record-sets-table"></a>
+
+[ChangeCidrCollection](https://docs.aws.amazon.com/Route53/latest/APIReference/API_ChangeCidrCollection.html)  
+Required Permissions \(API Action\): `route53:ChangeCidrCollection`  
+Resources: `arn:aws:route53:::cidrcollection/cidr collection id`
+
+[CreateCidrCollection](https://docs.aws.amazon.com/Route53/latest/APIReference/API_CreateCidrCollection.html)  
+Required Permissions \(API Action\): `route53:CreateCidrCollection`  
+Resources: `*`
+
+[DeleteCidrCollection](https://docs.aws.amazon.com/Route53/latest/APIReference/API_DeleteCidrCollection.html)  
+Required Permissions \(API Action\): `route53:DeleteCidrCollection`  
+Resources: `*`
+
+[ListCidrBlocks](https://docs.aws.amazon.com/Route53/latest/APIReference/API_ListCidrBlocks.html)  
+Required Permissions \(API Action\): `route53:ListCidrBlocks`  
+Resources: `arn:aws:route53:::cidrcollection/cidr collection id`
+
+[ListCidrCollections](https://docs.aws.amazon.com/Route53/latest/APIReference/API_ListCidrCollections.html)  
+Required Permissions \(API Action\): `route53:ListCidrCollections`  
+Resources: `*`
+
+[ListCidrLocations](https://docs.aws.amazon.com/Route53/latest/APIReference/API_ListCidrLocations.html)  
+Required Permissions \(API Action\): `route53:ListCidrLocations`  
+Resources: `arn:aws:route53:::cidrcollection/cidr collection id`
 
 ## Required permissions for actions on traffic policies<a name="required-permissions-traffic-policies"></a><a name="traffic-policies-table"></a>
 

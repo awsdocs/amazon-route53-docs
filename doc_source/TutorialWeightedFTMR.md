@@ -1,7 +1,7 @@
 # Weighting fault\-tolerant multi\-record answers in Amazon Route 53<a name="TutorialWeightedFTMR"></a>
 
 **Note**  
-Records that use the multivalue answer routing policy behave in much the same way as the configuration that is documented in this tutorial\. The main difference is that the tutorial configuration lets you specify weights, which can be useful when your endpoints have different capacities\. For more information, see [Multivalue answer routing](routing-policy.md#routing-policy-multivalue)\.
+Records that use the multivalue answer routing policy behave in much the same way as the configuration that is documented in this tutorial\. The main difference is that the tutorial configuration lets you specify weights, which can be useful when your endpoints have different capacities\. For more information, see [Multivalue answer routing](routing-policy-multivalue.md)\.
 
 An Amazon Route 53 weighted record can only be associated with one record, meaning a combination of one name \(for example, `example.com`\) and one record type \(for example, A\)\. But it is often desirable to weight DNS responses that contain multiple records\. 
 

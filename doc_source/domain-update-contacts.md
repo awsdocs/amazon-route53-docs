@@ -29,7 +29,7 @@ When you change the owner of a domain, the registries for some TLDs require spec
 
 The following TLDs require special processing to change the owner of the domain:
 
-[.be](#be-special), [.cl](#cl-special), [.com.br](#com.br-special), [.com.sg](#com.sg-special), [.es](#es-special), [.fi](#fi-special), [.im](#im-special), [.it](#it-special), [.ru](#ru-special), [.se](#se-special), [.sg](#sg-special), [.sh](#sh-special) 
+[.be](#be-special), [.cl](#cl-special), [.com.br](#com.br-special), [.com.sg](#com.sg-special), [.es](#es-special), [.fi](#fi-special), [.ru](#ru-special), [.se](#se-special), [.sg](#sg-special), [.sh](#sh-special) 
 
 **\.be**  
 You must get a transfer code from the registry for \.be domains, and then open a case with AWS Support\.  
@@ -52,13 +52,7 @@ You must complete and submit a form to AWS Support\. See [Changing the owner of 
 You must complete and submit a form to AWS Support\. See [Changing the owner of a domain when the registry requires a Change of Domain Ownership form](#domain-update-contacts-domain-ownership-form)\.
 
 **\.fi**  
-You must open a case with AWS Support\. See [Contacting AWS Support about domain registration issues](domain-contact-support.md)\.
-
-**\.im**  
-You must open a case with AWS Support\. See [Contacting AWS Support about domain registration issues](domain-contact-support.md)\.
-
-**\.it**  
-You must open a case with AWS Support\. See [Contacting AWS Support about domain registration issues](domain-contact-support.md)\.
+Initiate the owner change on the Route 53 console\. After you have initiated the change, you will receive a **Holder transfer key** from *fi\-domain\-tech@traficom\.fi* email address\. After you receive the key, open a support case with AWS Support, and share the key code with us\. See [Contacting AWS Support about domain registration issues](domain-contact-support.md)\.
 
 **\.qa**  
 You must complete and submit a form to AWS Support\. See [Changing the owner of a domain when the registry requires a Change of Domain Ownership form](#domain-update-contacts-domain-ownership-form)\.

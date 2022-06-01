@@ -43,7 +43,7 @@ You can specify an NS record with only simple routing policy\.
 + **SRV — Service locator**
 + **TXT — Text**
 
-For more information about the above values, see [Value/Route traffic to](resource-record-sets-values-shared.md#rrsets-values-common-value)\.
+For more information about the above values, see [common values for Value/Route traffic to](resource-record-sets-values-shared.md#rrsets-values-common-value)\.
 
 ## Record type<a name="rrsets-values-basic-type"></a>
 

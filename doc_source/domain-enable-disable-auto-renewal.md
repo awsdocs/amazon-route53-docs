@@ -2,7 +2,10 @@
 
 When you want to change whether Amazon Route 53 automatically renews registration for a domain shortly before the expiration date, or you want to see the current setting for automatic renewal, perform the following procedure\.
 
-Note that you can't use AWS credits to pay the fee for renewing registration for a domain\.<a name="domain-enable-disable-auto-renewal-procedure"></a>
+Note that you can't use AWS credits to pay the fee for renewing registration for a domain\.
+
+**Note**  
+Make sure you turn off automatic renewal if you intend to cancel your AWS account, because otherwise your domain registration will be renewed even if you have cancelled your account\.<a name="domain-enable-disable-auto-renewal-procedure"></a>
 
 **To enable or disable automatic renewal for a domain**
 

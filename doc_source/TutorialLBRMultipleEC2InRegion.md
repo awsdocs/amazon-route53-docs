@@ -12,7 +12,7 @@ For example, suppose you have three Amazon EC2 instances with Elastic IP address
    + If you want to weight the Amazon EC2 instances equally, specify the same value for **Weight**\.
    + Specify a unique value for **Set ID** for each record\.
 
-   For more information about weighted record values, see [Weighted routing](routing-policy.md#routing-policy-weighted)
+   For more information about weighted record values, see [Weighted routing](routing-policy-weighted.md)
 
 1. If you have multiple Amazon EC2 instances in other regions, repeat Step 1 for the other regions\. Specify a different value for **Name** in each region\.
 

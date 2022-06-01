@@ -8,7 +8,7 @@ Note the following:
 If you delete a domain name registration before the registration is scheduled to expire, AWS does not refund the registration fee\. 
 
 **TLDs that allow you to delete a domain registration**  
-To determine whether you can delete the registration for your domain, see [Domains that you can register with Amazon Route 53](registrar-tld-list.md)\. If the section for your TLD doesn't include a "Deletion of domain registration" subsection, you can delete the domain\.
+To determine whether you can delete the registration for your domain, see [Domains that you can register with Amazon Route 53](registrar-tld-list.md)\. If the section for your TLD doesn't include a "Deletion of domain registration" subsection, you can delete the domain\. Before you delete the domain, make sure you have disabled the domain lock\. For more information about disabling the domain lock, see [DisableDomainTransferLock](https://docs.aws.amazon.com/Route53/latest/APIReference/API_domains_DisableDomainTransferLock.html)\.
 
 **What if you can't delete a domain registration?**  
 If the registry for your domain doesn't allow you to delete a domain name registration, you must wait for the domain to expire\. To ensure that the domain isn't automatically renewed, disable automatic renewal for the domain\. When the **Expires on** date passes, Route 53 automatically deletes the registration for the domain\. For information about how to change the automatic renewal setting, see [Enabling or disabling automatic renewal for a domain](domain-enable-disable-auto-renewal.md)\.

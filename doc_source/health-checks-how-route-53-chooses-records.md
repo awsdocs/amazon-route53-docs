@@ -32,7 +32,7 @@ If none of the records in a group of records are healthy, Route 53 needs to ret
 If you add health checks to all the records in a group of weighted records, but you give nonzero weights to some records and zero weights to others, health checks work the same as when all records have nonzero weights with the following exceptions:  
 + Route 53 initially considers only the nonzero weighted records, if any\.
 + If all the records that have a weight greater than 0 are unhealthy, then Route 53 considers the zero\-weighted records\.
-For more information about weighted records, see [Weighted routing](routing-policy.md#routing-policy-weighted)\.
+For more information about weighted records, see [Weighted routing](routing-policy-weighted.md)\.
 
 **Alias records**  
 You can also configure health checking for alias records by setting **Evaluate Target Health** to **Yes** for each alias record\. This causes Route 53 to evaluate the health of the resource that the record routes traffic to, for example, an ELB load balancer or another record in the same hosted zone\.  

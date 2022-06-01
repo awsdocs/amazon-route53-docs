@@ -29,7 +29,7 @@ For more information about record names, see [Record name](resource-record-sets-
 
 The value that you choose from the list or that you type in the field depends on the AWS resource that you're routing traffic to\.
 
-For information about what AWS resources you can target, see [Value/route traffic to](resource-record-sets-values-alias-common.md#rrsets-values-alias-common-target)\.
+For information about what AWS resources you can target, see [common values for alias records for value/route traffic to](resource-record-sets-values-alias-common.md#rrsets-values-alias-common-target)\.
 
 For more information about how to configure Route 53 to route traffic to specific AWS resources, see [Routing internet traffic to your AWS resources](routing-to-aws-resources.md)\.
 

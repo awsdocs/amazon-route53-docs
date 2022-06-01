@@ -1,43 +1,51 @@
-# Values specific for multivalue answer records<a name="resource-record-sets-values-multivalue"></a>
+# Values specific for IP\-based records<a name="resource-record-sets-values-ipbased"></a>
 
-When you create multivalue answer records, you specify the following values\.
+When you create IP\-based records, you specify the following values\.
 
 **Note**  
-Creating multivalue answer alias records is not supported\.
+Although creating IP\-based records in a private hosted zone is allowed, it's not supported\.
 
 **Topics**
-+ [Routing policy](#rrsets-values-multivalue-routing-policy)
-+ [Record name](#rrsets-values-multivalue-name)
-+ [Record type](#rrsets-values-multivalue-type)
-+ [TTL \(seconds\)](#rrsets-values-multivalue-ttl)
-+ [Value/Route traffic to](#rrsets-values-multivalue-value)
-+ [Health check](#rrsets-values-multivalue-associate-with-health-check)
-+ [Record ID](#rrsets-values-multivalue-set-identifier)
++ [Routing policy](#rrsets-values-ipbased-routing-policy)
++ [Record name](#rrsets-values-ibased-name)
++ [Record type](#rrsets-values-ibased-type)
++ [TTL \(seconds\)](#rrsets-values-ibased-ttl)
++ [Value/Route traffic to](#rrsets-values-ibased-value)
++ [Location](#rrsets-values-ibased-location)
++ [Health check](#rrsets-values-ibased-associate-with-health-check)
++ [Record ID](#rrsets-values-ipbased-set-id)
 
-## Routing policy<a name="rrsets-values-multivalue-routing-policy"></a>
+## Routing policy<a name="rrsets-values-ipbased-routing-policy"></a>
 
-Choose **Multivalue answer**\.
+Choose **IP\-based**\. 
 
-## Record name<a name="rrsets-values-multivalue-name"></a>
+## Record name<a name="rrsets-values-ibased-name"></a>
 
 Enter the name of the domain or subdomain that you want to route traffic for\. The default value is the name of the hosted zone\. 
 
 **Note**  
 If you're creating a record that has the same name as the hosted zone, don't enter a value \(for example, an @ symbol\) in the **Record name** field\. 
 
-Enter the same name for all of the records in the group of weighted records\. 
+Enter the same name for all of the records in the group of IP\-based records\. 
 
-For more information about record names, see [Record name](resource-record-sets-values-shared.md#rrsets-values-common-name)\.
+**CNAME records**  
+If you're creating a record that has a value of **CNAME** for **Record type**, the name of the record can't be the same as the name of the hosted zone\.
 
-## Record type<a name="rrsets-values-multivalue-type"></a>
+**Special characters**  
+For information about how to specify characters other than a\-z, 0\-9, and \- \(hyphen\) and how to specify internationalized domain names, see [DNS domain name format](DomainNameFormat.md)\.
+
+**Wildcard characters**  
+You can use an asterisk \(\*\) character in the name\. DNS treats the \* character either as a wildcard or as the \* character \(ASCII 42\), depending on where it appears in the name\. For more information, see [Using an asterisk \(\*\) in the names of hosted zones and records](DomainNameFormat.md#domain-name-format-asterisk)\.
+
+## Record type<a name="rrsets-values-ibased-type"></a>
 
 The DNS record type\. For more information, see [Supported DNS record types](ResourceRecordTypes.md)\.
 
-Select any value except **NS** or **CNAME**\.
+Select the value for **Type** based on how you want Route 53 to respond to DNS queries\. 
 
-Select the same value for all of the records in the group of multivalue answer records\.
+Select the same value for all of the records in the group of latency records\.
 
-## TTL \(seconds\)<a name="rrsets-values-multivalue-ttl"></a>
+## TTL \(seconds\)<a name="rrsets-values-ibased-ttl"></a>
 
 The amount of time, in seconds, that you want DNS recursive resolvers to cache information about this record\. If you specify a longer value \(for example, 172800 seconds, or two days\), you reduce the number of calls that DNS recursive resolvers must make to Route 53 to get the latest information in this record\. This has the effect of reducing latency and reducing your bill for Route 53 service\. For more information, see [How Amazon Route 53 routes traffic for your domain](welcome-dns-service.md#welcome-dns-service-how-route-53-routes-traffic)\.
 
@@ -45,12 +53,9 @@ However, if you specify a longer value for TTL, it takes longer for changes to t
 
 If you're associating this record with a health check, we recommend that you specify a TTL of 60 seconds or less so clients respond quickly to changes in health status\.
 
-**Note**  
-If you create two or more multivalue answer records that have the same name and type, you are using the console, and you specify different values for **TTL**, Route 53 changes the value of **TTL** for all of the records to the last value that you specified\.
+## Value/Route traffic to<a name="rrsets-values-ibased-value"></a>
 
-## Value/Route traffic to<a name="rrsets-values-multivalue-value"></a>
-
-Choose **IP address or another value depending on the record type**\. Enter a value that is appropriate for the value of **Record type**\. If you enter more than one value, enter each value on a separate line\.
+Choose **IP address or another value depending on the record type**\. Enter a value that is appropriate for the value of **Record type**\. For all types except **CNAME**, you can enter more than one value\. Enter each value on a separate line\.
 
 You can route traffic to, or specify the following values:
 + **A — IPv4 address**
@@ -64,9 +69,15 @@ You can route traffic to, or specify the following values:
 + **SRV — Service locator**
 + **TXT — Text**
 
-For more information about the above values, see [common values for Value/Route traffic to](resource-record-sets-values-shared.md#rrsets-values-common-value)\.
+For more information about the above values, see [Value/Route traffic to](resource-record-sets-values-shared.md#rrsets-values-common-value) [common values for Value/Route traffic to](resource-record-sets-values-shared.md#rrsets-values-common-value)\.
 
-## Health check<a name="rrsets-values-multivalue-associate-with-health-check"></a>
+## Location<a name="rrsets-values-ibased-location"></a>
+
+The name of the CIDR location where the resource that you specified in this record is specified by the CIDR block values within the CIDR location\. 
+
+For more information about using IP\-based records, see [IP\-based routing](routing-policy-ipbased.md)\. 
+
+## Health check<a name="rrsets-values-ibased-associate-with-health-check"></a>
 
 Select a health check if you want Route 53 to check the health of a specified endpoint and to respond to DNS queries using this record only when the endpoint is healthy\. 
 
@@ -74,13 +85,13 @@ Route 53 doesn't check the health of the endpoint specified in the record, for 
 
 Associating a health check with a record is useful only when Route 53 is choosing between two or more records to respond to a DNS query, and you want Route 53 to base the choice in part on the status of a health check\. Use health checks only in the following configurations:
 + You're checking the health of all of the records in a group of records that have the same name, type, and routing policy \(such as failover or weighted records\), and you specify health check IDs for all the records\. If the health check for a record specifies an endpoint that is not healthy, Route 53 stops responding to queries using the value for that record\.
-+ You select **Yes** for **Evaluate target health** for an alias record or the records in a group of failover alias, geolocation alias, latency alias, or weighted alias record\. If the alias records reference non\-alias records in the same hosted zone, you must also specify health checks for the referenced records\. If you associate a health check with an alias record and also select **Yes** for **Evaluate Target Health**, both must evaluate to true\. For more information, see [What happens when you associate a health check with an alias record?](dns-failover-complex-configs.md#dns-failover-complex-configs-hc-alias)\.
++ You select **Yes** for **Evaluate target health** for an alias record or the records in a group of failover alias, geolocation alias, IP\-based alias, latency alias, or weighted alias record\. If the alias records reference non\-alias records in the same hosted zone, you must also specify health checks for the referenced records\. 
 
 If your health checks specify the endpoint only by domain name, we recommend that you create a separate health check for each endpoint\. For example, create a health check for each HTTP server that is serving content for www\.example\.com\. For the value of **Domain name**, specify the domain name of the server \(such as us\-east\-2\-www\.example\.com\), not the name of the records \(example\.com\)\.
 
 **Important**  
 In this configuration, if you create a health check for which the value of **Domain name** matches the name of the records and then associate the health check with those records, health check results will be unpredictable\.
 
-## Record ID<a name="rrsets-values-multivalue-set-identifier"></a>
+## Record ID<a name="rrsets-values-ipbased-set-id"></a>
 
-Enter a value that uniquely identifies this record in the group of multivalue answer records\. 
+Enter a value that uniquely identifies this record in the group of IP\-based records\.

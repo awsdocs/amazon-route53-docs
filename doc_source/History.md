@@ -18,6 +18,9 @@ The following entries describe important changes in each release of the Route 5
 
 ## 2022 releases<a name="doc-history-2022"></a>
 
+**June 1, 2022**  
+IP\-based routing option is now available in Amazon Route 53\. For more information, see [IP\-based routing](routing-policy-ipbased.md)\.
+
 **March 16, 2022**  
 Geolocation and latency\-based routing options are now supported for private hosted zones in Amazon Route 53\. For more information, see [](hosted-zone-private-considerations.md#hosted-zone-private-considerations-routing-policies)\.
 
@@ -30,7 +33,7 @@ The process for changing ownership for \.com\.au and \.net\.au TLDs has been sim
 Added support for disabling default reverse DNS rules with Amazon Route 53\. You can now disable the creation of these rules and instead forward queries for reverse DNS namespaces to external servers if desired\. For more information, see [Forwarding rules for reverse DNS queries in Resolver](resolver-automatic-forwarding-rules-reverse-dns.md)\.
 
 **September 1, 2021**  
-Added a new getting started topic that walks you through creating  Amazon CloudFront distributions for a static website\. For more information, see [Use an Amazon CloudFront distribution to serve a static website](getting-started-cloudfront-overview.md)\.
+Added a new getting started topic that walks you through creating Amazon CloudFront distributions for a static website\. For more information, see [Use an Amazon CloudFront distribution to serve a static website](getting-started-cloudfront-overview.md)\.
 
 **July 14, 2021**  
 Started tracking AWS managed policies for Amazon Route 53\. For more information, see [AWS managed policies for Amazon Route 53](security-iam-awsmanpol-route53.md)\.
@@ -97,7 +100,7 @@ You can now create Route 53 alias records that route internet traffic to Elasti
 If you're using Route 53 as your public, authoritative DNS service, you can now log DNS queries that Route 53 receives\. For more information, see [Public DNS query logging](query-logs.md)\.
 
 **September 1, 2017**  
-If you're using Route 53 traffic flow, you can now use geoproximity routing, which lets you route traffic based on the physical distance between your users and your resources\. You can also route more or less traffic to each resource by specifying a positive or negative bias\. For more information, see [Geoproximity routing \(traffic flow only\)](routing-policy.md#routing-policy-geoproximity)\.
+If you're using Route 53 traffic flow, you can now use geoproximity routing, which lets you route traffic based on the physical distance between your users and your resources\. You can also route more or less traffic to each resource by specifying a positive or negative bias\. For more information, see [Geoproximity routing \(traffic flow only\)](routing-policy-geoproximity.md)\.
 
 **August 21, 2017**  
 You can now use Route 53 to create Certification Authority Authorization \(CAA\) records, which let you specify the certificate authorities that can issue certificates for your domains and subdomains\. For more information, see [CAA record type](ResourceRecordTypes.md#CAAFormat)\.
@@ -109,7 +112,7 @@ You can now transfer large numbers of domains to Route 53 using the Route 53 c
 When you register a domain, the registries for some top\-level domains \(TLDs\) require you to verify that you specified a valid email address for the registrant contact\. You can now send the verification email and get confirmation that you successfully verified the email address during the domain registration process\. For more information, see [Registering a new domain](domain-register.md)\.
 
 **June 21, 2017**  
-If you want to route traffic approximately randomly to multiple resources, such as web servers, you can now create one multivalue answer record for each resource and, optionally, associate a Route 53 health check with each record\. Route 53 responds to DNS queries with up to eight healthy records in response to each DNS query, and gives different answers to different DNS resolvers\. For more information, see [Multivalue answer routing](routing-policy.md#routing-policy-multivalue)\.
+If you want to route traffic approximately randomly to multiple resources, such as web servers, you can now create one multivalue answer record for each resource and, optionally, associate a Route 53 health check with each record\. Route 53 responds to DNS queries with up to eight healthy records in response to each DNS query, and gives different answers to different DNS resolvers\. For more information, see [Multivalue answer routing](routing-policy-multivalue.md)\.
 
 **April 10, 2017**  
 When you use the Route 53 console to transfer a domain registration to Route 53, you can now choose one of the following options for associating the name servers for the DNS service for the domain with the transferred domain registration:  
@@ -222,13 +225,13 @@ With this release, Route 53 adds the following new features:
 + **Private DNS for VPCs created using the Amazon Virtual Private Cloud service** – You can now use Route 53 to manage your internal domain names for VPCs without exposing DNS data to the public internet\. For more information, see [Working with private hosted zones](hosted-zones-private.md)\.
 + **Health check failure reasons** – You can now see the current status of a selected health check, as well as details on why the health check last failed, as reported by each of the Route 53 health checkers\. The status includes the HTTP status code, and failure reasons include information about numerous types of failures, such as string matching failures and response timeouts\. For more information, see [Viewing health check status and the reason for health check failures](health-checks-view-status.md)\.
 + **Reusable delegation sets** – You can now apply the same set of four authoritative name servers, known collectively as a delegation set, to multiple hosted zones that correspond with different domain names\. This greatly simplifies the process of migrating DNS service to Route 53 and managing large numbers of hosted zones\. Using reusable delegation sets currently requires that you use the Route 53 API or an AWS SDK\. For more information, see the [Amazon Route 53 API Reference](https://docs.aws.amazon.com/Route53/latest/APIReference/)\.
-+ **Improved geolocation routing** – We further improved the accuracy of geolocation routing by adding support for the edns\-client\-subnet extension of EDNS0\. For more information, see [Geolocation routing](routing-policy.md#routing-policy-geo)\.
++ **Improved geolocation routing** – We further improved the accuracy of geolocation routing by adding support for the edns\-client\-subnet extension of EDNS0\. For more information, see [Geolocation routing](routing-policy-geo.md)\.
 + **Support for Signature v4** – You can now sign all Route 53 API requests using Signature version 4\. For more information, see [Signing Route 53 API Requests](https://docs.aws.amazon.com/Route53/latest/APIReference/requests-authentication.html) in the *Amazon Route 53 API Reference*\.
 
 **July 31, 2014**  
 With this release, you can now do the following:  
 + Register domain names using Route 53\. For more information, see [Registering domain names using Amazon Route 53](registrar.md)\.
-+ Configure Route 53 to respond to DNS queries based on the geographic location that the queries originate from\. For more information, see [Geolocation routing](routing-policy.md#routing-policy-geo)\.
++ Configure Route 53 to respond to DNS queries based on the geographic location that the queries originate from\. For more information, see [Geolocation routing](routing-policy-geo.md)\.
 
 **July 2, 2014**  
 With this release, you can now do the following:  
@@ -292,7 +295,7 @@ With this release, Route 53 adds support for failover and health checks\. For m
 ## 2012 release<a name="doc-history-2012"></a>
 
 **March 21, 2012**  
-With this release, Route 53 lets you create latency records\. For more information, see [Latency\-based routing](routing-policy.md#routing-policy-latency)\.
+With this release, Route 53 lets you create latency records\. For more information, see [Latency\-based routing](routing-policy-latency.md)\.
 
 ## 2011 releases<a name="doc-history-2011"></a>
 

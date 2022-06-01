@@ -59,11 +59,11 @@ You can route traffic to, or specify the following values:
 + **SRV — Service locator**
 + **TXT — Text**
 
-For more information about the above values, see [Value/Route traffic to](resource-record-sets-values-shared.md#rrsets-values-common-value)\.
+For more information about the above values, see [common values for Value/Route traffic to](resource-record-sets-values-shared.md#rrsets-values-common-value)\.
 
 ## Region<a name="rrsets-values-latency-region"></a>
 
-The Amazon EC2 Region where the resource that you specified in this record resides\. Route 53 recommends an Amazon EC2 Region based on other values that you've specified\. We recommend that you not change this value\.
+The Amazon EC2 Region where the resource that you specified in this record resides\. Route 53 recommends an Amazon EC2 Region based on other values that you've specified\. This also applies to private hosted zones\. We recommend that you not change this value\.
 
 Note the following:
 + You can only create one latency record for each Amazon EC2 Region\.
@@ -71,7 +71,7 @@ Note the following:
 + You can't create non\-latency records that have the same values for **Record name** and **Record type** as latency records\.
 + If you create a record tagged with the Region **cn\-north\-1**, Route 53 always responds to queries from within China using this record, regardless of the latency\.
 
-For more information about using latency records, see [Latency\-based routing](routing-policy.md#routing-policy-latency)\. 
+For more information about using latency records, see [Latency\-based routing](routing-policy-latency.md)\. 
 
 ## Health check<a name="rrsets-values-latency-associate-with-health-check"></a>
 
@@ -81,7 +81,7 @@ Route 53 doesn't check the health of the endpoint specified in the record, for 
 
 Associating a health check with a record is useful only when Route 53 is choosing between two or more records to respond to a DNS query, and you want Route 53 to base the choice in part on the status of a health check\. Use health checks only in the following configurations:
 + You're checking the health of all of the records in a group of records that have the same name, type, and routing policy \(such as failover or weighted records\), and you specify health check IDs for all the records\. If the health check for a record specifies an endpoint that is not healthy, Route 53 stops responding to queries using the value for that record\.
-+ You select **Yes** for **Evaluate target health** for an alias record or the records in a group of failover alias, geolocation alias, latency alias, or weighted alias record\. If the alias records reference non\-alias records in the same hosted zone, you must also specify health checks for the referenced records\. 
++ You select **Yes** for **Evaluate target health** for an alias record or the records in a group of failover alias, geolocation alias, latency alias, or weighted alias record\. If the alias records reference non\-alias records in the same hosted zone, you must also specify health checks for the referenced records\. If you associate a health check with an alias record and also select **Yes** for **Evaluate Target Health**, both must evaluate to true\. For more information, see [What happens when you associate a health check with an alias record?](dns-failover-complex-configs.md#dns-failover-complex-configs-hc-alias)\.
 
 If your health checks specify the endpoint only by domain name, we recommend that you create a separate health check for each endpoint\. For example, create a health check for each HTTP server that is serving content for www\.example\.com\. For the value of **Domain name**, specify the domain name of the server \(such as us\-east\-2\-www\.example\.com\), not the name of the records \(example\.com\)\.
 

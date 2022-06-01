@@ -13,6 +13,8 @@ When you create records using the Amazon Route 53 console, the values that you 
 + [Values specific for geolocation alias records](resource-record-sets-values-geo-alias.md)
 + [Values specific for latency records](resource-record-sets-values-latency.md)
 + [Values specific for latency alias records](resource-record-sets-values-latency-alias.md)
++ [Values specific for IP\-based records](resource-record-sets-values-ipbased.md)
++ [Values specific for IP\-based alias records](resource-record-sets-values-ipbased-alias.md)
 + [Values specific for multivalue answer records](resource-record-sets-values-multivalue.md)
 + [Values specific for weighted records](resource-record-sets-values-weighted.md)
 + [Values specific for weighted alias records](resource-record-sets-values-weighted-alias.md)

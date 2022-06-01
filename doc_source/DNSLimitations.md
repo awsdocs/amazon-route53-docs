@@ -57,7 +57,7 @@ If you have an existing account and your default limit is 50 now, it will remain
 |  Hosted zones that can use the same reusable delegation set   |  100 [Request a higher quota](https://console.aws.amazon.com/servicequotas/home?region=us-east-1#!/services/route53/quotas)\.  | 
 |  Amazon VPCs that you can associate with a private hosted zone per hosted zone  |  300 [Request a higher quota](https://console.aws.amazon.com/servicequotas/home?region=us-east-1#!/services/route53/quotas)\.  | 
 |  Private hosted zones that you can associate a VPC with  |  No quota **\***  | 
-|  Authorizations that you can create so you can associate VPCs that were created by one account with a hosted zone that was created by another account  |  100  | 
+|  Authorizations that you can create so you can associate VPCs that were created by one account with a hosted zone that was created by another account  |  1000  | 
 |  The number of key signing keys \(KSK\) that you can create per hosted zone  |  2  | 
 
 **\*** You can associate a VPC with any or all of the private hosted zones that you control through your AWS accounts\. For example, suppose you have three AWS accounts and all three have the default quota of 500 hosted zones\. If you create 500 private hosted zones for all three accounts, you can associate a VPC with all 1,500 private hosted zones\.
@@ -71,8 +71,10 @@ If you have an existing account and your default limit is 50 now, it will remain
 | --- | --- | 
 |  Records  |  10,000 per hosted zone [Request a higher quota](https://console.aws.amazon.com/servicequotas/home?region=us-east-1#!/services/route53/quotas)\. For a quota greater than 10,000 records in a hosted zone, an additional charge applies\.For more information, see [Amazon Route 53 Pricing](https://aws.amazon.com/route53/pricing/)\.  | 
 |  Values in a record  |  400 per record  | 
-|  Geolocation, latency, multivalue answer, and weighted records  |  100 records that have the same name and type  | 
+|  Geolocation, latency, multivalue answer, weighted, and IP\-based records  |  100 records that have the same name and type  | 
 |  Geoproximity records  |  30 records that have the same name and type  | 
+| CIDR collections  | 5 per AWS account\. [Request a higher quota](https://console.aws.amazon.com/servicequotas/home?region=us-east-1#!/services/route53/quotas)\.  | 
+| CIDR blocks  | 1000 per CIDR collection\. [Request a higher quota](https://console.aws.amazon.com/servicequotas/home?region=us-east-1#!/services/route53/quotas)\.  | 
 
 ### Quotas on Route 53 Resolver<a name="limits-api-entities-resolver"></a>
 

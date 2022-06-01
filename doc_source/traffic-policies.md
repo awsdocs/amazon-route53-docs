@@ -92,13 +92,13 @@ For more information, see [Active\-passive failover](dns-failover-types.md#dns-f
 
 **Geolocation rule**  
 Choose this option when you want Amazon Route 53 to respond to DNS queries based on the location of your users\.  
-For more information, see [Geolocation routing](routing-policy.md#routing-policy-geo)\.  
+For more information, see [Geolocation routing](routing-policy-geo.md)\.  
 When you choose **Geolocation rule**, you also choose the country or the state in the United States that requests originate from\.
 
 **Latency rule**  
 Choose this option when you have resources in multiple Amazon EC2 data centers that perform the same function, and you want Route 53 to respond to DNS queries with the resources that provide the best latency\.  
 When you choose **Latency rule**, you also choose an AWS Region\.  
-For more information, see [Latency\-based routing](routing-policy.md#routing-policy-latency)\.
+For more information, see [Latency\-based routing](routing-policy-latency.md)\.
 
 **Geoproximity rule**  
 Choose this option when you want Route 53 to respond to DNS queries based on the location of your resources and optionally on a bias that you specify\. The bias allows you to send more traffic to a resource or more traffic away from a resource\.  
@@ -120,16 +120,16 @@ To optionally change the size of the geographic region from which Route 53 rout
 + To expand the size of the geographic region from which Route 53 routes traffic to a resource, specify a positive integer from 1 to 99 for the bias\. Route 53 shrinks the size of adjacent regions\.
 + To shrink the size of the geographic region from which Route 53 routes traffic to a resource, specify a negative bias of \-1 to \-99\. Route 53 expands the size of adjacent regions\.
 The effect of changing the value of **Bias** is relative, based on the location of other resources, rather than absolute, based on distance\. As a result, the effect of a change is difficult to predict\. For example, depending on where your resources are, changing the bias from 10 to 15 can mean the difference between adding or subtracting a significant amount of traffic from the New York City metropolitan area\. We recommend that you change the bias in small increments and evaluate the results, and then make additional changes if appropriate\.
-For more information, see [Geoproximity routing \(traffic flow only\)](routing-policy.md#routing-policy-geoproximity)\.
+For more information, see [Geoproximity routing \(traffic flow only\)](routing-policy-geoproximity.md)\.
 
 **Multivalue answer rule**  
 Choose this option when you want Route 53 to respond to DNS queries with up to eight healthy answers selected approximately at random\.   
-For more information, see [Multivalue answer routing](routing-policy.md#routing-policy-multivalue)\.
+For more information, see [Multivalue answer routing](routing-policy-multivalue.md)\.
 
 **Weighted rule**  
 Choose this option when you have multiple resources that perform the same function \(for example, web servers that serve the same website\) and you want Route 53 to route traffic to those resources in proportions that you specify \(for example, 1/3rd to one server and 2/3rds to the other\)\.  
 When you choose **Weighted rule**, enter the weight that you want to apply to this rule\.  
-For more information, see [Weighted routing](routing-policy.md#routing-policy-weighted)\.
+For more information, see [Weighted routing](routing-policy-weighted.md)\.
 
 **Endpoint**  
 Choose this option to specify the resource, such as a CloudFront distribution or an ELB load balancer, that you want to route DNS queries to\.
@@ -178,7 +178,7 @@ For more information about supported DNS types, see [Supported DNS record types]
 
 ## Viewing a map that shows the effect of geoproximity settings<a name="traffic-flow-geoproximity-map"></a>
 
-A *geoproximity rule* lets you specify the locations of your resources, both in AWS Regions and, using latitude and longitude, in non\-AWS locations\. When you create a geoproximity rule, Route 53 routes internet traffic to the resource that is closest to your users by default\. You can also choose to route more or less traffic to a resource by specifying a bias that expands or shrinks the geographic area from which traffic is routed to a resource\. For more information about geoproximity routing, see [Geoproximity routing \(traffic flow only\)](routing-policy.md#routing-policy-geoproximity)\.
+A *geoproximity rule* lets you specify the locations of your resources, both in AWS Regions and, using latitude and longitude, in non\-AWS locations\. When you create a geoproximity rule, Route 53 routes internet traffic to the resource that is closest to your users by default\. You can also choose to route more or less traffic to a resource by specifying a bias that expands or shrinks the geographic area from which traffic is routed to a resource\. For more information about geoproximity routing, see [Geoproximity routing \(traffic flow only\)](routing-policy-geoproximity.md)\.
 
 You can display a map that shows the effect of your current geoproximity settings\. For example, if you have resources in the US West \(Oregon\), EU \(Frankfurt\), and Asia Pacific \(Tokyo\) Regions, and if you don't specify a bias, the map looks like this\.
 
