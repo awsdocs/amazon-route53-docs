@@ -26,14 +26,14 @@ Region: Route 53 is a global service\. To get hosted zone metrics, you must spe
 Value is 1 if any object in the hosted zone is in an INTERNAL\_FAILURE state\. Otherwise, value is 0\.  
 Valid statistics: N/A  
 Units: Count  
-Volume: 1 per hosted zone per day  
+Volume: 1 per hosted zone every 4 hours  
 Region: Route 53 is a global service\. To get hosted zone metrics, you must specify US East \(N\. Virginia\) for the Region\.
 
 **DNSSECKeySigningKeysNeedingAction**  
 Number of key signing keys \(KSKs\) that have an ACTION\_NEEDED state \(due to KMS failure\)\.  
 Valid statistics: Sum, SampleCount  
 Units: Count  
-Volume: 1 per hosted zone per day  
+Volume: 1 per hosted zone every 4 hours  
 Region: Route 53 is a global service\. To get hosted zone metrics, you must specify US East \(N\. Virginia\) for the Region\. 
 
 **DNSSECKeySigningKeyMaxNeedingActionAge**  
