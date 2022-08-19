@@ -87,6 +87,10 @@ Resources: `*`
 Required Permissions \(API Action\): `route53:DeleteVPCAssociationAuthorization`  
 Resources: `*`
 
+[ListVPCAssociationAuthorizations](https://docs.aws.amazon.com/Route53/latest/APIReference/APIReference/API_ListVPCAssociationAuthorizations.html)  
+Required Permissions \(API Action\): `route53:ListVPCAssociationAuthorizations`  
+Resources: `arn:aws:route53:::hostedzone/hosted zone ID`
+
 [DisassociateVPCFromHostedZone](https://docs.aws.amazon.com/Route53/latest/APIReference/API_DisassociateVPCFromHostedZone.html)  
 Required Permissions \(API Action\): `route53:DisassociateVPCFromHostedZone`, `ec2:DescribeVpcs`  
 Resources: `*`, `arn:aws:ec2::optional account id:*`

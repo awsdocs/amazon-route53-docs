@@ -101,7 +101,8 @@ You don't need to get an authorization code to transfer a \.co\.za domain to Rou
 **\.es domains**  
 If you're transferring a \.es domain to Route 53, you don't need to get an authorization code\.  
 **\.jp domains**  
-If you're transferring a \.jp domain to Route 53, you don't need to get an authorization code\.  
+If you're transferring a \.jp domain to Route 53, under most circumstances you don't need to get an authorization code\.  
+In the rare event that your transfer fails and the error message indicates that you need an authorization code, open a support request to provide the authorization code\. For more information, see [Contacting AWS Support about domain registration issues](domain-contact-support.md)\.  
 **\.uk, \.co\.uk, \.me\.uk, and \.org\.uk domains**  
 If you're transferring a \.uk, \.co\.uk, \.me\.uk, or \.org\.uk domain to Route 53, you don't need to get an authorization code\. Instead, use the method provided by your current domain registrar to update the value of the IPS tag for the domain to **GANDI**, all uppercase\. \(An IPS tag is required by Nominet, the registry for \.uk domain names\.\) If your registrar doesn't provide a way to change the value of the IPS tag, [contact Nominet](http://www.nominet.org.uk/uk-domain-names/manage-your-domain/change-registrar)\.  
 Note the following about changing the IPS tag:    

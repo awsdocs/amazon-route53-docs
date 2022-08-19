@@ -33,7 +33,7 @@ Not supported\.
 Yes
 
 **DNSSEC**  
-Not supported\.
+Supported for domain registration\. When you set the key, you must choose DNS security algorithm 2 \(DH\)\. For more information, see [Configuring DNSSEC for a domain](domain-configure-dnssec.md)\.
 
 **Deadlines for renewing and restoring domains**  
 + Renewal is possible: Between 60 days before expiration and the expiration date

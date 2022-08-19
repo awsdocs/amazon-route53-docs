@@ -33,7 +33,7 @@ To use the Route 53 console to delete a public hosted zone, perform the followi
 
 1. Sign in to the AWS Management Console and open the Route 53 console at [https://console\.aws\.amazon\.com/route53/](https://console.aws.amazon.com/route53/)\.
 
-1. Confirm that the hosted zone that you want to delete contains only an NS and an SOA record\. If it contains additional records, delete them\. You will also need to disable DNNSSEC signing:
+1. Confirm that the hosted zone that you want to delete contains only an NS and an SOA record\. If it contains additional records, delete them\. You will also need to disable DNSSEC signing:
 
    1. Choose the name of the hosted zone that you want to delete\.
 

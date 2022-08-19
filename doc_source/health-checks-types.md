@@ -10,7 +10,10 @@ You can create a health check that monitors whether Route 53 considers other he
 
 **Health checks that monitor CloudWatch alarms**  
 You can create CloudWatch alarms that monitor the status of CloudWatch metrics, such as the number of throttled read events for an Amazon DynamoDB database or the number of Elastic Load Balancing hosts that are considered healthy\. After you create an alarm, you can create a health check that monitors the same data stream that CloudWatch monitors for the alarm\.  
-To improve resiliency and availability, Route 53 doesn't wait for the CloudWatch alarm to go into the `ALARM` state\. The status of a health check changes from healthy to unhealthy based on the data stream and on the criteria in the CloudWatch alarm\. 
+To improve resiliency and availability, Route 53 doesn't wait for the CloudWatch alarm to go into the `ALARM` state\. The status of a health check changes from healthy to unhealthy based on the data stream and on the criteria in the CloudWatch alarm\.   
+Route 53 supports CloudWatch alarms with the following features:  
++ Standard\-resolution metrics\. High\-resolution metrics aren't supported\. For more information, see [High\-resolution metrics](https://docs.aws.amazon.com/AmazonCloudWatch/latest/monitoring/publishingMetrics.html#high-resolution-metrics) in the *Amazon CloudWatch User Guide*\.
++ Statistics: Average, Minimum, Maximum, Sum, and SampleCount\. Extended statistics aren't supported\.
 
 **Amazon Route 53 Application Recovery Controller**  
 Amazon Route 53 Application Recovery Controller gives you insights into whether your applications and resources are ready for recovery, and helps you manage and coordinate failover\. Health checks in Route 53 ARC are associated with routing controls, which are simple on/off switches\. You configure each routing control health check with a failover DNS record\. Then you can simply update your routing controls in Route 53 ARC to reroute traffic and fail over your applications, for example, across Availability Zones or AWS\-Regions\. For more information, see [Amazon Route 53 Application Recovery Controller Developer Guide](https://docs.aws.amazon.com/r53recovery/latest/dg/what-is-route-53-recovery.html)\.  

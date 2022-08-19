@@ -5,4 +5,7 @@ If you closed your AWS account, or if the account is suspended or terminated, Ro
 + If you do want to keep the domain registration, AWS Support can help you transfer the domain registration to another AWS account\.
 + AWS Support can also help you transfer the domain to another domain registrar\.
 
+**Note**  
+Once 90 days has passed from when you closed your account, you can no longer reopen it\. For more information, see [Can I reopen my closed AWS account?](https://aws.amazon.com/premiumsupport/knowledge-center/reopen-aws-account/)\.
+
 For more information, see [Contacting AWS Support about domain registration issues](domain-contact-support.md)\.

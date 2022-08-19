@@ -42,7 +42,7 @@ For a list of the TLDs that you can use when you register a domain name with Rou
 Here's an overview of the concepts that are related to the Domain Name System \(DNS\)\.
 + [alias record](#route-53-concepts-alias-resource-record-set)
 + [authoritative name server](#route-53-concepts-authoritative-name-server)
-+ [DNS query](#route-53-concepts-cidr)
++ [CIDR block](#route-53-concepts-cidr)
 + [DNS query](#route-53-concepts-dns-query)
 + [DNS resolver](#route-53-concepts-dns-resolver)
 + [Domain Name System (DNS)](#route-53-concepts-domain-name-system)
@@ -66,7 +66,7 @@ Route 53 name servers are the authoritative name servers for every domain that 
 For example, if a Route 53 name server receives a request for www\.example\.com, it finds that record and returns the IP address, such as 192\.0\.2\.33, that is specified in the record\.
 
 **CIDR block**  
-A CIDR block is an IP range used with IP\-based routing\. In You can specify CIDR block from /0 to /24 for IPv4 and/0 to /48 for IPv6\. For example, a /24 IPv4 CIDR block includes 256 contiguous IP addresses\. You can group sets of CIDR blocks \(or IP ranges\) into CIDR locations, which are in turn grouped into reusable CIDR collections\.
+A CIDR block is an IP range used with IP\-based routing\. In Route 53 You can specify CIDR block from /0 to /24 for IPv4 and/0 to /48 for IPv6\. For example, a /24 IPv4 CIDR block includes 256 contiguous IP addresses\. You can group sets of CIDR blocks \(or IP ranges\) into CIDR locations, which are in turn grouped into reusable CIDR collections\.
 
 **DNS query**  
 Usually a request that is submitted by a device, such as a computer or a smart phone, to the Domain Name System \(DNS\) for a resource that is associated with a domain name\. The most common example of a DNS query is when a user opens a browser and types the domain name in the address bar\. The response to a DNS query typically is the IP address that is associated with a resource such as a web server\. The device that initiated the request uses the IP address to communicate with the resource\. For example, a browser can use the IP address to get a web page from a web server\. 
@@ -93,7 +93,7 @@ Route 53 supports both IPv4 and IPv6 addresses for the following purposes:
 + If a DNS resolver is on an IPv6 network, it can use either IPv4 or IPv6 to submit requests to Route 53\.
 
 **name servers**  
-Servers in the Domain Name System \(DNS\) that help to translate domain names into the IP addresses that computers use to communicate with one another\. Name servers are either recursive name servers \(also known as [DNS resolver](#route-53-concepts-dns-resolver)\) or [authoritative name server](#route-53-concepts-authoritative-name-server)s\.  
+Servers in the Domain Name System \(DNS\) that help to translate domain names into the IP addresses that computers use to communicate with one another\. Name servers are either recursive name servers \(also known as [DNS resolver](#route-53-concepts-dns-resolver)\) or [authoritative name server](#route-53-concepts-authoritative-name-server)\.  
 For an overview of how DNS routes traffic to your resources, including the role of Route 53 in the process, see [How Amazon Route 53 routes traffic for your domain](welcome-dns-service.md#welcome-dns-service-how-route-53-routes-traffic)\.
 
 **private DNS**  
@@ -139,7 +139,7 @@ For Route 53 public and private DNS and health checks, the control plane is loc
 Amazon Route 53 is divided into control and data planes as follows:
 + For Route 53 public and private DNS, the control plane is the Route 53 console and APIs which allow you to manage DNS entries, including both the Route 53 and traffic flow APIs\. The data plane is the authoritative DNS service, which runs across over 200 Points of Presence \(PoP\) locations, answering DNS queries based on your hosted zones and health check data\. 
 + For Route 53 health checks, the control plane is the Route 53 console and Route 53 APIs that you can use to create, update, and delete health checks\. The data plane is the globally distributed service, which performs health checks, aggregates the results and delivers them to the data planes of Route 53 public and private DNS and [AWS Global Accelerator](http://aws.amazon.com/global-accelerator/)\. 
-+ For Amazon Route 53 Resolver, the control plane consists of the Resolver console and APIs that allow you to manage Amazon VPC settings, Resolver rules, query logging policies, and DNS Firewall policies\. The data plane is the DNS resolver service, which answers DNS queries in your VPC, endpoints that forward queries to other resolvers, and the DNS Firewall data plane which applies policies to filter DNS queries\. Resolver is a regional service and its control and data planes run independently in each AWS Region\.
++ For [Amazon Route 53 Resolver](resolver.md), the control plane consists of the Resolver console and APIs that allow you to manage Amazon VPC settings, Resolver rules, query logging policies, and DNS Firewall policies\. The data plane is the DNS resolver service, which answers DNS queries in your VPC, endpoints that forward queries to other resolvers, and the DNS Firewall data plane which applies policies to filter DNS queries\. Resolver is a regional service and its control and data planes run independently in each AWS Region\.
 + Route 53 domain registrations are managed only on the control plane in the us\-east\-1 AWS Region\.
 
 For more information about data planes, control planes, and how AWS builds services to meet high availability targets, see the [Static stability using Availability Zones paper](http://aws.amazon.com/builders-library/static-stability-using-availability-zones/) in the Amazon Builders’ Library\.

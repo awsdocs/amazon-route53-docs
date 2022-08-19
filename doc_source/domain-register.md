@@ -31,7 +31,7 @@ TLD registries have assigned special or premium prices to some domain names\. Yo
 When you register a domain with Route 53, we automatically create a hosted zone for the domain and charge a small monthly fee for the hosted zone in addition to the annual charge for the domain registration\. This hosted zone is where you store information about how to route traffic for your domain, for example, to an Amazon EC2 instance or a CloudFront distribution\. If you don't want to use your domain right now, you can delete the hosted zone; if you delete it within 12 hours of registering the domain, there won't be any charge for the hosted zone on your AWS bill\. We also charge a small fee for the DNS queries that we receive for your domain\. For more information, see [Amazon Route 53 Pricing](https://aws.amazon.com/route53/pricing/)\.
 
 **Replacing the hosted zone for a domain**  
-If you create a new hosted zone for a domain, you must also update the nameserves for the domain to use the same nameservers as the new hosted zone\. For details see, [Replacing the hosted zone for a domain that is registered with Route 53](domain-replace-hosted-zone.md)<a name="domain-register-procedure"></a>
+If you create a new hosted zone for a domain, you must also update the nameservers for the domain to use the same nameservers as the new hosted zone\. For details see, [Replacing the hosted zone for a domain that is registered with Route 53](domain-replace-hosted-zone.md)<a name="domain-register-procedure"></a>
 
 **To register a new domain using Route 53**
 

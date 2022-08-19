@@ -9,7 +9,11 @@ Some common use cases for IP\-based routing are as follows:
 + You want to add overrides to existing Route 53 routing types such as geolocation routing based on your knowledge of your clients' physical locations\.
 
 **Managing IP ranges and associating them to a resource record set \(RRSet\)**  
-You can specify CIDR blocks from /0 to /24 for IPv4 and 0 to /48 for IPv6\. For example, a /24 IPv4 CIDR block includes 256 contiguous IP addresses\. You can group sets of CIDR blocks \(or IP ranges\) into CIDR locations, which are in turn grouped into reusable entities called CIDR collections: 
+ For IPv4 you can use CIDR blocks between 1 and 24 bits of length inclusive, while for IPv6 you can use CIDR blocks between 1 and 48 bits of length inclusive\. To define a zero bit CIDR block \(0\.0\.0\.0/0 or ::/0\), use the default \(“\*”\) location\.
+
+For DNS queries with a CIDR longer than the one specified in the CIDR collection, Route 53 will match it to the shorter CIDR\. For example, if you specify 2001:0DB8::/32 as the CIDR block in your CIDR collection and a query originates from 2001:0DB8:0000:1234::/48, it will match\. If, on the other hand, you specify 2001:0DB8:0000:1234::/48 in your CIDR collection and a query originates from 2001:0DB8::/32, this will not match and Route 53 will answer with the record for the default \(“\*”\) location\.
+
+You can group sets of CIDR blocks \(or IP ranges\) into CIDR locations, which are in turn grouped into reusable entities called CIDR collections:
 
 **CIDR block**  
 An IP range in CIDR notation, for example, 192\.0\.2\.0/24 or 2001:DB8::/32\.

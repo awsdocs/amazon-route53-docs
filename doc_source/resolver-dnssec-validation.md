@@ -5,7 +5,10 @@ When you enable DNSSEC validation for a virtual private cloud \(VPC\) in Amazon 
 DNSSEC validation only applies to public signed names in Amazon Route 53, and not to forwarded zones\.
 
 **Important**  
-Enabling DNSSEC validation can impact DNS resolution for public DNS records from AWS resources in a VPC, which could result in an outage\. Be aware that enabling or disabling DNSSEC validation can take several minutes\. <a name="resolver-dnssec-validation-procedure"></a>
+Enabling DNSSEC validation can impact DNS resolution for public DNS records from AWS resources in a VPC, which could result in an outage\. Be aware that enabling or disabling DNSSEC validation can take several minutes\. 
+
+**Note**  
+At this time, the Amazon Route 53 Resolver in your VPC \(aka AmazonProvidedDNS\) ignores the DO \(DNSSEC OK\) EDNS header bit and the CD \(Checking Disabled\) bit in the DNS query\. If you have configured DNSSEC, this means that while the Route 53 Resolver does perform DNSSEC validation, it doesn't return DNSSEC records nor set the AD bit in the response\. Therefore, performing your own DNSSEC validation is not currently supported by the Route 53 Resolver\. If you need to do this you will have to perform your own recursive DNS resolution\.<a name="resolver-dnssec-validation-procedure"></a>
 
 **To enable DNSSEC validation for a VPC**
 

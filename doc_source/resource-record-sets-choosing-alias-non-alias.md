@@ -9,10 +9,11 @@ When Route 53 receives a DNS query for an alias record, Route 53 responds with
 + **An Amazon VPC interface endpoint** – Route 53 responds with one or more IP addresses for your interface endpoint\.
 + **A CloudFront distribution** – Route 53 responds with one or more IP addresses for CloudFront edge servers that can serve your content\.
 + **An Elastic Beanstalk environment** – Route 53 responds with one or more IP addresses for the environment\.
-+ **An ELB load balancer** – Route 53 responds with one or more IP addresses for the load balancer\. 
++ **An ELB load balancer** – Route 53 responds with one or more IP addresses for the load balancer\. This includes Application Load Balancer, Classic Load Balancer and, Network Load Balancer\.
 + **An AWS Global Accelerator accelerator** – Route 53 responds with one of the two IP addresses for the accelerator\. 
 + **An Amazon S3 bucket that is configured as a static website** – Route 53 responds with one IP address for the Amazon S3 bucket\.
 + **Another Route 53 record in the same hosted zone** – Route 53 responds as if the query is for the record that is referenced by the alias record\.
++ **AWS AppSync domain name** – Route 53 responds responds with one or more IP addresses for your interface endpoint\.
 
 When you use an alias record to route traffic to an AWS resource, Route 53 automatically recognizes changes in the resource\. For example, suppose an alias record for example\.com points to an ELB load balancer at lb1\-1234\.us\-east\-2\.elb\.amazonaws\.com\. If the IP address of the load balancer changes, Route 53 automatically starts to respond to DNS queries using the new IP address\.
 

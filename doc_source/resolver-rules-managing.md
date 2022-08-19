@@ -146,7 +146,7 @@ The account that a rule is shared with can't change or delete the rule\.
 **Tagging**  
 Only the account that created a rule can add, delete, or see tags on the rule\.
 
-To view the current sharing status of a rule \(including the account that shared the rule or the account that a rule is shared with\), and to share rules with another account, perform the following procedure\.<a name="resolver-rules-managing-sharing-procedure"></a>
+To view the current sharing status of a rule \(including the account that shared the account or the account that a rule is shared with\), and to share rules with another account, perform the following procedure\.<a name="resolver-rules-managing-sharing-procedure"></a>
 
 **To view sharing status and share rules with another AWS account**
 

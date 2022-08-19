@@ -70,6 +70,7 @@ For more information, see [Security groups for your VPC](https://docs.aws.amazon
 
 **IP addresses**  
 The IP addresses in your VPC that you want Resolver to forward DNS queries to on the way to resolvers on your network\. These are not the IP addresses of the DNS resolvers on your network; you specify resolver IP addresses when you create the rules that you associate with one or more VPCs\. We require you to specify a minimum of two IP addresses for redundancy\.   
+Resolver endpoint has a private IP address\. These IP addresses will not change through the course of an endpoint's life\.
 Note the following:    
 **Multiple Availability Zones**  
 We recommend that you specify IP addresses in at least two Availability Zones\. You can optionally specify additional IP addresses in those or other Availability Zones\.  

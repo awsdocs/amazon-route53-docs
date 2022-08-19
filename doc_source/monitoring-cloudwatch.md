@@ -45,11 +45,13 @@ Units: Milliseconds
 
 **HealthCheckPercentageHealthy**  
 The percentage of Route 53 health checkers that consider the selected endpoint to be healthy\. You can view `HealthCheckPercentageHealthy` only across all regions; data is not available for a selected region\.  
+You set this up under the **Latency graphs** option\. For more information, see [Monitoring the latency between health checkers and your endpoint](monitoring-health-check-latency.md)\.  
 Valid statistics: Average, Minimum, Maximum  
 Units: Percent
 
 **HealthCheckStatus**  
 The status of the health check endpoint that CloudWatch is checking\. **1** indicates healthy, and **0** indicates unhealthy\. You can view `HealthCheckStatus` only across all regions; data is not available for a selected region\.  
+You set this up under the **Latency graphs** option\. For more information, see [Monitoring the latency between health checkers and your endpoint](monitoring-health-check-latency.md)\.  
 Valid statistics: Minimum  
 Units: none
 

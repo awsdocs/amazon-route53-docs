@@ -31,8 +31,6 @@ If your domain name contains any of the following characters, you must specify t
 + Characters 177 to 377 octal \(127 to 255 decimal, 0x7F to 0xFF hexadecimal\)
 + \. \(period\), character 056 octal \(46 decimal, 0x2E hexadecimal\), when used as a character in a domain name\. When using \. as a delimiter between labels, you do not need to use an escape code\.
 
-For example, to create a hosted zone for exämple\.com, you specify `ex\344mple.com`\.
-
 If the domain name includes any characters other than a to z, 0 to 9, \- \(hyphen\), or \_ \(underscore\), Route 53 API actions return the characters as escape codes\. This is true whether you specify the characters as characters or as escape codes when you create the entity\. The Route 53 console displays the characters as characters, not as escape codes\.
 
 For a list of ASCII characters the corresponding octal codes, do an internet search on "ascii table"\. 

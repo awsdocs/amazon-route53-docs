@@ -92,7 +92,8 @@ To migrate records from one hosted zone to another, you create a file that conta
    If you're running the AWS CLI on a Windows computer in a version of Windows PowerShell earlier than 6\.0, you might run the following command:
 
    ```
-   aws route53 list-resource-record-sets --hosted-zone-id ZOLDZONE12345 | Out-File c:\temp\list-records-ZOLDZONE12345.txt -Encoding utf8
+   $output = aws route53 list-resource-record-sets --hosted-zone-id <hosted-zone-id>; $mypath = <output-path ;
+   [System.IO.File]::WriteAllLines($mypath,$output)
    ```
 
 1. Make a copy of this output\. After you create records in the new hosted zone, we recommend that you run the AWS CLI `list-resource-record-sets` command on the new hosted zone and compare the two outputs to ensure that all the records were created\.

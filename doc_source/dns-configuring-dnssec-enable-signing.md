@@ -109,7 +109,7 @@ If you choose to have Route 53 create a customer managed key, be aware that sep
 
 1. Ensure zone signing is effective\.
 
-   Use the Id from the `EnableHostedZoneDNSSEC()` call to run [GetChange](https://docs.aws.amazon.com/Route53/latest/APIReference/API_GetChange.html) to make sure that all Route 53 DNS Servers are signing responses \(status = `INSYNC`\)\.
+   If you used AWS CLI, you can use the operation Id from the output of the `EnableHostedZoneDNSSEC()` call to run [get\-change](https://docs.aws.amazon.com/cli/latest/reference/route53/get-change.html) or [GetChange](https://docs.aws.amazon.com/Route53/latest/APIReference/API_GetChange.html) to make sure that all Route 53 DNS Servers are signing responses \(status = `INSYNC`\)\.
 
 1. Wait for at least the previous zone’s maximum TTL\.
 

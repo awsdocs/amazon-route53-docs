@@ -20,7 +20,7 @@ Not supported\.
 Yes
 
 **DNSSEC**  
-Not supported\.
+Supported for domain registration\. For more information, see [Configuring DNSSEC for a domain](domain-configure-dnssec.md)\.
 
 **Deadlines for renewing and restoring domains**  
 + Renewal is possible: Until the expiration date

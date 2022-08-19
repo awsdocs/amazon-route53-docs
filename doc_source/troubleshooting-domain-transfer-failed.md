@@ -6,6 +6,7 @@ Here are some common reasons that transferring a domain to Amazon Route 53 fail
 + [You didn't click the link in the authorization email](#troubleshooting-domain-transfer-failed-click-link)
 + [The authorization code that you got from the current registrar is not valid](#troubleshooting-domain-transfer-failed-authorization-code-invalid)
 + ["Parameters in request are not valid" error when trying to transfer a \.es domain to Amazon Route 53](#troubleshooting-domain-transfer-failed-parameters-in-request-are-not-valid)
++ [Is the internationalized domain name you're transferring to Amazon Route 53 listed in punycode?](#troubleshooting-domain-transfer-failed-internationalized-domain-names)
 
 ## You didn't click the link in the authorization email<a name="troubleshooting-domain-transfer-failed-click-link"></a>
 
@@ -26,3 +27,9 @@ If you request the transfer of a domain to Amazon Route 53 and you don't receiv
 ## "Parameters in request are not valid" error when trying to transfer a \.es domain to Amazon Route 53<a name="troubleshooting-domain-transfer-failed-parameters-in-request-are-not-valid"></a>
 
 Amazon Route 53 returns a "Parameters in request are not valid" error when you try to transfer a \.es domain to Route 53 and the contact type of the registrant contact is **Company**\. To complete the transfer, change the contact type of the registrant to **Person**, and re\-submit\. 
+
+## Is the internationalized domain name you're transferring to Amazon Route 53 listed in punycode?<a name="troubleshooting-domain-transfer-failed-internationalized-domain-names"></a>
+
+When you register a new domain name or create hosted zones and records, you can specify letters other than a\-z \(for example, the ç in French\), characters in other alphabets \(for example, Cyrillic or Arabic\), and characters in Chinese, Japanese, or Korean\. Amazon Route 53 stores these internationalized domain names \(IDNs\) in Punycode, which represents Unicode characters as ASCII strings\.
+
+If you get an error while transferring an IDNs to Route 53, use punycode to represent it and try again\. For more information, see [Formatting internationalized domain names](DomainNameFormat.md#domain-name-format-idns)\.

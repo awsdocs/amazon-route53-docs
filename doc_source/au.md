@@ -9,7 +9,7 @@ Registration for \.au domains is available through Route 53, starting March 31,
 Our registrar associate, Gandi, resells \.au domains through DomainDirectors\. When you transfer a domain name to Route 53, DomainDirectors sends an email to the registrant contact for the domain to verify contact information or to authorize transfer requests\.
 
 **Registration and renewal period**  
-One to five years\.
+One year\.
 
 **Restrictions**  
 Open to the public, with some restrictions:  
@@ -35,7 +35,7 @@ Not supported\.
 Yes
 
 **DNSSEC**  
-Not supported\.
+Supported for domain registration\. When you set the key, you must choose DNS security algorithm 2 \(DH\)\. For more information, see [Configuring DNSSEC for a domain](domain-configure-dnssec.md)\.
 
 **Deadlines for renewing and restoring domains**  
 + Renewal is possible: Between 60 days before expiration and the expiration date

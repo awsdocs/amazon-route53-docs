@@ -3,7 +3,7 @@
 [Return to index](registrar-tld-list.md#index)
 
 **Registration and renewal period**  
-One to ten years\.
+One year\.
 
 **Restrictions**  
 Open to the public, with no restrictions\.
@@ -21,7 +21,7 @@ Supported\.
 Yes
 
 **DNSSEC**  
-Not supported\.
+Supported for domain registration\. For more information, see [Configuring DNSSEC for a domain](domain-configure-dnssec.md)\.
 
 **Deadlines for renewing and restoring domains**  
 + Renewal is possible: Until the expiration date

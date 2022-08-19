@@ -12,6 +12,12 @@ A *private hosted zone* is a container that holds information about how you want
 
 1. The application uses the IP address that it got from Route 53 to establish a connection with the database server\.
 
+When you create a private hosted zone, the following nameservers are used:
++ ns\-0\.awsdns\-00\.com
++ ns\-512\.awsdns\-00\.net
++ ns\-1024\.awsdns\-00\.org
++ ns\-1536\.awsdns\-00\.co\.uk
+
 If you want to route traffic for your domain on the internet, you use a Route 53 *public* hosted zone\. For more information, see [Working with public hosted zones](AboutHZWorkingWith.md)\.
 
 **Topics**
