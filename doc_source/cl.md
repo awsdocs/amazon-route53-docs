@@ -26,6 +26,3 @@ Not supported\.
 + Domain is deleted from Route 53: Contact [AWS Support](https://docs.aws.amazon.com/Route53/latest/DeveloperGuide/domain-contact-support.html)\.
 + Restoration with the registry is possible: Contact [AWS Support](https://docs.aws.amazon.com/Route53/latest/DeveloperGuide/domain-contact-support.html)\.
 + Domain is deleted from the registry: Contact [AWS Support](https://docs.aws.amazon.com/Route53/latest/DeveloperGuide/domain-contact-support.html)\.
-
-**Registrar**  
-The registrar for this TLD is our registrar associate, Gandi\.

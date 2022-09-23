@@ -37,8 +37,5 @@ Supported for domain registration\. For more information, see [Configuring DNSSE
 + Restoration with the registry is possible: No
 + Domain is deleted from the registry: No
 
-**Registrar**  
-The registrar for this TLD is our registrar associate, Gandi\.
-
 **Deletion of domain registration**  
 For information about deleting domains, see [Deleting a domain name registration](domain-delete.md)\.

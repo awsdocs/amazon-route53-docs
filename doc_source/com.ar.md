@@ -12,7 +12,7 @@ One year\.
 Not supported\.
 
 **Domain locking to prevent unauthorized transfers**  
-Not supported\. To prevent unauthorized transfers, restrict access to the registrant email address and to the Route 53 APIs that could allow ownership change, for example, [UpdateDomainContact](https://docs.aws.amazon.com/Route53/latest/APIReference/API_domains_UpdateDomainContact.html)\. For more information, see [Required permissions for actions on domain registrations](r53-api-permissions-ref.md#required-permissions-domain-registrations) and [Example permissions for a domain record owner](access-control-managing-permissions.md#example-permissions-record-owner)\.
+Not supported\. To prevent unauthorized transfers, restrict access to the registrant email address and to the Route 53 APIs that could allow ownership change, for example, [UpdateDomainContact](https://docs.aws.amazon.com/Route53/latest/APIReference/API_domains_UpdateDomainContact.html)\. For more information, see [Actions, resources, and condition keys for Route 53 Domains](https://docs.aws.amazon.com/service-authorization/latest/reference/list_amazonroute53domains.html) in the *Service Authorization Reference* and [Example permissions for a domain record owner](access-control-managing-permissions.md#example-permissions-record-owner)\.
 
 **Authorization code required for transfer to Route 53**  
 Not supported\. You can no longer transfer \.com\.ar domains to Route 53\.
@@ -26,6 +26,3 @@ Not supported\.
 + Domain is deleted from Route 53: Contact [AWS Support](https://docs.aws.amazon.com/Route53/latest/DeveloperGuide/domain-contact-support.html)\.
 + Restoration with the registry is possible: Contact [AWS Support](https://docs.aws.amazon.com/Route53/latest/DeveloperGuide/domain-contact-support.html)\.
 + Domain is deleted from the registry: Contact [AWS Support](https://docs.aws.amazon.com/Route53/latest/DeveloperGuide/domain-contact-support.html)\.
-
-**Registrar**  
-The registrar for this TLD is our registrar associate, Gandi\.

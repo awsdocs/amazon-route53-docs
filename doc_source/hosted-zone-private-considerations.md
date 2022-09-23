@@ -97,4 +97,4 @@ If you have configured custom DNS servers on Amazon EC2 instances in your VPC, y
 If you want to route DNS queries between VPCs and your network, you can use Resolver\. For more information, see [Resolving DNS queries between VPCs and your network](resolver.md)\.
 
 **Required IAM permissions**  
-To create private hosted zones, you need to grant IAM permissions for Amazon EC2 actions in addition to permissions for Route 53 actions\. For more information, see [Required permissions for actions on private hosted zones](r53-api-permissions-ref.md#required-permissions-private-hosted-zones)\.
+To create private hosted zones, you need to grant IAM permissions for Amazon EC2 actions in addition to permissions for Route 53 actions\. For more information, see [Actions, resources, and condition keys for Route 53](https://docs.aws.amazon.com/service-authorization/latest/reference/list_amazonroute53.html) in the *Service Authorization Reference*\.

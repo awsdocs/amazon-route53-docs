@@ -176,6 +176,8 @@ Lets you work with AWS KMS to enable DNSSEC signing\.
 
 ## Example permissions for a domain record owner<a name="example-permissions-record-owner"></a>
 
+With resource record set permissions you can set granular permissions that limit what the AWS user can update or modify\. For more intormation, see [Using IAM policy conditions for fine\-grained access control to manage resource record sets](specifying-rrset-conditions.md)\.
+
 In some scenarios, a hosted zone owner might be responsible for the overall management of the hosted zone, while another person in the organization is responsible for a subset of those tasks\. A hosted zone owner who has enabled DNSSEC signing, for example, might want to create an IAM policy that includes the permission for someone else to add and delete Resource Set Records \(RRs\) in the hosted zone, among other tasks\. The specific permissions that a hosted zone owner chooses to enable for a record owner or other people will depend on their organization's policy\.
 
 The following is an example IAM policy that allows a record owner to make modifications to RRs, traffic policies, and health checks\. A record owner with this policy is not allowed to do zone\-level operations, such as creating or deleting a zone, enabling or disabling query logging, creating or deleting a reusable delegation set, or changing DNSSEC settings\.

@@ -36,8 +36,5 @@ Not supported\.
 + Restoration with the registry is possible: Between 2 days before and 28 days after expiration
 + Domain is deleted from the registry: 28 days after expiration
 
-**Registrar**  
-The registrar for this TLD is our registrar associate, Gandi\.
-
 **Deletion of domain registration**  
 The registry for \.ru domains doesn't allow you to delete domain registrations\. Instead, you must disable automatic renewal and wait for the domain to expire\. For more information, see [Deleting a domain name registration](domain-delete.md)\.

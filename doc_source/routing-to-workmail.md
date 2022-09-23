@@ -1,6 +1,6 @@
 # Routing traffic to Amazon WorkMail<a name="routing-to-workmail"></a>
 
-If you're using Amazon WorkMail for your business email and you're using Amazon Route 53 as your DNS service, you can use Route 53 to route traffic to your Amazon WorkMail email domain\. The name of your Route 53 hosted zone \(such as example\.com\) must match the name of an Amazon WorkMail domain\.
+You can use Route 53 to route traffic to your Amazon WorkMail email domain\. The name of your Route 53 hosted zone \(such as example\.com\) must match the name of an Amazon WorkMail domain\.
 
 **Note**  
 You can route traffic to an Amazon WorkMail domain only for public hosted zones\.
@@ -19,7 +19,7 @@ To route traffic to Amazon WorkMail, perform the following four procedures\.<a n
 
 1. In the navigation pane of the Amazon WorkMail console, choose **Domains**\.
 
-1. Choose the name of the email domain, such as example\.com, that you want to use to route traffic to Amazon WorkMail\.
+1. Choose the name of the email domain, such as example\.com that you want to use to route traffic to Amazon WorkMail\.
 
 1. Open another browser tab, and open the [Route 53 console](https://console.aws.amazon.com/route53/home)\.
 

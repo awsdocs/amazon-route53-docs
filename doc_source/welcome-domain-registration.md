@@ -17,7 +17,7 @@ Here's an overview of how you register a domain name with Amazon Route 53:
 
    For more information, see [How internet traffic is routed to your website or web application](welcome-dns-service.md)\.
 
-1. At the end of the registration process, we send your information to the registrar for the domain\. The [domain registrar](route-53-concepts.md#route-53-concepts-domain-registrar) is either Amazon Registrar, Inc\. or our registrar associate, Gandi\. To find out who the registrar is for your domain, see [Domains that you can register with Amazon Route 53](registrar-tld-list.md)\.
+1. At the end of the registration process, we send your information to the registrar for the domain\. The [domain registrar](route-53-concepts.md#route-53-concepts-domain-registrar) is either Amazon Registrar, Inc\. or our registrar associate, Gandi\. To find out who the registrar is for your domain, see [Finding your registrar](find-your-registrar.md)\.
 
 1. The registrar sends your information to the *registry* for the domain\. A registry is a company that sells domain registrations for one or more top\-level domains, such as \.com\.
 

@@ -42,9 +42,6 @@ Supported for domain registration\. When you set the key, you must choose DNS se
 + Restoration with the registry is possible: No
 + Domain is deleted from the registry: 30 days after expiration
 
-**Registrar**  
-Our registrar associate, Gandi, uses DomainDirectors as the registrar for this TLD\.
-
 **Deletion of domain registration**  
 The registry for \.net\.au domains doesn't allow you to delete domain registrations\. Instead, you must disable automatic renewal and wait for the domain to expire\. For more information, see [Deleting a domain name registration](domain-delete.md)\.
 

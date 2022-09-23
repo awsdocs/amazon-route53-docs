@@ -29,7 +29,7 @@ If you already know the domain name for your Elastic Beanstalk environment, skip
 
 1. In the list of applications, find the application that you want to route traffic to, and get the value of **URL**\. If you don't see the list of applications, choose **Applications** in the navigation pane\.
 
-   For more information about the URL, see [Elastic Beanstalk environment's domain name](https://docs.aws.amazon.com/elasticbeanstalk/latest/dg/customdomains.html) in the *Elastic Beanstalk developer guide*\. 
+   For more information about the URL, see [Elastic Beanstalk environment's domain name](https://docs.aws.amazon.com/elasticbeanstalk/latest/dg/customdomains.html) in the *Elastic Beanstalk Developer Guide*\. 
 
 ## Creating an Amazon Route 53 record that routes traffic to your Elastic Beanstalk environment<a name="routing-to-beanstalk-environment-create-resource-record-set"></a>
 
@@ -97,7 +97,7 @@ If you used different accounts to create your Route 53 hosted zone and your Ela
 **Record type**  
 Accept the default, **A – IPv4 address**\.  
 **Evaluate target health**  
-Accept the default value, **Yes**\.
+Accept the default value of **Yes**\.
 
 1. Choose **Create records**\.
 

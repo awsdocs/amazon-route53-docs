@@ -1,8 +1,8 @@
 # Routing traffic to an Amazon Virtual Private Cloud interface endpoint by using your domain name<a name="routing-to-vpc-interface-endpoint"></a>
 
-An Amazon Virtual Private Cloud \(Amazon VPC\) interface endpoint lets you use AWS PrivateLink to access selected services\. These services include some AWS services, services that are hosted by other AWS customers and partners in their own VPCs, and supported AWS Marketplace partner services\.
+You can use AWS PrivateLink to access selected services with an Amazon Virtual Private Cloud \(Amazon VPC\) interface endpoint\. These services include some AWS services, services that are hosted by other AWS customers and partners in their own VPCs, and supported AWS Marketplace partner services\.
 
-To route domain traffic to an interface endpoint, use Amazon Route 53 to create an alias record\. An alias record is a Route 53 extension to DNS\. It's similar to a CNAME record, but you can create an alias record both for the root domain, such as example\.com, and for subdomains, such as www\.example\.com\. \(You can create CNAME records only for subdomains\.\)
+To route domain traffic to an interface endpoint, use Amazon Route 53 to create an alias record\. An alias record is a Route 53 extension to DNS\. It's similar to a CNAME record, but you can create an alias record both for the root domain, such as example\.com, and for subdomains, such as www\.example\.com\. You can create CNAME records only for subdomains\.
 
 **Note**  
 Route 53 doesn't charge for alias queries to interface endpoints or other AWS resources\.
@@ -13,7 +13,7 @@ Route 53 doesn't charge for alias queries to interface endpoints or other AWS r
 
 ## Prerequisites<a name="routing-to-vpc-interface-endpoint-prereqs"></a>
 
-Before you get started, you need the following:
+To get started, you need the following:
 + An Amazon VPC interface endpoint\. For more information, see [Interface VPC endpoints \(AWS PrivateLink\)](https://docs.aws.amazon.com/vpc/latest/userguide/vpce-interface.html) in the *Amazon VPC User Guide*\.
 + A registered domain name\. You can use Amazon Route 53 as your domain registrar, or you can use a different registrar\.
 + Route 53 as the DNS service for the domain\. If you register your domain name by using Route 53, we automatically configure Route 53 as the DNS service for the domain\. 

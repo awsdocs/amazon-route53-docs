@@ -36,6 +36,3 @@ Supported for domain registration\. For more information, see [Configuring DNSSE
 + Domain is deleted from Route 53: 28 days after expiration
 + Restoration with the registry is possible: Between 28 days and 58 days after expiration
 + Domain is deleted from the registry: 58 days after expiration
-
-**Registrar**  
-The registrar for this TLD is our registrar associate, Gandi\.

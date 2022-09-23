@@ -16,4 +16,6 @@ The domain registries for all generic TLDs and many geographic TLDs let you lock
 
 1. If you encounter issues while locking a domain, you can contact AWS Support for free\. For more information, see [Contacting AWS Support about domain registration issues](domain-contact-support.md)\.
 
-In WHOIS search this status shows up as: `clientTransferProhibited`\.
+In WHOIS search this status shows up as: `clientTransferProhibited`\. For some TLDs these additional statuses might also be applied:
++ `clientUpdateProhibited`
++ `clientDeleteProhibited`

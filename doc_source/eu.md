@@ -31,8 +31,5 @@ Supported for domain registration\. For more information, see [Configuring DNSSE
 + Restoration with the registry is possible: Until 40 days after expiration
 + Domain is deleted from the registry: 40 days after expiration
 
-**Registrar**  
-The registrar for this TLD is our registrar associate, Gandi\.
-
 **WHOIS Search**  
 For information about existing \.eu domains, see [https://whois\.eurid\.eu/en/](https://whois.eurid.eu/en/)\.

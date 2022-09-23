@@ -4,13 +4,13 @@
 *****Copyright &copy; Amazon Web Services, Inc. and/or its affiliates. All rights reserved.*****
 
 -----
-Amazon's trademarks and trade dress may not be used in 
-     connection with any product or service that is not Amazon's, 
-     in any manner that is likely to cause confusion among customers, 
-     or in any manner that disparages or discredits Amazon. All other 
-     trademarks not owned by Amazon are the property of their respective
-     owners, who may or may not be affiliated with, connected to, or 
-     sponsored by Amazon.
+Amazon's trademarks and trade dress may not be used in
+connection with any product or service that is not Amazon's,
+in any manner that is likely to cause confusion among customers,
+or in any manner that disparages or discredits Amazon. All other
+trademarks not owned by Amazon are the property of their respective
+owners, who may or may not be affiliated with, connected to, or
+sponsored by Amazon.
 
 -----
 ## Contents
@@ -54,7 +54,8 @@ Amazon's trademarks and trade dress may not be used in
       + [Transferring a domain from Amazon Route 53 to another registrar](domain-transfer-from-route-53.md)
    + [Resending authorization and confirmation emails](domain-click-email-link.md)
    + [Configuring DNSSEC for a domain](domain-configure-dnssec.md)
-   + [Viewing information about domains that are registered with Amazon Registrar](domain-whois-rdap.md)
+   + [Finding your registrar and other information about your domain](find-your-registrar.md)
+      + [Viewing information about domains that are registered with Amazon Registrar](domain-whois-rdap.md)
    + [Deleting a domain name registration](domain-delete.md)
    + [Contacting AWS Support about domain registration issues](domain-contact-support.md)
    + [Downloading a domain billing report](domain-billing-report.md)
@@ -433,6 +434,7 @@ Amazon's trademarks and trade dress may not be used in
       + [Choosing between alias and non-alias records](resource-record-sets-choosing-alias-non-alias.md)
       + [Supported DNS record types](ResourceRecordTypes.md)
       + [Creating records by using the Amazon Route 53 console](resource-record-sets-creating.md)
+      + [Resource record set permissions](resource-record-sets-permissions.md)
       + [Values that you specify when you create or edit Amazon Route 53 records](resource-record-sets-values.md)
          + [Values that are common for all routing policies](resource-record-sets-values-shared.md)
          + [Values that are common for alias records for all routing policies](resource-record-sets-values-alias-common.md)
@@ -479,6 +481,7 @@ Amazon's trademarks and trade dress may not be used in
    + [Routing traffic to an Amazon API Gateway API by using your domain name](routing-to-api-gateway.md)
    + [Routing traffic to an Amazon CloudFront distribution by using your domain name](routing-to-cloudfront-distribution.md)
    + [Routing traffic to an Amazon EC2 instance](routing-to-ec2-instance.md)
+   + [Routing traffic to an AWS App Runner service](routing-to-app-runner.md)
    + [Routing traffic to an AWS Elastic Beanstalk environment](routing-to-beanstalk-environment.md)
    + [Routing traffic to an ELB load balancer](routing-to-elb-load-balancer.md)
    + [Routing traffic to a website that is hosted in an Amazon S3 bucket](RoutingToS3Bucket.md)
@@ -536,6 +539,7 @@ Amazon's trademarks and trade dress may not be used in
       + [Using Service-Linked Roles for Amazon Route 53 Resolver](using-service-linked-roles.md)
       + [AWS managed policies for Amazon Route 53](security-iam-awsmanpol-route53.md)
       + [Amazon Route 53 API permissions: Actions, resources, and conditions reference](r53-api-permissions-ref.md)
+      + [Using IAM policy conditions for fine-grained access control to manage resource record sets](specifying-rrset-conditions.md)
    + [Logging and monitoring in Amazon Route 53](logging-monitoring.md)
    + [Compliance validation for Amazon Route 53](route-53-compliance.md)
    + [Resilience in Amazon Route 53](disaster-recovery-resiliency.md)

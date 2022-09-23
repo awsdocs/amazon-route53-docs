@@ -18,6 +18,12 @@ The following entries describe important changes in each release of the Route 5
 
 ## 2022 releases<a name="doc-history-2022"></a>
 
+**September 21, 2022**  
+You can now use policy conditions for giving users fine\-grained access to updating resource record sets in Amazon Route 53\. For more information, see [ Resource record set permissions](resource-record-sets-permissions.md)\.
+
+**August 30, 2022**  
+Amazon Route 53 now supports alias records for AWS App Runner services that are created after August 1, 2022\. For more information, see [Routing traffic to an AWS App Runner service](routing-to-app-runner.md)\.
+
 **June 1, 2022**  
 IP\-based routing option is now available in Amazon Route 53\. For more information, see [IP\-based routing](routing-policy-ipbased.md)\.
 

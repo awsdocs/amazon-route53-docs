@@ -56,8 +56,5 @@ Supported for domain registration\. For more information, see [Configuring DNSSE
 + Restoration with the registry is possible: Between 45 days and 75 days after expiration
 + Domain is deleted from the registry: Varies\. Contact [AWS Support](https://docs.aws.amazon.com/Route53/latest/DeveloperGuide/domain-contact-support.html)\. 
 
-**Registrar**  
-The registrar for this TLD is our registrar associate, Gandi\.
-
 **Deletion of domain registration**  
 The registry for \.ca domains doesn't allow you to delete domain registrations\. Instead, you must disable automatic renewal and wait for the domain to expire\. For more information, see [Deleting a domain name registration](domain-delete.md)\.

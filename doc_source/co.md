@@ -29,6 +29,3 @@ Not supported\.
 + Domain is deleted from Route 53: 30 days after expiration
 + Restoration with the registry is possible: Between 30 days and 45 days after expiration
 + Domain is deleted from the registry: 50 days after expiration
-
-**Registrar**  
-The registrar for this TLD is our registrar associate, Gandi\.

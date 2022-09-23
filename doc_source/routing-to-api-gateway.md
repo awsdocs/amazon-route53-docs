@@ -1,6 +1,6 @@
 # Routing traffic to an Amazon API Gateway API by using your domain name<a name="routing-to-api-gateway"></a>
 
-Amazon API Gateway lets you create, publish, maintain, monitor, and secure APIs\. You can create APIs that access AWS services or other web services, as well as data stored in the AWS Cloud\.
+You can use Amazon API Gateway to create, publish, maintain, monitor, and secure APIs\. You can create APIs that access AWS services or other web services in addition to data stored in the AWS Cloud\.
 
 The method that you use to route domain traffic to an API Gateway API is the same regardless of whether you created a regional API Gateway endpoint or an edge\-optimized API Gateway endpoint\. 
 + **Regional API endpoint**: You create a Route 53 alias record that routes traffic to the regional API endpoint\.
@@ -17,14 +17,14 @@ Route 53 doesn't charge for alias queries to API Gateway APIs or other AWS reso
 
 ## Prerequisites<a name="routing-to-api-gateway-prereqs"></a>
 
-Before you get started, you need the following:
-+ An API Gateway API that has a custom domain name, such as api\.example\.com, that matches the name of the Route 53 record that you want to create\.
+To get started, you need the following:
++ An API Gateway API that has a custom domain name, such as api\.example\.com that matches the name of the Route 53 record that you want to create\.
 
-  For more information see:
+  For more information, see the following topics:
   + [Setting up custom domain names for HTTP APIs](https://docs.aws.amazon.com/apigateway/latest/developerguide/http-api-custom-domain-names.html) in the *Amazon API Gateway Developer Guide*\.
   + [Setting up custom domain names for REST APIs](https://docs.aws.amazon.com/apigateway/latest/developerguide/how-to-custom-domains.html) in the *Amazon API Gateway Developer Guide*\.
   + [Setting up custom domain names for WebSocket APIs](https://docs.aws.amazon.com/apigateway/latest/developerguide/websocket-api-custom-domain-names.html) in the *Amazon API Gateway Developer Guide*\.
-+ A registered domain name\. You can use Amazon Route 53 as your domain registrar, or you can use a different registrar\.
++ A registered domain name\. You can use Amazon Route 53 as your domain registrar or you can use a different registrar\.
 + Route 53 as the DNS service for the domain\. If you register your domain name by using Route 53, we automatically configure Route 53 as the DNS service for the domain\. 
 
   For information about using Route 53 as the DNS service provider for your domain, see [Making Amazon Route 53 the DNS service for an existing domainMaking Route 53 the DNS service for an existing domain](MigratingDNS.md)\.
@@ -58,7 +58,7 @@ To configure Route 53 to route traffic to an API Gateway endpoint, perform the 
 Choose the applicable routing policy\. For more information, see [Choosing a routing policy](routing-policy.md)\.  
 **Record name**  
 Enter the domain name that you want to use to route traffic to your API\.   
-The API that you want to route traffic to must include a custom domain name, such as api\.example\.com, that matches the name of the Route 53 record\.  
+The API that you want to route traffic to must include a custom domain name, such as api\.example\.com that matches the name of the Route 53 record\.  
 **Alias**  
 If you are using the **Quick create** record creation method, turn on **Alias**\.  
 **Value/Route traffic to**  

@@ -21,6 +21,7 @@ Amazon Route 53 doesn't charge for the records that you add to a hosted zone\. 
 + [Choosing between alias and non\-alias records](resource-record-sets-choosing-alias-non-alias.md)
 + [Supported DNS record types](ResourceRecordTypes.md)
 + [Creating records by using the Amazon Route 53 console](resource-record-sets-creating.md)
++ [Resource record set permissions](resource-record-sets-permissions.md)
 + [Values that you specify when you create or edit Amazon Route 53 records](resource-record-sets-values.md)
 + [Creating records by importing a zone file](resource-record-sets-creating-import.md)
 + [Editing records](resource-record-sets-editing.md)

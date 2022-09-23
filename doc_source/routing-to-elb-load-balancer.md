@@ -9,7 +9,7 @@ Route 53 doesn't charge for alias queries to ELB load balancers or other AWS re
 
 ## Prerequisites<a name="routing-to-elb-load-balancer-prereqs"></a>
 
-Before you get started, you need the following:
+To get started, you need the following:
 + An ELB load balancer\. You can use an ELB Classic, Application, or Network Load Balancer\. For information about creating a load balancer, see [Getting started with Elastic Load Balancing](https://docs.aws.amazon.com/elasticloadbalancing/latest/userguide/load-balancer-getting-started.html) in the *Elastic Load Balancing User Guide*\.
 
   Give the load balancer a name that will help you remember what it's for later\. The name that you specify when you create a load balancer is the name that you'll choose when you create an alias record in the Route 53 console\.
@@ -46,9 +46,9 @@ For example, if the name of the hosted zone is example\.com and you want to use 
 If you are using the **Quick create** record creation method, turn on **Alias**\.  
 **Value/Route traffic to**  
 Choose **Alias to Application and Classic Load Balancer **or **Alias to Network Load Balancer**, then choose the Region that the endpoint is from\.   
-**If you created the hosted zone and the ELB load balancer using the same AWS account** – Choose the name that you assigned to the load balancer when you created it\.  
-**If you created the hosted zone and the ELB load balancer using different accounts** – Enter the value that you got in step 1 of this procedure\.  
-The console prepends **dualstack\.** to the DNS name of the Application and Classic Load Balancer from the same AWS account only\. When a client, such as a web browser, requests the IP address for your domain name \(example\.com\) or subdomain name \(www\.example\.com\), the client can request an IPv4 address \(an A record\), an IPv6 address \(a AAAA record\), or both IPv4 and IPv6 addresses \(in separate requests with IPv4 first\)\. The **dualstack\.** designation allows Route 53 to respond with the appropriate IP address for your load balancer based on which IP address format the client requested\. You will need to prepend **dualstack\.** for Application and Classic Load Balancer from the different account\.  
+If you created the hosted zone and the ELB load balancer using the same AWS account, choose the name that you assigned to the load balancer when you created it\.  
+If you created the hosted zone and the ELB load balancer using different accounts, enter the value that you got in step 1 of this procedure\.  
+The console prepends **dualstack\.** to the DNS name of the application and Classic Load Balancer from the same AWS account only\. When a client, such as a web browser, requests the IP address for your domain name \(example\.com\) or subdomain name \(www\.example\.com\), the client can request an IPv4 address \(an A record\), an IPv6 address \(an AAAA record\), or both IPv4 and IPv6 addresses \(in separate requests with IPv4 first\)\. The **dualstack\.** designation allows Route 53 to respond with the appropriate IP address for your load balancer based on which IP address format the client requested\. You will need to prepend **dualstack\.** for Application and Classic Load Balancer from the different account\.  
 **Record type**  
 Choose **A – IPv4 address**\.  
 **Evaluate target health**  

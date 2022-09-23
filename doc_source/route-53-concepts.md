@@ -21,7 +21,7 @@ Here's an overview of the concepts that are related to domain registration\.
 The name, such as example\.com, that a user types in the address bar of a web browser to access a website or a web application\. To make your website or web application available on the internet, you start by registering a domain name\. For more information, see [How domain registration works](welcome-domain-registration.md)\.
 
 **domain registrar**  
-A company that is accredited by ICANN \(Internet Corporation for Assigned Names and Numbers\) to process domain registrations for specific top\-level domains \(TLDs\)\. For example, Amazon Registrar, Inc\. is a domain registrar for \.com, \.net, and \.org domains\. Our registrar associate, Gandi, is a domain registrar for hundreds of TLDs, such as \.apartments, \.boutique, and \.camera\. For more information, see [Domains that you can register with Amazon Route 53](registrar-tld-list.md)\.
+A company that is accredited by ICANN \(Internet Corporation for Assigned Names and Numbers\) to process domain registrations for specific top\-level domains \(TLDs\)\. To find the registrar of your domain, see [Finding your registrar](find-your-registrar.md)\.
 
 **domain registry**  
 A company that owns the right to sell domains that have a specific top\-level domain\. For example, [VeriSign](http://www.verisign.com/) is the registry that owns the right to sell domains that have a \.com TLD\. A domain registry defines the rules for registering a domain, such as residency requirements for a geographic TLD\. A domain registry also maintains the authoritative database for all of the domain names that have the same TLD\. The registry's database contains information such as contact information and the name servers for each domain\. 

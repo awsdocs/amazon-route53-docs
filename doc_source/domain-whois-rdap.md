@@ -1,11 +1,11 @@
 # Viewing information about domains that are registered with Amazon Registrar<a name="domain-whois-rdap"></a>
 
-You can view information about \.com, \.net, and \.org domains that were registered using Route 53 and for which Amazon Registrar is the registrar\. This information includes details such as when the domain was originally registered and contact information for the domain owner and for the technical and administrative contacts\.
+You can view information about domains that were registered using Route 53 and for which Amazon Registrar is the registrar\. This information includes details such as when the domain was originally registered and contact information for the domain owner and for the technical and administrative contacts\.
 
 Note the following:
 
 **Emailing domain contacts when privacy protection is enabled**  
-If privacy protection is enabled for the domain, contact information for the registrant, technical, and administrative contacts is replaced with contact information for the Amazon Registrar privacy service\. For example, if the example\.com domain is registered with Amazon Registrar and if privacy protection is enabled, the value of **Registrant Email** in the response to a WHOIS query would be similar to owner1234@example\.com\.whoisprivacyservice\.org\.  
+If privacy protection is enabled for the domain, contact information for the registrant, technical, and administrative contacts is replaced with contact information for the Amazon Registrar privacy service\. For example, if the example\.com domain is registered with Amazon Registrar and if privacy protection is enabled, the value of **Registrant Email** in the response to a WHOIS query would be similar to owner1234@example\.com\.whoisprivacyservice\.org or owner1234@example\.com\.identity\-protect\.org\.  
 To contact one or more domain contacts when privacy protection is enabled, send an email to the corresponding email addresses\. We automatically forward your email to the applicable contact\. 
 
 **Reporting abuse**  

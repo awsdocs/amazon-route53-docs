@@ -130,7 +130,9 @@ If you were able to verify your email address in step 7, skip to step 13\.
 
    If the registry requires us to verify the email address for the registrant contact but doesn't allow us to verify earlier in the process, we send a verification email from one of the following email addresses: 
    + **noreply@registrar\.amazon\.com ** – for TLDs registered by Amazon Registrar\.
-   + **noreply@domainnameverification\.net** – for TLDs registered by our registrar associate, Gandi\. To determine who the registrar is for your TLD, see [Domains that you can register with Amazon Route 53](registrar-tld-list.md)\.
+   + **noreply@domainnameverification\.net** – for TLDs registered by our registrar associate, Gandi\.
+
+   To determine who the registrar is for your TLD, see [Finding your registrar](find-your-registrar.md)\.
 
    When you receive the verification email, choose the link in the email that verifies that the email address is valid\. If you don't receive the email immediately:
    + Check the settings for the domain to verify that you specified the correct email address for the registrant contact\.

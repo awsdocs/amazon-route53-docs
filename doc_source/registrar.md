@@ -20,7 +20,7 @@ Domain name registration services are provided under our [Domain Name Registrati
 + [Transferring domains](domain-transfer.md)
 + [Resending authorization and confirmation emails](domain-click-email-link.md)
 + [Configuring DNSSEC for a domain](domain-configure-dnssec.md)
-+ [Viewing information about domains that are registered with Amazon Registrar](domain-whois-rdap.md)
++ [Finding your registrar and other information about your domain](find-your-registrar.md)
 + [Deleting a domain name registration](domain-delete.md)
 + [Contacting AWS Support about domain registration issues](domain-contact-support.md)
 + [Downloading a domain billing report](domain-billing-report.md)

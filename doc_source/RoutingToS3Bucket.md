@@ -1,6 +1,6 @@
 # Routing traffic to a website that is hosted in an Amazon S3 bucket<a name="RoutingToS3Bucket"></a>
 
-Amazon Simple Storage Service \(Amazon S3\) provides secure, durable, highly scalable [cloud storage](https://aws.amazon.com/what-is-cloud-storage/)\. You can configure an S3 bucket to host a static website that can include web pages and client\-side scripts\. \(S3 doesn't support server\-side scripting\.\)
+Amazon Simple Storage Service \(Amazon S3\) provides secure, durable, highly scalable [cloud storage](https://aws.amazon.com/what-is-cloud-storage/)\. You can configure an S3 bucket to host a static website that can include webpages and client\-side scripts\. \(S3 doesn't support server\-side scripting\.\)
 
 To route domain traffic to an S3 bucket, use Amazon Route 53 to create an [alias record](https://docs.aws.amazon.com/Route53/latest/DeveloperGuide/resource-record-sets-choosing-alias-non-alias.html) that points to your bucket\. An alias record is a Route 53 extension to DNS\. It's similar to a CNAME record, except you can create an alias record both for the root domain, such as example\.com, and for subdomains, such as www\.example\.com\. You can create CNAME records only for subdomains\. 
 
@@ -9,7 +9,7 @@ Route 53 doesn't charge for alias queries to S3 buckets or other AWS resources\
 
 ## Prerequisites<a name="routing-to-s3-bucket-prereqs"></a>
 
-Before you get started, you need the following\. If you're new to Amazon Route 53 or S3, see [Getting started with Amazon Route 53](getting-started.md), which guides you through the entire process, including registering a domain name, and creating and configuring an S3 bucket\.
+To get started, you need the following\. If you're new to Amazon Route 53 or S3, see [Getting started with Amazon Route 53](getting-started.md), which guides you through the entire process, including registering a domain name, and creating and configuring an S3 bucket\.
 + An S3 bucket that's configured to host a static website\.
 
    For more information, see [Configure a bucket for website hosting](https://docs.aws.amazon.com/AmazonS3/latest/dev/HowDoIWebsiteConfiguration.html) in the *Amazon Simple Storage Service User Guide*\.
@@ -19,7 +19,7 @@ The bucket must have the same name as your domain or subdomain\. For example, if
   You can route traffic for a domain and its subdomains, such as example\.com and www\.example\.com, to a single bucket\. Create a bucket for the domain and each subdomain, and configure all but one of the buckets to redirect traffic to the remaining bucket\. For more information, see [Getting started with Amazon Route 53](getting-started.md)\.
 **Note**  
 An S3 bucket that's configured as a website endpoint doesn't support SSL/TLS, so you need to route traffic to the CloudFront distribution and use the S3 bucket as the origin for the distribution\.  
-For instructions on how to create a CloudFront distribution, see [Create a CloudFront distribution](https://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/GettingStarted.SimpleDistribution.html#GettingStartedCreateDistribution) and [Configuring alternate domain names and HTTPS](https://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/cnames-and-https-procedures.html) in the *CloudFront User Guide*, as well as [Routing traffic to an Amazon CloudFront distribution by using your domain name](routing-to-cloudfront-distribution.md)\.
+For instructions on how to create a CloudFront distribution, see [Create a CloudFront distribution](https://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/GettingStarted.SimpleDistribution.html#GettingStartedCreateDistribution) and [Configuring alternate domain names and HTTPS](https://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/cnames-and-https-procedures.html) in the *CloudFront User Guide* in addition to [Routing traffic to an Amazon CloudFront distribution by using your domain name](routing-to-cloudfront-distribution.md)\.
 + A registered domain name\. You can use Route 53 as your domain registrar, or you can use a different registrar\.
 + Route 53 as the DNS service for the domain\. If you register your domain name by using Route 53, we automatically configure Route 53 as the DNS service for the domain\. 
 

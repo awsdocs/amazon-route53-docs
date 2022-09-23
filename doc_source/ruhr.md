@@ -32,6 +32,3 @@ Supported for domain registration\. For more information, see [Configuring DNSSE
 + Domain is deleted from Route 53: 45 days after expiration
 + Restoration with the registry is possible: Between 45 days and 75 days after expiration
 + Domain is deleted from the registry: Contact [AWS Support](https://docs.aws.amazon.com/Route53/latest/DeveloperGuide/domain-contact-support.html)\.
-
-**Registrar**  
-The registrar for this TLD is our registrar associate, Gandi\.
