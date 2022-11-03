@@ -14,4 +14,4 @@ You can also create access permissions that combine any of the Route 53 policy 
 
 For more information about resource record set permissions, see [Using IAM policy conditions for fine\-grained access control to manage resource record sets](specifying-rrset-conditions.md)\.
 
-To learn how to authenticate AWS users, see [Authentication](auth-and-access-control.md#authentication) and to learn how to control access to Route 53 resources, see [Access control](auth-and-access-control.md#access-control)\.
+To learn how to authenticate AWS users, see [Authenticating with identities](auth-and-access-control.md#security_iam_authentication) and to learn how to control access to Route 53 resources, see [Access control](auth-and-access-control.md#access-control)\.

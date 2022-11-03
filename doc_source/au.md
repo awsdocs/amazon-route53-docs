@@ -2,9 +2,6 @@
 
 [Return to index](registrar-tld-list.md#index)
 
-**Note**  
-Registration for \.au domains is available through Route 53, starting March 31, 2022\. The registration process for \.au domains is same as for other domains, unless another party owns the corresponding second\-level domain \(SLD\) of the \.au domain \(for example, \.com\.au or net\.au\)\. For the owners of those \.au SLD domains, a priority registration period is open from March 24,2022 until September 20, 2022\. For more information, see [The Priority Allocation Process](https://www.auda.org.au/au-domain-names/au-direct/priority-allocation-process) and the [FAQ for \.au domains](#au-priority-allocation-faq)\. 
-
 **Confirmation email from the TLD registry**  
 Our registrar associate, Gandi, resells \.au domains through DomainDirectors\. When you transfer a domain name to Route 53, DomainDirectors sends an email to the registrant contact for the domain to verify contact information or to authorize transfer requests\.
 
@@ -55,30 +52,3 @@ Change the owner by using the Route 53 console\. See [Updating contact informat
    
 
 1. After the responses are confirmed, the owner change in the registry will be processed in a short time without any further confirmation\.
-
-## FAQ for \.au domains<a name="au-priority-allocation-faq"></a>
-
-**How do I register \.au domains?**  
-The registration for \.au domains is the same as for other domains, as long as the domain that you want to register isn't reserved as part of the Priority Allocation Process\.
-
-**What are the requirements for registering \.au domains?**  
-For the general requirements of \.au domain registration, see [\.au direct](https://www.auda.org.au/au-domain-names/au-domain-names/au-direct) by auDA\.
-
-**How can I check if I can participate in the Priority Allocation Process?**  
-You can check the priorities and status for your domain name by using the [priority status tool](https://www.auda.org.au/tools/priority-status-tool) provided by auDA\.
-
-**How do I participate in the Priority Allocation Process?**  
-To participate in the Priority Allocation Process, you register your \.au domain as you would other domains\. We automatically process the domain as participating in the Priority Allocation Process if the domain and contact information that you apply with are eligible\. Otherwise, you can provide an AU priority token when you register your domain, if you've obtained a token, and we will process your domain in the Priority Allocation Process\.  
-Due to the Priority Allocation Process, your domain registration can end up in a pending status\. Make sure that the contact information for your existing domain is up\-to\-date\. Stale or invalid contact information can lead to delays in processing your application\. For more information, see [The Priority Allocation Process](https://www.auda.org.au/au-domain-names/au-direct/priority-allocation-process)\.
-
-**How can I get an AU priority token?**  
-You can get an AU priority token from auDA by using their [priority token tool](https://priority.auda.org.au/)\. For more information, see [The Priority Allocation Process](https://www.auda.org.au/au-domain-names/au-direct/priority-allocation-process)\. The token you will receive consists of the **priority contact ID** and **priority authinfo** strings\. Enter them into the AU priority token field separated by a dash, for example, *m01XXXXXXXXX\-Au2XXXXXXXXX*\.
-
-**Do I need to register a \.au domain on March 24, 2022 to be able to participate in the Priority Allocation Process?**  
-No\. The \.au domain launched on March 24, 2022 but registrants of eligible \.au domain names \(such as \.com\.au and \.net\.au\) have until September 20, 2022 to indicate whether they intend to apply for the exact match of their names in the \.au domain using the Priority Allocation Process\. Participating in the Priority Allocation Process earlier doesn’t mean you have priority over other participants\. For more information, see [The Priority Allocation Process](https://www.auda.org.au/au-domain-names/au-direct/priority-allocation-process)\.
-
-**Do I need to participate in the Priority Allocation Process if I own a second level \.au domain?**  
-No\. If you don’t want to apply for a \.au direct domain for your equivalent second\-level \.au domain, there is no action required\. Your existing domains will not be affected\.
-
-**Can I still register a second\-level domain for \.au \(such as \.com\.au or \.net\.au\)?**  
-Yes\. The original second\-level domains remain in operation\. The registration rules for these haven't changed\.

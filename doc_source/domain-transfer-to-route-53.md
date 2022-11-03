@@ -62,7 +62,7 @@ You can also search for your domain name in [website for Whois](https://www.whoi
 
 See [Domains that you can register with Amazon Route 53](registrar-tld-list.md)\. If the top\-level domain for the domain that you want to transfer is on the list, you can transfer the domain to Amazon Route 53\. 
 
-If a TLD is not on the list, you can't currently transfer the domain registration to Route 53\. We occasionally add more TLDs to the list, so check back to see if we've added support for your domain\. You can also submit a request for support for your TLD on the [Route 53 Domain Registration](https://forums.aws.amazon.com/forum.jspa?forumID=214) forum\.
+If a TLD is not on the list, you can't currently transfer the domain registration to Route 53\. We occasionally add more TLDs to the list, so check back to see if we've added support for your domain\. 
 
 ## Step 2 \(optional\): Transfer your DNS service to Amazon Route 53 or another DNS service provider<a name="domain-transfer-to-route-53-transfer-dns"></a>
 

@@ -1,6 +1,12 @@
 # Troubleshooting DNSSEC signing<a name="dns-configuring-dnssec-troubleshoot"></a>
 
-The information in this section can help you address issues with DNSSEC signing, including with your key\-signing keys \(KSKs\)\.
+The information in this section can help you address issues with DNSSEC signing, including enabling, disabling, and with your key\-signing keys \(KSKs\)\.
+
+Enabling DNSSEC  
+Make sure you have read the prerequisites in [Configuring DNSSEC signing in Amazon Route 53](dns-configuring-dnssec.md) before you start enabling DNSSEC signing\.
+
+Disabling DNSSEC  
+In order to safely disable DNSSEC, Route 53 will check whether the target zone is in the chain of trust\. It checks if the parent of the target zone has any NS records of the target zone and DS records of the target zone\. If the target zone is not publicly resolvable, for example, getting a SERVFAIL response when querying for NS and DS, Route 53 cannot determine whether it is safe to disable DNSSEC\. You can contact your parent zone to fix those issues, and retry disabling DNSSEC later\.
 
 KSK status is **Action needed**  
 A KSK can change its status to **Action needed** \(or `ACTION_NEEDED` in a [KeySigningKey](https://docs.aws.amazon.com/Route53/latest/APIReference/API_KeySigningKey.html) status\), when Route 53 DNSSEC loses access to a corresponding AWS KMS key \(due to a change in permissions or AWS KMS key deletion\)\.  

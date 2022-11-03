@@ -6,6 +6,9 @@ When you create a VPC, the Route 53 Resolver that is created by default, maps t
 
 The Resolver additionally contains endpoints that you configure to answer DNS queries to and from your on\-premises environment\.
 
+**Note**  
+ Forwarding private DNS queries to any VPC CIDR \+ 2 address from your on\-premises DNS servers is not supported, and can cause unstable results\. Instead, we recommend that you use a Resolver inbound endpoint\.
+
 You also can integrate DNS resolution between Resolver and DNS resolvers on your network by configuring forwarding rules\. *Your network* can include any network that is reachable from your VPC, such as the following:
 + The VPC itself
 + Another peered VPC

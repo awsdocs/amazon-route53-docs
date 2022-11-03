@@ -179,7 +179,7 @@ Now that you have an S3 bucket, you can upload your website files\. In this tuto
 
 1. In the **Buckets** list, choose the linked name of the bucket you want to upload the website files to, such as **www\.example\.com**\.
 
-1. Copy the example text that creates a simple one\-page webstie, paste it into a text editor, and save it as index\.html:
+1. Copy the example text that creates a simple one\-page website, paste it into a text editor, and save it as index\.html:
 
    ```
    <html>

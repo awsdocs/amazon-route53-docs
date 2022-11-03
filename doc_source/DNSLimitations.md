@@ -119,7 +119,7 @@ Use the following procedure to increase quotas for Route 53 Resolver\.<a name="i
 | --- | --- | 
 |  Query log configurations per AWS Region  |  20  | 
 |  Query log configuration VPC associations per AWS Region  |  100  | 
-|  Query log configuration VPC associations per AWS Region \(shared using RAM\)  |  100  | 
+|  Query log configuration VPC associations per account per AWS Region \(shared using RAM\) for the account that the configuration was shared to\.  |  100  | 
 
 #### Quotas on Route 53 Resolver DNS Firewall<a name="limits-api-entities-resolver-dns-firewall"></a>
 

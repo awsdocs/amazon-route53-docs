@@ -94,7 +94,7 @@ To enable privacy protection for \.co\.uk, \.me\.uk, and \.org\.uk domains, you 
 
    1. Choose **Send verification email**\. We send a verification email from one of the following email addresses:
       + **noreply@registrar\.amazon\.com** – for TLDs registered by Amazon Registrar\.
-      + **noreply@domainnameverification\.net** – for TLDs registered by our registrar associate, Gandi\. To determine who the registrar is for your TLD, see [Domains that you can register with Amazon Route 53](registrar-tld-list.md)\.
+      + **noreply@domainnameverification\.net** – for TLDs registered by our registrar associate, Gandi\. To determine who the registrar is for your TLD, see [Finding your registrar](find-your-registrar.md)\.
 **Important**  
 The registrant contact must follow the instructions in the email to verify that the email was received, or we must suspend the domain as required by ICANN\. When a domain is suspended, it's not accessible on the internet\.
 

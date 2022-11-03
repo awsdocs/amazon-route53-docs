@@ -1,6 +1,6 @@
 # Finding your registrar and other information about your domain<a name="find-your-registrar"></a>
 
-To view domain information by using the [GetDomainDetail](https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_DeprovisionIpamPoolCidr.html) API, you can use any of the SDKs or AWS CLI\. For more information, see [get\-domain\-detail](https://docs.aws.amazon.com/cli/latest/reference/route53domains/get-domain-detail.html)\.<a name="find-your-registrar-getdomaindetail-procedure"></a>
+To view domain information by using the [GetDomainDetail](https://docs.aws.amazon.com/Route53/latest/APIReference/API_domains_GetDomainDetail.html) API, you can use any of the SDKs or AWS CLI\. For more information, see [get\-domain\-detail](https://docs.aws.amazon.com/cli/latest/reference/route53domains/get-domain-detail.html)\.<a name="find-your-registrar-getdomaindetail-procedure"></a>
 
 **To view information about domains with `get-domain-detail` CLI**
 + Use the following CLI:

@@ -69,7 +69,7 @@ How you specify the value for **Endpoint** depends on whether you created the ho
 **Record type**  
 Choose **A – IPv4 address**\.  
 **Evaluate target health**  
-Accept the default value of **Yes**\.
+For control over DNS failover, configure custom health checks\. For an example, see [Configure custom health checks for DNS failover](https://docs.aws.amazon.com/apigateway/latest/developerguide/dns-failover.html) in the *API Gateway user guide*\.
 
 1. Choose **Create records**\.
 

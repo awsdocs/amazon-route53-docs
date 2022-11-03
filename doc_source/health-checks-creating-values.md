@@ -19,7 +19,7 @@ Whether you want this health check to monitor an endpoint or the status of other
 **Note**  
 If you specify a non\-AWS endpoint, an additional charge applies\. For more information, including a definition of AWS endpoints, see "Health Checks" on the [Route 53 Pricing](https://aws.amazon.com/route53/pricing/) page\.
 + **Status of other health checks \(calculated health check\)** – Route 53 determines whether this health check is healthy based on the status of other health checks that you specify\. You also specify how many of the health checks need to be healthy for this health check to be considered healthy\.
-+ **State of CloudWatch alarm** – Route 53 determines whether this health check is healthy by monitoring the data stream for a CloudWatch alarm\. 
++ **State of CloudWatch alarm data stream** – Route 53 determines whether this health check is healthy by monitoring the data stream for a CloudWatch alarm\. 
 
 ## Monitoring an endpoint<a name="health-checks-creating-values-endpoint"></a>
 

@@ -5,6 +5,9 @@ The incremental steps apply to the hosted zone owner and the parent zone maintai
 
 We recommend following the steps in this article to have your zone signed and included in the chain of trust\. The following steps will minimize the risk of onboarding onto DNSSEC\.
 
+**Note**  
+Make sure you read the prerequisites before you start in [Configuring DNSSEC signing in Amazon Route 53](dns-configuring-dnssec.md)\.
+
 There are three steps to take to enable DNSSEC signing, as described in the following sections\. 
 
 **Topics**

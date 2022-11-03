@@ -23,18 +23,22 @@ Route 53 doesn't charge for alias queries to CloudFront distributions or other 
 ## Prerequisites<a name="routing-to-cloudfront-distribution-prereqs"></a>
 
 To get started, you need the following:
-+ A CloudFront distribution\. The distribution must include an alternate domain name that matches the domain name that you want to use for your URLs instead of the domain name that CloudFront assigned to your distribution\.
 
-  For example, if you want the URLs for your content to contain the domain name **example\.com**, the **Alternate Domain Name** field for the distribution must include **example\.com**\.
+1. A registered domain name\. You can use Amazon Route 53 as your domain registrar or you can use a different registrar\.
 
-  For more information, see the following documentation in the *Amazon CloudFront Developer Guide*:
-  + [Task list for creating a distribution](https://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/distribution-web-creating.html)
-  + [Creating or updating a distribution using the CloudFront console](https://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/distribution-web-creating-console.html)
-+ A registered domain name\. You can use Amazon Route 53 as your domain registrar or you can use a different registrar\.
-+ Route 53 as the DNS service for the domain\. If you register your domain name by using Route 53, we automatically configure Route 53 as the DNS service for the domain\. 
+1. Route 53 as the DNS service for the domain\. If you register your domain name by using Route 53, we automatically configure Route 53 as the DNS service for the domain\. 
 
-  For information about using Route 53 as the DNS service provider for your domain, see [Making Amazon Route 53 the DNS service for an existing domainMaking Route 53 the DNS service for an existing domain](MigratingDNS.md)\.
-+ Request a public certificate so that Amazon CloudFront distributions require HTTPS\. For more information, see [Step 2: Request a public certificate](getting-started-cloudfront-overview.md#getting-started-cloudfront-request-certificate) and [DNS validation in the AWS Certificate Manager](https://docs.aws.amazon.com/acm/latest/userguide/dns-validation.html) in the *AWS Certificate Manager User Guide\.*
+   For information about using Route 53 as the DNS service provider for your domain, see [Making Amazon Route 53 the DNS service for an existing domainMaking Route 53 the DNS service for an existing domain](MigratingDNS.md)\.
+
+1. Request a public certificate so that Amazon CloudFront distributions require HTTPS\. For more information, see [Step 2: Request a public certificate](getting-started-cloudfront-overview.md#getting-started-cloudfront-request-certificate) and [DNS validation in the AWS Certificate Manager](https://docs.aws.amazon.com/acm/latest/userguide/dns-validation.html) in the *AWS Certificate Manager User Guide\.*
+
+1. A CloudFront distribution\. The distribution must include an alternate domain name that matches the domain name that you want to use for your URLs instead of the domain name that CloudFront assigned to your distribution\.
+
+   For example, if you want the URLs for your content to contain the domain name **example\.com**, the **Alternate Domain Name** field for the distribution must include **example\.com**\.
+
+   For more information, see the following documentation in the *Amazon CloudFront Developer Guide*:
+   + [Task list for creating a distribution](https://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/distribution-web-creating.html)
+   + [Creating or updating a distribution using the CloudFront console](https://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/distribution-web-creating-console.html)
 
 ## Configuring Amazon Route 53 to route traffic to a CloudFront distribution<a name="routing-to-cloudfront-distribution-config"></a>
 
@@ -53,13 +57,9 @@ Changes generally propagate to all Route 53 servers within 60 seconds\. When th
 
    1. On the **General** tab, get the value of the **Distribution domain name** field\.
 
-   1. Check the **IPv6** field to see whether IPv6 is enabled for the distribution\. If IPv6 is enabled, you'll need to create two alias records for the distribution, one to route IPv4 traffic to the distribution, and one to route IPv6 traffic\.
+   1. On the **General** tab, in the **Settings** section, choose edit and scroll to check the **IPv6** field to see whether IPv6 is enabled for the distribution\. If IPv6 is enabled, you'll need to create two alias records for the distribution, one to route IPv4 traffic to the distribution, and one to route IPv6 traffic\. Choose **Cancel**\.
 
       For more information, see [Enable IPv6](https://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/distribution-web-values-specify.html#DownloadDistValuesEnableIPv6) in the topic [Values that you specify when you create or update a distribution](https://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/distribution-web-values-specify.html) in the *Amazon CloudFront Developer Guide*\.
-
-1. If you haven't already, add one or more alternate domain names to your CloudFront distribution\. These are the domain names \(such as example\.com\) and subdomain names \(such as acme\.example\.com\) that you want to use for your URLs instead of the domain name that CloudFront assigned to your distribution\.
-
-   For more information, see [Using custom URLs for files by adding alternate domain names \(CNAMEs\)](https://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/CNAMEs.html) in the *Amazon CloudFront Developer Guide*\.
 
 1. Sign in to the AWS Management Console and open the Route 53 console at [https://console\.aws\.amazon\.com/route53/](https://console.aws.amazon.com/route53/)\.
 

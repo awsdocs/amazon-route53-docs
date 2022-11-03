@@ -36,6 +36,8 @@ AWS Managed Domain Lists are not currently available in all Regions\. The follow
 |  Africa \(Cape Town\)   |  No  | 
 |  Europe \(Milan\)   |  No  | 
 |  Asia Pacific \(Jakarta\)   |  No  | 
+|  China \(Beijing\)   |  No  | 
+|  China \(Ningxia\)   |  No  | 
 
 **Available AWS Managed Domain Lists**  
 This section describes the AWS Managed Domain Lists that are currently available\. When you're in a Region where these domain lists are supported, you see them on the console when you manage domain lists and when you specify the domain list for a rule\. In the logs, the domain list is logged within the `firewall_domain_list_id field`\.

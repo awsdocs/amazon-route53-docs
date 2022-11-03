@@ -11,7 +11,7 @@ If another AWS account has shared one or more configurations with your account, 
 If you share a configuration with other accounts and then either delete the configuration or stop sharing it, and if one or more VPCs were associated with the configuration, Route 53 Resolver stops logging DNS queries that originate in those VPCs\.
 
 **Maximum number of query logging configurations and VPCs that can be associated with a config**  
-When an account creates a configuration and shares it with one or more other accounts, the maximum number of VPCs that can be associated with the configuration applies to the account that created the rule\.  
+When an account creates a configuration and shares it with one or more other accounts, the maximum number of VPCs that can be associated with the configuration are applied per account\. For example, if you have 10,000 accounts in your organization, you can create the query logging configuration in the central account and share it via AWS RAM to share it to the organization accounts\. The organization accounts will then associate the configuration with their VPCs counting them against their account’s query log configuration VPC associations per AWS Region limit of 100\. However, if all the VPCs are in a single account, then the account’s service limits might be needed to increased\.  
 For current Resolver quotas, see [Quotas on Route 53 Resolver](DNSLimitations.md#limits-api-entities-resolver)\.
 
 **Permissions**  
