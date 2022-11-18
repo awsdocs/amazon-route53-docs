@@ -72,7 +72,7 @@ If you need to control reverse lookups in your VPC, you can add rules to your ou
 
 1. Add these rules to your outbound resolver endpoint\.
 
-Note that turning on `enableDNSHostNames` for your VPC automatically adds PTR records\. See [Resolving DNS queries between VPCs and your network](resolver.md)\. The previous procedure is required only if you want to explicitly specify a resolver for given IP ranges—for example, when forwarding queries to an Active Directory server\.
+Note that turning on `enableDNSHostNames` for your VPC automatically adds PTR records\. See [What is Amazon Route 53 Resolver?](resolver.md)\. The previous procedure is required only if you want to explicitly specify a resolver for given IP ranges—for example, when forwarding queries to an Active Directory server\.
 
 ## Associating forwarding rules with a VPC<a name="resolver-rules-managing-associating-rules"></a>
 
@@ -189,7 +189,7 @@ To delete a forwarding rule, perform the following procedure\.
 
 Note the following:
 + If the forwarding rule is associated with any VPCs, you must disassociate the rule from the VPCs before you can delete the rule\. For more information, see [Disassociating forwarding rules from a VPC](#resolver-rules-managing-disassociating-rules)\.
-+ You can't delete the default **Internet Resolver** rule, which has a value of **Recursive** for **Type**\. This rule causes Route 53 Resolver to act as a recursive resolver for any domain names that you didn't create custom rules for and that Resolver didn't create autodefined rules for\. For more information about how rules are categorized, see [Using rules to control which queries are forwarded to your network](resolver.md#resolver-overview-forward-vpc-to-network-using-rules)\.<a name="resolver-rules-managing-deleting-procedure"></a>
++ You can't delete the default **Internet Resolver** rule, which has a value of **Recursive** for **Type**\. This rule causes Route 53 Resolver to act as a recursive resolver for any domain names that you didn't create custom rules for and that Resolver didn't create autodefined rules for\. For more information about how rules are categorized, see [Using rules to control which queries are forwarded to your network](resolver-overview-DSN-queries-to-vpc.md#resolver-overview-forward-vpc-to-network-using-rules)\.<a name="resolver-rules-managing-deleting-procedure"></a>
 
 **To delete a forwarding rule**
 

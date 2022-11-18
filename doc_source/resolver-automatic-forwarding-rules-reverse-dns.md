@@ -2,7 +2,7 @@
 
 When the `enableDnsHostnames` and `enableDnsSupport` are set to `true` for a virtual private cloud \(VPC\) from Amazon VPC, Resolver automatically creates auto\-defined system rules for reverse DNS queries\. For more information about these settings, see [DNS attributes in your VPC](https://docs.aws.amazon.com/vpc/latest/userguide/vpc-dns.html#vpc-dns-support) in the *Amazon VPC Developer Guide*\.
 
-Forwarding rules for reverse DNS queries are particularly useful for services like SSH or Active Directory, which have an option to authenticate users by performing a reverse DNS lookup for the IP address from which a customer is attempting to connect to a resource\. For more information about auto\-defined system rules, see [Domain names that Resolver creates autodefined system rules for](resolver.md#resolver-overview-forward-vpc-to-network-autodefined-rules)\. 
+Forwarding rules for reverse DNS queries are particularly useful for services like SSH or Active Directory, which have an option to authenticate users by performing a reverse DNS lookup for the IP address from which a customer is attempting to connect to a resource\. For more information about auto\-defined system rules, see [Domain names that Resolver creates autodefined system rules for](resolver-overview-DSN-queries-to-vpc.md#resolver-overview-forward-vpc-to-network-autodefined-rules)\. 
 
 You can turn off these rules and modify all reverse DNS queries so that they are, for example, forwarded to your on\-premises name servers for resolution\.
 

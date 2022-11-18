@@ -11,7 +11,7 @@ The following are the supported partitions:
 `aws` \- AWS Regions
 `aws-cn` \- China Regions
 `aws-us-gov` \- AWS GovCloud \(US\) Region
-For more information, see [Access Management](https://docs.aws.amazon.com/general/latest/gr/aws-arns-and-namespaces.html) in the *AWS General Reference*\.
+For more information, see [Access Management](https://docs.aws.amazon.com/general/latest/gr/aws-arns-and-namespaces.html) and [Amazon Route 53 endpoints and quotas](https://docs.aws.amazon.com/general/latest/gr/r53.html) in the *AWS General Reference*\.
 
 **Topics**
 + [Permissions required to use the Amazon Route 53 console](#console-required-permissions)

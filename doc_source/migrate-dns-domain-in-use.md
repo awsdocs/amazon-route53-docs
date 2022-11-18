@@ -92,6 +92,9 @@ The TTL \(time to live\) setting for a record specifies how long you want DNS re
 
 The typical TTL setting for the NS record is 172800 seconds, or two days\. The NS record lists the name servers that the Domain Name System \(DNS\) can use to get information about how to route traffic for your domain\. Lowering the TTL for the NS record, both with your current DNS service provider and with Amazon Route 53, reduces downtime for your domain if you discover a problem while you're migrating DNS to Route 53\. If you don't lower the TTL, your domain could be unavailable on the internet for up to two days if something goes wrong\.
 
+**Note**  
+Some full resolvers may cache the TTL of the NS record of the parent authoritative server, therefore the TTL of NS records registered on the parent authoritative DNS server must also be reduced\.
+
 We recommend that you change the TTL on the following NS records:
 + On the NS record in the hosted zone for the current DNS service provider\. \(Your current provider might use different terminology\.\)
 + On the NS record in the hosted zone that you created in [Step 2: Create a hosted zone](#migrate-dns-create-hosted-zone)\.<a name="migrate-dns-lower-ttl-current-provider-procedure"></a>

@@ -40,7 +40,7 @@ To configure split\-view DNS, you perform the following steps:
 1. Associate one or more Amazon VPCs with the private hosted zone\. Route 53 Resolver uses the private hosted zone to route DNS queries in the specified VPCs\.
 
 1. Create records in each hosted zone\. Records in the public hosted zone control how internet traffic is routed, and records in the private hosted zone control how traffic is routed in your Amazon VPCs\.
-If you need to perform name resolution of both your VPC and on\-premises workloads, you can use Route 53 Resolver\. For more information, see [Resolving DNS queries between VPCs and your network](resolver.md)\.
+If you need to perform name resolution of both your VPC and on\-premises workloads, you can use Route 53 Resolver\. For more information, see [What is Amazon Route 53 Resolver?](resolver.md)\.
 
 **Public and private hosted zones that have overlapping namespaces**  
 If you have private and public hosted zones that have overlapping namespaces, such as example\.com and accounting\.example\.com, Resolver routes traffic based on the most specific match\. When users are logged into an EC2 instance in an Amazon VPC that you have associated with the private hosted zone, here's how Route 53 Resolver handles DNS queries:  
@@ -94,7 +94,7 @@ You cannot create NS records in a private hosted zone to delegate responsibility
 
 **Custom DNS servers**  
 If you have configured custom DNS servers on Amazon EC2 instances in your VPC, you must configure those DNS servers to route your private DNS queries to the IP address of the Amazon\-provided DNS servers for your VPC\. This IP address is the IP address at the base of the VPC network range "plus two\." For example, if the CIDR range for your VPC is 10\.0\.0\.0/16, the IP address of the DNS server is 10\.0\.0\.2\.  
-If you want to route DNS queries between VPCs and your network, you can use Resolver\. For more information, see [Resolving DNS queries between VPCs and your network](resolver.md)\.
+If you want to route DNS queries between VPCs and your network, you can use Resolver\. For more information, see [What is Amazon Route 53 Resolver?](resolver.md)\.
 
 **Required IAM permissions**  
 To create private hosted zones, you need to grant IAM permissions for Amazon EC2 actions in addition to permissions for Route 53 actions\. For more information, see [Actions, resources, and condition keys for Route 53](https://docs.aws.amazon.com/service-authorization/latest/reference/list_amazonroute53.html) in the *Service Authorization Reference*\.

@@ -1,6 +1,6 @@
 # Enabling or disabling privacy protection for contact information for a domain<a name="domain-privacy-protection"></a>
 
-When you register a domain with Amazon Route 53 or transfer a domain to Route 53, we enable privacy protection by default for all the contacts for the domain\. This typically hides most of your contact information from WHOIS \("Who is"\) queries and reduces the amount of spam that you receive\. Your contact information is replaced either with contact information for the registrar or with the phrase "REDACTED FOR PRIVACY\."
+When you register a domain with Amazon Route 53 or transfer a domain to Route 53, we enable privacy protection by default for all the contacts for the domain\. This typically hides most of your contact information from WHOIS \("Who is"\) queries and reduces the amount of spam that you receive\. Your contact information is replaced either with contact information for the registrar or with either the phrase "REDACTED FOR PRIVACY" or "On behalf of <domain name> owner\."
 
 If you choose to disable privacy protection, you must disable it for all contacts for a domain\. If you do disable privacy protection, anyone can send a WHOIS query for the domain and, for most top\-level domains \(TLDs\), might be able to get all the contact information that you provided when you registered or transferred the domain, including name, address, phone number, and email address\. The WHOIS command is widely available; it's included in many operating systems, and it's also available as a web application on many websites\.
 

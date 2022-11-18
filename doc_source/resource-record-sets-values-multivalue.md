@@ -25,7 +25,7 @@ Enter the name of the domain or subdomain that you want to route traffic for\. T
 **Note**  
 If you're creating a record that has the same name as the hosted zone, don't enter a value \(for example, an @ symbol\) in the **Record name** field\. 
 
-Enter the same name for all of the records in the group of weighted records\. 
+Enter the same name for all of the records in the group of multivalue records\. 
 
 For more information about record names, see [Record name](resource-record-sets-values-shared.md#rrsets-values-common-name)\.
 
@@ -56,7 +56,6 @@ You can route traffic to, or specify the following values:
 + **A — IPv4 address**
 + **AAAA — IPv6 address**
 + **CAA — Certificate Authority Authorization**
-+ **CNAME — Canonical name**
 + **MX — Mail exchange**
 + **NAPTR — Name Authority Pointer**
 + **PTR — Pointer**

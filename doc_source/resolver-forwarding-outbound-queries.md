@@ -110,7 +110,7 @@ By default, forwarding rules apply to a domain name and all its subdomains\. If 
 The VPCs that use this rule to forward DNS queries for the specified domain name or names\. You can apply a rule to as many VPCs as you want\.
 
 **Domain name**  
-DNS queries for this domain name are forwarded to the IP addresses that you specify in **Target IP addresses**\. For more information, see [How Resolver determines whether the domain name in a query matches any rules](resolver.md#resolver-overview-forward-vpc-to-network-domain-name-matches)\.
+DNS queries for this domain name are forwarded to the IP addresses that you specify in **Target IP addresses**\. For more information, see [How Resolver determines whether the domain name in a query matches any rules](resolver-overview-DSN-queries-to-vpc.md#resolver-overview-forward-vpc-to-network-domain-name-matches)\.
 
 **Outbound endpoint**  
 Resolver forwards DNS queries through the outbound endpoint that you specify here to the IP addresses that you specify in **Target IP addresses**\.
