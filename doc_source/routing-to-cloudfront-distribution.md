@@ -90,4 +90,4 @@ Accept the default value of **No**\.
 
 1. Choose **Create records**\.
 
-1. If IPv6 is enabled for the distribution, repeat steps 6 through 8\. Specify the same settings except for the **Record type** field, as explained in step 7\.
+1. If IPv6 is enabled for the distribution, repeat steps 6 through 8\. Specify the same settings except for the **Record type** field, as explained in step 6\.
