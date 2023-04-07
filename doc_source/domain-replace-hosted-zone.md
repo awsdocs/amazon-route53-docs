@@ -10,6 +10,6 @@ If you [delete the hosted zone](https://docs.aws.amazon.com/Route53/latest/Devel
 
 1. Update the domain configuration to use the name servers for the new hosted zone\. For more information, see [Adding or changing name servers and glue records for a domain](domain-name-servers-glue-records.md)\.
 **Important**  
-When you create a hosted zone, Route 53 assigns a set of four name servers to the hosted zone\. If you delete a hosted zone and then create a new one, Route 53 assigns another set of four name servers\. Typically, none of the name servers for the new hosted zone match any of the name servers for the previous hosted zone\. If you don't update the domain configuration to use the name servers for the new hosted zone, the domain will remain unavailable on the internet\.
+When you create a hosted zone, Route 53 assigns a set of four name servers to the hosted zone\. If you delete a hosted zone and then create one, Route 53 assigns another set of four name servers\. Typically, none of the name servers for the new hosted zone match any of the name servers for the previous hosted zone\. If you don't update the domain configuration to use the name servers for the new hosted zone, the domain will remain unavailable on the internet\.
 
 1. If you encounter issues while replacing the hosted zone for a domain, you can contact AWS Support for free\. For more information, see [Contacting AWS Support about domain registration issues](domain-contact-support.md)\.

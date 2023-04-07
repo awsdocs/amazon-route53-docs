@@ -3,7 +3,7 @@
 Amazon Route 53 Resolver responds recursively to DNS queries from AWS resources for public records, Amazon VPC\-specific DNS names, and Amazon Route 53 private hosted zones, and is available by default in all VPCs\. 
 
 **Note**  
-Amazon Route 53 Resolver were previously called Amazon DNS servers, but were renamed when Resolver rules, and inbound and outbound endpoints were introduced\. For more information, see [Amazon DNS server](https://docs.aws.amazon.com/vpc/latest/userguide/vpc-dns.html#AmazonDNS) in the *Amazon Virtual Private Cloud User Guide*\.
+Amazon Route 53 Resolver was previously called Amazon DNS server, but was renamed when Resolver rules, and inbound and outbound endpoints were introduced\. For more information, see [Amazon DNS server](https://docs.aws.amazon.com/vpc/latest/userguide/vpc-dns.html#AmazonDNS) in the *Amazon Virtual Private Cloud User Guide*\.
 
 An Amazon VPC connects to a Route 53 Resolver at a VPC\+2 IP address\. This VPC\+2 address connects to a Route 53 Resolver within an Availability Zone\. 
 

@@ -3,7 +3,7 @@
 The following lists of generic and geographic top\-level domains show the top\-level domains \(TLDs\) that you can use to register domains with Amazon Route 53\. 
 
 **Registering domains with Route 53**  
-You can register a domain with Route 53 if the TLD is included on the following lists\. If the TLD isn't included, you can't register the domain with Route 53\. 
+ TLD registries have assigned special or premium prices to some domain names\. You can't use Route 53 to register a domain that has a special or premium price\. The TLDs that you can register with Route 53 are included in the following lists\. If the TLD isn't included, you can't register the domain with Route 53\. 
 
 **Transferring domains to Route 53**  
 You can transfer a domain to Route 53 if the TLD is included on the following lists\. If the TLD isn't included, you can't transfer the domain to Route 53\.  
@@ -98,7 +98,7 @@ The rules for registration of geographic TLDs vary by country\. Some countries a
 [\.vacations](vacations.md), [\.vegas](vegas.md), [\.ventures](ventures.md), [\.vg](vg-xref.md), [\.viajes](viajes.md), [\.video](video.md), [\.villas](villas.md), [\.vision](vision.md), [\.voyage](voyage.md)
 
 **WXYZ**  
-[\.watch](watch.md), [\.website](website.md), [\.wiki](wiki.md), [\.works](works.md), [\.world](world.md), [\.wtf](wtf.md), [\.xyz](xyz.md), [\.zone](zone.md)
+[\.watch](watch.md), [\.website](website.md), [\.wedding](wedding.md), [\.wiki](wiki.md), [\.works](works.md), [\.world](world.md), [\.wtf](wtf.md), [\.xyz](xyz.md), [\.zone](zone.md)
 
 ### Geographic top\-level domains<a name="registrar-tld-list-index-geographic"></a>
 

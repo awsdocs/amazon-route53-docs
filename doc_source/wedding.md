@@ -1,23 +1,24 @@
-# \.property<a name="property"></a>
-
-Used for information about any type of property, including real estate or intellectual property\. Also used by those who have houses, buildings, or land to sell, lease, or rent\.
+# \.wedding<a name="wedding"></a>
 
 [Return to index](registrar-tld-list.md#index)
 
 **Registration and renewal period**  
 One to ten years\.
 
-**Privacy protection**  
-Not supported\.
+**Restrictions**  
+None\.
+
+**Privacy protection \(applies to all contact types: person, company, association, and public body\)**  
+All information is hidden except organization name\.
 
 **Domain locking to prevent unauthorized transfers**  
 Supported\.
 
 **Internationalized domain names**  
-Supported for Cyrillic \(primarily Russian\), French, German, Italian, Portuguese, and Spanish\.
+Supported for Chinese, French, German and Spanish\.
 
 **Authorization code required for transfer to Route 53**  
-Not supported\. You can no longer transfer \.property domains to Route 53\.
+Yes
 
 **DNSSEC**  
 Supported for domain registration\. For more information, see [Configuring DNSSEC for a domain](domain-configure-dnssec.md)\.

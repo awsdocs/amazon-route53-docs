@@ -10,4 +10,6 @@ Note the following:
 + If you have eight or fewer healthy records, Route 53 responds to all DNS queries with all the healthy records\.
 + When all records are unhealthy, Route 53 responds to DNS queries with up to eight unhealthy records\.
 
+You can use multivalue answer routing policy for records in a private hosted zone\.
+
 For information about values that you specify when you use the multivalue answer routing policy to create records, see [Values specific for multivalue answer records](resource-record-sets-values-multivalue.md) and [Values that are common for all routing policies](resource-record-sets-values-shared.md)\.

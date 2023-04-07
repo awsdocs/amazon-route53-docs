@@ -1,6 +1,6 @@
-# Registering domains<a name="domain-register-update"></a>
+# Registering new domains<a name="domain-register-update"></a>
 
-For information about registering new domains, see the applicable topic\.
+For information about registering new domains, transferring a domain, and about viewing the domain registration status, see the applicable topic\.
 
 **Topics**
 + [Registering a new domain](domain-register.md)

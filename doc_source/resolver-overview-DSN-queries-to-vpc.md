@@ -60,7 +60,7 @@ Here's how Resolver resolves DNS queries that originate on your network:
 
 1. Resolver gets the applicable value for the domain name in the DNS query, either internally or by performing a recursive lookup against public name servers\.
 
-1. Resolver returns the value \(typically an IPv4 IP address\) to the inbound endpoint\.
+1. Resolver returns the value to the inbound endpoint\.
 
 1. The inbound endpoint returns the value to the resolver on your network\.
 

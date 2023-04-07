@@ -29,7 +29,7 @@ If you're transferring a \.jp domain from Route 53 to another registrar, initia
 Not supported\.
 
 **Deadlines for renewing and restoring domains**  
-+ Renewal is possible: Between 30 days and 6 days before the expiration date
++ Renewal is possible: Between 30 days and 7 days before the expiration date
 + Late renewal with Route 53 is possible: No
 + Domain is deleted from Route 53: 6 days before expiration
 + Restoration with the registry is possible: Contact [AWS Support](https://docs.aws.amazon.com/Route53/latest/DeveloperGuide/domain-contact-support.html)\.

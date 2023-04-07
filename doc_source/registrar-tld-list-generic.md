@@ -71,4 +71,4 @@
 [\.vacations](vacations.md), [\.vegas](vegas.md), [\.ventures](ventures.md), [\.vg](vg-xref.md), [\.viajes](viajes.md), [\.video](video.md), [\.villas](villas.md), [\.vision](vision.md), [\.voyage](voyage.md)
 
 **WXYZ**  
-[\.watch](watch.md), [\.website](website.md), [\.wiki](wiki.md), [\.works](works.md), [\.world](world.md), [\.wtf](wtf.md), [\.xyz](xyz.md), [\.zone](zone.md)
+[\.watch](watch.md), [\.website](website.md), [\.wedding](wedding.md), [\.wiki](wiki.md), [\.works](works.md), [\.world](world.md), [\.wtf](wtf.md), [\.xyz](xyz.md), [\.zone](zone.md)

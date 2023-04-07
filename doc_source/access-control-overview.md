@@ -7,6 +7,19 @@ An *account administrator* \(or administrator user\) is a user that has administ
 
 When you grant permissions, you decide who gets the permissions, the resources they get permissions for, and the actions that they get permissions to perform\.
 
+Users need programmatic access if they want to interact with AWS outside of the AWS Management Console\. The way to grant programmatic access depends on the type of user that's accessing AWS\.
+
+To grant users programmatic access, choose one of the following options\.
+
+
+****  
+
+| Which user needs programmatic access? | To | By | 
+| --- | --- | --- | 
+|  Workforce identity \(Users managed in IAM Identity Center\)  | Use temporary credentials to sign programmatic requests to the AWS CLI, AWS SDKs, or AWS APIs\. |  Following the instructions for the interface that you want to use\. [\[See the AWS documentation website for more details\]](http://docs.aws.amazon.com/Route53/latest/DeveloperGuide/access-control-overview.html)  | 
+| IAM | Use temporary credentials to sign programmatic requests to the AWS CLI, AWS SDKs, or AWS APIs\. | Following the instructions in [Using temporary credentials with AWS resources](https://docs.aws.amazon.com/IAM/latest/UserGuide/id_credentials_temp_use-resources.html) in the IAM User Guide\. | 
+| IAM | \(Not recommended\)Use long\-term credentials to sign programmatic requests to the AWS CLI, AWS SDKs, or AWS APIs\. |  Following the instructions for the interface that you want to use\. [\[See the AWS documentation website for more details\]](http://docs.aws.amazon.com/Route53/latest/DeveloperGuide/access-control-overview.html)  | 
+
 **Topics**
 + [ARNs for Amazon Route 53 resources](#access-control-resources)
 + [Understanding resource ownership](#access-control-owner)
@@ -35,11 +48,11 @@ Route 53 provides API actions to work with each of these types of resources\. F
 
 ## Understanding resource ownership<a name="access-control-owner"></a>
 
-An AWS account owns the resources that are created in the account, regardless of who created the resources\. Specifically, the resource owner is the AWS account of the principal entity \(that is, the root account, an IAM user, or an IAM role\) that authenticates the resource creation request\. 
+An AWS account owns the resources that are created in the account, regardless of who created the resources\. Specifically, the resource owner is the AWS account of the principal entity \(that is, the root account, or an IAM role\) that authenticates the resource creation request\. 
 
 The following examples illustrate how this works:
 + If you use the root account credentials of your AWS account to create a hosted zone, your AWS account is the owner of the resource\.
-+ If you create an IAM user in your AWS account and grant permissions to create a hosted zone to that user, the user can create a hosted zone\. However, your AWS account, to which the user belongs, owns the hosted zone resource\.
++ If you create a user in your AWS account and grant permissions to create a hosted zone to that user, the user can create a hosted zone\. However, your AWS account, to which the user belongs, owns the hosted zone resource\.
 + If you create an IAM role in your AWS account with permissions to create a hosted zone, anyone who can assume the role can create a hosted zone\. Your AWS account, to which the role belongs, owns the hosted zone resource\.
 
 ## Managing access to resources<a name="access-control-manage-access-intro"></a>

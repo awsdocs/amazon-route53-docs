@@ -3,6 +3,7 @@
 The following entries describe important changes in each release of the Route 53 documentation\. For notification about updates to this documentation, you can subscribe to an RSS feed\. 
 
 **Topics**
++ [2023 releases](#doc-history-2023)
 + [2022 releases](#doc-history-2022)
 + [2021 releases](#doc-history-2021)
 + [2020 releases](#doc-history-2020)
@@ -15,6 +16,14 @@ The following entries describe important changes in each release of the Route 5
 + [2012 release](#doc-history-2012)
 + [2011 releases](#doc-history-2011)
 + [2010 release](#doc-history-2010)
+
+## 2023 releases<a name="doc-history-2023"></a>
+
+**March 22, 2023**  
+Updated the entire Route 53 guide with the new console experience for domains\. You can also use the new console experience to transfer a domain from one AWS account to another AWS account\. For more information, see [Registering a new domain](domain-register.md) and [Transferring domains](domain-transfer.md)\.
+
+**March 10, 2023**  
+You can now connect to your resources by using IPv4, IPv6, or dual\-stack endpoints with Amazon Route 53 Resolver\. For more information, see [Values that you specify when you create or edit inbound endpoints](resolver-forwarding-inbound-queries.md#resolver-forwarding-inbound-queries-values) and [Values that you specify when you create or edit outbound endpoints](resolver-forwarding-outbound-queries.md#resolver-forwarding-outbound-queries-endpoint-values)\.
 
 ## 2022 releases<a name="doc-history-2022"></a>
 
@@ -193,7 +202,7 @@ The Route 53 console now includes a visual editor that lets you quickly create 
 
 **October 19, 2015**  
 With this release, Route 53 adds the following new features:  
-+ **Domain registration for \.com and \.net domains by Amazon Registrar, Inc\.** – Amazon is now an ICANN\-accredited registrar for the \.com and \.net top\-level domains \(TLDs\) through Amazon Registrar, Inc\. When you use Route 53 to register a \.com or \.net domain, Amazon Registrar will be the registrar of record and will be listed as the "Sponsoring Registrar" in your Whois query results\. For information about using Route 53 to register domains, see [Registering domain names using Amazon Route 53](registrar.md)\.
++ **Domain registration for \.com and \.net domains by Amazon Registrar, Inc\.** – Amazon is now an ICANN\-accredited registrar for the \.com and \.net top\-level domains \(TLDs\) through Amazon Registrar, Inc\. When you use Route 53 to register a \.com or \.net domain, Amazon Registrar will be the registrar of record and will be listed as the "Sponsoring Registrar" in your Whois query results\. For information about using Route 53 to register domains, see [Registering and managing domains using Amazon Route 53](registrar.md)\.
 + **Privacy protection for \.com and \.net domains** – When you register a \.com or \.net domain with Route 53, all of your personal information, including first and last name, is now hidden\. First and last name are not hidden for other domains that you register with Route 53\. For more information about privacy protection, see [Enabling or disabling privacy protection for contact information for a domain](domain-privacy-protection.md)\.
 
 **September 15, 2015**  
@@ -211,7 +220,7 @@ You can now use the Route 53 API to list the hosted zones that are associated w
 **February 11, 2015**  
 With this release, Route 53 adds the following new features:  
 + **Health Check Status** – The health checks page in the Route 53 console now includes a **Status** column that lets you view the overall status of all of your health checks\. For more information, see [Viewing health check status and the reason for health check failures](health-checks-view-status.md)\.
-+ **Integration with AWS CloudTrail** – Route 53 now works with CloudTrail to capture information about every request that your AWS account \(including your IAM users\) sends to the Route 53 API\. Integrating Route 53 and CloudTrail lets you determine which requests were made to the Route 53 API, the source IP address from which each request was made, who made the request, when it was made, and more\. For more information, see [Logging Amazon Route 53 API calls with AWS CloudTrail](logging-using-cloudtrail.md)\.
++ **Integration with AWS CloudTrail** – Route 53 now works with CloudTrail to capture information about every request that your AWS account sends to the Route 53 API\. Integrating Route 53 and CloudTrail lets you determine which requests were made to the Route 53 API, the source IP address from which each request was made, who made the request, when it was made, and more\. For more information, see [Logging Amazon Route 53 API calls with AWS CloudTrail](logging-using-cloudtrail.md)\.
 + **Quick Alarms for Health Checks** – When you create a health check by using the Route 53 console, you can now simultaneously create an Amazon CloudWatch alarm for the health check and specify who to notify when Route 53 considers the endpoint unhealthy for one minute\. For more information, see [Creating and updating health checks](health-checks-creating.md)\.
 + **Tagging for Hosted Zones and Domains** – You can now assign tags, which are commonly used for cost allocation, to Route 53 hosted zones and domains\. For more information, see [Tagging Amazon Route 53 resources](tagging-resources.md)\.
 
@@ -236,7 +245,7 @@ With this release, Route 53 adds the following new features:
 
 **July 31, 2014**  
 With this release, you can now do the following:  
-+ Register domain names using Route 53\. For more information, see [Registering domain names using Amazon Route 53](registrar.md)\.
++ Register domain names using Route 53\. For more information, see [Registering and managing domains using Amazon Route 53](registrar.md)\.
 + Configure Route 53 to respond to DNS queries based on the geographic location that the queries originate from\. For more information, see [Geolocation routing](routing-policy-geo.md)\.
 
 **July 2, 2014**  

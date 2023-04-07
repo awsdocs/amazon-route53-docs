@@ -71,7 +71,76 @@ You must complete and submit a form to AWS Support\. See [Changing the owner of 
 
 ## Updating contact information for a domain<a name="domain-update-contacts-basic"></a>
 
-To update contact information for a domain, perform the following procedure\. <a name="domain-update-contacts-procedure"></a>
+To update contact information for a domain, perform the following procedure\. 
+
+**Note**  
+We're updating the domains console for Route 53\. During the transition period, you can continue to use the old console\.
+
+Choose the tab for the console you are using\.
++ [New console](#domain-update-contacts-new)
++ [Old console](#domain-update-contacts-old)
+
+------
+#### [ New console ]<a name="domain-update-contacts-procedure-new"></a>
+
+**To update contact information for a domain**
+
+1. Sign in to the AWS Management Console and open the Route 53 console at [https://console\.aws\.amazon\.com/route53/](https://console.aws.amazon.com/route53/)\.
+
+1. In the navigation pane, choose **Registered domains**\.
+
+1. Choose the name of the domain that you want to update contact information for\.
+
+1. In the **Contact information** tab, choose **Edit**\.
+
+1. If you're changing the email address for the registrant contact, perform the following steps\. If you aren't changing the email address for the registrant contact, skip to step 6\.
+
+   1. Change *only* the email address for the registrant contact\. Don't change any other values for any of the contacts for the domain\. If you also want to change other values, you change them later in the process\.
+
+      Choose **Save changes**\.
+
+      To verify the new email address, we send a verification email to the new address \(if required for the TLD\)\. You must choose the link in the email to verify that the new email address is valid\. If verification is required, and you don't verify the new email address, Route 53 suspends the domain as required by ICANN\. 
+
+      If you need to resend the verification email, navigate to the **Registered domains** page, choose the radio button next to the domain name you updated, and choose the name of the domain that you're updating\. On the **Verify your email to avoid domain suspension** alert, choose **Send email again**\.
+
+   1. If you want to change other values for the registrant, admin, or tech contacts for the domain, return to step 1 and repeat the procedure\.
+
+1. Update the applicable values\. You can also choose **Copy registrant contact** to automatically fill in the same information you entered for the registrant contact\. For more information, see [Values that you specify when you register or transfer a domain](domain-register-values-specify.md)\.
+
+   Depending on the TLD for your domain and the values that you're changing, the console might display the following message:
+
+   "To change the registrant name or organization, open a case\."
+
+   If you see that message, skip the rest of this procedure and see [Changing the owner of a domain when the registry requires a Change of Domain Ownership form](#domain-update-contacts-domain-ownership-form) for more information\.
+
+1. Choose **Save**\.
+
+1. **AISPL \(India\) customers only**: If your contact address is in India, your user agreement is with Amazon Internet Services Pvt\. Ltd \(AISPL\), a local AWS seller in India\. To change the owner of a domain when the TLD registry charges a fee to change the owner, perform the following steps to pay the fee for the extension\. 
+
+   1. Go to the [Orders and Invoices](https://console.aws.amazon.com/billing/home#/paymenthistory) page in the AWS Management Console\.
+
+   1. In the **Payments Due** section, find the applicable invoice\.
+
+   1. In the **Actions** column, choose **Verify and Pay**\.
+
+      After you pay the invoice, we change the applicable settings for the registrant contact\.
+**Important**  
+If you don't pay the invoice within five days, the invoice is canceled\. To change settings for the registrant contact after an invoice is canceled, resubmit the request\.
+
+   For more information, see [Managing your payments in India](https://docs.aws.amazon.com/awsaccountbilling/latest/aboutv2/edit-aispl-payment-method.html) in the *AWS Billing User Guide*\.
+
+1. If you changed the domain owner, as described in [Who is the owner of a domain?](#domain-update-contacts-who-is-domain-owner), we send email to the registrant contact for the domain\. The email asks for authorization for the change of owner\. 
+
+   If we don't receive authorization for the change within 3 to 15 days, depending on the top\-level domain, we must cancel the request as required by ICANN\.
+
+   The email comes from one of the following email addresses\.  
+****    
+[\[See the AWS documentation website for more details\]](http://docs.aws.amazon.com/Route53/latest/DeveloperGuide/domain-update-contacts.html)
+
+1. If you encounter issues while updating contact information, you can contact AWS Support for free\. For more information, see [Contacting AWS Support about domain registration issues](domain-contact-support.md)\.
+
+------
+#### [ Old console ]<a name="domain-update-contacts-procedure-old"></a>
 
 **To update contact information for a domain**
 
@@ -89,7 +158,7 @@ To update contact information for a domain, perform the following procedure\. <a
 
       Choose **Save**\.
 
-      If the new email address is an address that you have never verified is reachable, we send email to the new email address\. You must choose the link in the email to verify that the new email address is valid\. If you don't verify the new email address, Route 53 suspends the domain as required by ICANN\. 
+      To verify the new email address reachability, we send a verification email to the new address \(if required for the TLD\)\. You must choose the link in the email to verify that the new email address is valid\. If verification is required, and you don't verify the new email address, Route 53 suspends the domain as required by ICANN\. 
 
    1. If you want to change other values for the registrant, administrative, or technical contacts for the domain, return to step 1 and repeat the procedure\.
 
@@ -127,7 +196,9 @@ If you don't pay the invoice within five days, the invoice is canceled\. To chan
 
 1. If you encounter issues while updating contact information, you can contact AWS Support for free\. For more information, see [Contacting AWS Support about domain registration issues](domain-contact-support.md)\.
 
-For information about the API you can use also, see [UpdateDomainContact](https://docs.aws.amazon.com/Route53/latest/APIReference/API_domains_UpdateDomainContact.html)\.
+------
+
+For information about the API you can use to update the contact information, see [UpdateDomainContact](https://docs.aws.amazon.com/Route53/latest/APIReference/API_domains_UpdateDomainContact.html)\.
 
 ## Changing the owner of a domain when the registry requires a Change of Domain Ownership form<a name="domain-update-contacts-domain-ownership-form"></a>
 
@@ -155,11 +226,11 @@ If the registry for your domain requires you to complete a Change of Domain Owne
 
 1. Using the AWS account that the domain is currently registered to, sign in to the [AWS Support Center](https://console.aws.amazon.com/support/home?region=us-east-1#/case/create?issueType=customer-service&serviceCode=billing&categoryCode=domain-name-registration-issue)\.
 **Important**  
-You must sign in either by using the root account or by using an IAM user that has been granted IAM permissions in one or more of the following ways:  
+You must sign in either by using the root account or by using a user that has been granted IAM permissions in one or more of the following ways:  
 The user is assigned the **AdministratorAccess** managed policy\.
 The user is assigned the **AmazonRoute53DomainsFullAccess** managed policy\.
 The user is assigned the **AmazonRoute53FullAccess** managed policy\.
-If you don't sign in either by using the root account or by using an IAM user that has the required permissions, we can't update the domain owner\. This requirement prevents unauthorized users from changing the owner of a domain\.
+If you don't sign in either by using the root account or by using a user that has the required permissions, we can't update the domain owner\. This requirement prevents unauthorized users from changing the owner of a domain\.
 
 1. Specify the following values:  
 **Regarding**  

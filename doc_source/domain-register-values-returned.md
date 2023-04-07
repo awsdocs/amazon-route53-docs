@@ -12,11 +12,11 @@ For most TLDs, you can extend the registration period by up to ten years\. For m
 
 **Domain name status code**  
 The current status of the domain\.  
-ICANN, the organization that maintains a central database of domain names, has developed a set of domain name status codes \(also known as EPP status codes\) that tell you the status of a variety of operations on a domain name, for example, registering a domain name, transferring a domain name to another registrar, renewing the registration for a domain name, and so on\. All registrars use this same set of status codes\.  
+ICANN, the organization that maintains a central database of domain names, has developed a set of domain name status codes \(also known as EPP status codes\) that tell you the status of a variety of operations on a domain name\. For example, registering a domain name, transferring a domain name to another registrar, renewing the registration for a domain name, and so on\. All registrars use this same set of status codes\.  
 For a current list of domain name status codes and an explanation of what each code means, go to the [ICANN website](https://www.icann.org/) and search for **epp status codes**\. \(Search on the ICANN website; web searches sometimes return an old version of the document\.\)
 
 **Transfer lock**  
-Whether the domain is locked to reduce the possibility of someone transferring your domain to another registrar without your permission\. If the domain is locked, the value of **Transfer Lock** is **Enabled**\. If the domain is not locked, the value is **Disabled**\.
+Whether the domain is locked to reduce the possibility of someone transferring your domain to another registrar without your permission\. If the domain is locked, the value of **Transfer Lock** is **On**\. If the domain is not locked, the value is **Off**\.
 
 **Auto renew**  
 Whether Route 53 will automatically renew the registration for this domain shortly before the expiration date\.

@@ -16,6 +16,6 @@ At this time, the Amazon Route 53 Resolver in your VPC \(aka AmazonProvidedDNS\
 
 1. In the navigation pane, under **Resolver**, choose **VPCs**\.
 
-1. Under **DNSSEC validation**, select the checkbox\. If the checkbox is already selected, you can clear it to disable DNSSEC validation\.
+1. Under **DNSSEC validation**, select the check box\. If the check box is already selected, you can clear it to disable DNSSEC validation\.
 
    Be aware that enabling or disabling DNSSEC validation can take several minutes\.

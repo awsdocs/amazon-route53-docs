@@ -273,7 +273,7 @@ The hosted zone must be empty except for the default NS and SOA records\. If the
 1. Use the following AWS CLI command to delete the records:
 
    ```
-   aws route53 change-resource-record-sets --hosted-zone-id id-of-old-hosted-zone --change-batch file://path-to-file-that-contains-records
+   aws route53 change-resource-record-sets --hosted-zone-id id-of-old-hosted-zone --change-batch file:///path-to-file-that-contains-records
    ```
 **Important**  
 Make sure that the value that you specify for the hosted zone ID is the ID of the old hosted zone, not the ID of the new hosted zone\.

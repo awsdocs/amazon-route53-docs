@@ -2,7 +2,7 @@
 
 Amazon Route 53 *alias records* provide a Route 53–specific extension to DNS functionality\. Alias records let you route traffic to selected AWS resources, such as CloudFront distributions and Amazon S3 buckets\. They also let you route traffic from one record in a hosted zone to another record\. 
 
-Unlike a CNAME record, you can create an alias record at the top node of a DNS namespace, also known as the *zone apex*\. For example, if you register the DNS name example\.com, the zone apex is example\.com\. You can't create a CNAME record for example\.com, but you can create an alias record for example\.com that routes traffic to www\.example\.com \(as long as www\.example\.com doesn't already have a CNAME record\)\.
+Unlike a CNAME record, you can create an alias record at the top node of a DNS namespace, also known as the *zone apex*\. For example, if you register the DNS name example\.com, the zone apex is example\.com\. You can't create a CNAME record for example\.com, but you can create an alias record for example\.com that routes traffic to www\.example\.com \(as long as the record type for www\.example\.com is not of type CNAME\)\.
 
 When Route 53 receives a DNS query for an alias record, Route 53 responds with the applicable value for that resource:
 + **An Amazon API Gateway custom regional API or edge\-optimized API** – Route 53 responds with one or more IP addresses for your API\.
@@ -12,8 +12,8 @@ When Route 53 receives a DNS query for an alias record, Route 53 responds with
 + **An ELB load balancer** – Route 53 responds with one or more IP addresses for the load balancer\. This includes Application Load Balancer, Classic Load Balancer and, Network Load Balancer\.
 + **An AWS Global Accelerator accelerator** – Route 53 responds with one of the two IP addresses for the accelerator\. 
 + **An Amazon S3 bucket that is configured as a static website** – Route 53 responds with one IP address for the Amazon S3 bucket\.
-+ **Another Route 53 record in the same hosted zone** – Route 53 responds as if the query is for the record that is referenced by the alias record\.
-+ **AWS AppSync domain name** – Route 53 responds responds with one or more IP addresses for your interface endpoint\.
++ **Another Route 53 record of the same type in the same hosted zone** – Route 53 responds as if the query is for the record that is referenced by the alias record \(see [Comparison of alias and CNAME records](#resource-record-sets-choosing-alias-non-alias-comparison)\)\.
++ **AWS AppSync domain name** – Route 53 responds with one or more IP addresses for your interface endpoint\.
 
 When you use an alias record to route traffic to an AWS resource, Route 53 automatically recognizes changes in the resource\. For example, suppose an alias record for example\.com points to an ELB load balancer at lb1\-1234\.us\-east\-2\.elb\.amazonaws\.com\. If the IP address of the load balancer changes, Route 53 automatically starts to respond to DNS queries using the new IP address\.
 

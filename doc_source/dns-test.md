@@ -7,6 +7,9 @@ The tool doesn't submit queries to the Domain Name System, it only responds base
 
 The DNS checking tool works only for public hosted zones\.
 
+**Note**  
+The DNS checking tool returns information similar to what you would expect from the answer section of the `dig` command\. Therefore, if you query for the name servers of a subdomain that point to the parent name servers, those will not be returned\.
+
 **Topics**
 + [Using the checking tool to see how Amazon Route 53 responds to DNS queries](#dns-test-how-route-53-responds)
 + [Using the checking tool to simulate queries from specific IP addresses \(geolocation and latency records only\)](#dns-test-simulate-requests)

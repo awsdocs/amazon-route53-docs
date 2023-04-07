@@ -238,7 +238,9 @@ If you delete a rule that has child rules and endpoints, Route 53 also deletes 
 
 You can create a new traffic policy or a new version of an existing traffic policy by importing a document in JSON format that describes all of the endpoints and rules that you want to include in the traffic policy\. For information about the format of the JSON document and several examples that you can copy and revise, see [Traffic policy document format](https://docs.aws.amazon.com/Route53/latest/APIReference/api-policies-traffic-policy-document-format.html) in the *Amazon Route 53 API Reference*\.
 
-The easiest way to get the JSON\-formatted document for an existing traffic policy version is to use the `get-traffic-policy` command in the AWS CLI\. For more information, see [get\-traffic\-policy](https://docs.aws.amazon.com/cli/latest/reference/route53/get-traffic-policy.html) in the *AWS CLI Command Reference*\. <a name="traffic-policy-import-procedure"></a>
+The easiest way to get the JSON\-formatted document for an existing traffic policy version is to use the `get-traffic-policy` command in the AWS CLI\. For more information, see [get\-traffic\-policy](https://docs.aws.amazon.com/cli/latest/reference/route53/get-traffic-policy.html) in the *AWS CLI Command Reference*\. 
+
+The JSON file created by the `get-traffic-policy` command will include backward slashes \(\\\) as an escape character\. Before you import the JSON file, replace all the backward slashes with a null character\.<a name="traffic-policy-import-procedure"></a>
 
 **To create a traffic policy by importing a JSON document**
 

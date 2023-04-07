@@ -257,7 +257,7 @@ Amazon S3 turns off Block Public Access settings for your bucket\. To create a p
 
 ## Step 8: Attach a bucket policy<a name="getting-started-attach-policy"></a>
 
-After you edit Amazon S3 Block Public Access settings, you can add a bucket policy to grant public read access to your bucket\. When you grant public read access, anyone on the internet can access your bucket\. 
+After you edit Amazon S3 Block Public Access settings, you can add a bucket policy to grant public read access to your bucket objects\. When you grant public read access, anyone on the internet can access your bucket\. 
 
 **Warning**  
 Before you complete this step, review [Blocking public access to your Amazon S3 storage](https://docs.aws.amazon.com/AmazonS3/latest/userguide/access-control-block-public-access.html) to ensure that you understand and accept the risks involved with allowing public access\. When you turn off block public access settings to make your bucket public, anyone on the internet can access your bucket\. We recommend that you block all public access to your buckets\.<a name="getting-started-attach-policy-procedure"></a>

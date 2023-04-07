@@ -16,7 +16,7 @@ Open to the public, with some restrictions:
 + The domain name should indicate your activity\. For example, it should indicate a product that you sell or a service that you provide\.
 + During the registration process, you must indicate the following:
   + Your registration type: ABN \(Australian Business Number\), ACN \(Australian Company Number\), or TM \(Trademark\) if the domain name corresponds to your trademark\.
-  + Your ID number, which can be a Medicare card number, a tax file number \(TFN\), a state driver's license number, or an Australian Business Number \(ABN\)\.
+  + Your ID number, which can be an Australian Business Number \(ABN\), an Australian Company Number \(ACN\), or your trademark number \(TM\) if the domain name corresponds to your trademark\.
   + Your state or province\.
 + Incorrect or mismatched contact information, including name, ABN, or Trademark \(TM\) number will result in registration, trade, and renewals failures\. An ownership change might be required to correct information for existing domains\.
 

@@ -9,14 +9,13 @@ Our registrar associate, Gandi, resells \.com\.au domains through DomainDirector
 One to five years\.
 
 **Restrictions**  
-Only second\-level domains are available\. Route 53 supports the second\-level domains \.com\.au and net\.au\.   
 Open to the public, with some restrictions:  
 + The \.com\.au and \.net\.au domains are open to partnerships or sole traders registered in Australia; to foreign companies licensed to trade in Australia; and to owners or applicants of an Australian\-registered trademark\. Individuals cannot register \.com\.au/\.net\.au domains\. The registrant contact must be a company\.
 + Your domain name must be identical to your name \(as registered with the relevant Australian authorities\) or to your trademark \(or to the abbreviation or acronym for your trademark\)\. 
 + The domain name should indicate your activity\. For example, it should indicate a product that you sell or a service that you provide\.
 + During the registration process, you must provide the following information:
   + Your registration type: ABN \(Australian Business Number\), ACN \(Australian Company Number\), or TM \(Trademark\) if the domain name corresponds to your trademark\.
-  + Your ID number, which can be a Medicare card number, a tax file number \(TFN\), a state driver's license number, or an Australian Business Number \(ABN\)\.
+  + Your ID number, which can be an Australian Business Number \(ABN\), an Australian Company Number \(ACN\), or your trademark number \(TM\) if the domain name corresponds to your trademark\.
   + Your state or province\.
 + Incorrect or mismatched contact information, including name, ABN, or Trademark \(TM\) number will result in registration, trade, and renewals failures\. An ownership change might be required to correct information for existing domains\.
 

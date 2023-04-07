@@ -1,6 +1,6 @@
 # Using identity\-based policies \(IAM policies\) for Amazon Route 53<a name="access-control-managing-permissions"></a>
 
-This topic provides examples of identity\-based policies that demonstrate how an account administrator can attach permissions policies to IAM identities \(users, groups, and roles\) and thereby grant permissions to perform operations on Amazon Route 53 resources\.
+This topic provides examples of identity\-based policies that demonstrate how an account administrator can attach permissions policies to IAM identities and thereby grant permissions to perform operations on Amazon Route 53 resources\.
 
 **Important**  
 We recommend that you first review the introductory topics that explain the basic concepts and options to manage access to your Route 53 resources\. For more information, see [Overview of managing access permissions to your Amazon Route 53 resources](access-control-overview.md)\. 
@@ -283,7 +283,7 @@ For more information, see [The confused deputy problem](https://docs.aws.amazon.
 
 ## Customer managed policy examples<a name="access-policy-examples-for-sdk-cli"></a>
 
-You can create your own custom IAM policies to allow permissions for Route 53 actions\. You can attach these custom policies to the IAM users or groups that require the specified permissions\. These policies work when you are using the Route 53 API, the AWS SDKs, or the AWS CLI\. The following examples show permissions for several common use cases\. For the policy that grants a user full access to Route 53, see [Permissions required to use the Amazon Route 53 console](#console-required-permissions)\.
+You can create your own custom IAM policies to allow permissions for Route 53 actions\. You can attach these custom policies to the IAM groups that require the specified permissions\. These policies work when you are using the Route 53 API, the AWS SDKs, or the AWS CLI\. The following examples show permissions for several common use cases\. For the policy that grants a user full access to Route 53, see [Permissions required to use the Amazon Route 53 console](#console-required-permissions)\.
 
 **Topics**
 + [Example 1: Allow read access to all hosted zones](#access-policy-example-allow-read-hosted-zones)
@@ -387,7 +387,6 @@ Some of these permissions are required only to create endpoints in the console\.
                 "route53resolver:CreateResolverEndpoint",
                 "route53resolver:ListResolverEndpoints",
                 "ec2:CreateNetworkInterface",
-                "ec2:CreateNetworkInterfacePermission",
                 "ec2:DescribeAvailabilityZones",
                 "ec2:DescribeNetworkInterfaces",
                 "ec2:DescribeSecurityGroups",

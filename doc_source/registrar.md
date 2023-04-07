@@ -1,4 +1,4 @@
-# Registering domain names using Amazon Route 53<a name="registrar"></a>
+# Registering and managing domains using Amazon Route 53<a name="registrar"></a>
 
 When you want to get a new domain name, such as the **example\.com** part of the URL http://example\.com, you can register it with Amazon Route 53\. You can also transfer the registration for existing domains from other registrars to Route 53 or transfer the registration for domains that you register with Route 53 to another registrar\. 
 
@@ -12,8 +12,8 @@ If you are using a language for which an AWS SDK exists, use the SDK rather than
 Domain name registration services are provided under our [Domain Name Registration Agreement](https://aws.amazon.com/route53/domain-registration-agreement/)\.
 
 **Topics**
-+ [Registering domains](domain-register-update.md)
-+ [Updating settings for a domain](domain-update-settings.md)
++ [Registering new domains](domain-register-update.md)
++ [Updating domain settings](domain-update-settings.md)
 + [Renewing registration for a domain](domain-renew.md)
 + [Restoring an expired or deleted domain](domain-restore-expired.md)
 + [Replacing the hosted zone for a domain that is registered with Route 53](domain-replace-hosted-zone.md)

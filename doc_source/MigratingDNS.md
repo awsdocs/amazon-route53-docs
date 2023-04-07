@@ -7,3 +7,5 @@ The process depends on whether you're currently using the domain:
 + If the domain isn't getting any traffic \(or is getting very little traffic\), see [Making Route 53 the DNS service for an inactive domain](migrate-dns-domain-inactive.md)\.
 
 For both options, your domain should remain available during the entire migration process\. However, in the unlikely event that there are issues, the first option lets you roll back the migration quickly\. With the second option, your domain could be unavailable for a couple of days\.
+
+If you want to connect with an expert at AWS, visit [Sales support](https://aws.amazon.com/contact-us/sales-support/?pg=ln&sec=hs)\.

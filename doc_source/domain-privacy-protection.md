@@ -1,13 +1,17 @@
 # Enabling or disabling privacy protection for contact information for a domain<a name="domain-privacy-protection"></a>
 
-When you register a domain with Amazon Route 53 or transfer a domain to Route 53, we enable privacy protection by default for all the contacts for the domain\. This typically hides most of your contact information from WHOIS \("Who is"\) queries and reduces the amount of spam that you receive\. Your contact information is replaced either with contact information for the registrar or with either the phrase "REDACTED FOR PRIVACY" or "On behalf of <domain name> owner\."
+When you register a domain with Amazon Route 53 or transfer a domain to Route 53, we enable privacy protection by default for all the contacts for the domain\. This typically hides most of your contact information from WHOIS \("Who is"\) queries and reduces the amount of spam that you receive\. When you enable privacy protection, your contact information is replaced with contact information for the registrar or with the phrase "REDACTED FOR PRIVACY", or "On behalf of <domain name> owner\."
 
 If you choose to disable privacy protection, you must disable it for all contacts for a domain\. If you do disable privacy protection, anyone can send a WHOIS query for the domain and, for most top\-level domains \(TLDs\), might be able to get all the contact information that you provided when you registered or transferred the domain, including name, address, phone number, and email address\. The WHOIS command is widely available; it's included in many operating systems, and it's also available as a web application on many websites\.
+
+If you are transferring a domain to another registrar, and privacy protection is enabled for the domain contacts, the email to verify the transfer will be delivered from identity\-protect\.org addresses for TLDs registered with Amazon Registrar\. To determine who the registrar is for your TLD, see [Finding your registrar](find-your-registrar.md)\.
 
 The information that you can hide from WHOIS queries depends on two main factors:
 
 **The registry for the top level domain**  
 Most TLD registries hide all contact information automatically, some allow you to choose to hide all contact information, some allow you to hide only some information, and some do not allow you to hide any information\.  
+When privacy protection on a domain is enabled, your contact information is replaced either with contact information for the privacy protection service, or with the phrase "REDACTED FOR PRIVACY\." The privacy protection service applies spam prevention features \(address rotation and SPF/DKIM/spam analysis\) and will, in most cases, automatically forward emails passing these filters\. However, it is not advisable to send critical emails to privacy protected email addresses because the spam mechanism might prevent them from being forwarded\.   
+Additionally, the choice of which privacy protection mechanism is used for a domain is not configurable and is auto\-selected by the system\. The contact detail for our privacy protection service can't be manually updated\.  
 To enable or disable privacy protection for some domains, you must open a support case and request privacy protection\. For more information, see the applicable section in [Domains that you can register with Amazon Route 53](registrar-tld-list.md):  
 + [\.co\.uk \(United Kingdom\)](https://docs.aws.amazon.com/Route53/latest/DeveloperGuide/registrar-tld-list.html#registrar-tld-list#co.uk)
 + [\.me\.uk \(United Kingdom\)](https://docs.aws.amazon.com/Route53/latest/DeveloperGuide/registrar-tld-list.html#registrar-tld-list#me.uk)
@@ -23,7 +27,36 @@ When you register a domain with Route 53 or transfer a domain to Route 53, the
 
 To find out what information is hidden for the TLD for your domain, see [Domains that you can register with Amazon Route 53](registrar-tld-list.md)\.
 
-When you want to enable or disable privacy protection for a domain that you registered using Route 53, perform the following procedure\.<a name="domain-privacy-protection-procedure"></a>
+When you want to enable or disable privacy protection for a domain that you registered using Route 53, perform the following procedure\.
+
+**Note**  
+We're updating the domains console for Route 53\. During the transition period, you can continue to use the old console\.
+
+Choose the tab for the console you are using\.
++ [New console](#domain-privacy-protection-new)
++ [Old console](#domain-privacy-protection-old)
+
+------
+#### [ New console ]<a name="domain-privacy-protection-procedure"></a>
+
+**To enable or disable privacy protection for contact information for a domain**
+
+1. Sign in to the AWS Management Console and open the Route 53 console at [https://console\.aws\.amazon\.com/route53/](https://console.aws.amazon.com/route53/)\.
+
+1. In the navigation pane, choose **Registered domains**\.
+
+1. Choose the name of the domain that you want to enable or disable privacy protection for\.
+
+1. In the **Contact information** section, choose **Edit**\.
+
+1. In the **Privacy protection** section, choose whether to hide contact information\. You must specify the same privacy setting for all three contacts: admin, registrant, and technical\.
+
+1. Choose **Save changes**\.
+
+1. If you encounter issues while enabling or disabling privacy protection, you can contact AWS Support for free\. For more information, see [Contacting AWS Support about domain registration issues](domain-contact-support.md)\.
+
+------
+#### [ Old console ]<a name="domain-privacy-protection-procedure-old"></a>
 
 **To enable or disable privacy protection for contact information for a domain**
 
@@ -40,3 +73,5 @@ When you want to enable or disable privacy protection for a domain that you regi
 1. Choose **Save**\.
 
 1. If you encounter issues while enabling or disabling privacy protection, you can contact AWS Support for free\. For more information, see [Contacting AWS Support about domain registration issues](domain-contact-support.md)\.
+
+------

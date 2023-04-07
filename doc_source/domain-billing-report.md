@@ -10,7 +10,7 @@ If your AWS bill is charged to a credit card, you receive a separate invoice for
 If you use invoiced payments, any Route 53 domain registration transactions appear in your monthly AWS invoice\. The invoice includes the domain name and operation that each charge applies to\.
 
 When you run the report using the console, you can choose the following options:
-+ **Last 12 months**: The report includes charges from one year before you ran the report until the current day\. For example, if you run the report on June 3rd, it includes charges from June 3rd the previous year until the current day\.
++ **Last 12 months**: The report includes charges from one year before you ran the report until the current day\. For example, if you run the report on June 3, it includes charges from June 3 the previous year until the current day\.
 + **Individual months in the last year**: The report includes charges for the specified month\.
 
 If you run the report programmatically, you can get charges for any date range, starting with July 31, 2014\. That's the date that Route 53 started to support domain registration\. For example, see [view\-billing](https://docs.aws.amazon.com/cli/latest/reference/route53domains/view-billing.html) in the *AWS CLI Command Reference*\.

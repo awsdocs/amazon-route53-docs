@@ -10,7 +10,7 @@ In Route 53, you can specify conditions when granting permissions using an IAM 
 
 You can also create permissions that combine any of the granular permissions\.
 
-Use the IAM `Condition` element to implement a fine\-grained access control policy\. By adding a `Condition` element to a permissions policy, you can allow or deny access to records in Route 53 resource record sets, based upon your business requirements\. For example, your IAM policy can restrict access to individual DNS records in a hosted zone\. You then apply the policy to IAM users, groups, or roles that you create using the IAM console\.
+Use the IAM `Condition` element to implement a fine\-grained access control policy\. By adding a `Condition` element to a permissions policy, you can allow or deny access to records in Route 53 resource record sets, based upon your business requirements\. For example, your IAM policy can restrict access to individual DNS records in a hosted zone\. You then apply the policy to users, groups, or roles\.
 
 ## Normalizing the condition key values<a name="route53_rrset_conditionkeys_normalization"></a>
 
@@ -32,7 +32,7 @@ The values you enter for the policy conditions must be formatted, or normalized,
 **Important**  
 For your permissions to allow or restrict actions as you intend, you must follow these conventions\.
 
-You can use the [Access Analyzer](IAM/latest/UserGuide/access-analyzer-policy-validation.html) or [Policy Simulator](IAM/latest/UserGuide/access_policies_testing-policies.html) to validate that your policy grants or restricts the permissions as expected\. You can also validate the permissions by applying an IAM policy to a test user or role to carry out Route 53 operations\.
+You can use the [Access Analyzer](https://docs.aws.amazon.com/IAM/latest/UserGuide/access-analyzer-policy-validation.html) or [Policy Simulator](https://docs.aws.amazon.com/IAM/latest/UserGuide/access-analyzer-reference-policy-checks.html) in the *IAM User Guide* to validate that your policy grants or restricts the permissions as expected\. You can also validate the permissions by applying an IAM policy to a test user or role to carry out Route 53 operations\. 
 
 ## Specifying conditions: using condition keys<a name="route53_rrset_ConditionKeys"></a>
 
@@ -79,7 +79,7 @@ The following permissions policy grants permissions that allow `ChangeResourceRe
 }
 ```
 
-`ForAllValues:StringEquals` is an IAM condition operator that applies to multi\-valued keys\. The condition in the policy above will allow the operation only when all changes in `ChangeResourceRecordSets` have the DNS name of example\.com\. For more information, see [IAM condition operators](IAM/latest/UserGuide/reference_policies_elements_condition_operators.html) and [IAM condition with multiple keys or values](IAM/latest/UserGuide/reference_policies_multi-value-conditions.html) in the IAM User Guide\.
+`ForAllValues:StringEquals` is an IAM condition operator that applies to multi\-valued keys\. The condition in the policy above will allow the operation only when all changes in `ChangeResourceRecordSets` have the DNS name of example\.com\. For more information, see [IAM condition operators](https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_elements_condition_operators.html) and [IAM condition with multiple keys or values](https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_multi-value-conditions.html) in the IAM User Guide\.
 
 To implement the permission that matches names with certain suffixes, you can use the IAM wildcard \(\*\) in the policy with condition operator `StringLike` or `StringNotLike`\. The following policy will allow the operation when all changes in the `ChangeResourceRecordSets` operation have DNS names that end with “\-beta\.example\.com”\.
 

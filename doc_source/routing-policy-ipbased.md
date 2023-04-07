@@ -28,6 +28,8 @@ A named collection of locations\. For example, mycollection = \[example\-isp\-se
 IP\-based routing resource record sets reference a location in a collection, and all resource record sets for the same record set name and type must reference the same collection\. For example, if you create websites in two regions and want to direct DNS queries from two different CIDR locations to a specific website based on the originating IP addresses, then both of those locations must be listed in the same CIDR collection\.  
 You can also share these collections across AWS accounts using AWS RAM\. When you make an update, such as editing one of the IP ranges in a collection, this update will automatically apply to all the record sets associated with the collection
 
+You cannot use IP\-based routing policy for records in a private hosted zone\.
+
 For information about values that you specify when you use the IP\-based routing policy to create records, see the following topics:
 + [Values specific for IP\-based records](resource-record-sets-values-ipbased.md)
 + [Values specific for IP\-based alias records](resource-record-sets-values-ipbased-alias.md)

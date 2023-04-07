@@ -10,6 +10,8 @@ To optionally change the size of the geographic region from which Route 53 rout
 + To expand the size of the geographic region from which Route 53 routes traffic to a resource, specify a positive integer from 1 to 99 for the bias\. Route 53 shrinks the size of adjacent regions\. 
 + To shrink the size of the geographic region from which Route 53 routes traffic to a resource, specify a negative bias of \-1 to \-99\. Route 53 expands the size of adjacent regions\. 
 
+You cannot use geoproximity routing policy for records in a private hosted zone\.
+
 The following map shows four AWS Regions \(numbered 1 through 4\) and a location in Johannesburg, South Africa that is specified by latitude and longitude \(5\)\.
 
 ![\[A map of the world that shows how traffic is routed when you have geoproximity records for resources in the AWS Regions in US West (Oregon), US East (Northern Virginia), EU West (Paris), and Asia Pacific (Tokyo), and you have a record for a non-AWS resource in Johannesburg, South Africa.\]](http://docs.aws.amazon.com/Route53/latest/DeveloperGuide/images/traffic-flow-geoproximity-map-example-no-bias.png)

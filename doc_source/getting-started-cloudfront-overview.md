@@ -240,9 +240,9 @@ In this step you create a CloudFront distribution for your subdomain, such as ww
 
 1. Choose **Create Distribution**\.
 
-1. Under **Origin Settings**, for **Origin Domain Name**, choose the Amazon S3 bucket that you [created previously](#getting-started-cloudformation-create-s3-www-bucket)\.
+1. Under **Origin**, for **Origin domain**, choose the Amazon S3 bucket that you [created previously](#getting-started-cloudformation-create-s3-www-bucket)\.
 
-   For **S3 bucket access**, select **Yes, use OAI \(bucket can restrict access to only CloudFront\)**\. For the **Origin access identity**, you can choose from the list, or choose **Create new OAI** \(both will work\)\.
+   For **S3 bucket access**, select **Origin access control settings \(recommended\) Bucket can restrict access to only CloudFront**\. For the **Origin access identity**, you can choose from the list, or choose **Create new OAI** \(both will work\)\.
 
    For **Bucket policy**, select **Yes, update the bucket policy**\.
 

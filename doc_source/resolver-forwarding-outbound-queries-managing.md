@@ -55,6 +55,8 @@ Resolver is deleting this endpoint and the associated network interfaces\.
 
 ## Deleting outbound endpoints<a name="resolver-forwarding-outbound-queries-managing-deleting"></a>
 
+Before you can delete an endpoint, you must first delete any rules that are associated to a VPC\.
+
 To delete an outbound endpoint, perform the following procedure\.
 
 **Important**  

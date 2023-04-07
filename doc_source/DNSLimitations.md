@@ -9,7 +9,7 @@ Amazon Route 53 API requests and entities are subject to the following quotas \
 
 ## Using Service Quotas to view and manage quotas<a name="limits-service-quotas"></a>
 
-You can use the Service Quotas service to view quotas and to request quota increases for many AWS services\. For more information, see the [Service Quotas User Guide](https://docs.aws.amazon.com/servicequotas/latest/userguide/)\. \(You can currently use Service Quotas to view and manage only Route 53 and Route 53 Resolver quotas\. Domain registration quotas aren't available\.\) 
+You can use the Service Quotas service to view quotas and to request quota increases for many AWS services\. For more information, see the [Service Quotas User Guide](https://docs.aws.amazon.com/servicequotas/latest/userguide/)\. \(You can currently use Service Quotas to view and manage domains, Route 53 ,and Route 53 Resolver quotas\.\) 
 
 **Note**  
 To view quotas and request higher quotas for Route 53, you must change the Region to US East \(N\. Virginia\)\. To view quotas and request higher quotas for Resolver, change to the applicable Region\.
@@ -40,7 +40,7 @@ For information on getting current quotas \(formerly referred to as "limits"\), 
 
 | Entity | Quota | 
 | --- | --- | 
-|  Domains  |  20\* per AWS account [Request a higher quota](https://console.aws.amazon.com/support/home#/case/create?issueType=service-limit-increase&limitType=service-code-route53)\.  | 
+|  Domains  |  20\* per AWS account [Request a higher quota](https://console.aws.amazon.com/servicequotas/home?region=us-east-1#!/services/route53/quotas)\.  | 
 
 **\***The limit is 20 for new customers as of March 2021\.
 

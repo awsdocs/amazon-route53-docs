@@ -7,6 +7,7 @@ For ease of use and best results, use Tag Editor in the AWS Management Console, 
 + **Route 53 Resolver inbound endpoints** – For more information, see [Values that you specify when you create or edit inbound endpoints](resolver-forwarding-inbound-queries.md#resolver-forwarding-inbound-queries-values)\.
 + **Resolver outbound endpoints** – For more information, see [Values that you specify when you create or edit outbound endpoints](resolver-forwarding-outbound-queries.md#resolver-forwarding-outbound-queries-endpoint-values)\.
 + **Resolver rules** – For more information, see [Values that you specify when you create or edit rules](resolver-forwarding-outbound-queries.md#resolver-forwarding-outbound-queries-rule-values)\.
++ **Hosted zones** – For more information, see [Working with hosted zones](hosted-zones-working-with.md)\.
 
 **Note**  
 Charges for Resolver are based in part on VPC elastic network interfaces, which correspond with the IP addresses that you specify for inbound and outbound endpoints\. You can't currently tag elastic network interfaces that are created by Resolver, so you can't use tags for allocating costs for Resolver\. For information about pricing for Resolver, see [Amazon Route 53 pricing](https://aws.amazon.com/route53/pricing/)\.

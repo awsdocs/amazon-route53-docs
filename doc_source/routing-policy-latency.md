@@ -20,6 +20,8 @@ Latency between hosts on the internet can change over time as a result of change
 **Note**  
 When a browser or other viewer uses a DNS resolver that supports the edns\-client\-subnet extension of EDNS0, the DNS resolver sends Route 53 a truncated version of the user's IP address\. If you configure latency\-based routing, Route 53 considers this value when routing traffic to your resources\. For more information, see [How Amazon Route 53 uses EDNS0 to estimate the location of a user](routing-policy-edns0.md)\.
 
+You can use latency routing policy for records in a private hosted zone\.
+
 For information about values that you specify when you use the latency routing policy to create records, see the following topics:
 + [Values specific for latency records](resource-record-sets-values-latency.md)
 + [Values specific for latency alias records](resource-record-sets-values-latency-alias.md)

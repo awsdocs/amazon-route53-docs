@@ -48,6 +48,8 @@ Route 53 considers a new health check to be healthy until there's enough data t
 
 When you create a health check that is based on a CloudWatch alarm, Route 53 monitors the data stream for the corresponding alarm instead of monitoring the alarm state\. If the data stream indicates that the state of the alarm is **OK**, the health check is considered healthy\. If the data stream indicates that the state is **Alarm**, the health check is considered unhealthy\. If the data stream doesn't provide enough information to determine the state of the alarm, the health check status depends on the setting for **Health check status**: healthy, unhealthy, or last known status\. \(In the Route 53 API, this setting is `InsufficientDataHealthStatus`\.\)
 
+Route 53 doesn't support cross\-account CloudWatch alarms\.
+
 **Note**  
 Because Route 53 health checks monitor CloudWatch data streams instead of the state of CloudWatch alarms, you can't force the status of a health check to change by using the CloudWatch [SetAlarmState](https://docs.aws.amazon.com/AmazonCloudWatch/latest/APIReference/API_SetAlarmState.html) API operation\.
 

@@ -8,6 +8,8 @@ You can specify geographic locations by continent, by country, or by state in th
 
 Geolocation works by mapping IP addresses to locations\. However, some IP addresses aren't mapped to geographic locations, so even if you create geolocation records that cover all seven continents, Amazon Route 53 will receive some DNS queries from locations that it can't identify\. You can create a default record that handles both queries from IP addresses that aren't mapped to any location and queries that come from locations that you haven't created geolocation records for\. If you don't create a default record, Route 53 returns a "no answer" response for queries from those locations\.
 
+You can use geolocation routing policy for records in a private hosted zone\.
+
 For more information, see [How Amazon Route 53 uses EDNS0 to estimate the location of a user](routing-policy-edns0.md)\.
 
 For information about values that you specify when you use the geolocation routing policy to create records, see the following topics:

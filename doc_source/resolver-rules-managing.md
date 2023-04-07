@@ -130,7 +130,8 @@ Note the following:
 If another AWS account has shared one or more rules with your account, you can associate the rules with your VPCs the same way that you associate rules that you created with your VPCs\. For more information, see [Associating forwarding rules with a VPC](#resolver-rules-managing-associating-rules)\.
 
 **Deleting or unsharing a rule**  
-If you share a rule with other accounts and then either delete the rule or stop sharing it, and if the rule was associated with one or more VPCs, Route 53 Resolver starts to process DNS queries for those VPCs based on the remaining rules\. The behavior is the same as if you disassociate the rule from the VPC\.
+If you share a rule with other accounts and then either delete the rule or stop sharing it, and if the rule was associated with one or more VPCs, Route 53 Resolver starts to process DNS queries for those VPCs based on the remaining rules\. The behavior is the same as if you disassociate the rule from the VPC\.  
+If a rule is shared to an Organizational Unit \(OU\) and an account in the OU is moved to a different OU, all associations with the shared rule to any VPC in the account will be deleted\.
 
 **Maximum number of rules and associations**  
 When an account creates a rule and shares it with one or more other accounts, the maximum number of rules per AWS Region applies to the account that created the rule\.  
