@@ -1,3 +1,0 @@
-# Using AWS Cloud Map to create records and health checks<a name="autonaming"></a>
-
-If you want to route internet traffic or traffic within an Amazon VPC to application components or microservices, you can use AWS Cloud Map to automatically create records and, optionally, to create health checks\. For more information, see the [AWS Cloud Map Developer Guide](https://docs.aws.amazon.com/cloud-map/latest/dg/)\.

@@ -1,3 +1,0 @@
-# Best practices for Elastic IP addresses for health checks<a name="best-practices-healthcheck-monitoring-endpoints"></a>
-
-Best practice for your health check endpoints is to use Elastic IP addresses\. However, be sure to delete any health check that is associated with an Elastic IP address that you no longer own\. For example, if you are no longer using an Amazon EC2 instance, make sure you delete any health check that is associated to its Elastic IP address\. This is because the Elastic IP address can be assigned to a different user or AWS account, which might compromise your health check data\.

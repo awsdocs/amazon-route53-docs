@@ -1,3 +1,0 @@
-# Protection from dangling delegation records in Route 53<a name="protection-from-dangling-dns"></a>
-
-In Route 53, when you use nameserver \(NS\) records to delegate the management of a subdomain to another public hosted zone, a problem could arise if the subdomain hosted zone is deleted without also deleting the delegation\. Another user could potentially re\-create the subdomain hosted zone and gain control via the still\-active delegation belonging to the first customer\. However, Route 53 protects against such “dangling” delegations by not allowing any new hosted zones with overlapping domain names to be created by using those nameservers before verifying that the delegation has first been removed\.
